@@ -1,0 +1,86 @@
+{
+    "relations": [
+        {
+            "id": 32255,
+            "relationtype": {
+                "id": 6,
+                "rtype": "Containment",
+                "role_from": "contained by",
+                "role_to": "contains",
+                "symmetrical": false
+            },
+            "basket": {
+                "display_name": "games",
+                "id": 90
+            },
+            "direction": "source"
+        },
+        {
+            "id": 122665,
+            "relationtype": {
+                "id": 4,
+                "rtype": "Subentry",
+                "role_from": "Main Entry of",
+                "role_to": "Subentry of",
+                "symmetrical": false
+            },
+            "basket": {
+                "display_name": "video games -- in science education",
+                "id": 209
+            },
+            "direction": "destination"
+        }
+    ],
+    "basket": {
+        "id": 7399,
+        "topic_hits": [
+            {
+                "id": 10210,
+                "name": "Video game",
+                "scope": {
+                    "id": 2,
+                    "scope": "Generic"
+                },
+                "bypass": false,
+                "hidden": false,
+                "preferred": false
+            },
+            {
+                "id": 8758,
+                "name": "video -- \"games\"",
+                "scope": {
+                    "id": 2,
+                    "scope": "Generic"
+                },
+                "bypass": false,
+                "hidden": false,
+                "preferred": false
+            }
+        ],
+        "occurs": [
+            {
+                "id": 28663,
+                "location": {
+                    "id": 6418,
+                    "document": {
+                        "title": "Making News at The New York Times",
+                        "author": "Usher, Nikki"
+                    },
+                    "localid": "page_150"
+                }
+            },
+            {
+                "id": 31986,
+                "location": {
+                    "id": 6907,
+                    "document": {
+                        "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+                        "author": "Turrow, Joseph; Tsui, Lokman"
+                    },
+                    "localid": "page_132"
+                }
+            }
+        ],
+        "display_name": "video -- \"games\""
+    }
+}

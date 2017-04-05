@@ -8,10 +8,6 @@ import (
 
 const ENM_TCT_BASE_URL = "https://nyuapi.infoloom.nyc"
 
-type Topic struct {
-	Id int64 `json:"id"`
-	DisplayName string `json:"display_name"`
-}
 func GetResponseBody(url string) (body []byte) {
 	res, err := http.Get(url)
 	if err != nil {
@@ -35,6 +31,11 @@ func GetTopicsAll() (topicsList []Topic) {
 	}
 
 	return
+}
+
+type Topic struct {
+	Id int64 `json:"id"`
+	DisplayName string `json:"display_name"`
 }
 
 // Created using github.com/ChimeraCoder/gojson/gojson

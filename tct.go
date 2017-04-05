@@ -36,3 +36,49 @@ func GetTopicsAll() (topicsList []Topic) {
 
 	return
 }
+
+// Created using github.com/ChimeraCoder/gojson/gojson
+// `cat json-api-samples/topic-detail.json | gojson -name=TopicDetail`
+type TopicDetail struct {
+	Basket struct {
+		DisplayName string `json:"display_name"`
+		ID          int64  `json:"id"`
+		Occurs      []struct {
+			ID       int64 `json:"id"`
+			Location struct {
+				Document struct {
+					Author string `json:"author"`
+					Title  string `json:"title"`
+				} `json:"document"`
+				ID      int64  `json:"id"`
+				Localid string `json:"localid"`
+			} `json:"location"`
+		} `json:"occurs"`
+		TopicHits []struct {
+			Bypass    bool   `json:"bypass"`
+			Hidden    bool   `json:"hidden"`
+			ID        int64  `json:"id"`
+			Name      string `json:"name"`
+			Preferred bool   `json:"preferred"`
+			Scope     struct {
+				ID    int64  `json:"id"`
+				Scope string `json:"scope"`
+			} `json:"scope"`
+		} `json:"topic_hits"`
+	} `json:"basket"`
+	Relations []struct {
+		Basket struct {
+			DisplayName string `json:"display_name"`
+			ID          int64  `json:"id"`
+		} `json:"basket"`
+		Direction    string `json:"direction"`
+		ID           int64  `json:"id"`
+		Relationtype struct {
+			ID          int64  `json:"id"`
+			RoleFrom    string `json:"role_from"`
+			RoleTo      string `json:"role_to"`
+			Rtype       string `json:"rtype"`
+			Symmetrical bool   `json:"symmetrical"`
+		} `json:"relationtype"`
+	} `json:"relations"`
+}

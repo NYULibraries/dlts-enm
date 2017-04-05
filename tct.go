@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
+	"strconv"
 )
 
 const ENM_TCT_BASE_URL = "https://nyuapi.infoloom.nyc"
@@ -26,6 +27,18 @@ func GetTopicsAll() (topicsList []Topic) {
 	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/hit/basket/all/")
 
 	err := json.Unmarshal(responseBody, &topicsList)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
+func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
+	topicIdString := strconv.Itoa(topicId)
+	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/hit/basket/" + topicIdString)
+
+	err := json.Unmarshal(responseBody, &TopicDetail{})
 	if err != nil {
 		panic(err.Error())
 	}

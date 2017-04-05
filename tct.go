@@ -44,14 +44,16 @@ type TopicDetail struct {
 		DisplayName string `json:"display_name"`
 		ID          int64  `json:"id"`
 		Occurs      []struct {
+			Basket   int64 `json:"basket"`
 			ID       int64 `json:"id"`
 			Location struct {
 				Document struct {
 					Author string `json:"author"`
 					Title  string `json:"title"`
 				} `json:"document"`
-				ID      int64  `json:"id"`
-				Localid string `json:"localid"`
+				ID             int64  `json:"id"`
+				Localid        string `json:"localid"`
+				SequenceNumber int64  `json:"sequence_number"`
 			} `json:"location"`
 		} `json:"occurs"`
 		TopicHits []struct {

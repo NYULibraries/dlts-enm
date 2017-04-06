@@ -73,7 +73,7 @@ type Topic struct {
 	DisplayName string `json:"display_name"`
 }
 
-// Created using github.com/ChimeraCoder/gojson/gojson
+// Created by github.com/ChimeraCoder/gojson/gojson
 // `cat json-api-samples/topic-detail.json | gojson -name=TopicDetail`
 type TopicDetail struct {
 	Basket struct {

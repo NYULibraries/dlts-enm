@@ -1,0 +1,28 @@
+[
+    {
+        "id": 2220,
+        "content": {
+            "content_unique_indicator": "12-page_i",
+            "content_descriptor": "page i",
+            "text": ""
+        },
+        "document": {
+            "title": "Originality, Imitation, and Plagiarism",
+            "author": "Eisner, Caroline; Vicinus, Martha",
+            "publisher": "University of Michigan Press and University of Michigan Library",
+            "id": 12,
+            "isbn": "9780472024445"
+        },
+        "context": null,
+        "occurrences": [],
+        "localid": "page_i",
+        "pagenumber": {
+            "filepath": "/OEBPS/01_title_page.xhtml",
+            "pagenumber_tag": "<a id=\"page_i\">",
+            "css_selector": "#page_i",
+            "xpath": "a[@id=\"page_i\"]"
+        },
+        "next_location_id": 2221,
+        "previous_location_id": null
+    }
+]

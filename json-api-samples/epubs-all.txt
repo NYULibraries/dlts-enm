@@ -1,0 +1,800 @@
+[
+    {
+        "title": "Black Rage Confronts the Law",
+        "author": "Paul Harris",
+        "publisher": "New York University",
+        "id": 95,
+        "isbn": "9780814735923"
+    },
+    {
+        "title": "Negrophobia and Reasonable Racism",
+        "author": "Jody David Armour",
+        "publisher": "New york University Press",
+        "id": 67,
+        "isbn": "9780814706404"
+    },
+    {
+        "title": "The Prostitution of Sexuality",
+        "author": "Kathleen Barry",
+        "publisher": "New york University Press",
+        "id": 73,
+        "isbn": "9780814712771"
+    },
+    {
+        "title": "Self and Other",
+        "author": "Robert Rogers",
+        "publisher": "New york University Press",
+        "id": 41,
+        "isbn": "9780814774434"
+    },
+    {
+        "title": "Seasons of Captivity",
+        "author": "Amia Lieblich",
+        "publisher": "New York University Press",
+        "id": 39,
+        "isbn": "9780814750957"
+    },
+    {
+        "title": "Deconstruction is/in America",
+        "author": "Anselm Haverkamp",
+        "publisher": "New York University Press",
+        "id": 50,
+        "isbn": "9780814735190"
+    },
+    {
+        "title": "In Search of the Swan Maiden",
+        "author": "Barbara Fass Leavy",
+        "publisher": "New York University Press",
+        "id": 37,
+        "isbn": "9780814751008"
+    },
+    {
+        "title": "The Dilemma of Context",
+        "author": "Ben-Ami Scharfstein",
+        "publisher": "New York University Press",
+        "id": 70,
+        "isbn": "9780814779163"
+    },
+    {
+        "title": "Imagined Human Beings",
+        "author": "Bernard J. Paris",
+        "publisher": "New York University Press",
+        "id": 35,
+        "isbn": "9780814766569"
+    },
+    {
+        "title": "Lover",
+        "author": "Bertha Harris",
+        "publisher": "New York University Press",
+        "id": 77,
+        "isbn": "9780814735053"
+    },
+    {
+        "title": "Manifesto of a Tenured Radical",
+        "author": "Cary Nelson",
+        "publisher": "New York University Press",
+        "id": 38,
+        "isbn": "9780814757970"
+    },
+    {
+        "title": "Can Unions Survive?",
+        "author": "charles b.craver",
+        "publisher": "New York University Press",
+        "id": 46,
+        "isbn": "9780814715123"
+    },
+    {
+        "title": "The Slave Soul of Russia",
+        "author": "Daniel Rancour-Laferriere",
+        "publisher": "New York University Press",
+        "id": 49,
+        "isbn": "9780814774823"
+    },
+    {
+        "title": "Charles Dickens and the Image of Woman",
+        "author": "David Holbrook",
+        "publisher": "New York University Press",
+        "id": 55,
+        "isbn": "9780814735282"
+    },
+    {
+        "title": "The Beginning of Terror",
+        "author": "David Kleinbard",
+        "publisher": "New York University Press",
+        "id": 44,
+        "isbn": "9780814746677"
+    },
+    {
+        "title": "Freedom to Differ",
+        "author": "Diane Helene Miller",
+        "publisher": "New York University Press",
+        "id": 80,
+        "isbn": "9780814755969"
+    },
+    {
+        "title": "Bird-Self Accumulated",
+        "author": "Don Judson",
+        "publisher": "New York University Press",
+        "id": 52,
+        "isbn": "9780814742297"
+    },
+    {
+        "title": "Postcommunism And The Body Politic",
+        "author": "Ellen E. Berry",
+        "publisher": "New York University Press",
+        "id": 59,
+        "isbn": "9780814712481"
+    },
+    {
+        "title": "Japanese lessons",
+        "author": "Gail R. Benjamin",
+        "publisher": "New York University Press",
+        "id": 42,
+        "isbn": "9780814712917"
+    },
+    {
+        "title": "Postmodern Legal Movements",
+        "author": "Gary Minda",
+        "publisher": "New York University Press",
+        "id": 93,
+        "isbn": "9780814755112"
+    },
+    {
+        "title": "By Any Media Necessary",
+        "author": "Henry Jenkins et al",
+        "publisher": "New York University Press",
+        "id": 33,
+        "isbn": "9781479899982"
+    },
+    {
+        "title": "Integrity and Conscience",
+        "author": "Ian Shapiro",
+        "publisher": "New York University Press",
+        "id": 81,
+        "isbn": "9780814780978"
+    },
+    {
+        "title": "Busting the Mob",
+        "author": "James B. Jacobs",
+        "publisher": "New York University Press",
+        "id": 61,
+        "isbn": "9780814742303"
+    },
+    {
+        "title": "The Prophetic Tradition and Radical Rhetoric in America",
+        "author": "James Darsey",
+        "publisher": "New York University Press",
+        "id": 75,
+        "isbn": "9780814718766"
+    },
+    {
+        "title": "Nachman Krochmal",
+        "author": "Jay M. Harris",
+        "publisher": "New York University Press",
+        "id": 47,
+        "isbn": "9780814735084"
+    },
+    {
+        "title": "Faith Born of Seduction",
+        "author": "Jennifer L. Manlowe",
+        "publisher": "New York University Press",
+        "id": 90,
+        "isbn": "9780814755297"
+    },
+    {
+        "title": "Indentation and Other Stories",
+        "author": "Joe Schall",
+        "publisher": "New York University Press",
+        "id": 65,
+        "isbn": "9780814779170"
+    },
+    {
+        "title": "Seriatim",
+        "author": "John Marshall",
+        "publisher": "New York University Press",
+        "id": 51,
+        "isbn": "9780814731437"
+    },
+    {
+        "title": "Markets and Justice",
+        "author": "John W. Chapman",
+        "publisher": "New York University Press",
+        "id": 63,
+        "isbn": "9780814714218"
+    },
+    {
+        "title": "Compensatory Justice",
+        "author": "John W. Chapman",
+        "publisher": "New York University Press",
+        "id": 53,
+        "isbn": "9780814714539"
+    },
+    {
+        "title": "Show Sold Separately",
+        "author": "Jonathan Gray",
+        "publisher": "New York University Press",
+        "id": 114,
+        "isbn": "9780814731949"
+    },
+    {
+        "title": "Gershom Scholem and the Mystical Dimension of Jewish History",
+        "author": "Joseph Dan",
+        "publisher": "New York University Press",
+        "id": 72,
+        "isbn": "9780814718124"
+    },
+    {
+        "title": "The Scar That Binds",
+        "author": "Keith Beattie",
+        "publisher": "New York University Press",
+        "id": 78,
+        "isbn": "9780814713266"
+    },
+    {
+        "title": "A Republic of Men",
+        "author": "Mark E. Kann",
+        "publisher": "New York University Press",
+        "id": 56,
+        "isbn": "9780814747148"
+    },
+    {
+        "title": "HIV Mental Health for the 21st Century",
+        "author": "Mark G. Winiarski",
+        "publisher": "New York University Press",
+        "id": 82,
+        "isbn": "9780814793114"
+    },
+    {
+        "title": "The Lavender Vote",
+        "author": "Mark Hertzog",
+        "publisher": "New York University Press",
+        "id": 60,
+        "isbn": "9780814735305"
+    },
+    {
+        "title": "Narcissism and the Literary Libido",
+        "author": "Marshall W. Alcorn, Jr.",
+        "publisher": "New York University Press",
+        "id": 86,
+        "isbn": "9780814706657"
+    },
+    {
+        "title": "Romantic Outlaws, Beloved Prisons",
+        "author": "Martha Grace Duncan",
+        "publisher": "New York University Press",
+        "id": 74,
+        "isbn": "9780814718803"
+    },
+    {
+        "title": "The truth about  Freud’s technique",
+        "author": "M. Guy Thompson",
+        "publisher": "New York University Press",
+        "id": 62,
+        "isbn": "9780814782194"
+    },
+    {
+        "title": "The Employment of English",
+        "author": "Michael Bérubé",
+        "publisher": "New York University Press",
+        "id": 40,
+        "isbn": "9780814713013"
+    },
+    {
+        "title": "The Gender Line",
+        "author": "Nancy Levit",
+        "publisher": "New York University Press",
+        "id": 76,
+        "isbn": "9780814751213"
+    },
+    {
+        "title": "Adventures of the Mind",
+        "author": "Natalie Clifford Barney, John Spalding Gatton",
+        "publisher": "New York University Press",
+        "id": 71,
+        "isbn": "9780814711774"
+    },
+    {
+        "title": "Everyday Courage",
+        "author": "Niobe Way",
+        "publisher": "New York University Press",
+        "id": 96,
+        "isbn": "9780814793398"
+    },
+    {
+        "title": "Bisexuality and the Challenge to Lesbian Politics",
+        "author": "Paula C. Rust",
+        "publisher": "New York University Press",
+        "id": 92,
+        "isbn": "9780814774458"
+    },
+    {
+        "title": "Embracing the Other",
+        "author": "Pearl M. Oliner",
+        "publisher": "New York University Press",
+        "id": 57,
+        "isbn": "9780814761908"
+    },
+    {
+        "title": "The Transformation of Rage",
+        "author": "Peggy Fitzhugh Johnstone",
+        "publisher": "New York University Press",
+        "id": 68,
+        "isbn": "9780814742358"
+    },
+    {
+        "title": "Ferenczi’s Turn in Psychoanalysis",
+        "author": "Peter L. Rudnytsky",
+        "publisher": "New York University Press",
+        "id": 45,
+        "isbn": "9780814774755"
+    },
+    {
+        "title": "American Cool",
+        "author": "Peter N. Stearns",
+        "publisher": "New York University Press",
+        "id": 98,
+        "isbn": "9780814779965"
+    },
+    {
+        "title": "Out of Work",
+        "author": "Richard K. Vedder and Lowell E. Gallaway",
+        "publisher": "New York University Press",
+        "id": 79,
+        "isbn": "9780814787922"
+    },
+    {
+        "title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality",
+        "author": "R. Jeffrey Ringer",
+        "publisher": "New York University Press",
+        "id": 85,
+        "isbn": "9780814774410"
+    },
+    {
+        "title": "The Smart Culture",
+        "author": "Robert L. Hayman",
+        "publisher": "New York University Press",
+        "id": 89,
+        "isbn": "9780814735336"
+    },
+    {
+        "title": "The Americanization of the Jews",
+        "author": "Robert M. Seltzer",
+        "publisher": "New York University Press",
+        "id": 58,
+        "isbn": "9780814780015"
+    },
+    {
+        "title": "Clarence Thomas and the Tough Love Crowd",
+        "author": "Ronald Suresh Roberts",
+        "publisher": "New York University Press",
+        "id": 94,
+        "isbn": "9780814774816"
+    },
+    {
+        "title": "Hybrid",
+        "author": "Ruth Colker",
+        "publisher": "New York University Press",
+        "id": 43,
+        "isbn": "9780814715383"
+    },
+    {
+        "title": "American Law in the Age of Hypercapitalism",
+        "author": "Ruth Colker",
+        "publisher": "New York University Press",
+        "id": 66,
+        "isbn": "9780814715635"
+    },
+    {
+        "title": "The Chrysanthemum and the Eagle",
+        "author": "Ryuzo Sato",
+        "publisher": "New York University Press",
+        "id": 54,
+        "isbn": "9780814780213"
+    },
+    {
+        "title": "Blacks in the Jewish Mind",
+        "author": "Seth Forman",
+        "publisher": "New York University Press",
+        "id": 83,
+        "isbn": "9780814726815"
+    },
+    {
+        "title": "The Class: Living and Learning in the Digital Age",
+        "author": "Sonia Livingstone and Julian Sefton-Green",
+        "publisher": "New York University Press",
+        "id": 34,
+        "isbn": "9781479824243"
+    },
+    {
+        "title": "The Psychological Assessment of Presidential Candidates",
+        "author": "Stanley A. Renshon",
+        "publisher": "New York University Press",
+        "id": 36,
+        "isbn": "9780814774694"
+    },
+    {
+        "title": "High Hopes",
+        "author": "Stanley A. Renshon",
+        "publisher": "New York University Press",
+        "id": 84,
+        "isbn": "9780814774632"
+    },
+    {
+        "title": "Please don’t Wish me a Merry Christmas",
+        "author": "Stephen M. Feldman.",
+        "publisher": "New York University Press",
+        "id": 64,
+        "isbn": "9780814726846"
+    },
+    {
+        "title": "Bodies in Protest",
+        "author": "Steve Kroll-Smith",
+        "publisher": "New York University Press",
+        "id": 87,
+        "isbn": "9780814746622"
+    },
+    {
+        "title": "Culture Clash",
+        "author": "Steven Goldberg",
+        "publisher": "New York University Press",
+        "id": 97,
+        "isbn": "9780814730911"
+    },
+    {
+        "title": "The Essential Agus",
+        "author": "Steven T. Katz",
+        "publisher": "New York University Press",
+        "id": 91,
+        "isbn": "9780814746929"
+    },
+    {
+        "title": "This Time We Knew",
+        "author": "Thomas Cushman",
+        "publisher": "New York University Press",
+        "id": 99,
+        "isbn": "9780814715352"
+    },
+    {
+        "title": "TO BE AN AMERICAN",
+        "author": "Bill Ong Hing",
+        "publisher": "NEW YORK UNIVERSITY PRESS",
+        "id": 69,
+        "isbn": "9780814735237"
+    },
+    {
+        "title": "Christianity and the Holocaust of Hungarian Jewry",
+        "author": "Moshe Y. Herczl",
+        "publisher": "New York University Press New York and London",
+        "id": 48,
+        "isbn": "9780814735206"
+    },
+    {
+        "title": "Oye Loca",
+        "author": "Susana Peña",
+        "publisher": "Regents of the University of Minnesota",
+        "id": 112,
+        "isbn": "9780816686681"
+    },
+    {
+        "title": "Answer the Call",
+        "author": "Aimee Carrillo Rowe, Sheena Malhotra, and Kimberlee Pérez",
+        "publisher": "The Regents of the University of Minnesota",
+        "id": 109,
+        "isbn": "9781452940397"
+    },
+    {
+        "title": "My Life as a Night Elf Priest",
+        "author": "Bonnie A. Nardi",
+        "publisher": "The University of Michigan Press",
+        "id": 20,
+        "isbn": "9780472026715"
+    },
+    {
+        "title": "Hacking the Academy: New Approaches to Scholarship and Teaching from Digital Humanities",
+        "author": "Cohen, Daniel J.; Scheinfeldt, Tom",
+        "publisher": "The University of Michigan Press",
+        "id": 24,
+        "isbn": "9780472029471"
+    },
+    {
+        "title": "Writing History in the Digital Age",
+        "author": "Dougherty, Jack; Nawrotzki, Kristen",
+        "publisher": "The University of Michigan Press",
+        "id": 21,
+        "isbn": "9780472029914"
+    },
+    {
+        "title": "Digital Rubbish: A Natural History of Electronics",
+        "author": "Gabrys, Jennifer",
+        "publisher": "The University of Michigan Press",
+        "id": 22,
+        "isbn": "9780472029402"
+    },
+    {
+        "title": "The Unreal Estate Guide to Detroit",
+        "author": "Herscher, Andrew",
+        "publisher": "The University of Michigan Press",
+        "id": 15,
+        "isbn": "9780472029174"
+    },
+    {
+        "title": "Pastplay: Teaching and Learning History with Technology",
+        "author": "Kee, Kevin",
+        "publisher": "The University of Michigan Press",
+        "id": 1,
+        "isbn": "9780472120482"
+    },
+    {
+        "title": "Teaching History in the Digital Age",
+        "author": "Kelly, T. Mills",
+        "publisher": "The University of Michigan Press",
+        "id": 25,
+        "isbn": "9780472029136"
+    },
+    {
+        "title": "Digital Tools in Urban Schools: Mediating a Remix of Learning",
+        "author": "Mahiri, Jabari",
+        "publisher": "The University of Michigan Press",
+        "id": 28,
+        "isbn": "9780472027606"
+    },
+    {
+        "title": "Silent Hill: The Terror Engine",
+        "author": "Perron, Bernard",
+        "publisher": "The University of Michigan Press",
+        "id": 23,
+        "isbn": "9780472027835"
+    },
+    {
+        "title": "Doom: Scarydarkfast",
+        "author": "Pinchbeck, Dan",
+        "publisher": "The University of Michigan Press",
+        "id": 17,
+        "isbn": "9780472028931"
+    },
+    {
+        "title": "This Gaming Life",
+        "author": "Rossignol, Jim",
+        "publisher": "The University of Michigan Press",
+        "id": 2,
+        "isbn": "9780472023141"
+    },
+    {
+        "title": "Poetry's Afterlife: Verse in the Digital Age",
+        "author": "Stein, Kevin",
+        "publisher": "The University of Michigan Press",
+        "id": 14,
+        "isbn": "9780472026708"
+    },
+    {
+        "title": "The Media Welfare State: Nordic Media in the Digital Era",
+        "author": "Syvertsen, Trine; Enli, Gunn; Mjøs, Ole J.; Moe, Hallvard",
+        "publisher": "The University of Michigan Press",
+        "id": 3,
+        "isbn": "9780472120314"
+    },
+    {
+        "title": "Making News at The New York Times",
+        "author": "Usher, Nikki",
+        "publisher": "The University of Michigan Press",
+        "id": 30,
+        "isbn": "9780472120499"
+    },
+    {
+        "title": "Myst and Riven: The World of the D'ni",
+        "author": "Wolf, Mark J. P.",
+        "publisher": "The University of Michigan Press",
+        "id": 16,
+        "isbn": "9780472027491"
+    },
+    {
+        "title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project",
+        "author": "Alexander, Buzz",
+        "publisher": "The University of Michigan Press and The University of Michigan Library",
+        "id": 13,
+        "isbn": "9780472027446"
+    },
+    {
+        "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+        "author": "Schur, Richard L.",
+        "publisher": "The University of Michigan Press and The University of Michigan Library",
+        "id": 18,
+        "isbn": "9780472024490"
+    },
+    {
+        "title": "Skate Life: Re-Imagining White Masculinity",
+        "author": "Yochim, Emily Chivers",
+        "publisher": "The University of Michigan Press and The University of Michigan Library",
+        "id": 27,
+        "isbn": "9780472026609"
+    },
+    {
+        "title": "Civic Engagement in the Wake of Katrina",
+        "author": "Amy Koritz and George J. Sanchez",
+        "publisher": "University of Michigan Press",
+        "id": 4,
+        "isbn": "9780472024483"
+    },
+    {
+        "title": "Settlers of Unassigned Lands",
+        "author": "Charles McLeod ",
+        "publisher": "University of Michigan Press",
+        "id": 19,
+        "isbn": "9780472121038"
+    },
+    {
+        "title": "Imagining the Global: Transnational Media and Popular Culture Beyond East and West",
+        "author": "Darling-Wolf, Fabienne",
+        "publisher": "University of Michigan Press",
+        "id": 6,
+        "isbn": "9780472120796"
+    },
+    {
+        "title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field",
+        "author": "Klein, Julie Thompson",
+        "publisher": "University of Michigan Press",
+        "id": 31,
+        "isbn": "9780472120932"
+    },
+    {
+        "title": "A Heart Beating Hard",
+        "author": "Lauren Foss Goodman",
+        "publisher": "University of Michigan Press",
+        "id": 5,
+        "isbn": "9780472120970"
+    },
+    {
+        "title": "Internationalizing “International Communication”",
+        "author": "Lee, Chin-Chuan",
+        "publisher": "University of Michigan Press",
+        "id": 11,
+        "isbn": "9780472120789"
+    },
+    {
+        "title": "Full Metal Jhacket",
+        "author": "Matthew Derby",
+        "publisher": "University of Michigan Press",
+        "id": 8,
+        "isbn": "9780472120963"
+    },
+    {
+        "title": "Owning the Olympics: Narratives of the New China",
+        "author": "Price, Monroe E.; Dayan, Daniel",
+        "publisher": "University of Michigan Press",
+        "id": 9,
+        "isbn": "9780472024506"
+    },
+    {
+        "title": "American Homes",
+        "author": "Ryan Ridge",
+        "publisher": "University of Michigan Press",
+        "id": 10,
+        "isbn": "9780472120994"
+    },
+    {
+        "title": "Tactics of the Human: Experimental Technics in American Fiction",
+        "author": "Shackelford, Laura",
+        "publisher": "University of Michigan Press",
+        "id": 26,
+        "isbn": "9780472120680"
+    },
+    {
+        "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+        "author": "Turrow, Joseph; Tsui, Lokman",
+        "publisher": "University of Michigan Press",
+        "id": 32,
+        "isbn": "9780472024537"
+    },
+    {
+        "title": "Wiki Writing: Collaborative Learning in the College Classroom",
+        "author": "Cummings, Robert E.; Barton, Matt",
+        "publisher": "University of Michigan Press and University of Michigan Library",
+        "id": 7,
+        "isbn": "9780472024513"
+    },
+    {
+        "title": "Originality, Imitation, and Plagiarism",
+        "author": "Eisner, Caroline; Vicinus, Martha",
+        "publisher": "University of Michigan Press and University of Michigan Library",
+        "id": 12,
+        "isbn": "9780472024445"
+    },
+    {
+        "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle",
+        "author": "Elizabeth Carolyn Miller",
+        "publisher": "University of Michigan Press and University of Michigan Library",
+        "id": 29,
+        "isbn": "9780472024469"
+    },
+    {
+        "title": "Educated in Whiteness",
+        "author": "Angelina E. Castagno",
+        "publisher": "University of Minnesota Press",
+        "id": 102,
+        "isbn": "9780816681655"
+    },
+    {
+        "title": "FILIPINOS REPRESENT",
+        "author": "Antonio T. Tiongson Jr.",
+        "publisher": "University of Minnesota Press",
+        "id": 103,
+        "isbn": "9780816687848"
+    },
+    {
+        "title": "Model Immigrants and Undesirable Aliens",
+        "author": "Christina Gerken",
+        "publisher": "University of Minnesota Press",
+        "id": 100,
+        "isbn": "9780816686353"
+    },
+    {
+        "title": "Becoming Human",
+        "author": "David Mitchell",
+        "publisher": "University of Minnesota Press",
+        "id": 113,
+        "isbn": "9780816689972"
+    },
+    {
+        "title": "Health Rights Are Civil Rights",
+        "author": "Jenna M. Loyd",
+        "publisher": "University of Minnesota Press",
+        "id": 104,
+        "isbn": "9780816676507"
+    },
+    {
+        "title": "Corporate Sovereignty",
+        "author": "Joshua Barkan",
+        "publisher": "University of Minnesota Press",
+        "id": 106,
+        "isbn": "9780816686490"
+    },
+    {
+        "title": "The Durable Slum",
+        "author": "Liza Weinstein",
+        "publisher": "University of Minnesota Press",
+        "id": 108,
+        "isbn": "9780816683109"
+    },
+    {
+        "title": "Universes without Us",
+        "author": "Matthew A. Taylor",
+        "publisher": "University of Minnesota Press",
+        "id": 105,
+        "isbn": "9780816680610"
+    },
+    {
+        "title": "Fires on the Border",
+        "author": "Rosemary Hennessy",
+        "publisher": "University of Minnesota Press",
+        "id": 101,
+        "isbn": "9781452940106"
+    },
+    {
+        "title": "Coproducing Asia",
+        "author": "Stephanie DeBoer",
+        "publisher": "University of Minnesota Press",
+        "id": 107,
+        "isbn": "9781452940946"
+    },
+    {
+        "title": "Split Screen Korea",
+        "author": "Steven Chung",
+        "publisher": "University of Minnesota Press",
+        "id": 110,
+        "isbn": "9781452941516"
+    },
+    {
+        "title": "The Fragmented Politics of Urban Preservation",
+        "author": "Yue Zhang",
+        "publisher": "University of Minnesota Press",
+        "id": 111,
+        "isbn": "9780816688203"
+    },
+    {
+        "title": "Teaching What You’re Not",
+        "author": "Katherine J. Mayberry",
+        "publisher": "York University Press",
+        "id": 88,
+        "isbn": "9780814755471"
+    }
+]

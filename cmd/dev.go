@@ -21,6 +21,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var Cache bool
+
 // devCmd represents the dev command
 var devCmd = &cobra.Command{
 	Use:   "dev",
@@ -67,6 +69,13 @@ func init() {
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
 	// devCmd.PersistentFlags().String("foo", "", "A help for foo")
+	devCmd.PersistentFlags().BoolVarP(
+		&Cache,
+		"cache",
+		"c",
+		false,
+		"Get data from cache instead of making live calls to ENM TCT",
+	)
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:

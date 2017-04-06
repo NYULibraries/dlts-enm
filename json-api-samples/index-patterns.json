@@ -1,0 +1,783 @@
+[
+    {
+        "name": "nyup1",
+        "description": "NYUP as of Spring 2015",
+        "pagenumber_pre_strings": [
+            "id=\"page_"
+        ],
+        "pagenumber_css_selector_pattern": "#page_{}",
+        "pagenumber_xpath_pattern": "a[@id=\"page_{}\"]",
+        "xpath_entry": "p[@class='indexmain' or @class='indexmain1']",
+        "see_split_strings": [
+            ". See",
+            ", See",
+            ", see",
+            "(see"
+        ],
+        "see_also_split_strings": [
+            ", See also",
+            ". See also",
+            "See also",
+            " see also",
+            ", also",
+            "(see also"
+        ],
+        "xpath_see": "em",
+        "xpath_seealso": "em",
+        "separator_between_sees": ";",
+        "separator_between_seealsos": ";",
+        "separator_see_subentry": ",",
+        "inline_see_start": "",
+        "inline_see_also_start": "",
+        "inline_see_end": "",
+        "inline_see_also_end": "",
+        "subentry_classes": [
+            "indexsub"
+        ],
+        "separator_between_subentries": "",
+        "separator_between_entry_and_occurrences": ",",
+        "separator_before_first_subentry": ":",
+        "xpath_occurrence_link": "a[@href]",
+        "indicators_of_occurrence_range": [
+            "–",
+            "—"
+        ],
+        "documents": [
+            {
+                "title": "Imagined Human Beings",
+                "id": 35
+            },
+            {
+                "title": "In Search of the Swan Maiden",
+                "id": 37
+            },
+            {
+                "title": "Manifesto of a Tenured Radical",
+                "id": 38
+            },
+            {
+                "title": "Seasons of Captivity",
+                "id": 39
+            },
+            {
+                "title": "The Employment of English",
+                "id": 40
+            },
+            {
+                "title": "Japanese lessons",
+                "id": 42
+            },
+            {
+                "title": "The Beginning of Terror",
+                "id": 44
+            },
+            {
+                "title": "Ferenczi’s Turn in Psychoanalysis",
+                "id": 45
+            },
+            {
+                "title": "Can Unions Survive?",
+                "id": 46
+            },
+            {
+                "title": "The Slave Soul of Russia",
+                "id": 49
+            },
+            {
+                "title": "Deconstruction is/in America",
+                "id": 50
+            },
+            {
+                "title": "Seriatim",
+                "id": 51
+            },
+            {
+                "title": "Compensatory Justice",
+                "id": 53
+            },
+            {
+                "title": "The Chrysanthemum and the Eagle",
+                "id": 54
+            },
+            {
+                "title": "Charles Dickens and the Image of Woman",
+                "id": 55
+            },
+            {
+                "title": "Christianity and the Holocaust of Hungarian Jewry",
+                "id": 48
+            },
+            {
+                "title": "The Americanization of the Jews",
+                "id": 58
+            },
+            {
+                "title": "Postcommunism And The Body Politic",
+                "id": 59
+            },
+            {
+                "title": "Busting the Mob",
+                "id": 61
+            },
+            {
+                "title": "The truth about  Freud’s technique",
+                "id": 62
+            },
+            {
+                "title": "Markets and Justice",
+                "id": 63
+            },
+            {
+                "title": "Please don’t Wish me a Merry Christmas",
+                "id": 64
+            },
+            {
+                "title": "Negrophobia and Reasonable Racism",
+                "id": 67
+            },
+            {
+                "title": "The Transformation of Rage",
+                "id": 68
+            },
+            {
+                "title": "TO BE AN AMERICAN",
+                "id": 69
+            },
+            {
+                "title": "Adventures of the Mind",
+                "id": 71
+            },
+            {
+                "title": "Gershom Scholem and the Mystical Dimension of Jewish History",
+                "id": 72
+            },
+            {
+                "title": "The Gender Line",
+                "id": 76
+            },
+            {
+                "title": "Lover",
+                "id": 77
+            },
+            {
+                "title": "The Scar That Binds",
+                "id": 78
+            },
+            {
+                "title": "Out of Work",
+                "id": 79
+            },
+            {
+                "title": "Integrity and Conscience",
+                "id": 81
+            },
+            {
+                "title": "HIV Mental Health for the 21st Century",
+                "id": 82
+            },
+            {
+                "title": "Embracing the Other",
+                "id": 57
+            },
+            {
+                "title": "Romantic Outlaws, Beloved Prisons",
+                "id": 74
+            },
+            {
+                "title": "Blacks in the Jewish Mind",
+                "id": 83
+            },
+            {
+                "title": "Narcissism and the Literary Libido",
+                "id": 86
+            },
+            {
+                "title": "Bodies in Protest",
+                "id": 87
+            },
+            {
+                "title": "The Smart Culture",
+                "id": 89
+            },
+            {
+                "title": "Faith Born of Seduction",
+                "id": 90
+            },
+            {
+                "title": "The Essential Agus",
+                "id": 91
+            },
+            {
+                "title": "Bisexuality and the Challenge to Lesbian Politics",
+                "id": 92
+            },
+            {
+                "title": "Clarence Thomas and the Tough Love Crowd",
+                "id": 94
+            },
+            {
+                "title": "Black Rage Confronts the Law",
+                "id": 95
+            },
+            {
+                "title": "Everyday Courage",
+                "id": 96
+            },
+            {
+                "title": "Culture Clash",
+                "id": 97
+            },
+            {
+                "title": "This Time We Knew",
+                "id": 99
+            },
+            {
+                "title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality",
+                "id": 85
+            },
+            {
+                "title": "The Psychological Assessment of Presidential Candidates",
+                "id": 36
+            },
+            {
+                "title": "Self and Other",
+                "id": 41
+            },
+            {
+                "title": "Bird-Self Accumulated",
+                "id": 52
+            },
+            {
+                "title": "A Republic of Men",
+                "id": 56
+            },
+            {
+                "title": "The Lavender Vote",
+                "id": 60
+            },
+            {
+                "title": "Indentation and Other Stories",
+                "id": 65
+            },
+            {
+                "title": "The Dilemma of Context",
+                "id": 70
+            },
+            {
+                "title": "The Prophetic Tradition and Radical Rhetoric in America",
+                "id": 75
+            },
+            {
+                "title": "Freedom to Differ",
+                "id": 80
+            },
+            {
+                "title": "High Hopes",
+                "id": 84
+            },
+            {
+                "title": "Teaching What You’re Not",
+                "id": 88
+            },
+            {
+                "title": "Postmodern Legal Movements",
+                "id": 93
+            },
+            {
+                "title": "Show Sold Separately",
+                "id": 114
+            },
+            {
+                "title": "American Cool",
+                "id": 98
+            },
+            {
+                "title": "Health Rights Are Civil Rights",
+                "id": 104
+            }
+        ]
+    },
+    {
+        "name": "nyup1-comma",
+        "description": "NYUP as of Spring 2015 (Comma Separated Subentries)",
+        "pagenumber_pre_strings": [
+            "id=\"page_"
+        ],
+        "pagenumber_css_selector_pattern": "#page_{}",
+        "pagenumber_xpath_pattern": "a[@id=\"page_{}\"]",
+        "xpath_entry": "p[@class='indexmain' or @class='indexmain1']",
+        "see_split_strings": [
+            ". See"
+        ],
+        "see_also_split_strings": [
+            ", See also",
+            ". See also"
+        ],
+        "xpath_see": "em",
+        "xpath_seealso": "em",
+        "separator_between_sees": ";",
+        "separator_between_seealsos": ";",
+        "separator_see_subentry": "",
+        "inline_see_start": "",
+        "inline_see_also_start": "",
+        "inline_see_end": "",
+        "inline_see_also_end": "",
+        "subentry_classes": [
+            "indexsub"
+        ],
+        "separator_between_subentries": "",
+        "separator_between_entry_and_occurrences": ",",
+        "separator_before_first_subentry": ", ",
+        "xpath_occurrence_link": "a[@href]",
+        "indicators_of_occurrence_range": [
+            "–",
+            "—"
+        ],
+        "documents": [
+            {
+                "title": "Hybrid",
+                "id": 43
+            },
+            {
+                "title": "American Law in the Age of Hypercapitalism",
+                "id": 66
+            },
+            {
+                "title": "The Prostitution of Sexuality",
+                "id": 73
+            },
+            {
+                "title": "Nachman Krochmal",
+                "id": 47
+            }
+        ]
+    },
+    {
+        "name": "nyup2",
+        "description": "NYUP as of Winter 2016 (Second Batch)",
+        "pagenumber_pre_strings": [
+            "id=\"pg_"
+        ],
+        "pagenumber_css_selector_pattern": "span[@id=\"pg_{}\"]",
+        "pagenumber_xpath_pattern": "#pg_{}",
+        "xpath_entry": "p[@class='in' or @class='inf']",
+        "see_split_strings": [
+            ". See"
+        ],
+        "see_also_split_strings": [
+            ", See also",
+            ". See also"
+        ],
+        "xpath_see": "span",
+        "xpath_seealso": "span",
+        "separator_between_sees": ";",
+        "separator_between_seealsos": ";",
+        "separator_see_subentry": ",",
+        "inline_see_start": "",
+        "inline_see_also_start": "",
+        "inline_see_end": "",
+        "inline_see_also_end": "",
+        "subentry_classes": [],
+        "separator_between_subentries": "; ",
+        "separator_between_entry_and_occurrences": ",",
+        "separator_before_first_subentry": ":",
+        "xpath_occurrence_link": "a[@href and not(starts-with(@href, '#')) and not(starts-with(@href, 'http:'))]",
+        "indicators_of_occurrence_range": [
+            "–",
+            "—"
+        ],
+        "documents": [
+            {
+                "title": "By Any Media Necessary",
+                "id": 33
+            },
+            {
+                "title": "The Class: Living and Learning in the Digital Age",
+                "id": 34
+            }
+        ]
+    },
+    {
+        "name": "ump1",
+        "description": "U of Michigan as of Spring 2015",
+        "pagenumber_pre_strings": [
+            "<a id=\"page_",
+            "<a epub:type=\"pagebreak\" id=\"page_"
+        ],
+        "pagenumber_css_selector_pattern": "#page_{}",
+        "pagenumber_xpath_pattern": "a[@id=\"page_{}\"]",
+        "xpath_entry": "p[@class='indexitem']",
+        "see_split_strings": [
+            "See"
+        ],
+        "see_also_split_strings": [
+            ". See also",
+            ", See also",
+            "; See also",
+            "See also",
+            "see also"
+        ],
+        "xpath_see": "i",
+        "xpath_seealso": "i",
+        "separator_between_sees": ";",
+        "separator_between_seealsos": "; ",
+        "separator_see_subentry": ",",
+        "inline_see_start": "(see",
+        "inline_see_also_start": "(see also",
+        "inline_see_end": ")",
+        "inline_see_also_end": ")",
+        "subentry_classes": [
+            "indexitem1",
+            "indexitem2"
+        ],
+        "separator_between_subentries": "; ",
+        "separator_between_entry_and_occurrences": ",",
+        "separator_before_first_subentry": ":",
+        "xpath_occurrence_link": "a[@href and not(starts-with(@href, '#')) and not(starts-with(@href, 'http:'))]",
+        "indicators_of_occurrence_range": [
+            "–",
+            "—"
+        ],
+        "documents": [
+            {
+                "title": "The Media Welfare State: Nordic Media in the Digital Era",
+                "id": 3
+            },
+            {
+                "title": "Civic Engagement in the Wake of Katrina",
+                "id": 4
+            },
+            {
+                "title": "A Heart Beating Hard",
+                "id": 5
+            },
+            {
+                "title": "Wiki Writing: Collaborative Learning in the College Classroom",
+                "id": 7
+            },
+            {
+                "title": "Full Metal Jhacket",
+                "id": 8
+            },
+            {
+                "title": "Owning the Olympics: Narratives of the New China",
+                "id": 9
+            },
+            {
+                "title": "American Homes",
+                "id": 10
+            },
+            {
+                "title": "Originality, Imitation, and Plagiarism",
+                "id": 12
+            },
+            {
+                "title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project",
+                "id": 13
+            },
+            {
+                "title": "The Unreal Estate Guide to Detroit",
+                "id": 15
+            },
+            {
+                "title": "Myst and Riven: The World of the D'ni",
+                "id": 16
+            },
+            {
+                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                "id": 18
+            },
+            {
+                "title": "Settlers of Unassigned Lands",
+                "id": 19
+            },
+            {
+                "title": "My Life as a Night Elf Priest",
+                "id": 20
+            },
+            {
+                "title": "Writing History in the Digital Age",
+                "id": 21
+            },
+            {
+                "title": "Hacking the Academy: New Approaches to Scholarship and Teaching from Digital Humanities",
+                "id": 24
+            },
+            {
+                "title": "Teaching History in the Digital Age",
+                "id": 25
+            },
+            {
+                "title": "Tactics of the Human: Experimental Technics in American Fiction",
+                "id": 26
+            },
+            {
+                "title": "This Gaming Life",
+                "id": 2
+            },
+            {
+                "title": "Poetry's Afterlife: Verse in the Digital Age",
+                "id": 14
+            },
+            {
+                "title": "Silent Hill: The Terror Engine",
+                "id": 23
+            },
+            {
+                "title": "Making News at The New York Times",
+                "id": 30
+            },
+            {
+                "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+                "id": 32
+            },
+            {
+                "title": "Pastplay: Teaching and Learning History with Technology",
+                "id": 1
+            },
+            {
+                "title": "Imagining the Global: Transnational Media and Popular Culture Beyond East and West",
+                "id": 6
+            },
+            {
+                "title": "Internationalizing “International Communication”",
+                "id": 11
+            },
+            {
+                "title": "Doom: Scarydarkfast",
+                "id": 17
+            },
+            {
+                "title": "Digital Rubbish: A Natural History of Electronics",
+                "id": 22
+            },
+            {
+                "title": "Skate Life: Re-Imagining White Masculinity",
+                "id": 27
+            },
+            {
+                "title": "Digital Tools in Urban Schools: Mediating a Remix of Learning",
+                "id": 28
+            },
+            {
+                "title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field",
+                "id": 31
+            }
+        ]
+    },
+    {
+        "name": "ump1-alt-seealso",
+        "description": "U of Michigan as of Spring 2015",
+        "pagenumber_pre_strings": [
+            "<a id=\"page_",
+            "<a epub:type=\"pagebreak\" id=\"page_"
+        ],
+        "pagenumber_css_selector_pattern": "#page_{}",
+        "pagenumber_xpath_pattern": "a[@id=\"page_{}\"]",
+        "xpath_entry": "p[@class='indexitem']",
+        "see_split_strings": [
+            ". See"
+        ],
+        "see_also_split_strings": [
+            ". See also",
+            ", See also",
+            ",\n See also",
+            ", \nSee also",
+            " See also"
+        ],
+        "xpath_see": "i",
+        "xpath_seealso": "i",
+        "separator_between_sees": ", ",
+        "separator_between_seealsos": ", ",
+        "separator_see_subentry": ": ",
+        "inline_see_start": "",
+        "inline_see_also_start": "",
+        "inline_see_end": "",
+        "inline_see_also_end": "",
+        "subentry_classes": [
+            "indexitem1"
+        ],
+        "separator_between_subentries": "; ",
+        "separator_between_entry_and_occurrences": ",",
+        "separator_before_first_subentry": ":",
+        "xpath_occurrence_link": "a[@href and not(starts-with(@href, '#')) and not(starts-with(@href, 'http:'))]",
+        "indicators_of_occurrence_range": [
+            "–",
+            "—"
+        ],
+        "documents": [
+            {
+                "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle",
+                "id": 29
+            }
+        ]
+    },
+    {
+        "name": "umn1",
+        "description": "University of Minnesota Press as of July 2015",
+        "pagenumber_pre_strings": [
+            "<a id=\"p"
+        ],
+        "pagenumber_css_selector_pattern": "#p{}",
+        "pagenumber_xpath_pattern": "a[@id=\"p{}\"]",
+        "xpath_entry": "p[@class='in' or @class='inf']",
+        "see_split_strings": [
+            ". See"
+        ],
+        "see_also_split_strings": [
+            ". See also",
+            ". <i>See also</i>",
+            ", See also",
+            " See also"
+        ],
+        "xpath_see": "i",
+        "xpath_seealso": "i",
+        "separator_between_sees": ";",
+        "separator_between_seealsos": ";",
+        "separator_see_subentry": ",",
+        "inline_see_start": "(see",
+        "inline_see_also_start": "(see also",
+        "inline_see_end": ")",
+        "inline_see_also_end": ")",
+        "subentry_classes": [
+            "in1"
+        ],
+        "separator_between_subentries": ";",
+        "separator_between_entry_and_occurrences": ",",
+        "separator_before_first_subentry": ": ",
+        "xpath_occurrence_link": "a[@class='xref']",
+        "indicators_of_occurrence_range": [
+            "–",
+            "—"
+        ],
+        "documents": [
+            {
+                "title": "Model Immigrants and Undesirable Aliens",
+                "id": 100
+            },
+            {
+                "title": "Educated in Whiteness",
+                "id": 102
+            },
+            {
+                "title": "Universes without Us",
+                "id": 105
+            },
+            {
+                "title": "Corporate Sovereignty",
+                "id": 106
+            },
+            {
+                "title": "Coproducing Asia",
+                "id": 107
+            },
+            {
+                "title": "The Durable Slum",
+                "id": 108
+            },
+            {
+                "title": "The Fragmented Politics of Urban Preservation",
+                "id": 111
+            },
+            {
+                "title": "Fires on the Border",
+                "id": 101
+            },
+            {
+                "title": "Oye Loca",
+                "id": 112
+            },
+            {
+                "title": "Becoming Human",
+                "id": 113
+            }
+        ]
+    },
+    {
+        "name": "umn1-alt-inline",
+        "description": "University of Minnesota Press as of July 2015 (alt inline structure)",
+        "pagenumber_pre_strings": [
+            "<a id=\"pg_"
+        ],
+        "pagenumber_css_selector_pattern": "#\"pg_{}\"",
+        "pagenumber_xpath_pattern": "a[@id=\"pg_{}\"]",
+        "xpath_entry": "p[@class='IN' or @class='INA']",
+        "see_split_strings": [
+            ". See"
+        ],
+        "see_also_split_strings": [
+            ", See also",
+            ". See also"
+        ],
+        "xpath_see": "span",
+        "xpath_seealso": "span",
+        "separator_between_sees": ";",
+        "separator_between_seealsos": ";",
+        "separator_see_subentry": ",",
+        "inline_see_start": "",
+        "inline_see_also_start": "",
+        "inline_see_end": "",
+        "inline_see_also_end": "",
+        "subentry_classes": [],
+        "separator_between_subentries": ";",
+        "separator_between_entry_and_occurrences": ",",
+        "separator_before_first_subentry": ":",
+        "xpath_occurrence_link": "a[@href and not(starts-with(@href, '#')) and not(starts-with(@href, 'http:'))]",
+        "indicators_of_occurrence_range": [
+            "–",
+            "—"
+        ],
+        "documents": [
+            {
+                "title": "Split Screen Korea",
+                "id": 110
+            }
+        ]
+    },
+    {
+        "name": "umn1-idx",
+        "description": "University of Minnesota Press as of July 2015 -- alt structure with idx ids",
+        "pagenumber_pre_strings": [
+            "<span id=\"page_"
+        ],
+        "pagenumber_css_selector_pattern": "#page_{}",
+        "pagenumber_xpath_pattern": "span[id=\"page_{}\"]",
+        "xpath_entry": "p[@class='idx-level1']",
+        "see_split_strings": [
+            ". See"
+        ],
+        "see_also_split_strings": [
+            ". See also",
+            ". <i>See also</i>",
+            ", See also"
+        ],
+        "xpath_see": "i",
+        "xpath_seealso": "i",
+        "separator_between_sees": ";",
+        "separator_between_seealsos": ";",
+        "separator_see_subentry": ",",
+        "inline_see_start": "(see",
+        "inline_see_also_start": "(see also",
+        "inline_see_end": ")",
+        "inline_see_also_end": ")",
+        "subentry_classes": [],
+        "separator_between_subentries": ";",
+        "separator_between_entry_and_occurrences": ",",
+        "separator_before_first_subentry": ":",
+        "xpath_occurrence_link": "a[@href and not(starts-with(@href, '#')) and not(starts-with(@href, 'http:'))]",
+        "indicators_of_occurrence_range": [
+            "–",
+            "—"
+        ],
+        "documents": [
+            {
+                "title": "FILIPINOS REPRESENT",
+                "id": 103
+            },
+            {
+                "title": "Answer the Call",
+                "id": 109
+            }
+        ]
+    }
+]

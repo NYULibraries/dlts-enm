@@ -23,6 +23,17 @@ func GetResponseBody(url string) (body []byte) {
 	return
 }
 
+func GetEpubsAll() (epubsList []Epub) {
+	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/epub/document/all/")
+
+	err := json.Unmarshal(responseBody, &epubsList)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
 func GetNamesAll() (namesList []Name) {
 	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/hit/hits/all/")
 
@@ -55,6 +66,16 @@ func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
 	}
 
 	return
+}
+
+// Created with the help of github.com/ChimeraCoder/gojson/gojson
+// `cat json-api-samples/epubs-all.txt | gojson -name=EpubsAll`
+type Epub struct {
+	Author    string `json:"author"`
+	ID        int64  `json:"id"`
+	Isbn      string `json:"isbn"`
+	Publisher string `json:"publisher"`
+	Title     string `json:"title"`
 }
 
 // Created with the help of github.com/ChimeraCoder/gojson/gojson

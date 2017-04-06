@@ -18,4 +18,8 @@ func main() {
 		fmt.Printf("Name #%d: %v\n", i, v)
 	}
 
+	epubsList := GetEpubsAll()
+	for i, v := range epubsList {
+		fmt.Printf("epub #%d: %v\n", i, v)
+	}
 }

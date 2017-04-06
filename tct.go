@@ -23,6 +23,17 @@ func GetResponseBody(url string) (body []byte) {
 	return
 }
 
+func GetNamesAll() (namesList []Name) {
+	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/hit/hits/all/")
+
+	err := json.Unmarshal(responseBody, &namesList)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
 func GetTopicsAll() (topicsList []Topic) {
 	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/hit/basket/all/")
 
@@ -44,6 +55,17 @@ func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
 	}
 
 	return
+}
+
+// Created with the help of github.com/ChimeraCoder/gojson/gojson
+// `cat json-api-samples/names-all.json | gojson -name=NamesAll`
+type Name struct {
+	Basket    int64  `json:"basket"`
+	Hidden    bool   `json:"hidden"`
+	ID        int64  `json:"id"`
+	Name      string `json:"name"`
+	Preferred bool   `json:"preferred"`
+	Scope     string `json:"scope"`
 }
 
 type Topic struct {

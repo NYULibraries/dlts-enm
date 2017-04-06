@@ -1,0 +1,1670 @@
+{
+    "title": "Originality, Imitation, and Plagiarism",
+    "author": "Eisner, Caroline; Vicinus, Martha",
+    "publisher": "University of Michigan Press and University of Michigan Library",
+    "isbn": "9780472024445",
+    "locations": [
+        {
+            "id": 2220,
+            "localid": "page_i",
+            "sequence_number": 1,
+            "content": ""
+        },
+        {
+            "id": 2221,
+            "localid": "page_ii",
+            "sequence_number": 2,
+            "content": ""
+        },
+        {
+            "id": 2222,
+            "localid": "page_iii",
+            "sequence_number": 3,
+            "content": "Originality, Imitation, and Plagiarism\nTeaching Writing in the Digital Age\n \n \nCaroline Eisner and M..."
+        },
+        {
+            "id": 2223,
+            "localid": "page_iv",
+            "sequence_number": 4,
+            "content": "\nCopyright © by the University of Michigan 2008\nAll rights reserved\nPublished in the United States o..."
+        },
+        {
+            "id": 2224,
+            "localid": "page_v",
+            "sequence_number": 5,
+            "content": "\nFor\nJohn and Susan Sweetland\nGenerous friends and devoted supporters\n\n\n"
+        },
+        {
+            "id": 2225,
+            "localid": "page_vi",
+            "sequence_number": 6,
+            "content": ""
+        },
+        {
+            "id": 2226,
+            "localid": "page_vii",
+            "sequence_number": 7,
+            "content": "Contents\nIntroduction     Caroline Eisner and Martha Vicinus\nORIGINALITY\nChoosing Metaphors     Jess..."
+        },
+        {
+            "id": 2227,
+            "localid": "page_viii",
+            "sequence_number": 8,
+            "content": "\nInstinctual Ballast: Imitation and Creative Writing     Christina Pugh\nThe Anthology as a Literary ..."
+        },
+        {
+            "id": 2228,
+            "localid": "page_1",
+            "sequence_number": 9,
+            "content": "Introduction\nOriginality, Imitation, and Plagiarism: Teaching Writing in the Age of the Internet\nCar..."
+        },
+        {
+            "id": 2229,
+            "localid": "page_2",
+            "sequence_number": 10,
+            "content": "\nshort-circuit, via unacknowledged use of others' work, the necessary groundwork in learning; most o..."
+        },
+        {
+            "id": 2230,
+            "localid": "page_3",
+            "sequence_number": 11,
+            "content": "\nstudents may fail to acknowledge their sources because of a failure in teaching the rules; because ..."
+        },
+        {
+            "id": 2231,
+            "localid": "page_4",
+            "sequence_number": 12,
+            "content": "\nand authors as the best means of learning to speak and write effectively. Imitation meant emulation..."
+        },
+        {
+            "id": 2232,
+            "localid": "page_5",
+            "sequence_number": 13,
+            "content": "\nChinese educational systems operate within well-articulated guidelines about what constitutes appro..."
+        },
+        {
+            "id": 2233,
+            "localid": "page_6",
+            "sequence_number": 14,
+            "content": "\nof voices. In the process, the concept of an individual original creation becomes moot because, in ..."
+        },
+        {
+            "id": 2234,
+            "localid": "page_7",
+            "sequence_number": 15,
+            "content": "\nopening essay by Jessica Litman, a pioneer in the field of intellectual property law and digital me..."
+        },
+        {
+            "id": 2235,
+            "localid": "page_8",
+            "sequence_number": 16,
+            "content": "\nof Michigan, a group of authors have sued for copyright infringement, arguing that Google must firs..."
+        },
+        {
+            "id": 2236,
+            "localid": "page_9",
+            "sequence_number": 17,
+            "content": "\na copy of a work of art, or is it a separate work of art? What rights do the taxpaying citizens of ..."
+        },
+        {
+            "id": 2237,
+            "localid": "page_10",
+            "sequence_number": 18,
+            "content": ""
+        },
+        {
+            "id": 2238,
+            "localid": "page_11",
+            "sequence_number": 19,
+            "content": "Originality\n\n\n"
+        },
+        {
+            "id": 2239,
+            "localid": "page_12",
+            "sequence_number": 20,
+            "content": ""
+        },
+        {
+            "id": 2240,
+            "localid": "page_13",
+            "sequence_number": 21,
+            "content": "Choosing Metaphors\nJessica Litman\nA public domain work is an orphan. No one is responsible for its l..."
+        },
+        {
+            "id": 2241,
+            "localid": "page_14",
+            "sequence_number": 22,
+            "content": "\nof thinking about copyright law can at least make some changes more difficult to achieve than other..."
+        },
+        {
+            "id": 2242,
+            "localid": "page_15",
+            "sequence_number": 23,
+            "content": "\nowner had exclusive rights to duplicate the work. Publishing and public performance were within the..."
+        },
+        {
+            "id": 2243,
+            "localid": "page_16",
+            "sequence_number": 24,
+            "content": "\nby a model drawn from the economic analysis of law, which characterizes copyright as a system of in..."
+        },
+        {
+            "id": 2244,
+            "localid": "page_17",
+            "sequence_number": 25,
+            "content": "\nthey argued, to beef up domestic copyright law at home, and thus ensure that people in other countr..."
+        },
+        {
+            "id": 2245,
+            "localid": "page_18",
+            "sequence_number": 26,
+            "content": "\ncompact discs in 1984, and enacted an amendment that made commercial record rental (but not loan or..."
+        },
+        {
+            "id": 2246,
+            "localid": "page_19",
+            "sequence_number": 27,
+            "content": "\nenforceable access control has the potential to redesign the copyright landscape completely. The ha..."
+        },
+        {
+            "id": 2247,
+            "localid": "page_20",
+            "sequence_number": 28,
+            "content": "\njustifications for fair use were various; a common formulation explained that reasonable appropriat..."
+        },
+        {
+            "id": 2248,
+            "localid": "page_21",
+            "sequence_number": 29,
+            "content": "\nfor example, are said to be giving aid and comfort to pirates. Instead of being able to claim that ..."
+        },
+        {
+            "id": 2249,
+            "localid": "page_22",
+            "sequence_number": 30,
+            "content": "\nBecause an unauthorized digital copy of something could be used in a way that could cause all that ..."
+        },
+        {
+            "id": 2250,
+            "localid": "page_23",
+            "sequence_number": 31,
+            "content": "\nnatural right, on the theory that works of authorship emanated from and embodied author's individua..."
+        },
+        {
+            "id": 2251,
+            "localid": "page_24",
+            "sequence_number": 32,
+            "content": "\n22. See Jane C. Ginsburg, Essay: From Having Copies to Experiencing Works: the Development of an Ac..."
+        },
+        {
+            "id": 2252,
+            "localid": "page_25",
+            "sequence_number": 33,
+            "content": "\nFolsom v. Marsh. 9 Fed Cas. 342 (1841).\nGinsburg, Jane C. “Authors and Users in Copyright.” Journal..."
+        },
+        {
+            "id": 2253,
+            "localid": "page_26",
+            "sequence_number": 34,
+            "content": "\nStone & McCarrick v. Dugan Piano, 210 F. 399 (ED La 1914).\nU.S. Library of Congress Copyright Offic..."
+        },
+        {
+            "id": 2254,
+            "localid": "page_27",
+            "sequence_number": 35,
+            "content": "On Ethical Issues in Publishing in the Life Sciences\nGilbert S. Omenn\nThere are many complex ethical..."
+        },
+        {
+            "id": 2255,
+            "localid": "page_28",
+            "sequence_number": 36,
+            "content": "\nAuthor's Issues\nEffective publication requires a carefully thought-through analysis by the prospect..."
+        },
+        {
+            "id": 2256,
+            "localid": "page_29",
+            "sequence_number": 37,
+            "content": "\nstudent, when that status has been earned. If two individuals share this lead responsibility, the l..."
+        },
+        {
+            "id": 2257,
+            "localid": "page_30",
+            "sequence_number": 38,
+            "content": "\npolicies make the authorship opaque until the actual article is obtained. Some journals omit titles..."
+        },
+        {
+            "id": 2258,
+            "localid": "page_31",
+            "sequence_number": 39,
+            "content": "\nappropriate reviewers for each manuscript; often several reviewers must be asked in order to find t..."
+        },
+        {
+            "id": 2259,
+            "localid": "page_32",
+            "sequence_number": 40,
+            "content": "\njust two or three colleagues to act as quality control on papers; instead the practice of online pu..."
+        },
+        {
+            "id": 2260,
+            "localid": "page_33",
+            "sequence_number": 41,
+            "content": "\nThe ORI website includes numerous educational initiatives, including “a guide to ethical writing” (..."
+        },
+        {
+            "id": 2261,
+            "localid": "page_34",
+            "sequence_number": 42,
+            "content": "\nwebsites and properly referenced quotations) and a new category of missing information—articles hid..."
+        },
+        {
+            "id": 2262,
+            "localid": "page_35",
+            "sequence_number": 43,
+            "content": "\nScientific Publishing as Business\nLibrary budgets are overwhelmed with high subscription charges an..."
+        },
+        {
+            "id": 2263,
+            "localid": "page_36",
+            "sequence_number": 44,
+            "content": "\nsome confusion about whether the submitted manuscript, the accepted manuscript, or the final edited..."
+        },
+        {
+            "id": 2264,
+            "localid": "page_37",
+            "sequence_number": 45,
+            "content": "\nagencies are trying to balance the value of new knowledge and methods—including the value for count..."
+        },
+        {
+            "id": 2265,
+            "localid": "page_38",
+            "sequence_number": 46,
+            "content": "\nClaxton, Larry D. “Scientific Authorship.” Mutation Research 589 (2005): 17–30.\nCommittee on Advanc..."
+        },
+        {
+            "id": 2266,
+            "localid": "page_39",
+            "sequence_number": 47,
+            "content": "Reviewing the Author-Function in the Age of Wikipedia\nAmit Ray and Erhardt Graeff\nIntroduction: Wiki..."
+        },
+        {
+            "id": 2267,
+            "localid": "page_40",
+            "sequence_number": 48,
+            "content": "\ncontinually negotiated and articulated through a community of users—sometimes thousands of interloc..."
+        },
+        {
+            "id": 2268,
+            "localid": "page_41",
+            "sequence_number": 49,
+            "content": "\nThe debate over authorship came to the fore during the mid-1960s when structuralism was being criti..."
+        },
+        {
+            "id": 2269,
+            "localid": "page_42",
+            "sequence_number": 50,
+            "content": "\nMuch of the essay involves a careful explication of how we might conceive of the author-function. I..."
+        },
+        {
+            "id": 2270,
+            "localid": "page_43",
+            "sequence_number": 51,
+            "content": "\nWiki Technology and the Wiki Writing Process: The Case of Wikipedia\nThe “About” page on Wikipedia.o..."
+        },
+        {
+            "id": 2271,
+            "localid": "page_44",
+            "sequence_number": 52,
+            "content": "\nThese relationships persist beyond any singular or even traditionally serialized publication. In fa..."
+        },
+        {
+            "id": 2272,
+            "localid": "page_45",
+            "sequence_number": 53,
+            "content": "\nWikipedia's neoteric authorial/editorial community is attempting to maximize the radical functional..."
+        },
+        {
+            "id": 2273,
+            "localid": "page_46",
+            "sequence_number": 54,
+            "content": "\n4. Foucault's response originally appears as “Qu'est-ce qu'un auteur?” in Bulletin de la Société Fr..."
+        },
+        {
+            "id": 2274,
+            "localid": "page_47",
+            "sequence_number": 55,
+            "content": "\n“WP:NPOV.” Wikipedia. January 30, 2006, 2:21 UTC. http://en.wikipedia.org/w/index.php?title=Wikiped..."
+        },
+        {
+            "id": 2275,
+            "localid": "page_48",
+            "sequence_number": 56,
+            "content": "Internet and Open-Access Publishing in Physics Research\nGordon Kane\nPublication of research in most ..."
+        },
+        {
+            "id": 2276,
+            "localid": "page_49",
+            "sequence_number": 57,
+            "content": "\nthe main U.S. physics journal, Physical Review. The arXiv manifesto is “ArXiv is an openly accessib..."
+        },
+        {
+            "id": 2277,
+            "localid": "page_50",
+            "sequence_number": 58,
+            "content": "\ninclude science areas such as physics, mathematics, biology, earth sciences, computer sciences; tec..."
+        },
+        {
+            "id": 2278,
+            "localid": "page_51",
+            "sequence_number": 59,
+            "content": "\nqualified to post on arXiv can comment, and TrackBacks from anonymous sites are not allowed.\nFinall..."
+        },
+        {
+            "id": 2279,
+            "localid": "page_52",
+            "sequence_number": 60,
+            "content": "\na nearly ideal match with how research should be done in these areas. Some modifications will be ne..."
+        },
+        {
+            "id": 2280,
+            "localid": "page_53",
+            "sequence_number": 61,
+            "content": "Do Thesis Statements Short-Circuit Originality in Students' Writing?\nAnne Berggren\nI decided to take..."
+        },
+        {
+            "id": 2281,
+            "localid": "page_54",
+            "sequence_number": 62,
+            "content": "\nAn introduction to an essay—academic or otherwise—should indeed engage the reader and set the stage..."
+        },
+        {
+            "id": 2282,
+            "localid": "page_55",
+            "sequence_number": 63,
+            "content": "\nIndeed, professional writers can consider many options when they are casting around for beginnings:..."
+        },
+        {
+            "id": 2283,
+            "localid": "page_56",
+            "sequence_number": 64,
+            "content": "\nwrite should develop around a clear central thesis.. . . It should appear in the first paragraph.”4..."
+        },
+        {
+            "id": 2284,
+            "localid": "page_57",
+            "sequence_number": 65,
+            "content": "\nalmost never expected to be catalysts for real change. They are primarily icons” (xi).\nGiven that Q..."
+        },
+        {
+            "id": 2285,
+            "localid": "page_58",
+            "sequence_number": 66,
+            "content": "\nHow to Write, warned that because an essay “deals with the outside only in order to reveal the insi..."
+        },
+        {
+            "id": 2286,
+            "localid": "page_59",
+            "sequence_number": 67,
+            "content": "\n(250) and to subordinate the textbook's pedagogical material to that idea. During that same time fr..."
+        },
+        {
+            "id": 2287,
+            "localid": "page_60",
+            "sequence_number": 68,
+            "content": "\nsimplify the message: We need to buy more Burger King stock; I recommend Ramsey for the job. Three ..."
+        },
+        {
+            "id": 2288,
+            "localid": "page_61",
+            "sequence_number": 69,
+            "content": "\nHeilker, in his book on the essay, proposes a more personal, introspective form as a substitute for..."
+        },
+        {
+            "id": 2289,
+            "localid": "page_62",
+            "sequence_number": 70,
+            "content": "\nsuggesting several new sources. She is directly interested in this topic, having written a book cha..."
+        },
+        {
+            "id": 2290,
+            "localid": "page_63",
+            "sequence_number": 71,
+            "content": "\nLee, D. C. “Five Simple Steps for Increasing Your GPA.” Michigan Daily, February 4, 2003, 4.\nLindem..."
+        },
+        {
+            "id": 2291,
+            "localid": "page_64",
+            "sequence_number": 72,
+            "content": "Cloud Gate\nChallenging Reproducibility\nJeff Ward\nJessica Litman argues that the basic reproductive u..."
+        },
+        {
+            "id": 2292,
+            "localid": "page_65",
+            "sequence_number": 73,
+            "content": "\nthe copied data tells machines how to reproduce objects. It neither depicts, nor reproduces them.\nT..."
+        },
+        {
+            "id": 2293,
+            "localid": "page_66",
+            "sequence_number": 74,
+            "content": "\nCloud Gate\nAnish Kapoor's Cloud Gate is a publicly visible sculpture located in Millennium Park, Ch..."
+        },
+        {
+            "id": 2294,
+            "localid": "page_67",
+            "sequence_number": 75,
+            "content": "\nBean Police” in the Chicago Reader was ground zero. Depictions of this event on the Internet caused..."
+        },
+        {
+            "id": 2295,
+            "localid": "page_68",
+            "sequence_number": 76,
+            "content": "\nThe overriding issue is an assumed privacy right for their patrons. Family-oriented casinos encoura..."
+        },
+        {
+            "id": 2296,
+            "localid": "page_69",
+            "sequence_number": 77,
+            "content": "\nfor six years and now we can't take a picture of what's across the street?” (Kleiman 15). What emer..."
+        },
+        {
+            "id": 2297,
+            "localid": "page_70",
+            "sequence_number": 78,
+            "content": "\nin an age where it is not only subject to reproduction, but designed for reproducibility. The bench..."
+        },
+        {
+            "id": 2298,
+            "localid": "page_71",
+            "sequence_number": 79,
+            "content": "\nretrospectively, the blindness and insight in “The Work of Art in the Age of Its Technological Repr..."
+        },
+        {
+            "id": 2299,
+            "localid": "page_72",
+            "sequence_number": 80,
+            "content": "\ncopyright protection to works created by government employees, but copyright protection is granted ..."
+        },
+        {
+            "id": 2300,
+            "localid": "page_73",
+            "sequence_number": 81,
+            "content": "\nHowever, the case most applicable to Cloud Gate is Hart v. Sampley (1992). It centers on Fredrick E..."
+        },
+        {
+            "id": 2301,
+            "localid": "page_74",
+            "sequence_number": 82,
+            "content": "\nHouse, Inc., 117 F. Supp. 2d 301 (S.D.N.Y 2000), the court sought to push this ruling further:\nWhil..."
+        },
+        {
+            "id": 2302,
+            "localid": "page_75",
+            "sequence_number": 83,
+            "content": "\nAdelman argued that his aerial photographs from public airspace were an invasion of privacy. The su..."
+        },
+        {
+            "id": 2303,
+            "localid": "page_76",
+            "sequence_number": 84,
+            "content": "\nKamin, Blair. “John Bryan: Millennium Park's Moneyman.” Chicago Tribune, December 26, 2004, 3.\nKlei..."
+        },
+        {
+            "id": 2304,
+            "localid": "page_77",
+            "sequence_number": 85,
+            "content": "Imitation\n\n\n"
+        },
+        {
+            "id": 2305,
+            "localid": "page_78",
+            "sequence_number": 86,
+            "content": ""
+        },
+        {
+            "id": 2306,
+            "localid": "page_79",
+            "sequence_number": 87,
+            "content": "Genres as Forms of In(ter)vention\nAnis Bawarshi\nIn his chapter in this volume, “History and the Disc..."
+        },
+        {
+            "id": 2307,
+            "localid": "page_80",
+            "sequence_number": 88,
+            "content": "\ncontinuum and thereby have a variable relationship that we must acknowledge if we want to understan..."
+        },
+        {
+            "id": 2308,
+            "localid": "page_81",
+            "sequence_number": 89,
+            "content": "\nover time and in particular contexts become habitual. As Freadman has argued, uptakes have memories..."
+        },
+        {
+            "id": 2309,
+            "localid": "page_82",
+            "sequence_number": 90,
+            "content": "\nIn one particular case, students had read and discussed Clifford Geertz's essay “Deep Play: Notes o..."
+        },
+        {
+            "id": 2310,
+            "localid": "page_83",
+            "sequence_number": 91,
+            "content": "\nalthough if this were an answer to an exam question, the uptake might have been more appropriate.\nC..."
+        },
+        {
+            "id": 2311,
+            "localid": "page_84",
+            "sequence_number": 92,
+            "content": "\nassert this claim. Only in the context of her authority does Geertz then figure into the essay. The..."
+        },
+        {
+            "id": 2312,
+            "localid": "page_85",
+            "sequence_number": 93,
+            "content": "\nPeace Prize. More significantly, by bringing international attention to the suffering of indigenous..."
+        },
+        {
+            "id": 2313,
+            "localid": "page_86",
+            "sequence_number": 94,
+            "content": "\nwas played out academically and publicly. The resulting controversy saw some critics calling the bo..."
+        },
+        {
+            "id": 2314,
+            "localid": "page_87",
+            "sequence_number": 95,
+            "content": "\nIf I, Rigoberta Menchú did not exceed its genre (both in terms of its notion of witness and in its ..."
+        },
+        {
+            "id": 2315,
+            "localid": "page_88",
+            "sequence_number": 96,
+            "content": "\nare negotiating a complex, normalized transaction between imitation and invention. Likewise, when I..."
+        },
+        {
+            "id": 2316,
+            "localid": "page_89",
+            "sequence_number": 97,
+            "content": "\nWorks Cited\nArias, Arturo, ed. The Rigoberta Menchú Controversy. Minneapolis : University of Minnes..."
+        },
+        {
+            "id": 2317,
+            "localid": "page_90",
+            "sequence_number": 98,
+            "content": "When Copying Is Not Copying\nPlagiarism and French Composition Scholarship\nChristiane Donahue\nThe pas..."
+        },
+        {
+            "id": 2318,
+            "localid": "page_91",
+            "sequence_number": 99,
+            "content": "\nAfter a brief overview of French teaching practices as related to source use, I will present a few ..."
+        },
+        {
+            "id": 2319,
+            "localid": "page_92",
+            "sequence_number": 100,
+            "content": "\nabout literature, while citing and quoting are more advanced undergraduate or even graduate study c..."
+        },
+        {
+            "id": 2320,
+            "localid": "page_93",
+            "sequence_number": 101,
+            "content": "\nworking with text. French practitioners do not use the word copying but in effect encourage it in b..."
+        },
+        {
+            "id": 2321,
+            "localid": "page_94",
+            "sequence_number": 102,
+            "content": "\nwill work with abstract theoretical discourse in the discipline they have chosen. Because writing i..."
+        },
+        {
+            "id": 2322,
+            "localid": "page_95",
+            "sequence_number": 103,
+            "content": "\nnot mute, silenced; on the contrary, he or she is a being full of interiorized words” (qtd. in Guib..."
+        },
+        {
+            "id": 2323,
+            "localid": "page_96",
+            "sequence_number": 104,
+            "content": "\nVoice is another complication that has attracted French scholars' attention. Françoise Boch and Fra..."
+        },
+        {
+            "id": 2324,
+            "localid": "page_97",
+            "sequence_number": 105,
+            "content": "\ncite the following two postsecondary textbooks as childish, even infantile in their perspectives on..."
+        },
+        {
+            "id": 2325,
+            "localid": "page_98",
+            "sequence_number": 106,
+            "content": "\nRecasting the Issues: Paraphrase, Plagiarism, Originality, and the discours d'autrui\nWhile the Fren..."
+        },
+        {
+            "id": 2326,
+            "localid": "page_99",
+            "sequence_number": 107,
+            "content": "\nmany fields is seen as a mode of learning, an apprenticeship method: art, music, writing, technolog..."
+        },
+        {
+            "id": 2327,
+            "localid": "page_100",
+            "sequence_number": 108,
+            "content": "\nan imitation in one era is read as a poor copy in another. Claiming plagiarism, from this point of ..."
+        },
+        {
+            "id": 2328,
+            "localid": "page_101",
+            "sequence_number": 109,
+            "content": "\n\nEXAMPLE 2\n\nEXAMPLE 3\n\n\nNotes\n1. This is a problem that is rapidly spreading in French-speaking cou..."
+        },
+        {
+            "id": 2329,
+            "localid": "page_102",
+            "sequence_number": 110,
+            "content": "\nBordeaux II research group Psychologie de l'Education et du Développement. More information about t..."
+        },
+        {
+            "id": 2330,
+            "localid": "page_103",
+            "sequence_number": 111,
+            "content": "\nDonahue, Christiane. “The Lycée to University Progression in French Students' Development as Writer..."
+        },
+        {
+            "id": 2331,
+            "localid": "page_104",
+            "sequence_number": 112,
+            "content": "The Dynamic Nature of Common Knowledge\nAmy England\nWhen teachers discuss source citation with their ..."
+        },
+        {
+            "id": 2332,
+            "localid": "page_105",
+            "sequence_number": 113,
+            "content": "\norder to code the students' essays to determine incidences of patch-written or plagiarized material..."
+        },
+        {
+            "id": 2333,
+            "localid": "page_106",
+            "sequence_number": 114,
+            "content": "\nwere. However, because of the general nature of the information and its availability on the Interne..."
+        },
+        {
+            "id": 2334,
+            "localid": "page_107",
+            "sequence_number": 115,
+            "content": "\nand academic honesty, including a detailed discussion of avoiding plagiarism, both deliberate and “..."
+        },
+        {
+            "id": 2335,
+            "localid": "page_108",
+            "sequence_number": 116,
+            "content": "\nexpected; these vague terms require writers to make judgments about their readers' knowledge about ..."
+        },
+        {
+            "id": 2336,
+            "localid": "page_109",
+            "sequence_number": 117,
+            "content": "\none which is not theirs alone, but one which is shared with the wider community or with relevant ex..."
+        },
+        {
+            "id": 2337,
+            "localid": "page_110",
+            "sequence_number": 118,
+            "content": "\nthe discourse community and the knowledge base it develops continually evolves and plays a profound..."
+        },
+        {
+            "id": 2338,
+            "localid": "page_111",
+            "sequence_number": 119,
+            "content": "\nauthority a lay reader asserts. When a lay reader makes judgments about a text, those judgments aff..."
+        },
+        {
+            "id": 2339,
+            "localid": "page_112",
+            "sequence_number": 120,
+            "content": "\nDixon's Common Knowledge: How Companies Thrive by Sharing What They Know details the systems and st..."
+        },
+        {
+            "id": 2340,
+            "localid": "page_113",
+            "sequence_number": 121,
+            "content": "\nWorks Cited\nDixon, Nancy. Common Knowledge: How Companies Thrive by Sharing What They Know. Boston:..."
+        },
+        {
+            "id": 2341,
+            "localid": "page_114",
+            "sequence_number": 122,
+            "content": "Instinctual Ballast\nImitation and Creative Writing\nChristina Pugh\nIn his Handlist of Rhetorical Term..."
+        },
+        {
+            "id": 2342,
+            "localid": "page_115",
+            "sequence_number": 123,
+            "content": "\nto begin to reject the myths and clichés of who the scholar and the poet should be: those discrete ..."
+        },
+        {
+            "id": 2343,
+            "localid": "page_116",
+            "sequence_number": 124,
+            "content": "\nlife, but they may also be a collection of frames, and the photographs may be there only to occupy ..."
+        },
+        {
+            "id": 2344,
+            "localid": "page_117",
+            "sequence_number": 125,
+            "content": "\nYou cannot copy what you glance at nor remember what you speed read nor repeat what you half heard;..."
+        },
+        {
+            "id": 2345,
+            "localid": "page_118",
+            "sequence_number": 126,
+            "content": "\nKinzie has also eloquently discussed the timbre of reading that imitation requires, as well as the ..."
+        },
+        {
+            "id": 2346,
+            "localid": "page_119",
+            "sequence_number": 127,
+            "content": "\nStacey D'Erasmo has written forcefully against the often unspoken assumption that writing must be e..."
+        },
+        {
+            "id": 2347,
+            "localid": "page_120",
+            "sequence_number": 128,
+            "content": "\nbeing asked to do. If plagiarism has any role at all in the course, perhaps it would be the creepin..."
+        },
+        {
+            "id": 2348,
+            "localid": "page_121",
+            "sequence_number": 129,
+            "content": "\ninstant; and no matter what form our writing may eventually take, there is a very real sense in whi..."
+        },
+        {
+            "id": 2349,
+            "localid": "page_122",
+            "sequence_number": 130,
+            "content": "The Anthology as a Literary Creation\nOn Innovation and Plagiarism in Textual Collections\nChristopher..."
+        },
+        {
+            "id": 2350,
+            "localid": "page_123",
+            "sequence_number": 131,
+            "content": "\nHowever, the promulgation of anthologies since the mid–twentieth century, epitomized by the ambitio..."
+        },
+        {
+            "id": 2351,
+            "localid": "page_124",
+            "sequence_number": 132,
+            "content": "\nwill be included, and, a parallel and equally creative choice, how best to excerpt longer works. Th..."
+        },
+        {
+            "id": 2352,
+            "localid": "page_125",
+            "sequence_number": 133,
+            "content": "\nSince the process of selection is undertaken furthest from the eventual readers of an anthology, so..."
+        },
+        {
+            "id": 2353,
+            "localid": "page_126",
+            "sequence_number": 134,
+            "content": "\nstrict chronological ordering of selections. For instance, in the most recent edition of The Norton..."
+        },
+        {
+            "id": 2354,
+            "localid": "page_127",
+            "sequence_number": 135,
+            "content": "\n(Lawall), there are several pages of excerpts from Dorothy Words-worth's Grasmere Journals. By the ..."
+        },
+        {
+            "id": 2355,
+            "localid": "page_128",
+            "sequence_number": 136,
+            "content": "\nedited a series of enormously popular collections that did much to help canonize modern poetry as w..."
+        },
+        {
+            "id": 2356,
+            "localid": "page_129",
+            "sequence_number": 137,
+            "content": "\ncutting across the divisions of selection. A more recent counterexample can be found in an anonymou..."
+        },
+        {
+            "id": 2357,
+            "localid": "page_130",
+            "sequence_number": 138,
+            "content": "\nof anthologies as uniformly “unoriginal,” rather than as sites allowing considerable editorial inno..."
+        },
+        {
+            "id": 2358,
+            "localid": "page_131",
+            "sequence_number": 139,
+            "content": "\ncan be original, it is essential to stop thinking of texts as fixed, unified bodies, shaped and bre..."
+        },
+        {
+            "id": 2359,
+            "localid": "page_132",
+            "sequence_number": 140,
+            "content": "\nPaton, W. R., trans. The Greek Anthology. 5 vols. 1916. Cambridge: Harvard University Press; London..."
+        },
+        {
+            "id": 2360,
+            "localid": "page_133",
+            "sequence_number": 141,
+            "content": "Economies of Plagiarism\nThe i-Map and Issues of Ownership in Information Gathering\nKim Walden and Al..."
+        },
+        {
+            "id": 2361,
+            "localid": "page_134",
+            "sequence_number": 142,
+            "content": "\nIn recent years, and in many places, the cultural economies of information handling and academic pr..."
+        },
+        {
+            "id": 2362,
+            "localid": "page_135",
+            "sequence_number": 143,
+            "content": "\nbehavioral and concrete response to traditional academic attitudes about the ownership of ideas, an..."
+        },
+        {
+            "id": 2363,
+            "localid": "page_136",
+            "sequence_number": 144,
+            "content": "\nthe pleasure of the text may in part derive from getting the reference. This is a form of implicit ..."
+        },
+        {
+            "id": 2364,
+            "localid": "page_137",
+            "sequence_number": 145,
+            "content": "\ncuriosity, valuing knowledge of others, valuing knowledge for itself)\n• Importance of this task in ..."
+        },
+        {
+            "id": 2365,
+            "localid": "page_138",
+            "sequence_number": 146,
+            "content": "\ninfrastructure, or open out its conflicts with other codes, modes, and values in the wider culture...."
+        },
+        {
+            "id": 2366,
+            "localid": "page_139",
+            "sequence_number": 147,
+            "content": "\nacts of compilation because it changes the economy of effort:value within the allographic relative ..."
+        },
+        {
+            "id": 2367,
+            "localid": "page_140",
+            "sequence_number": 148,
+            "content": "\nphone company or to a broadband provider for the line not the content, rather like paying the bus f..."
+        },
+        {
+            "id": 2368,
+            "localid": "page_141",
+            "sequence_number": 149,
+            "content": "\nis compounded by the incunabula nature of the Web itself where conventions of declaring identity an..."
+        },
+        {
+            "id": 2369,
+            "localid": "page_142",
+            "sequence_number": 150,
+            "content": "\nquotation and reference is reframed and may seem questionable. The historical ethos of the academy ..."
+        },
+        {
+            "id": 2370,
+            "localid": "page_143",
+            "sequence_number": 151,
+            "content": "\n\n• Diagrams: brainstorms, spiders, flow diagrams, pie charts showing connections and relationships ..."
+        },
+        {
+            "id": 2371,
+            "localid": "page_144",
+            "sequence_number": 152,
+            "content": "\nactivities, lessening the motivation to plagiarize, as well as reducing the opportunities for plagi..."
+        },
+        {
+            "id": 2372,
+            "localid": "page_145",
+            "sequence_number": 153,
+            "content": "“Fair Use,” Copyright Law, and the Composition Teacher\nMartine Courant Rife\nIn our roles as writing ..."
+        },
+        {
+            "id": 2373,
+            "localid": "page_146",
+            "sequence_number": 154,
+            "content": "\ncontrol information is viewed as a “battle,” “war,” and “fight” (Litman; Yu; DeVoss and Porter 185)..."
+        },
+        {
+            "id": 2374,
+            "localid": "page_147",
+            "sequence_number": 155,
+            "content": "\nprotected, it also defines the strands in this bundle of protections. Section 106 gives copyright h..."
+        },
+        {
+            "id": 2375,
+            "localid": "page_148",
+            "sequence_number": 156,
+            "content": "\n(4) the effect of the use upon the potential market for or value of the copyrighted work. (U.S. Cod..."
+        },
+        {
+            "id": 2376,
+            "localid": "page_149",
+            "sequence_number": 157,
+            "content": "\nJudge Story's 1841 opinion is accepted as part of our current fair-use analysis (Bartow; Duhl). How..."
+        },
+        {
+            "id": 2377,
+            "localid": "page_150",
+            "sequence_number": 158,
+            "content": "\nTo these four Supreme Court cases, I am going to add a fifth: MGM v. Grokster (2005). Even though G..."
+        },
+        {
+            "id": 2378,
+            "localid": "page_151",
+            "sequence_number": 159,
+            "content": "\nAccording to Duhl, the first four cases show the Supreme Court's reluctance to define clear boundar..."
+        },
+        {
+            "id": 2379,
+            "localid": "page_152",
+            "sequence_number": 160,
+            "content": "\nagreed to adopt guidelines, and if faculty do not follow the guidelines, they face personal liabili..."
+        },
+        {
+            "id": 2380,
+            "localid": "page_153",
+            "sequence_number": 161,
+            "content": "\nWhile Bartow recommends active assertion of our copyrights, even subversion of overly restrictive r..."
+        },
+        {
+            "id": 2381,
+            "localid": "page_154",
+            "sequence_number": 162,
+            "content": "\nConclusion\nI encourage digital literacies if students can situate their fair use of material within..."
+        },
+        {
+            "id": 2382,
+            "localid": "page_155",
+            "sequence_number": 163,
+            "content": "\nBartow, Ann. “Educational Fair Use in Copyright: Reclaiming the Right to Photocopy Freely.” Univers..."
+        },
+        {
+            "id": 2383,
+            "localid": "page_156",
+            "sequence_number": 164,
+            "content": "\nPorter, James. “The Chilling of Digital Information: Technical Communicators as Public Advocates.” ..."
+        },
+        {
+            "id": 2384,
+            "localid": "page_157",
+            "sequence_number": 165,
+            "content": "Plagiarism\n\n\n"
+        },
+        {
+            "id": 2385,
+            "localid": "page_158",
+            "sequence_number": 166,
+            "content": ""
+        },
+        {
+            "id": 2386,
+            "localid": "page_159",
+            "sequence_number": 167,
+            "content": "History and the Disciplining of Plagiarism\nMichael Grossberg\nI begin this essay with a story. It com..."
+        },
+        {
+            "id": 2387,
+            "localid": "page_160",
+            "sequence_number": 168,
+            "content": "\nThe Definition\nChanging definitions are surely one source of uncertainty about the disciplining of ..."
+        },
+        {
+            "id": 2388,
+            "localid": "page_161",
+            "sequence_number": 169,
+            "content": "\nflourishes in an atmosphere of openness and candor, which should include the scrutiny and discussio..."
+        },
+        {
+            "id": 2389,
+            "localid": "page_162",
+            "sequence_number": 170,
+            "content": "\ncreate a complicated sense of victimization and vulnerability that are also critical to definitions..."
+        },
+        {
+            "id": 2390,
+            "localid": "page_163",
+            "sequence_number": 171,
+            "content": "\nhistorian created a website, “Famous Plagiarists,” that included a special section on history and a..."
+        },
+        {
+            "id": 2391,
+            "localid": "page_164",
+            "sequence_number": 172,
+            "content": "\nAnother source of our present concern about plagiarism is the impact of the law on all discussions ..."
+        },
+        {
+            "id": 2392,
+            "localid": "page_165",
+            "sequence_number": 173,
+            "content": "\nunderstanding of plagiarism. Writing theorist Susan H. McLeod warns us, “We ignore the recent, loca..."
+        },
+        {
+            "id": 2393,
+            "localid": "page_166",
+            "sequence_number": 174,
+            "content": "\nevident in the large audiences for Ken Burns's documentaries and the huge readership of David McCul..."
+        },
+        {
+            "id": 2394,
+            "localid": "page_167",
+            "sequence_number": 175,
+            "content": "\naccusations. It was one of the few professional organizations willing to police itself in this mann..."
+        },
+        {
+            "id": 2395,
+            "localid": "page_168",
+            "sequence_number": 176,
+            "content": "\nTong has appropriated words and ideas from her dissertation and published them as his own in a book..."
+        },
+        {
+            "id": 2396,
+            "localid": "page_169",
+            "sequence_number": 177,
+            "content": "\nhistory journals also created new policies; most of these have adopted an approach much like the ad..."
+        },
+        {
+            "id": 2397,
+            "localid": "page_170",
+            "sequence_number": 178,
+            "content": "\nInternet and reviewing mechanisms like those on Amazon.com. He argues that since the professional a..."
+        },
+        {
+            "id": 2398,
+            "localid": "page_171",
+            "sequence_number": 179,
+            "content": "\nAmerican Historical Association. “Statement on Standards of Professional Conduct.” Adopted January ..."
+        },
+        {
+            "id": 2399,
+            "localid": "page_172",
+            "sequence_number": 180,
+            "content": "\nKahl, Caryln E. “Plagiarism Policies and Historical Journals.” Editing History (Conference of Histo..."
+        },
+        {
+            "id": 2400,
+            "localid": "page_173",
+            "sequence_number": 181,
+            "content": "Plagiarism and Copyright Infringement\nThe Costs of Confusion\nLaura J. Murray\nIn August 2005, a trans..."
+        },
+        {
+            "id": 2401,
+            "localid": "page_174",
+            "sequence_number": 182,
+            "content": "\nCohen shares a widespread hunch about the difference between plagiarism and copyright infringement:..."
+        },
+        {
+            "id": 2402,
+            "localid": "page_175",
+            "sequence_number": 183,
+            "content": "\nfree, cited circulation. Of course citation economies do not operate “purely” or in isolation: they..."
+        },
+        {
+            "id": 2403,
+            "localid": "page_176",
+            "sequence_number": 184,
+            "content": "\n(19). In this spirit, I think it urgently necessary to emphasize distinctions between citation and ..."
+        },
+        {
+            "id": 2404,
+            "localid": "page_177",
+            "sequence_number": 185,
+            "content": "\nsoftware, the Creative Commons license, defense of the public domain, and all manner of documentati..."
+        },
+        {
+            "id": 2405,
+            "localid": "page_178",
+            "sequence_number": 186,
+            "content": "\ninvite their readers to trace back through their sources like any good academic historian. Some stu..."
+        },
+        {
+            "id": 2406,
+            "localid": "page_179",
+            "sequence_number": 187,
+            "content": "\nin “opening up relationships with originators,” “establishing personal acceptance in the community ..."
+        },
+        {
+            "id": 2407,
+            "localid": "page_180",
+            "sequence_number": 188,
+            "content": "\nsystem—otherwise they will not see what they are giving away in this increasingly copyrighteous wor..."
+        },
+        {
+            "id": 2408,
+            "localid": "page_181",
+            "sequence_number": 189,
+            "content": "\nfair dealing. One is supposed to cite short sequences of words that one could use without permissio..."
+        },
+        {
+            "id": 2409,
+            "localid": "page_182",
+            "sequence_number": 190,
+            "content": "\nGalison, Peter, and Mario Biagoli, eds. Scientific Authorship: Credit and Intellectual Property in ..."
+        },
+        {
+            "id": 2410,
+            "localid": "page_183",
+            "sequence_number": 191,
+            "content": "Plagiarism, a Turnitin Trial, and an Experience of Cultural Disorientation\nLisa Emerson\nIn October 2..."
+        },
+        {
+            "id": 2411,
+            "localid": "page_184",
+            "sequence_number": 192,
+            "content": "\nThe Project\nThe university trial involved ten faculty members across a range of disciplines. My par..."
+        },
+        {
+            "id": 2412,
+            "localid": "page_185",
+            "sequence_number": 193,
+            "content": "\nthat including copied text without a citation is plagiarism), they had difficulty with the more com..."
+        },
+        {
+            "id": 2413,
+            "localid": "page_186",
+            "sequence_number": 194,
+            "content": "\nwell as commercial databases of journals and periodicals. Once a paper is submitted, it belongs to ..."
+        },
+        {
+            "id": 2414,
+            "localid": "page_187",
+            "sequence_number": 195,
+            "content": "\nthat the individual conferences had a substantial impact on the rate of plagiarism detected, effect..."
+        },
+        {
+            "id": 2415,
+            "localid": "page_188",
+            "sequence_number": 196,
+            "content": "\nthey write. The study clearly showed that the students who used a “patch writing” technique (Howard..."
+        },
+        {
+            "id": 2416,
+            "localid": "page_189",
+            "sequence_number": 197,
+            "content": "\nspirit of distrust and fear (McKeever; Marsh). After my involvement in the trial, I initially held ..."
+        },
+        {
+            "id": 2417,
+            "localid": "page_190",
+            "sequence_number": 198,
+            "content": "\nwas judging them or accusing them of anything. I think having Turnitin to refer to made the student..."
+        },
+        {
+            "id": 2418,
+            "localid": "page_191",
+            "sequence_number": 199,
+            "content": "\nThe trip to the Michigan conference was my first extended visit to the United States. I arrived in ..."
+        },
+        {
+            "id": 2419,
+            "localid": "page_192",
+            "sequence_number": 200,
+            "content": "\nI found the situation confusing and confidence-sapping (I'm used to understanding the basic social ..."
+        },
+        {
+            "id": 2420,
+            "localid": "page_193",
+            "sequence_number": 201,
+            "content": "\ntertiary institutions. If we cannot prevent our institutions from using detection systems, then we ..."
+        },
+        {
+            "id": 2421,
+            "localid": "page_194",
+            "sequence_number": 202,
+            "content": "\nMcKeever, Lucy. “Online Plagiarism Detection Services—Saviour or Scourge?” Assessment and Evaluatio..."
+        },
+        {
+            "id": 2422,
+            "localid": "page_195",
+            "sequence_number": 203,
+            "content": "Academic Plagiarism and the Limits of Theft\nStefan Senders\nWhen students plagiarize, are they “steal..."
+        },
+        {
+            "id": 2423,
+            "localid": "page_196",
+            "sequence_number": 204,
+            "content": "\nI am sympathetic to the argument that “plagiarism” is a product of socioliterary transition; I agre..."
+        },
+        {
+            "id": 2424,
+            "localid": "page_197",
+            "sequence_number": 205,
+            "content": "\nusually words, that they frequently don't want or care about, or even hold onto for long. From a le..."
+        },
+        {
+            "id": 2425,
+            "localid": "page_198",
+            "sequence_number": 206,
+            "content": "\nIn three cases I have participated in, my account was taken first, and the student was asked if she..."
+        },
+        {
+            "id": 2426,
+            "localid": "page_199",
+            "sequence_number": 207,
+            "content": "\nthe academic-pedagogical context generally. It fails because (1) norms concerning the morality of t..."
+        },
+        {
+            "id": 2427,
+            "localid": "page_200",
+            "sequence_number": 208,
+            "content": "\nidentified, the first piece of plagiarism, I began filing through the papers on my desk, looking fo..."
+        },
+        {
+            "id": 2428,
+            "localid": "page_201",
+            "sequence_number": 209,
+            "content": "\nme that he was stressed-out. He had been having trouble with his girlfriend. Some of his family mem..."
+        },
+        {
+            "id": 2429,
+            "localid": "page_202",
+            "sequence_number": 210,
+            "content": "\nof reducing her punishment. She latched onto the idea, and when I suggested that she start the proc..."
+        },
+        {
+            "id": 2430,
+            "localid": "page_203",
+            "sequence_number": 211,
+            "content": "\neven asked me to write a letter on her behalf, which I did—with significant reservations and caveat..."
+        },
+        {
+            "id": 2431,
+            "localid": "page_204",
+            "sequence_number": 212,
+            "content": "\ninquiry, or to engage with the “academic community.”\nThe act of plagiarism brings into play new act..."
+        },
+        {
+            "id": 2432,
+            "localid": "page_205",
+            "sequence_number": 213,
+            "content": "\nwould realize how little they understand about the subtlety of voice and rhythm, and how much work ..."
+        },
+        {
+            "id": 2433,
+            "localid": "page_206",
+            "sequence_number": 214,
+            "content": "\n3. McCabe and Trevino suggest that rates are even higher. Here I use conservative numbers, such as ..."
+        },
+        {
+            "id": 2434,
+            "localid": "page_207",
+            "sequence_number": 215,
+            "content": "\nethos disruption, the rhetorical equivalent of a personality disorder.\nWorks Cited\nGreen, Stuart P...."
+        },
+        {
+            "id": 2435,
+            "localid": "page_208",
+            "sequence_number": 216,
+            "content": "Insider Writing\nPlagiarism-Proof Assignments\nLynn Z. Bloom\nWhose words these are, I think I know . ...."
+        },
+        {
+            "id": 2436,
+            "localid": "page_209",
+            "sequence_number": 217,
+            "content": "\ninsider writing assignments—those that inspire originality because they are plagiarism-proof. To do..."
+        },
+        {
+            "id": 2437,
+            "localid": "page_210",
+            "sequence_number": 218,
+            "content": "\nhand, rely heavily on experts on any topic, in any field. Students, writing of necessity as outside..."
+        },
+        {
+            "id": 2438,
+            "localid": "page_211",
+            "sequence_number": 219,
+            "content": "\nHow Insider Writing Works: Model Courses\nComing of Age in American Autobiography, a course I've tau..."
+        },
+        {
+            "id": 2439,
+            "localid": "page_212",
+            "sequence_number": 220,
+            "content": "\nBecause the papers have to be historically accurate, characters from different times must have a pl..."
+        },
+        {
+            "id": 2440,
+            "localid": "page_213",
+            "sequence_number": 221,
+            "content": "\nthem my autobiographical “Living to Tell the Tale: The Complicated Ethics of Creative Nonfiction.” ..."
+        },
+        {
+            "id": 2441,
+            "localid": "page_214",
+            "sequence_number": 222,
+            "content": "\n(“microthemes,” peer reviews, assessment of evidence or issues in learning) can be adapted to speci..."
+        },
+        {
+            "id": 2442,
+            "localid": "page_215",
+            "sequence_number": 223,
+            "content": "\nthe student's participation therein are among the plethora of possibilities (see Flower; Deans, Wri..."
+        },
+        {
+            "id": 2443,
+            "localid": "page_216",
+            "sequence_number": 224,
+            "content": "\ninvolvement (“Sustainable Programs,” 40), all are perforce original. Claims that exceed the authori..."
+        },
+        {
+            "id": 2444,
+            "localid": "page_217",
+            "sequence_number": 225,
+            "content": "\n• Love of solitude. “I find it wholesome to be alone the greater part of the time.” (See “Solitude”..."
+        },
+        {
+            "id": 2445,
+            "localid": "page_218",
+            "sequence_number": 226,
+            "content": "\nCushman, Ellen. “The Public Intellectual, Service Learning, and Activist Research.” College English..."
+        },
+        {
+            "id": 2446,
+            "localid": "page_219",
+            "sequence_number": 227,
+            "content": "Plagiarism across Cultures\nIs There a Difference?\nJoel Bloch\nThe first part of my title, “Plagiarism..."
+        },
+        {
+            "id": 2447,
+            "localid": "page_220",
+            "sequence_number": 228,
+            "content": "\ngreater value on imitation. Because it has been thought that China is more of a collective society,..."
+        },
+        {
+            "id": 2448,
+            "localid": "page_221",
+            "sequence_number": 229,
+            "content": "\nroom table and said, “There is nothing similar about them.” What was imitation to me was highly ori..."
+        },
+        {
+            "id": 2449,
+            "localid": "page_222",
+            "sequence_number": 230,
+            "content": "\nsay and write. As Alton Becker put it, “The history of our particular interactions, oral and writte..."
+        },
+        {
+            "id": 2450,
+            "localid": "page_223",
+            "sequence_number": 231,
+            "content": "\nThe Chinese have often reflected on this question of imitation and originality. There is a Chinese ..."
+        },
+        {
+            "id": 2451,
+            "localid": "page_224",
+            "sequence_number": 232,
+            "content": "\nThe importance given to imitation has carried over into some, but not all, of the rhetorical system..."
+        },
+        {
+            "id": 2452,
+            "localid": "page_225",
+            "sequence_number": 233,
+            "content": "\nbecause they did not attempt to account for “the character of Chinese political culture” (2). The i..."
+        },
+        {
+            "id": 2453,
+            "localid": "page_226",
+            "sequence_number": 234,
+            "content": "\nHowever, as the history of intellectual property and plagiarism indicates, these attitudes can chan..."
+        },
+        {
+            "id": 2454,
+            "localid": "page_227",
+            "sequence_number": 235,
+            "content": "\nadmitted that they had copied parts of the literature review but felt that “the charge of plagiaris..."
+        },
+        {
+            "id": 2455,
+            "localid": "page_228",
+            "sequence_number": 236,
+            "content": "\nChinese rhetorical standards, including the relationship between imitation and originality, were no..."
+        },
+        {
+            "id": 2456,
+            "localid": "page_229",
+            "sequence_number": 237,
+            "content": "\nboth researchers and teachers develop a framework for discussing plagiarism and developing pedagogi..."
+        },
+        {
+            "id": 2457,
+            "localid": "page_230",
+            "sequence_number": 238,
+            "content": "\nUnderstanding of Problematic Reading And Writing.” Written Communication 6 (1989): 139–54.\nJaszi, P..."
+        },
+        {
+            "id": 2458,
+            "localid": "page_231",
+            "sequence_number": 239,
+            "content": "Framing Plagiarism\nLinda Adler-Kassner, Chris M. Anson, and Rebecca Moore Howard\nThe analysis of com..."
+        },
+        {
+            "id": 2459,
+            "localid": "page_232",
+            "sequence_number": 240,
+            "content": "\nfunctions as a medium for facilitating plagiarism; that technology can likewise be used to curb pla..."
+        },
+        {
+            "id": 2460,
+            "localid": "page_233",
+            "sequence_number": 241,
+            "content": "\nthat shape humans' understandings of the metaphors through which we construct our worlds (Lakoff, M..."
+        },
+        {
+            "id": 2461,
+            "localid": "page_234",
+            "sequence_number": 242,
+            "content": "\nThe Internet constitutes a school. It is offering a course of direct and specific instruction to pl..."
+        },
+        {
+            "id": 2462,
+            "localid": "page_235",
+            "sequence_number": 243,
+            "content": "\nCertainly, good teaching prevents or at least deters plagiarism. Certainly, instructors in all fiel..."
+        },
+        {
+            "id": 2463,
+            "localid": "page_236",
+            "sequence_number": 244,
+            "content": "\nof “plagiarism” and the representations of students, technology, and education that accompany it.\nR..."
+        },
+        {
+            "id": 2464,
+            "localid": "page_237",
+            "sequence_number": 245,
+            "content": "\nAlong with other unacknowledged information from the FDA source, the article is authored “by Lutong..."
+        },
+        {
+            "id": 2465,
+            "localid": "page_238",
+            "sequence_number": 246,
+            "content": "\nand in all cases embed it within the rhetorical, informational, and pragmatic goals of their organi..."
+        },
+        {
+            "id": 2466,
+            "localid": "page_239",
+            "sequence_number": 247,
+            "content": "\nteaching, such as two-year schools and smaller liberal arts colleges (the administrative motivation..."
+        },
+        {
+            "id": 2467,
+            "localid": "page_240",
+            "sequence_number": 248,
+            "content": "\nthe fact that they involve deep commitments of creativity, energy, and time to produce—their owners..."
+        },
+        {
+            "id": 2468,
+            "localid": "page_241",
+            "sequence_number": 249,
+            "content": "\nAgar has called a rich point, a moment when different interpretations of a metaphor, shaped by diff..."
+        },
+        {
+            "id": 2469,
+            "localid": "page_242",
+            "sequence_number": 250,
+            "content": "\nThis control can be instigated through dire warnings in institutional policies about the punishment..."
+        },
+        {
+            "id": 2470,
+            "localid": "page_243",
+            "sequence_number": 251,
+            "content": "\n2003 best-practices document to which we referred earlier (see CWPA, “Defining”). That statement sa..."
+        },
+        {
+            "id": 2471,
+            "localid": "page_244",
+            "sequence_number": 252,
+            "content": "\nby the frames surrounding media representations of students, technology, and plagiarism, and refram..."
+        },
+        {
+            "id": 2472,
+            "localid": "page_245",
+            "sequence_number": 253,
+            "content": "\nButler, Johnnella E. “Democracy, Diversity, and Civic Engagement.” Academe 86, no. 4 (July–August 2..."
+        },
+        {
+            "id": 2473,
+            "localid": "page_246",
+            "sequence_number": 254,
+            "content": "\nMechling, Lauren. “Plagiarism Is the Sin du Jour.” New York Sun, September 29, 2004. http://www.nys..."
+        },
+        {
+            "id": 2474,
+            "localid": "page_247",
+            "sequence_number": 255,
+            "content": "Selected Bibliography\nAarseth, Espen J. Cybertexts. Baltimore: Johns Hopkins University Press, 1997...."
+        },
+        {
+            "id": 2475,
+            "localid": "page_248",
+            "sequence_number": 256,
+            "content": "\nBerlin, James. A. “Rhetoric and Ideology in the Writing Class.” College English 50 (1988): 477–94.\n..."
+        },
+        {
+            "id": 2476,
+            "localid": "page_249",
+            "sequence_number": 257,
+            "content": "\nDixon, Nancy. Common Knowledge: How Companies Thrive by Sharing What They Know. Boston: Harvard Bus..."
+        },
+        {
+            "id": 2477,
+            "localid": "page_250",
+            "sequence_number": 258,
+            "content": "\nJohns, Ann M. Text, Role, and Context: Developing Academic Literacies. New York: Cambridge Universi..."
+        },
+        {
+            "id": 2478,
+            "localid": "page_251",
+            "sequence_number": 259,
+            "content": "\nPrinceton University Press v. Michigan Document Servs., Inc. 1996 FED App. 0357P (6th Cir.) 17 Apri..."
+        },
+        {
+            "id": 2479,
+            "localid": "page_252",
+            "sequence_number": 260,
+            "content": ""
+        },
+        {
+            "id": 2480,
+            "localid": "page_253",
+            "sequence_number": 261,
+            "content": "Contributors\nLinda Adler-Kassner is Associate Professor of English and Director of First-Year Writin..."
+        },
+        {
+            "id": 2481,
+            "localid": "page_254",
+            "sequence_number": 262,
+            "content": "\nLynn Z. Bloom, Board of Trustees Distinguished Professor and Aetna Chair of Writing at the Universi..."
+        },
+        {
+            "id": 2482,
+            "localid": "page_255",
+            "sequence_number": 263,
+            "content": "\nand researcher of social computing phenomena. He is currently studying recent experiments in e-gove..."
+        },
+        {
+            "id": 2483,
+            "localid": "page_256",
+            "sequence_number": 264,
+            "content": "\nresource on Canadian copyright. She is currently researching a comparative study of the rhetoric of..."
+        },
+        {
+            "id": 2484,
+            "localid": "page_257",
+            "sequence_number": 265,
+            "content": "\nStefan Senders, a cultural anthropologist, is a Visiting Fellow in Peace Studies at Cornell Univers..."
+        },
+        {
+            "id": 2485,
+            "localid": "page_258",
+            "sequence_number": 266,
+            "content": ""
+        },
+        {
+            "id": 2486,
+            "localid": "page_259",
+            "sequence_number": 267,
+            "content": "Index\nAbdus Salam International Centre for Theoretical Physics, 49\nAbrams, M. H.: The Norton Antholo..."
+        },
+        {
+            "id": 2487,
+            "localid": "page_260",
+            "sequence_number": 268,
+            "content": "\nand pharmaceutical companies, 32\npressures, 34\nproperty rights of, 153, 165\nprospective, 28\nand pub..."
+        },
+        {
+            "id": 2488,
+            "localid": "page_261",
+            "sequence_number": 269,
+            "content": "\nChicken Soup for the Soul, 120, 123\nChina, 4, 219–22, 224–27\nacademics, 226–28\nart, 220\nculture, 21..."
+        },
+        {
+            "id": 2489,
+            "localid": "page_262",
+            "sequence_number": 270,
+            "content": "\nDerrida, Jacques, 175\ndescription, 8, 15, 33, 55, 64, 65, 84, 119, 240\nDeVoss, Dànielle, 149\nDeyo, ..."
+        },
+        {
+            "id": 2490,
+            "localid": "page_263",
+            "sequence_number": 271,
+            "content": "\nGordon and Betty Moore Foundation, 35\nGraves, Robert, 61; Pamphlet against Anthologies, 125\nGreen, ..."
+        },
+        {
+            "id": 2491,
+            "localid": "page_264",
+            "sequence_number": 272,
+            "content": "\nJacobs, Harriet, 211\nJaszi, Peter, 44, 45n2; The Construction of Authorship: Textual Appropriation ..."
+        },
+        {
+            "id": 2492,
+            "localid": "page_265",
+            "sequence_number": 273,
+            "content": "\nMCA, 149\nMcCullough, David, 166\nMcDonald's, 191, 192\nMcGill University, 242\nMcKeever, William: “The..."
+        },
+        {
+            "id": 2493,
+            "localid": "page_266",
+            "sequence_number": 274,
+            "content": "\nOrlikowski, Wanda, 88n3\nOrwell, George, 206n5; 1984, 199\noutsider writing\nversus insider writing, 2..."
+        },
+        {
+            "id": 2494,
+            "localid": "page_267",
+            "sequence_number": 275,
+            "content": "\nunintentional, 184\nverdict of, 106, 111, 198\nplagiarism fundamentalists, 165\nPlant Molecular Biolog..."
+        },
+        {
+            "id": 2495,
+            "localid": "page_268",
+            "sequence_number": 276,
+            "content": "\nSony Corp of America v. Universal Studios, Inc., 149, 150, 154\nSouter, David H., 150\nSponsoring Con..."
+        },
+        {
+            "id": 2496,
+            "localid": "page_269",
+            "sequence_number": 277,
+            "content": "\nWikiWikiWeb, 45n1\nWimmer, Warren, 66, 67\nWinter, Richard, 183\nWollheim, Richard, 117\nWoodmansee, Ma..."
+        }
+    ]
+}

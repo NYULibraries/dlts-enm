@@ -38,7 +38,7 @@ func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
 	topicIdString := strconv.Itoa(topicId)
 	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/hit/basket/" + topicIdString)
 
-	err := json.Unmarshal(responseBody, &TopicDetail{})
+	err := json.Unmarshal(responseBody, &topicDetails)
 	if err != nil {
 		panic(err.Error())
 	}

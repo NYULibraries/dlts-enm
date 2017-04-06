@@ -1,4 +1,4 @@
-package main
+package tct
 
 import (
 	"encoding/json"

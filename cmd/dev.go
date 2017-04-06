@@ -1,0 +1,75 @@
+// Copyright © 2017 NAME HERE <EMAIL ADDRESS>
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+package cmd
+
+import (
+	"fmt"
+
+	"github.com/nyulibraries/enm/tct"
+	"github.com/spf13/cobra"
+)
+
+// devCmd represents the dev command
+var devCmd = &cobra.Command{
+	Use:   "dev",
+	Short: "Temporary command for initial development",
+	Long: `Just a temporary command to use during initial development for
+	running new code and doing sundry experiments`,
+	Run: func(cmd *cobra.Command, args []string) {
+		topicsList := tct.GetTopicsAll()
+		for i, v := range topicsList {
+			fmt.Printf("Topic #%d: %v\n", i, v)
+		}
+
+		topicDetail := tct.GetTopicDetail(7399)
+		fmt.Println(topicDetail)
+
+		namesList := tct.GetNamesAll()
+		for i, v := range namesList {
+			fmt.Printf("Name #%d: %v\n", i, v)
+		}
+
+		epubsList := tct.GetEpubsAll()
+		for i, v := range epubsList {
+			fmt.Printf("epub #%d: %v\n", i, v)
+		}
+
+		epubDetail := tct.GetEpubDetail(12)
+		fmt.Println(epubDetail)
+
+		location := tct.GetLocation(2410)
+		fmt.Println(location)
+
+		indexPatternsList := tct.GetIndexPatternsAll()
+		for i, v := range indexPatternsList {
+			fmt.Print("Index pattern #%d: %v\n", i, v)
+		}
+	},
+}
+
+func init() {
+	RootCmd.AddCommand(devCmd)
+
+	// Here you will define your flags and configuration settings.
+
+	// Cobra supports Persistent Flags which will work for this command
+	// and all subcommands, e.g.:
+	// devCmd.PersistentFlags().String("foo", "", "A help for foo")
+
+	// Cobra supports local flags which will only run when this command
+	// is called directly, e.g.:
+	// devCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+
+}

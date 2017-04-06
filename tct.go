@@ -23,6 +23,18 @@ func GetResponseBody(url string) (body []byte) {
 	return
 }
 
+func GetEpubDetail(epubId int) (epubDetail EpubDetail) {
+	epubIdString := strconv.Itoa(epubId)
+	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/epub/document/" + epubIdString)
+
+	err := json.Unmarshal(responseBody, &epubDetail)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
 func GetEpubsAll() (epubsList []Epub) {
 	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/epub/document/all/")
 
@@ -74,6 +86,21 @@ type Epub struct {
 	Author    string `json:"author"`
 	ID        int64  `json:"id"`
 	Isbn      string `json:"isbn"`
+	Publisher string `json:"publisher"`
+	Title     string `json:"title"`
+}
+
+// Created by github.com/ChimeraCoder/gojson/gojson
+// `cat json-api-samples/epub-detail.json | gojson -name=EpubDetail`
+type EpubDetail struct {
+	Author    string `json:"author"`
+	Isbn      string `json:"isbn"`
+	Locations []struct {
+		Content        string `json:"content"`
+		ID             int64  `json:"id"`
+		Localid        string `json:"localid"`
+		SequenceNumber int64  `json:"sequence_number"`
+	} `json:"locations"`
 	Publisher string `json:"publisher"`
 	Title     string `json:"title"`
 }

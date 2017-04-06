@@ -22,4 +22,7 @@ func main() {
 	for i, v := range epubsList {
 		fmt.Printf("epub #%d: %v\n", i, v)
 	}
+
+	epubDetail := GetEpubDetail(12)
+	fmt.Println(epubDetail)
 }

@@ -13,36 +13,39 @@ var dumpCmd = &cobra.Command{
 	Long: `Print raw umarshaled JSON fetched from ENM TCT or cache.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		if (Cache) {
-			fmt.Println("TODO: fetch JSON from cache and dump it")
-		} else {
-			topicsList := tct.GetTopicsAll()
-			for i, v := range topicsList {
-				fmt.Printf("Topic #%d: %v\n", i, v)
-			}
+			fmt.Println("Fetching data from cache")
+			tct.Cache = true
+		}
 
-			topicDetail := tct.GetTopicDetail(7399)
-			fmt.Println(topicDetail)
+		fmt.Println("Fetching data from ENM TCT server")
 
-			namesList := tct.GetNamesAll()
-			for i, v := range namesList {
-				fmt.Printf("Name #%d: %v\n", i, v)
-			}
+		topicsList := tct.GetTopicsAll()
+		for i, v := range topicsList {
+			fmt.Printf("Topic #%d: %v\n", i, v)
+		}
 
-			epubsList := tct.GetEpubsAll()
-			for i, v := range epubsList {
-				fmt.Printf("epub #%d: %v\n", i, v)
-			}
+		topicDetail := tct.GetTopicDetail(7399)
+		fmt.Println(topicDetail)
 
-			epubDetail := tct.GetEpubDetail(12)
-			fmt.Println(epubDetail)
+		namesList := tct.GetNamesAll()
+		for i, v := range namesList {
+			fmt.Printf("Name #%d: %v\n", i, v)
+		}
 
-			location := tct.GetLocation(2410)
-			fmt.Println(location)
+		epubsList := tct.GetEpubsAll()
+		for i, v := range epubsList {
+			fmt.Printf("epub #%d: %v\n", i, v)
+		}
 
-			indexPatternsList := tct.GetIndexPatternsAll()
-			for i, v := range indexPatternsList {
-				fmt.Print("Index pattern #%d: %v\n", i, v)
-			}
+		epubDetail := tct.GetEpubDetail(12)
+		fmt.Println(epubDetail)
+
+		location := tct.GetLocation(2410)
+		fmt.Println(location)
+
+		indexPatternsList := tct.GetIndexPatternsAll()
+		for i, v := range indexPatternsList {
+			fmt.Print("Index pattern #%d: %v\n", i, v)
 		}
 	},
 }

@@ -4,20 +4,36 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"strconv"
 )
 
 const ENM_TCT_BASE_URL = "https://nyuapi.infoloom.nyc"
 
-func GetResponseBody(url string) (body []byte) {
-	res, err := http.Get(url)
-	if err != nil {
-		panic(err.Error())
-	}
+var Cache bool
 
-	body, err = ioutil.ReadAll(res.Body)
-	if err != nil {
-		panic(err.Error())
+func GetResponseBody(url string) (body []byte) {
+	if (Cache) {
+		// TODO: map url to cacheFile
+		// For now just hardcode a single file for all calls
+		pwd, _ := os.Getwd()
+		cacheFile := pwd + "/cache/topics-all.json"
+
+		cachedData, err := ioutil.ReadFile(cacheFile)
+		if err != nil {
+			panic(err.Error())
+		}
+		body = cachedData
+	} else {
+		res, err := http.Get(url)
+		if err != nil {
+			panic(err.Error())
+		}
+
+		body, err = ioutil.ReadAll(res.Body)
+		if err != nil {
+			panic(err.Error())
+		}
 	}
 
 	return

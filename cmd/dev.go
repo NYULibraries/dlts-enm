@@ -16,8 +16,7 @@ package cmd
 
 import (
 	"fmt"
-
-	"github.com/nyulibraries/enm/tct"
+	
 	"github.com/spf13/cobra"
 )
 
@@ -30,34 +29,7 @@ var devCmd = &cobra.Command{
 	Long: `Just a temporary command to use during initial development for
 	running new code and doing sundry experiments`,
 	Run: func(cmd *cobra.Command, args []string) {
-		topicsList := tct.GetTopicsAll()
-		for i, v := range topicsList {
-			fmt.Printf("Topic #%d: %v\n", i, v)
-		}
-
-		topicDetail := tct.GetTopicDetail(7399)
-		fmt.Println(topicDetail)
-
-		namesList := tct.GetNamesAll()
-		for i, v := range namesList {
-			fmt.Printf("Name #%d: %v\n", i, v)
-		}
-
-		epubsList := tct.GetEpubsAll()
-		for i, v := range epubsList {
-			fmt.Printf("epub #%d: %v\n", i, v)
-		}
-
-		epubDetail := tct.GetEpubDetail(12)
-		fmt.Println(epubDetail)
-
-		location := tct.GetLocation(2410)
-		fmt.Println(location)
-
-		indexPatternsList := tct.GetIndexPatternsAll()
-		for i, v := range indexPatternsList {
-			fmt.Print("Index pattern #%d: %v\n", i, v)
-		}
+		fmt.Println("dev command called")
 	},
 }
 

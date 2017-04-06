@@ -46,6 +46,23 @@ func GetEpubsAll() (epubsList []Epub) {
 	return
 }
 
+func GetLocation(locationId int) (location Location) {
+	locationIdString := strconv.Itoa(locationId)
+	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/epub/location/" + locationIdString)
+
+	// For some reason this endpoint returns an array containing a single location element instead of just a single
+	// location element.  Bug?
+	var locations []Location
+	err := json.Unmarshal(responseBody, &locations)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	location = locations[0]
+
+	return
+}
+
 func GetNamesAll() (namesList []Name) {
 	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/hit/hits/all/")
 
@@ -103,6 +120,35 @@ type EpubDetail struct {
 	} `json:"locations"`
 	Publisher string `json:"publisher"`
 	Title     string `json:"title"`
+}
+
+// Created with the help of github.com/ChimeraCoder/gojson/gojson
+// `cat json-api-samples/location.json | gojson -name=LocationWrappedInAnArray`
+type Location struct {
+	Content struct {
+		ContentDescriptor      string `json:"content_descriptor"`
+		ContentUniqueIndicator string `json:"content_unique_indicator"`
+		Text                   string `json:"text"`
+	} `json:"content"`
+	Context  interface{} `json:"context"`
+	Document struct {
+		Author    string `json:"author"`
+		ID        int64  `json:"id"`
+		Isbn      string `json:"isbn"`
+		Publisher string `json:"publisher"`
+		Title     string `json:"title"`
+	} `json:"document"`
+	ID             int64         `json:"id"`
+	Localid        string        `json:"localid"`
+	NextLocationID int64         `json:"next_location_id"`
+	Occurrences    []interface{} `json:"occurrences"`
+	Pagenumber     struct {
+		CSSSelector   string `json:"css_selector"`
+		Filepath      string `json:"filepath"`
+		PagenumberTag string `json:"pagenumber_tag"`
+		Xpath         string `json:"xpath"`
+	} `json:"pagenumber"`
+	PreviousLocationID interface{} `json:"previous_location_id"`
 }
 
 // Created with the help of github.com/ChimeraCoder/gojson/gojson

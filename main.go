@@ -25,4 +25,7 @@ func main() {
 
 	epubDetail := GetEpubDetail(12)
 	fmt.Println(epubDetail)
+
+	location := GetLocation(2410)
+	fmt.Println(location)
 }

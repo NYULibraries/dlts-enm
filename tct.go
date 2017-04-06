@@ -46,6 +46,17 @@ func GetEpubsAll() (epubsList []Epub) {
 	return
 }
 
+func GetIndexPatternsAll() (indexPatternsList []IndexPattern) {
+	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/epub/index-pattern/all/")
+
+	err := json.Unmarshal(responseBody, &indexPatternsList)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
 func GetLocation(locationId int) (location Location) {
 	locationIdString := strconv.Itoa(locationId)
 	responseBody := GetResponseBody(ENM_TCT_BASE_URL + "/api/epub/location/" + locationIdString)
@@ -120,6 +131,38 @@ type EpubDetail struct {
 	} `json:"locations"`
 	Publisher string `json:"publisher"`
 	Title     string `json:"title"`
+}
+
+// Created with the help of github.com/ChimeraCoder/gojson/gojson
+// `cat json-api-samples/index-patterns.json | gojson -name=IndexPatterns`
+type IndexPattern struct {
+	Description string `json:"description"`
+	Documents   []struct {
+		ID    int64  `json:"id"`
+		Title string `json:"title"`
+	} `json:"documents"`
+	IndicatorsOfOccurrenceRange         []string `json:"indicators_of_occurrence_range"`
+	InlineSeeAlsoEnd                    string   `json:"inline_see_also_end"`
+	InlineSeeAlsoStart                  string   `json:"inline_see_also_start"`
+	InlineSeeEnd                        string   `json:"inline_see_end"`
+	InlineSeeStart                      string   `json:"inline_see_start"`
+	Name                                string   `json:"name"`
+	PagenumberCSSSelectorPattern        string   `json:"pagenumber_css_selector_pattern"`
+	PagenumberPreStrings                []string `json:"pagenumber_pre_strings"`
+	PagenumberXpathPattern              string   `json:"pagenumber_xpath_pattern"`
+	SeeAlsoSplitStrings                 []string `json:"see_also_split_strings"`
+	SeeSplitStrings                     []string `json:"see_split_strings"`
+	SeparatorBeforeFirstSubentry        string   `json:"separator_before_first_subentry"`
+	SeparatorBetweenEntryAndOccurrences string   `json:"separator_between_entry_and_occurrences"`
+	SeparatorBetweenSeealsos            string   `json:"separator_between_seealsos"`
+	SeparatorBetweenSees                string   `json:"separator_between_sees"`
+	SeparatorBetweenSubentries          string   `json:"separator_between_subentries"`
+	SeparatorSeeSubentry                string   `json:"separator_see_subentry"`
+	SubentryClasses                     []string `json:"subentry_classes"`
+	XpathEntry                          string   `json:"xpath_entry"`
+	XpathOccurrenceLink                 string   `json:"xpath_occurrence_link"`
+	XpathSee                            string   `json:"xpath_see"`
+	XpathSeealso                        string   `json:"xpath_seealso"`
 }
 
 // Created with the help of github.com/ChimeraCoder/gojson/gojson

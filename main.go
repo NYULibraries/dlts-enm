@@ -28,4 +28,9 @@ func main() {
 
 	location := GetLocation(2410)
 	fmt.Println(location)
+
+	indexPatternsList := GetIndexPatternsAll()
+	for i, v := range indexPatternsList {
+		fmt.Print("Index pattern #%d: %v\n", i, v)
+	}
 }

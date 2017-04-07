@@ -25,13 +25,23 @@ var TctApiEndpoints = map[string]string{
 	"TopicDetail": "/api/hit/basket/",
 }
 
-func GetResponseBody(url string) (body []byte) {
+func GetResponseBody(params ...string) (body []byte) {
+	var request = params[0]
+
+	id := ""
+	if len(params) > 1 {
+		id = params[1]
+	}
+
 	if (Source == "cache") {
 		fmt.Println("Fetching data from cache")
 
-		// TODO: map url to cacheFile
-		// For now just hardcode a single file for all calls
-		cacheFile := config.Cache + "/topics-all.json"
+		cacheFile := config.Cache + "/" + request;
+		if id != "" {
+			cacheFile += "-" + id + ".json"
+		} else {
+			cacheFile += ".json"
+		}
 
 		cachedData, err := ioutil.ReadFile(cacheFile)
 		if err != nil {
@@ -40,6 +50,11 @@ func GetResponseBody(url string) (body []byte) {
 		body = cachedData
 	} else if (Source == "tct-api"){
 		fmt.Println("Fetching data from TCT server")
+
+		var url = TctBaseUrl + TctApiEndpoints[request]
+		if id != "" {
+			url += id
+		}
 
 		res, err := http.Get(url)
 		if err != nil {
@@ -59,7 +74,7 @@ func GetResponseBody(url string) (body []byte) {
 
 func GetEpubDetail(epubId int) (epubDetail EpubDetail) {
 	epubIdString := strconv.Itoa(epubId)
-	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["EpubDetail"] + epubIdString)
+	responseBody := GetResponseBody("EpubDetail", epubIdString)
 
 	err := json.Unmarshal(responseBody, &epubDetail)
 	if err != nil {
@@ -70,7 +85,7 @@ func GetEpubDetail(epubId int) (epubDetail EpubDetail) {
 }
 
 func GetEpubsAll() (epubsList []Epub) {
-	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["EpubsAll"])
+	responseBody := GetResponseBody("EpubsAll")
 
 	err := json.Unmarshal(responseBody, &epubsList)
 	if err != nil {
@@ -81,7 +96,7 @@ func GetEpubsAll() (epubsList []Epub) {
 }
 
 func GetIndexPatternsAll() (indexPatternsList []IndexPattern) {
-	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["IndexPatternsAll"])
+	responseBody := GetResponseBody("IndexPatternsAll")
 
 	err := json.Unmarshal(responseBody, &indexPatternsList)
 	if err != nil {
@@ -93,7 +108,7 @@ func GetIndexPatternsAll() (indexPatternsList []IndexPattern) {
 
 func GetLocation(locationId int) (location Location) {
 	locationIdString := strconv.Itoa(locationId)
-	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints ["Location"] + locationIdString)
+	responseBody := GetResponseBody("Location", locationIdString)
 
 	// For some reason this endpoint returns an array containing a single location element instead of just a single
 	// location element.  Bug?
@@ -109,7 +124,7 @@ func GetLocation(locationId int) (location Location) {
 }
 
 func GetNamesAll() (namesList []Name) {
-	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["NamesAll"])
+	responseBody := GetResponseBody("NamesAll")
 
 	err := json.Unmarshal(responseBody, &namesList)
 	if err != nil {
@@ -120,7 +135,7 @@ func GetNamesAll() (namesList []Name) {
 }
 
 func GetTopicsAll() (topicsList []Topic) {
-	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["TopicsAll"])
+	responseBody := GetResponseBody("TopicsAll")
 
 	err := json.Unmarshal(responseBody, &topicsList)
 	if err != nil {
@@ -132,7 +147,7 @@ func GetTopicsAll() (topicsList []Topic) {
 
 func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
 	topicIdString := strconv.Itoa(topicId)
-	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["TopicDetail"] + topicIdString)
+	responseBody := GetResponseBody("TopicDetail", topicIdString)
 
 	err := json.Unmarshal(responseBody, &topicDetails)
 	if err != nil {

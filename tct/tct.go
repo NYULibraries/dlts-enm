@@ -21,7 +21,7 @@ var TctApiEndpoints = map[string]string{
 	"Location": "/api/epub/location/",
 	"NamesAll": "/api/hit/hits/all/",
 	"TopicsAll": "/api/hit/basket/all/",
-	"TopcDetail": "/api/hit/basket/",
+	"TopicDetail": "/api/hit/basket/",
 }
 
 func GetResponseBody(url string) (body []byte) {

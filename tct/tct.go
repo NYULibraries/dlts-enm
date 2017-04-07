@@ -134,8 +134,14 @@ func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
 	return
 }
 
-// Created with the help of github.com/ChimeraCoder/gojson/gojson
-// `cat json-api-samples/epubs-all.txt | gojson -name=EpubsAll`
+// The field declarations for the types below were generated using gojson:
+// github.com/ChimeraCoder/gojson/gojson
+//
+// Example: curl https://nyuapi.infoloom.nyc/api/epub/document/all/?format=json | gojson -name=EpubsAll`
+//
+// For now just declaring types for single objects, not collections: e.g. Epub, not EpubsAll
+
+// /api/epub/document/all/
 type Epub struct {
 	Author    string `json:"author"`
 	ID        int64  `json:"id"`
@@ -144,8 +150,7 @@ type Epub struct {
 	Title     string `json:"title"`
 }
 
-// Created by github.com/ChimeraCoder/gojson/gojson
-// `cat json-api-samples/epub-detail.json | gojson -name=EpubDetail`
+// /api/epub/document/DOCUMENT_ID/
 type EpubDetail struct {
 	Author    string `json:"author"`
 	Isbn      string `json:"isbn"`
@@ -159,8 +164,7 @@ type EpubDetail struct {
 	Title     string `json:"title"`
 }
 
-// Created with the help of github.com/ChimeraCoder/gojson/gojson
-// `cat json-api-samples/index-patterns.json | gojson -name=IndexPatterns`
+// /api/epub/index-pattern/all/
 type IndexPattern struct {
 	Description string `json:"description"`
 	Documents   []struct {
@@ -191,8 +195,7 @@ type IndexPattern struct {
 	XpathSeealso                        string   `json:"xpath_seealso"`
 }
 
-// Created with the help of github.com/ChimeraCoder/gojson/gojson
-// `cat json-api-samples/location.json | gojson -name=LocationWrappedInAnArray`
+// /api/epub/location/LOCATION_ID/
 type Location struct {
 	Content struct {
 		ContentDescriptor      string `json:"content_descriptor"`
@@ -220,8 +223,7 @@ type Location struct {
 	PreviousLocationID interface{} `json:"previous_location_id"`
 }
 
-// Created with the help of github.com/ChimeraCoder/gojson/gojson
-// `cat json-api-samples/names-all.json | gojson -name=NamesAll`
+// /api/hit/hits/all/
 type Name struct {
 	Basket    int64  `json:"basket"`
 	Hidden    bool   `json:"hidden"`
@@ -231,13 +233,13 @@ type Name struct {
 	Scope     string `json:"scope"`
 }
 
+// /api/hit/basket/all/
 type Topic struct {
 	DisplayName string `json:"display_name"`
 	ID          int64  `json:"id"`
 }
 
-// Created by github.com/ChimeraCoder/gojson/gojson
-// `cat json-api-samples/topic-detail.json | gojson -name=TopicDetail`
+// /api/hit/basket/BASKET_ID/
 type TopicDetail struct {
 	Basket struct {
 		DisplayName string `json:"display_name"`

@@ -26,6 +26,6 @@ func init() {
 		"source",
 		"s",
 		"tct-api",
-		"Specify data source: tct-api, tct-db, cache",
+		"Specify data source: tct-api, cache",
 	)
 }

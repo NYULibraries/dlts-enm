@@ -50,9 +50,6 @@ func GetResponseBody(url string) (body []byte) {
 		if err != nil {
 			panic(err.Error())
 		}
-	} else if (Source == "tct-db") {
-		fmt.Println("Fetching data from TCT database")
-		// TODO
 	} else {
 		panic("Unknown source: " + Source)
 	}

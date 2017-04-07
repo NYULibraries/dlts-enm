@@ -14,7 +14,7 @@ const TctBaseUrl = "https://nyuapi.infoloom.nyc"
 
 var Source string
 
-var TctApiEndpoints = map{
+var TctApiEndpoints = map[string]string{
 	"EpubDetail": "/api/epub/document/",
 	"EpubsAll": "/api/epub/document/all/",
 	"IndexPatternsAll": "/api/epub/index-pattern/all/",

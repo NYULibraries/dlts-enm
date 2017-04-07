@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var Cache bool
+var Source string
 
 var devCmd = &cobra.Command{
 	Use:   "dev",
@@ -21,11 +21,11 @@ var devCmd = &cobra.Command{
 func init() {
 	RootCmd.AddCommand(devCmd)
 
-	devCmd.PersistentFlags().BoolVarP(
-		&Cache,
-		"cache",
-		"c",
-		false,
-		"Get data from cache instead of making live calls to ENM TCT",
+	devCmd.PersistentFlags().StringVarP(
+		&Source,
+		"source",
+		"s",
+		"tct-api",
+		"Specify data source: tct-api, tct-db, cache",
 	)
 }

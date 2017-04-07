@@ -12,12 +12,7 @@ var dumpCmd = &cobra.Command{
 	Short: "Do a print dump of all retrieved JSON data",
 	Long: `Print raw umarshaled JSON fetched from ENM TCT or cache.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		if (Cache) {
-			fmt.Println("Fetching data from cache")
-			tct.Cache = true
-		}
-
-		fmt.Println("Fetching data from ENM TCT server")
+		tct.Source = Source
 
 		topicsList := tct.GetTopicsAll()
 		for i, v := range topicsList {

@@ -2,6 +2,7 @@ package tct
 
 import (
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -10,10 +11,12 @@ import (
 
 const ENM_TCT_BASE_URL = "https://nyuapi.infoloom.nyc"
 
-var Cache bool
+var Source string
 
 func GetResponseBody(url string) (body []byte) {
-	if (Cache) {
+	if (Source == "cache") {
+		fmt.Println("Fetching data from cache")
+
 		// TODO: map url to cacheFile
 		// For now just hardcode a single file for all calls
 		pwd, _ := os.Getwd()
@@ -24,7 +27,9 @@ func GetResponseBody(url string) (body []byte) {
 			panic(err.Error())
 		}
 		body = cachedData
-	} else {
+	} else if (Source == "tct-api"){
+		fmt.Println("Fetching data from TCT server")
+
 		res, err := http.Get(url)
 		if err != nil {
 			panic(err.Error())
@@ -34,6 +39,11 @@ func GetResponseBody(url string) (body []byte) {
 		if err != nil {
 			panic(err.Error())
 		}
+	} else if (Source == "tct-db") {
+		fmt.Println("Fetching data from TCT database")
+		// TODO
+	} else {
+		panic("Unknown source: " + Source)
 	}
 
 	return

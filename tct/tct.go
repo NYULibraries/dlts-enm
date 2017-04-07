@@ -14,6 +14,16 @@ const TctBaseUrl = "https://nyuapi.infoloom.nyc"
 
 var Source string
 
+var TctApiEndpoints = map{
+	"EpubDetail": "/api/epub/document/",
+	"EpubsAll": "/api/epub/document/all/",
+	"IndexPatternsAll": "/api/epub/index-pattern/all/",
+	"Location": "/api/epub/location/",
+	"NamesAll": "/api/hit/hits/all/",
+	"TopicsAll": "/api/hit/basket/all/",
+	"TopcDetail": "/api/hit/basket/",
+}
+
 func GetResponseBody(url string) (body []byte) {
 	if (Source == "cache") {
 		fmt.Println("Fetching data from cache")
@@ -51,7 +61,7 @@ func GetResponseBody(url string) (body []byte) {
 
 func GetEpubDetail(epubId int) (epubDetail EpubDetail) {
 	epubIdString := strconv.Itoa(epubId)
-	responseBody := GetResponseBody(TctBaseUrl + "/api/epub/document/" + epubIdString)
+	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["EpubDetail"] + epubIdString)
 
 	err := json.Unmarshal(responseBody, &epubDetail)
 	if err != nil {
@@ -62,7 +72,7 @@ func GetEpubDetail(epubId int) (epubDetail EpubDetail) {
 }
 
 func GetEpubsAll() (epubsList []Epub) {
-	responseBody := GetResponseBody(TctBaseUrl + "/api/epub/document/all/")
+	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["EpubsAll"])
 
 	err := json.Unmarshal(responseBody, &epubsList)
 	if err != nil {
@@ -73,7 +83,7 @@ func GetEpubsAll() (epubsList []Epub) {
 }
 
 func GetIndexPatternsAll() (indexPatternsList []IndexPattern) {
-	responseBody := GetResponseBody(TctBaseUrl + "/api/epub/index-pattern/all/")
+	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["IndexPatternsAll"])
 
 	err := json.Unmarshal(responseBody, &indexPatternsList)
 	if err != nil {
@@ -85,7 +95,7 @@ func GetIndexPatternsAll() (indexPatternsList []IndexPattern) {
 
 func GetLocation(locationId int) (location Location) {
 	locationIdString := strconv.Itoa(locationId)
-	responseBody := GetResponseBody(TctBaseUrl + "/api/epub/location/" + locationIdString)
+	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints ["Location"] + locationIdString)
 
 	// For some reason this endpoint returns an array containing a single location element instead of just a single
 	// location element.  Bug?
@@ -101,7 +111,7 @@ func GetLocation(locationId int) (location Location) {
 }
 
 func GetNamesAll() (namesList []Name) {
-	responseBody := GetResponseBody(TctBaseUrl + "/api/hit/hits/all/")
+	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["NamesAll"])
 
 	err := json.Unmarshal(responseBody, &namesList)
 	if err != nil {
@@ -112,7 +122,7 @@ func GetNamesAll() (namesList []Name) {
 }
 
 func GetTopicsAll() (topicsList []Topic) {
-	responseBody := GetResponseBody(TctBaseUrl + "/api/hit/basket/all/")
+	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["TopicsAll"])
 
 	err := json.Unmarshal(responseBody, &topicsList)
 	if err != nil {
@@ -124,7 +134,7 @@ func GetTopicsAll() (topicsList []Topic) {
 
 func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
 	topicIdString := strconv.Itoa(topicId)
-	responseBody := GetResponseBody(TctBaseUrl + "/api/hit/basket/" + topicIdString)
+	responseBody := GetResponseBody(TctBaseUrl + TctApiEndpoints["TopicDetail"] + topicIdString)
 
 	err := json.Unmarshal(responseBody, &topicDetails)
 	if err != nil {

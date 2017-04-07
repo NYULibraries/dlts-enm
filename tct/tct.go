@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/nyulibraries/enm/util"
+	"github.com/nyulibraries/enm/config"
 )
 
 const ENM_TCT_BASE_URL = "https://nyuapi.infoloom.nyc"
@@ -20,7 +20,7 @@ func GetResponseBody(url string) (body []byte) {
 
 		// TODO: map url to cacheFile
 		// For now just hardcode a single file for all calls
-		cacheFile := util.Cache + "/topics-all.json"
+		cacheFile := config.Cache + "/topics-all.json"
 
 		cachedData, err := ioutil.ReadFile(cacheFile)
 		if err != nil {

@@ -8,6 +8,7 @@ import (
 	"strconv"
 
 	"github.com/nyulibraries/enm/config"
+	"github.com/nyulibraries/enm/util"
 )
 
 const TctBaseUrl = "https://nyuapi.infoloom.nyc"
@@ -142,6 +143,10 @@ func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
 	}
 
 	return
+}
+
+func GetApiRequestTypes() ([]string){
+	return util.GetMapKeys(TctApiEndpoints)
 }
 
 // The field declarations for the types below were generated using gojson:

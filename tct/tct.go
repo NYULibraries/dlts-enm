@@ -232,8 +232,8 @@ type Name struct {
 }
 
 type Topic struct {
-	Id int64 `json:"id"`
 	DisplayName string `json:"display_name"`
+	ID          int64  `json:"id"`
 }
 
 // Created by github.com/ChimeraCoder/gojson/gojson

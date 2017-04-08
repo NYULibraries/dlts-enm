@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/nyulibraries/enm/tct"
+	"github.com/nyulibraries/dlts/enm/tct"
 )
 
 var dumpCmd = &cobra.Command{

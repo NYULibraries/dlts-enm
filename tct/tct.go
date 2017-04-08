@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/nyulibraries/enm/config"
-	"github.com/nyulibraries/enm/util"
+	"github.com/nyulibraries/dlts/enm/config"
+	"github.com/nyulibraries/dlts/enm/util"
 )
 
 const TctBaseUrl = "https://nyuapi.infoloom.nyc"

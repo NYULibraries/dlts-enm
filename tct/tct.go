@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/nyulibraries/dlts/enm/config"
+	"github.com/nyulibraries/dlts/enm/cache"
 	"github.com/nyulibraries/dlts/enm/util"
 )
 
@@ -36,7 +36,7 @@ func GetResponseBody(params ...string) (body []byte) {
 	if (Source == "cache") {
 		fmt.Println("Fetching data from cache")
 
-		cacheFile := config.Cache + "/" + request;
+		cacheFile := cache.Cache + "/" + request;
 		if id != "" {
 			cacheFile += "-" + id + ".json"
 		} else {

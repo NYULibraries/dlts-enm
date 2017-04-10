@@ -1,4 +1,4 @@
-package config
+package cache
 
 // TODO:
 //   * Figure out if there's a better place to put this

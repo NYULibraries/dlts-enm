@@ -33,10 +33,10 @@ func GetResponseBody(params ...string) (body []byte) {
 		id = params[1]
 	}
 
+	cacheFile := cache.CacheFile(request, id)
+
 	if (Source == "cache") {
 		fmt.Println("Fetching data from cache")
-
-		cacheFile := cache.CacheFile(request, id)
 
 		cachedData, err := ioutil.ReadFile(cacheFile)
 		if err != nil {
@@ -60,6 +60,8 @@ func GetResponseBody(params ...string) (body []byte) {
 		if err != nil {
 			panic(err.Error())
 		}
+
+		err = ioutil.WriteFile(cacheFile, body, 0600)
 	} else {
 		panic("Unknown source: " + Source)
 	}

@@ -6,3 +6,14 @@ package cache
 // Tried using os.TempDir(), but it was returning
 // /var/folders/dh/48wd7vnj3xqd1w_f126tcnvh0000gn/T/, which was not as convenient.
 var Cache = "/tmp"
+
+func CacheFile(request string, id string) (cacheFile string) {
+	cacheFile = Cache + "/" + request;
+	if id != "" {
+		cacheFile += "-" + id + ".json"
+	} else {
+		cacheFile += ".json"
+	}
+
+	return
+}

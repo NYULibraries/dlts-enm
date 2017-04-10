@@ -36,12 +36,7 @@ func GetResponseBody(params ...string) (body []byte) {
 	if (Source == "cache") {
 		fmt.Println("Fetching data from cache")
 
-		cacheFile := cache.Cache + "/" + request;
-		if id != "" {
-			cacheFile += "-" + id + ".json"
-		} else {
-			cacheFile += ".json"
-		}
+		cacheFile := cache.CacheFile(request, id)
 
 		cachedData, err := ioutil.ReadFile(cacheFile)
 		if err != nil {

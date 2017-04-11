@@ -8,18 +8,18 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-var database string
 var username string
 var password string
 
 var Db *sql.DB
+var Database string
 
 func init() {
-	database = os.Getenv( "ENM_DATABASE")
+	Database = os.Getenv( "ENM_DATABASE")
 	username = os.Getenv("ENM_DATABASE_USERNAME")
 	password = os.Getenv("ENM_DATABASE_PASSWORD")
 
-	if database == "" {
+	if Database == "" {
 		panic("db: ENM_DATABASE not set")
 
 	}
@@ -33,13 +33,13 @@ func init() {
 		panic("db: ENM_DATABASE_PASSWORD not set")
 	}
 
-	Db, err := sql.Open("mysql", username + ":" + password + "@/" + database)
+	Db, err := sql.Open("mysql", username + ":" + password + "@/" + Database)
 	if err != nil {
 		panic(err.Error())
 	}
 
 	if err = Db.Ping(); err == nil {
-		fmt.Println( "Database " + database + " responding to ping")
+		fmt.Println( "Database " + Database + " responding to ping")
 	} else {
 		panic(err.Error())
 	}

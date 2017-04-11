@@ -4,6 +4,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+
+	"github.com/nyulibraries/dlts/enm/db"
 	"github.com/nyulibraries/dlts/enm/tct"
 )
 
@@ -41,6 +43,12 @@ var dumpCmd = &cobra.Command{
 		indexPatternsList := tct.GetIndexPatternsAll()
 		for i, v := range indexPatternsList {
 			fmt.Print("Index pattern #%d: %v\n", i, v)
+		}
+
+		if err := db.Db.Ping(); err == nil {
+			fmt.Println( "dump: Database " + db.Database + " responding to ping")
+		} else {
+			panic("dump: " + err.Error())
 		}
 	},
 }

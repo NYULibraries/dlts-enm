@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/nyulibraries/dlts/enm/cmd"
 	"os"
+
+	"github.com/nyulibraries/dlts/enm/cmd"
 )
 
 func main() {

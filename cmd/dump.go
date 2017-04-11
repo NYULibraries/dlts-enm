@@ -45,7 +45,7 @@ var dumpCmd = &cobra.Command{
 			fmt.Print("Index pattern #%d: %v\n", i, v)
 		}
 
-		if err := db.Db.Ping(); err == nil {
+		if err := db.DB.Ping(); err == nil {
 			fmt.Println( "dump: Database " + db.Database + " responding to ping")
 		} else {
 			panic("dump: " + err.Error())

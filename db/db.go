@@ -11,7 +11,7 @@ import (
 var username string
 var password string
 
-var Db *sql.DB
+var DB *sql.DB
 var Database string
 
 func init() {
@@ -34,12 +34,12 @@ func init() {
 	}
 
 	var err error
-	Db, err = sql.Open("mysql", username + ":" + password + "@/" + Database)
+	DB, err = sql.Open("mysql", username + ":" + password + "@/" + Database)
 	if err != nil {
 		panic(err.Error())
 	}
 
-	if err = Db.Ping(); err == nil {
+	if err = DB.Ping(); err == nil {
 		fmt.Println( "Database " + Database + " responding to ping")
 	} else {
 		panic(err.Error())

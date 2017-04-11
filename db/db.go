@@ -33,7 +33,8 @@ func init() {
 		panic("db: ENM_DATABASE_PASSWORD not set")
 	}
 
-	Db, err := sql.Open("mysql", username + ":" + password + "@/" + Database)
+	var err error
+	Db, err = sql.Open("mysql", username + ":" + password + "@/" + Database)
 	if err != nil {
 		panic(err.Error())
 	}

@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/nyulibraries/dlts/enm/cmd"
+	_ "github.com/nyulibraries/dlts/enm/db"
 )
 
 func main() {

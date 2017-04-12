@@ -103,6 +103,7 @@ func GenerateDbCode() {
 	var insertSql, cols, vals string
 	var prepareCode string = `func prepareInsertStmts() {
 	var err error
+
 `
 
 	for _, table := range tables {
@@ -124,6 +125,7 @@ func GenerateDbCode() {
 	if err != nil {
 		panic("db.prepareInsertStatements: " + err.Error())
 	}
+	
 `, util.SnakeToCamelCase(table), insertSql)
 	}
 

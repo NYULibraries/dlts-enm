@@ -76,9 +76,6 @@ func init() {
 	} else {
 		panic(err.Error())
 	}
-
-	insertStmts = make(map[string]*sql.Stmt)
-	prepareInsertStmts()
 }
 
 func ClearTables() {

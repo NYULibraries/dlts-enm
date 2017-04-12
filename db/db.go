@@ -17,6 +17,7 @@ package db
 import (
 	"database/sql"
 	"fmt"
+	"sort"
 	"strings"
 	"os"
 
@@ -107,6 +108,8 @@ func getColumnNames(table string) (columns []string) {
 	if err != nil {
 		panic("db.GetColumnNames: " + err.Error())
 	}
+
+	sort.Strings(columns)
 
 	return
 }

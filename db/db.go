@@ -45,3 +45,33 @@ func init() {
 		panic(err.Error())
 	}
 }
+
+func ClearTables() {
+	tx, err := DB.Begin()
+	if err != nil {
+		panic( "db.ClearTables: " + err.Error())
+	}
+
+	tables := []string{
+		"topics",
+		"scopes",
+		"relation_type",
+		"relation_direction",
+		"relations",
+		"indexpatterns",
+		"epubs",
+		"locations",
+		"names",
+		"occurrences",
+		"relations",
+	}
+
+	for _, table := range tables {
+		_, err = tx.Exec(fmt.Sprintf("DELETE FROM %s", table))
+		if err != nil {
+			panic("db.ClearTables: " + err.Error())
+		}
+	}
+
+	tx.Commit()
+}

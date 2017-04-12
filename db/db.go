@@ -22,6 +22,7 @@ import (
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/nyulibraries/dlts/enm/util"
 )
 
 var username string
@@ -96,6 +97,39 @@ func ClearTables() {
 	}
 
 	tx.Commit()
+}
+
+func GenerateDbCode() {
+	var insertSql, cols, vals string
+	var prepareCode string = `func prepareInsertStmts() {
+	var err error
+`
+
+	for _, table := range tables {
+		var columns= getColumnNames(table)
+		var numColumns= len(columns)
+		cols = strings.Join(columns, ", ")
+
+		placeholders := []string{}
+		for j := 0; j < numColumns; j++ {
+			placeholders = append(placeholders, "?")
+		}
+
+		vals = strings.Join(placeholders, ", ")
+		insertSql = "INSERT INTO " + table + " (" + cols + ")" +
+			" VALUES (" + vals + ")"
+
+		prepareCode += fmt.Sprintf(
+`	insertStmt_%s, err = DB.Prepare("%s")
+	if err != nil {
+		panic("db.prepareInsertStatements: " + err.Error())
+	}
+`, util.SnakeToCamelCase(table), insertSql)
+	}
+
+	prepareCode += "}"
+
+	fmt.Println(prepareCode)
 }
 
 func getColumnNames(table string) (columns []string) {

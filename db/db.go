@@ -17,6 +17,7 @@ package db
 import (
 	"database/sql"
 	"fmt"
+	"strings"
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -27,6 +28,23 @@ var password string
 
 var DB *sql.DB
 var Database string
+
+// Tables in order that they would need to be in when deleting all data table-by-table.
+var tables = []string{
+	"topics",
+	"scopes",
+	"relation_type",
+	"relation_direction",
+	"relations",
+	"indexpatterns",
+	"epubs",
+	"locations",
+	"names",
+	"occurrences",
+	"relations",
+}
+
+var insertStmts map[string]*sql.Stmt
 
 func init() {
 	Database = os.Getenv( "ENM_DATABASE")
@@ -58,6 +76,9 @@ func init() {
 	} else {
 		panic(err.Error())
 	}
+
+	insertStmts = make(map[string]*sql.Stmt)
+	prepareInsertStmts()
 }
 
 func ClearTables() {
@@ -88,4 +109,44 @@ func ClearTables() {
 	}
 
 	tx.Commit()
+}
+
+func getColumnNames(table string) (columns []string) {
+	rows, err := DB.Query( "SELECT * FROM " + table)
+	if err != nil {
+		panic("db.GetColumnNames: " + err.Error())
+	}
+
+	columns, err = rows.Columns()
+	if err != nil {
+		panic("db.GetColumnNames: " + err.Error())
+	}
+
+	return
+}
+
+func prepareInsertStmts() {
+	var insertSql, cols, vals string
+	for _, table := range tables {
+		var columns = getColumnNames(table)
+		var numColumns = len(columns)
+		cols = strings.Join(columns, ", ")
+
+		placeholders := []string{}
+		for j := 0; j < numColumns; j++ {
+			placeholders = append(placeholders, "?")
+		}
+
+		vals = strings.Join(placeholders, ", ")
+		insertSql = "INSERT INTO " + table + " (" + cols + ")" +
+			" VALUES (" + vals + ")"
+
+		var err error
+		insertStmts[table], err = DB.Prepare(insertSql)
+		if err != nil {
+			panic("db.prepareInsertStatements: " + err.Error())
+		}
+
+		fmt.Printf("Prepared: \"%s\"\n", insertSql)
+	}
 }

@@ -14,6 +14,10 @@
 
 package util
 
+import (
+	"strings"
+)
+
 func GetMapKeys(m map[string]string) (keys []string) {
 	keys = make([]string, len(m))
 
@@ -21,6 +25,16 @@ func GetMapKeys(m map[string]string) (keys []string) {
 	for key := range m {
 		keys[i] = key
 		i++
+	}
+
+	return
+}
+
+func SnakeToCamelCase(snakeCaseString string) (camelCaseString string){
+	tokens := strings.Split(snakeCaseString, "_")
+
+	for _, token := range tokens {
+		camelCaseString += strings.Title(token)
 	}
 
 	return

@@ -48,7 +48,7 @@ var tables = []string{
 var insertStmts map[string]*sql.Stmt
 
 func init() {
-	Database = os.Getenv( "ENM_DATABASE")
+	Database = os.Getenv("ENM_DATABASE")
 	username = os.Getenv("ENM_DATABASE_USERNAME")
 	password = os.Getenv("ENM_DATABASE_PASSWORD")
 

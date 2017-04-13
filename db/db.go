@@ -71,9 +71,7 @@ func init() {
 		panic(err.Error())
 	}
 
-	if err = DB.Ping(); err == nil {
-		fmt.Println( "Database " + Database + " responding to ping")
-	} else {
+	if err = DB.Ping(); err != nil {
 		panic(err.Error())
 	}
 }

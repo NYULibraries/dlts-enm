@@ -114,8 +114,11 @@ package db
 
 func prepareInsertStmts() {
 	var err error
-
+%s
+}
 `
+	var prepareCode string
+
 	for _, table := range tables {
 		var columns= getColumnNames(table)
 		var numColumns= len(columns)
@@ -130,18 +133,16 @@ func prepareInsertStmts() {
 		insertSql = "INSERT INTO " + table + " (" + cols + ")" +
 			" VALUES (" + vals + ")"
 
-		result += fmt.Sprintf(
-`	insertStmt_%s, err = DB.Prepare("%s")
+		prepareCode += fmt.Sprintf(
+`
+	insertStmt_%s, err = DB.Prepare("%s")
 	if err != nil {
 		panic("db.prepareInsertStatements: " + err.Error())
 	}
-
 `, util.SnakeToCamelCase(table), insertSql)
 	}
 
-	result += "}"
-
-	fmt.Println(result)
+	fmt.Printf(result, prepareCode)
 }
 
 func getColumnNames(table string) (columns []string) {

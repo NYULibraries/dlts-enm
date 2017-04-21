@@ -118,14 +118,19 @@ func prepareInsertStmts() {
 %s
 }
 `
-	//var insertStmtDeclarations string
+	var insertStmtDeclarations string
 	var prepareCode string
 
 	for _, table := range tables {
+		insertStmtDeclarations += getInsertStmtDeclaration(table)
 		prepareCode += getPrepareStmtCode(table)
 	}
 
-	fmt.Printf(result, prepareCode)
+	fmt.Printf(result, insertStmtDeclarations, prepareCode)
+}
+
+func getInsertStmtDeclaration(table string) (string) {
+	return fmt.Sprintf( "var insertStmt_%s *sql.Stmt\n", util.SnakeToCamelCase(table))
 }
 
 func getPrepareStmtCode(table string) (prepareCode string) {

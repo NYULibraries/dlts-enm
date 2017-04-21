@@ -112,7 +112,6 @@ func GenerateDbCode() {
 package db
 
 %s
-
 func prepareInsertStmts() {
 	var err error
 %s
@@ -151,10 +150,10 @@ func getPrepareStmtCode(table string) (prepareCode string) {
 
 	prepareCode += fmt.Sprintf(
 		`
-			insertStmt_%s, err = DB.Prepare("%s")
-			if err != nil {
-				panic("db.prepareInsertStatements: " + err.Error())
-			}
+	insertStmt_%s, err = DB.Prepare("%s")
+	if err != nil {
+		panic("db.prepareInsertStatements: " + err.Error())
+	}
 		`, util.SnakeToCamelCase(table), insertSql)
 
 	return

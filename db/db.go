@@ -110,6 +110,10 @@ func GenerateDbCode() {
 
 package db
 
+import (
+	"database/sql"
+)
+
 %s
 func prepareInsertStmts() {
 	var err error

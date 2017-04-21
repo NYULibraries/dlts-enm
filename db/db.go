@@ -43,7 +43,6 @@ var tables = []string{
 	"locations",
 	"names",
 	"occurrences",
-	"relations",
 }
 
 func init() {

@@ -17,6 +17,7 @@ package db
 import (
 	"database/sql"
 	"fmt"
+	"io/ioutil"
 	"sort"
 	"strings"
 	"os"
@@ -128,7 +129,11 @@ func prepareInsertStmts() {
 		prepareCode += getPrepareStmtCode(table)
 	}
 
-	fmt.Printf(result, insertStmtDeclarations, prepareCode)
+	code := fmt.Sprintf(result, insertStmtDeclarations, prepareCode)
+	err := ioutil.WriteFile("db/tables.go", []byte(code), 0644 )
+	if err != nil {
+		panic(err)
+	}
 }
 
 func getInsertStmtDeclaration(table string) (string) {

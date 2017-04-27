@@ -18,6 +18,7 @@ import (
 	"github.com/spf13/cobra"
 
 	_ "github.com/nyulibraries/dlts/enm/db"
+	"github.com/nyulibraries/dlts/enm/db"
 )
 
 // reloadCmd represents the reload command
@@ -26,7 +27,8 @@ var reloadCmd = &cobra.Command{
 	Short: "Reload database from TCT",
 	Long: `Truncates all database tables and reload from TCT API responses.`,
 	Run: func(cmd *cobra.Command, args []string) {
-
+		db.ClearTables()
+		db.Reload()
 	},
 }
 

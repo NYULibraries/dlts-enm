@@ -88,3 +88,7 @@ func ClearTables() {
 
 	tx.Commit()
 }
+
+func Reload() {
+	models.XOLog("Hello XOLog")
+}

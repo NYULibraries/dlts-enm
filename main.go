@@ -22,8 +22,6 @@ import (
 	_ "github.com/nyulibraries/dlts/enm/db"
 )
 
-//go:generate go run main.go dev gendbcode
-
 func main() {
 	if err := cmd.RootCmd.Execute(); err != nil {
 		fmt.Println(err)

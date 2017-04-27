@@ -22,6 +22,8 @@ import (
 	_ "github.com/nyulibraries/dlts/enm/db"
 )
 
+//go:generate xo mysql://${ENM_DATABASE_USERNAME}:${ENM_DATABASE_PASSWORD}@localhost/${ENM_DATABASE} -o db/models/
+
 func main() {
 	if err := cmd.RootCmd.Execute(); err != nil {
 		fmt.Println(err)

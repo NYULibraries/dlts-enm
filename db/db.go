@@ -91,4 +91,9 @@ func ClearTables() {
 
 func Reload() {
 	models.XOLog("Hello XOLog")
+	epub, err := models.EpubByIsbn(DB, "9780814706404")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(epub)
 }

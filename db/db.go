@@ -21,6 +21,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/nyulibraries/dlts/enm/db/models"
+	"github.com/nyulibraries/dlts/enm/tct"
 )
 
 var username string
@@ -90,10 +91,12 @@ func ClearTables() {
 }
 
 func Reload() {
-	models.XOLog("Hello XOLog")
-	epub, err := models.EpubByIsbn(DB, "9780814706404")
-	if err != nil {
-		panic(err)
+	tctTopics := tct.GetTopicsAll()
+	for _, tctTopic := range tctTopics {
+		enmTopic := models.Topic{
+			TctID: int(tctTopic.ID),
+			DisplayNameDoNotUse: tctTopic.DisplayName,
+		}
+		enmTopic.Insert(DB)
 	}
-	fmt.Println(epub)
 }

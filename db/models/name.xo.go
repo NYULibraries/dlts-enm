@@ -9,13 +9,13 @@ import (
 
 // Name represents a row from 'enm.names'.
 type Name struct {
-	TctID     int  `json:"tct_id"`    // tct_id
-	TopicID   int  `json:"topic_id"`  // topic_id
-	Name      int  `json:"name"`      // name
-	ScopeID   int  `json:"scope_id"`  // scope_id
-	Bypass    bool `json:"bypass"`    // bypass
-	Hidden    bool `json:"hidden"`    // hidden
-	Preferred bool `json:"preferred"` // preferred
+	TctID     int    `json:"tct_id"`    // tct_id
+	TopicID   int    `json:"topic_id"`  // topic_id
+	Name      string `json:"name"`      // name
+	ScopeID   int    `json:"scope_id"`  // scope_id
+	Bypass    bool   `json:"bypass"`    // bypass
+	Hidden    bool   `json:"hidden"`    // hidden
+	Preferred bool   `json:"preferred"` // preferred
 
 	// xo fields
 	_exists, _deleted bool
@@ -141,7 +141,7 @@ func (n *Name) Topic(db XODB) (*Topic, error) {
 // NamesByName retrieves a row from 'enm.names' as a Name.
 //
 // Generated from index 'name'.
-func NamesByName(db XODB, name int) ([]*Name, error) {
+func NamesByName(db XODB, name string) ([]*Name, error) {
 	var err error
 
 	// sql query

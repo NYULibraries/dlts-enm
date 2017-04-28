@@ -156,11 +156,11 @@ func GetTopicsAll() (topicsList []Topic) {
 	return
 }
 
-func GetTopicDetail(topicId int) (topicDetails TopicDetail) {
+func GetTopicDetail(topicId int) (topicDetail TopicDetail) {
 	topicIdString := strconv.Itoa(topicId)
 	responseBody := GetResponseBody("TopicDetail", topicIdString)
 
-	err := json.Unmarshal(responseBody, &topicDetails)
+	err := json.Unmarshal(responseBody, &topicDetail)
 	if err != nil {
 		panic(err.Error())
 	}

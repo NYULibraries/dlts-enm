@@ -31,5 +31,5 @@ var clearCmd = &cobra.Command{
 }
 
 func init() {
-	devCmd.AddCommand(clearCmd)
+	RootCmd.AddCommand(clearCmd)
 }

@@ -36,5 +36,13 @@ var reloadCmd = &cobra.Command{
 }
 
 func init() {
-	devCmd.AddCommand(reloadCmd)
+	RootCmd.AddCommand(reloadCmd)
+
+	reloadCmd.PersistentFlags().StringVarP(
+		&Source,
+		"source",
+		"s",
+		"tct-api",
+		"Specify data source: tct-api, cache",
+	)
 }

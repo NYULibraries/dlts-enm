@@ -9,8 +9,8 @@ import (
 
 // Scope represents a row from 'enm.scopes'.
 type Scope struct {
-	TctID int `json:"tct_id"` // tct_id
-	Scope int `json:"scope"`  // scope
+	TctID int    `json:"tct_id"` // tct_id
+	Scope string `json:"scope"`  // scope
 
 	// xo fields
 	_exists, _deleted bool
@@ -122,7 +122,7 @@ func (s *Scope) Delete(db XODB) error {
 // ScopesByScope retrieves a row from 'enm.scopes' as a Scope.
 //
 // Generated from index 'scope'.
-func ScopesByScope(db XODB, scope int) ([]*Scope, error) {
+func ScopesByScope(db XODB, scope string) ([]*Scope, error) {
 	var err error
 
 	// sql query

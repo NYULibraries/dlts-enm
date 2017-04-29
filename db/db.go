@@ -91,12 +91,56 @@ func ClearTables() {
 }
 
 func Reload() {
+	// Topics table: just need the info from topics All Topics endpoint
+
+	// Scopes table: tricky -- the only way to get the scope IDs is by
+	//     retrieving the TopicDetail for every topic.
+
+	var err error
+	scopeExists := make(map[int64]bool)
 	tctTopics := tct.GetTopicsAll()
+
 	for _, tctTopic := range tctTopics {
 		enmTopic := models.Topic{
 			TctID: int(tctTopic.ID),
 			DisplayNameDoNotUse: tctTopic.DisplayName,
 		}
-		enmTopic.Insert(DB)
+
+		// Insert into Topics table
+		err = enmTopic.Insert(DB)
+		if err != nil {
+			fmt.Println(tctTopic)
+			panic(err)
+		}
+
+		// Get topic details
+		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
+		tctTopicHits := tctTopicDetail.Basket.TopicHits
+		for _, tctTopicHit := range tctTopicHits {
+			if ! scopeExists[tctTopicHit.Scope.ID] {
+				enmScope := models.Scope{
+					TctID: int(tctTopicHit.Scope.ID),
+					Scope: tctTopicHit.Scope.Scope,
+				}
+				err = enmScope.Insert(DB)
+				if err != nil {
+					fmt.Println(enmScope)
+					panic(err)
+				}
+				scopeExists[tctTopicHit.Scope.ID] = true
+			}
+		}
 	}
+
+	//tctEpubs := tct.GetEpubsAll()
+	//for _, tctEpub := range tctEpubs {
+	//	tctEpubDetail := tct.GetEpubDetail(int(tctEpub.ID))
+	//	fmt.Println(tctEpubDetail)
+	//
+	//	tctLocations := tctEpubDetail.Locations
+	//	for _, tctLocation := range tctLocations {
+	//		tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+	//		fmt.Println(tctLocationDetail)
+	//	}
+	//}
 }

@@ -133,18 +133,41 @@ func Reload() {
 	//	}
 	//}
 
+	tctIdTemp := 0
 	tctIndexPatterns := tct.GetIndexPatternsAll()
 	for _, tctIndexPattern := range tctIndexPatterns {
-		//enmIndexPattern := new models.Indexpattern{
-		//	TctID: 0,
-		//	Name: tctIndexPattern.Name,
-		//	Description: tctIndexPattern.Description,
-		//	IndicatorsOfOccurrenceRange: tctIndexPattern.IndicatorsOfOccurrenceRange,
-		//	InlineSeeAlsoEnd: tctIndexPattern.InlineSeeAlsoEnd,
-		//	PagenumberPreStrings: tctIndexPattern.PagenumberPreStrings
-		//}
-		models.XOLog("")
-		fmt.Println(tctIndexPattern)
+		tctIdTemp++
+		enmIndexPattern := models.Indexpattern{
+			TctID: tctIdTemp,
+			Name: tctIndexPattern.Name,
+			Description: tctIndexPattern.Description,
+			PagenumberPreStrings: serialize(tctIndexPattern.PagenumberPreStrings),
+			PagenumberCSSSelectorPattern: tctIndexPattern.PagenumberCSSSelectorPattern,
+			PagenumberXpathPattern: tctIndexPattern.PagenumberXpathPattern,
+			XpathEntry: tctIndexPattern.XpathEntry,
+			SeeSplitStrings: serialize(tctIndexPattern.SeeSplitStrings),
+			SeeAlsoSplitStrings: serialize(tctIndexPattern.SeeAlsoSplitStrings),
+			XpathSee: tctIndexPattern.XpathSee,
+			XpathSeeAlso: tctIndexPattern.XpathSeealso,
+			SeparatorBetweenSees: tctIndexPattern.SeparatorBetweenSees,
+			SeparatorBetweenSeealsos: tctIndexPattern.SeparatorBetweenSeealsos,
+			SeparatorSeeSubentry: tctIndexPattern.SeparatorSeeSubentry,
+			InlineSeeStart: tctIndexPattern.InlineSeeStart,
+			InlineSeeAlsoStart: tctIndexPattern.InlineSeeAlsoStart,
+			InlineSeeEnd: tctIndexPattern.InlineSeeEnd,
+			InlineSeeAlsoEnd: tctIndexPattern.InlineSeeAlsoEnd,
+			SubentryClasses: serialize(tctIndexPattern.SubentryClasses),
+			SeparatorBetweenSubentries: tctIndexPattern.SeparatorBetweenSubentries,
+			SeparatorBetweenEntryAndOccurrences: tctIndexPattern.SeparatorBetweenEntryAndOccurrences,
+			SeparatorBeforeFirstSubentry: tctIndexPattern.SeparatorBeforeFirstSubentry,
+			XpathOccurrenceLink: tctIndexPattern.XpathOccurrenceLink,
+			IndicatorsOfOccurrenceRange: serialize(tctIndexPattern.IndicatorsOfOccurrenceRange),
+		}
+		err := enmIndexPattern.Insert(DB)
+		if err != nil {
+			fmt.Println(enmIndexPattern)
+			panic(err)
+		}
 	}
 
 	//tctEpubs := tct.GetEpubsAll()

@@ -176,18 +176,30 @@ func Reload() {
 		}
 	}
 
-	//tctEpubs := tct.GetEpubsAll()
-	//for _, tctEpub := range tctEpubs {
-	//	tctEpubDetail := tct.GetEpubDetail(int(tctEpub.ID))
-	//	fmt.Println(tctEpubDetail)
-	//
-	//	tctLocations := tctEpubDetail.Locations
-	//	for _, tctLocation := range tctLocations {
-	//		tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
-	//		fmt.Println(tctLocationDetail)
-	//		models.XOLog("")
-	//	}
-	//}
+	tctEpubs := tct.GetEpubsAll()
+	for _, tctEpub := range tctEpubs {
+		tctEpubDetail := tct.GetEpubDetail(int(tctEpub.ID))
+
+		enmEpub := models.Epub{
+			TctID: int(tctEpub.ID),
+			Title: tctEpubDetail.Title,
+			Author: tctEpubDetail.Author,
+			Publisher: tctEpubDetail.Publisher,
+			Isbn: tctEpubDetail.Isbn,
+			IndexpatternID: epubIndexPatternMap[int(tctEpub.ID)],
+		}
+		err := enmEpub.Insert(DB)
+		if err != nil {
+			fmt.Println(enmEpub)
+			panic(err )
+		}
+		//tctLocations := tctEpubDetail.Locations
+		//for _, tctLocation := range tctLocations {
+		//	tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+		//	fmt.Println(tctLocationDetail)
+		//	models.XOLog("")
+		//}
+	}
 }
 
 func serialize(stringArray []string) string {

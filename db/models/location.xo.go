@@ -16,7 +16,6 @@ type Location struct {
 	ContentUniqueDescriptor string `json:"content_unique_descriptor"` // content_unique_descriptor
 	ContentDescriptor       string `json:"content_descriptor"`        // content_descriptor
 	ContentText             string `json:"content_text"`              // content_text
-	Context                 int    `json:"context"`                   // context
 	PagenumberFilepath      string `json:"pagenumber_filepath"`       // pagenumber_filepath
 	PagenumberTag           string `json:"pagenumber_tag"`            // pagenumber_tag
 	PagenumberCSSSelector   string `json:"pagenumber_css_selector"`   // pagenumber_css_selector
@@ -49,14 +48,14 @@ func (l *Location) Insert(db XODB) error {
 
 	// sql insert query, primary key must be provided
 	const sqlstr = `INSERT INTO enm.locations (` +
-		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, context, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id` +
+		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id` +
 		`) VALUES (` +
-		`?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?` +
+		`?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?` +
 		`)`
 
 	// run query
-	XOLog(sqlstr, l.TctID, l.EpubID, l.Localid, l.SequenceNumber, l.ContentUniqueDescriptor, l.ContentDescriptor, l.ContentText, l.Context, l.PagenumberFilepath, l.PagenumberTag, l.PagenumberCSSSelector, l.PagenumberXpath, l.NextLocationID, l.PreviousLocationID)
-	_, err = db.Exec(sqlstr, l.TctID, l.EpubID, l.Localid, l.SequenceNumber, l.ContentUniqueDescriptor, l.ContentDescriptor, l.ContentText, l.Context, l.PagenumberFilepath, l.PagenumberTag, l.PagenumberCSSSelector, l.PagenumberXpath, l.NextLocationID, l.PreviousLocationID)
+	XOLog(sqlstr, l.TctID, l.EpubID, l.Localid, l.SequenceNumber, l.ContentUniqueDescriptor, l.ContentDescriptor, l.ContentText, l.PagenumberFilepath, l.PagenumberTag, l.PagenumberCSSSelector, l.PagenumberXpath, l.NextLocationID, l.PreviousLocationID)
+	_, err = db.Exec(sqlstr, l.TctID, l.EpubID, l.Localid, l.SequenceNumber, l.ContentUniqueDescriptor, l.ContentDescriptor, l.ContentText, l.PagenumberFilepath, l.PagenumberTag, l.PagenumberCSSSelector, l.PagenumberXpath, l.NextLocationID, l.PreviousLocationID)
 	if err != nil {
 		return err
 	}
@@ -83,12 +82,12 @@ func (l *Location) Update(db XODB) error {
 
 	// sql query
 	const sqlstr = `UPDATE enm.locations SET ` +
-		`epub_id = ?, localid = ?, sequence_number = ?, content_unique_descriptor = ?, content_descriptor = ?, content_text = ?, context = ?, pagenumber_filepath = ?, pagenumber_tag = ?, pagenumber_css_selector = ?, pagenumber_xpath = ?, next_location_id = ?, previous_location_id = ?` +
+		`epub_id = ?, localid = ?, sequence_number = ?, content_unique_descriptor = ?, content_descriptor = ?, content_text = ?, pagenumber_filepath = ?, pagenumber_tag = ?, pagenumber_css_selector = ?, pagenumber_xpath = ?, next_location_id = ?, previous_location_id = ?` +
 		` WHERE tct_id = ?`
 
 	// run query
-	XOLog(sqlstr, l.EpubID, l.Localid, l.SequenceNumber, l.ContentUniqueDescriptor, l.ContentDescriptor, l.ContentText, l.Context, l.PagenumberFilepath, l.PagenumberTag, l.PagenumberCSSSelector, l.PagenumberXpath, l.NextLocationID, l.PreviousLocationID, l.TctID)
-	_, err = db.Exec(sqlstr, l.EpubID, l.Localid, l.SequenceNumber, l.ContentUniqueDescriptor, l.ContentDescriptor, l.ContentText, l.Context, l.PagenumberFilepath, l.PagenumberTag, l.PagenumberCSSSelector, l.PagenumberXpath, l.NextLocationID, l.PreviousLocationID, l.TctID)
+	XOLog(sqlstr, l.EpubID, l.Localid, l.SequenceNumber, l.ContentUniqueDescriptor, l.ContentDescriptor, l.ContentText, l.PagenumberFilepath, l.PagenumberTag, l.PagenumberCSSSelector, l.PagenumberXpath, l.NextLocationID, l.PreviousLocationID, l.TctID)
+	_, err = db.Exec(sqlstr, l.EpubID, l.Localid, l.SequenceNumber, l.ContentUniqueDescriptor, l.ContentDescriptor, l.ContentText, l.PagenumberFilepath, l.PagenumberTag, l.PagenumberCSSSelector, l.PagenumberXpath, l.NextLocationID, l.PreviousLocationID, l.TctID)
 	return err
 }
 
@@ -160,7 +159,7 @@ func LocationsByEpubID(db XODB, epubID int) ([]*Location, error) {
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, context, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id ` +
+		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id ` +
 		`FROM enm.locations ` +
 		`WHERE epub_id = ?`
 
@@ -180,7 +179,7 @@ func LocationsByEpubID(db XODB, epubID int) ([]*Location, error) {
 		}
 
 		// scan
-		err = q.Scan(&l.TctID, &l.EpubID, &l.Localid, &l.SequenceNumber, &l.ContentUniqueDescriptor, &l.ContentDescriptor, &l.ContentText, &l.Context, &l.PagenumberFilepath, &l.PagenumberTag, &l.PagenumberCSSSelector, &l.PagenumberXpath, &l.NextLocationID, &l.PreviousLocationID)
+		err = q.Scan(&l.TctID, &l.EpubID, &l.Localid, &l.SequenceNumber, &l.ContentUniqueDescriptor, &l.ContentDescriptor, &l.ContentText, &l.PagenumberFilepath, &l.PagenumberTag, &l.PagenumberCSSSelector, &l.PagenumberXpath, &l.NextLocationID, &l.PreviousLocationID)
 		if err != nil {
 			return nil, err
 		}
@@ -199,7 +198,7 @@ func LocationByTctID(db XODB, tctID int) (*Location, error) {
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, context, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id ` +
+		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id ` +
 		`FROM enm.locations ` +
 		`WHERE tct_id = ?`
 
@@ -209,7 +208,7 @@ func LocationByTctID(db XODB, tctID int) (*Location, error) {
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, tctID).Scan(&l.TctID, &l.EpubID, &l.Localid, &l.SequenceNumber, &l.ContentUniqueDescriptor, &l.ContentDescriptor, &l.ContentText, &l.Context, &l.PagenumberFilepath, &l.PagenumberTag, &l.PagenumberCSSSelector, &l.PagenumberXpath, &l.NextLocationID, &l.PreviousLocationID)
+	err = db.QueryRow(sqlstr, tctID).Scan(&l.TctID, &l.EpubID, &l.Localid, &l.SequenceNumber, &l.ContentUniqueDescriptor, &l.ContentDescriptor, &l.ContentText, &l.PagenumberFilepath, &l.PagenumberTag, &l.PagenumberCSSSelector, &l.PagenumberXpath, &l.NextLocationID, &l.PreviousLocationID)
 	if err != nil {
 		return nil, err
 	}
@@ -225,7 +224,7 @@ func LocationByNextLocationID(db XODB, nextLocationID int) (*Location, error) {
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, context, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id ` +
+		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id ` +
 		`FROM enm.locations ` +
 		`WHERE next_location_id = ?`
 
@@ -235,7 +234,7 @@ func LocationByNextLocationID(db XODB, nextLocationID int) (*Location, error) {
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, nextLocationID).Scan(&l.TctID, &l.EpubID, &l.Localid, &l.SequenceNumber, &l.ContentUniqueDescriptor, &l.ContentDescriptor, &l.ContentText, &l.Context, &l.PagenumberFilepath, &l.PagenumberTag, &l.PagenumberCSSSelector, &l.PagenumberXpath, &l.NextLocationID, &l.PreviousLocationID)
+	err = db.QueryRow(sqlstr, nextLocationID).Scan(&l.TctID, &l.EpubID, &l.Localid, &l.SequenceNumber, &l.ContentUniqueDescriptor, &l.ContentDescriptor, &l.ContentText, &l.PagenumberFilepath, &l.PagenumberTag, &l.PagenumberCSSSelector, &l.PagenumberXpath, &l.NextLocationID, &l.PreviousLocationID)
 	if err != nil {
 		return nil, err
 	}
@@ -251,7 +250,7 @@ func LocationByPreviousLocationID(db XODB, previousLocationID int) (*Location, e
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, context, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id ` +
+		`tct_id, epub_id, localid, sequence_number, content_unique_descriptor, content_descriptor, content_text, pagenumber_filepath, pagenumber_tag, pagenumber_css_selector, pagenumber_xpath, next_location_id, previous_location_id ` +
 		`FROM enm.locations ` +
 		`WHERE previous_location_id = ?`
 
@@ -261,7 +260,7 @@ func LocationByPreviousLocationID(db XODB, previousLocationID int) (*Location, e
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, previousLocationID).Scan(&l.TctID, &l.EpubID, &l.Localid, &l.SequenceNumber, &l.ContentUniqueDescriptor, &l.ContentDescriptor, &l.ContentText, &l.Context, &l.PagenumberFilepath, &l.PagenumberTag, &l.PagenumberCSSSelector, &l.PagenumberXpath, &l.NextLocationID, &l.PreviousLocationID)
+	err = db.QueryRow(sqlstr, previousLocationID).Scan(&l.TctID, &l.EpubID, &l.Localid, &l.SequenceNumber, &l.ContentUniqueDescriptor, &l.ContentDescriptor, &l.ContentText, &l.PagenumberFilepath, &l.PagenumberTag, &l.PagenumberCSSSelector, &l.PagenumberXpath, &l.NextLocationID, &l.PreviousLocationID)
 	if err != nil {
 		return nil, err
 	}

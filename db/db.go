@@ -16,6 +16,7 @@ package db
 
 import (
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"os"
 
@@ -158,4 +159,13 @@ func Reload() {
 	//		models.XOLog("")
 	//	}
 	//}
+}
+
+func serialize(stringArray []string) string {
+	serializedBytes, err := json.Marshal(stringArray)
+	if err != nil {
+		panic(err)
+	}
+
+	return string(serializedBytes)
 }

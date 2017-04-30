@@ -88,7 +88,6 @@ CREATE TABLE `locations` (
   `content_unique_descriptor` varchar(255) NOT NULL,
   `content_descriptor` varchar(255) NOT NULL,
   `content_text` text NOT NULL,
-  `context` int(11) NOT NULL,
   `pagenumber_filepath` varchar(1024) NOT NULL,
   `pagenumber_tag` varchar(255) NOT NULL,
   `pagenumber_css_selector` varchar(255) NOT NULL,
@@ -242,4 +241,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-28 22:19:41
+-- Dump completed on 2017-04-30 19:53:34

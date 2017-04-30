@@ -198,6 +198,11 @@ func Reload() {
 		for _, tctLocation := range tctLocations {
 			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
 
+			// TODO: This is temporary
+			var prevId int
+			if tctLocationDetail.PreviousLocationID != nil {
+				prevId = tctLocationDetail.PreviousLocationID.(int)
+			}
 			enmLocation := models.Location{
 				TctID: int(tctLocationDetail.ID),
 				EpubID: int(tctEpub.ID),
@@ -227,7 +232,7 @@ func Reload() {
 
 				// TODO: Change tct.Location.PreviousLocationID from interface{} to int or int64
 				// Also make sure nullable in database
-				PreviousLocationID: tctLocationDetail.PreviousLocationID.(int),
+				PreviousLocationID: prevId,
 			}
 			err := enmLocation.Insert(DB)
 			if err != nil {

@@ -135,6 +135,7 @@ func Reload() {
 
 	tctIdTemp := 0
 	tctIndexPatterns := tct.GetIndexPatternsAll()
+	epubIndexPatternMap := make(map[int]int)
 	for _, tctIndexPattern := range tctIndexPatterns {
 		tctIdTemp++
 		enmIndexPattern := models.Indexpattern{
@@ -167,6 +168,11 @@ func Reload() {
 		if err != nil {
 			fmt.Println(enmIndexPattern)
 			panic(err)
+		}
+
+		epubsUsingIndexPattern := tctIndexPattern.Documents
+		for _, epubUsingIndexPattern := range epubsUsingIndexPattern {
+			epubIndexPatternMap[int(epubUsingIndexPattern.ID)] = tctIdTemp
 		}
 	}
 

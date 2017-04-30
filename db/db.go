@@ -193,12 +193,48 @@ func Reload() {
 			fmt.Println(enmEpub)
 			panic(err )
 		}
-		//tctLocations := tctEpubDetail.Locations
-		//for _, tctLocation := range tctLocations {
-		//	tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
-		//	fmt.Println(tctLocationDetail)
-		//	models.XOLog("")
-		//}
+
+		tctLocations := tctEpubDetail.Locations
+		for _, tctLocation := range tctLocations {
+			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+
+			enmLocation := models.Location{
+				TctID: int(tctLocationDetail.ID),
+				EpubID: int(tctEpub.ID),
+
+				// TODO: Change localid from int to string
+				//Localid: tctLocationDetail.Localid,
+				Localid: -1,
+
+				SequenceNumber: int(tctLocation.SequenceNumber),
+
+				// TODO: Fix this wrongly named field and table column: should be ContentUniqueIndicator
+				ContentUniqueDescriptor: tctLocationDetail.Content.ContentUniqueIndicator,
+
+				ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
+				ContentText: tctLocationDetail.Content.Text,
+
+				// TODO: Remove context column and field
+				Context: 0,
+
+				// TODO: Create TCT occurrences definitions
+
+				PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,
+				PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
+				PagenumberCSSSelector: tctLocationDetail.Pagenumber.CSSSelector,
+				PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
+				NextLocationID: int(tctLocationDetail.NextLocationID),
+
+				// TODO: Change tct.Location.PreviousLocationID from interface{} to int or int64
+				// Also make sure nullable in database
+				PreviousLocationID: tctLocationDetail.PreviousLocationID.(int),
+			}
+			err := enmLocation.Insert(DB)
+			if err != nil {
+				fmt.Println(enmLocation)
+				panic(err)
+			}
+		}
 	}
 }
 

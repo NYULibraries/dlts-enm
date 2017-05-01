@@ -142,8 +142,6 @@ CREATE TABLE `occurrences` (
   KEY `topic_id` (`topic_id`),
   KEY `ring_next` (`ring_next`),
   KEY `ring_prev` (`ring_prev`),
-  CONSTRAINT `fk__occurrences__ring_prev__locations__tct_id` FOREIGN KEY (`ring_prev`) REFERENCES `locations` (`tct_id`),
-  CONSTRAINT `fk__occurrences__ring_next__locations__tct_id` FOREIGN KEY (`ring_next`) REFERENCES `locations` (`tct_id`),
   CONSTRAINT `fk__occurrences__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -239,4 +237,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-01 14:10:31
+-- Dump completed on 2017-05-01 15:47:49

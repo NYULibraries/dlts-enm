@@ -340,6 +340,10 @@ func Reload() {
 					ringPrevId.Valid = false
 				}
 
+				// TODO: Re-create FKs after figuring why inserting
+				// NULL into them is not working:
+				// * fk__occurrences__ring_next__locations__tct_id
+				// * fk__occurrences__ring_prev__locations__tct_id
 				enmOccurrence := models.Occurrence{
 					TctID: int(tctOccurrence.ID),
 					TopicID: int(tctOccurrence.Basket.ID),

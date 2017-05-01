@@ -12,7 +12,7 @@ import (
 type Location struct {
 	TctID                   int           `json:"tct_id"`                    // tct_id
 	EpubID                  int           `json:"epub_id"`                   // epub_id
-	Localid                 int           `json:"localid"`                   // localid
+	Localid                 string        `json:"localid"`                   // localid
 	SequenceNumber          int           `json:"sequence_number"`           // sequence_number
 	ContentUniqueDescriptor string        `json:"content_unique_descriptor"` // content_unique_descriptor
 	ContentDescriptor       string        `json:"content_descriptor"`        // content_descriptor

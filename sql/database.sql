@@ -83,7 +83,7 @@ DROP TABLE IF EXISTS `locations`;
 CREATE TABLE `locations` (
   `tct_id` int(11) NOT NULL,
   `epub_id` int(11) NOT NULL,
-  `localid` int(11) NOT NULL,
+  `localid` varchar(255) NOT NULL,
   `sequence_number` int(11) NOT NULL,
   `content_unique_descriptor` varchar(255) NOT NULL,
   `content_descriptor` varchar(255) NOT NULL,
@@ -241,4 +241,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-30 20:06:02
+-- Dump completed on 2017-04-30 20:13:04

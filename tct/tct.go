@@ -178,6 +178,11 @@ func GetApiRequestTypes() ([]string){
 // Example: curl https://nyuapi.infoloom.nyc/api/epub/document/all/?format=json | gojson -name=EpubsAll`
 //
 // For now just declaring types for single objects, not collections: e.g. Epub, not EpubsAll
+//
+// Manual changes made to gojson output:
+//
+// * Location:
+//     * NextLocationID and PreviousLocationID changed from int64 to *int64 to allow for null values
 
 // /api/epub/document/all/
 type Epub struct {

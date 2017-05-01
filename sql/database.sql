@@ -85,7 +85,7 @@ CREATE TABLE `locations` (
   `epub_id` int(11) NOT NULL,
   `localid` varchar(255) NOT NULL,
   `sequence_number` int(11) NOT NULL,
-  `content_unique_descriptor` varchar(255) NOT NULL,
+  `content_unique_indicator` varchar(255) NOT NULL,
   `content_descriptor` varchar(255) NOT NULL,
   `content_text` text NOT NULL,
   `pagenumber_filepath` varchar(1024) NOT NULL,
@@ -241,4 +241,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-30 20:13:04
+-- Dump completed on 2017-04-30 20:15:00

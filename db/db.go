@@ -34,11 +34,11 @@ var Database string
 // Tables in order that they would need to be in when deleting all data table-by-table.
 var tables = []string{
 	"names",
+	"relations",
 	"topics",
 	"scopes",
 	"relation_type",
 	"relation_direction",
-	"relations",
 	"locations",
 	"epubs",
 	"indexpatterns",

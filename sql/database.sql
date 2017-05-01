@@ -92,11 +92,11 @@ CREATE TABLE `locations` (
   `pagenumber_tag` varchar(255) NOT NULL,
   `pagenumber_css_selector` varchar(255) NOT NULL,
   `pagenumber_xpath` varchar(255) NOT NULL,
-  `next_location_id` int(11) NOT NULL,
-  `previous_location_id` int(11) NOT NULL,
+  `next_location_id` int(11) DEFAULT NULL,
+  `previous_location_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`tct_id`),
-  UNIQUE KEY `next_location_id` (`next_location_id`),
   UNIQUE KEY `previous_location_id` (`previous_location_id`) USING BTREE,
+  UNIQUE KEY `next_location_id` (`next_location_id`),
   KEY `epub_id` (`epub_id`),
   CONSTRAINT `fk__locations__epubs` FOREIGN KEY (`epub_id`) REFERENCES `epubs` (`tct_id`),
   CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
@@ -241,4 +241,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-30 19:53:34
+-- Dump completed on 2017-04-30 20:06:02

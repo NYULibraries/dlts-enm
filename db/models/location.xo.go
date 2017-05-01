@@ -138,20 +138,6 @@ func (l *Location) Epub(db XODB) (*Epub, error) {
 	return EpubByTctID(db, l.EpubID)
 }
 
-// LocationByNextLocationID returns the Location associated with the Location's NextLocationID (next_location_id).
-//
-// Generated from foreign key 'fk__locations__next_location_id__locations__tct_id'.
-func (l *Location) LocationByNextLocationID(db XODB) (*Location, error) {
-	return LocationByTctID(db, int(l.NextLocationID.Int64))
-}
-
-// LocationByPreviousLocationID returns the Location associated with the Location's PreviousLocationID (previous_location_id).
-//
-// Generated from foreign key 'fk__locations__previous_location_id__locations__tct_id'.
-func (l *Location) LocationByPreviousLocationID(db XODB) (*Location, error) {
-	return LocationByTctID(db, int(l.PreviousLocationID.Int64))
-}
-
 // LocationsByEpubID retrieves a row from 'enm.locations' as a Location.
 //
 // Generated from index 'epub_id'.

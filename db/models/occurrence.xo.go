@@ -122,24 +122,24 @@ func (o *Occurrence) Delete(db XODB) error {
 	return nil
 }
 
-// Location returns the Location associated with the Occurrence's RingNext (ring_next).
+// LocationByRingNext returns the Location associated with the Occurrence's RingNext (ring_next).
 //
 // Generated from foreign key 'fk__occurrences__ring_next__locations__tct_id'.
-func (o *Occurrence) Location(db XODB) (*Location, error) {
+func (o *Occurrence) LocationByRingNext(db XODB) (*Location, error) {
 	return LocationByTctID(db, int(o.RingNext.Int64))
 }
 
-// TopicByRingPrev returns the Topic associated with the Occurrence's RingPrev (ring_prev).
+// LocationByRingPrev returns the Location associated with the Occurrence's RingPrev (ring_prev).
 //
 // Generated from foreign key 'fk__occurrences__ring_prev__locations__tct_id'.
-func (o *Occurrence) TopicByRingPrev(db XODB) (*Topic, error) {
-	return TopicByTctID(db, int(o.RingPrev.Int64))
+func (o *Occurrence) LocationByRingPrev(db XODB) (*Location, error) {
+	return LocationByTctID(db, int(o.RingPrev.Int64))
 }
 
-// TopicByTopicID returns the Topic associated with the Occurrence's TopicID (topic_id).
+// Topic returns the Topic associated with the Occurrence's TopicID (topic_id).
 //
 // Generated from foreign key 'fk__occurrences__topics'.
-func (o *Occurrence) TopicByTopicID(db XODB) (*Topic, error) {
+func (o *Occurrence) Topic(db XODB) (*Topic, error) {
 	return TopicByTctID(db, o.TopicID)
 }
 

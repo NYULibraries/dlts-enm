@@ -98,9 +98,7 @@ CREATE TABLE `locations` (
   UNIQUE KEY `previous_location_id` (`previous_location_id`) USING BTREE,
   UNIQUE KEY `next_location_id` (`next_location_id`),
   KEY `epub_id` (`epub_id`),
-  CONSTRAINT `fk__locations__epubs` FOREIGN KEY (`epub_id`) REFERENCES `epubs` (`tct_id`),
-  CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
-  CONSTRAINT `fk__locations__previous_location_id__locations__tct_id` FOREIGN KEY (`previous_location_id`) REFERENCES `locations` (`tct_id`)
+  CONSTRAINT `fk__locations__epubs` FOREIGN KEY (`epub_id`) REFERENCES `epubs` (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -241,4 +239,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-01 13:24:57
+-- Dump completed on 2017-05-01 13:30:13

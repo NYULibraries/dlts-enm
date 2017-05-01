@@ -135,6 +135,7 @@ DROP TABLE IF EXISTS `occurrences`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `occurrences` (
   `tct_id` int(11) NOT NULL,
+  `location_id` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
   `ring_next` int(11) DEFAULT NULL,
   `ring_prev` int(11) DEFAULT NULL,
@@ -142,6 +143,8 @@ CREATE TABLE `occurrences` (
   KEY `topic_id` (`topic_id`),
   KEY `ring_next` (`ring_next`),
   KEY `ring_prev` (`ring_prev`),
+  KEY `location_id` (`location_id`),
+  CONSTRAINT `fk__occurrences__locations` FOREIGN KEY (`location_id`) REFERENCES `locations` (`tct_id`),
   CONSTRAINT `fk__occurrences__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -237,4 +240,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-01 15:47:49
+-- Dump completed on 2017-05-01 15:53:43

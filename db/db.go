@@ -346,6 +346,7 @@ func Reload() {
 				// * fk__occurrences__ring_prev__locations__tct_id
 				enmOccurrence := models.Occurrence{
 					TctID: int(tctOccurrence.ID),
+					LocationID: int(tctLocation.ID),
 					TopicID: int(tctOccurrence.Basket.ID),
 					RingNext: ringNextId,
 					RingPrev: ringPrevId,

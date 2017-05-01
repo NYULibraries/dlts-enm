@@ -10,10 +10,11 @@ import (
 
 // Occurrence represents a row from 'enm.occurrences'.
 type Occurrence struct {
-	TctID    int           `json:"tct_id"`    // tct_id
-	TopicID  int           `json:"topic_id"`  // topic_id
-	RingNext sql.NullInt64 `json:"ring_next"` // ring_next
-	RingPrev sql.NullInt64 `json:"ring_prev"` // ring_prev
+	TctID      int           `json:"tct_id"`      // tct_id
+	LocationID int           `json:"location_id"` // location_id
+	TopicID    int           `json:"topic_id"`    // topic_id
+	RingNext   sql.NullInt64 `json:"ring_next"`   // ring_next
+	RingPrev   sql.NullInt64 `json:"ring_prev"`   // ring_prev
 
 	// xo fields
 	_exists, _deleted bool
@@ -40,14 +41,14 @@ func (o *Occurrence) Insert(db XODB) error {
 
 	// sql insert query, primary key must be provided
 	const sqlstr = `INSERT INTO enm.occurrences (` +
-		`tct_id, topic_id, ring_next, ring_prev` +
+		`tct_id, location_id, topic_id, ring_next, ring_prev` +
 		`) VALUES (` +
-		`?, ?, ?, ?` +
+		`?, ?, ?, ?, ?` +
 		`)`
 
 	// run query
-	XOLog(sqlstr, o.TctID, o.TopicID, o.RingNext, o.RingPrev)
-	_, err = db.Exec(sqlstr, o.TctID, o.TopicID, o.RingNext, o.RingPrev)
+	XOLog(sqlstr, o.TctID, o.LocationID, o.TopicID, o.RingNext, o.RingPrev)
+	_, err = db.Exec(sqlstr, o.TctID, o.LocationID, o.TopicID, o.RingNext, o.RingPrev)
 	if err != nil {
 		return err
 	}
@@ -74,12 +75,12 @@ func (o *Occurrence) Update(db XODB) error {
 
 	// sql query
 	const sqlstr = `UPDATE enm.occurrences SET ` +
-		`topic_id = ?, ring_next = ?, ring_prev = ?` +
+		`location_id = ?, topic_id = ?, ring_next = ?, ring_prev = ?` +
 		` WHERE tct_id = ?`
 
 	// run query
-	XOLog(sqlstr, o.TopicID, o.RingNext, o.RingPrev, o.TctID)
-	_, err = db.Exec(sqlstr, o.TopicID, o.RingNext, o.RingPrev, o.TctID)
+	XOLog(sqlstr, o.LocationID, o.TopicID, o.RingNext, o.RingPrev, o.TctID)
+	_, err = db.Exec(sqlstr, o.LocationID, o.TopicID, o.RingNext, o.RingPrev, o.TctID)
 	return err
 }
 
@@ -122,18 +123,11 @@ func (o *Occurrence) Delete(db XODB) error {
 	return nil
 }
 
-// LocationByRingNext returns the Location associated with the Occurrence's RingNext (ring_next).
+// Location returns the Location associated with the Occurrence's LocationID (location_id).
 //
-// Generated from foreign key 'fk__occurrences__ring_next__locations__tct_id'.
-func (o *Occurrence) LocationByRingNext(db XODB) (*Location, error) {
-	return LocationByTctID(db, int(o.RingNext.Int64))
-}
-
-// LocationByRingPrev returns the Location associated with the Occurrence's RingPrev (ring_prev).
-//
-// Generated from foreign key 'fk__occurrences__ring_prev__locations__tct_id'.
-func (o *Occurrence) LocationByRingPrev(db XODB) (*Location, error) {
-	return LocationByTctID(db, int(o.RingPrev.Int64))
+// Generated from foreign key 'fk__occurrences__locations'.
+func (o *Occurrence) Location(db XODB) (*Location, error) {
+	return LocationByTctID(db, o.LocationID)
 }
 
 // Topic returns the Topic associated with the Occurrence's TopicID (topic_id).
@@ -141,6 +135,45 @@ func (o *Occurrence) LocationByRingPrev(db XODB) (*Location, error) {
 // Generated from foreign key 'fk__occurrences__topics'.
 func (o *Occurrence) Topic(db XODB) (*Topic, error) {
 	return TopicByTctID(db, o.TopicID)
+}
+
+// OccurrencesByLocationID retrieves a row from 'enm.occurrences' as a Occurrence.
+//
+// Generated from index 'location_id'.
+func OccurrencesByLocationID(db XODB, locationID int) ([]*Occurrence, error) {
+	var err error
+
+	// sql query
+	const sqlstr = `SELECT ` +
+		`tct_id, location_id, topic_id, ring_next, ring_prev ` +
+		`FROM enm.occurrences ` +
+		`WHERE location_id = ?`
+
+	// run query
+	XOLog(sqlstr, locationID)
+	q, err := db.Query(sqlstr, locationID)
+	if err != nil {
+		return nil, err
+	}
+	defer q.Close()
+
+	// load results
+	res := []*Occurrence{}
+	for q.Next() {
+		o := Occurrence{
+			_exists: true,
+		}
+
+		// scan
+		err = q.Scan(&o.TctID, &o.LocationID, &o.TopicID, &o.RingNext, &o.RingPrev)
+		if err != nil {
+			return nil, err
+		}
+
+		res = append(res, &o)
+	}
+
+	return res, nil
 }
 
 // OccurrenceByTctID retrieves a row from 'enm.occurrences' as a Occurrence.
@@ -151,7 +184,7 @@ func OccurrenceByTctID(db XODB, tctID int) (*Occurrence, error) {
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, topic_id, ring_next, ring_prev ` +
+		`tct_id, location_id, topic_id, ring_next, ring_prev ` +
 		`FROM enm.occurrences ` +
 		`WHERE tct_id = ?`
 
@@ -161,7 +194,7 @@ func OccurrenceByTctID(db XODB, tctID int) (*Occurrence, error) {
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, tctID).Scan(&o.TctID, &o.TopicID, &o.RingNext, &o.RingPrev)
+	err = db.QueryRow(sqlstr, tctID).Scan(&o.TctID, &o.LocationID, &o.TopicID, &o.RingNext, &o.RingPrev)
 	if err != nil {
 		return nil, err
 	}
@@ -177,7 +210,7 @@ func OccurrencesByRingNext(db XODB, ringNext sql.NullInt64) ([]*Occurrence, erro
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, topic_id, ring_next, ring_prev ` +
+		`tct_id, location_id, topic_id, ring_next, ring_prev ` +
 		`FROM enm.occurrences ` +
 		`WHERE ring_next = ?`
 
@@ -197,7 +230,7 @@ func OccurrencesByRingNext(db XODB, ringNext sql.NullInt64) ([]*Occurrence, erro
 		}
 
 		// scan
-		err = q.Scan(&o.TctID, &o.TopicID, &o.RingNext, &o.RingPrev)
+		err = q.Scan(&o.TctID, &o.LocationID, &o.TopicID, &o.RingNext, &o.RingPrev)
 		if err != nil {
 			return nil, err
 		}
@@ -216,7 +249,7 @@ func OccurrencesByRingPrev(db XODB, ringPrev sql.NullInt64) ([]*Occurrence, erro
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, topic_id, ring_next, ring_prev ` +
+		`tct_id, location_id, topic_id, ring_next, ring_prev ` +
 		`FROM enm.occurrences ` +
 		`WHERE ring_prev = ?`
 
@@ -236,7 +269,7 @@ func OccurrencesByRingPrev(db XODB, ringPrev sql.NullInt64) ([]*Occurrence, erro
 		}
 
 		// scan
-		err = q.Scan(&o.TctID, &o.TopicID, &o.RingNext, &o.RingPrev)
+		err = q.Scan(&o.TctID, &o.LocationID, &o.TopicID, &o.RingNext, &o.RingPrev)
 		if err != nil {
 			return nil, err
 		}
@@ -255,7 +288,7 @@ func OccurrencesByTopicID(db XODB, topicID int) ([]*Occurrence, error) {
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, topic_id, ring_next, ring_prev ` +
+		`tct_id, location_id, topic_id, ring_next, ring_prev ` +
 		`FROM enm.occurrences ` +
 		`WHERE topic_id = ?`
 
@@ -275,7 +308,7 @@ func OccurrencesByTopicID(db XODB, topicID int) ([]*Occurrence, error) {
 		}
 
 		// scan
-		err = q.Scan(&o.TctID, &o.TopicID, &o.RingNext, &o.RingPrev)
+		err = q.Scan(&o.TctID, &o.LocationID, &o.TopicID, &o.RingNext, &o.RingPrev)
 		if err != nil {
 			return nil, err
 		}

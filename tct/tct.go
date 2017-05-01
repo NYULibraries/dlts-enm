@@ -250,7 +250,7 @@ type Location struct {
 	} `json:"document"`
 	ID             int64         `json:"id"`
 	Localid        string        `json:"localid"`
-	NextLocationID int64         `json:"next_location_id"`
+	NextLocationID *int64         `json:"next_location_id"`
 	Occurrences    []interface{} `json:"occurrences"`
 	Pagenumber     struct {
 		CSSSelector   string `json:"css_selector"`
@@ -258,7 +258,7 @@ type Location struct {
 		PagenumberTag string `json:"pagenumber_tag"`
 		Xpath         string `json:"xpath"`
 	} `json:"pagenumber"`
-	PreviousLocationID interface{} `json:"previous_location_id"`
+	PreviousLocationID *int64 `json:"previous_location_id"`
 }
 
 // /api/hit/hits/all/

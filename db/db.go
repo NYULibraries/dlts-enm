@@ -38,9 +38,9 @@ var tables = []string{
 	"relation_type",
 	"relation_direction",
 	"relations",
+	"locations",
 	"epubs",
 	"indexpatterns",
-	"locations",
 	"names",
 	"occurrences",
 }

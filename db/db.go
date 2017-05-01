@@ -203,6 +203,9 @@ func Reload() {
 		}
 	}
 
+	// TODO: Find out if there is an internal TCT ID for IndexPatterns, and if
+	// so, maybe ask Infoloom to include it in the API responses instead of
+	// making our own ids.
 	tctIdTemp := 0
 	tctIndexPatterns := tct.GetIndexPatternsAll()
 	epubIndexPatternMap := make(map[int]int)

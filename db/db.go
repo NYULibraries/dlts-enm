@@ -222,9 +222,6 @@ func Reload() {
 				ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
 				ContentText: tctLocationDetail.Content.Text,
 
-				// TODO: Remove context column and field
-				Context: 0,
-
 				// TODO: Create TCT occurrences definitions
 
 				PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,

@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/nyulibraries/dlts/enm/cmd"
-	_ "github.com/nyulibraries/dlts/enm/db"
+	"github.com/nyulibraries/dlts-enm/cmd"
+	_ "github.com/nyulibraries/dlts-enm/cmd"
 )
 
 //go:generate xo mysql://${ENM_DATABASE_USERNAME}:${ENM_DATABASE_PASSWORD}@localhost/${ENM_DATABASE} -o db/models/

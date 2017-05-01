@@ -21,8 +21,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/nyulibraries/dlts/enm/cache"
-	"github.com/nyulibraries/dlts/enm/util"
+	"github.com/nyulibraries/dlts-enm/cache"
+	"github.com/nyulibraries/dlts-enm/util"
 )
 
 const TctBaseUrl = "https://nyuapi.infoloom.nyc"

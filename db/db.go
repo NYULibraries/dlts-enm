@@ -21,8 +21,8 @@ import (
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/nyulibraries/dlts/enm/db/models"
-	"github.com/nyulibraries/dlts/enm/tct"
+	"github.com/nyulibraries/dlts-enm/db/models"
+	"github.com/nyulibraries/dlts-enm/tct"
 )
 
 var username string

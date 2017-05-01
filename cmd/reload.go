@@ -17,9 +17,9 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	_ "github.com/nyulibraries/dlts/enm/db"
-	"github.com/nyulibraries/dlts/enm/db"
-	"github.com/nyulibraries/dlts/enm/tct"
+	_ "github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/tct"
 )
 
 var Source string

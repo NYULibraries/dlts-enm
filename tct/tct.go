@@ -183,6 +183,7 @@ func GetApiRequestTypes() ([]string){
 //
 // * Location:
 //     * NextLocationID and PreviousLocationID changed from int64 to *int64 to allow for null values
+//     * Occurrences changed from []interface{} to []struct{...}
 
 // /api/epub/document/all/
 type Epub struct {
@@ -256,7 +257,15 @@ type Location struct {
 	ID             int64         `json:"id"`
 	Localid        string        `json:"localid"`
 	NextLocationID *int64         `json:"next_location_id"`
-	Occurrences    []interface{} `json:"occurrences"`
+	Occurrences    []struct {
+		ID	int64	`json:"id"`
+		Basket struct {
+			DisplayName string `json:"display_name"`
+			ID          int64  `json:"id"`
+		}
+		RingNext	int64	`json:"ring_next"`
+		RingPrevious	int64	`json:"ring_previous"`
+	} `json:"occurrences"`
 	Pagenumber     struct {
 		CSSSelector   string `json:"css_selector"`
 		Filepath      string `json:"filepath"`

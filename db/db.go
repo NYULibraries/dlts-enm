@@ -228,7 +228,6 @@ func Reload() {
 				PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
 				PagenumberCSSSelector: tctLocationDetail.Pagenumber.CSSSelector,
 				PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
-				NextLocationID: int(tctLocationDetail.NextLocationID),
 
 				// TODO: Re-create FKs:
 				// CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),

@@ -35,6 +35,7 @@ var Database string
 var tables = []string{
 	"names",
 	"relations",
+	"occurrences",
 	"topics",
 	"scopes",
 	"relation_type",
@@ -42,7 +43,6 @@ var tables = []string{
 	"locations",
 	"epubs",
 	"indexpatterns",
-	"occurrences",
 }
 
 func init() {

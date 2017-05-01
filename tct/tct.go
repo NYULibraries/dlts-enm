@@ -263,8 +263,8 @@ type Location struct {
 			DisplayName string `json:"display_name"`
 			ID          int64  `json:"id"`
 		}
-		RingNext	int64	`json:"ring_next"`
-		RingPrevious	int64	`json:"ring_previous"`
+		RingNext	*int64	`json:"ring_next"`
+		RingPrevious	*int64	`json:"ring_previous"`
 	} `json:"occurrences"`
 	Pagenumber     struct {
 		CSSSelector   string `json:"css_selector"`

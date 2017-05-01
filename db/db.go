@@ -216,11 +216,7 @@ func Reload() {
 			enmLocation := models.Location{
 				TctID: int(tctLocationDetail.ID),
 				EpubID: int(tctEpub.ID),
-
-				// TODO: Change localid from int to string
-				//Localid: tctLocationDetail.Localid,
-				Localid: -1,
-
+				Localid: tctLocationDetail.Localid,
 				SequenceNumber: int(tctLocation.SequenceNumber),
 
 				// TODO: Fix this wrongly named field and table column: should be ContentUniqueIndicator

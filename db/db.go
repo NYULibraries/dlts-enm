@@ -100,7 +100,7 @@ func Reload() {
 	scopeExists := make(map[int64]bool)
 	tctTopics := tct.GetTopicsAll()
 
-	// All Topics must be loaded first before attempting to load everyting
+	// All Topics must be loaded first before attempting to load everything
 	// that comes in from TopicDetails, the reason being topics table is
 	// target of FKs in Relations.
 	for _, tctTopic := range tctTopics {

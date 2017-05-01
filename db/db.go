@@ -267,6 +267,8 @@ func Reload() {
 			panic(err )
 		}
 
+		// All Locations must be loaded first before attempting to load Occurrences,
+		// the reason being Occurrences target Locations for RingNext and RingPrevious FKs
 		tctLocations := tctEpubDetail.Locations
 		for _, tctLocation := range tctLocations {
 			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
@@ -286,6 +288,7 @@ func Reload() {
 			} else {
 				prevId.Valid = false
 			}
+
 			enmLocation := models.Location{
 				TctID: int(tctLocationDetail.ID),
 				EpubID: int(tctEpub.ID),
@@ -295,7 +298,7 @@ func Reload() {
 				ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
 				ContentText: tctLocationDetail.Content.Text,
 
-				// TODO: Create TCT occurrences definitions
+				// Occurrences are processed in the second pass
 
 				PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,
 				PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
@@ -313,6 +316,41 @@ func Reload() {
 			if err != nil {
 				fmt.Println(enmLocation)
 				panic(err)
+			}
+		}
+
+		// Second pass: get Occurrences
+		for _, tctLocation := range tctLocations {
+			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+
+			for _, tctOccurrence := range tctLocationDetail.Occurrences {
+				ringNextId := sql.NullInt64{}
+				if tctOccurrence.RingNext != nil {
+					ringNextId.Int64 = *tctOccurrence.RingNext
+					ringNextId.Valid = true
+				} else {
+					ringNextId.Valid = false
+				}
+
+				ringPrevId := sql.NullInt64{}
+				if tctOccurrence.RingPrevious != nil {
+					ringPrevId.Int64 = *tctOccurrence.RingPrevious
+					ringPrevId.Valid = true
+				} else {
+					ringPrevId.Valid = false
+				}
+
+				enmOccurrence := models.Occurrence{
+					TctID: int(tctOccurrence.ID),
+					TopicID: int(tctOccurrence.Basket.ID),
+					RingNext: ringNextId,
+					RingPrev: ringPrevId,
+				}
+				err = enmOccurrence.Insert(DB)
+				if err != nil {
+					fmt.Println(enmOccurrence)
+					panic(err)
+				}
 			}
 		}
 	}

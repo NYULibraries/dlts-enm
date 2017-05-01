@@ -92,11 +92,6 @@ func ClearTables() {
 }
 
 func Reload() {
-	// Topics table: just need the info from topics All Topics endpoint
-
-	// Scopes table: tricky -- the only way to get the scope IDs is by
-	//     retrieving the TopicDetail for every topic.
-
 	//var err error
 	//scopeExists := make(map[int64]bool)
 	//tctTopics := tct.GetTopicsAll()

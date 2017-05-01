@@ -198,10 +198,20 @@ func Reload() {
 		for _, tctLocation := range tctLocations {
 			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
 
-			// TODO: This is temporary
-			var prevId int
+			nextId := sql.NullInt64{}
 			if tctLocationDetail.PreviousLocationID != nil {
-				prevId = tctLocationDetail.PreviousLocationID.(int)
+				nextId.Int64 = *tctLocationDetail.PreviousLocationID
+				nextId.Valid = true
+			} else {
+				nextId.Valid = false
+			}
+
+			prevId := sql.NullInt64{}
+			if tctLocationDetail.PreviousLocationID != nil {
+				prevId.Int64 = *tctLocationDetail.PreviousLocationID
+				prevId.Valid = true
+			} else {
+				prevId.Valid = false
 			}
 			enmLocation := models.Location{
 				TctID: int(tctLocationDetail.ID),
@@ -230,8 +240,11 @@ func Reload() {
 				PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
 				NextLocationID: int(tctLocationDetail.NextLocationID),
 
-				// TODO: Change tct.Location.PreviousLocationID from interface{} to int or int64
-				// Also make sure nullable in database
+				// TODO: Re-create FKs:
+				// CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
+				// CONSTRAINT `fk__locations__previous_location_id__locations__tct_id` FOREIGN KEY (`previous_location_id`) REFERENCES `locations` (`tct_id`)
+				// ...and have Reload command delete them before loading locations table, then re-create them after load is finished.
+				NextLocationID: nextId,
 				PreviousLocationID: prevId,
 			}
 			err := enmLocation.Insert(DB)

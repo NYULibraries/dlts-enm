@@ -93,12 +93,19 @@ func ClearTables() {
 
 func Reload() {
 	var err error
+	relationDirectionIds := make(map[string]int)
+	relationDirectionId := 0
+	relationExists := make(map[int64]bool)
+	relationTypeExists := make(map[int64]bool)
 	scopeExists := make(map[int64]bool)
 	tctTopics := tct.GetTopicsAll()
 
+	// All Topics must be loaded first before attempting to load everyting
+	// that comes in from TopicDetails, the reason being topics table is
+	// target of FKs in Relations.
 	for _, tctTopic := range tctTopics {
 		enmTopic := models.Topic{
-			TctID: int(tctTopic.ID),
+			TctID:               int(tctTopic.ID),
 			DisplayNameDoNotUse: tctTopic.DisplayName,
 		}
 
@@ -108,9 +115,63 @@ func Reload() {
 			fmt.Println(tctTopic)
 			panic(err)
 		}
+	}
 
-		// Get topic details
+	// Second pass: get topic details
+	for _, tctTopic := range tctTopics {
 		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
+
+		tctTopicRelations := tctTopicDetail.Relations
+		for _, tctTopicRelation := range tctTopicRelations {
+			if ! relationExists[tctTopicRelation.ID] {
+				tctRelationType := tctTopicRelation.Relationtype
+				if ! relationTypeExists[tctRelationType.ID] {
+					enmRelationType := models.RelationType{
+						TctID: int(tctRelationType.ID),
+						Rtype: tctRelationType.Rtype,
+						RoleFrom: tctRelationType.RoleFrom,
+						RoleTo: tctRelationType.RoleTo,
+						Symmetrical: tctRelationType.Symmetrical,
+					}
+					err = enmRelationType.Insert(DB)
+					if err != nil {
+						fmt.Println(enmRelationType)
+						panic(err)
+					}
+					relationTypeExists[tctRelationType.ID] = true
+				}
+
+				tctRelationDirection := tctTopicRelation.Direction
+				if relationDirectionIds[tctRelationDirection] == 0 {
+					relationDirectionId++
+					enmRelationDirection := models.RelationDirection{
+						ID:        relationDirectionId,
+						Direction: tctRelationDirection,
+					}
+					err = enmRelationDirection.Insert(DB)
+					if err != nil {
+						fmt.Println(enmRelationDirection)
+						panic(err)
+					}
+					relationDirectionIds[tctRelationDirection] = relationDirectionId
+				}
+
+				enmRelation := models.Relation{
+					TctID: int(tctTopicRelation.ID),
+					RelationTypeID: int(tctRelationType.ID),
+					TopicID: int(tctTopicRelation.Basket.ID),
+					RelationDirectionID: relationDirectionIds[tctRelationDirection],
+				}
+				err = enmRelation.Insert(DB)
+				if err != nil {
+					fmt.Println(err)
+					panic(err)
+				}
+
+				relationExists[tctTopicRelation.ID] = true
+			}
+		}
+
 		tctTopicHits := tctTopicDetail.Basket.TopicHits
 		for _, tctTopicHit := range tctTopicHits {
 			if ! scopeExists[tctTopicHit.Scope.ID] {

@@ -22,6 +22,8 @@ import (
 	"github.com/nyulibraries/dlts/enm/tct"
 )
 
+var Source string
+
 // reloadCmd represents the reload command
 var reloadCmd = &cobra.Command{
 	Use:   "reload",

@@ -92,41 +92,55 @@ func ClearTables() {
 }
 
 func Reload() {
-	//var err error
-	//scopeExists := make(map[int64]bool)
-	//tctTopics := tct.GetTopicsAll()
-	//
-	//for _, tctTopic := range tctTopics {
-	//	enmTopic := models.Topic{
-	//		TctID: int(tctTopic.ID),
-	//		DisplayNameDoNotUse: tctTopic.DisplayName,
-	//	}
-	//
-	//	// Insert into Topics table
-	//	err = enmTopic.Insert(DB)
-	//	if err != nil {
-	//		fmt.Println(tctTopic)
-	//		panic(err)
-	//	}
-	//
-	//	// Get topic details
-	//	tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
-	//	tctTopicHits := tctTopicDetail.Basket.TopicHits
-	//	for _, tctTopicHit := range tctTopicHits {
-	//		if ! scopeExists[tctTopicHit.Scope.ID] {
-	//			enmScope := models.Scope{
-	//				TctID: int(tctTopicHit.Scope.ID),
-	//				Scope: tctTopicHit.Scope.Scope,
-	//			}
-	//			err = enmScope.Insert(DB)
-	//			if err != nil {
-	//				fmt.Println(enmScope)
-	//				panic(err)
-	//			}
-	//			scopeExists[tctTopicHit.Scope.ID] = true
-	//		}
-	//	}
-	//}
+	var err error
+	scopeExists := make(map[int64]bool)
+	tctTopics := tct.GetTopicsAll()
+
+	for _, tctTopic := range tctTopics {
+		enmTopic := models.Topic{
+			TctID: int(tctTopic.ID),
+			DisplayNameDoNotUse: tctTopic.DisplayName,
+		}
+
+		// Insert into Topics table
+		err = enmTopic.Insert(DB)
+		if err != nil {
+			fmt.Println(tctTopic)
+			panic(err)
+		}
+
+		// Get topic details
+		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
+		tctTopicHits := tctTopicDetail.Basket.TopicHits
+		for _, tctTopicHit := range tctTopicHits {
+			if ! scopeExists[tctTopicHit.Scope.ID] {
+				enmScope := models.Scope{
+					TctID: int(tctTopicHit.Scope.ID),
+					Scope: tctTopicHit.Scope.Scope,
+				}
+				err = enmScope.Insert(DB)
+				if err != nil {
+					fmt.Println(enmScope)
+					panic(err)
+				}
+				scopeExists[tctTopicHit.Scope.ID] = true
+			}
+
+			enmName := models.Name{
+				TctID: int(tctTopicHit.ID),
+				TopicID: int(tctTopic.ID),
+				Name: tctTopicHit.Name,
+				ScopeID: int(tctTopicHit.Scope.ID),
+				Bypass: tctTopicHit.Bypass,
+				Hidden: tctTopicHit.Hidden,
+				Preferred: tctTopicHit.Preferred,
+			}
+			err := enmName.Insert(DB)
+			if err != nil {fmt.Println(enmName)
+				panic(err)
+			}
+		}
+	}
 
 	tctIdTemp := 0
 	tctIndexPatterns := tct.GetIndexPatternsAll()

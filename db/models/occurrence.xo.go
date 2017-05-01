@@ -13,7 +13,7 @@ type Occurrence struct {
 	TctID    int           `json:"tct_id"`    // tct_id
 	TopicID  int           `json:"topic_id"`  // topic_id
 	RingNext sql.NullInt64 `json:"ring_next"` // ring_next
-	RingPrev int           `json:"ring_prev"` // ring_prev
+	RingPrev sql.NullInt64 `json:"ring_prev"` // ring_prev
 
 	// xo fields
 	_exists, _deleted bool
@@ -133,7 +133,7 @@ func (o *Occurrence) Location(db XODB) (*Location, error) {
 //
 // Generated from foreign key 'fk__occurrences__ring_prev__locations__tct_id'.
 func (o *Occurrence) TopicByRingPrev(db XODB) (*Topic, error) {
-	return TopicByTctID(db, o.RingPrev)
+	return TopicByTctID(db, int(o.RingPrev.Int64))
 }
 
 // TopicByTopicID returns the Topic associated with the Occurrence's TopicID (topic_id).
@@ -211,7 +211,7 @@ func OccurrencesByRingNext(db XODB, ringNext sql.NullInt64) ([]*Occurrence, erro
 // OccurrencesByRingPrev retrieves a row from 'enm.occurrences' as a Occurrence.
 //
 // Generated from index 'ring_prev'.
-func OccurrencesByRingPrev(db XODB, ringPrev int) ([]*Occurrence, error) {
+func OccurrencesByRingPrev(db XODB, ringPrev sql.NullInt64) ([]*Occurrence, error) {
 	var err error
 
 	// sql query

@@ -139,7 +139,7 @@ CREATE TABLE `occurrences` (
   `tct_id` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
   `ring_next` int(11) DEFAULT NULL,
-  `ring_prev` int(11) NOT NULL,
+  `ring_prev` int(11) DEFAULT NULL,
   PRIMARY KEY (`tct_id`),
   KEY `topic_id` (`topic_id`),
   KEY `ring_next` (`ring_next`),
@@ -241,4 +241,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-30 20:15:00
+-- Dump completed on 2017-05-01 13:24:57

@@ -218,10 +218,7 @@ func Reload() {
 				EpubID: int(tctEpub.ID),
 				Localid: tctLocationDetail.Localid,
 				SequenceNumber: int(tctLocation.SequenceNumber),
-
-				// TODO: Fix this wrongly named field and table column: should be ContentUniqueIndicator
-				ContentUniqueDescriptor: tctLocationDetail.Content.ContentUniqueIndicator,
-
+				ContentUniqueIndicator: tctLocationDetail.Content.ContentUniqueIndicator,
 				ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
 				ContentText: tctLocationDetail.Content.Text,
 

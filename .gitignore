@@ -19,3 +19,6 @@
 
 .idea
 *~
+
+# Not sure whether this should be committed or not.  Need to learn more about options available.
+vendor/

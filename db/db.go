@@ -104,6 +104,9 @@ func Reload() {
 	// that comes in from TopicDetails, the reason being topics table is
 	// target of FKs in Relations.
 	for _, tctTopic := range tctTopics {
+		// TODO: remove display_name from table after figure out how to
+		// fix or workaround xo bug that prevents creation of full model
+		// code if tct_id is the only column.
 		enmTopic := models.Topic{
 			TctID:               int(tctTopic.ID),
 			DisplayNameDoNotUse: tctTopic.DisplayName,

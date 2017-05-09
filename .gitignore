@@ -19,3 +19,23 @@
 
 .idea
 *~
+
+# Running `godep save` automatically checks vendor/ into source control.
+# For now, don't commit it.  To generate vendor/, can do this:
+#
+#     GOPATH=$(pwd)/vendor godep restore; mv vendor/src/* vendor/; rmdir vendor/src/
+#
+# It's apparently been common practice to do it this way (source: https://github.com/tools/godep/issues/50):
+#
+#     GOPATH=$(godep path) godep restore
+#
+# `godep path` returns an error, though:
+#
+# $ mkdir -p vendor/{bin/pkg/src}
+# $ godep path
+# Error: GO15VENDOREXPERIMENT is enabled and the vendor/ directory is not a valid Go workspace.
+#
+# Note that using `godep restore` in this way does not create a vendor/ directory that is identical
+# to what is created by `godep save`, which does not copy certain files and directories by design.
+# (see documentation for `godep save` for details).
+vendor/

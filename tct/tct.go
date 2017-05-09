@@ -76,6 +76,9 @@ func GetResponseBody(params ...string) (body []byte) {
 		}
 
 		err = ioutil.WriteFile(cacheFile, body, 0600)
+		if err != nil {
+			panic(err.Error())
+		}
 	} else {
 		panic("Unknown source: " + Source)
 	}

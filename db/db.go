@@ -162,8 +162,9 @@ func Reload() {
 				enmRelation := models.Relation{
 					TctID: int(tctTopicRelation.ID),
 					RelationTypeID: int(tctRelationType.ID),
-					TopicID: int(tctTopicRelation.Basket.ID),
 					RelationDirectionID: relationDirectionIds[tctRelationDirection],
+					RoleFromTopicID: int(tctTopic.ID),
+					RoleToTopicID: int(tctTopicRelation.Basket.ID),
 				}
 				err = enmRelation.Insert(DB)
 				if err != nil {

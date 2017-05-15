@@ -159,12 +159,23 @@ func Reload() {
 					relationDirectionIds[tctRelationDirection] = relationDirectionId
 				}
 
+				var roleFromTopicId int
+				var roleToTopicId int
+				if tctTopicRelation.Direction == "source" {
+					roleFromTopicId = int(tctTopicRelation.Basket.ID)
+					roleToTopicId = int(tctTopic.ID)
+				} else if tctTopicRelation.Direction == "destination" {
+					roleFromTopicId = int(tctTopic.ID)
+					roleToTopicId = int(tctTopicRelation.Basket.ID)
+				} else {
+					panic( "Unknown relation direction: " + tctTopicRelation.Direction)
+				}
 				enmRelation := models.Relation{
 					TctID: int(tctTopicRelation.ID),
 					RelationTypeID: int(tctRelationType.ID),
 					RelationDirectionID: relationDirectionIds[tctRelationDirection],
-					RoleFromTopicID: int(tctTopic.ID),
-					RoleToTopicID: int(tctTopicRelation.Basket.ID),
+					RoleFromTopicID: roleFromTopicId,
+					RoleToTopicID: roleToTopicId,
 				}
 				err = enmRelation.Insert(DB)
 				if err != nil {

@@ -16,7 +16,6 @@ package tct
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strconv"
@@ -50,16 +49,12 @@ func GetResponseBody(params ...string) (body []byte) {
 	cacheFile := cache.CacheFile(request, id)
 
 	if (Source == "cache") {
-		fmt.Println("Fetching data from cache")
-
 		cachedData, err := ioutil.ReadFile(cacheFile)
 		if err != nil {
 			panic(err.Error())
 		}
 		body = cachedData
 	} else if (Source == "tct-api"){
-		fmt.Println("Fetching data from TCT server")
-
 		var url = TctBaseUrl + TctApiEndpoints[request]
 		if id != "" {
 			url += id

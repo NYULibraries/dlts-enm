@@ -11,8 +11,9 @@ import (
 type Relation struct {
 	TctID               int `json:"tct_id"`                // tct_id
 	RelationTypeID      int `json:"relation_type_id"`      // relation_type_id
-	TopicID             int `json:"topic_id"`              // topic_id
 	RelationDirectionID int `json:"relation_direction_id"` // relation_direction_id
+	RoleFromTopicID     int `json:"role_from_topic_id"`    // role_from_topic_id
+	RoleToTopicID       int `json:"role_to_topic_id"`      // role_to_topic_id
 
 	// xo fields
 	_exists, _deleted bool
@@ -39,14 +40,14 @@ func (r *Relation) Insert(db XODB) error {
 
 	// sql insert query, primary key must be provided
 	const sqlstr = `INSERT INTO enm.relations (` +
-		`tct_id, relation_type_id, topic_id, relation_direction_id` +
+		`tct_id, relation_type_id, relation_direction_id, role_from_topic_id, role_to_topic_id` +
 		`) VALUES (` +
-		`?, ?, ?, ?` +
+		`?, ?, ?, ?, ?` +
 		`)`
 
 	// run query
-	XOLog(sqlstr, r.TctID, r.RelationTypeID, r.TopicID, r.RelationDirectionID)
-	_, err = db.Exec(sqlstr, r.TctID, r.RelationTypeID, r.TopicID, r.RelationDirectionID)
+	XOLog(sqlstr, r.TctID, r.RelationTypeID, r.RelationDirectionID, r.RoleFromTopicID, r.RoleToTopicID)
+	_, err = db.Exec(sqlstr, r.TctID, r.RelationTypeID, r.RelationDirectionID, r.RoleFromTopicID, r.RoleToTopicID)
 	if err != nil {
 		return err
 	}
@@ -73,12 +74,12 @@ func (r *Relation) Update(db XODB) error {
 
 	// sql query
 	const sqlstr = `UPDATE enm.relations SET ` +
-		`relation_type_id = ?, topic_id = ?, relation_direction_id = ?` +
+		`relation_type_id = ?, relation_direction_id = ?, role_from_topic_id = ?, role_to_topic_id = ?` +
 		` WHERE tct_id = ?`
 
 	// run query
-	XOLog(sqlstr, r.RelationTypeID, r.TopicID, r.RelationDirectionID, r.TctID)
-	_, err = db.Exec(sqlstr, r.RelationTypeID, r.TopicID, r.RelationDirectionID, r.TctID)
+	XOLog(sqlstr, r.RelationTypeID, r.RelationDirectionID, r.RoleFromTopicID, r.RoleToTopicID, r.TctID)
+	_, err = db.Exec(sqlstr, r.RelationTypeID, r.RelationDirectionID, r.RoleFromTopicID, r.RoleToTopicID, r.TctID)
 	return err
 }
 
@@ -135,11 +136,18 @@ func (r *Relation) RelationType(db XODB) (*RelationType, error) {
 	return RelationTypeByTctID(db, r.RelationTypeID)
 }
 
-// Topic returns the Topic associated with the Relation's TopicID (topic_id).
+// TopicByRoleFromTopicID returns the Topic associated with the Relation's RoleFromTopicID (role_from_topic_id).
 //
-// Generated from foreign key 'fk__relations__topics'.
-func (r *Relation) Topic(db XODB) (*Topic, error) {
-	return TopicByTctID(db, r.TopicID)
+// Generated from foreign key 'fk__relations__topics__role_from'.
+func (r *Relation) TopicByRoleFromTopicID(db XODB) (*Topic, error) {
+	return TopicByTctID(db, r.RoleFromTopicID)
+}
+
+// TopicByRoleToTopicID returns the Topic associated with the Relation's RoleToTopicID (role_to_topic_id).
+//
+// Generated from foreign key 'fk__relations__topics__role_to'.
+func (r *Relation) TopicByRoleToTopicID(db XODB) (*Topic, error) {
+	return TopicByTctID(db, r.RoleToTopicID)
 }
 
 // RelationsByRelationDirectionID retrieves a row from 'enm.relations' as a Relation.
@@ -150,7 +158,7 @@ func RelationsByRelationDirectionID(db XODB, relationDirectionID int) ([]*Relati
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, relation_type_id, topic_id, relation_direction_id ` +
+		`tct_id, relation_type_id, relation_direction_id, role_from_topic_id, role_to_topic_id ` +
 		`FROM enm.relations ` +
 		`WHERE relation_direction_id = ?`
 
@@ -170,7 +178,7 @@ func RelationsByRelationDirectionID(db XODB, relationDirectionID int) ([]*Relati
 		}
 
 		// scan
-		err = q.Scan(&r.TctID, &r.RelationTypeID, &r.TopicID, &r.RelationDirectionID)
+		err = q.Scan(&r.TctID, &r.RelationTypeID, &r.RelationDirectionID, &r.RoleFromTopicID, &r.RoleToTopicID)
 		if err != nil {
 			return nil, err
 		}
@@ -189,7 +197,7 @@ func RelationsByRelationTypeID(db XODB, relationTypeID int) ([]*Relation, error)
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, relation_type_id, topic_id, relation_direction_id ` +
+		`tct_id, relation_type_id, relation_direction_id, role_from_topic_id, role_to_topic_id ` +
 		`FROM enm.relations ` +
 		`WHERE relation_type_id = ?`
 
@@ -209,7 +217,7 @@ func RelationsByRelationTypeID(db XODB, relationTypeID int) ([]*Relation, error)
 		}
 
 		// scan
-		err = q.Scan(&r.TctID, &r.RelationTypeID, &r.TopicID, &r.RelationDirectionID)
+		err = q.Scan(&r.TctID, &r.RelationTypeID, &r.RelationDirectionID, &r.RoleFromTopicID, &r.RoleToTopicID)
 		if err != nil {
 			return nil, err
 		}
@@ -228,7 +236,7 @@ func RelationByTctID(db XODB, tctID int) (*Relation, error) {
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, relation_type_id, topic_id, relation_direction_id ` +
+		`tct_id, relation_type_id, relation_direction_id, role_from_topic_id, role_to_topic_id ` +
 		`FROM enm.relations ` +
 		`WHERE tct_id = ?`
 
@@ -238,7 +246,7 @@ func RelationByTctID(db XODB, tctID int) (*Relation, error) {
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, tctID).Scan(&r.TctID, &r.RelationTypeID, &r.TopicID, &r.RelationDirectionID)
+	err = db.QueryRow(sqlstr, tctID).Scan(&r.TctID, &r.RelationTypeID, &r.RelationDirectionID, &r.RoleFromTopicID, &r.RoleToTopicID)
 	if err != nil {
 		return nil, err
 	}
@@ -246,21 +254,21 @@ func RelationByTctID(db XODB, tctID int) (*Relation, error) {
 	return &r, nil
 }
 
-// RelationsByTopicID retrieves a row from 'enm.relations' as a Relation.
+// RelationsByRoleFromTopicID retrieves a row from 'enm.relations' as a Relation.
 //
-// Generated from index 'topic_id'.
-func RelationsByTopicID(db XODB, topicID int) ([]*Relation, error) {
+// Generated from index 'role_from_topic_id'.
+func RelationsByRoleFromTopicID(db XODB, roleFromTopicID int) ([]*Relation, error) {
 	var err error
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, relation_type_id, topic_id, relation_direction_id ` +
+		`tct_id, relation_type_id, relation_direction_id, role_from_topic_id, role_to_topic_id ` +
 		`FROM enm.relations ` +
-		`WHERE topic_id = ?`
+		`WHERE role_from_topic_id = ?`
 
 	// run query
-	XOLog(sqlstr, topicID)
-	q, err := db.Query(sqlstr, topicID)
+	XOLog(sqlstr, roleFromTopicID)
+	q, err := db.Query(sqlstr, roleFromTopicID)
 	if err != nil {
 		return nil, err
 	}
@@ -274,7 +282,46 @@ func RelationsByTopicID(db XODB, topicID int) ([]*Relation, error) {
 		}
 
 		// scan
-		err = q.Scan(&r.TctID, &r.RelationTypeID, &r.TopicID, &r.RelationDirectionID)
+		err = q.Scan(&r.TctID, &r.RelationTypeID, &r.RelationDirectionID, &r.RoleFromTopicID, &r.RoleToTopicID)
+		if err != nil {
+			return nil, err
+		}
+
+		res = append(res, &r)
+	}
+
+	return res, nil
+}
+
+// RelationsByRoleToTopicID retrieves a row from 'enm.relations' as a Relation.
+//
+// Generated from index 'role_to_topic_id'.
+func RelationsByRoleToTopicID(db XODB, roleToTopicID int) ([]*Relation, error) {
+	var err error
+
+	// sql query
+	const sqlstr = `SELECT ` +
+		`tct_id, relation_type_id, relation_direction_id, role_from_topic_id, role_to_topic_id ` +
+		`FROM enm.relations ` +
+		`WHERE role_to_topic_id = ?`
+
+	// run query
+	XOLog(sqlstr, roleToTopicID)
+	q, err := db.Query(sqlstr, roleToTopicID)
+	if err != nil {
+		return nil, err
+	}
+	defer q.Close()
+
+	// load results
+	res := []*Relation{}
+	for q.Next() {
+		r := Relation{
+			_exists: true,
+		}
+
+		// scan
+		err = q.Scan(&r.TctID, &r.RelationTypeID, &r.RelationDirectionID, &r.RoleFromTopicID, &r.RoleToTopicID)
 		if err != nil {
 			return nil, err
 		}

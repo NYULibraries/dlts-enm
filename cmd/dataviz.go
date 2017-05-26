@@ -15,9 +15,12 @@ package cmd
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/spf13/cobra"
 )
+
+var OutputDir string
 
 // datavizCmd represents the dataviz command
 var datavizCmd = &cobra.Command{
@@ -27,10 +30,23 @@ var datavizCmd = &cobra.Command{
 
 * trees1: collapsible topic trees - see NYUP-234`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("dataviz called")
+		fmt.Println("dataviz with outputdir = " + OutputDir)
 	},
 }
 
 func init() {
 	RootCmd.AddCommand(datavizCmd)
+
+	wd, err := os.Getwd()
+	if err != nil {
+		panic("Can't get working directory")
+	}
+
+	datavizCmd.PersistentFlags().StringVarP(
+		&OutputDir,
+		"outputdir",
+		"o",
+		wd,
+		"Specify output directory",
+	)
 }

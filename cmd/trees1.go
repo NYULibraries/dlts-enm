@@ -14,9 +14,10 @@
 package cmd
 
 import (
-	"fmt"
+	"strconv"
 
 	"github.com/spf13/cobra"
+	"github.com/nyulibraries/dlts-enm/dataviz"
 )
 
 // trees1Cmd represents the trees1 command
@@ -28,7 +29,11 @@ var trees1Cmd = &cobra.Command{
 "ENM Data visualization: create expanding topic tree for Topics"
 https://jira.nyu.edu/jira/browse/NYUP-234`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("trees1 called")
+		topicId, err := strconv.Atoi(args[0])
+		if err != nil {
+			panic(err)
+		}
+		dataviz.Trees1(topicId)
 	},
 }
 

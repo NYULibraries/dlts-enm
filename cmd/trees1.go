@@ -14,8 +14,6 @@
 package cmd
 
 import (
-	"strconv"
-
 	"github.com/spf13/cobra"
 	"github.com/nyulibraries/dlts-enm/dataviz"
 )
@@ -29,11 +27,8 @@ var trees1Cmd = &cobra.Command{
 "ENM Data visualization: create expanding topic tree for Topics"
 https://jira.nyu.edu/jira/browse/NYUP-234`,
 	Run: func(cmd *cobra.Command, args []string) {
-		topicId, err := strconv.Atoi(args[0])
-		if err != nil {
-			panic(err)
-		}
-		dataviz.Trees1(topicId)
+		dataviz.OutputDir = OutputDir
+		dataviz.Trees1()
 	},
 }
 

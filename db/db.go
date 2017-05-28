@@ -92,6 +92,37 @@ func ClearTables() {
 	tx.Commit()
 }
 
+func GetTopicsAll() (topics []models.Topic) {
+	const sqlstr = `SELECT tct_id, display_name_do_not_use FROM topics ORDER BY tct_id`
+
+	var (
+		id int
+		name string
+	)
+	rows, err := DB.Query(sqlstr)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		err := rows.Scan(&id, &name)
+		if err != nil {
+			panic(err)
+		}
+		topics = append(topics, models.Topic{
+			TctID: id,
+			DisplayNameDoNotUse: name,
+		})
+	}
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	return
+}
+
 func GetTopicSubEntries(topicId int) (subentryTopics []models.Topic){
 	const sqlstr = `SELECT t2.tct_id, t2.display_name_do_not_use
 FROM topics t1

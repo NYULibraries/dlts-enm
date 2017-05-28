@@ -120,7 +120,18 @@ func Trees1() {
 			fmt.Sprintf("<p><a id=\"%d\" name=\"%d\" href=\"%d/\">%s (%d)</a></p>\n", topic.TctID, topic.TctID, topic.TctID, topic.DisplayNameDoNotUse, depth))
 	}
 
-	indexHtml := strings.Join(treeAnchorTags, "\n")
+	indexHtml := `<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>NYUP-234: Collapsible tree visualizations for topics with sub-entries</title>
+</head>
+<body>
+`
+	indexHtml += strings.Join(treeAnchorTags, "\n")
+
+	indexHtml += `</body>
+</html>
+`
 	err = ioutil.WriteFile(trees1Dir + "/index.html", []byte(indexHtml), 0644)
 }
 

@@ -93,7 +93,7 @@ func ClearTables() {
 }
 
 func GetTopicsAll() (topics []models.Topic) {
-	const sqlstr = `SELECT tct_id, display_name_do_not_use FROM topics ORDER BY tct_id`
+	const sqlstr = `SELECT tct_id, display_name_do_not_use FROM topics ORDER BY display_name_do_not_use`
 
 	var (
 		id int

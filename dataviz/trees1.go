@@ -126,6 +126,7 @@ func Trees1() {
 <title>NYUP-234: Collapsible tree visualizations for topics with sub-entries</title>
 </head>
 <body>
+<h1><a href="https://jira.nyu.edu/jira/projects/NYUP/issues/NYUP-234?filter=allopenissues">NYUP-234: ENM Data visualization: create expanding topic tree for Topics</a></h1>
 `
 	indexHtml += strings.Join(treeAnchorTags, "\n")
 

@@ -21,6 +21,7 @@ import (
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
+
 	"github.com/nyulibraries/dlts-enm/db/models"
 	"github.com/nyulibraries/dlts-enm/tct"
 )
@@ -89,6 +90,75 @@ func ClearTables() {
 	}
 
 	tx.Commit()
+}
+
+func GetTopicsAll() (topics []models.Topic) {
+	const sqlstr = `SELECT tct_id, display_name_do_not_use FROM topics ORDER BY display_name_do_not_use`
+
+	var (
+		id int
+		name string
+	)
+	rows, err := DB.Query(sqlstr)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		err := rows.Scan(&id, &name)
+		if err != nil {
+			panic(err)
+		}
+		topics = append(topics, models.Topic{
+			TctID: id,
+			DisplayNameDoNotUse: name,
+		})
+	}
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	return
+}
+
+func GetTopicSubEntries(topicId int) (subentryTopics []models.Topic){
+	const sqlstr = `SELECT t2.tct_id, t2.display_name_do_not_use
+FROM topics t1
+	INNER JOIN relations     r  on t1.tct_id          = r.role_from_topic_id
+	INNER JOIN topics        t2 on t2.tct_id          = r.role_to_topic_id
+	INNER JOIN relation_type rt on r.relation_type_id = rt.tct_id
+WHERE rt.rtype = 'Subentry'
+AND   t1.tct_id = ?
+ORDER BY t2.display_name_do_not_use`
+
+	var (
+		id int
+		name string
+	)
+	rows, err := DB.Query(sqlstr, topicId)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		err := rows.Scan(&id, &name)
+		if err != nil {
+			panic(err)
+		}
+		subentryTopics = append(subentryTopics, models.Topic{
+			TctID: id,
+			DisplayNameDoNotUse: name,
+		})
+	}
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	return
 }
 
 func Reload() {

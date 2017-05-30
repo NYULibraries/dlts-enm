@@ -86,6 +86,10 @@ func Trees1() {
 	trees1Dir := OutputDir + "/trees1"
 	os.Mkdir(trees1Dir, os.FileMode(0755))
 
+	trees1TopicsSubdir := "topics"
+	trees1TopicsDir := trees1Dir + "/" + trees1TopicsSubdir
+	os.Mkdir(trees1TopicsDir, os.FileMode(0755))
+
 	topics := db.GetTopicsAll()
 
 	var treeAnchorTags []string
@@ -114,10 +118,10 @@ func Trees1() {
 			panic(err)
 		}
 
-		CreateTrees1Visualization(trees1Dir + "/" + strconv.Itoa(topic.TctID), bytes)
+		CreateTrees1Visualization(trees1TopicsDir + "/" + strconv.Itoa(topic.TctID), bytes)
 
 		treeAnchorTags = append(treeAnchorTags,
-			fmt.Sprintf("<p><a id=\"%d\" name=\"%d\" href=\"%d/\">%s (%d)</a></p>\n", topic.TctID, topic.TctID, topic.TctID, topic.DisplayNameDoNotUse, depth))
+			fmt.Sprintf("<p><a id=\"%d\" name=\"%d\" href=\"%s/%d/\">%s (%d)</a></p>\n", topic.TctID, topic.TctID, trees1TopicsSubdir, topic.TctID, topic.DisplayNameDoNotUse, depth))
 	}
 
 	indexHtml := `<!DOCTYPE html><html lang="en">

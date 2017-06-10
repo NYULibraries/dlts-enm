@@ -19,11 +19,17 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strconv"
+	"time"
 
 	"github.com/nyulibraries/dlts-enm/cache"
 )
 
 const TctBaseUrl = "https://nyuapi.infoloom.nyc"
+
+// How many times to retry a request
+var MaxRetries = 3
+// How many seconds to wait between each retry.
+var RetryWaitInSeconds = 3
 
 var Source string
 
@@ -60,8 +66,22 @@ func GetResponseBody(params ...string) (body []byte) {
 		}
 
 		res, err := http.Get(url)
+		// Handle "connection reset by peer" error.  Might need to play
+		// around with the RetryWaitInSeconds value.
+		// At some point, it would probably be good test specifically
+		// for "connection reset by peer", but at the moment don't have
+		// an easy way to simulate that error in tests, so for now just
+		// response to all errors in the same way.
 		if err != nil {
-			panic(err.Error())
+			retries := 0
+			for retries <= MaxRetries && err != nil {
+				retries++
+				time.Sleep(time.Duration(RetryWaitInSeconds) * time.Second)
+				res, err = http.Get(url)
+				if err != nil && retries == MaxRetries {
+					panic(err.Error())
+				}
+			}
 		}
 
 		body, err = ioutil.ReadAll(res.Body)

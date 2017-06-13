@@ -37,15 +37,6 @@ CREATE TABLE `epubs` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `epubs`
---
-
-LOCK TABLES `epubs` WRITE;
-/*!40000 ALTER TABLE `epubs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `epubs` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `indexpatterns`
 --
 
@@ -83,15 +74,6 @@ CREATE TABLE `indexpatterns` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `indexpatterns`
---
-
-LOCK TABLES `indexpatterns` WRITE;
-/*!40000 ALTER TABLE `indexpatterns` DISABLE KEYS */;
-/*!40000 ALTER TABLE `indexpatterns` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `locations`
 --
 
@@ -121,15 +103,6 @@ CREATE TABLE `locations` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `locations`
---
-
-LOCK TABLES `locations` WRITE;
-/*!40000 ALTER TABLE `locations` DISABLE KEYS */;
-/*!40000 ALTER TABLE `locations` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `names`
 --
 
@@ -152,15 +125,6 @@ CREATE TABLE `names` (
   CONSTRAINT `fk__names__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `names`
---
-
-LOCK TABLES `names` WRITE;
-/*!40000 ALTER TABLE `names` DISABLE KEYS */;
-/*!40000 ALTER TABLE `names` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `occurrences`
@@ -186,13 +150,20 @@ CREATE TABLE `occurrences` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `occurrences`
+-- Table structure for table `readium_goto_urls`
 --
 
-LOCK TABLES `occurrences` WRITE;
-/*!40000 ALTER TABLE `occurrences` DISABLE KEYS */;
-/*!40000 ALTER TABLE `occurrences` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `readium_goto_urls`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `readium_goto_urls` (
+  `location_id` int(11) NOT NULL,
+  `readium_goto_value` varchar(1024) NOT NULL,
+  `readium_goto_url` varchar(1024) NOT NULL,
+  `readium_goto_value_encoded` varchar(1024) NOT NULL,
+  `readium_goto_url_encoded` varchar(1024) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `relation_direction`
@@ -207,15 +178,6 @@ CREATE TABLE `relation_direction` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `relation_direction`
---
-
-LOCK TABLES `relation_direction` WRITE;
-/*!40000 ALTER TABLE `relation_direction` DISABLE KEYS */;
-/*!40000 ALTER TABLE `relation_direction` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `relation_type`
@@ -233,15 +195,6 @@ CREATE TABLE `relation_type` (
   PRIMARY KEY (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `relation_type`
---
-
-LOCK TABLES `relation_type` WRITE;
-/*!40000 ALTER TABLE `relation_type` DISABLE KEYS */;
-/*!40000 ALTER TABLE `relation_type` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `relations`
@@ -269,15 +222,6 @@ CREATE TABLE `relations` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `relations`
---
-
-LOCK TABLES `relations` WRITE;
-/*!40000 ALTER TABLE `relations` DISABLE KEYS */;
-/*!40000 ALTER TABLE `relations` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `scopes`
 --
 
@@ -293,15 +237,6 @@ CREATE TABLE `scopes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `scopes`
---
-
-LOCK TABLES `scopes` WRITE;
-/*!40000 ALTER TABLE `scopes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `scopes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `topics`
 --
 
@@ -314,15 +249,6 @@ CREATE TABLE `topics` (
   PRIMARY KEY (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `topics`
---
-
-LOCK TABLES `topics` WRITE;
-/*!40000 ALTER TABLE `topics` DISABLE KEYS */;
-/*!40000 ALTER TABLE `topics` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -333,4 +259,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-15 17:57:54
+-- Dump completed on 2017-06-13 14:18:01

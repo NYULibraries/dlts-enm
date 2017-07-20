@@ -68,10 +68,10 @@ func GetResponseBody(params ...string) (body []byte) {
 		res, err := http.Get(url)
 		// Handle "connection reset by peer" error.  Might need to play
 		// around with the RetryWaitInSeconds value.
-		// At some point, it would probably be good test specifically
+		// At some point, it would probably be good to test specifically
 		// for "connection reset by peer", but at the moment don't have
 		// an easy way to simulate that error in tests, so for now just
-		// response to all errors in the same way.
+		// respond to all errors in the same way.
 		if err != nil {
 			retries := 0
 			for retries <= MaxRetries && err != nil {

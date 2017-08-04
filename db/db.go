@@ -92,35 +92,23 @@ func ClearTables() {
 	tx.Commit()
 }
 
-func GetPagesAll() (pages []models.Page) {
-	const sqlstr = `SELECT id, title, authors, publisher, isbn, ` +
-		`page_pattern, page_localid, page_sequence FROM pages`
-
-	rows, err := DB.Query(sqlstr)
+func GetPagesAll() (pages []*models.Page) {
+	pages, err := models.GetPages(DB)
 	if err != nil {
-		panic(err)
-	}
-	defer rows.Close()
-
-	for rows.Next() {
-		page := models.Page{}
-		err := rows.Scan(
-			&page.ID, &page.Title, &page.Authors, &page.Publisher, &page.Isbn,
-			&page.PagePattern, &page.PageLocalid, &page.PageSequence,
-		)
-		if err != nil {
-			panic(err)
-		}
-		pages = append(pages, page)
-	}
-	err = rows.Err()
-	if err != nil {
-		panic(err)
+		panic("db.GetPagesAll: " + err.Error())
 	}
 
-	return
+	return pages
 }
 
+func GetPageTopicsAll() (pageTopics []*models.PageTopic) {
+	pageTopics, err := models.GetPageTopics(DB)
+	if err != nil {
+		panic("db.GetPageTopicsAll: " + err.Error())
+	}
+
+	return pageTopics
+}
 
 func GetTopicsAll() (topics []models.Topic) {
 	const sqlstr = `SELECT tct_id, display_name_do_not_use FROM topics ORDER BY display_name_do_not_use`

@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/nyulibraries/dlts-enm/db/models"
-	"github.com/rtt/Go-Solr"
+	solr "github.com/rtt/Go-Solr"
 )
 
 var Port int

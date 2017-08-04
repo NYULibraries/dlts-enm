@@ -150,6 +150,41 @@ CREATE TABLE `occurrences` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Temporary table structure for view `page_topics`
+--
+
+DROP TABLE IF EXISTS `page_topics`;
+/*!50001 DROP VIEW IF EXISTS `page_topics`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `page_topics` (
+  `page_id` tinyint NOT NULL,
+  `topic_id` tinyint NOT NULL,
+  `preferred_topic_name` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary table structure for view `pages`
+--
+
+DROP TABLE IF EXISTS `pages`;
+/*!50001 DROP VIEW IF EXISTS `pages`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `pages` (
+  `id` tinyint NOT NULL,
+  `title` tinyint NOT NULL,
+  `authors` tinyint NOT NULL,
+  `publisher` tinyint NOT NULL,
+  `isbn` tinyint NOT NULL,
+  `page_pattern` tinyint NOT NULL,
+  `page_localid` tinyint NOT NULL,
+  `page_sequence` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `readium_goto_urls`
 --
 
@@ -249,6 +284,44 @@ CREATE TABLE `topics` (
   PRIMARY KEY (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Final view structure for view `page_topics`
+--
+
+/*!50001 DROP TABLE IF EXISTS `page_topics`*/;
+/*!50001 DROP VIEW IF EXISTS `page_topics`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `page_topics` AS select `p`.`id` AS `page_id`,`t`.`tct_id` AS `topic_id`,`t`.`display_name_do_not_use` AS `preferred_topic_name` from ((`pages` `p` left join `occurrences` `o` on((`p`.`id` = `o`.`location_id`))) left join `topics` `t` on((`o`.`topic_id` = `t`.`tct_id`))) where (`t`.`tct_id` is not null) order by `p`.`id` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `pages`
+--
+
+/*!50001 DROP TABLE IF EXISTS `pages`*/;
+/*!50001 DROP VIEW IF EXISTS `pages`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `pages` AS select `l`.`tct_id` AS `id`,`e`.`title` AS `title`,`e`.`author` AS `authors`,`e`.`publisher` AS `publisher`,`e`.`isbn` AS `isbn`,`i`.`pagenumber_css_selector_pattern` AS `page_pattern`,`l`.`localid` AS `page_localid`,`l`.`sequence_number` AS `page_sequence` from ((`locations` `l` left join `epubs` `e` on((`l`.`epub_id` = `e`.`tct_id`))) left join `indexpatterns` `i` on((`e`.`indexpattern_id` = `i`.`tct_id`))) order by `l`.`tct_id` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -259,4 +332,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-06-13 14:18:01
+-- Dump completed on 2017-08-04 10:29:22

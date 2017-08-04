@@ -1,6 +1,7 @@
 package solrutil
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db/models"
@@ -53,6 +54,8 @@ func AddPage(page *models.Page) error {
 	if err != nil {
 		return err
 	}
+
+	fmt.Printf("Added page %d\n", page.ID)
 
 	return nil
 }

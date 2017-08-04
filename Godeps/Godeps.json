@@ -72,6 +72,10 @@
 			"Rev": "c9506ee96398e7571356462217b9e24d6a628d71"
 		},
 		{
+			"ImportPath": "github.com/rtt/Go-Solr",
+			"Rev": "8967997651b3d7de3d4859476fab2b57db2d6e14"
+		},
+		{
 			"ImportPath": "github.com/spf13/afero",
 			"Rev": "9be650865eab0c12963d8753212f4f9c66cdcf12"
 		},

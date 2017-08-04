@@ -2,6 +2,7 @@ package solrutil
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db/models"
 	solr "github.com/rtt/Go-Solr"
@@ -22,8 +23,6 @@ func Init(server string, port int) error {
 }
 
 func AddPage(page *models.Page) error {
-	pageNumberForDisplay := page.PageLocalid
-
 	doc := map[string]interface{}{
 		"add": []interface{}{
 			map[string]interface{}{
@@ -34,7 +33,7 @@ func AddPage(page *models.Page) error {
 				"title": page.Title,
 				"yearOfPublication": 0,
 				"pageLocalId": page.PageLocalid,
-				"pageNumberForDisplay": pageNumberForDisplay,
+				"pageNumberForDisplay": pageNumberForDisplay(page.PageLocalid, page.PagePattern),
 				"pageSequenceNumber": page.PageSequence,
 				"pageText": page.PageText,
 				"preferredTopicName": "TBD",
@@ -51,4 +50,13 @@ func AddPage(page *models.Page) error {
 	fmt.Println("%v", resp)
 
 	return nil
+}
+
+func pageNumberForDisplay(pageLocalId string, pagePattern string) (pageNumber string) {
+	pagePattern = strings.Replace(pagePattern, "{}", "", 1)
+	pagePattern = strings.Replace(pagePattern, "#", "", 1)
+
+	pageNumber = strings.Replace(pageLocalId, pagePattern, "", 1)
+
+	return
 }

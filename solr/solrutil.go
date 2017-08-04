@@ -1,7 +1,6 @@
 package solrutil
 
 import (
-	"errors"
 	"fmt"
 
 	"github.com/nyulibraries/dlts-enm/db/models"
@@ -10,18 +9,46 @@ import (
 
 var Port int
 var Server string
+var conn *solr.Connection
 
 func Init(server string, port int) error {
-	s, err := solr.Init(server, port, "enm-topics")
+	var err error
+	conn, err = solr.Init(server, port, "enm-pages")
 	if err != nil {
 		return err
 	}
-
-	fmt.Printf("solr.Init(): %v\n", s)
 
 	return nil
 }
 
 func AddPage(page *models.Page) error {
-	return errors.New("Error!")
+	pageNumberForDisplay := page.PageLocalid
+
+	doc := map[string]interface{}{
+		"add": []interface{}{
+			map[string]interface{}{
+				"id": page.ID,
+				"isbn": page.Isbn,
+				"authors": page.Authors,
+				"publisher": page.Publisher,
+				"title": page.Title,
+				"yearOfPublication": 0,
+				"pageLocalId": page.PageLocalid,
+				"pageNumberForDisplay": pageNumberForDisplay,
+				"pageSequenceNumber": page.PageSequence,
+				"pageText": page.PageText,
+				"preferredTopicName": "TBD",
+				"topicNames": "TBD",
+			},
+		},
+	}
+
+	resp, err := conn.Update(doc, true)
+	if err != nil {
+		return err
+	}
+
+	fmt.Println("%v", resp)
+
+	return nil
 }

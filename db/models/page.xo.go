@@ -13,6 +13,7 @@ type Page struct {
 	PagePattern  string // page_pattern
 	PageLocalid  string // page_localid
 	PageSequence int    // page_sequence
+	PageText     string // page_text
 }
 
 // GetPages runs a custom query, returning results as Page.
@@ -36,7 +37,7 @@ func GetPages(db XODB) ([]*Page, error) {
 		p := Page{}
 
 		// scan
-		err = q.Scan(&p.ID, &p.Title, &p.Authors, &p.Publisher, &p.Isbn, &p.PagePattern, &p.PageLocalid, &p.PageSequence)
+		err = q.Scan(&p.ID, &p.Title, &p.Authors, &p.Publisher, &p.Isbn, &p.PagePattern, &p.PageLocalid, &p.PageSequence, &p.PageText)
 		if err != nil {
 			return nil, err
 		}

@@ -1,11 +1,11 @@
 package solrutil
 
 import (
-	"fmt"
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db/models"
 	solr "github.com/rtt/Go-Solr"
+	"github.com/nyulibraries/dlts-enm/db"
 )
 
 var Port int
@@ -23,6 +23,14 @@ func Init(server string, port int) error {
 }
 
 func AddPage(page *models.Page) error {
+	var topicNames []string
+
+	pageTopics := db.GetPageTopicsByPageId(page.ID)
+
+	for _, pageTopic := range pageTopics {
+		topicNames = append(topicNames, pageTopic.PreferredTopicName)
+	}
+
 	doc := map[string]interface{}{
 		"add": []interface{}{
 			map[string]interface{}{
@@ -36,18 +44,15 @@ func AddPage(page *models.Page) error {
 				"pageNumberForDisplay": pageNumberForDisplay(page.PageLocalid, page.PagePattern),
 				"pageSequenceNumber": page.PageSequence,
 				"pageText": page.PageText,
-				"preferredTopicName": "TBD",
-				"topicNames": "TBD",
+				"topicNames": topicNames,
 			},
 		},
 	}
 
-	resp, err := conn.Update(doc, true)
+	_, err := conn.Update(doc, true)
 	if err != nil {
 		return err
 	}
-
-	fmt.Println("%v", resp)
 
 	return nil
 }

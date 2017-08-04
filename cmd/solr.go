@@ -18,6 +18,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var Port int
+var Server string
+
 // solrCmd represents the solr command
 var solrCmd = &cobra.Command{
 	Use:   "solr",
@@ -29,4 +32,20 @@ var solrCmd = &cobra.Command{
 
 func init() {
 	RootCmd.AddCommand(solrCmd)
+
+	solrCmd.PersistentFlags().StringVarP(
+		&Server,
+		"server",
+		"s",
+		"localhost",
+		"Solr server",
+	)
+
+	solrCmd.PersistentFlags().IntVarP(
+		&Port,
+		"port",
+		"p",
+		8983,
+		"Solr server port",
+	)
 }

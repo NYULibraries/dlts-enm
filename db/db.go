@@ -19,6 +19,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strconv"
 
 	_ "github.com/go-sql-driver/mysql"
 
@@ -90,6 +91,52 @@ func ClearTables() {
 	}
 
 	tx.Commit()
+}
+
+func GetPagesAll() (pages []*models.Page) {
+	pages, err := models.GetPages(DB)
+	if err != nil {
+		panic("db.GetPagesAll: " + err.Error())
+	}
+
+	return pages
+}
+
+func GetPageTopicsByPageId(pageId int) (pageTopics []models.PageTopic) {
+	// sql query
+	var sqlstr = `SELECT ` +
+	`page_id, topic_id, preferred_topic_name ` +
+	`FROM enm.page_topics ` +
+	`WHERE page_id = ` + strconv.Itoa(pageId)
+
+	var (
+		topicId int
+		preferredTopicName string
+	)
+
+	rows, err := DB.Query(sqlstr)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		err := rows.Scan(&pageId, &topicId, &preferredTopicName)
+		if err != nil {
+			panic(err)
+		}
+		pageTopics = append(pageTopics, models.PageTopic{
+			PageID: pageId,
+			TopicID: topicId,
+			PreferredTopicName: preferredTopicName,
+		})
+	}
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	return
 }
 
 func GetTopicsAll() (topics []models.Topic) {

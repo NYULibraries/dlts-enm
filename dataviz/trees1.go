@@ -5,6 +5,7 @@ import(
 	"errors"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 	"strings"
 	"strconv"
@@ -105,7 +106,7 @@ func Trees1() {
 		depth, err := rootNode.AddChildNodes(ancestors)
 		// Loop detected, skip this topic
 		if err != nil {
-			fmt.Println(err.Error())
+			log.Printf("skipping topic %d: %s", topic.TctID, err.Error())
 			continue
 		}
 
@@ -115,7 +116,7 @@ func Trees1() {
 
 		bytes, err := json.MarshalIndent(rootNode, "", "\t")
 		if err != nil {
-			panic(err)
+			log.Panicln(err)
 		}
 
 		CreateTrees1Visualization(trees1TopicsDir + "/" + strconv.Itoa(topic.TctID), bytes)
@@ -141,7 +142,7 @@ func Trees1() {
 }
 
 func CreateTrees1Visualization(dir string, json []byte) {
-	fmt.Println(dir)
+	log.Println("Create trees1 visualization: " + dir)
 
 	os.Mkdir(dir, os.FileMode(0755))
 	os.Mkdir(dir + "/css", os.FileMode(0755))
@@ -150,26 +151,26 @@ func CreateTrees1Visualization(dir string, json []byte) {
 	var err error
 	err = ioutil.WriteFile(dir + "/topic-tree-data.json", json, 0644)
 	if err != nil {
-		panic(err)
+		log.Panicln(err)
 	}
 
 	err = ioutil.WriteFile(dir + "/index.html", HtmlFileContents, 0644)
 	if err != nil {
-		panic(err)
+		log.Panicln(err)
 	}
 
 	err = ioutil.WriteFile(dir + "/css/style.css", CssFileContents, 0644)
 	if err != nil {
-		panic(err)
+		log.Panicln(err)
 	}
 
 	err = ioutil.WriteFile(dir + "/js/d3.js", D3FileContents, 0644)
 	if err != nil {
-		panic(err)
+		log.Panicln(err)
 	}
 
 	err = ioutil.WriteFile(dir + "/js/d3.layout.js", D3LayoutFileContents, 0644)
 	if err != nil {
-		panic(err)
+		log.Panicln(err)
 	}
 }

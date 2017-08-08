@@ -202,6 +202,22 @@ CREATE TABLE `readium_goto_urls` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `readium_goto_urls_chrome_bug_workaround`
+--
+
+DROP TABLE IF EXISTS `readium_goto_urls_chrome_bug_workaround`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `readium_goto_urls_chrome_bug_workaround` (
+  `location_id` int(11) NOT NULL,
+  `readium_goto_value` varchar(1024) NOT NULL,
+  `readium_goto_url` varchar(1024) NOT NULL,
+  `readium_goto_value_encoded` varchar(1024) NOT NULL,
+  `readium_goto_url_encoded` varchar(1024) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `relation_direction`
 --
 
@@ -333,4 +349,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-04 17:52:43
+-- Dump completed on 2017-08-08 17:46:57

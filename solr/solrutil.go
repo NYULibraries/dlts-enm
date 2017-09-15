@@ -25,12 +25,15 @@ func Init(server string, port int) error {
 
 func AddPage(page *models.Page) error {
 	var topicNames []string
+	var topicNamesForDisplay string
 
-	pageTopics := db.GetPageTopicsByPageId(page.ID)
+	pageTopics := db.GetPageTopicNamesByPageId(page.ID)
 
 	for _, pageTopic := range pageTopics {
 		topicNames = append(topicNames, pageTopic.PreferredTopicName)
 	}
+
+	topicNamesForDisplay = "TBD"
 
 	doc := map[string]interface{}{
 		"add": []interface{}{
@@ -46,6 +49,7 @@ func AddPage(page *models.Page) error {
 				"pageSequenceNumber": page.PageSequence,
 				"pageText": page.PageText,
 				"topicNames": topicNames,
+				"topicNamesForDisplay": topicNamesForDisplay,
 			},
 		},
 	}

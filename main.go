@@ -34,7 +34,7 @@ import (
 //     * go:generate xo mysql://${ENM_DATABASE_USERNAME}:${ENM_DATABASE_PASSWORD}@localhost/${ENM_DATABASE} --query-mode --query-trim --query-strip --query 'SELECT * FROM pages' --query-type Page --out db/models/
 
 //go:generate xo mysql://${ENM_DATABASE_USERNAME}:${ENM_DATABASE_PASSWORD}@localhost/${ENM_DATABASE} --query-mode --query-trim --query-strip --query "SELECT * FROM pages" --query-type Page --out db/models/
-//go:generate xo mysql://${ENM_DATABASE_USERNAME}:${ENM_DATABASE_PASSWORD}@localhost/${ENM_DATABASE} --query-mode --query-trim --query-strip --query "SELECT * FROM page_topics" --query-type PageTopic --out db/models/
+//go:generate xo mysql://${ENM_DATABASE_USERNAME}:${ENM_DATABASE_PASSWORD}@localhost/${ENM_DATABASE} --query-mode --query-trim --query-strip --query "SELECT * FROM page_topic_names" --query-type PageTopicName --out db/models/
 
 func main() {
 	if err := cmd.RootCmd.Execute(); err != nil {

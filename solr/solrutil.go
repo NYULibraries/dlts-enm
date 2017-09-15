@@ -27,9 +27,9 @@ func AddPage(page *models.Page) error {
 	var topicNames []string
 	var topicNamesForDisplay string
 
-	pageTopics := db.GetPageTopicNamesByPageId(page.ID)
+	pageTopicNames := db.GetPageTopicNamesByPageId(page.ID)
 
-	for _, pageTopic := range pageTopics {
+	for _, pageTopic := range pageTopicNames {
 		topicNames = append(topicNames, pageTopic.PreferredTopicName)
 	}
 

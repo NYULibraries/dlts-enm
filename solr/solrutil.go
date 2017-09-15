@@ -13,6 +13,13 @@ var Port int
 var Server string
 var conn *solr.Connection
 
+type topicNamesForDisplayElement struct {
+	topicDisplayName    string
+	topicAlternateNames []string
+}
+
+type topicNamesForDisplay []topicNamesForDisplayElement
+
 func Init(server string, port int) error {
 	var err error
 	conn, err = solr.Init(server, port, "enm-pages")

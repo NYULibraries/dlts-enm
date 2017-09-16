@@ -7,18 +7,15 @@ import (
 	"github.com/nyulibraries/dlts-enm/db/models"
 	solr "github.com/rtt/Go-Solr"
 	"github.com/nyulibraries/dlts-enm/db"
+	"encoding/json"
+	"fmt"
 )
 
 var Port int
 var Server string
 var conn *solr.Connection
 
-type topicNamesForDisplayElement struct {
-	topicDisplayName    string
-	topicAlternateNames []string
-}
-
-type topicNamesForDisplay []topicNamesForDisplayElement
+type topicNamesForDisplay map[string][]string
 
 func Init(server string, port int) error {
 	var err error
@@ -32,15 +29,26 @@ func Init(server string, port int) error {
 
 func AddPage(page *models.Page) error {
 	var topicNames []string
-	var topicNamesForDisplay string
+	var topicNamesForDisplay topicNamesForDisplay = make(map[string][]string)
 
 	pageTopicNames := db.GetPageTopicNamesByPageId(page.ID)
 
 	for _, pageTopic := range pageTopicNames {
-		topicNames = append(topicNames, pageTopic.PreferredTopicName)
+		topicNames = append(topicNames, pageTopic.TopicName)
+		if _, ok := topicNamesForDisplay[pageTopic.PreferredTopicName]; ! ok {
+			topicNamesForDisplay[pageTopic.PreferredTopicName] = []string{}
+		}
+
+		if pageTopic.TopicName != pageTopic.PreferredTopicName {
+			topicNamesForDisplay[pageTopic.PreferredTopicName] =
+				append(topicNamesForDisplay[pageTopic.PreferredTopicName], pageTopic.TopicName)
+		}
 	}
 
-	topicNamesForDisplay = "TBD"
+	topicNamesForDisplayBytes, err := json.Marshal(topicNamesForDisplay)
+	if err != nil {
+		panic(fmt.Sprintf("ERROR: couldn't marshal topicNamesForDisplay for %s", page.ID))
+	}
 
 	doc := map[string]interface{}{
 		"add": []interface{}{
@@ -56,12 +64,12 @@ func AddPage(page *models.Page) error {
 				"pageSequenceNumber": page.PageSequence,
 				"pageText": page.PageText,
 				"topicNames": topicNames,
-				"topicNamesForDisplay": topicNamesForDisplay,
+				"topicNamesForDisplay": string(topicNamesForDisplayBytes),
 			},
 		},
 	}
 
-	_, err := conn.Update(doc, true)
+	_, err = conn.Update(doc, true)
 	if err != nil {
 		return err
 	}

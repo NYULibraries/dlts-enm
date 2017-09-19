@@ -104,10 +104,11 @@ func GetPagesAll() (pages []*models.Page) {
 
 func GetPageTopicNamesByPageId(pageId int) (pageTopicNames []models.PageTopicName) {
 	// sql query
-	var sqlstr = `SELECT ` +
-	`page_id, topic_id, preferred_topic_name, topic_name ` +
-	`FROM enm.page_topic_names ` +
-	`WHERE page_id = ` + strconv.Itoa(pageId)
+	var sqlstr = `SELECT` +
+	` page_id, topic_id, preferred_topic_name, topic_name` +
+	` FROM enm.page_topic_names` +
+	` WHERE page_id = ` + strconv.Itoa(pageId) +
+	` ORDER BY page_id, topic_id, preferred_topic_name, topic_name`
 
 	var (
 		topicId int

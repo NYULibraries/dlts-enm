@@ -29,6 +29,8 @@ func Init(server string, port int) error {
 
 func AddPage(page *models.Page) error {
 	var topicNames []string
+	// Using underscore in variable name to match Solr field name
+	var topicNames_facet []string
 	var topicNamesForDisplay topicNamesForDisplay = make(map[string][]string)
 
 	pageTopicNames := db.GetPageTopicNamesByPageId(page.ID)
@@ -46,6 +48,7 @@ func AddPage(page *models.Page) error {
 			topicNames = append(topicNames, pageTopic.TopicName)
 		} else {
 			topicNames = append(topicNames, pageTopic.PreferredTopicName)
+			topicNames_facet = append(topicNames_facet, pageTopic.PreferredTopicName)
 		}
 	}
 
@@ -68,6 +71,7 @@ func AddPage(page *models.Page) error {
 				"pageSequenceNumber": page.PageSequence,
 				"pageText": page.PageText,
 				"topicNames": topicNames,
+				"topicNames_facet": topicNames_facet,
 				"topicNamesForDisplay": string(topicNamesForDisplayBytes),
 			},
 		},

@@ -102,16 +102,18 @@ func GetPagesAll() (pages []*models.Page) {
 	return pages
 }
 
-func GetPageTopicsByPageId(pageId int) (pageTopics []models.PageTopic) {
+func GetPageTopicNamesByPageId(pageId int) (pageTopicNames []models.PageTopicName) {
 	// sql query
-	var sqlstr = `SELECT ` +
-	`page_id, topic_id, preferred_topic_name ` +
-	`FROM enm.page_topics ` +
-	`WHERE page_id = ` + strconv.Itoa(pageId)
+	var sqlstr = `SELECT` +
+	` page_id, topic_id, topic_display_name, topic_name` +
+	` FROM enm.page_topic_names` +
+	` WHERE page_id = ` + strconv.Itoa(pageId) +
+	` ORDER BY page_id, topic_id, topic_display_name, topic_name`
 
 	var (
 		topicId int
-		preferredTopicName string
+		topicDisplayName string
+		topicName string
 	)
 
 	rows, err := DB.Query(sqlstr)
@@ -121,14 +123,15 @@ func GetPageTopicsByPageId(pageId int) (pageTopics []models.PageTopic) {
 	defer rows.Close()
 
 	for rows.Next() {
-		err := rows.Scan(&pageId, &topicId, &preferredTopicName)
+		err := rows.Scan(&pageId, &topicId, &topicDisplayName, &topicName)
 		if err != nil {
 			panic(err)
 		}
-		pageTopics = append(pageTopics, models.PageTopic{
+		pageTopicNames = append(pageTopicNames, models.PageTopicName{
 			PageID: pageId,
 			TopicID: topicId,
-			PreferredTopicName: preferredTopicName,
+			TopicDisplayName: topicDisplayName,
+			TopicName: topicName,
 		})
 	}
 	err = rows.Err()

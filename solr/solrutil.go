@@ -7,11 +7,15 @@ import (
 	"github.com/nyulibraries/dlts-enm/db/models"
 	solr "github.com/rtt/Go-Solr"
 	"github.com/nyulibraries/dlts-enm/db"
+	"encoding/json"
+	"fmt"
 )
 
 var Port int
 var Server string
 var conn *solr.Connection
+
+type topicNamesForDisplay map[string][]string
 
 func Init(server string, port int) error {
 	var err error
@@ -25,11 +29,32 @@ func Init(server string, port int) error {
 
 func AddPage(page *models.Page) error {
 	var topicNames []string
+	// Using underscore in variable name to match Solr field name
+	var topicNames_facet []string
+	var topicNamesForDisplay topicNamesForDisplay = make(map[string][]string)
 
-	pageTopics := db.GetPageTopicsByPageId(page.ID)
+	pageTopicNames := db.GetPageTopicNamesByPageId(page.ID)
 
-	for _, pageTopic := range pageTopics {
-		topicNames = append(topicNames, pageTopic.PreferredTopicName)
+	// We are assuming that the pageTopicNames are alpha-sorted by TopicDisplayName
+	// and then TopicName within each topic.
+	for _, pageTopic := range pageTopicNames {
+		if _, ok := topicNamesForDisplay[pageTopic.TopicDisplayName]; ! ok {
+			topicNamesForDisplay[pageTopic.TopicDisplayName] = []string{}
+		}
+
+		if pageTopic.TopicName != pageTopic.TopicDisplayName {
+			topicNamesForDisplay[pageTopic.TopicDisplayName] =
+				append(topicNamesForDisplay[pageTopic.TopicDisplayName], pageTopic.TopicName)
+			topicNames = append(topicNames, pageTopic.TopicName)
+		} else {
+			topicNames = append(topicNames, pageTopic.TopicDisplayName)
+			topicNames_facet = append(topicNames_facet, pageTopic.TopicDisplayName)
+		}
+	}
+
+	topicNamesForDisplayBytes, err := json.Marshal(topicNamesForDisplay)
+	if err != nil {
+		panic(fmt.Sprintf("ERROR: couldn't marshal topicNamesForDisplay for %s", page.ID))
 	}
 
 	doc := map[string]interface{}{
@@ -46,11 +71,13 @@ func AddPage(page *models.Page) error {
 				"pageSequenceNumber": page.PageSequence,
 				"pageText": page.PageText,
 				"topicNames": topicNames,
+				"topicNames_facet": topicNames_facet,
+				"topicNamesForDisplay": string(topicNamesForDisplayBytes),
 			},
 		},
 	}
 
-	_, err := conn.Update(doc, true)
+	_, err = conn.Update(doc, true)
 	if err != nil {
 		return err
 	}

@@ -160,7 +160,7 @@ SET character_set_client = utf8;
 /*!50001 CREATE TABLE `page_topic_names` (
   `page_id` tinyint NOT NULL,
   `topic_id` tinyint NOT NULL,
-  `preferred_topic_name` tinyint NOT NULL,
+  `topic_display_name` tinyint NOT NULL,
   `topic_name` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
@@ -312,12 +312,12 @@ CREATE TABLE `topics` (
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `page_topic_names` AS select `p`.`id` AS `page_id`,`t`.`tct_id` AS `topic_id`,`t`.`display_name_do_not_use` AS `preferred_topic_name`,`n`.`name` AS `topic_name` from (((`pages` `p` left join `occurrences` `o` on((`p`.`id` = `o`.`location_id`))) left join `topics` `t` on((`o`.`topic_id` = `t`.`tct_id`))) join `names` `n` on((`n`.`topic_id` = `t`.`tct_id`))) where (`t`.`tct_id` is not null) order by `p`.`id`,`t`.`tct_id`,`n`.`name` */;
+/*!50001 VIEW `page_topic_names` AS select `p`.`id` AS `page_id`,`t`.`tct_id` AS `topic_id`,`t`.`display_name_do_not_use` AS `topic_display_name`,`n`.`name` AS `topic_name` from (((`pages` `p` left join `occurrences` `o` on((`p`.`id` = `o`.`location_id`))) left join `topics` `t` on((`o`.`topic_id` = `t`.`tct_id`))) join `names` `n` on((`n`.`topic_id` = `t`.`tct_id`))) where (`t`.`tct_id` is not null) order by `p`.`id`,`t`.`tct_id`,`n`.`name` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -350,4 +350,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-19 14:52:12
+-- Dump completed on 2017-09-21 16:35:57

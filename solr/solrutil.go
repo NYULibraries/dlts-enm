@@ -35,20 +35,20 @@ func AddPage(page *models.Page) error {
 
 	pageTopicNames := db.GetPageTopicNamesByPageId(page.ID)
 
-	// We are assuming that the pageTopicNames are alpha-sorted by PreferredTopicName
+	// We are assuming that the pageTopicNames are alpha-sorted by TopicDisplayName
 	// and then TopicName within each topic.
 	for _, pageTopic := range pageTopicNames {
-		if _, ok := topicNamesForDisplay[pageTopic.PreferredTopicName]; ! ok {
-			topicNamesForDisplay[pageTopic.PreferredTopicName] = []string{}
+		if _, ok := topicNamesForDisplay[pageTopic.TopicDisplayName]; ! ok {
+			topicNamesForDisplay[pageTopic.TopicDisplayName] = []string{}
 		}
 
-		if pageTopic.TopicName != pageTopic.PreferredTopicName {
-			topicNamesForDisplay[pageTopic.PreferredTopicName] =
-				append(topicNamesForDisplay[pageTopic.PreferredTopicName], pageTopic.TopicName)
+		if pageTopic.TopicName != pageTopic.TopicDisplayName {
+			topicNamesForDisplay[pageTopic.TopicDisplayName] =
+				append(topicNamesForDisplay[pageTopic.TopicDisplayName], pageTopic.TopicName)
 			topicNames = append(topicNames, pageTopic.TopicName)
 		} else {
-			topicNames = append(topicNames, pageTopic.PreferredTopicName)
-			topicNames_facet = append(topicNames_facet, pageTopic.PreferredTopicName)
+			topicNames = append(topicNames, pageTopic.TopicDisplayName)
+			topicNames_facet = append(topicNames_facet, pageTopic.TopicDisplayName)
 		}
 	}
 

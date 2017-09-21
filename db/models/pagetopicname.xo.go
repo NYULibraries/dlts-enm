@@ -5,10 +5,10 @@ package models
 
 // PageTopicName represents a row from '[custom page_topic_name]'.
 type PageTopicName struct {
-	PageID             int    // page_id
-	TopicID            int    // topic_id
-	PreferredTopicName string // preferred_topic_name
-	TopicName          string // topic_name
+	PageID           int    // page_id
+	TopicID          int    // topic_id
+	TopicDisplayName string // topic_display_name
+	TopicName        string // topic_name
 }
 
 // GetPageTopicNames runs a custom query, returning results as PageTopicName.
@@ -32,7 +32,7 @@ func GetPageTopicNames(db XODB) ([]*PageTopicName, error) {
 		ptn := PageTopicName{}
 
 		// scan
-		err = q.Scan(&ptn.PageID, &ptn.TopicID, &ptn.PreferredTopicName, &ptn.TopicName)
+		err = q.Scan(&ptn.PageID, &ptn.TopicID, &ptn.TopicDisplayName, &ptn.TopicName)
 		if err != nil {
 			return nil, err
 		}

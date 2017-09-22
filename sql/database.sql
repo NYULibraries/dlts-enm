@@ -198,7 +198,15 @@ CREATE TABLE `readium_goto_urls` (
   `readium_goto_value` varchar(1024) NOT NULL,
   `readium_goto_url` varchar(1024) NOT NULL,
   `readium_goto_value_encoded` varchar(1024) NOT NULL,
-  `readium_goto_url_encoded` varchar(1024) NOT NULL
+  `readium_goto_url_encoded` varchar(1024) NOT NULL,
+  `stage_readium_goto_value` varchar(1024) NOT NULL,
+  `stage_readium_goto_url` varchar(1024) NOT NULL,
+  `stage_readium_goto_value_encoded` varchar(1024) NOT NULL,
+  `stage_readium_goto_url_encoded` varchar(1024) NOT NULL,
+  `dev_readium_goto_value` varchar(1024) NOT NULL,
+  `dev_readium_goto_url` varchar(1024) NOT NULL,
+  `dev_readium_goto_value_encoded` varchar(1024) NOT NULL,
+  `dev_readium_goto_url_encoded` varchar(1024) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -214,7 +222,15 @@ CREATE TABLE `readium_goto_urls_chrome_bug_workaround` (
   `readium_goto_value` varchar(1024) NOT NULL,
   `readium_goto_url` varchar(1024) NOT NULL,
   `readium_goto_value_encoded` varchar(1024) NOT NULL,
-  `readium_goto_url_encoded` varchar(1024) NOT NULL
+  `readium_goto_url_encoded` varchar(1024) NOT NULL,
+  `stage_readium_goto_value` varchar(1024) NOT NULL,
+  `stage_readium_goto_url` varchar(1024) NOT NULL,
+  `stage_readium_goto_value_encoded` varchar(1024) NOT NULL,
+  `stage_readium_goto_url_encoded` varchar(1024) NOT NULL,
+  `dev_readium_goto_value` varchar(1024) NOT NULL,
+  `dev_readium_goto_url` varchar(1024) NOT NULL,
+  `dev_readium_goto_value_encoded` varchar(1024) NOT NULL,
+  `dev_readium_goto_url_encoded` varchar(1024) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -350,4 +366,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-21 16:35:57
+-- Dump completed on 2017-09-22 11:01:41

@@ -306,6 +306,20 @@ CREATE TABLE `scopes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `topic_types`
+--
+
+DROP TABLE IF EXISTS `topic_types`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topic_types` (
+  `tct_id` int(11) NOT NULL,
+  `ttype` varchar(3000) NOT NULL,
+  PRIMARY KEY (`tct_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `topics`
 --
 
@@ -366,4 +380,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-22 11:01:41
+-- Dump completed on 2017-10-11 17:33:53

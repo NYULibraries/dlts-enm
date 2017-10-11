@@ -359,3 +359,9 @@ type TopicDetail struct {
 		} `json:"relationtype"`
 	} `json:"relations"`
 }
+
+// /api/topic/ttype/all/
+type TopicType []struct {
+	ID    int64  `json:"id"`
+	Ttype string `json:"ttype"`
+}

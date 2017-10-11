@@ -298,6 +298,15 @@ type Name struct {
 	Scope     string `json:"scope"`
 }
 
+// /api/relation/rtype/all/
+type RelationType []struct {
+	ID          int64  `json:"id"`
+	RoleFrom    string `json:"role_from"`
+	RoleTo      string `json:"role_to"`
+	Rtype       string `json:"rtype"`
+	Symmetrical bool   `json:"symmetrical"`
+}
+
 // /api/hit/basket/all/
 type Topic struct {
 	DisplayName string `json:"display_name"`

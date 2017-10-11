@@ -334,6 +334,24 @@ CREATE TABLE `topics` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `topics_weblinks`
+--
+
+DROP TABLE IF EXISTS `topics_weblinks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topics_weblinks` (
+  `topic_id` int(11) NOT NULL,
+  `weblink_id` int(11) NOT NULL,
+  UNIQUE KEY `idx_unique_topics_weblinks` (`topic_id`,`weblink_id`),
+  KEY `topic_id` (`topic_id`),
+  KEY `weblink_id` (`weblink_id`),
+  CONSTRAINT `fk__topics_weblinks__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`),
+  CONSTRAINT `fk__topics_weblinks__weblinks` FOREIGN KEY (`weblink_id`) REFERENCES `weblinks` (`tct_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `weblinks`
 --
 
@@ -428,4 +446,4 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-11 17:51:35
+-- Dump completed on 2017-10-11 18:26:59

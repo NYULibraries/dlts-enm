@@ -334,6 +334,54 @@ CREATE TABLE `topics` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `weblinks`
+--
+
+DROP TABLE IF EXISTS `weblinks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `weblinks` (
+  `tct_id` int(11) NOT NULL,
+  `url` varchar(3000) NOT NULL,
+  `weblinks_relationship_id` int(11) NOT NULL,
+  `weblinks_vocabulary_id` int(11) NOT NULL,
+  PRIMARY KEY (`tct_id`),
+  KEY `weblinks_relationship_id` (`weblinks_relationship_id`),
+  KEY `weblinks_vocabulary_id` (`weblinks_vocabulary_id`),
+  CONSTRAINT `fk__weblinks__weblinks_vocabulary` FOREIGN KEY (`weblinks_vocabulary_id`) REFERENCES `weblinks_vocabulary` (`id`),
+  CONSTRAINT `fk__weblinks__weblinks_relationship` FOREIGN KEY (`weblinks_relationship_id`) REFERENCES `weblinks_relationship` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `weblinks_relationship`
+--
+
+DROP TABLE IF EXISTS `weblinks_relationship`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `weblinks_relationship` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `relationship` varchar(3000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `weblinks_vocabulary`
+--
+
+DROP TABLE IF EXISTS `weblinks_vocabulary`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `weblinks_vocabulary` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `vocabulary` varchar(3000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Final view structure for view `page_topic_names`
 --
 
@@ -380,4 +428,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-11 17:33:53
+-- Dump completed on 2017-10-11 17:51:35

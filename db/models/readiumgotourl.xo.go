@@ -5,9 +5,17 @@ package models
 
 // ReadiumGotoURL represents a row from 'enm.readium_goto_urls'.
 type ReadiumGotoURL struct {
-	LocationID              int    `json:"location_id"`                // location_id
-	ReadiumGotoValue        string `json:"readium_goto_value"`         // readium_goto_value
-	ReadiumGotoURL          string `json:"readium_goto_url"`           // readium_goto_url
-	ReadiumGotoValueEncoded string `json:"readium_goto_value_encoded"` // readium_goto_value_encoded
-	ReadiumGotoURLEncoded   string `json:"readium_goto_url_encoded"`   // readium_goto_url_encoded
+	LocationID                   int    `json:"location_id"`                      // location_id
+	ReadiumGotoValue             string `json:"readium_goto_value"`               // readium_goto_value
+	ReadiumGotoURL               string `json:"readium_goto_url"`                 // readium_goto_url
+	ReadiumGotoValueEncoded      string `json:"readium_goto_value_encoded"`       // readium_goto_value_encoded
+	ReadiumGotoURLEncoded        string `json:"readium_goto_url_encoded"`         // readium_goto_url_encoded
+	StageReadiumGotoValue        string `json:"stage_readium_goto_value"`         // stage_readium_goto_value
+	StageReadiumGotoURL          string `json:"stage_readium_goto_url"`           // stage_readium_goto_url
+	StageReadiumGotoValueEncoded string `json:"stage_readium_goto_value_encoded"` // stage_readium_goto_value_encoded
+	StageReadiumGotoURLEncoded   string `json:"stage_readium_goto_url_encoded"`   // stage_readium_goto_url_encoded
+	DevReadiumGotoValue          string `json:"dev_readium_goto_value"`           // dev_readium_goto_value
+	DevReadiumGotoURL            string `json:"dev_readium_goto_url"`             // dev_readium_goto_url
+	DevReadiumGotoValueEncoded   string `json:"dev_readium_goto_value_encoded"`   // dev_readium_goto_value_encoded
+	DevReadiumGotoURLEncoded     string `json:"dev_readium_goto_url_encoded"`     // dev_readium_goto_url_encoded
 }

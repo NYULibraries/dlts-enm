@@ -212,6 +212,8 @@ ORDER BY t2.display_name_do_not_use`
 }
 
 func Reload() {
+	loadRelationTypes()
+
 	var err error
 	relationDirectionIds := make(map[string]int)
 	relationDirectionId := 0
@@ -492,6 +494,27 @@ func Reload() {
 					panic(err)
 				}
 			}
+		}
+	}
+}
+
+func loadRelationTypes() {
+	var tctRelationTypes = tct.GetRelationTypesAll()
+
+	for _, tctRelationType := range tctRelationTypes {
+		enmRelationType := models.RelationType{
+			TctID:       int(tctRelationType.ID),
+			Rtype:       tctRelationType.Rtype,
+			RoleFrom:    tctRelationType.RoleFrom,
+			RoleTo:      tctRelationType.RoleTo,
+			Symmetrical: tctRelationType.Symmetrical,
+		}
+
+		// Insert into relation types table
+		err := enmRelationType.Insert(DB)
+		if err != nil {
+			fmt.Println(tctRelationType)
+			panic(err)
 		}
 	}
 }

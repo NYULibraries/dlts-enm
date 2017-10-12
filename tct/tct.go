@@ -39,6 +39,7 @@ var TctApiEndpoints = map[string]string{
 	"IndexPatternsAll": "/api/epub/index-pattern/all/",
 	"Location": "/api/epub/location/",
 	"NamesAll": "/api/hit/hits/all/",
+	"RelationTypesAll": "/api/relation/rtype/all/",
 	"TopicsAll": "/api/hit/basket/all/",
 	"TopicDetail": "/api/hit/basket/",
 }
@@ -155,6 +156,17 @@ func GetNamesAll() (namesList []Name) {
 	responseBody := GetResponseBody("NamesAll")
 
 	err := json.Unmarshal(responseBody, &namesList)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
+func GetRelationTypesAll() (relationTypesList []RelationType) {
+	responseBody := GetResponseBody("RelationTypesAll")
+
+	err := json.Unmarshal(responseBody, &relationTypesList)
 	if err != nil {
 		panic(err.Error())
 	}
@@ -299,7 +311,7 @@ type Name struct {
 }
 
 // /api/relation/rtype/all/
-type RelationType []struct {
+type RelationType struct {
 	ID          int64  `json:"id"`
 	RoleFrom    string `json:"role_from"`
 	RoleTo      string `json:"role_to"`

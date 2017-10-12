@@ -338,8 +338,11 @@ type Topic struct {
 }
 
 // /api/hit/basket/BASKET_ID/
+// TODO: find basket ID of topic detail that has non-empty types, weblinks, and
+// relations for example comment.
 type TopicDetail struct {
 	Basket struct {
+		Description string `json:"description"`
 		DisplayName string `json:"display_name"`
 		ID          int64  `json:"id"`
 		Occurs      []struct {
@@ -355,6 +358,12 @@ type TopicDetail struct {
 				SequenceNumber int64  `json:"sequence_number"`
 			} `json:"location"`
 		} `json:"occurs"`
+		Review struct {
+			Changed  bool   `json:"changed"`
+			Reviewed bool   `json:"reviewed"`
+			Reviewer string `json:"reviewer"`
+			Time     string `json:"time"`
+		} `json:"review"`
 		TopicHits []struct {
 			Bypass    bool   `json:"bypass"`
 			Hidden    bool   `json:"hidden"`
@@ -366,6 +375,15 @@ type TopicDetail struct {
 				Scope string `json:"scope"`
 			} `json:"scope"`
 		} `json:"topic_hits"`
+		Types []struct {
+			ID    int64  `json:"id"`
+			Ttype string `json:"ttype"`
+		} `json:"types"`
+		Weblinks []struct {
+			Content string `json:"content"`
+			ID      int64  `json:"id"`
+			URL     string `json:"url"`
+		} `json:"weblinks"`
 	} `json:"basket"`
 	Relations []struct {
 		Basket struct {

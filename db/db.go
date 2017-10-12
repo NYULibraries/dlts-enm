@@ -39,6 +39,7 @@ var tables = []string{
 	"relations",
 	"occurrences",
 	"topics",
+	"topic_types",
 	"scopes",
 	"relation_type",
 	"relation_direction",
@@ -213,6 +214,7 @@ ORDER BY t2.display_name_do_not_use`
 
 func Reload() {
 	loadRelationTypes()
+	loadTopicTypes()
 
 	var err error
 	relationDirectionIds := make(map[string]int)
@@ -514,6 +516,24 @@ func loadRelationTypes() {
 		err := enmRelationType.Insert(DB)
 		if err != nil {
 			fmt.Println(tctRelationType)
+			panic(err)
+		}
+	}
+}
+
+func loadTopicTypes() {
+	var tctTopicTypes = tct.GetTopicTypesAll()
+
+	for _, tctTopicType := range tctTopicTypes {
+		enmTopicType := models.TopicType{
+			TctID:       int(tctTopicType.ID),
+			Ttype:       tctTopicType.Ttype,
+		}
+
+		// Insert into topic types table
+		err := enmTopicType.Insert(DB)
+		if err != nil {
+			fmt.Println(tctTopicType)
 			panic(err)
 		}
 	}

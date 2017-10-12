@@ -42,6 +42,7 @@ var TctApiEndpoints = map[string]string{
 	"RelationTypesAll": "/api/relation/rtype/all/",
 	"TopicsAll": "/api/hit/basket/all/",
 	"TopicDetail": "/api/hit/basket/",
+	"TopicTypesAll": "/api/topic/ttype/all/",
 }
 
 func GetResponseBody(params ...string) (body []byte) {
@@ -190,6 +191,17 @@ func GetTopicDetail(topicId int) (topicDetail TopicDetail) {
 	responseBody := GetResponseBody("TopicDetail", topicIdString)
 
 	err := json.Unmarshal(responseBody, &topicDetail)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
+func GetTopicTypesAll() (topicTypesList []TopicType) {
+	responseBody := GetResponseBody("TopicTypesAll")
+
+	err := json.Unmarshal(responseBody, &topicTypesList)
 	if err != nil {
 		panic(err.Error())
 	}
@@ -373,7 +385,7 @@ type TopicDetail struct {
 }
 
 // /api/topic/ttype/all/
-type TopicType []struct {
+type TopicType struct {
 	ID    int64  `json:"id"`
 	Ttype string `json:"ttype"`
 }

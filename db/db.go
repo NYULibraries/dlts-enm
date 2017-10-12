@@ -216,13 +216,14 @@ func Reload() {
 	loadRelationTypes()
 	loadTopicTypes()
 
-	var err error
 	relationDirectionIds := make(map[string]int)
 	relationDirectionId := 0
 	relationExists := make(map[int64]bool)
 	relationTypeExists := make(map[int64]bool)
 	scopeExists := make(map[int64]bool)
 	tctTopics := tct.GetTopicsAll()
+
+	var err error
 
 	// All Topics must be loaded first before attempting to load everything
 	// that comes in from TopicDetails, the reason being topics table is

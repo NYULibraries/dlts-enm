@@ -345,10 +345,10 @@ CREATE TABLE `topics` (
   `display_name_do_not_use` varchar(3000) NOT NULL COMMENT 'Workaround for apparent knq/xo bug that prevents creation of the full set of CRUD methods  when table has only one column.',
   `editorial_review_status_reviewer` varchar(255) DEFAULT NULL,
   `editorial_review_status_time` varchar(28) DEFAULT NULL,
-  `editorial_review_status_status` int(11) NOT NULL,
+  `editorial_review_status_status_id` int(11) NOT NULL,
   PRIMARY KEY (`tct_id`),
-  KEY `editorial_review_status_status` (`editorial_review_status_status`),
-  CONSTRAINT `fk__topics__editorial_review_status_statuses` FOREIGN KEY (`editorial_review_status_status`) REFERENCES `editorial_review_status_statuses` (`id`)
+  KEY `editorial_review_status_status_id` (`editorial_review_status_status_id`),
+  CONSTRAINT `fk__topics__editorial_review_status_statuses` FOREIGN KEY (`editorial_review_status_status_id`) REFERENCES `editorial_review_status_statuses` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -465,4 +465,4 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-13 14:44:56
+-- Dump completed on 2017-10-13 15:17:38

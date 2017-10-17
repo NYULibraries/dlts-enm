@@ -286,7 +286,9 @@ func Reload() {
 	// All Topics must be loaded first before attempting to load everything
 	// that comes in from TopicDetails, the reason being topics table is
 	// target of FKs in Relations.  Note that editorial review status columns
-	// are not filled in until the second pass when topic details are fetched.
+	// are not filled in until the second pass when topic details are fetched,
+	// with the exception of FK column editorial_review_status_state_id, which
+	// we pre-fill with temporary value defaultEditorialReviewStatusStateId.
 	for _, tctTopic := range tctTopics {
 		// TODO: originally had display_name_do_not_use column in topics table
 		// due to xo bug that prevents creation of full model code if tct_id was
@@ -300,6 +302,7 @@ func Reload() {
 		enmTopic := models.Topic{
 			TctID:               int(tctTopic.ID),
 			DisplayNameDoNotUse: tctTopic.DisplayName,
+			EditorialReviewStatusStateID: defaultEditorialReviewStatusStateId,
 		}
 
 		// Insert into Topics table

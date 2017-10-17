@@ -60,6 +60,10 @@ type EditorialStatusStateTableRow struct {
 	State string
 }
 
+// For initial load of topics table we don't have editorial review status data yet,
+// but need to fill in FK column with a valid, non-null value
+var defaultEditorialReviewStatusStateId int
+
 func init() {
 	Database = os.Getenv("ENM_DATABASE")
 	username = os.Getenv("ENM_DATABASE_USERNAME")
@@ -92,13 +96,14 @@ func init() {
 	editorialReviewStatusStatesMap =
 		make(map[tct.EditorialReviewStatusState]EditorialStatusStateTableRow)
 
+	defaultEditorialReviewStatusStateId = 1
 	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: true,
 		TimeIsNull: true,
 		Changed: false,
 		Reviewed: false,
 	}] = EditorialStatusStateTableRow{
-		Id: 1,
+		Id: defaultEditorialReviewStatusStateId,
 		State: "Not Reviewed",
 	}
 	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{

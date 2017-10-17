@@ -41,7 +41,7 @@ var tables = []string{
 	"topics_weblinks",
 	"topics",
 	"topic_types",
-	"editorial_review_status_states",
+	"editorial_review_status_state",
 	"weblinks",
 	"weblinks_relationship",
 	"weblinks_vocabulary",

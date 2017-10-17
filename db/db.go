@@ -316,6 +316,7 @@ func Reload() {
 	for _, tctTopic := range tctTopics {
 		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
 
+		// Load relations for topic
 		tctTopicRelations := tctTopicDetail.Relations
 		for _, tctTopicRelation := range tctTopicRelations {
 			if ! relationExists[tctTopicRelation.ID] {

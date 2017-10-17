@@ -53,7 +53,7 @@ var tables = []string{
 	"indexpatterns",
 }
 
-var editorialReviewStatusStates map[string]tct.EditorialReviewStatusState
+var editorialReviewStatusStatesMap map[tct.EditorialReviewStatusState]string
 
 func init() {
 	Database = os.Getenv("ENM_DATABASE")
@@ -84,31 +84,31 @@ func init() {
 		panic(err.Error())
 	}
 
-	editorialReviewStatusStates = make(map[string]tct.EditorialReviewStatusState)
-	editorialReviewStatusStates["Not Reviewed"] = tct.EditorialReviewStatusState{
+	editorialReviewStatusStatesMap = make(map[tct.EditorialReviewStatusState]string)
+	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: true,
 		TimeIsNull: true,
 		Changed: false,
 		Reviewed: false,
-	}
-	editorialReviewStatusStates["Reviewed, Unchanged"] = tct.EditorialReviewStatusState{
+	}] = "Not Reviewed"
+	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: false,
 		TimeIsNull: false,
 		Changed: false,
 		Reviewed: true,
-	}
-	editorialReviewStatusStates["Reviewed, Changed"] = tct.EditorialReviewStatusState{
+	}] = "Reviewed, Unchanged"
+	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: false,
 		TimeIsNull: false,
 		Changed: true,
 		Reviewed: true,
-	}
-	editorialReviewStatusStates["Reviewed Status Revoked"] = tct.EditorialReviewStatusState{
+	}] = "Reviewed, Changed"
+	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: false,
 		TimeIsNull: false,
 		Changed: false,
 		Reviewed: false,
-	}
+	}] = "Reviewed Status Revoked"
 }
 
 func ClearTables() {
@@ -537,7 +537,7 @@ func Reload() {
 
 func loadEditorialReviewStatusStates() {
 	i := 0
-	for state, _ := range editorialReviewStatusStates {
+	for _, state := range editorialReviewStatusStatesMap {
 		i++
 		enmEditorialReviewStatusState := models.EditorialReviewStatusState{
 			ID: i,

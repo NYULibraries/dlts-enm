@@ -10,11 +10,11 @@ import (
 
 // Topic represents a row from 'enm.topics'.
 type Topic struct {
-	TctID                         int            `json:"tct_id"`                            // tct_id
-	DisplayNameDoNotUse           string         `json:"display_name_do_not_use"`           // display_name_do_not_use
-	EditorialReviewStatusReviewer sql.NullString `json:"editorial_review_status_reviewer"`  // editorial_review_status_reviewer
-	EditorialReviewStatusTime     sql.NullString `json:"editorial_review_status_time"`      // editorial_review_status_time
-	EditorialReviewStatusStatusID int            `json:"editorial_review_status_status_id"` // editorial_review_status_status_id
+	TctID                         int            `json:"tct_id"`                           // tct_id
+	DisplayNameDoNotUse           string         `json:"display_name_do_not_use"`          // display_name_do_not_use
+	EditorialReviewStatusReviewer sql.NullString `json:"editorial_review_status_reviewer"` // editorial_review_status_reviewer
+	EditorialReviewStatusTime     sql.NullString `json:"editorial_review_status_time"`     // editorial_review_status_time
+	EditorialReviewStatusStateID  int            `json:"editorial_review_status_state_id"` // editorial_review_status_state_id
 
 	// xo fields
 	_exists, _deleted bool
@@ -41,14 +41,14 @@ func (t *Topic) Insert(db XODB) error {
 
 	// sql insert query, primary key must be provided
 	const sqlstr = `INSERT INTO enm.topics (` +
-		`tct_id, display_name_do_not_use, editorial_review_status_reviewer, editorial_review_status_time, editorial_review_status_status_id` +
+		`tct_id, display_name_do_not_use, editorial_review_status_reviewer, editorial_review_status_time, editorial_review_status_state_id` +
 		`) VALUES (` +
 		`?, ?, ?, ?, ?` +
 		`)`
 
 	// run query
-	XOLog(sqlstr, t.TctID, t.DisplayNameDoNotUse, t.EditorialReviewStatusReviewer, t.EditorialReviewStatusTime, t.EditorialReviewStatusStatusID)
-	_, err = db.Exec(sqlstr, t.TctID, t.DisplayNameDoNotUse, t.EditorialReviewStatusReviewer, t.EditorialReviewStatusTime, t.EditorialReviewStatusStatusID)
+	XOLog(sqlstr, t.TctID, t.DisplayNameDoNotUse, t.EditorialReviewStatusReviewer, t.EditorialReviewStatusTime, t.EditorialReviewStatusStateID)
+	_, err = db.Exec(sqlstr, t.TctID, t.DisplayNameDoNotUse, t.EditorialReviewStatusReviewer, t.EditorialReviewStatusTime, t.EditorialReviewStatusStateID)
 	if err != nil {
 		return err
 	}
@@ -75,12 +75,12 @@ func (t *Topic) Update(db XODB) error {
 
 	// sql query
 	const sqlstr = `UPDATE enm.topics SET ` +
-		`display_name_do_not_use = ?, editorial_review_status_reviewer = ?, editorial_review_status_time = ?, editorial_review_status_status_id = ?` +
+		`display_name_do_not_use = ?, editorial_review_status_reviewer = ?, editorial_review_status_time = ?, editorial_review_status_state_id = ?` +
 		` WHERE tct_id = ?`
 
 	// run query
-	XOLog(sqlstr, t.DisplayNameDoNotUse, t.EditorialReviewStatusReviewer, t.EditorialReviewStatusTime, t.EditorialReviewStatusStatusID, t.TctID)
-	_, err = db.Exec(sqlstr, t.DisplayNameDoNotUse, t.EditorialReviewStatusReviewer, t.EditorialReviewStatusTime, t.EditorialReviewStatusStatusID, t.TctID)
+	XOLog(sqlstr, t.DisplayNameDoNotUse, t.EditorialReviewStatusReviewer, t.EditorialReviewStatusTime, t.EditorialReviewStatusStateID, t.TctID)
+	_, err = db.Exec(sqlstr, t.DisplayNameDoNotUse, t.EditorialReviewStatusReviewer, t.EditorialReviewStatusTime, t.EditorialReviewStatusStateID, t.TctID)
 	return err
 }
 
@@ -123,28 +123,28 @@ func (t *Topic) Delete(db XODB) error {
 	return nil
 }
 
-// EditorialReviewStatusStatus returns the EditorialReviewStatusStatus associated with the Topic's EditorialReviewStatusStatusID (editorial_review_status_status_id).
+// EditorialReviewStatusState returns the EditorialReviewStatusState associated with the Topic's EditorialReviewStatusStateID (editorial_review_status_state_id).
 //
 // Generated from foreign key 'fk__topics__editorial_review_status_statuses'.
-func (t *Topic) EditorialReviewStatusStatus(db XODB) (*EditorialReviewStatusStatus, error) {
-	return EditorialReviewStatusStatusByID(db, t.EditorialReviewStatusStatusID)
+func (t *Topic) EditorialReviewStatusState(db XODB) (*EditorialReviewStatusState, error) {
+	return EditorialReviewStatusStateByID(db, t.EditorialReviewStatusStateID)
 }
 
-// TopicsByEditorialReviewStatusStatusID retrieves a row from 'enm.topics' as a Topic.
+// TopicsByEditorialReviewStatusStateID retrieves a row from 'enm.topics' as a Topic.
 //
-// Generated from index 'editorial_review_status_status_id'.
-func TopicsByEditorialReviewStatusStatusID(db XODB, editorialReviewStatusStatusID int) ([]*Topic, error) {
+// Generated from index 'editorial_review_status_state_id'.
+func TopicsByEditorialReviewStatusStateID(db XODB, editorialReviewStatusStateID int) ([]*Topic, error) {
 	var err error
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, display_name_do_not_use, editorial_review_status_reviewer, editorial_review_status_time, editorial_review_status_status_id ` +
+		`tct_id, display_name_do_not_use, editorial_review_status_reviewer, editorial_review_status_time, editorial_review_status_state_id ` +
 		`FROM enm.topics ` +
-		`WHERE editorial_review_status_status_id = ?`
+		`WHERE editorial_review_status_state_id = ?`
 
 	// run query
-	XOLog(sqlstr, editorialReviewStatusStatusID)
-	q, err := db.Query(sqlstr, editorialReviewStatusStatusID)
+	XOLog(sqlstr, editorialReviewStatusStateID)
+	q, err := db.Query(sqlstr, editorialReviewStatusStateID)
 	if err != nil {
 		return nil, err
 	}
@@ -158,7 +158,7 @@ func TopicsByEditorialReviewStatusStatusID(db XODB, editorialReviewStatusStatusI
 		}
 
 		// scan
-		err = q.Scan(&t.TctID, &t.DisplayNameDoNotUse, &t.EditorialReviewStatusReviewer, &t.EditorialReviewStatusTime, &t.EditorialReviewStatusStatusID)
+		err = q.Scan(&t.TctID, &t.DisplayNameDoNotUse, &t.EditorialReviewStatusReviewer, &t.EditorialReviewStatusTime, &t.EditorialReviewStatusStateID)
 		if err != nil {
 			return nil, err
 		}
@@ -177,7 +177,7 @@ func TopicByTctID(db XODB, tctID int) (*Topic, error) {
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`tct_id, display_name_do_not_use, editorial_review_status_reviewer, editorial_review_status_time, editorial_review_status_status_id ` +
+		`tct_id, display_name_do_not_use, editorial_review_status_reviewer, editorial_review_status_time, editorial_review_status_state_id ` +
 		`FROM enm.topics ` +
 		`WHERE tct_id = ?`
 
@@ -187,7 +187,7 @@ func TopicByTctID(db XODB, tctID int) (*Topic, error) {
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, tctID).Scan(&t.TctID, &t.DisplayNameDoNotUse, &t.EditorialReviewStatusReviewer, &t.EditorialReviewStatusTime, &t.EditorialReviewStatusStatusID)
+	err = db.QueryRow(sqlstr, tctID).Scan(&t.TctID, &t.DisplayNameDoNotUse, &t.EditorialReviewStatusReviewer, &t.EditorialReviewStatusTime, &t.EditorialReviewStatusStateID)
 	if err != nil {
 		return nil, err
 	}

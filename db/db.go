@@ -48,6 +48,8 @@ var tables = []string{
 	"indexpatterns",
 }
 
+var editorialReviewStatusStates map[string]tct.EditorialReviewStatusState
+
 func init() {
 	Database = os.Getenv("ENM_DATABASE")
 	username = os.Getenv("ENM_DATABASE_USERNAME")
@@ -75,6 +77,31 @@ func init() {
 
 	if err = DB.Ping(); err != nil {
 		panic(err.Error())
+	}
+
+	editorialReviewStatusStates["Not Reviewed"] = tct.EditorialReviewStatusState{
+		ReviewerIsNull: true,
+		TimeIsNull: true,
+		Changed: false,
+		Reviewed: false,
+	}
+	editorialReviewStatusStates["Reviewed, Unchanged"] = tct.EditorialReviewStatusState{
+		ReviewerIsNull: false,
+		TimeIsNull: false,
+		Changed: false,
+		Reviewed: true,
+	}
+	editorialReviewStatusStates["Reviewed, Changed"] = tct.EditorialReviewStatusState{
+		ReviewerIsNull: false,
+		TimeIsNull: false,
+		Changed: true,
+		Reviewed: true,
+	}
+	editorialReviewStatusStates["Reviewed Status Revoked"] = tct.EditorialReviewStatusState{
+		ReviewerIsNull: false,
+		TimeIsNull: false,
+		Changed: false,
+		Reviewed: false,
 	}
 }
 

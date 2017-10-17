@@ -45,6 +45,13 @@ var TctApiEndpoints = map[string]string{
 	"TopicTypesAll": "/api/topic/ttype/all/",
 }
 
+type EditorialReviewStatusState struct {
+	ReviewerIsNull bool
+	TimeIsNull bool
+	Changed bool
+	Reviewed bool
+}
+
 func GetResponseBody(params ...string) (body []byte) {
 	var request = params[0]
 

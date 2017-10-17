@@ -263,9 +263,15 @@ func Reload() {
 	// that comes in from TopicDetails, the reason being topics table is
 	// target of FKs in Relations.
 	for _, tctTopic := range tctTopics {
-		// TODO: remove display_name from table after figure out how to
-		// fix or workaround xo bug that prevents creation of full model
-		// code if tct_id is the only column.
+		// TODO: originally had display_name_do_not_use column in topics table
+		// due to xo bug that prevents creation of full model code if tct_id was
+		// the only column.  Now there are several more FK columns, so
+		// this display name colume could be dropped.  It's proven to be convenient
+		// though, and there might be some advantage to keeping it because it
+		// represents an end calculation done by TCT.  Originally we were thinking
+		// we'd be making the determination of which name should be the display
+		// name post-TCT, but do we actually need to do that?  And even if we do,
+		// we could still keep this TCT choice.
 		enmTopic := models.Topic{
 			TctID:               int(tctTopic.ID),
 			DisplayNameDoNotUse: tctTopic.DisplayName,

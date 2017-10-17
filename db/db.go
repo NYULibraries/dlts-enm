@@ -395,6 +395,7 @@ func Reload() {
 
 		enmTopic.Update(DB)
 
+		// Load names for topics
 		tctTopicHits := tctTopicDetail.Basket.TopicHits
 		for _, tctTopicHit := range tctTopicHits {
 			if ! scopeExists[tctTopicHit.Scope.ID] {

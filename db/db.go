@@ -261,7 +261,8 @@ func Reload() {
 
 	// All Topics must be loaded first before attempting to load everything
 	// that comes in from TopicDetails, the reason being topics table is
-	// target of FKs in Relations.
+	// target of FKs in Relations.  Note that editorial review status columns
+	// are not filled in until the second pass when topic details are fetched.
 	for _, tctTopic := range tctTopics {
 		// TODO: originally had display_name_do_not_use column in topics table
 		// due to xo bug that prevents creation of full model code if tct_id was

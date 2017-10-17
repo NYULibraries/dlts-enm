@@ -79,6 +79,7 @@ func init() {
 		panic(err.Error())
 	}
 
+	editorialReviewStatusStates = make(map[string]tct.EditorialReviewStatusState)
 	editorialReviewStatusStates["Not Reviewed"] = tct.EditorialReviewStatusState{
 		ReviewerIsNull: true,
 		TimeIsNull: true,
@@ -240,6 +241,7 @@ ORDER BY t2.display_name_do_not_use`
 }
 
 func Reload() {
+	loadEditorialReviewStatusStates()
 	loadRelationTypes()
 	loadTopicTypes()
 
@@ -524,6 +526,23 @@ func Reload() {
 					panic(err)
 				}
 			}
+		}
+	}
+}
+
+func loadEditorialReviewStatusStates() {
+	i := 0
+	for state, _ := range editorialReviewStatusStates {
+		i++
+		enmEditorialReviewStatusState := models.EditorialReviewStatusState{
+			ID: i,
+			State: state,
+		}
+
+		err := enmEditorialReviewStatusState.Insert(DB)
+		if err != nil {
+			fmt.Println(state)
+			panic(err)
 		}
 	}
 }

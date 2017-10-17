@@ -277,7 +277,6 @@ func Reload() {
 	relationDirectionIds := make(map[string]int)
 	relationDirectionId := 0
 	relationExists := make(map[int64]bool)
-	relationTypeExists := make(map[int64]bool)
 	scopeExists := make(map[int64]bool)
 	tctTopics := tct.GetTopicsAll()
 
@@ -321,22 +320,6 @@ func Reload() {
 		for _, tctTopicRelation := range tctTopicRelations {
 			if ! relationExists[tctTopicRelation.ID] {
 				tctRelationType := tctTopicRelation.Relationtype
-				if ! relationTypeExists[tctRelationType.ID] {
-					enmRelationType := models.RelationType{
-						TctID: int(tctRelationType.ID),
-						Rtype: tctRelationType.Rtype,
-						RoleFrom: tctRelationType.RoleFrom,
-						RoleTo: tctRelationType.RoleTo,
-						Symmetrical: tctRelationType.Symmetrical,
-					}
-					err = enmRelationType.Insert(DB)
-					if err != nil {
-						fmt.Println(enmRelationType)
-						panic(err)
-					}
-					relationTypeExists[tctRelationType.ID] = true
-				}
-
 				tctRelationDirection := tctTopicRelation.Direction
 				if relationDirectionIds[tctRelationDirection] == 0 {
 					relationDirectionId++

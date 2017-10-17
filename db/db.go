@@ -53,7 +53,12 @@ var tables = []string{
 	"indexpatterns",
 }
 
-var editorialReviewStatusStatesMap map[tct.EditorialReviewStatusState]string
+var editorialReviewStatusStatesMap map[tct.EditorialReviewStatusState]EditorialStatusStateTableRow
+
+type EditorialStatusStateTableRow struct {
+	Id int
+	State string
+}
 
 func init() {
 	Database = os.Getenv("ENM_DATABASE")
@@ -84,31 +89,45 @@ func init() {
 		panic(err.Error())
 	}
 
-	editorialReviewStatusStatesMap = make(map[tct.EditorialReviewStatusState]string)
+	editorialReviewStatusStatesMap =
+		make(map[tct.EditorialReviewStatusState]EditorialStatusStateTableRow)
+
 	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: true,
 		TimeIsNull: true,
 		Changed: false,
 		Reviewed: false,
-	}] = "Not Reviewed"
+	}] = EditorialStatusStateTableRow{
+		Id: 1,
+		State: "Not Reviewed",
+	}
 	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: false,
 		TimeIsNull: false,
 		Changed: false,
 		Reviewed: true,
-	}] = "Reviewed, Unchanged"
+	}] = EditorialStatusStateTableRow{
+		Id: 2,
+		State: "Reviewed, Unchanged",
+	}
 	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: false,
 		TimeIsNull: false,
 		Changed: true,
 		Reviewed: true,
-	}] = "Reviewed, Changed"
+	}] = EditorialStatusStateTableRow{
+		Id: 3,
+		State: "Reviewed, Changed",
+	}
 	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
 		ReviewerIsNull: false,
 		TimeIsNull: false,
 		Changed: false,
 		Reviewed: false,
-	}] = "Reviewed Status Revoked"
+	}] = EditorialStatusStateTableRow{
+		Id: 4,
+		State: "Reviewed Status Revoked",
+	}
 }
 
 func ClearTables() {
@@ -543,17 +562,15 @@ func Reload() {
 }
 
 func loadEditorialReviewStatusStates() {
-	i := 0
-	for _, state := range editorialReviewStatusStatesMap {
-		i++
+	for _, row := range editorialReviewStatusStatesMap {
 		enmEditorialReviewStatusState := models.EditorialReviewStatusState{
-			ID: i,
-			State: state,
+			ID: row.Id,
+			State: row.State,
 		}
 
 		err := enmEditorialReviewStatusState.Insert(DB)
 		if err != nil {
-			fmt.Println(state)
+			fmt.Println(row.State)
 			panic(err)
 		}
 	}

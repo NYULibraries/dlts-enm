@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `editorial_review_status_states`
+-- Table structure for table `editorial_review_status_state`
 --
 
-DROP TABLE IF EXISTS `editorial_review_status_states`;
+DROP TABLE IF EXISTS `editorial_review_status_state`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `editorial_review_status_states` (
+CREATE TABLE `editorial_review_status_state` (
   `id` int(11) NOT NULL,
   `state` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
@@ -348,7 +348,7 @@ CREATE TABLE `topics` (
   `editorial_review_status_state_id` int(11) NOT NULL,
   PRIMARY KEY (`tct_id`),
   KEY `editorial_review_status_state_id` (`editorial_review_status_state_id`) USING BTREE,
-  CONSTRAINT `fk__topics__editorial_review_status_statuses` FOREIGN KEY (`editorial_review_status_state_id`) REFERENCES `editorial_review_status_states` (`id`)
+  CONSTRAINT `fk__topics__editorial_review_status_state` FOREIGN KEY (`editorial_review_status_state_id`) REFERENCES `editorial_review_status_state` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -465,4 +465,4 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-17 13:13:45
+-- Dump completed on 2017-10-17 16:39:16

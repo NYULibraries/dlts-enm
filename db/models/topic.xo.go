@@ -125,7 +125,7 @@ func (t *Topic) Delete(db XODB) error {
 
 // EditorialReviewStatusState returns the EditorialReviewStatusState associated with the Topic's EditorialReviewStatusStateID (editorial_review_status_state_id).
 //
-// Generated from foreign key 'fk__topics__editorial_review_status_statuses'.
+// Generated from foreign key 'fk__topics__editorial_review_status_state'.
 func (t *Topic) EditorialReviewStatusState(db XODB) (*EditorialReviewStatusState, error) {
 	return EditorialReviewStatusStateByID(db, t.EditorialReviewStatusStateID)
 }

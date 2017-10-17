@@ -7,7 +7,7 @@ import (
 	"errors"
 )
 
-// EditorialReviewStatusState represents a row from 'enm.editorial_review_status_states'.
+// EditorialReviewStatusState represents a row from 'enm.editorial_review_status_state'.
 type EditorialReviewStatusState struct {
 	ID    int    `json:"id"`    // id
 	State string `json:"state"` // state
@@ -36,7 +36,7 @@ func (erss *EditorialReviewStatusState) Insert(db XODB) error {
 	}
 
 	// sql insert query, primary key must be provided
-	const sqlstr = `INSERT INTO enm.editorial_review_status_states (` +
+	const sqlstr = `INSERT INTO enm.editorial_review_status_state (` +
 		`id, state` +
 		`) VALUES (` +
 		`?, ?` +
@@ -70,7 +70,7 @@ func (erss *EditorialReviewStatusState) Update(db XODB) error {
 	}
 
 	// sql query
-	const sqlstr = `UPDATE enm.editorial_review_status_states SET ` +
+	const sqlstr = `UPDATE enm.editorial_review_status_state SET ` +
 		`state = ?` +
 		` WHERE id = ?`
 
@@ -104,7 +104,7 @@ func (erss *EditorialReviewStatusState) Delete(db XODB) error {
 	}
 
 	// sql query
-	const sqlstr = `DELETE FROM enm.editorial_review_status_states WHERE id = ?`
+	const sqlstr = `DELETE FROM enm.editorial_review_status_state WHERE id = ?`
 
 	// run query
 	XOLog(sqlstr, erss.ID)
@@ -119,16 +119,16 @@ func (erss *EditorialReviewStatusState) Delete(db XODB) error {
 	return nil
 }
 
-// EditorialReviewStatusStateByID retrieves a row from 'enm.editorial_review_status_states' as a EditorialReviewStatusState.
+// EditorialReviewStatusStateByID retrieves a row from 'enm.editorial_review_status_state' as a EditorialReviewStatusState.
 //
-// Generated from index 'editorial_review_status_states_id_pkey'.
+// Generated from index 'editorial_review_status_state_id_pkey'.
 func EditorialReviewStatusStateByID(db XODB, id int) (*EditorialReviewStatusState, error) {
 	var err error
 
 	// sql query
 	const sqlstr = `SELECT ` +
 		`id, state ` +
-		`FROM enm.editorial_review_status_states ` +
+		`FROM enm.editorial_review_status_state ` +
 		`WHERE id = ?`
 
 	// run query

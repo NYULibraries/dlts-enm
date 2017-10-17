@@ -277,7 +277,9 @@ func Reload() {
 	relationDirectionIds := make(map[string]int)
 	relationDirectionId := 0
 	relationExists := make(map[int64]bool)
+
 	scopeExists := make(map[int64]bool)
+
 	tctTopics := tct.GetTopicsAll()
 
 	var err error

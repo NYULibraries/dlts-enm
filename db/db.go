@@ -535,6 +535,8 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 	relationDirectionId := 0
 	relationExists := make(map[int64]bool)
 
+	scopeExists := make(map[int64]bool)
+
 	// Second pass: get topic details
 	for _, tctTopic := range tctTopics {
 		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
@@ -589,7 +591,7 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 
 		setEditorialReviewStatus(tctTopicDetail)
 
-		loadNames(tctTopicDetail)
+		loadNames(tctTopicDetail, scopeExists)
 	}
 }
 
@@ -623,9 +625,7 @@ func setEditorialReviewStatus(tctTopicDetail tct.TopicDetail) {
 	enmTopic.Update(DB)
 }
 
-func loadNames(tctTopicDetail tct.TopicDetail) {
-	scopeExists := make(map[int64]bool)
-
+func loadNames(tctTopicDetail tct.TopicDetail, scopeExists map[int64]bool) {
 	tctTopicHits := tctTopicDetail.Basket.TopicHits
 	for _, tctTopicHit := range tctTopicHits {
 		if ! scopeExists[tctTopicHit.Scope.ID] {

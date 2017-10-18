@@ -320,13 +320,13 @@ CREATE TABLE `scopes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `topic_types`
+-- Table structure for table `topic_type`
 --
 
-DROP TABLE IF EXISTS `topic_types`;
+DROP TABLE IF EXISTS `topic_type`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `topic_types` (
+CREATE TABLE `topic_type` (
   `tct_id` int(11) NOT NULL,
   `ttype` varchar(3000) NOT NULL,
   PRIMARY KEY (`tct_id`)
@@ -349,6 +349,23 @@ CREATE TABLE `topics` (
   PRIMARY KEY (`tct_id`),
   KEY `editorial_review_status_state_id` (`editorial_review_status_state_id`) USING BTREE,
   CONSTRAINT `fk__topics__editorial_review_status_state` FOREIGN KEY (`editorial_review_status_state_id`) REFERENCES `editorial_review_status_state` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `topics_topic_type`
+--
+
+DROP TABLE IF EXISTS `topics_topic_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topics_topic_type` (
+  `topic_id` int(11) NOT NULL,
+  `topic_type_id` int(11) NOT NULL,
+  KEY `topic_id` (`topic_id`),
+  KEY `topic_type_id` (`topic_type_id`),
+  CONSTRAINT `fk__topics_topic_type__topic_type` FOREIGN KEY (`topic_type_id`) REFERENCES `topic_type` (`tct_id`),
+  CONSTRAINT `fk__topics_topic_type__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -385,8 +402,8 @@ CREATE TABLE `weblinks` (
   PRIMARY KEY (`tct_id`),
   KEY `weblinks_relationship_id` (`weblinks_relationship_id`),
   KEY `weblinks_vocabulary_id` (`weblinks_vocabulary_id`),
-  CONSTRAINT `fk__weblinks__weblinks_vocabulary` FOREIGN KEY (`weblinks_vocabulary_id`) REFERENCES `weblinks_vocabulary` (`id`),
-  CONSTRAINT `fk__weblinks__weblinks_relationship` FOREIGN KEY (`weblinks_relationship_id`) REFERENCES `weblinks_relationship` (`id`)
+  CONSTRAINT `fk__weblinks__weblinks_relationship` FOREIGN KEY (`weblinks_relationship_id`) REFERENCES `weblinks_relationship` (`id`),
+  CONSTRAINT `fk__weblinks__weblinks_vocabulary` FOREIGN KEY (`weblinks_vocabulary_id`) REFERENCES `weblinks_vocabulary` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -465,4 +482,4 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-17 16:39:16
+-- Dump completed on 2017-10-18 17:04:33

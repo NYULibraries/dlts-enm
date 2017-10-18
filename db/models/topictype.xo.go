@@ -7,7 +7,7 @@ import (
 	"errors"
 )
 
-// TopicType represents a row from 'enm.topic_types'.
+// TopicType represents a row from 'enm.topic_type'.
 type TopicType struct {
 	TctID int    `json:"tct_id"` // tct_id
 	Ttype string `json:"ttype"`  // ttype
@@ -36,7 +36,7 @@ func (tt *TopicType) Insert(db XODB) error {
 	}
 
 	// sql insert query, primary key must be provided
-	const sqlstr = `INSERT INTO enm.topic_types (` +
+	const sqlstr = `INSERT INTO enm.topic_type (` +
 		`tct_id, ttype` +
 		`) VALUES (` +
 		`?, ?` +
@@ -70,7 +70,7 @@ func (tt *TopicType) Update(db XODB) error {
 	}
 
 	// sql query
-	const sqlstr = `UPDATE enm.topic_types SET ` +
+	const sqlstr = `UPDATE enm.topic_type SET ` +
 		`ttype = ?` +
 		` WHERE tct_id = ?`
 
@@ -104,7 +104,7 @@ func (tt *TopicType) Delete(db XODB) error {
 	}
 
 	// sql query
-	const sqlstr = `DELETE FROM enm.topic_types WHERE tct_id = ?`
+	const sqlstr = `DELETE FROM enm.topic_type WHERE tct_id = ?`
 
 	// run query
 	XOLog(sqlstr, tt.TctID)
@@ -119,16 +119,16 @@ func (tt *TopicType) Delete(db XODB) error {
 	return nil
 }
 
-// TopicTypeByTctID retrieves a row from 'enm.topic_types' as a TopicType.
+// TopicTypeByTctID retrieves a row from 'enm.topic_type' as a TopicType.
 //
-// Generated from index 'topic_types_tct_id_pkey'.
+// Generated from index 'topic_type_tct_id_pkey'.
 func TopicTypeByTctID(db XODB, tctID int) (*TopicType, error) {
 	var err error
 
 	// sql query
 	const sqlstr = `SELECT ` +
 		`tct_id, ttype ` +
-		`FROM enm.topic_types ` +
+		`FROM enm.topic_type ` +
 		`WHERE tct_id = ?`
 
 	// run query

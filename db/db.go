@@ -271,9 +271,13 @@ ORDER BY t2.display_name_do_not_use`
 
 func Reload() {
 	loadEditorialReviewStatusStates()
+
 	loadRelationTypes()
+
 	loadTopicTypes()
+
 	tctTopics := loadTopicsFirstPass()
+
 	loadTopicsSecondPass(tctTopics)
 
 	// TODO: Find out if there is an internal TCT ID for IndexPatterns, and if

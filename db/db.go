@@ -379,7 +379,6 @@ func loadTopicsFirstPass() []tct.Topic {
 
 func loadTopicsSecondPass(tctTopics []tct.Topic) {
 	relationDirectionIds := make(map[string]int)
-	relationDirectionId := 0
 	relationExists := make(map[int64]bool)
 
 	scopeExists := make(map[int64]bool)
@@ -388,57 +387,67 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 	for _, tctTopic := range tctTopics {
 		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
 
-		// Load relations for topic
-		tctTopicRelations := tctTopicDetail.Relations
-		for _, tctTopicRelation := range tctTopicRelations {
-			if ! relationExists[tctTopicRelation.ID] {
-				tctRelationType := tctTopicRelation.Relationtype
-				tctRelationDirection := tctTopicRelation.Direction
-				if relationDirectionIds[tctRelationDirection] == 0 {
-					relationDirectionId++
-					enmRelationDirection := models.RelationDirection{
-						ID:        relationDirectionId,
-						Direction: tctRelationDirection,
-					}
-					err := enmRelationDirection.Insert(DB)
-					if err != nil {
-						fmt.Println(enmRelationDirection)
-						panic(err)
-					}
-					relationDirectionIds[tctRelationDirection] = relationDirectionId
-				}
-
-				var roleFromTopicId int
-				var roleToTopicId int
-				if tctTopicRelation.Direction == "source" {
-					roleFromTopicId = int(tctTopicRelation.Basket.ID)
-					roleToTopicId = int(tctTopic.ID)
-				} else if tctTopicRelation.Direction == "destination" {
-					roleFromTopicId = int(tctTopic.ID)
-					roleToTopicId = int(tctTopicRelation.Basket.ID)
-				} else {
-					panic( "Unknown relation direction: " + tctTopicRelation.Direction)
-				}
-				enmRelation := models.Relation{
-					TctID: int(tctTopicRelation.ID),
-					RelationTypeID: int(tctRelationType.ID),
-					RelationDirectionID: relationDirectionIds[tctRelationDirection],
-					RoleFromTopicID: roleFromTopicId,
-					RoleToTopicID: roleToTopicId,
-				}
-				err := enmRelation.Insert(DB)
-				if err != nil {
-					fmt.Println(err)
-					panic(err)
-				}
-
-				relationExists[tctTopicRelation.ID] = true
-			}
-		}
+		loadRelations(tctTopicDetail, relationExists, relationDirectionIds)
 
 		setEditorialReviewStatus(tctTopicDetail)
 
 		loadNames(tctTopicDetail, scopeExists)
+	}
+}
+
+func loadRelations(
+	tctTopicDetail tct.TopicDetail,
+	relationExists map[int64]bool,
+	relationDirectionIds map[string]int) {
+
+	tctTopicRelations := tctTopicDetail.Relations
+
+	relationDirectionId := 0
+
+	for _, tctTopicRelation := range tctTopicRelations {
+		if ! relationExists[tctTopicRelation.ID] {
+			tctRelationType := tctTopicRelation.Relationtype
+			tctRelationDirection := tctTopicRelation.Direction
+			if relationDirectionIds[tctRelationDirection] == 0 {
+				relationDirectionId++
+				enmRelationDirection := models.RelationDirection{
+					ID:        relationDirectionId,
+					Direction: tctRelationDirection,
+				}
+				err := enmRelationDirection.Insert(DB)
+				if err != nil {
+					fmt.Println(enmRelationDirection)
+					panic(err)
+				}
+				relationDirectionIds[tctRelationDirection] = relationDirectionId
+			}
+
+			var roleFromTopicId int
+			var roleToTopicId int
+			if tctTopicRelation.Direction == "source" {
+				roleFromTopicId = int(tctTopicRelation.Basket.ID)
+				roleToTopicId = int(tctTopicDetail.Basket.ID)
+			} else if tctTopicRelation.Direction == "destination" {
+				roleFromTopicId = int(tctTopicDetail.Basket.ID)
+				roleToTopicId = int(tctTopicRelation.Basket.ID)
+			} else {
+				panic( "Unknown relation direction: " + tctTopicRelation.Direction)
+			}
+			enmRelation := models.Relation{
+				TctID: int(tctTopicRelation.ID),
+				RelationTypeID: int(tctRelationType.ID),
+				RelationDirectionID: relationDirectionIds[tctRelationDirection],
+				RoleFromTopicID: roleFromTopicId,
+				RoleToTopicID: roleToTopicId,
+			}
+			err := enmRelation.Insert(DB)
+			if err != nil {
+				fmt.Println(err)
+				panic(err)
+			}
+
+			relationExists[tctTopicRelation.ID] = true
+		}
 	}
 }
 

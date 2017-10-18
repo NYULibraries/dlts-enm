@@ -565,59 +565,11 @@ func loadEpubs(epubIndexPatternMap map[int]int) {
 
 		// All Locations must be loaded first before attempting to load Occurrences,
 		// the reason being Occurrences target Locations for RingNext and RingPrevious FKs
-		tctLocations := tctEpubDetail.Locations
-		for _, tctLocation := range tctLocations {
-			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
-
-			nextId := sql.NullInt64{}
-			if tctLocationDetail.PreviousLocationID != nil {
-				nextId.Int64 = *tctLocationDetail.PreviousLocationID
-				nextId.Valid = true
-			} else {
-				nextId.Valid = false
-			}
-
-			prevId := sql.NullInt64{}
-			if tctLocationDetail.PreviousLocationID != nil {
-				prevId.Int64 = *tctLocationDetail.PreviousLocationID
-				prevId.Valid = true
-			} else {
-				prevId.Valid = false
-			}
-
-			enmLocation := models.Location{
-				TctID: int(tctLocationDetail.ID),
-				EpubID: int(tctEpub.ID),
-				Localid: tctLocationDetail.Localid,
-				SequenceNumber: int(tctLocation.SequenceNumber),
-				ContentUniqueIndicator: tctLocationDetail.Content.ContentUniqueIndicator,
-				ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
-				ContentText: tctLocationDetail.Content.Text,
-
-				// Occurrences are processed in the second pass
-
-				PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,
-				PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
-				PagenumberCSSSelector: tctLocationDetail.Pagenumber.CSSSelector,
-				PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
-
-				// TODO: Re-create FKs:
-				// CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
-				// CONSTRAINT `fk__locations__previous_location_id__locations__tct_id` FOREIGN KEY (`previous_location_id`) REFERENCES `locations` (`tct_id`)
-				// ...and have Reload command delete them before loading locations table, then re-create them after load is finished.
-				NextLocationID: nextId,
-				PreviousLocationID: prevId,
-			}
-			err := enmLocation.Insert(DB)
-			if err != nil {
-				fmt.Println(enmLocation)
-				panic(err)
-			}
-		}
+		locationIds := loadLocations(tctEpubDetail, epubId)
 
 		// Second pass: get Occurrences
-		for _, tctLocation := range tctLocations {
-			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+		for _, locationId := range locationIds {
+			tctLocationDetail := tct.GetLocation(locationId)
 
 			for _, tctOccurrence := range tctLocationDetail.Occurrences {
 				ringNextId := sql.NullInt64{}
@@ -642,7 +594,7 @@ func loadEpubs(epubIndexPatternMap map[int]int) {
 				// * fk__occurrences__ring_prev__locations__tct_id
 				enmOccurrence := models.Occurrence{
 					TctID: int(tctOccurrence.ID),
-					LocationID: int(tctLocation.ID),
+					LocationID: int(locationId),
 					TopicID: int(tctOccurrence.Basket.ID),
 					RingNext: ringNextId,
 					RingPrev: ringPrevId,
@@ -671,6 +623,63 @@ func insertEpub(tctEpubDetail tct.EpubDetail, epubId int, indexPatternId int) {
 		fmt.Println(enmEpub)
 		panic(err )
 	}
+}
+
+func loadLocations(tctEpubDetail tct.EpubDetail, epubId int) (locationIds []int) {
+	tctLocations := tctEpubDetail.Locations
+
+	for _, tctLocation := range tctLocations {
+		tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+
+		nextId := sql.NullInt64{}
+		if tctLocationDetail.PreviousLocationID != nil {
+			nextId.Int64 = *tctLocationDetail.PreviousLocationID
+			nextId.Valid = true
+		} else {
+			nextId.Valid = false
+		}
+
+		prevId := sql.NullInt64{}
+		if tctLocationDetail.PreviousLocationID != nil {
+			prevId.Int64 = *tctLocationDetail.PreviousLocationID
+			prevId.Valid = true
+		} else {
+			prevId.Valid = false
+		}
+
+		enmLocation := models.Location{
+			TctID: int(tctLocationDetail.ID),
+			EpubID: int(epubId),
+			Localid: tctLocationDetail.Localid,
+			SequenceNumber: int(tctLocation.SequenceNumber),
+			ContentUniqueIndicator: tctLocationDetail.Content.ContentUniqueIndicator,
+			ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
+			ContentText: tctLocationDetail.Content.Text,
+
+			// Occurrences are processed in the second pass
+
+			PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,
+			PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
+			PagenumberCSSSelector: tctLocationDetail.Pagenumber.CSSSelector,
+			PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
+
+			// TODO: Re-create FKs:
+			// CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
+			// CONSTRAINT `fk__locations__previous_location_id__locations__tct_id` FOREIGN KEY (`previous_location_id`) REFERENCES `locations` (`tct_id`)
+			// ...and have Reload command delete them before loading locations table, then re-create them after load is finished.
+			NextLocationID: nextId,
+			PreviousLocationID: prevId,
+		}
+		err := enmLocation.Insert(DB)
+		if err != nil {
+			fmt.Println(enmLocation)
+			panic(err)
+		}
+
+		locationIds = append(locationIds, int(tctLocationDetail.ID))
+	}
+
+	return
 }
 
 func serialize(stringArray []string) string {

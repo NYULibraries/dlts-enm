@@ -531,8 +531,6 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 	relationDirectionId := 0
 	relationExists := make(map[int64]bool)
 
-	scopeExists := make(map[int64]bool)
-
 	// Second pass: get topic details
 	for _, tctTopic := range tctTopics {
 		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
@@ -587,36 +585,7 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 
 		setEditorialReviewStatus(tctTopicDetail)
 
-		// Load names for topics
-		tctTopicHits := tctTopicDetail.Basket.TopicHits
-		for _, tctTopicHit := range tctTopicHits {
-			if ! scopeExists[tctTopicHit.Scope.ID] {
-				enmScope := models.Scope{
-					TctID: int(tctTopicHit.Scope.ID),
-					Scope: tctTopicHit.Scope.Scope,
-				}
-				err := enmScope.Insert(DB)
-				if err != nil {
-					fmt.Println(enmScope)
-					panic(err)
-				}
-				scopeExists[tctTopicHit.Scope.ID] = true
-			}
-
-			enmName := models.Name{
-				TctID: int(tctTopicHit.ID),
-				TopicID: int(tctTopic.ID),
-				Name: tctTopicHit.Name,
-				ScopeID: int(tctTopicHit.Scope.ID),
-				Bypass: tctTopicHit.Bypass,
-				Hidden: tctTopicHit.Hidden,
-				Preferred: tctTopicHit.Preferred,
-			}
-			err := enmName.Insert(DB)
-			if err != nil {fmt.Println(enmName)
-				panic(err)
-			}
-		}
+		loadNamesForTopic(tctTopicDetail)
 	}
 }
 
@@ -648,6 +617,40 @@ func setEditorialReviewStatus(tctTopicDetail tct.TopicDetail) {
 	enmTopic.EditorialReviewStatusStateID = editorialReviewStatusStateId
 
 	enmTopic.Update(DB)
+}
+
+func loadNamesForTopic(tctTopicDetail tct.TopicDetail) {
+	scopeExists := make(map[int64]bool)
+
+	tctTopicHits := tctTopicDetail.Basket.TopicHits
+	for _, tctTopicHit := range tctTopicHits {
+		if ! scopeExists[tctTopicHit.Scope.ID] {
+			enmScope := models.Scope{
+				TctID: int(tctTopicHit.Scope.ID),
+				Scope: tctTopicHit.Scope.Scope,
+			}
+			err := enmScope.Insert(DB)
+			if err != nil {
+				fmt.Println(enmScope)
+				panic(err)
+			}
+			scopeExists[tctTopicHit.Scope.ID] = true
+		}
+
+		enmName := models.Name{
+			TctID: int(tctTopicHit.ID),
+			TopicID: int(tctTopicDetail.Basket.ID),
+			Name: tctTopicHit.Name,
+			ScopeID: int(tctTopicHit.Scope.ID),
+			Bypass: tctTopicHit.Bypass,
+			Hidden: tctTopicHit.Hidden,
+			Preferred: tctTopicHit.Preferred,
+		}
+		err := enmName.Insert(DB)
+		if err != nil {fmt.Println(enmName)
+			panic(err)
+		}
+	}
 }
 
 func serialize(stringArray []string) string {

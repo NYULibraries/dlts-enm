@@ -274,125 +274,7 @@ func Reload() {
 	loadRelationTypes()
 	loadTopicTypes()
 	tctTopics := loadTopicsFirstPass()
-
-	relationDirectionIds := make(map[string]int)
-	relationDirectionId := 0
-	relationExists := make(map[int64]bool)
-
-	scopeExists := make(map[int64]bool)
-
-	// Second pass: get topic details
-	for _, tctTopic := range tctTopics {
-		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
-
-		// Load relations for topic
-		tctTopicRelations := tctTopicDetail.Relations
-		for _, tctTopicRelation := range tctTopicRelations {
-			if ! relationExists[tctTopicRelation.ID] {
-				tctRelationType := tctTopicRelation.Relationtype
-				tctRelationDirection := tctTopicRelation.Direction
-				if relationDirectionIds[tctRelationDirection] == 0 {
-					relationDirectionId++
-					enmRelationDirection := models.RelationDirection{
-						ID:        relationDirectionId,
-						Direction: tctRelationDirection,
-					}
-					err := enmRelationDirection.Insert(DB)
-					if err != nil {
-						fmt.Println(enmRelationDirection)
-						panic(err)
-					}
-					relationDirectionIds[tctRelationDirection] = relationDirectionId
-				}
-
-				var roleFromTopicId int
-				var roleToTopicId int
-				if tctTopicRelation.Direction == "source" {
-					roleFromTopicId = int(tctTopicRelation.Basket.ID)
-					roleToTopicId = int(tctTopic.ID)
-				} else if tctTopicRelation.Direction == "destination" {
-					roleFromTopicId = int(tctTopic.ID)
-					roleToTopicId = int(tctTopicRelation.Basket.ID)
-				} else {
-					panic( "Unknown relation direction: " + tctTopicRelation.Direction)
-				}
-				enmRelation := models.Relation{
-					TctID: int(tctTopicRelation.ID),
-					RelationTypeID: int(tctRelationType.ID),
-					RelationDirectionID: relationDirectionIds[tctRelationDirection],
-					RoleFromTopicID: roleFromTopicId,
-					RoleToTopicID: roleToTopicId,
-				}
-				err := enmRelation.Insert(DB)
-				if err != nil {
-					fmt.Println(err)
-					panic(err)
-				}
-
-				relationExists[tctTopicRelation.ID] = true
-			}
-		}
-
-		// Set editorial review status for topic
-		tctReview := tctTopicDetail.Basket.Review
-		tctEditorialReviewStatusState := tct.EditorialReviewStatusState{
-			ReviewerIsNull: tctReview.Reviewer == "",
-			TimeIsNull:     tctReview.Time == "",
-			Changed:        tctReview.Changed,
-			Reviewed:       tctReview.Reviewed,
-		}
-		editorialReviewStatusStateId :=
-			editorialReviewStatusStatesMap[tctEditorialReviewStatusState].Id
-
-		// Update topic
-		enmTopic, err := models.TopicByTctID(DB, int(tctTopicDetail.Basket.ID))
-		if err != nil {
-			panic(fmt.Sprintf("ERROR: could not fetch topic %d", int(tctTopicDetail.Basket.ID)))
-		}
-
-		enmTopic.EditorialReviewStatusReviewer = sql.NullString{
-			String: tctReview.Reviewer,
-			Valid: true,
-		}
-		enmTopic.EditorialReviewStatusTime = sql.NullString{
-			String: tctReview.Time,
-			Valid: true,
-		}
-		enmTopic.EditorialReviewStatusStateID = editorialReviewStatusStateId
-
-		enmTopic.Update(DB)
-
-		// Load names for topics
-		tctTopicHits := tctTopicDetail.Basket.TopicHits
-		for _, tctTopicHit := range tctTopicHits {
-			if ! scopeExists[tctTopicHit.Scope.ID] {
-				enmScope := models.Scope{
-					TctID: int(tctTopicHit.Scope.ID),
-					Scope: tctTopicHit.Scope.Scope,
-				}
-				err = enmScope.Insert(DB)
-				if err != nil {
-					fmt.Println(enmScope)
-					panic(err)
-				}
-				scopeExists[tctTopicHit.Scope.ID] = true
-			}
-
-			enmName := models.Name{
-				TctID: int(tctTopicHit.ID),
-				TopicID: int(tctTopic.ID),
-				Name: tctTopicHit.Name,
-				ScopeID: int(tctTopicHit.Scope.ID),
-				Bypass: tctTopicHit.Bypass,
-				Hidden: tctTopicHit.Hidden,
-				Preferred: tctTopicHit.Preferred,
-			}
-			err := enmName.Insert(DB)
-			if err != nil {fmt.Println(enmName)
-				panic(err)
-			}
-		}
-	}
+	loadTopicsSecondPass(tctTopics)
 
 	// TODO: Find out if there is an internal TCT ID for IndexPatterns, and if
 	// so, maybe ask Infoloom to include it in the API responses instead of
@@ -642,6 +524,127 @@ func loadTopicsFirstPass() []tct.Topic {
 	}
 
 	return tctTopics
+}
+
+func loadTopicsSecondPass(tctTopics []tct.Topic) {
+	relationDirectionIds := make(map[string]int)
+	relationDirectionId := 0
+	relationExists := make(map[int64]bool)
+
+	scopeExists := make(map[int64]bool)
+
+	// Second pass: get topic details
+	for _, tctTopic := range tctTopics {
+		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
+
+		// Load relations for topic
+		tctTopicRelations := tctTopicDetail.Relations
+		for _, tctTopicRelation := range tctTopicRelations {
+			if ! relationExists[tctTopicRelation.ID] {
+				tctRelationType := tctTopicRelation.Relationtype
+				tctRelationDirection := tctTopicRelation.Direction
+				if relationDirectionIds[tctRelationDirection] == 0 {
+					relationDirectionId++
+					enmRelationDirection := models.RelationDirection{
+						ID:        relationDirectionId,
+						Direction: tctRelationDirection,
+					}
+					err := enmRelationDirection.Insert(DB)
+					if err != nil {
+						fmt.Println(enmRelationDirection)
+						panic(err)
+					}
+					relationDirectionIds[tctRelationDirection] = relationDirectionId
+				}
+
+				var roleFromTopicId int
+				var roleToTopicId int
+				if tctTopicRelation.Direction == "source" {
+					roleFromTopicId = int(tctTopicRelation.Basket.ID)
+					roleToTopicId = int(tctTopic.ID)
+				} else if tctTopicRelation.Direction == "destination" {
+					roleFromTopicId = int(tctTopic.ID)
+					roleToTopicId = int(tctTopicRelation.Basket.ID)
+				} else {
+					panic( "Unknown relation direction: " + tctTopicRelation.Direction)
+				}
+				enmRelation := models.Relation{
+					TctID: int(tctTopicRelation.ID),
+					RelationTypeID: int(tctRelationType.ID),
+					RelationDirectionID: relationDirectionIds[tctRelationDirection],
+					RoleFromTopicID: roleFromTopicId,
+					RoleToTopicID: roleToTopicId,
+				}
+				err := enmRelation.Insert(DB)
+				if err != nil {
+					fmt.Println(err)
+					panic(err)
+				}
+
+				relationExists[tctTopicRelation.ID] = true
+			}
+		}
+
+		// Set editorial review status for topic
+		tctReview := tctTopicDetail.Basket.Review
+		tctEditorialReviewStatusState := tct.EditorialReviewStatusState{
+			ReviewerIsNull: tctReview.Reviewer == "",
+			TimeIsNull:     tctReview.Time == "",
+			Changed:        tctReview.Changed,
+			Reviewed:       tctReview.Reviewed,
+		}
+		editorialReviewStatusStateId :=
+			editorialReviewStatusStatesMap[tctEditorialReviewStatusState].Id
+
+		// Update topic
+		enmTopic, err := models.TopicByTctID(DB, int(tctTopicDetail.Basket.ID))
+		if err != nil {
+			panic(fmt.Sprintf("ERROR: could not fetch topic %d", int(tctTopicDetail.Basket.ID)))
+		}
+
+		enmTopic.EditorialReviewStatusReviewer = sql.NullString{
+			String: tctReview.Reviewer,
+			Valid: true,
+		}
+		enmTopic.EditorialReviewStatusTime = sql.NullString{
+			String: tctReview.Time,
+			Valid: true,
+		}
+		enmTopic.EditorialReviewStatusStateID = editorialReviewStatusStateId
+
+		enmTopic.Update(DB)
+
+		// Load names for topics
+		tctTopicHits := tctTopicDetail.Basket.TopicHits
+		for _, tctTopicHit := range tctTopicHits {
+			if ! scopeExists[tctTopicHit.Scope.ID] {
+				enmScope := models.Scope{
+					TctID: int(tctTopicHit.Scope.ID),
+					Scope: tctTopicHit.Scope.Scope,
+				}
+				err = enmScope.Insert(DB)
+				if err != nil {
+					fmt.Println(enmScope)
+					panic(err)
+				}
+				scopeExists[tctTopicHit.Scope.ID] = true
+			}
+
+			enmName := models.Name{
+				TctID: int(tctTopicHit.ID),
+				TopicID: int(tctTopic.ID),
+				Name: tctTopicHit.Name,
+				ScopeID: int(tctTopicHit.Scope.ID),
+				Bypass: tctTopicHit.Bypass,
+				Hidden: tctTopicHit.Hidden,
+				Preferred: tctTopicHit.Preferred,
+			}
+			err := enmName.Insert(DB)
+			if err != nil {fmt.Println(enmName)
+				panic(err)
+			}
+		}
+	}
 }
 
 func serialize(stringArray []string) string {

@@ -567,45 +567,7 @@ func loadEpubs(epubIndexPatternMap map[int]int) {
 		// the reason being Occurrences target Locations for RingNext and RingPrevious FKs
 		locationIds := loadLocations(tctEpubDetail, epubId)
 
-		// Second pass: get Occurrences
-		for _, locationId := range locationIds {
-			tctLocationDetail := tct.GetLocation(locationId)
-
-			for _, tctOccurrence := range tctLocationDetail.Occurrences {
-				ringNextId := sql.NullInt64{}
-				if tctOccurrence.RingNext != nil {
-					ringNextId.Int64 = *tctOccurrence.RingNext
-					ringNextId.Valid = true
-				} else {
-					ringNextId.Valid = false
-				}
-
-				ringPrevId := sql.NullInt64{}
-				if tctOccurrence.RingPrevious != nil {
-					ringPrevId.Int64 = *tctOccurrence.RingPrevious
-					ringPrevId.Valid = true
-				} else {
-					ringPrevId.Valid = false
-				}
-
-				// TODO: Re-create FKs after figuring why inserting
-				// NULL into them is not working:
-				// * fk__occurrences__ring_next__locations__tct_id
-				// * fk__occurrences__ring_prev__locations__tct_id
-				enmOccurrence := models.Occurrence{
-					TctID: int(tctOccurrence.ID),
-					LocationID: int(locationId),
-					TopicID: int(tctOccurrence.Basket.ID),
-					RingNext: ringNextId,
-					RingPrev: ringPrevId,
-				}
-				err := enmOccurrence.Insert(DB)
-				if err != nil {
-					fmt.Println(enmOccurrence)
-					panic(err)
-				}
-			}
-		}
+		loadOccurrences(locationIds)
 	}
 }
 
@@ -680,6 +642,47 @@ func loadLocations(tctEpubDetail tct.EpubDetail, epubId int) (locationIds []int)
 	}
 
 	return
+}
+
+func loadOccurrences(locationIds []int) {
+	for _, locationId := range locationIds {
+		tctLocationDetail := tct.GetLocation(locationId)
+
+		for _, tctOccurrence := range tctLocationDetail.Occurrences {
+			ringNextId := sql.NullInt64{}
+			if tctOccurrence.RingNext != nil {
+				ringNextId.Int64 = *tctOccurrence.RingNext
+				ringNextId.Valid = true
+			} else {
+				ringNextId.Valid = false
+			}
+
+			ringPrevId := sql.NullInt64{}
+			if tctOccurrence.RingPrevious != nil {
+				ringPrevId.Int64 = *tctOccurrence.RingPrevious
+				ringPrevId.Valid = true
+			} else {
+				ringPrevId.Valid = false
+			}
+
+			// TODO: Re-create FKs after figuring why inserting
+			// NULL into them is not working:
+			// * fk__occurrences__ring_next__locations__tct_id
+			// * fk__occurrences__ring_prev__locations__tct_id
+			enmOccurrence := models.Occurrence{
+				TctID: int(tctOccurrence.ID),
+				LocationID: int(locationId),
+				TopicID: int(tctOccurrence.Basket.ID),
+				RingNext: ringNextId,
+				RingPrev: ringPrevId,
+			}
+			err := enmOccurrence.Insert(DB)
+			if err != nil {
+				fmt.Println(enmOccurrence)
+				panic(err)
+			}
+		}
+	}
 }
 
 func serialize(stringArray []string) string {

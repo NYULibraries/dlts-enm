@@ -557,21 +557,11 @@ func loadIndexPatterns() (epubIndexPatternMap map[int]int) {
 func loadEpubs(epubIndexPatternMap map[int]int) {
 	tctEpubs := tct.GetEpubsAll()
 	for _, tctEpub := range tctEpubs {
-		tctEpubDetail := tct.GetEpubDetail(int(tctEpub.ID))
+		epubId := int(tctEpub.ID)
 
-		enmEpub := models.Epub{
-			TctID: int(tctEpub.ID),
-			Title: tctEpubDetail.Title,
-			Author: tctEpubDetail.Author,
-			Publisher: tctEpubDetail.Publisher,
-			Isbn: tctEpubDetail.Isbn,
-			IndexpatternID: epubIndexPatternMap[int(tctEpub.ID)],
-		}
-		err := enmEpub.Insert(DB)
-		if err != nil {
-			fmt.Println(enmEpub)
-			panic(err )
-		}
+		tctEpubDetail := tct.GetEpubDetail(epubId)
+
+		insertEpub(tctEpubDetail, epubId, epubIndexPatternMap[epubId])
 
 		// All Locations must be loaded first before attempting to load Occurrences,
 		// the reason being Occurrences target Locations for RingNext and RingPrevious FKs
@@ -657,13 +647,29 @@ func loadEpubs(epubIndexPatternMap map[int]int) {
 					RingNext: ringNextId,
 					RingPrev: ringPrevId,
 				}
-				err = enmOccurrence.Insert(DB)
+				err := enmOccurrence.Insert(DB)
 				if err != nil {
 					fmt.Println(enmOccurrence)
 					panic(err)
 				}
 			}
 		}
+	}
+}
+
+func insertEpub(tctEpubDetail tct.EpubDetail, epubId int, indexPatternId int) {
+	enmEpub := models.Epub{
+		TctID: epubId,
+		Title: tctEpubDetail.Title,
+		Author: tctEpubDetail.Author,
+		Publisher: tctEpubDetail.Publisher,
+		Isbn: tctEpubDetail.Isbn,
+		IndexpatternID: indexPatternId,
+	}
+	err := enmEpub.Insert(DB)
+	if err != nil {
+		fmt.Println(enmEpub)
+		panic(err )
 	}
 }
 

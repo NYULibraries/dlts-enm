@@ -585,34 +585,7 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 			}
 		}
 
-		// Set editorial review status for topic
-		tctReview := tctTopicDetail.Basket.Review
-		tctEditorialReviewStatusState := tct.EditorialReviewStatusState{
-			ReviewerIsNull: tctReview.Reviewer == "",
-			TimeIsNull:     tctReview.Time == "",
-			Changed:        tctReview.Changed,
-			Reviewed:       tctReview.Reviewed,
-		}
-		editorialReviewStatusStateId :=
-			editorialReviewStatusStatesMap[tctEditorialReviewStatusState].Id
-
-		// Update topic
-		enmTopic, err := models.TopicByTctID(DB, int(tctTopicDetail.Basket.ID))
-		if err != nil {
-			panic(fmt.Sprintf("ERROR: could not fetch topic %d", int(tctTopicDetail.Basket.ID)))
-		}
-
-		enmTopic.EditorialReviewStatusReviewer = sql.NullString{
-			String: tctReview.Reviewer,
-			Valid: true,
-		}
-		enmTopic.EditorialReviewStatusTime = sql.NullString{
-			String: tctReview.Time,
-			Valid: true,
-		}
-		enmTopic.EditorialReviewStatusStateID = editorialReviewStatusStateId
-
-		enmTopic.Update(DB)
+		setEditorialReviewStatus(tctTopicDetail)
 
 		// Load names for topics
 		tctTopicHits := tctTopicDetail.Basket.TopicHits
@@ -622,7 +595,7 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 					TctID: int(tctTopicHit.Scope.ID),
 					Scope: tctTopicHit.Scope.Scope,
 				}
-				err = enmScope.Insert(DB)
+				err := enmScope.Insert(DB)
 				if err != nil {
 					fmt.Println(enmScope)
 					panic(err)
@@ -645,6 +618,36 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 			}
 		}
 	}
+}
+
+func setEditorialReviewStatus(tctTopicDetail tct.TopicDetail) {
+	tctReview := tctTopicDetail.Basket.Review
+	tctEditorialReviewStatusState := tct.EditorialReviewStatusState{
+		ReviewerIsNull: tctReview.Reviewer == "",
+		TimeIsNull:     tctReview.Time == "",
+		Changed:        tctReview.Changed,
+		Reviewed:       tctReview.Reviewed,
+	}
+	editorialReviewStatusStateId :=
+		editorialReviewStatusStatesMap[tctEditorialReviewStatusState].Id
+
+	// Update topic
+	enmTopic, err := models.TopicByTctID(DB, int(tctTopicDetail.Basket.ID))
+	if err != nil {
+		panic(fmt.Sprintf("ERROR: could not fetch topic %d", int(tctTopicDetail.Basket.ID)))
+	}
+
+	enmTopic.EditorialReviewStatusReviewer = sql.NullString{
+		String: tctReview.Reviewer,
+		Valid: true,
+	}
+	enmTopic.EditorialReviewStatusTime = sql.NullString{
+		String: tctReview.Time,
+		Valid: true,
+	}
+	enmTopic.EditorialReviewStatusStateID = editorialReviewStatusStateId
+
+	enmTopic.Update(DB)
 }
 
 func serialize(stringArray []string) string {

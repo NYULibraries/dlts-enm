@@ -273,46 +273,13 @@ func Reload() {
 	loadEditorialReviewStatusStates()
 	loadRelationTypes()
 	loadTopicTypes()
+	tctTopics := loadTopicsFirstPass()
 
 	relationDirectionIds := make(map[string]int)
 	relationDirectionId := 0
 	relationExists := make(map[int64]bool)
 
 	scopeExists := make(map[int64]bool)
-
-	tctTopics := tct.GetTopicsAll()
-
-	var err error
-
-	// All Topics must be loaded first before attempting to load everything
-	// that comes in from TopicDetails, the reason being topics table is
-	// target of FKs in Relations.  Note that editorial review status columns
-	// are not filled in until the second pass when topic details are fetched,
-	// with the exception of FK column editorial_review_status_state_id, which
-	// we pre-fill with temporary value defaultEditorialReviewStatusStateId.
-	for _, tctTopic := range tctTopics {
-		// TODO: originally had display_name_do_not_use column in topics table
-		// due to xo bug that prevents creation of full model code if tct_id was
-		// the only column.  Now there are several more FK columns, so
-		// this display name colume could be dropped.  It's proven to be convenient
-		// though, and there might be some advantage to keeping it because it
-		// represents an end calculation done by TCT.  Originally we were thinking
-		// we'd be making the determination of which name should be the display
-		// name post-TCT, but do we actually need to do that?  And even if we do,
-		// we could still keep this TCT choice.
-		enmTopic := models.Topic{
-			TctID:               int(tctTopic.ID),
-			DisplayNameDoNotUse: tctTopic.DisplayName,
-			EditorialReviewStatusStateID: defaultEditorialReviewStatusStateId,
-		}
-
-		// Insert into Topics table
-		err = enmTopic.Insert(DB)
-		if err != nil {
-			fmt.Println(tctTopic)
-			panic(err)
-		}
-	}
 
 	// Second pass: get topic details
 	for _, tctTopic := range tctTopics {
@@ -330,7 +297,7 @@ func Reload() {
 						ID:        relationDirectionId,
 						Direction: tctRelationDirection,
 					}
-					err = enmRelationDirection.Insert(DB)
+					err := enmRelationDirection.Insert(DB)
 					if err != nil {
 						fmt.Println(enmRelationDirection)
 						panic(err)
@@ -356,7 +323,7 @@ func Reload() {
 					RoleFromTopicID: roleFromTopicId,
 					RoleToTopicID: roleToTopicId,
 				}
-				err = enmRelation.Insert(DB)
+				err := enmRelation.Insert(DB)
 				if err != nil {
 					fmt.Println(err)
 					panic(err)
@@ -637,6 +604,44 @@ func loadTopicTypes() {
 			panic(err)
 		}
 	}
+}
+
+func loadTopicsFirstPass() []tct.Topic {
+	tctTopics := tct.GetTopicsAll()
+
+	var err error
+
+	// All Topics must be loaded first before attempting to load everything
+	// that comes in from TopicDetails, the reason being topics table is
+	// target of FKs in Relations.  Note that editorial review status columns
+	// are not filled in until the second pass when topic details are fetched,
+	// with the exception of FK column editorial_review_status_state_id, which
+	// we pre-fill with temporary value defaultEditorialReviewStatusStateId.
+	for _, tctTopic := range tctTopics {
+		// TODO: originally had display_name_do_not_use column in topics table
+		// due to xo bug that prevents creation of full model code if tct_id was
+		// the only column.  Now there are several more FK columns, so
+		// this display name colume could be dropped.  It's proven to be convenient
+		// though, and there might be some advantage to keeping it because it
+		// represents an end calculation done by TCT.  Originally we were thinking
+		// we'd be making the determination of which name should be the display
+		// name post-TCT, but do we actually need to do that?  And even if we do,
+		// we could still keep this TCT choice.
+		enmTopic := models.Topic{
+			TctID:               int(tctTopic.ID),
+			DisplayNameDoNotUse: tctTopic.DisplayName,
+			EditorialReviewStatusStateID: defaultEditorialReviewStatusStateId,
+		}
+
+		// Insert into Topics table
+		err = enmTopic.Insert(DB)
+		if err != nil {
+			fmt.Println(tctTopic)
+			panic(err)
+		}
+	}
+
+	return tctTopics
 }
 
 func serialize(stringArray []string) string {

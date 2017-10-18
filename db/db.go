@@ -280,162 +280,9 @@ func Reload() {
 
 	loadTopicsSecondPass(tctTopics)
 
-	// TODO: Find out if there is an internal TCT ID for IndexPatterns, and if
-	// so, maybe ask Infoloom to include it in the API responses instead of
-	// making our own ids.
-	tctIdTemp := 0
-	tctIndexPatterns := tct.GetIndexPatternsAll()
-	epubIndexPatternMap := make(map[int]int)
-	for _, tctIndexPattern := range tctIndexPatterns {
-		tctIdTemp++
-		enmIndexPattern := models.Indexpattern{
-			TctID: tctIdTemp,
-			Name: tctIndexPattern.Name,
-			Description: tctIndexPattern.Description,
-			PagenumberPreStrings: serialize(tctIndexPattern.PagenumberPreStrings),
-			PagenumberCSSSelectorPattern: tctIndexPattern.PagenumberCSSSelectorPattern,
-			PagenumberXpathPattern: tctIndexPattern.PagenumberXpathPattern,
-			XpathEntry: tctIndexPattern.XpathEntry,
-			SeeSplitStrings: serialize(tctIndexPattern.SeeSplitStrings),
-			SeeAlsoSplitStrings: serialize(tctIndexPattern.SeeAlsoSplitStrings),
-			XpathSee: tctIndexPattern.XpathSee,
-			XpathSeeAlso: tctIndexPattern.XpathSeealso,
-			SeparatorBetweenSees: tctIndexPattern.SeparatorBetweenSees,
-			SeparatorBetweenSeealsos: tctIndexPattern.SeparatorBetweenSeealsos,
-			SeparatorSeeSubentry: tctIndexPattern.SeparatorSeeSubentry,
-			InlineSeeStart: tctIndexPattern.InlineSeeStart,
-			InlineSeeAlsoStart: tctIndexPattern.InlineSeeAlsoStart,
-			InlineSeeEnd: tctIndexPattern.InlineSeeEnd,
-			InlineSeeAlsoEnd: tctIndexPattern.InlineSeeAlsoEnd,
-			SubentryClasses: serialize(tctIndexPattern.SubentryClasses),
-			SeparatorBetweenSubentries: tctIndexPattern.SeparatorBetweenSubentries,
-			SeparatorBetweenEntryAndOccurrences: tctIndexPattern.SeparatorBetweenEntryAndOccurrences,
-			SeparatorBeforeFirstSubentry: tctIndexPattern.SeparatorBeforeFirstSubentry,
-			XpathOccurrenceLink: tctIndexPattern.XpathOccurrenceLink,
-			IndicatorsOfOccurrenceRange: serialize(tctIndexPattern.IndicatorsOfOccurrenceRange),
-		}
-		err := enmIndexPattern.Insert(DB)
-		if err != nil {
-			fmt.Println(enmIndexPattern)
-			panic(err)
-		}
+	epubIndexPatternMap := loadIndexPatterns()
 
-		epubsUsingIndexPattern := tctIndexPattern.Documents
-		for _, epubUsingIndexPattern := range epubsUsingIndexPattern {
-			epubIndexPatternMap[int(epubUsingIndexPattern.ID)] = tctIdTemp
-		}
-	}
-
-	tctEpubs := tct.GetEpubsAll()
-	for _, tctEpub := range tctEpubs {
-		tctEpubDetail := tct.GetEpubDetail(int(tctEpub.ID))
-
-		enmEpub := models.Epub{
-			TctID: int(tctEpub.ID),
-			Title: tctEpubDetail.Title,
-			Author: tctEpubDetail.Author,
-			Publisher: tctEpubDetail.Publisher,
-			Isbn: tctEpubDetail.Isbn,
-			IndexpatternID: epubIndexPatternMap[int(tctEpub.ID)],
-		}
-		err := enmEpub.Insert(DB)
-		if err != nil {
-			fmt.Println(enmEpub)
-			panic(err )
-		}
-
-		// All Locations must be loaded first before attempting to load Occurrences,
-		// the reason being Occurrences target Locations for RingNext and RingPrevious FKs
-		tctLocations := tctEpubDetail.Locations
-		for _, tctLocation := range tctLocations {
-			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
-
-			nextId := sql.NullInt64{}
-			if tctLocationDetail.PreviousLocationID != nil {
-				nextId.Int64 = *tctLocationDetail.PreviousLocationID
-				nextId.Valid = true
-			} else {
-				nextId.Valid = false
-			}
-
-			prevId := sql.NullInt64{}
-			if tctLocationDetail.PreviousLocationID != nil {
-				prevId.Int64 = *tctLocationDetail.PreviousLocationID
-				prevId.Valid = true
-			} else {
-				prevId.Valid = false
-			}
-
-			enmLocation := models.Location{
-				TctID: int(tctLocationDetail.ID),
-				EpubID: int(tctEpub.ID),
-				Localid: tctLocationDetail.Localid,
-				SequenceNumber: int(tctLocation.SequenceNumber),
-				ContentUniqueIndicator: tctLocationDetail.Content.ContentUniqueIndicator,
-				ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
-				ContentText: tctLocationDetail.Content.Text,
-
-				// Occurrences are processed in the second pass
-
-				PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,
-				PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
-				PagenumberCSSSelector: tctLocationDetail.Pagenumber.CSSSelector,
-				PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
-
-				// TODO: Re-create FKs:
-				// CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
-				// CONSTRAINT `fk__locations__previous_location_id__locations__tct_id` FOREIGN KEY (`previous_location_id`) REFERENCES `locations` (`tct_id`)
-				// ...and have Reload command delete them before loading locations table, then re-create them after load is finished.
-				NextLocationID: nextId,
-				PreviousLocationID: prevId,
-			}
-			err := enmLocation.Insert(DB)
-			if err != nil {
-				fmt.Println(enmLocation)
-				panic(err)
-			}
-		}
-
-		// Second pass: get Occurrences
-		for _, tctLocation := range tctLocations {
-			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
-
-			for _, tctOccurrence := range tctLocationDetail.Occurrences {
-				ringNextId := sql.NullInt64{}
-				if tctOccurrence.RingNext != nil {
-					ringNextId.Int64 = *tctOccurrence.RingNext
-					ringNextId.Valid = true
-				} else {
-					ringNextId.Valid = false
-				}
-
-				ringPrevId := sql.NullInt64{}
-				if tctOccurrence.RingPrevious != nil {
-					ringPrevId.Int64 = *tctOccurrence.RingPrevious
-					ringPrevId.Valid = true
-				} else {
-					ringPrevId.Valid = false
-				}
-
-				// TODO: Re-create FKs after figuring why inserting
-				// NULL into them is not working:
-				// * fk__occurrences__ring_next__locations__tct_id
-				// * fk__occurrences__ring_prev__locations__tct_id
-				enmOccurrence := models.Occurrence{
-					TctID: int(tctOccurrence.ID),
-					LocationID: int(tctLocation.ID),
-					TopicID: int(tctOccurrence.Basket.ID),
-					RingNext: ringNextId,
-					RingPrev: ringPrevId,
-				}
-				err = enmOccurrence.Insert(DB)
-				if err != nil {
-					fmt.Println(enmOccurrence)
-					panic(err)
-				}
-			}
-		}
-	}
+	loadEpubs(epubIndexPatternMap)
 }
 
 func loadEditorialReviewStatusStates() {
@@ -653,6 +500,169 @@ func loadNames(tctTopicDetail tct.TopicDetail, scopeExists map[int64]bool) {
 		err := enmName.Insert(DB)
 		if err != nil {fmt.Println(enmName)
 			panic(err)
+		}
+	}
+}
+
+func loadIndexPatterns() (epubIndexPatternMap map[int]int) {
+	// TODO: Find out if there is an internal TCT ID for IndexPatterns, and if
+	// so, maybe ask Infoloom to include it in the API responses instead of
+	// making our own ids.
+	tctIdTemp := 0
+	tctIndexPatterns := tct.GetIndexPatternsAll()
+	epubIndexPatternMap = make(map[int]int)
+	for _, tctIndexPattern := range tctIndexPatterns {
+		tctIdTemp++
+		enmIndexPattern := models.Indexpattern{
+			TctID: tctIdTemp,
+			Name: tctIndexPattern.Name,
+			Description: tctIndexPattern.Description,
+			PagenumberPreStrings: serialize(tctIndexPattern.PagenumberPreStrings),
+			PagenumberCSSSelectorPattern: tctIndexPattern.PagenumberCSSSelectorPattern,
+			PagenumberXpathPattern: tctIndexPattern.PagenumberXpathPattern,
+			XpathEntry: tctIndexPattern.XpathEntry,
+			SeeSplitStrings: serialize(tctIndexPattern.SeeSplitStrings),
+			SeeAlsoSplitStrings: serialize(tctIndexPattern.SeeAlsoSplitStrings),
+			XpathSee: tctIndexPattern.XpathSee,
+			XpathSeeAlso: tctIndexPattern.XpathSeealso,
+			SeparatorBetweenSees: tctIndexPattern.SeparatorBetweenSees,
+			SeparatorBetweenSeealsos: tctIndexPattern.SeparatorBetweenSeealsos,
+			SeparatorSeeSubentry: tctIndexPattern.SeparatorSeeSubentry,
+			InlineSeeStart: tctIndexPattern.InlineSeeStart,
+			InlineSeeAlsoStart: tctIndexPattern.InlineSeeAlsoStart,
+			InlineSeeEnd: tctIndexPattern.InlineSeeEnd,
+			InlineSeeAlsoEnd: tctIndexPattern.InlineSeeAlsoEnd,
+			SubentryClasses: serialize(tctIndexPattern.SubentryClasses),
+			SeparatorBetweenSubentries: tctIndexPattern.SeparatorBetweenSubentries,
+			SeparatorBetweenEntryAndOccurrences: tctIndexPattern.SeparatorBetweenEntryAndOccurrences,
+			SeparatorBeforeFirstSubentry: tctIndexPattern.SeparatorBeforeFirstSubentry,
+			XpathOccurrenceLink: tctIndexPattern.XpathOccurrenceLink,
+			IndicatorsOfOccurrenceRange: serialize(tctIndexPattern.IndicatorsOfOccurrenceRange),
+		}
+		err := enmIndexPattern.Insert(DB)
+		if err != nil {
+			fmt.Println(enmIndexPattern)
+			panic(err)
+		}
+
+		epubsUsingIndexPattern := tctIndexPattern.Documents
+		for _, epubUsingIndexPattern := range epubsUsingIndexPattern {
+			epubIndexPatternMap[int(epubUsingIndexPattern.ID)] = tctIdTemp
+		}
+	}
+
+	return epubIndexPatternMap
+}
+
+func loadEpubs(epubIndexPatternMap map[int]int) {
+	tctEpubs := tct.GetEpubsAll()
+	for _, tctEpub := range tctEpubs {
+		tctEpubDetail := tct.GetEpubDetail(int(tctEpub.ID))
+
+		enmEpub := models.Epub{
+			TctID: int(tctEpub.ID),
+			Title: tctEpubDetail.Title,
+			Author: tctEpubDetail.Author,
+			Publisher: tctEpubDetail.Publisher,
+			Isbn: tctEpubDetail.Isbn,
+			IndexpatternID: epubIndexPatternMap[int(tctEpub.ID)],
+		}
+		err := enmEpub.Insert(DB)
+		if err != nil {
+			fmt.Println(enmEpub)
+			panic(err )
+		}
+
+		// All Locations must be loaded first before attempting to load Occurrences,
+		// the reason being Occurrences target Locations for RingNext and RingPrevious FKs
+		tctLocations := tctEpubDetail.Locations
+		for _, tctLocation := range tctLocations {
+			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+
+			nextId := sql.NullInt64{}
+			if tctLocationDetail.PreviousLocationID != nil {
+				nextId.Int64 = *tctLocationDetail.PreviousLocationID
+				nextId.Valid = true
+			} else {
+				nextId.Valid = false
+			}
+
+			prevId := sql.NullInt64{}
+			if tctLocationDetail.PreviousLocationID != nil {
+				prevId.Int64 = *tctLocationDetail.PreviousLocationID
+				prevId.Valid = true
+			} else {
+				prevId.Valid = false
+			}
+
+			enmLocation := models.Location{
+				TctID: int(tctLocationDetail.ID),
+				EpubID: int(tctEpub.ID),
+				Localid: tctLocationDetail.Localid,
+				SequenceNumber: int(tctLocation.SequenceNumber),
+				ContentUniqueIndicator: tctLocationDetail.Content.ContentUniqueIndicator,
+				ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
+				ContentText: tctLocationDetail.Content.Text,
+
+				// Occurrences are processed in the second pass
+
+				PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,
+				PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
+				PagenumberCSSSelector: tctLocationDetail.Pagenumber.CSSSelector,
+				PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
+
+				// TODO: Re-create FKs:
+				// CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
+				// CONSTRAINT `fk__locations__previous_location_id__locations__tct_id` FOREIGN KEY (`previous_location_id`) REFERENCES `locations` (`tct_id`)
+				// ...and have Reload command delete them before loading locations table, then re-create them after load is finished.
+				NextLocationID: nextId,
+				PreviousLocationID: prevId,
+			}
+			err := enmLocation.Insert(DB)
+			if err != nil {
+				fmt.Println(enmLocation)
+				panic(err)
+			}
+		}
+
+		// Second pass: get Occurrences
+		for _, tctLocation := range tctLocations {
+			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+
+			for _, tctOccurrence := range tctLocationDetail.Occurrences {
+				ringNextId := sql.NullInt64{}
+				if tctOccurrence.RingNext != nil {
+					ringNextId.Int64 = *tctOccurrence.RingNext
+					ringNextId.Valid = true
+				} else {
+					ringNextId.Valid = false
+				}
+
+				ringPrevId := sql.NullInt64{}
+				if tctOccurrence.RingPrevious != nil {
+					ringPrevId.Int64 = *tctOccurrence.RingPrevious
+					ringPrevId.Valid = true
+				} else {
+					ringPrevId.Valid = false
+				}
+
+				// TODO: Re-create FKs after figuring why inserting
+				// NULL into them is not working:
+				// * fk__occurrences__ring_next__locations__tct_id
+				// * fk__occurrences__ring_prev__locations__tct_id
+				enmOccurrence := models.Occurrence{
+					TctID: int(tctOccurrence.ID),
+					LocationID: int(tctLocation.ID),
+					TopicID: int(tctOccurrence.Basket.ID),
+					RingNext: ringNextId,
+					RingPrev: ringPrevId,
+				}
+				err = enmOccurrence.Insert(DB)
+				if err != nil {
+					fmt.Println(enmOccurrence)
+					panic(err)
+				}
+			}
 		}
 	}
 }

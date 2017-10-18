@@ -383,7 +383,6 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 
 	scopeExists := make(map[int64]bool)
 
-	// Second pass: get topic details
 	for _, tctTopic := range tctTopics {
 		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
 

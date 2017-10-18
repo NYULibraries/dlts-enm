@@ -551,7 +551,7 @@ func loadIndexPatterns() (epubIndexPatternMap map[int]int) {
 		}
 	}
 
-	return epubIndexPatternMap
+	return
 }
 
 func loadEpubs(epubIndexPatternMap map[int]int) {

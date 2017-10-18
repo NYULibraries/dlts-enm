@@ -589,7 +589,7 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 
 		setEditorialReviewStatus(tctTopicDetail)
 
-		loadNamesForTopic(tctTopicDetail)
+		loadNames(tctTopicDetail)
 	}
 }
 
@@ -623,7 +623,7 @@ func setEditorialReviewStatus(tctTopicDetail tct.TopicDetail) {
 	enmTopic.Update(DB)
 }
 
-func loadNamesForTopic(tctTopicDetail tct.TopicDetail) {
+func loadNames(tctTopicDetail tct.TopicDetail) {
 	scopeExists := make(map[int64]bool)
 
 	tctTopicHits := tctTopicDetail.Basket.TopicHits

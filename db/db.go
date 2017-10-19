@@ -19,7 +19,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"regexp"
 	"strconv"
+	"strings"
 
 	_ "github.com/go-sql-driver/mysql"
 
@@ -62,6 +64,12 @@ type EditorialStatusStateTableRow struct {
 
 // Incremented ids for relation_direction table
 var relationDirectionId int = 0
+
+// Incremented ids for weblinks_relationship table
+var weblinkRelationshipId int = 0
+
+// Incremented ids for weblinks_vocabulary table
+var weblinkVocabularyId int = 0
 
 // For initial load of topics table we don't have editorial review status data yet,
 // but need to fill in FK column with a valid, non-null value
@@ -385,6 +393,10 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 
 	scopeExists := make(map[int64]bool)
 
+	weblinkRelationshipIds := make(map[string]int)
+	weblinkVocabularyIds := make(map[string]int)
+	weblinkExists := make(map[int64]bool)
+
 	for _, tctTopic := range tctTopics {
 		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
 
@@ -393,6 +405,11 @@ func loadTopicsSecondPass(tctTopics []tct.Topic) {
 		setEditorialReviewStatus(tctTopicDetail)
 
 		loadNames(tctTopicDetail, scopeExists)
+
+		loadWeblinks(tctTopicDetail,
+			weblinkExists,
+			weblinkRelationshipIds,
+			weblinkVocabularyIds)
 	}
 }
 
@@ -511,6 +528,80 @@ func loadNames(tctTopicDetail tct.TopicDetail, scopeExists map[int64]bool) {
 		}
 	}
 }
+
+func loadWeblinks(tctTopicDetail tct.TopicDetail,
+	weblinkExists map[int64]bool,
+	weblinkRelationshipIds map[string]int,
+	weblinkVocabularyIds map[string]int) {
+
+	tctWeblinks := tctTopicDetail.Basket.Weblinks
+
+	for _, tctWeblink := range tctWeblinks {
+		if ! weblinkExists[tctWeblink.ID] {
+			// Example tctWeblinkContent: "Library of Congress (exactMatch)"
+			// vocabulary = "Library of Congress"
+			// relationship = "exactMatch"
+			re := regexp.MustCompile(`^([^(]+)\(([^)]+)\)$`)
+			matches := re.FindStringSubmatch(tctWeblink.Content)
+			tctWeblinkVocabulary := strings.TrimSpace(matches[1])
+			tctWeblinkRelationship := strings.TrimSpace(matches[2])
+
+			if weblinkRelationshipIds[tctWeblinkRelationship] == 0 {
+				weblinkRelationshipId++
+				enmWeblinkRelationship := models.WeblinksRelationship{
+					ID:        weblinkRelationshipId,
+					Relationship: tctWeblinkRelationship,
+				}
+				err := enmWeblinkRelationship.Insert(DB)
+				if err != nil {
+					fmt.Println(enmWeblinkRelationship)
+					panic(err)
+				}
+				weblinkRelationshipIds[tctWeblinkRelationship] = weblinkRelationshipId
+			}
+
+			if weblinkVocabularyIds[tctWeblinkVocabulary] == 0 {
+				weblinkVocabularyId++
+				enmWeblinkVocabulary := models.WeblinksVocabulary{
+					ID:        weblinkVocabularyId,
+					Vocabulary: tctWeblinkVocabulary,
+				}
+				err := enmWeblinkVocabulary.Insert(DB)
+				if err != nil {
+					fmt.Println(enmWeblinkVocabulary)
+					panic(err)
+				}
+				weblinkVocabularyIds[tctWeblinkVocabulary] = weblinkVocabularyId
+			}
+
+			enmWeblink := models.Weblink{
+				TctID:                  int(tctWeblink.ID),
+				URL:                    tctWeblink.URL,
+				WeblinksRelationshipID: weblinkRelationshipId,
+				WeblinksVocabularyID:   weblinkVocabularyId,
+			}
+			err := enmWeblink.Insert(DB)
+			if err != nil {
+				fmt.Println(err)
+				panic(err)
+			}
+
+			weblinkExists[tctWeblink.ID] = true
+
+			// Create topic to weblink mapping
+			enmTopicsWeblinks := models.TopicsWeblink{
+				TopicID: int(tctTopicDetail.Basket.ID),
+				WeblinkID: int(tctWeblink.ID),
+			}
+			enmTopicsWeblinks.Insert(DB)
+			if err != nil {
+				fmt.Println(err)
+				panic(err)
+			}
+		}
+	}
+}
+
 
 func loadIndexPatterns() (epubIndexPatternMap map[int]int) {
 	// TODO: Find out if there is an internal TCT ID for IndexPatterns, and if

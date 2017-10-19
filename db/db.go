@@ -40,7 +40,7 @@ var tables = []string{
 	"occurrences",
 	"topics_weblinks",
 	"topics",
-	"topic_types",
+	"topic_type",
 	"editorial_review_status_state",
 	"weblinks",
 	"weblinks_relationship",

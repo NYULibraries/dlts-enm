@@ -35,28 +35,21 @@ func (wv *WeblinksVocabulary) Insert(db XODB) error {
 		return errors.New("insert failed: already exists")
 	}
 
-	// sql insert query, primary key provided by autoincrement
+	// sql insert query, primary key must be provided
 	const sqlstr = `INSERT INTO enm.weblinks_vocabulary (` +
-		`vocabulary` +
+		`id, vocabulary` +
 		`) VALUES (` +
-		`?` +
+		`?, ?` +
 		`)`
 
 	// run query
-	XOLog(sqlstr, wv.Vocabulary)
-	res, err := db.Exec(sqlstr, wv.Vocabulary)
+	XOLog(sqlstr, wv.ID, wv.Vocabulary)
+	_, err = db.Exec(sqlstr, wv.ID, wv.Vocabulary)
 	if err != nil {
 		return err
 	}
 
-	// retrieve id
-	id, err := res.LastInsertId()
-	if err != nil {
-		return err
-	}
-
-	// set primary key and existence
-	wv.ID = int(id)
+	// set existence
 	wv._exists = true
 
 	return nil

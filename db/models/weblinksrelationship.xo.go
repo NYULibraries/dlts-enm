@@ -35,28 +35,21 @@ func (wr *WeblinksRelationship) Insert(db XODB) error {
 		return errors.New("insert failed: already exists")
 	}
 
-	// sql insert query, primary key provided by autoincrement
+	// sql insert query, primary key must be provided
 	const sqlstr = `INSERT INTO enm.weblinks_relationship (` +
-		`relationship` +
+		`id, relationship` +
 		`) VALUES (` +
-		`?` +
+		`?, ?` +
 		`)`
 
 	// run query
-	XOLog(sqlstr, wr.Relationship)
-	res, err := db.Exec(sqlstr, wr.Relationship)
+	XOLog(sqlstr, wr.ID, wr.Relationship)
+	_, err = db.Exec(sqlstr, wr.ID, wr.Relationship)
 	if err != nil {
 		return err
 	}
 
-	// retrieve id
-	id, err := res.LastInsertId()
-	if err != nil {
-		return err
-	}
-
-	// set primary key and existence
-	wr.ID = int(id)
+	// set existence
 	wr._exists = true
 
 	return nil

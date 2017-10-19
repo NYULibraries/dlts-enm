@@ -60,6 +60,9 @@ type EditorialStatusStateTableRow struct {
 	State string
 }
 
+// Incremented ids for relation_direction table
+var relationDirectionId int = 0
+
 // For initial load of topics table we don't have editorial review status data yet,
 // but need to fill in FK column with a valid, non-null value
 var defaultEditorialReviewStatusStateId int = 1
@@ -399,8 +402,6 @@ func loadRelations(
 	relationDirectionIds map[string]int) {
 
 	tctTopicRelations := tctTopicDetail.Relations
-
-	relationDirectionId := 0
 
 	for _, tctTopicRelation := range tctTopicRelations {
 		if ! relationExists[tctTopicRelation.ID] {

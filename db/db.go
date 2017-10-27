@@ -19,7 +19,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"regexp"
 	"strconv"
+	"strings"
 
 	_ "github.com/go-sql-driver/mysql"
 
@@ -38,7 +40,13 @@ var tables = []string{
 	"names",
 	"relations",
 	"occurrences",
+	"topics_weblinks",
 	"topics",
+	"topic_type",
+	"editorial_review_status_state",
+	"weblinks",
+	"weblinks_relationship",
+	"weblinks_vocabulary",
 	"scopes",
 	"relation_type",
 	"relation_direction",
@@ -46,6 +54,26 @@ var tables = []string{
 	"epubs",
 	"indexpatterns",
 }
+
+var editorialReviewStatusStatesMap map[tct.EditorialReviewStatusState]EditorialStatusStateTableRow
+
+type EditorialStatusStateTableRow struct {
+	Id int
+	State string
+}
+
+// Incremented ids for relation_direction table
+var relationDirectionId int = 0
+
+// Incremented ids for weblinks_relationship table
+var weblinkRelationshipId int = 0
+
+// Incremented ids for weblinks_vocabulary table
+var weblinkVocabularyId int = 0
+
+// For initial load of topics table we don't have editorial review status data yet,
+// but need to fill in FK column with a valid, non-null value
+var defaultEditorialReviewStatusStateId int = 1
 
 func init() {
 	Database = os.Getenv("ENM_DATABASE")
@@ -74,6 +102,46 @@ func init() {
 
 	if err = DB.Ping(); err != nil {
 		panic(err.Error())
+	}
+
+	editorialReviewStatusStatesMap =
+		make(map[tct.EditorialReviewStatusState]EditorialStatusStateTableRow)
+
+	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
+		ReviewerIsNull: true,
+		TimeIsNull: true,
+		Changed: false,
+		Reviewed: false,
+	}] = EditorialStatusStateTableRow{
+		Id: defaultEditorialReviewStatusStateId,
+		State: "Not Reviewed",
+	}
+	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
+		ReviewerIsNull: false,
+		TimeIsNull: false,
+		Changed: false,
+		Reviewed: true,
+	}] = EditorialStatusStateTableRow{
+		Id: 2,
+		State: "Reviewed, Unchanged",
+	}
+	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
+		ReviewerIsNull: false,
+		TimeIsNull: false,
+		Changed: true,
+		Reviewed: true,
+	}] = EditorialStatusStateTableRow{
+		Id: 3,
+		State: "Reviewed, Changed",
+	}
+	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
+		ReviewerIsNull: false,
+		TimeIsNull: false,
+		Changed: false,
+		Reviewed: false,
+	}] = EditorialStatusStateTableRow{
+		Id: 4,
+		State: "Reviewed Status Revoked",
 	}
 }
 
@@ -212,24 +280,100 @@ ORDER BY t2.display_name_do_not_use`
 }
 
 func Reload() {
-	var err error
-	relationDirectionIds := make(map[string]int)
-	relationDirectionId := 0
-	relationExists := make(map[int64]bool)
-	relationTypeExists := make(map[int64]bool)
-	scopeExists := make(map[int64]bool)
+	loadEditorialReviewStatusStates()
+
+	loadRelationTypes()
+
+	loadTopicTypes()
+
+	tctTopics := loadTopicsFirstPass()
+
+	loadTopicsSecondPass(tctTopics)
+
+	epubIndexPatternMap := loadIndexPatterns()
+
+	loadEpubs(epubIndexPatternMap)
+}
+
+func loadEditorialReviewStatusStates() {
+	for _, row := range editorialReviewStatusStatesMap {
+		enmEditorialReviewStatusState := models.EditorialReviewStatusState{
+			ID: row.Id,
+			State: row.State,
+		}
+
+		err := enmEditorialReviewStatusState.Insert(DB)
+		if err != nil {
+			fmt.Println(row.State)
+			panic(err)
+		}
+	}
+}
+
+func loadRelationTypes() {
+	var tctRelationTypes = tct.GetRelationTypesAll()
+
+	for _, tctRelationType := range tctRelationTypes {
+		enmRelationType := models.RelationType{
+			TctID:       int(tctRelationType.ID),
+			Rtype:       tctRelationType.Rtype,
+			RoleFrom:    tctRelationType.RoleFrom,
+			RoleTo:      tctRelationType.RoleTo,
+			Symmetrical: tctRelationType.Symmetrical,
+		}
+
+		// Insert into relation types table
+		err := enmRelationType.Insert(DB)
+		if err != nil {
+			fmt.Println(tctRelationType)
+			panic(err)
+		}
+	}
+}
+
+func loadTopicTypes() {
+	var tctTopicTypes = tct.GetTopicTypesAll()
+
+	for _, tctTopicType := range tctTopicTypes {
+		enmTopicType := models.TopicType{
+			TctID:       int(tctTopicType.ID),
+			Ttype:       tctTopicType.Ttype,
+		}
+
+		// Insert into topic types table
+		err := enmTopicType.Insert(DB)
+		if err != nil {
+			fmt.Println(tctTopicType)
+			panic(err)
+		}
+	}
+}
+
+func loadTopicsFirstPass() []tct.Topic {
 	tctTopics := tct.GetTopicsAll()
+
+	var err error
 
 	// All Topics must be loaded first before attempting to load everything
 	// that comes in from TopicDetails, the reason being topics table is
-	// target of FKs in Relations.
+	// target of FKs in Relations.  Note that editorial review status columns
+	// are not filled in until the second pass when topic details are fetched,
+	// with the exception of FK column editorial_review_status_state_id, which
+	// we pre-fill with temporary value defaultEditorialReviewStatusStateId.
 	for _, tctTopic := range tctTopics {
-		// TODO: remove display_name from table after figure out how to
-		// fix or workaround xo bug that prevents creation of full model
-		// code if tct_id is the only column.
+		// TODO: originally had display_name_do_not_use column in topics table
+		// due to xo bug that prevents creation of full model code if tct_id was
+		// the only column.  Now there are several more FK columns, so
+		// this display name colume could be dropped.  It's proven to be convenient
+		// though, and there might be some advantage to keeping it because it
+		// represents an end calculation done by TCT.  Originally we were thinking
+		// we'd be making the determination of which name should be the display
+		// name post-TCT, but do we actually need to do that?  And even if we do,
+		// we could still keep this TCT choice.
 		enmTopic := models.Topic{
 			TctID:               int(tctTopic.ID),
 			DisplayNameDoNotUse: tctTopic.DisplayName,
+			EditorialReviewStatusStateID: defaultEditorialReviewStatusStateId,
 		}
 
 		// Insert into Topics table
@@ -240,110 +384,232 @@ func Reload() {
 		}
 	}
 
-	// Second pass: get topic details
+	return tctTopics
+}
+
+func loadTopicsSecondPass(tctTopics []tct.Topic) {
+	relationDirectionIds := make(map[string]int)
+	relationExists := make(map[int64]bool)
+
+	scopeExists := make(map[int64]bool)
+
+	weblinkRelationshipIds := make(map[string]int)
+	weblinkVocabularyIds := make(map[string]int)
+	weblinkExists := make(map[int64]bool)
+
 	for _, tctTopic := range tctTopics {
 		tctTopicDetail := tct.GetTopicDetail(int(tctTopic.ID))
 
-		tctTopicRelations := tctTopicDetail.Relations
-		for _, tctTopicRelation := range tctTopicRelations {
-			if ! relationExists[tctTopicRelation.ID] {
-				tctRelationType := tctTopicRelation.Relationtype
-				if ! relationTypeExists[tctRelationType.ID] {
-					enmRelationType := models.RelationType{
-						TctID: int(tctRelationType.ID),
-						Rtype: tctRelationType.Rtype,
-						RoleFrom: tctRelationType.RoleFrom,
-						RoleTo: tctRelationType.RoleTo,
-						Symmetrical: tctRelationType.Symmetrical,
-					}
-					err = enmRelationType.Insert(DB)
-					if err != nil {
-						fmt.Println(enmRelationType)
-						panic(err)
-					}
-					relationTypeExists[tctRelationType.ID] = true
-				}
+		loadRelations(tctTopicDetail, relationExists, relationDirectionIds)
 
-				tctRelationDirection := tctTopicRelation.Direction
-				if relationDirectionIds[tctRelationDirection] == 0 {
-					relationDirectionId++
-					enmRelationDirection := models.RelationDirection{
-						ID:        relationDirectionId,
-						Direction: tctRelationDirection,
-					}
-					err = enmRelationDirection.Insert(DB)
-					if err != nil {
-						fmt.Println(enmRelationDirection)
-						panic(err)
-					}
-					relationDirectionIds[tctRelationDirection] = relationDirectionId
-				}
+		setEditorialReviewStatus(tctTopicDetail)
 
-				var roleFromTopicId int
-				var roleToTopicId int
-				if tctTopicRelation.Direction == "source" {
-					roleFromTopicId = int(tctTopicRelation.Basket.ID)
-					roleToTopicId = int(tctTopic.ID)
-				} else if tctTopicRelation.Direction == "destination" {
-					roleFromTopicId = int(tctTopic.ID)
-					roleToTopicId = int(tctTopicRelation.Basket.ID)
-				} else {
-					panic( "Unknown relation direction: " + tctTopicRelation.Direction)
+		loadNames(tctTopicDetail, scopeExists)
+
+		loadWeblinks(tctTopicDetail,
+			weblinkExists,
+			weblinkRelationshipIds,
+			weblinkVocabularyIds)
+	}
+}
+
+func loadRelations(
+	tctTopicDetail tct.TopicDetail,
+	relationExists map[int64]bool,
+	relationDirectionIds map[string]int) {
+
+	tctTopicRelations := tctTopicDetail.Relations
+
+	for _, tctTopicRelation := range tctTopicRelations {
+		if ! relationExists[tctTopicRelation.ID] {
+			tctRelationType := tctTopicRelation.Relationtype
+			tctRelationDirection := tctTopicRelation.Direction
+			if relationDirectionIds[tctRelationDirection] == 0 {
+				relationDirectionId++
+				enmRelationDirection := models.RelationDirection{
+					ID:        relationDirectionId,
+					Direction: tctRelationDirection,
 				}
-				enmRelation := models.Relation{
-					TctID: int(tctTopicRelation.ID),
-					RelationTypeID: int(tctRelationType.ID),
-					RelationDirectionID: relationDirectionIds[tctRelationDirection],
-					RoleFromTopicID: roleFromTopicId,
-					RoleToTopicID: roleToTopicId,
-				}
-				err = enmRelation.Insert(DB)
+				err := enmRelationDirection.Insert(DB)
 				if err != nil {
-					fmt.Println(err)
+					fmt.Println(enmRelationDirection)
 					panic(err)
 				}
-
-				relationExists[tctTopicRelation.ID] = true
+				relationDirectionIds[tctRelationDirection] = relationDirectionId
 			}
+
+			var roleFromTopicId int
+			var roleToTopicId int
+			if tctTopicRelation.Direction == "source" {
+				roleFromTopicId = int(tctTopicRelation.Basket.ID)
+				roleToTopicId = int(tctTopicDetail.Basket.ID)
+			} else if tctTopicRelation.Direction == "destination" {
+				roleFromTopicId = int(tctTopicDetail.Basket.ID)
+				roleToTopicId = int(tctTopicRelation.Basket.ID)
+			} else {
+				panic( "Unknown relation direction: " + tctTopicRelation.Direction)
+			}
+			enmRelation := models.Relation{
+				TctID: int(tctTopicRelation.ID),
+				RelationTypeID: int(tctRelationType.ID),
+				RelationDirectionID: relationDirectionIds[tctRelationDirection],
+				RoleFromTopicID: roleFromTopicId,
+				RoleToTopicID: roleToTopicId,
+			}
+			err := enmRelation.Insert(DB)
+			if err != nil {
+				fmt.Println(err)
+				panic(err)
+			}
+
+			relationExists[tctTopicRelation.ID] = true
+		}
+	}
+}
+
+func setEditorialReviewStatus(tctTopicDetail tct.TopicDetail) {
+	tctReview := tctTopicDetail.Basket.Review
+	tctEditorialReviewStatusState := tct.EditorialReviewStatusState{
+		ReviewerIsNull: tctReview.Reviewer == "",
+		TimeIsNull:     tctReview.Time == "",
+		Changed:        tctReview.Changed,
+		Reviewed:       tctReview.Reviewed,
+	}
+	editorialReviewStatusStateId :=
+		editorialReviewStatusStatesMap[tctEditorialReviewStatusState].Id
+
+	// Update topic
+	enmTopic, err := models.TopicByTctID(DB, int(tctTopicDetail.Basket.ID))
+	if err != nil {
+		panic(fmt.Sprintf("ERROR: could not fetch topic %d", int(tctTopicDetail.Basket.ID)))
+	}
+
+	enmTopic.EditorialReviewStatusReviewer = sql.NullString{
+		String: tctReview.Reviewer,
+		Valid: true,
+	}
+	enmTopic.EditorialReviewStatusTime = sql.NullString{
+		String: tctReview.Time,
+		Valid: true,
+	}
+	enmTopic.EditorialReviewStatusStateID = editorialReviewStatusStateId
+
+	enmTopic.Update(DB)
+}
+
+func loadNames(tctTopicDetail tct.TopicDetail, scopeExists map[int64]bool) {
+	tctTopicHits := tctTopicDetail.Basket.TopicHits
+	for _, tctTopicHit := range tctTopicHits {
+		if ! scopeExists[tctTopicHit.Scope.ID] {
+			enmScope := models.Scope{
+				TctID: int(tctTopicHit.Scope.ID),
+				Scope: tctTopicHit.Scope.Scope,
+			}
+			err := enmScope.Insert(DB)
+			if err != nil {
+				fmt.Println(enmScope)
+				panic(err)
+			}
+			scopeExists[tctTopicHit.Scope.ID] = true
 		}
 
-		tctTopicHits := tctTopicDetail.Basket.TopicHits
-		for _, tctTopicHit := range tctTopicHits {
-			if ! scopeExists[tctTopicHit.Scope.ID] {
-				enmScope := models.Scope{
-					TctID: int(tctTopicHit.Scope.ID),
-					Scope: tctTopicHit.Scope.Scope,
+		enmName := models.Name{
+			TctID: int(tctTopicHit.ID),
+			TopicID: int(tctTopicDetail.Basket.ID),
+			Name: tctTopicHit.Name,
+			ScopeID: int(tctTopicHit.Scope.ID),
+			Bypass: tctTopicHit.Bypass,
+			Hidden: tctTopicHit.Hidden,
+			Preferred: tctTopicHit.Preferred,
+		}
+		err := enmName.Insert(DB)
+		if err != nil {fmt.Println(enmName)
+			panic(err)
+		}
+	}
+}
+
+func loadWeblinks(tctTopicDetail tct.TopicDetail,
+	weblinkExists map[int64]bool,
+	weblinkRelationshipIds map[string]int,
+	weblinkVocabularyIds map[string]int) {
+
+	tctWeblinks := tctTopicDetail.Basket.Weblinks
+
+	for _, tctWeblink := range tctWeblinks {
+		if ! weblinkExists[tctWeblink.ID] {
+			// Example tctWeblinkContent: "Library of Congress (exactMatch)"
+			// vocabulary = "Library of Congress"
+			// relationship = "exactMatch"
+			re := regexp.MustCompile(`^([^(]+)\(([^)]+)\)$`)
+			matches := re.FindStringSubmatch(tctWeblink.Content)
+			tctWeblinkVocabulary := strings.TrimSpace(matches[1])
+			tctWeblinkRelationship := strings.TrimSpace(matches[2])
+
+			if weblinkRelationshipIds[tctWeblinkRelationship] == 0 {
+				weblinkRelationshipId++
+				enmWeblinkRelationship := models.WeblinksRelationship{
+					ID:        weblinkRelationshipId,
+					Relationship: tctWeblinkRelationship,
 				}
-				err = enmScope.Insert(DB)
+				err := enmWeblinkRelationship.Insert(DB)
 				if err != nil {
-					fmt.Println(enmScope)
+					fmt.Println(enmWeblinkRelationship)
 					panic(err)
 				}
-				scopeExists[tctTopicHit.Scope.ID] = true
+				weblinkRelationshipIds[tctWeblinkRelationship] = weblinkRelationshipId
 			}
 
-			enmName := models.Name{
-				TctID: int(tctTopicHit.ID),
-				TopicID: int(tctTopic.ID),
-				Name: tctTopicHit.Name,
-				ScopeID: int(tctTopicHit.Scope.ID),
-				Bypass: tctTopicHit.Bypass,
-				Hidden: tctTopicHit.Hidden,
-				Preferred: tctTopicHit.Preferred,
+			if weblinkVocabularyIds[tctWeblinkVocabulary] == 0 {
+				weblinkVocabularyId++
+				enmWeblinkVocabulary := models.WeblinksVocabulary{
+					ID:        weblinkVocabularyId,
+					Vocabulary: tctWeblinkVocabulary,
+				}
+				err := enmWeblinkVocabulary.Insert(DB)
+				if err != nil {
+					fmt.Println(enmWeblinkVocabulary)
+					panic(err)
+				}
+				weblinkVocabularyIds[tctWeblinkVocabulary] = weblinkVocabularyId
 			}
-			err := enmName.Insert(DB)
-			if err != nil {fmt.Println(enmName)
+
+			enmWeblink := models.Weblink{
+				TctID:                  int(tctWeblink.ID),
+				URL:                    tctWeblink.URL,
+				WeblinksRelationshipID: weblinkRelationshipId,
+				WeblinksVocabularyID:   weblinkVocabularyId,
+			}
+			err := enmWeblink.Insert(DB)
+			if err != nil {
+				fmt.Println(err)
+				panic(err)
+			}
+
+			weblinkExists[tctWeblink.ID] = true
+
+			// Create topic to weblink mapping
+			enmTopicsWeblinks := models.TopicsWeblink{
+				TopicID: int(tctTopicDetail.Basket.ID),
+				WeblinkID: int(tctWeblink.ID),
+			}
+			enmTopicsWeblinks.Insert(DB)
+			if err != nil {
+				fmt.Println(err)
 				panic(err)
 			}
 		}
 	}
+}
 
+
+func loadIndexPatterns() (epubIndexPatternMap map[int]int) {
 	// TODO: Find out if there is an internal TCT ID for IndexPatterns, and if
 	// so, maybe ask Infoloom to include it in the API responses instead of
 	// making our own ids.
 	tctIdTemp := 0
 	tctIndexPatterns := tct.GetIndexPatternsAll()
-	epubIndexPatternMap := make(map[int]int)
+	epubIndexPatternMap = make(map[int]int)
 	for _, tctIndexPattern := range tctIndexPatterns {
 		tctIdTemp++
 		enmIndexPattern := models.Indexpattern{
@@ -384,113 +650,135 @@ func Reload() {
 		}
 	}
 
+	return
+}
+
+func loadEpubs(epubIndexPatternMap map[int]int) {
 	tctEpubs := tct.GetEpubsAll()
 	for _, tctEpub := range tctEpubs {
-		tctEpubDetail := tct.GetEpubDetail(int(tctEpub.ID))
+		epubId := int(tctEpub.ID)
 
-		enmEpub := models.Epub{
-			TctID: int(tctEpub.ID),
-			Title: tctEpubDetail.Title,
-			Author: tctEpubDetail.Author,
-			Publisher: tctEpubDetail.Publisher,
-			Isbn: tctEpubDetail.Isbn,
-			IndexpatternID: epubIndexPatternMap[int(tctEpub.ID)],
-		}
-		err := enmEpub.Insert(DB)
-		if err != nil {
-			fmt.Println(enmEpub)
-			panic(err )
-		}
+		tctEpubDetail := tct.GetEpubDetail(epubId)
+
+		insertEpub(tctEpubDetail, epubId, epubIndexPatternMap[epubId])
 
 		// All Locations must be loaded first before attempting to load Occurrences,
 		// the reason being Occurrences target Locations for RingNext and RingPrevious FKs
-		tctLocations := tctEpubDetail.Locations
-		for _, tctLocation := range tctLocations {
-			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+		locationIds := loadLocations(tctEpubDetail, epubId)
 
-			nextId := sql.NullInt64{}
-			if tctLocationDetail.PreviousLocationID != nil {
-				nextId.Int64 = *tctLocationDetail.PreviousLocationID
-				nextId.Valid = true
-			} else {
-				nextId.Valid = false
-			}
+		loadOccurrences(locationIds)
+	}
+}
 
-			prevId := sql.NullInt64{}
-			if tctLocationDetail.PreviousLocationID != nil {
-				prevId.Int64 = *tctLocationDetail.PreviousLocationID
-				prevId.Valid = true
-			} else {
-				prevId.Valid = false
-			}
+func insertEpub(tctEpubDetail tct.EpubDetail, epubId int, indexPatternId int) {
+	enmEpub := models.Epub{
+		TctID: epubId,
+		Title: tctEpubDetail.Title,
+		Author: tctEpubDetail.Author,
+		Publisher: tctEpubDetail.Publisher,
+		Isbn: tctEpubDetail.Isbn,
+		IndexpatternID: indexPatternId,
+	}
+	err := enmEpub.Insert(DB)
+	if err != nil {
+		fmt.Println(enmEpub)
+		panic(err )
+	}
+}
 
-			enmLocation := models.Location{
-				TctID: int(tctLocationDetail.ID),
-				EpubID: int(tctEpub.ID),
-				Localid: tctLocationDetail.Localid,
-				SequenceNumber: int(tctLocation.SequenceNumber),
-				ContentUniqueIndicator: tctLocationDetail.Content.ContentUniqueIndicator,
-				ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
-				ContentText: tctLocationDetail.Content.Text,
+func loadLocations(tctEpubDetail tct.EpubDetail, epubId int) (locationIds []int) {
+	tctLocations := tctEpubDetail.Locations
 
-				// Occurrences are processed in the second pass
+	for _, tctLocation := range tctLocations {
+		tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
 
-				PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,
-				PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
-				PagenumberCSSSelector: tctLocationDetail.Pagenumber.CSSSelector,
-				PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
-
-				// TODO: Re-create FKs:
-				// CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
-				// CONSTRAINT `fk__locations__previous_location_id__locations__tct_id` FOREIGN KEY (`previous_location_id`) REFERENCES `locations` (`tct_id`)
-				// ...and have Reload command delete them before loading locations table, then re-create them after load is finished.
-				NextLocationID: nextId,
-				PreviousLocationID: prevId,
-			}
-			err := enmLocation.Insert(DB)
-			if err != nil {
-				fmt.Println(enmLocation)
-				panic(err)
-			}
+		nextId := sql.NullInt64{}
+		if tctLocationDetail.PreviousLocationID != nil {
+			nextId.Int64 = *tctLocationDetail.PreviousLocationID
+			nextId.Valid = true
+		} else {
+			nextId.Valid = false
 		}
 
-		// Second pass: get Occurrences
-		for _, tctLocation := range tctLocations {
-			tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
+		prevId := sql.NullInt64{}
+		if tctLocationDetail.PreviousLocationID != nil {
+			prevId.Int64 = *tctLocationDetail.PreviousLocationID
+			prevId.Valid = true
+		} else {
+			prevId.Valid = false
+		}
 
-			for _, tctOccurrence := range tctLocationDetail.Occurrences {
-				ringNextId := sql.NullInt64{}
-				if tctOccurrence.RingNext != nil {
-					ringNextId.Int64 = *tctOccurrence.RingNext
-					ringNextId.Valid = true
-				} else {
-					ringNextId.Valid = false
-				}
+		enmLocation := models.Location{
+			TctID: int(tctLocationDetail.ID),
+			EpubID: int(epubId),
+			Localid: tctLocationDetail.Localid,
+			SequenceNumber: int(tctLocation.SequenceNumber),
+			ContentUniqueIndicator: tctLocationDetail.Content.ContentUniqueIndicator,
+			ContentDescriptor: tctLocationDetail.Content.ContentDescriptor,
+			ContentText: tctLocationDetail.Content.Text,
 
-				ringPrevId := sql.NullInt64{}
-				if tctOccurrence.RingPrevious != nil {
-					ringPrevId.Int64 = *tctOccurrence.RingPrevious
-					ringPrevId.Valid = true
-				} else {
-					ringPrevId.Valid = false
-				}
+			// Occurrences are processed in the second pass
 
-				// TODO: Re-create FKs after figuring why inserting
-				// NULL into them is not working:
-				// * fk__occurrences__ring_next__locations__tct_id
-				// * fk__occurrences__ring_prev__locations__tct_id
-				enmOccurrence := models.Occurrence{
-					TctID: int(tctOccurrence.ID),
-					LocationID: int(tctLocation.ID),
-					TopicID: int(tctOccurrence.Basket.ID),
-					RingNext: ringNextId,
-					RingPrev: ringPrevId,
-				}
-				err = enmOccurrence.Insert(DB)
-				if err != nil {
-					fmt.Println(enmOccurrence)
-					panic(err)
-				}
+			PagenumberFilepath: tctLocationDetail.Pagenumber.Filepath,
+			PagenumberTag: tctLocationDetail.Pagenumber.PagenumberTag,
+			PagenumberCSSSelector: tctLocationDetail.Pagenumber.CSSSelector,
+			PagenumberXpath: tctLocationDetail.Pagenumber.Xpath,
+
+			// TODO: Re-create FKs:
+			// CONSTRAINT `fk__locations__next_location_id__locations__tct_id` FOREIGN KEY (`next_location_id`) REFERENCES `locations` (`tct_id`),
+			// CONSTRAINT `fk__locations__previous_location_id__locations__tct_id` FOREIGN KEY (`previous_location_id`) REFERENCES `locations` (`tct_id`)
+			// ...and have Reload command delete them before loading locations table, then re-create them after load is finished.
+			NextLocationID: nextId,
+			PreviousLocationID: prevId,
+		}
+		err := enmLocation.Insert(DB)
+		if err != nil {
+			fmt.Println(enmLocation)
+			panic(err)
+		}
+
+		locationIds = append(locationIds, int(tctLocationDetail.ID))
+	}
+
+	return
+}
+
+func loadOccurrences(locationIds []int) {
+	for _, locationId := range locationIds {
+		tctLocationDetail := tct.GetLocation(locationId)
+
+		for _, tctOccurrence := range tctLocationDetail.Occurrences {
+			ringNextId := sql.NullInt64{}
+			if tctOccurrence.RingNext != nil {
+				ringNextId.Int64 = *tctOccurrence.RingNext
+				ringNextId.Valid = true
+			} else {
+				ringNextId.Valid = false
+			}
+
+			ringPrevId := sql.NullInt64{}
+			if tctOccurrence.RingPrevious != nil {
+				ringPrevId.Int64 = *tctOccurrence.RingPrevious
+				ringPrevId.Valid = true
+			} else {
+				ringPrevId.Valid = false
+			}
+
+			// TODO: Re-create FKs after figuring why inserting
+			// NULL into them is not working:
+			// * fk__occurrences__ring_next__locations__tct_id
+			// * fk__occurrences__ring_prev__locations__tct_id
+			enmOccurrence := models.Occurrence{
+				TctID: int(tctOccurrence.ID),
+				LocationID: int(locationId),
+				TopicID: int(tctOccurrence.Basket.ID),
+				RingNext: ringNextId,
+				RingPrev: ringPrevId,
+			}
+			err := enmOccurrence.Insert(DB)
+			if err != nil {
+				fmt.Println(enmOccurrence)
+				panic(err)
 			}
 		}
 	}

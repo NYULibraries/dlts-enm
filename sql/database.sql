@@ -16,6 +16,20 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `editorial_review_status_state`
+--
+
+DROP TABLE IF EXISTS `editorial_review_status_state`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `editorial_review_status_state` (
+  `id` int(11) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `epubs`
 --
 
@@ -306,6 +320,20 @@ CREATE TABLE `scopes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `topic_type`
+--
+
+DROP TABLE IF EXISTS `topic_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topic_type` (
+  `tct_id` int(11) NOT NULL,
+  `ttype` varchar(3000) NOT NULL,
+  PRIMARY KEY (`tct_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `topics`
 --
 
@@ -315,7 +343,95 @@ DROP TABLE IF EXISTS `topics`;
 CREATE TABLE `topics` (
   `tct_id` int(11) NOT NULL,
   `display_name_do_not_use` varchar(3000) NOT NULL COMMENT 'Workaround for apparent knq/xo bug that prevents creation of the full set of CRUD methods  when table has only one column.',
-  PRIMARY KEY (`tct_id`)
+  `editorial_review_status_reviewer` varchar(255) DEFAULT NULL,
+  `editorial_review_status_time` varchar(28) DEFAULT NULL,
+  `editorial_review_status_state_id` int(11) NOT NULL,
+  PRIMARY KEY (`tct_id`),
+  KEY `editorial_review_status_state_id` (`editorial_review_status_state_id`) USING BTREE,
+  CONSTRAINT `fk__topics__editorial_review_status_state` FOREIGN KEY (`editorial_review_status_state_id`) REFERENCES `editorial_review_status_state` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `topics_topic_type`
+--
+
+DROP TABLE IF EXISTS `topics_topic_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topics_topic_type` (
+  `topic_id` int(11) NOT NULL,
+  `topic_type_id` int(11) NOT NULL,
+  KEY `topic_id` (`topic_id`),
+  KEY `topic_type_id` (`topic_type_id`),
+  CONSTRAINT `fk__topics_topic_type__topic_type` FOREIGN KEY (`topic_type_id`) REFERENCES `topic_type` (`tct_id`),
+  CONSTRAINT `fk__topics_topic_type__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `topics_weblinks`
+--
+
+DROP TABLE IF EXISTS `topics_weblinks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topics_weblinks` (
+  `topic_id` int(11) NOT NULL,
+  `weblink_id` int(11) NOT NULL,
+  UNIQUE KEY `idx_unique_topics_weblinks` (`topic_id`,`weblink_id`),
+  KEY `topic_id` (`topic_id`),
+  KEY `weblink_id` (`weblink_id`),
+  CONSTRAINT `fk__topics_weblinks__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`),
+  CONSTRAINT `fk__topics_weblinks__weblinks` FOREIGN KEY (`weblink_id`) REFERENCES `weblinks` (`tct_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `weblinks`
+--
+
+DROP TABLE IF EXISTS `weblinks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `weblinks` (
+  `tct_id` int(11) NOT NULL,
+  `url` varchar(3000) NOT NULL,
+  `weblinks_relationship_id` int(11) NOT NULL,
+  `weblinks_vocabulary_id` int(11) NOT NULL,
+  PRIMARY KEY (`tct_id`),
+  KEY `weblinks_relationship_id` (`weblinks_relationship_id`),
+  KEY `weblinks_vocabulary_id` (`weblinks_vocabulary_id`),
+  CONSTRAINT `fk__weblinks__weblinks_relationship` FOREIGN KEY (`weblinks_relationship_id`) REFERENCES `weblinks_relationship` (`id`),
+  CONSTRAINT `fk__weblinks__weblinks_vocabulary` FOREIGN KEY (`weblinks_vocabulary_id`) REFERENCES `weblinks_vocabulary` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `weblinks_relationship`
+--
+
+DROP TABLE IF EXISTS `weblinks_relationship`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `weblinks_relationship` (
+  `id` int(11) NOT NULL,
+  `relationship` varchar(3000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `weblinks_vocabulary`
+--
+
+DROP TABLE IF EXISTS `weblinks_vocabulary`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `weblinks_vocabulary` (
+  `id` int(11) NOT NULL,
+  `vocabulary` varchar(3000) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -366,4 +482,4 @@ CREATE TABLE `topics` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-22 11:01:41
+-- Dump completed on 2017-10-19 12:14:03

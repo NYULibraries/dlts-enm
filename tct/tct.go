@@ -39,8 +39,17 @@ var TctApiEndpoints = map[string]string{
 	"IndexPatternsAll": "/api/epub/index-pattern/all/",
 	"Location": "/api/epub/location/",
 	"NamesAll": "/api/hit/hits/all/",
+	"RelationTypesAll": "/api/relation/rtype/all/",
 	"TopicsAll": "/api/hit/basket/all/",
 	"TopicDetail": "/api/hit/basket/",
+	"TopicTypesAll": "/api/topic/ttype/all/",
+}
+
+type EditorialReviewStatusState struct {
+	ReviewerIsNull bool
+	TimeIsNull bool
+	Changed bool
+	Reviewed bool
 }
 
 func GetResponseBody(params ...string) (body []byte) {
@@ -162,6 +171,17 @@ func GetNamesAll() (namesList []Name) {
 	return
 }
 
+func GetRelationTypesAll() (relationTypesList []RelationType) {
+	responseBody := GetResponseBody("RelationTypesAll")
+
+	err := json.Unmarshal(responseBody, &relationTypesList)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
 func GetTopicsAll() (topicsList []Topic) {
 	responseBody := GetResponseBody("TopicsAll")
 
@@ -178,6 +198,17 @@ func GetTopicDetail(topicId int) (topicDetail TopicDetail) {
 	responseBody := GetResponseBody("TopicDetail", topicIdString)
 
 	err := json.Unmarshal(responseBody, &topicDetail)
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return
+}
+
+func GetTopicTypesAll() (topicTypesList []TopicType) {
+	responseBody := GetResponseBody("TopicTypesAll")
+
+	err := json.Unmarshal(responseBody, &topicTypesList)
 	if err != nil {
 		panic(err.Error())
 	}
@@ -298,6 +329,15 @@ type Name struct {
 	Scope     string `json:"scope"`
 }
 
+// /api/relation/rtype/all/
+type RelationType struct {
+	ID          int64  `json:"id"`
+	RoleFrom    string `json:"role_from"`
+	RoleTo      string `json:"role_to"`
+	Rtype       string `json:"rtype"`
+	Symmetrical bool   `json:"symmetrical"`
+}
+
 // /api/hit/basket/all/
 type Topic struct {
 	DisplayName string `json:"display_name"`
@@ -305,8 +345,11 @@ type Topic struct {
 }
 
 // /api/hit/basket/BASKET_ID/
+// TODO: find basket ID of topic detail that has non-empty types, weblinks, and
+// relations for example comment.
 type TopicDetail struct {
 	Basket struct {
+		Description string `json:"description"`
 		DisplayName string `json:"display_name"`
 		ID          int64  `json:"id"`
 		Occurs      []struct {
@@ -322,6 +365,12 @@ type TopicDetail struct {
 				SequenceNumber int64  `json:"sequence_number"`
 			} `json:"location"`
 		} `json:"occurs"`
+		Review struct {
+			Changed  bool   `json:"changed"`
+			Reviewed bool   `json:"reviewed"`
+			Reviewer string `json:"reviewer"`
+			Time     string `json:"time"`
+		} `json:"review"`
 		TopicHits []struct {
 			Bypass    bool   `json:"bypass"`
 			Hidden    bool   `json:"hidden"`
@@ -333,6 +382,15 @@ type TopicDetail struct {
 				Scope string `json:"scope"`
 			} `json:"scope"`
 		} `json:"topic_hits"`
+		Types []struct {
+			ID    int64  `json:"id"`
+			Ttype string `json:"ttype"`
+		} `json:"types"`
+		Weblinks []struct {
+			Content string `json:"content"`
+			ID      int64  `json:"id"`
+			URL     string `json:"url"`
+		} `json:"weblinks"`
 	} `json:"basket"`
 	Relations []struct {
 		Basket struct {
@@ -349,4 +407,10 @@ type TopicDetail struct {
 			Symmetrical bool   `json:"symmetrical"`
 		} `json:"relationtype"`
 	} `json:"relations"`
+}
+
+// /api/topic/ttype/all/
+type TopicType struct {
+	ID    int64  `json:"id"`
+	Ttype string `json:"ttype"`
 }

@@ -67,7 +67,7 @@ func AddPage(page *models.Page) error {
 				"title": page.Title,
 				"yearOfPublication": 0,
 				"pageLocalId": page.PageLocalid,
-				"pageNumberForDisplay": pageNumberForDisplay(page.PageLocalid, page.PagePattern),
+				"pageNumberForDisplay": pageNumberForDisplay(page.PageLocalid),
 				"pageSequenceNumber": page.PageSequence,
 				"pageText": page.PageText,
 				"topicNames": topicNames,
@@ -87,11 +87,6 @@ func AddPage(page *models.Page) error {
 	return nil
 }
 
-func pageNumberForDisplay(pageLocalId string, pagePattern string) (pageNumber string) {
-	pagePattern = strings.Replace(pagePattern, "{}", "", 1)
-	pagePattern = strings.Replace(pagePattern, "#", "", 1)
-
-	pageNumber = strings.Replace(pageLocalId, pagePattern, "", 1)
-
-	return
+func pageNumberForDisplay(pageLocalId string) (pageNumber string) {
+	return strings.Replace(pageLocalId, "page_", "", 1)
 }

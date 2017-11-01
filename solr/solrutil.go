@@ -15,6 +15,8 @@ var Port int
 var Server string
 var conn *solr.Connection
 
+var epubsNumberOfPages map[string]int
+
 type topicNamesForDisplay map[string][]string
 
 func Init(server string, port int) error {
@@ -22,6 +24,11 @@ func Init(server string, port int) error {
 	conn, err = solr.Init(server, port, "enm-pages")
 	if err != nil {
 		return err
+	}
+
+	epubsNumberOfPages = make(map[string]int)
+	for _, epubNumberOfPage := range db.GetEpubsNumberOfPages() {
+		epubsNumberOfPages[ epubNumberOfPage.Isbn ] = int(epubNumberOfPage.NumberOfPages)
 	}
 
 	return nil
@@ -63,6 +70,7 @@ func AddPage(page *models.Page) error {
 				"id": page.ID,
 				"isbn": page.Isbn,
 				"authors": page.Authors,
+				"epubNumberOfPages": epubsNumberOfPages[ page.Isbn ],
 				"publisher": page.Publisher,
 				"title": page.Title,
 				"yearOfPublication": 0,

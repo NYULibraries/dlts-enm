@@ -51,6 +51,20 @@ CREATE TABLE `epubs` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Temporary table structure for view `epubs_number_of_pages`
+--
+
+DROP TABLE IF EXISTS `epubs_number_of_pages`;
+/*!50001 DROP VIEW IF EXISTS `epubs_number_of_pages`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `epubs_number_of_pages` (
+  `ISBN` tinyint NOT NULL,
+  `number_of_pages` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `indexpatterns`
 --
 
@@ -436,6 +450,25 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Final view structure for view `epubs_number_of_pages`
+--
+
+/*!50001 DROP TABLE IF EXISTS `epubs_number_of_pages`*/;
+/*!50001 DROP VIEW IF EXISTS `epubs_number_of_pages`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `epubs_number_of_pages` AS select `epubs`.`isbn` AS `ISBN`,count(0) AS `number_of_pages` from (`epubs` join `locations` on((`epubs`.`tct_id` = `locations`.`epub_id`))) group by `epubs`.`isbn` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
 -- Final view structure for view `page_topic_names`
 --
 
@@ -482,4 +515,4 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-19 12:14:03
+-- Dump completed on 2017-11-01 13:26:27

@@ -161,6 +161,15 @@ func ClearTables() {
 	tx.Commit()
 }
 
+func GetEpubsNumberOfPages() (epubsNumberOfPages []*models.EpubsNumberOfPage) {
+	epubsNumberOfPages, err := models.GetEpubsNumberOfPages(DB)
+	if err != nil {
+		panic("db.GetEpubsNumberOfPages: " + err.Error())
+	}
+
+	return epubsNumberOfPages
+}
+
 func GetPagesAll() (pages []*models.Page) {
 	pages, err := models.GetPages(DB)
 	if err != nil {

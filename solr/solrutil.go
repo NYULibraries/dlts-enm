@@ -59,6 +59,7 @@ func AddPage(page *models.Page) error {
 		}
 	}
 
+	// Map of topic display names to alternate names as marshalled JSON
 	topicNamesForDisplayBytes, err := json.Marshal(topicNamesForDisplay)
 	if err != nil {
 		panic(fmt.Sprintf("ERROR: couldn't marshal topicNamesForDisplay for %s", page.ID))

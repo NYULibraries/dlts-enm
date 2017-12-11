@@ -702,8 +702,8 @@ func loadLocations(tctEpubDetail tct.EpubDetail, epubId int) (locationIds []int)
 		tctLocationDetail := tct.GetLocation(int(tctLocation.ID))
 
 		nextId := sql.NullInt64{}
-		if tctLocationDetail.PreviousLocationID != nil {
-			nextId.Int64 = *tctLocationDetail.PreviousLocationID
+		if tctLocationDetail.NextLocationID != nil {
+			nextId.Int64 = *tctLocationDetail.NextLocationID
 			nextId.Valid = true
 		} else {
 			nextId.Valid = false

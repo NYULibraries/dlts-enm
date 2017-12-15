@@ -392,8 +392,8 @@ CREATE TABLE `topics_topic_type` (
   `topic_type_id` int(11) NOT NULL,
   KEY `topic_id` (`topic_id`),
   KEY `topic_type_id` (`topic_type_id`),
-  CONSTRAINT `fk__topics_topic_type__topic_type` FOREIGN KEY (`topic_type_id`) REFERENCES `topic_type` (`tct_id`),
-  CONSTRAINT `fk__topics_topic_type__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`)
+  CONSTRAINT `fk__topics_topic_type__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`),
+  CONSTRAINT `fk__topics_topic_type__topic_type` FOREIGN KEY (`topic_type_id`) REFERENCES `topic_type` (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

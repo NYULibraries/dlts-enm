@@ -25,7 +25,7 @@ type ExternalRelation struct{
 	Vocabulary string
 }
 
-type ExternalRelations struct{
+type TopicPageData struct{
 	AlternateNames []string
 	DisplayName string
 	EPUBMatches []string
@@ -48,7 +48,8 @@ func Test() {
 	if err != nil {
 		panic(err)
 	}
-	err = tpl.Execute(os.Stdout, ExternalRelations{
+
+	err = tpl.Execute(os.Stdout, TopicPageData{
 		AlternateNames: []string{"alt1", "alt2", "alt3"},
 		DisplayName: "topic!",
 		EPUBMatches: []string{"epub1", "epub2", "epub3"},

@@ -40,7 +40,7 @@ type Paths struct{
 
 func Test() {
 	funcs := template.FuncMap{
-		"lastIndex": func (s []interface{}) int {
+		"lastIndex": func (s []ExternalRelation) int {
 			return len(s) - 1;
 		},
 	}

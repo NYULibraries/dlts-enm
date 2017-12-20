@@ -27,6 +27,10 @@ type ExternalRelation struct{
 	Vocabulary string
 }
 
+type Paths struct{
+	WebRoot string
+}
+
 type TopicPageData struct{
 	AlternateNames []string
 	DisplayName string
@@ -34,10 +38,6 @@ type TopicPageData struct{
 	ExternalRelations []ExternalRelation
 	Paths Paths
 	VisualizationData string
-}
-
-type Paths struct{
-	WebRoot string
 }
 
 func Test() {

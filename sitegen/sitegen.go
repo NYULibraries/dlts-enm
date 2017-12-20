@@ -30,6 +30,7 @@ type ExternalRelations struct{
 	DisplayName string
 	EPUBMatches []string
 	ExternalRelations []ExternalRelation
+	Paths Paths
 }
 
 type Paths struct{

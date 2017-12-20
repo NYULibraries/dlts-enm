@@ -219,6 +219,15 @@ func GetPageTopicNamesByPageId(pageId int) (pageTopicNames []models.PageTopicNam
 	return
 }
 
+func GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID int) (relatedTopicsWithNumberOfOccurrences []*models.RelatedTopicNamesForTopicWithNumberOfOccurrences) {
+	relatedTopicsWithNumberOfOccurrences, err := models.RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id(DB, topicID)
+	if err != nil {
+		panic("db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences: " + err.Error())
+	}
+
+	return relatedTopicsWithNumberOfOccurrences
+}
+
 func GetTopicsAll() (topics []models.Topic) {
 	const sqlstr = `SELECT tct_id, display_name_do_not_use FROM topics ORDER BY display_name_do_not_use`
 

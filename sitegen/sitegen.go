@@ -87,7 +87,9 @@ func GenerateTopicPages(destination string) {
 }
 
 func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []string) error {
+	relatedTopicNamesWithNumberOfOccurrences := db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID)
 	fmt.Println("%s (%d): %v", topicDisplayName, topicID, alternateNames)
+	fmt.Println("%v", relatedTopicNamesWithNumberOfOccurrences)
 	return nil
 }
 

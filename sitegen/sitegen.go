@@ -19,6 +19,12 @@ import (
 	"os"
 )
 
+// Tricky...this assumes that location of the templates relative to working directory
+// matches what the location would be if calling `go run main.go` from root of this
+// repo.  This is brittle: user could call `go run ../main.go` from sitegen/, or
+// could be calling the built binary from anywhere relative to templates.
+// Consider including the templates in the binary using something like
+// https://github.com/jteeuwen/go-bindata
 const TemplateDirectory =  "sitegen/templates/topic-page"
 
 type ExternalRelation struct{

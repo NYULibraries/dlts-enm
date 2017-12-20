@@ -31,6 +31,7 @@ type TopicPageData struct{
 	EPUBMatches []string
 	ExternalRelations []ExternalRelation
 	Paths Paths
+	VisualizationData string
 }
 
 type Paths struct{
@@ -73,6 +74,7 @@ func Test() {
 		Paths: Paths{
 			WebRoot: "webroot",
 		},
+		VisualizationData: "[VISUALIZATION DATA]",
 	})
 	if err != nil {
 		panic(err)

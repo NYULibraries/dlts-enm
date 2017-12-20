@@ -19,7 +19,6 @@ import (
 	"html/template"
 	"os"
 
-	"github.com/nyulibraries/dlts-enm/db/models"
 	"github.com/nyulibraries/dlts-enm/db"
 )
 
@@ -62,17 +61,33 @@ func GenerateTopicPages(destination string) {
 		}
 	}
 
-	topicWithAlternateNames := db.GetTopicsWithAlternateNamesAll()
-	for _, topicWithAlternateName := range topicWithAlternateNames{
-		err := GenerateTopicPage(topicWithAlternateName)
-		if err != nil {
-			panic(fmt.Sprintf("ERROR: couldn't generate topic page for %d: \"%s\"\n", topicWithAlternateName.TctID, err.Error()))
+	topicsWithAlternateNames := db.GetTopicsWithAlternateNamesAll()
+	var alternateNames []string
+	inProgressTopicID := topicsWithAlternateNames[0].TctID
+	inProgressTopicName := topicsWithAlternateNames[0].DisplayNameDoNotUse
+	for _, topicWithAlternateNames := range topicsWithAlternateNames{
+		// Finished getting alternate names for in-process topic.
+		if (topicWithAlternateNames.TctID != inProgressTopicID) {
+			// Generate the topic page.
+			err := GenerateTopicPage(inProgressTopicID, inProgressTopicName, alternateNames)
+			if err != nil {
+				panic(fmt.Sprintf("ERROR: couldn't generate topic page for %d: \"%s\"\n", inProgressTopicID, err.Error()))
+			}
+
+			// Clear alternate names and set new in progress topic.
+			alternateNames = []string{}
+			inProgressTopicID = topicWithAlternateNames.TctID
+			inProgressTopicName = topicWithAlternateNames.DisplayNameDoNotUse
+		}
+
+		if (topicWithAlternateNames.Name != inProgressTopicName) {
+				alternateNames = append(alternateNames, topicWithAlternateNames.Name)
 		}
 	}
 }
 
-func GenerateTopicPage(topicWithAlternateName *models.TopicAlternateName) error {
-	fmt.Printf("Generating page for topic: %s (%d) - %s\n", topicWithAlternateName.DisplayNameDoNotUse, topicWithAlternateName.TctID, topicWithAlternateName.Name)
+func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []string) error {
+	fmt.Println("%s (%d): %v", topicDisplayName, topicID, alternateNames)
 	return nil
 }
 

@@ -45,7 +45,13 @@ func Test() {
 		},
 	}
 
-	var tpl, err = template.New("index.html").Funcs(funcs).ParseFiles("templates/topic-page/index.html")
+	tpl := template.New("index.html").Funcs(funcs)
+	tpl, err := tpl.ParseFiles(
+		"templates/topic-page/index.html",
+		"templates/topic-page/epub.html",
+		"templates/topic-page/banner.html",
+	)
+
 	if err != nil {
 		panic(err)
 	}

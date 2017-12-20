@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  {{template "banner" .}}
+  {{template "banner.html" .}}
   <main class="enm-topicpage">
     <section class="hero  is-link">
       <div class="hero-body">
@@ -62,7 +62,7 @@
           <div class=" enm-books-with-topic column">
             <h2 class="enm-title">This topic referenced in:</h2>
             {{range .EPUBMatches}}
-            {{template "EPUB" .}}
+            {{template "epub.html" .}}
             {{end}}
             <hr>
             <article class="box">

@@ -15,8 +15,12 @@
 package sitegen
 
 import (
+	"fmt"
 	"html/template"
 	"os"
+
+	"github.com/nyulibraries/dlts-enm/db/models"
+	"github.com/nyulibraries/dlts-enm/db"
 )
 
 // Tricky...this assumes that location of the templates relative to working directory
@@ -44,6 +48,29 @@ type TopicPageData struct{
 	ExternalRelations []ExternalRelation
 	Paths Paths
 	VisualizationData string
+}
+
+func GenerateTopicPages(destination string) {
+	topicPagesDir := destination + "/topic-pages"
+	if _, err := os.Stat(destination); os.IsNotExist(err) {
+		os.Mkdir(topicPagesDir, os.FileMode(0755))
+		if err != nil {
+			panic(err)
+		}
+	}
+
+	topicWithAlternateNames := db.GetTopicsWithAlternateNamesAll()
+	for _, topicWithAlternateName := range topicWithAlternateNames{
+		err := GenerateTopicPage(topicWithAlternateName)
+		if err != nil {
+			panic(fmt.Sprintf("ERROR: couldn't generate topic page for %d: \"%s\"\n", topicWithAlternateName.TctID, err.Error()))
+		}
+	}
+}
+
+func GenerateTopicPage(topicWithAlternateName *models.TopicAlternateName) error {
+	fmt.Printf("Generating page for topic: %s (%d) - %s\n", topicWithAlternateName.DisplayNameDoNotUse, topicWithAlternateName.TctID, topicWithAlternateName.Name)
+	return nil
 }
 
 func Test() {

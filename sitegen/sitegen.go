@@ -55,6 +55,7 @@ var Destination string
 func GenerateTopicPages(destination string) {
 	Destination = destination
 	topicPagesDir := Destination + "/topic-pages"
+	if _, err := os.Stat(topicPagesDir); os.IsNotExist(err) {
 		os.Mkdir(topicPagesDir, os.FileMode(0755))
 		if err != nil {
 			panic(err)

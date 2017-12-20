@@ -78,7 +78,7 @@ func Test() {
 			},
 		},
 		Paths: Paths{
-			WebRoot: "webroot",
+			WebRoot: "/webroot",
 		},
 		VisualizationData: "[VISUALIZATION DATA]",
 	})

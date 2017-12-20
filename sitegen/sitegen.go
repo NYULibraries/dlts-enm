@@ -50,9 +50,11 @@ type TopicPageData struct{
 	VisualizationData string
 }
 
+var Destination string
+
 func GenerateTopicPages(destination string) {
-	topicPagesDir := destination + "/topic-pages"
-	if _, err := os.Stat(destination); os.IsNotExist(err) {
+	Destination = destination
+	topicPagesDir := Destination + "/topic-pages"
 		os.Mkdir(topicPagesDir, os.FileMode(0755))
 		if err != nil {
 			panic(err)

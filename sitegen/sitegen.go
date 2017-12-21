@@ -64,13 +64,12 @@ type TopicPageData struct{
 	VisualizationData string
 }
 
-var Destination string
+var TopicPagesDir string
 
 func GenerateTopicPages(destination string) {
-	Destination = destination
-	topicPagesDir := Destination + "/topic-pages"
-	if _, err := os.Stat(topicPagesDir); os.IsNotExist(err) {
-		os.Mkdir(topicPagesDir, os.FileMode(0755))
+	TopicPagesDir := destination + "/topic-pages"
+	if _, err := os.Stat(TopicPagesDir); os.IsNotExist(err) {
+		os.Mkdir(TopicPagesDir, os.FileMode(0755))
 		if err != nil {
 			panic(err)
 		}
@@ -171,7 +170,7 @@ func WritePage(topicPageData TopicPageData) (err error){
 		return err
 	}
 
-	filename := Destination + "/" + string(topicPageData.TopicID) + ".html"
+	filename := TopicPagesDir + "/" + string(topicPageData.TopicID) + ".html"
 	f, err := os.Create(filename)
 	if err != nil {
 		return err

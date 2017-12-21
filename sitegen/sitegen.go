@@ -113,7 +113,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 
 	epubMatches := []EPUBMatch{}
 	for _, epubMatchForTopicWithNumberOfMatchedPages := range db.GetEpubsForTopicWithNumberOfMatchedPages(topicID) {
-		epubMatches := append(epubMatches, EPUBMatch{
+		epubMatches = append(epubMatches, EPUBMatch{
 			Title: epubMatchForTopicWithNumberOfMatchedPages.Title,
 			Authors: epubMatchForTopicWithNumberOfMatchedPages.Author,
 			Publisher: epubMatchForTopicWithNumberOfMatchedPages.Publisher,

@@ -45,6 +45,17 @@ type ExternalRelation struct{
 	Vocabulary string
 }
 
+type Link struct{
+	Source int
+	Target int
+}
+
+type Node struct{
+	ID int
+	Name string
+	OCount int
+}
+
 type Paths struct{
 	WebRoot string
 }
@@ -63,9 +74,13 @@ type TopicPageData struct{
 	Paths Paths
 	RelatedTopics []RelatedTopic
 	TopicID int
-	VisualizationData string
+	VisualizationData VisualizationData
 }
 
+type VisualizationData struct{
+	Nodes []Node
+	Links []Link
+}
 var TopicPagesDir string
 
 func GenerateTopicPages(destination string) {
@@ -103,6 +118,7 @@ func GenerateTopicPages(destination string) {
 }
 
 func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []string) error {
+	visualizationData := VisualizationData{}
 	relatedTopics := []RelatedTopic{}
 	relatedTopicNamesWithNumberOfOccurrences := db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID)
 	for _, relatedTopic := range relatedTopicNamesWithNumberOfOccurrences {
@@ -110,6 +126,17 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 			ID: relatedTopic.Topic2ID,
 			Name: relatedTopic.DisplayNameDoNotUse,
 			NumberOfOccurrences: int(relatedTopic.NumberOfOccurrences),
+		})
+
+		visualizationData.Links = append(visualizationData.Links, Link{
+			Source: topicID,
+			Target: relatedTopic.Topic2ID,
+		})
+
+		visualizationData.Nodes = append(visualizationData.Nodes, Node{
+			Name: relatedTopic.DisplayNameDoNotUse,
+			ID: relatedTopic.Topic2ID,
+			OCount: int(relatedTopic.NumberOfOccurrences),
 		})
 	}
 
@@ -143,7 +170,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 		},
 		RelatedTopics: relatedTopics,
 		TopicID: topicID,
-		VisualizationData: "[VISUALIZATION DATA]",
+		VisualizationData: visualizationData,
 	}
 
 	err := WritePage(topicPageData)

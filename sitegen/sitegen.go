@@ -68,7 +68,7 @@ type TopicPageData struct{
 var TopicPagesDir string
 
 func GenerateTopicPages(destination string) {
-	TopicPagesDir := destination + "/topic-pages"
+	TopicPagesDir = destination + "/topic-pages"
 	if _, err := os.Stat(TopicPagesDir); os.IsNotExist(err) {
 		os.Mkdir(TopicPagesDir, os.FileMode(0755))
 		if err != nil {

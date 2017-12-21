@@ -143,8 +143,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	visualizationData.Nodes = append(visualizationData.Nodes, Node{
 		Name: topicDisplayName,
 		ID: topicID,
-		// TODO: Get the real number of occurrences
-		OCount: 1,
+		OCount: db.GetTopicNumberOfOccurrencesByTopicId(topicID),
 	})
 
 	epubMatches := []EPUBMatch{}

@@ -277,6 +277,15 @@ func GetTopicsAll() (topics []models.Topic) {
 	return
 }
 
+func GetTopicNumberOfOccurrencesByTopicId(topicID int) int {
+	topicNumberOfOccurrences, err := models.TopicNumberOfOccurrencesByTopic_id(DB, topicID)
+	if err != nil {
+		panic("db.GetTopicNumberOfOccurrencesByTopicId: " + err.Error())
+	}
+
+	return int(topicNumberOfOccurrences[0].NumberOfOccurrences)
+}
+
 func GetTopicSubEntries(topicId int) (subentryTopics []models.Topic){
 	const sqlstr = `SELECT t2.tct_id, t2.display_name_do_not_use
 FROM topics t1

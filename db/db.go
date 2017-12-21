@@ -161,6 +161,15 @@ func ClearTables() {
 	tx.Commit()
 }
 
+func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*models.EpubsForTopicWithNumberOfMatchedPages{
+	epubsForTopicWithNumberOfMatchedPages, err := models.EpubsForTopicWithNumberOfMatchedPagesByTopic_id(DB, topicID)
+	if err != nil {
+		panic("db.GetEpubsForTopicWithNumberOfMatchedPages: " + err.Error())
+	}
+
+	return epubsForTopicWithNumberOfMatchedPages
+}
+
 func GetEpubsNumberOfPages() (epubsNumberOfPages []*models.EpubsNumberOfPage) {
 	epubsNumberOfPages, err := models.GetEpubsNumberOfPages(DB)
 	if err != nil {

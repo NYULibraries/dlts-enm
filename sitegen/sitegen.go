@@ -30,6 +30,13 @@ import (
 // https://github.com/jteeuwen/go-bindata
 const TemplateDirectory =  "sitegen/templates/topic-page"
 
+type EPUBMatch struct{
+	Title string
+	Authors string
+	Publisher string
+	NumberOfOccurrences int
+}
+
 type ExternalRelation struct{
 	Relationship string
 	URL string
@@ -103,8 +110,10 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 			NumberOfOccurrences: int(relatedTopic.NumberOfOccurrences),
 		})
 	}
-	fmt.Println("%s (%d): %v", topicDisplayName, topicID, alternateNames)
-	fmt.Println("%v", relatedTopics)
+
+	epubs := db.GetEpubsForTopicWithNumberOfMatchedPages(topicID)
+	fmt.Println(epubs)
+
 	return nil
 }
 

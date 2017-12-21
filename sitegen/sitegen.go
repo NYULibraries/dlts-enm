@@ -142,7 +142,37 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 		VisualizationData: "[VISUALIZATION DATA]",
 	}
 
-	fmt.Println(topicPageData)
+	err := WritePage(topicPageData)
+	if err != nil {
+		panic(err)
+	}
+
+	return nil
+}
+
+
+func WritePage(topicPageData TopicPageData) (err error){
+	funcs := template.FuncMap{
+		"lastIndex": func (s []ExternalRelation) int {
+			return len(s) - 1;
+		},
+	}
+
+	tpl := template.New("index.html").Funcs(funcs)
+	tpl, err = tpl.ParseFiles(
+		TemplateDirectory + "/index.html",
+		TemplateDirectory + "/epub.html",
+		TemplateDirectory + "/banner.html",
+	)
+
+	if err != nil {
+		return err
+	}
+
+	err = tpl.Execute(os.Stdout, topicPageData)
+	if err != nil {
+		return err
+	}
 
 	return nil
 }

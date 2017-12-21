@@ -1,4 +1,4 @@
-SELECT trs.topic2_id, t.display_name_do_not_use, COUNT( o.tct_id ) AS number_of_occurrences
+SELECT trs.topic2_id, t.display_name_do_not_use, COUNT( * ) AS number_of_occurrences
 
 FROM topic_relations_simple trs INNER JOIN topics t ON trs.topic2_id = t.tct_id
   INNER JOIN occurrences o ON o.topic_id = trs.topic2_id

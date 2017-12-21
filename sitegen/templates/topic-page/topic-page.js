@@ -5,13 +5,9 @@ var svg = d3.select("svg"),
     regex1 = /topic(\d*)/,
     thisTopicNum = regex1.exec(window.location.href)[1];
 
+    var simulation = d3.forceSimulation().nodes(visualizationData.nodes);
 
-d3.json("onetopic.json", function(error, graph) {
-    if (error) throw error;
-
-    var simulation = d3.forceSimulation().nodes(graph.nodes);
-
-    var link_force = d3.forceLink(graph.links).id(function(d) { return d.id; });
+    var link_force = d3.forceLink(visualizationData.links).id(function(d) { return d.id; });
     //add forces
     var charge_force = d3.forceManyBody().strength(-3500).distanceMax(500).distanceMin(100);
     // var charge_force = d3.forceManyBody().distanceMin(160);
@@ -25,7 +21,7 @@ d3.json("onetopic.json", function(error, graph) {
     var link = holdAll.append("g")
         .attr("class", "links")
         .selectAll("line")
-        .data(graph.links)
+        .data(visualizationData.links)
         .enter().append("line")
         .attr("stroke-width", .7)
         .style("stroke", "black");
@@ -33,7 +29,7 @@ d3.json("onetopic.json", function(error, graph) {
     var node = holdAll.append("g")
         .attr("class", "nodes")
         .selectAll("circle")
-        .data(graph.nodes)
+        .data(visualizationData.nodes)
         .enter().append("g")
         .attr("class", "node")
         .attr("id", getId)
@@ -140,5 +136,3 @@ d3.json("onetopic.json", function(error, graph) {
     var renderedHeight = d3.select('.holdAll').node().getBoundingClientRect().height;
     console.log("width of visualization " + renderedWidth);
     console.log("height of visualization " + renderedHeight);
-
-});

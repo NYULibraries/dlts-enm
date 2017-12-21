@@ -121,7 +121,14 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 		})
 	}
 
-	externalRelations := db.GetExternalRelationsForTopics(topicID)
+	externalRelations := []ExternalRelation{}
+	for _, externalRelationsForTopic := range db.GetExternalRelationsForTopics(topicID) {
+		externalRelations = append(externalRelations, ExternalRelation{
+			Relationship: externalRelationsForTopic.Relationship,
+			URL: externalRelationsForTopic.URL,
+			Vocabulary: externalRelationsForTopic.Vocabulary,
+		})
+	}
 
 	topicPageData := TopicPageData{
 		AlternateNames: alternateNames,

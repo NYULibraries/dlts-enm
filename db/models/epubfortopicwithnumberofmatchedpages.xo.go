@@ -5,10 +5,10 @@ package models
 
 // EpubForTopicWithNumberOfMatchedPages represents a row from '[custom epub_for_topic_with_number_of_matched_pages]'.
 type EpubForTopicWithNumberOfMatchedPages struct {
-	Title       string // title
-	Author      string // author
-	Publisher   string // publisher
-	CountOTctID int64  // COUNT( o.tct_id )
+	Title               string // title
+	Author              string // author
+	Publisher           string // publisher
+	NumberOfOccurrences int64  // number_of_occurrences
 }
 
 // EpubForTopicWithNumberOfMatchedPagesByTopic_id runs a custom query, returning results as EpubForTopicWithNumberOfMatchedPages.
@@ -16,7 +16,7 @@ func EpubForTopicWithNumberOfMatchedPagesByTopic_id(db XODB, topic_id int) ([]*E
 	var err error
 
 	// sql query
-	const sqlstr = `SELECT e.title, e.author, e.publisher, COUNT( o.tct_id ) ` +
+	const sqlstr = `SELECT e.title, e.author, e.publisher, COUNT( o.tct_id ) AS number_of_occurrences ` +
 		` ` +
 		`FROM epubs e INNER JOIN locations l ON e.tct_id = l.epub_id ` +
 		`INNER JOIN occurrences o ON o.location_id = l.tct_id ` +
@@ -42,7 +42,7 @@ func EpubForTopicWithNumberOfMatchedPagesByTopic_id(db XODB, topic_id int) ([]*E
 		eftwnomp := EpubForTopicWithNumberOfMatchedPages{}
 
 		// scan
-		err = q.Scan(&eftwnomp.Title, &eftwnomp.Author, &eftwnomp.Publisher, &eftwnomp.CountOTctID)
+		err = q.Scan(&eftwnomp.Title, &eftwnomp.Author, &eftwnomp.Publisher, &eftwnomp.NumberOfOccurrences)
 		if err != nil {
 			return nil, err
 		}

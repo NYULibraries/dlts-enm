@@ -117,7 +117,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 			Title: epubMatchForTopicWithNumberOfMatchedPages.Title,
 			Authors: epubMatchForTopicWithNumberOfMatchedPages.Author,
 			Publisher: epubMatchForTopicWithNumberOfMatchedPages.Publisher,
-			NumberOfOccurrences: epubMatchForTopicWithNumberOfMatchedPages.NumberOfOccurrences,
+			NumberOfOccurrences: int(epubMatchForTopicWithNumberOfMatchedPages.NumberOfOccurrences),
 		})
 	}
 

@@ -56,7 +56,7 @@ type RelatedTopic struct{
 type TopicPageData struct{
 	AlternateNames []string
 	DisplayName string
-	EPUBMatches []string
+	EPUBMatches []EPUBMatch
 	ExternalRelations []ExternalRelation
 	Paths Paths
 	RelatedTopics []RelatedTopic

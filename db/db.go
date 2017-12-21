@@ -179,6 +179,15 @@ func GetEpubsNumberOfPages() (epubsNumberOfPages []*models.EpubsNumberOfPage) {
 	return epubsNumberOfPages
 }
 
+func GetExternalRelationsForTopics(topicID int) []*models.ExternalRelationsForTopic{
+	externalRelationsForTopic, err := models.ExternalRelationsForTopicsByTopic_id(DB, topicID)
+	if err != nil {
+		panic("db.GetExternalRelationsForTopic: " + err.Error())
+	}
+
+	return externalRelationsForTopic
+}
+
 func GetPagesAll() (pages []*models.Page) {
 	pages, err := models.GetPages(DB)
 	if err != nil {

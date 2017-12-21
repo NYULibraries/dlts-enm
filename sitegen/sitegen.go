@@ -112,7 +112,17 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	}
 
 	epubs := db.GetEpubsForTopicWithNumberOfMatchedPages(topicID)
-	fmt.Println(epubs)
+
+	externalRelations := db.GetExternalRelationsForTopics(topicID)
+
+	topicPageData := TopicPageData{
+		AlternateNames: alternateNames,
+		DisplayName: topicDisplayName,
+		EPUBMatches: epubs,
+		ExternalRelations: externalRelations,
+
+	}
+	fmt.Println(externalRelations)
 
 	return nil
 }

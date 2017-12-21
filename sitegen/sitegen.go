@@ -114,13 +114,13 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	}
 
 	epubMatches := []EPUBMatch{}
-	for _, epubMatchForTopicWithNumberOfMatchedPages := range db.GetEpubsForTopicWithNumberOfMatchedPages(topicID) {
+	for _, epubForTopicWithNumberOfMatchedPages := range db.GetEpubsForTopicWithNumberOfMatchedPages(topicID) {
 		epubMatches = append(epubMatches, EPUBMatch{
-			Title: epubMatchForTopicWithNumberOfMatchedPages.Title,
-			Authors: epubMatchForTopicWithNumberOfMatchedPages.Author,
-			Publisher: epubMatchForTopicWithNumberOfMatchedPages.Publisher,
-			ISBN: epubMatchForTopicWithNumberOfMatchedPages.Isbn,
-			NumberOfOccurrences: int(epubMatchForTopicWithNumberOfMatchedPages.NumberOfOccurrences),
+			Title:               epubForTopicWithNumberOfMatchedPages.Title,
+			Authors:             epubForTopicWithNumberOfMatchedPages.Author,
+			Publisher:           epubForTopicWithNumberOfMatchedPages.Publisher,
+			ISBN:                epubForTopicWithNumberOfMatchedPages.Isbn,
+			NumberOfOccurrences: int(epubForTopicWithNumberOfMatchedPages.NumberOfOccurrences),
 		})
 	}
 

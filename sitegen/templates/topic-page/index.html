@@ -26,9 +26,11 @@
               </div>
               <div class="title enm-topictitle">
                 {{.DisplayName}}
+                {{if .AlternateNames}}
                 <span class="subtitle">
                   (Alternative name(s): {{.AlternateNames}})
                 </span>
+                {{end}}
               </div>
             </div>
             <div class="column enm-linked-data">

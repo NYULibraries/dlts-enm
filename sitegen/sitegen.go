@@ -46,14 +46,14 @@ type ExternalRelation struct{
 }
 
 type Link struct{
-	Source int
-	Target int
+	Source int `json:"source"`
+	Target int `json:"target"`
 }
 
 type Node struct{
-	ID int
-	Name string
-	OCount int
+	ID int `json:"id"`
+	Name string `json:"name"`
+	OCount int `json:"ocount"`
 }
 
 type Paths struct{
@@ -78,8 +78,8 @@ type TopicPageData struct{
 }
 
 type VisualizationData struct{
-	Nodes []Node
-	Links []Link
+	Nodes []Node `json:"nodes"`
+	Links []Link `json:"links"`
 }
 var TopicPagesDir string
 

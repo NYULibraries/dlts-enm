@@ -15,6 +15,6 @@ function xo_generate() {
 }
 
 xo_generate xo/queries/topics-alternate-names.sql TopicAlternateName
-xo_generate xo/queries/epubs-for-topic-with-number-of-matched-pages.sql EpubForTopicWithNumberOfMatchedPages
+xo_generate xo/queries/epubs-for-topic-with-number-of-matched-pages.sql EpubsForTopicWithNumberOfMatchedPages
 xo_generate xo/queries/related-topic-names-for-topic-with-number-of-occurrences.sql RelatedTopicNamesForTopicWithNumberOfOccurrences
 xo_generate xo/queries/external-relations-for-topic.sql ExternalRelationsForTopic

@@ -35,6 +35,7 @@ type EPUBMatch struct{
 	Title string
 	Authors string
 	Publisher string
+	ISBN string
 	NumberOfOccurrences int
 }
 
@@ -118,6 +119,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 			Title: epubMatchForTopicWithNumberOfMatchedPages.Title,
 			Authors: epubMatchForTopicWithNumberOfMatchedPages.Author,
 			Publisher: epubMatchForTopicWithNumberOfMatchedPages.Publisher,
+			ISBN: epubMatchForTopicWithNumberOfMatchedPages.Isbn,
 			NumberOfOccurrences: int(epubMatchForTopicWithNumberOfMatchedPages.NumberOfOccurrences),
 		})
 	}

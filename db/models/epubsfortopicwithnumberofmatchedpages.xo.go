@@ -8,6 +8,7 @@ type EpubsForTopicWithNumberOfMatchedPages struct {
 	Title               string // title
 	Author              string // author
 	Publisher           string // publisher
+	Isbn                string // isbn
 	NumberOfOccurrences int64  // number_of_occurrences
 }
 
@@ -16,7 +17,7 @@ func EpubsForTopicWithNumberOfMatchedPagesByTopic_id(db XODB, topic_id int) ([]*
 	var err error
 
 	// sql query
-	const sqlstr = `SELECT e.title, e.author, e.publisher, COUNT( o.tct_id ) AS number_of_occurrences ` +
+	const sqlstr = `SELECT e.title, e.author, e.publisher, e.isbn, COUNT( o.tct_id ) AS number_of_occurrences ` +
 		` ` +
 		`FROM epubs e INNER JOIN locations l ON e.tct_id = l.epub_id ` +
 		`INNER JOIN occurrences o ON o.location_id = l.tct_id ` +
@@ -24,7 +25,7 @@ func EpubsForTopicWithNumberOfMatchedPagesByTopic_id(db XODB, topic_id int) ([]*
 		` ` +
 		`WHERE t.tct_id = ? ` +
 		` ` +
-		`GROUP BY e.title, e.author, e.publisher ` +
+		`GROUP BY e.title, e.author, e.publisher, e.isbn ` +
 		` ` +
 		`ORDER BY e.title`
 
@@ -42,7 +43,7 @@ func EpubsForTopicWithNumberOfMatchedPagesByTopic_id(db XODB, topic_id int) ([]*
 		eftwnomp := EpubsForTopicWithNumberOfMatchedPages{}
 
 		// scan
-		err = q.Scan(&eftwnomp.Title, &eftwnomp.Author, &eftwnomp.Publisher, &eftwnomp.NumberOfOccurrences)
+		err = q.Scan(&eftwnomp.Title, &eftwnomp.Author, &eftwnomp.Publisher, &eftwnomp.Isbn, &eftwnomp.NumberOfOccurrences)
 		if err != nil {
 			return nil, err
 		}

@@ -283,7 +283,11 @@ func GetTopicNumberOfOccurrencesByTopicId(topicID int) int {
 		panic("db.GetTopicNumberOfOccurrencesByTopicId: " + err.Error())
 	}
 
-	return int(topicNumberOfOccurrences[0].NumberOfOccurrences)
+	if (len(topicNumberOfOccurrences) == 0 ) {
+		return 0
+	} else {
+		return int(topicNumberOfOccurrences[0].NumberOfOccurrences)
+	}
 }
 
 func GetTopicSubEntries(topicId int) (subentryTopics []models.Topic){

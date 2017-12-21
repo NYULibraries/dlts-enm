@@ -163,7 +163,7 @@ func Test() {
 	err = tpl.Execute(os.Stdout, TopicPageData{
 		AlternateNames: []string{"alt1", "alt2", "alt3"},
 		DisplayName: "topic!",
-		EPUBMatches: []string{"epub1", "epub2", "epub3"},
+		EPUBMatches: []EPUBMatch{},
 		ExternalRelations: []ExternalRelation{
 			{
 				Relationship: "exactMatch",

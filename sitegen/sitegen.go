@@ -15,7 +15,6 @@
 package sitegen
 
 import (
-	"encoding/json"
 	"fmt"
 	"html/template"
 	"os"

@@ -40,12 +40,19 @@ type Paths struct{
 	WebRoot string
 }
 
+type RelatedTopic struct{
+	ID int
+	Name string
+	NumberOfOccurrences int
+}
+
 type TopicPageData struct{
 	AlternateNames []string
 	DisplayName string
 	EPUBMatches []string
 	ExternalRelations []ExternalRelation
 	Paths Paths
+	RelatedTopics []RelatedTopic
 	VisualizationData string
 }
 

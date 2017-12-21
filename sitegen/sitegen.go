@@ -60,6 +60,7 @@ type TopicPageData struct{
 	ExternalRelations []ExternalRelation
 	Paths Paths
 	RelatedTopics []RelatedTopic
+	TopicID int
 	VisualizationData string
 }
 
@@ -139,6 +140,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 			WebRoot: "/enm/prototypes/topic-pages",
 		},
 		RelatedTopics: relatedTopics,
+		TopicID: topicID,
 		VisualizationData: "[VISUALIZATION DATA]",
 	}
 

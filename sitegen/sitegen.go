@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"html/template"
 	"os"
+	"strconv"
 
 	"github.com/nyulibraries/dlts-enm/db"
 )
@@ -170,7 +171,7 @@ func WritePage(topicPageData TopicPageData) (err error){
 		return err
 	}
 
-	filename := TopicPagesDir + "/" + string(topicPageData.TopicID) + ".html"
+	filename := TopicPagesDir + "/" + strconv.Itoa(topicPageData.TopicID) + ".html"
 	f, err := os.Create(filename)
 	if err != nil {
 		return err

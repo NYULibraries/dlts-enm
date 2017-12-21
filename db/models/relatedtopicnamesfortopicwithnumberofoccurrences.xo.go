@@ -7,7 +7,7 @@ package models
 type RelatedTopicNamesForTopicWithNumberOfOccurrences struct {
 	Topic2ID            int    // topic2_id
 	DisplayNameDoNotUse string // display_name_do_not_use
-	CountOTctID         int64  // COUNT( o.tct_id )
+	NumberOfOccurrences int64  // number_of_occurrences
 }
 
 // RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id runs a custom query, returning results as RelatedTopicNamesForTopicWithNumberOfOccurrences.
@@ -15,7 +15,7 @@ func RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id(db XODB, topic_i
 	var err error
 
 	// sql query
-	const sqlstr = `SELECT trs.topic2_id, t.display_name_do_not_use, COUNT( o.tct_id ) ` +
+	const sqlstr = `SELECT trs.topic2_id, t.display_name_do_not_use, COUNT( o.tct_id ) AS number_of_occurrences ` +
 		` ` +
 		`FROM topic_relations_simple trs INNER JOIN topics t ON trs.topic2_id = t.tct_id ` +
 		`INNER JOIN occurrences o ON o.topic_id = trs.topic2_id ` +
@@ -40,7 +40,7 @@ func RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id(db XODB, topic_i
 		rtnftwnoo := RelatedTopicNamesForTopicWithNumberOfOccurrences{}
 
 		// scan
-		err = q.Scan(&rtnftwnoo.Topic2ID, &rtnftwnoo.DisplayNameDoNotUse, &rtnftwnoo.CountOTctID)
+		err = q.Scan(&rtnftwnoo.Topic2ID, &rtnftwnoo.DisplayNameDoNotUse, &rtnftwnoo.NumberOfOccurrences)
 		if err != nil {
 			return nil, err
 		}

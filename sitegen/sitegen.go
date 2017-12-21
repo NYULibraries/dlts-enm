@@ -133,11 +133,16 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	topicPageData := TopicPageData{
 		AlternateNames: alternateNames,
 		DisplayName: topicDisplayName,
-		EPUBMatches: epubs,
+		EPUBMatches: epubMatches,
 		ExternalRelations: externalRelations,
-
+		Paths: Paths{
+			WebRoot: "/enm/prototypes/topic-pages",
+		},
+		RelatedTopics: relatedTopics,
+		VisualizationData: "[VISUALIZATION DATA]",
 	}
-	fmt.Println(externalRelations)
+
+	fmt.Println(topicPageData)
 
 	return nil
 }

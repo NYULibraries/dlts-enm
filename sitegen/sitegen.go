@@ -171,7 +171,13 @@ func WritePage(topicPageData TopicPageData) (err error){
 		return err
 	}
 
-	err = tpl.Execute(os.Stdout, topicPageData)
+	filename := Destination + "/" + string(topicPageData.TopicID) + ".html"
+	f, err := os.Create(filename)
+	if err != nil {
+		return err
+	}
+
+	err = tpl.Execute(f, topicPageData)
 	if err != nil {
 		return err
 	}

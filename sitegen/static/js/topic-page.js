@@ -50,10 +50,9 @@ var svg = d3.select("svg"),
         .text(function(d) { return d.name; })
         .attr("font-size", "1rem");
     node.on("click", function(d) {
-        regex = /((.*?)topic)([\d]*)/;
-        str = window.location.href;
-        newstr = regex.exec(str)[1];
-        window.location.href = newstr + getNodeNum(d);
+        var currentLocation = window.location.href;
+        window.location.href = currentLocation.substr(0, currentLocation.lastIndexOf('/')) +
+            '/' + getNodeNum(d) + '.html';
     });
 
 

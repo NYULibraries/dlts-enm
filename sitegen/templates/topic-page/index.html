@@ -29,7 +29,7 @@
                 <span class="subtitle">
                     {{$numberOfAlternateNames := len .AlternateNames}}
                     {{if gt $numberOfAlternateNames 1}}
-                        (Alternative names: {{.AlternateNames}})
+                        (Alternative names: {{stringsJoin .AlternateNames}})
                     {{else}}
                         (Alternate name: {{.AlternateNames}})
                     {{end}}

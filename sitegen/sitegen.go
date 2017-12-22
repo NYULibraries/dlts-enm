@@ -19,6 +19,7 @@ import (
 	"html/template"
 	"os"
 	"strconv"
+	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db"
 	"github.com/nyulibraries/dlts-enm/db/models"
@@ -209,6 +210,9 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 
 func WritePage(topicPageData TopicPageData) (err error){
 	funcs := template.FuncMap{
+		"stringsJoin": func (arrayOfStrings []string) template.HTML{
+			return template.HTML(strings.Join(arrayOfStrings, "&nbsp;&bull;&nbsp;"))
+		},
 		"lastIndex": func (s []ExternalRelation) int {
 			return len(s) - 1;
 		},

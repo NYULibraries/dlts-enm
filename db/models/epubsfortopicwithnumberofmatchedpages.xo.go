@@ -27,7 +27,7 @@ func EpubsForTopicWithNumberOfMatchedPagesByTopic_id(db XODB, topic_id int) ([]*
 		` ` +
 		`GROUP BY e.title, e.author, e.publisher, e.isbn ` +
 		` ` +
-		`ORDER BY e.title`
+		`ORDER BY number_of_occurrences DESC`
 
 	// run query
 	XOLog(sqlstr, topic_id)

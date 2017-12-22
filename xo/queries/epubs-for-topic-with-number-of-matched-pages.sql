@@ -8,4 +8,4 @@ FROM epubs e INNER JOIN locations l ON e.tct_id = l.epub_id
 
 GROUP BY e.title, e.author, e.publisher, e.isbn
 
-ORDER BY e.title
+ORDER BY number_of_occurrences DESC

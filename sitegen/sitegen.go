@@ -161,6 +161,10 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 		OCount: db.GetTopicNumberOfOccurrencesByTopicId(topicID),
 	})
 
+	if (visualizationData.Links == nil) {
+		visualizationData.Links = []Link{}
+	}
+
 	epubMatches := []EPUBMatch{}
 	for _, epubForTopicWithNumberOfMatchedPages := range db.GetEpubsForTopicWithNumberOfMatchedPages(topicID) {
 		epubMatches = append(epubMatches, EPUBMatch{

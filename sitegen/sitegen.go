@@ -124,6 +124,12 @@ func GenerateTopicPages(destination string) {
 				alternateNames = append(alternateNames, topicWithAlternateNames.Name)
 		}
 	}
+
+	// Generate final page
+	err := GenerateTopicPage(inProgressTopicID, inProgressTopicName, alternateNames)
+	if err != nil {
+		panic(fmt.Sprintf("ERROR: couldn't generate topic page for %d: \"%s\"\n", inProgressTopicID, err.Error()))
+	}
 }
 
 func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []string) error {

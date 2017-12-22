@@ -172,7 +172,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 		EPUBMatches: epubMatches,
 		ExternalRelations: externalRelations,
 		Paths: Paths{
-			WebRoot: "/enm-topics",
+			WebRoot: "..",
 		},
 		RelatedTopics: relatedTopics,
 		TopicID: topicID,

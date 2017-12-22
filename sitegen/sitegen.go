@@ -21,6 +21,7 @@ import (
 	"strconv"
 
 	"github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/db/models"
 )
 
 // Tricky...this assumes that location of the templates relative to working directory
@@ -81,6 +82,8 @@ type VisualizationData struct{
 	Nodes []Node `json:"nodes"`
 	Links []Link `json:"links"`
 }
+
+var TopicIDs []string
 var TopicPagesDir string
 
 func GenerateTopicPages(destination string) {
@@ -92,7 +95,13 @@ func GenerateTopicPages(destination string) {
 		}
 	}
 
-	topicsWithAlternateNames := db.GetTopicsWithAlternateNamesAll()
+	var topicsWithAlternateNames []*models.TopicAlternateName
+	if (len(TopicIDs) > 0) {
+		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesByTopicIDs(TopicIDs)
+	} else {
+		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesAll()
+	}
+
 	var alternateNames []string
 	inProgressTopicID := topicsWithAlternateNames[0].TctID
 	inProgressTopicName := topicsWithAlternateNames[0].DisplayNameDoNotUse

@@ -337,6 +337,46 @@ func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*models.TopicA
 	return topicsWithAlternateNames
 }
 
+// TODO: DRY up -- this query duplicates xo/queries/topics-alternate-names.sql
+func GetTopicsWithAlternateNamesByTopicIDs(topicIDs []string) (topicsWithAlternateNames []*models.TopicAlternateName) {
+	topicIDsList := strings.Join(topicIDs, ",")
+
+	sqlstr := fmt.Sprintf(`SELECT t.tct_id, t.display_name_do_not_use, n.name
+FROM topics t INNER JOIN names n ON t.tct_id = n.topic_id
+WHERE t.tct_id IN (%s)
+ORDER BY t.display_name_do_not_use, n.name
+`, topicIDsList)
+
+	var (
+		tctID int
+		displayName string
+		name string
+	)
+	rows, err := DB.Query(sqlstr)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		err := rows.Scan(&tctID, &displayName, &name)
+		if err != nil {
+			panic(err)
+		}
+		topicsWithAlternateNames = append(topicsWithAlternateNames, &models.TopicAlternateName{
+			TctID: tctID,
+			DisplayNameDoNotUse: displayName,
+			Name: name,
+		})
+	}
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	return
+}
+
 func Reload() {
 	loadEditorialReviewStatusStates()
 

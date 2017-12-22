@@ -26,6 +26,7 @@ var topicpagesCmd = &cobra.Command{
 	Short: "Creates ENM website topic pages",
 	Long: `Creates an ENM website topic page for every topic`,
 	Run: func(cmd *cobra.Command, args []string) {
+		sitegen.TopicIDs = args
 		sitegen.GenerateTopicPages(Destination)
 	},
 }

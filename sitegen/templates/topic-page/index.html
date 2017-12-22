@@ -27,7 +27,12 @@
                 {{.DisplayName}}
                 {{if .AlternateNames}}
                 <span class="subtitle">
-                  (Alternative name(s): {{.AlternateNames}})
+                    {{$numberOfAlternateNames := len .AlternateNames}}
+                    {{if gt $numberOfAlternateNames 1}}
+                        (Alternative names: {{.AlternateNames}})
+                    {{else}}
+                        (Alternate name: {{.AlternateNames}})
+                    {{end}}
                 </span>
                 {{end}}
               </div>

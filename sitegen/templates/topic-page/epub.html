@@ -7,13 +7,15 @@
     </div>
     <div class="media-content">
       <h3 class="title is-5">
-     Internationalizing “International Communication”</h3>
-      <div class="meta">Joseph Turow and Lokman Tsui; University of Michigan Press, 2008</div>
+     {{.Title}}</h3>
+      <div class="meta">{{.Authors}}; {{.Publisher}}</div>
       <nav class="level is-mobile">
         <div class="level-left">
           <div class="matches">
             <a href="#">
-              <span class="icon is-small"><i class="fa fa-search"></i></span> 33 matched pages</a>
+              <span class="icon is-small"><i class="fa fa-search"></i></span>
+              {{.NumberOfOccurrences}} matched {{if gt .NumberOfOccurrences 1}}pages{{else}}page{{end}}
+            </a>
           </div>
         </div>
         <div class="level-right">

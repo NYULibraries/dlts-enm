@@ -15,7 +15,6 @@
 package cmd
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -34,8 +33,6 @@ var sitegenCmd = &cobra.Command{
 	* Topic pages
 	`,
 	Run: func(cmd *cobra.Command, args []string) {
-		// TODO: Work your own magic here
-		fmt.Println("sitegen called")
 	},
 }
 

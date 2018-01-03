@@ -21,7 +21,7 @@ import (
 	"github.com/nyulibraries/dlts-enm/tct"
 )
 
-var Source string
+var ReloadSource string
 
 // reloadCmd represents the reload command
 var reloadCmd = &cobra.Command{
@@ -29,7 +29,7 @@ var reloadCmd = &cobra.Command{
 	Short: "Reload database from TCT",
 	Long: `Truncates all database tables and reload from TCT API responses.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		tct.Source = Source
+		tct.Source = ReloadSource
 
 		db.ClearTables()
 		db.Reload()
@@ -40,7 +40,7 @@ func init() {
 	RootCmd.AddCommand(reloadCmd)
 
 	reloadCmd.PersistentFlags().StringVarP(
-		&Source,
+		&ReloadSource,
 		"source",
 		"s",
 		"tct-api",

@@ -32,7 +32,7 @@ are fetched.  :
 	# generated cache:
 	./enm reload --source=cache`,
 	Run: func(cmd *cobra.Command, args []string) {
-		tct.Source = Source
+		tct.Source = ReloadSource
 
 		tctTopics := tct.GetTopicsAll()
 

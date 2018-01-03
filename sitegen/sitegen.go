@@ -20,6 +20,7 @@ import (
 	"html/template"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 
@@ -105,9 +106,34 @@ func GenerateTopicPages(destination string) {
 	if Source == "database" {
 		GenerateTopicPagesFromDatabase()
 	} else if Source == "cache" {
-		fmt.Println("Generating topic pages from cache")
+		GenerateTopicPagesFromCache()
 	} else {
 		// Should never get here
+	}
+}
+
+func GenerateTopicPagesFromCache(){
+	cacheFiles, err := filepath.Glob(cache.Cache + "/" + CacheName + "*")
+	if err != nil {
+		panic(err)
+	}
+
+	var topicPageData TopicPageData
+	for _, cacheFile := range cacheFiles {
+		jsonBytes, err := ioutil.ReadFile(cacheFile)
+		if err != nil {
+			panic(err)
+		}
+
+		err = json.Unmarshal(jsonBytes,&topicPageData)
+		if err != nil {
+			panic(err)
+		}
+
+		err = WritePage(topicPageData)
+		if err != nil {
+			panic(err)
+		}
 	}
 }
 

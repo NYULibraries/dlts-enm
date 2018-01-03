@@ -33,6 +33,8 @@ import (
 // https://github.com/jteeuwen/go-bindata
 const TemplateDirectory =  "sitegen/templates/topic-page"
 
+var Source string
+
 type EPUBMatch struct{
 	Title string
 	Authors string

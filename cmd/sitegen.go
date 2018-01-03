@@ -22,6 +22,7 @@ import (
 )
 
 var Destination string
+var SitegenSource string
 
 // sitegenCmd represents the sitegen command
 var sitegenCmd = &cobra.Command{
@@ -52,5 +53,13 @@ func init() {
 		"d",
 		defaultDestination,
 		"Filesystem path to write files to",
+	)
+
+	sitegenCmd.PersistentFlags().StringVarP(
+		&SitegenSource,
+		"source",
+		"s",
+		"database",
+		"Specify data source: database, cache",
 	)
 }

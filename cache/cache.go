@@ -23,6 +23,9 @@ import (
 //   * Allow user to specify cache path
 // Tried using os.TempDir(), but it was returning
 // /var/folders/dh/48wd7vnj3xqd1w_f126tcnvh0000gn/T/, which was not as convenient.
+//   * Use subdirectories:
+//       * reload command
+//       * sitegentopicpages command
 var Cache = "/tmp/enm-cache"
 
 func init() {

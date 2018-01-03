@@ -102,6 +102,16 @@ func GenerateTopicPages(destination string) {
 		}
 	}
 
+	if Source == "database" {
+		GenerateTopicPagesFromDatabase()
+	} else if Source == "cache" {
+		fmt.Println("Generating topic pages from cache")
+	} else {
+		// Should never get here
+	}
+}
+
+func GenerateTopicPagesFromDatabase() {
 	var topicsWithAlternateNames []*models.TopicAlternateName
 	if (len(TopicIDs) > 0) {
 		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesByTopicIDs(TopicIDs)
@@ -128,7 +138,7 @@ func GenerateTopicPages(destination string) {
 		}
 
 		if (topicWithAlternateNames.Name != inProgressTopicName) {
-				alternateNames = append(alternateNames, topicWithAlternateNames.Name)
+			alternateNames = append(alternateNames, topicWithAlternateNames.Name)
 		}
 	}
 

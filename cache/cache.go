@@ -30,7 +30,7 @@ var Cache = "/tmp/enm-cache"
 
 func init() {
 	if _, err := os.Stat(Cache); os.IsNotExist(err) {
-		os.Mkdir(Cache, 0700)
+		os.MkdirAll(Cache, 0700)
 	} else if err != nil {
 		panic(err.Error())
 	}

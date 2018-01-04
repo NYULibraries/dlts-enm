@@ -112,7 +112,20 @@ func GenerateTopicPages(destination string) {
 }
 
 func GenerateTopicPagesFromCache(){
-	cacheFiles, err := filepath.Glob(cache.Cache + "/" + CacheName + "*")
+
+	var cacheFiles []string
+
+	err := filepath.Walk(cache.SitegenTopicpagesCache, func(path string, info os.FileInfo, err error) error {
+		if info.IsDir() {
+			return nil
+		}
+
+		if filepath.Ext(path) == ".json" {
+			cacheFiles = append(cacheFiles, path)
+		}
+
+		return nil
+	})
 	if err != nil {
 		panic(err)
 	}

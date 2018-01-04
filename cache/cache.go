@@ -26,11 +26,12 @@ import (
 //   * Use subdirectories:
 //       * reload command
 //       * sitegentopicpages command
-var Cache = "/tmp/enm-cache"
+const Cache = "/tmp/enm-cache"
+const SitegenTopicpagesCache = Cache + "/sitegen-topicpages"
 
 func init() {
 	if _, err := os.Stat(Cache); os.IsNotExist(err) {
-		os.MkdirAll(Cache, 0700)
+		os.MkdirAll(SitegenTopicpagesCache, 0700)
 	} else if err != nil {
 		panic(err.Error())
 	}

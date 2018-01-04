@@ -21,7 +21,6 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"strconv"
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/cache"
@@ -30,7 +29,6 @@ import (
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
-const CacheName = "sitegentopicpages"
 // Tricky...this assumes that location of the templates relative to working directory
 // matches what the location would be if calling `go run main.go` from root of this
 // repo.  This is brittle: user could call `go run ../main.go` from sitegen/, or
@@ -242,7 +240,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 		VisualizationData: visualizationData,
 	}
 
-	err := WriteCacheFile(CacheName, topicPageData)
+	err := WriteCacheFile(topicPageData)
 	if err != nil {
 		panic(err)
 	}
@@ -255,14 +253,19 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	return nil
 }
 
-func WriteCacheFile(cacheName string, topicPageData TopicPageData) (err error){
+func WriteCacheFile(topicPageData TopicPageData) (err error){
 	topicPageDataJSON, err := json.MarshalIndent(topicPageData,"","    ")
 	if err != nil {
 		panic(err)
 	}
 
-	cacheFile := cache.CacheFile(cacheName, strconv.Itoa(topicPageData.TopicID))
-	err = ioutil.WriteFile(cacheFile, topicPageDataJSON, 0644)
+	cacheFile := cache.SitegenTopicpagesCacheFile(topicPageData.TopicID)
+	f, err := util.CreateFileWithAllParentDirectories(cacheFile)
+	if err != nil {
+		panic(err)
+	}
+
+	_, err = f.Write(topicPageDataJSON)
 	if err != nil {
 		panic(err)
 	}

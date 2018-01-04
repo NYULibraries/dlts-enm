@@ -16,6 +16,7 @@ package cache
 
 import (
 	"os"
+	"github.com/nyulibraries/dlts-enm/util"
 )
 
 // TODO:
@@ -44,6 +45,14 @@ func CacheFile(request string, id string) (cacheFile string) {
 	} else {
 		cacheFile += ".json"
 	}
+
+	return
+}
+
+func SitegenTopicpagesCacheFile(topicID int) (cacheFile string) {
+	cacheFile = SitegenTopicpagesCache +
+		        "/" +
+		        util.GetRelativeFilepathInLargeDirectoryTree("", topicID, ".json")
 
 	return
 }

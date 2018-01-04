@@ -27,6 +27,7 @@ import (
 	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
 	"github.com/nyulibraries/dlts-enm/db/models"
+	"github.com/nyulibraries/dlts-enm/util"
 )
 
 const CacheName = "sitegentopicpages"
@@ -290,10 +291,20 @@ func WritePage(topicPageData TopicPageData) (err error){
 		return err
 	}
 
-	filename := TopicPagesDir + "/" + strconv.Itoa(topicPageData.TopicID) + ".html"
+	filename := TopicPagesDir + "/" +
+		util.GetRelativeFilepathInLargeDirectoryTree("", topicPageData.TopicID, ".html")
 	f, err := os.Create(filename)
 	if err != nil {
-		return err
+		// Create the subdirectories and try again if "no such file or directory" error
+		if err.(*os.PathError).Err.Error() == "no such file or directory" {
+			os.MkdirAll(filepath.Dir(filename), 0755)
+			f, err = os.Create(filename)
+			if err != nil {
+				return(err)
+			}
+		} else {
+			return err
+		}
 	}
 
 	err = tpl.Execute(f, topicPageData)

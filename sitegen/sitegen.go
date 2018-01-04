@@ -293,18 +293,9 @@ func WritePage(topicPageData TopicPageData) (err error){
 
 	filename := TopicPagesDir + "/" +
 		util.GetRelativeFilepathInLargeDirectoryTree("", topicPageData.TopicID, ".html")
-	f, err := os.Create(filename)
+	f, err := util.CreateFileWithAllParentDirectories(filename)
 	if err != nil {
-		// Create the subdirectories and try again if "no such file or directory" error
-		if err.(*os.PathError).Err.Error() == "no such file or directory" {
-			os.MkdirAll(filepath.Dir(filename), 0755)
-			f, err = os.Create(filename)
-			if err != nil {
-				return(err)
-			}
-		} else {
-			return err
-		}
+		return err
 	}
 
 	err = tpl.Execute(f, topicPageData)

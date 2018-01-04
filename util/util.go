@@ -17,7 +17,22 @@ package util
 import (
 	"fmt"
 	"strings"
+	"os"
+	"path/filepath"
 )
+
+func CreateFileWithAllParentDirectories(file string) (f *os.File, err error) {
+	f, err = os.Create(file)
+	if err != nil {
+		// Create the subdirectories and try again if "no such file or directory" error
+		if err.(*os.PathError).Err.Error() == "no such file or directory" {
+			os.MkdirAll(filepath.Dir(file), 0755)
+			f, err = os.Create(file)
+		}
+	}
+
+	return
+}
 
 func GetMapKeys(m map[string]string) (keys []string) {
 	keys = make([]string, len(m))

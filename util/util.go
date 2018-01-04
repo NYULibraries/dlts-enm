@@ -15,6 +15,7 @@
 package util
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -28,6 +29,21 @@ func GetMapKeys(m map[string]string) (keys []string) {
 	}
 
 	return
+}
+
+func GetRelativeFilepathInLargeDirectoryTree(prefix string, ID int, extension string) string {
+	zeroPaddedString := fmt.Sprintf("%010d", ID)
+	filename := prefix + zeroPaddedString + extension
+
+	return zeroPaddedString[0:2] +
+		"/" +
+		zeroPaddedString[2:4] +
+		"/" +
+		zeroPaddedString[4:6] +
+		"/" +
+		zeroPaddedString[6:8] +
+		"/" +
+		filename
 }
 
 func SnakeToCamelCase(snakeCaseString string) (camelCaseString string){

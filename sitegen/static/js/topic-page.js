@@ -5,6 +5,8 @@ var svg = d3.select("svg"),
     regex1 = /topic(\d*)/,
     thisTopicNum = regex1.exec(window.location.href)[1];
 
+    var basepath = window.location.href.split('/').slice(0, -5).join('/');
+
     var simulation = d3.forceSimulation().nodes(visualizationData.nodes);
 
     var link_force = d3.forceLink(visualizationData.links).id(function(d) { return d.id; });
@@ -50,9 +52,7 @@ var svg = d3.select("svg"),
         .text(function(d) { return d.name; })
         .attr("font-size", "1rem");
     node.on("click", function(d) {
-        var currentLocation = window.location.href;
-        window.location.href = currentLocation.substr(0, currentLocation.lastIndexOf('/')) +
-            '/' + getNodeNum(d) + '.html';
+        window.location.href = basepath + '/' + d.path;
     });
 
 

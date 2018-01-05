@@ -62,6 +62,7 @@ type Node struct{
 	ID int `json:"id"`
 	Name string `json:"name"`
 	OCount int `json:"ocount"`
+	Path string `json:"path"`
 }
 
 type Paths struct{
@@ -207,6 +208,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 			Name: relatedTopic.DisplayNameDoNotUse,
 			ID: relatedTopic.Topic2ID,
 			OCount: int(relatedTopic.NumberOfOccurrences),
+			Path: GetRelativeFilepathForTopicPage(relatedTopic.Topic2ID),
 		})
 	}
 
@@ -214,6 +216,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 		Name: topicDisplayName,
 		ID: topicID,
 		OCount: db.GetTopicNumberOfOccurrencesByTopicId(topicID),
+		Path: GetRelativeFilepathForTopicPage(topicID),
 	})
 
 	if (visualizationData.Links == nil) {

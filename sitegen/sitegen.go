@@ -266,6 +266,10 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	return nil
 }
 
+func GetRelativeFilepathForTopicPage(topicID int) string {
+	return util.GetRelativeFilepathInLargeDirectoryTree("", topicID, ".html")
+}
+
 func WriteCacheFile(topicPageData TopicPageData) (err error){
 	topicPageDataJSON, err := json.MarshalIndent(topicPageData,"","    ")
 	if err != nil {
@@ -307,8 +311,7 @@ func WritePage(topicPageData TopicPageData) (err error){
 		return err
 	}
 
-	filename := TopicPagesDir + "/" +
-		util.GetRelativeFilepathInLargeDirectoryTree("", topicPageData.TopicID, ".html")
+	filename := TopicPagesDir + "/" + GetRelativeFilepathForTopicPage(topicPageData.TopicID)
 	f, err := util.CreateFileWithAllParentDirectories(filename)
 	if err != nil {
 		return err

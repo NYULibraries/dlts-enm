@@ -16,6 +16,7 @@ package cache
 
 import (
 	"os"
+	"github.com/nyulibraries/dlts-enm/util"
 )
 
 // TODO:
@@ -23,11 +24,15 @@ import (
 //   * Allow user to specify cache path
 // Tried using os.TempDir(), but it was returning
 // /var/folders/dh/48wd7vnj3xqd1w_f126tcnvh0000gn/T/, which was not as convenient.
-var Cache = "/tmp/enm-cache"
+//   * Use subdirectories:
+//       * reload command
+//       * sitegentopicpages command
+const Cache = "/tmp/enm-cache"
+const SitegenTopicpagesCache = Cache + "/sitegen-topicpages"
 
 func init() {
 	if _, err := os.Stat(Cache); os.IsNotExist(err) {
-		os.Mkdir(Cache, 0700)
+		os.MkdirAll(SitegenTopicpagesCache, 0700)
 	} else if err != nil {
 		panic(err.Error())
 	}
@@ -40,6 +45,14 @@ func CacheFile(request string, id string) (cacheFile string) {
 	} else {
 		cacheFile += ".json"
 	}
+
+	return
+}
+
+func SitegenTopicpagesCacheFile(topicID int) (cacheFile string) {
+	cacheFile = SitegenTopicpagesCache +
+		        "/" +
+		        util.GetRelativeFilepathInLargeDirectoryTree("", topicID, ".json")
 
 	return
 }

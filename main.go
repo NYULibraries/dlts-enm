@@ -37,6 +37,8 @@ import (
 //go:generate xo mysql://${ENM_DATABASE_USERNAME}:${ENM_DATABASE_PASSWORD}@localhost/${ENM_DATABASE} --query-mode --query-trim --query-strip --query "SELECT * FROM pages" --query-type Page --out db/models/
 //go:generate xo mysql://${ENM_DATABASE_USERNAME}:${ENM_DATABASE_PASSWORD}@localhost/${ENM_DATABASE} --query-mode --query-trim --query-strip --query "SELECT * FROM page_topic_names" --query-type PageTopicName --out db/models/
 
+//go:generate xo/scripts/generate-models-for-topic-page-queries.sh
+
 func main() {
 	if err := cmd.RootCmd.Execute(); err != nil {
 		fmt.Println(err)

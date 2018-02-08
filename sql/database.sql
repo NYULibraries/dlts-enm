@@ -334,6 +334,20 @@ CREATE TABLE `scopes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Temporary table structure for view `topic_relations_simple`
+--
+
+DROP TABLE IF EXISTS `topic_relations_simple`;
+/*!50001 DROP VIEW IF EXISTS `topic_relations_simple`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `topic_relations_simple` (
+  `topic1_id` tinyint NOT NULL,
+  `topic2_id` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `topic_type`
 --
 
@@ -378,8 +392,8 @@ CREATE TABLE `topics_topic_type` (
   `topic_type_id` int(11) NOT NULL,
   KEY `topic_id` (`topic_id`),
   KEY `topic_type_id` (`topic_type_id`),
-  CONSTRAINT `fk__topics_topic_type__topic_type` FOREIGN KEY (`topic_type_id`) REFERENCES `topic_type` (`tct_id`),
-  CONSTRAINT `fk__topics_topic_type__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`)
+  CONSTRAINT `fk__topics_topic_type__topics` FOREIGN KEY (`topic_id`) REFERENCES `topics` (`tct_id`),
+  CONSTRAINT `fk__topics_topic_type__topic_type` FOREIGN KEY (`topic_type_id`) REFERENCES `topic_type` (`tct_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -505,6 +519,25 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `topic_relations_simple`
+--
+
+/*!50001 DROP TABLE IF EXISTS `topic_relations_simple`*/;
+/*!50001 DROP VIEW IF EXISTS `topic_relations_simple`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `topic_relations_simple` AS select `r`.`role_from_topic_id` AS `topic1_id`,`r`.`role_to_topic_id` AS `topic2_id` from `relations` `r` union select `r`.`role_to_topic_id` AS `topic1_id`,`r`.`role_from_topic_id` AS `topic2_id` from `relations` `r` order by `topic1_id`,`topic2_id` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -515,4 +548,4 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-01 13:26:27
+-- Dump completed on 2017-12-15 17:10:44

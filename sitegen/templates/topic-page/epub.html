@@ -1,0 +1,27 @@
+<div class="box">
+  <article class="media enm-book">
+    <div class="media-left">
+      <figure class="image enm-thumbnail">
+        <img src="/enm/enm-web/prototypes/shared/assets/covers/{{.ISBN}}.jpg" alt="">
+      </figure>
+    </div>
+    <div class="media-content">
+      <h3 class="title is-5">
+     {{.Title}}</h3>
+      <div class="meta">{{.Authors}}; {{.Publisher}}</div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <div class="matches">
+            <a href="#">
+              <span class="icon is-small"><i class="fa fa-search"></i></span>
+              {{.NumberOfOccurrences}} matched {{if gt .NumberOfOccurrences 1}}pages{{else}}page{{end}}
+            </a>
+          </div>
+        </div>
+        <div class="level-right">
+          <a class="button level-item is-primary is-outlined is-small">Open in Readium</a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>

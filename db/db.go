@@ -161,6 +161,15 @@ func ClearTables() {
 	tx.Commit()
 }
 
+func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*models.EpubsForTopicWithNumberOfMatchedPages{
+	epubsForTopicWithNumberOfMatchedPages, err := models.EpubsForTopicWithNumberOfMatchedPagesByTopic_id(DB, topicID)
+	if err != nil {
+		panic("db.GetEpubsForTopicWithNumberOfMatchedPages: " + err.Error())
+	}
+
+	return epubsForTopicWithNumberOfMatchedPages
+}
+
 func GetEpubsNumberOfPages() (epubsNumberOfPages []*models.EpubsNumberOfPage) {
 	epubsNumberOfPages, err := models.GetEpubsNumberOfPages(DB)
 	if err != nil {
@@ -168,6 +177,15 @@ func GetEpubsNumberOfPages() (epubsNumberOfPages []*models.EpubsNumberOfPage) {
 	}
 
 	return epubsNumberOfPages
+}
+
+func GetExternalRelationsForTopics(topicID int) []*models.ExternalRelationsForTopic{
+	externalRelationsForTopic, err := models.ExternalRelationsForTopicsByTopic_id(DB, topicID)
+	if err != nil {
+		panic("db.GetExternalRelationsForTopic: " + err.Error())
+	}
+
+	return externalRelationsForTopic
 }
 
 func GetPagesAll() (pages []*models.Page) {
@@ -219,6 +237,15 @@ func GetPageTopicNamesByPageId(pageId int) (pageTopicNames []models.PageTopicNam
 	return
 }
 
+func GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID int) (relatedTopicsWithNumberOfOccurrences []*models.RelatedTopicNamesForTopicWithNumberOfOccurrences) {
+	relatedTopicsWithNumberOfOccurrences, err := models.RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id(DB, topicID)
+	if err != nil {
+		panic("db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences: " + err.Error())
+	}
+
+	return relatedTopicsWithNumberOfOccurrences
+}
+
 func GetTopicsAll() (topics []models.Topic) {
 	const sqlstr = `SELECT tct_id, display_name_do_not_use FROM topics ORDER BY display_name_do_not_use`
 
@@ -250,6 +277,19 @@ func GetTopicsAll() (topics []models.Topic) {
 	return
 }
 
+func GetTopicNumberOfOccurrencesByTopicId(topicID int) int {
+	topicNumberOfOccurrences, err := models.TopicNumberOfOccurrencesByTopic_id(DB, topicID)
+	if err != nil {
+		panic("db.GetTopicNumberOfOccurrencesByTopicId: " + err.Error())
+	}
+
+	if (len(topicNumberOfOccurrences) == 0 ) {
+		return 0
+	} else {
+		return int(topicNumberOfOccurrences[0].NumberOfOccurrences)
+	}
+}
+
 func GetTopicSubEntries(topicId int) (subentryTopics []models.Topic){
 	const sqlstr = `SELECT t2.tct_id, t2.display_name_do_not_use
 FROM topics t1
@@ -278,6 +318,55 @@ ORDER BY t2.display_name_do_not_use`
 		subentryTopics = append(subentryTopics, models.Topic{
 			TctID: id,
 			DisplayNameDoNotUse: name,
+		})
+	}
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	return
+}
+
+func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*models.TopicAlternateName) {
+	topicsWithAlternateNames, err := models.GetTopicAlternateNames(DB)
+	if err != nil {
+		panic("db.GetTopicsWithAlternateNamesAll: " + err.Error())
+	}
+
+	return topicsWithAlternateNames
+}
+
+// TODO: DRY up -- this query duplicates xo/queries/topics-alternate-names.sql
+func GetTopicsWithAlternateNamesByTopicIDs(topicIDs []string) (topicsWithAlternateNames []*models.TopicAlternateName) {
+	topicIDsList := strings.Join(topicIDs, ",")
+
+	sqlstr := fmt.Sprintf(`SELECT t.tct_id, t.display_name_do_not_use, n.name
+FROM topics t INNER JOIN names n ON t.tct_id = n.topic_id
+WHERE t.tct_id IN (%s)
+ORDER BY t.display_name_do_not_use, n.name
+`, topicIDsList)
+
+	var (
+		tctID int
+		displayName string
+		name string
+	)
+	rows, err := DB.Query(sqlstr)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		err := rows.Scan(&tctID, &displayName, &name)
+		if err != nil {
+			panic(err)
+		}
+		topicsWithAlternateNames = append(topicsWithAlternateNames, &models.TopicAlternateName{
+			TctID: tctID,
+			DisplayNameDoNotUse: displayName,
+			Name: name,
 		})
 	}
 	err = rows.Err()

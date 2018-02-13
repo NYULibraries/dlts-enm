@@ -17,8 +17,6 @@ var conn *solr.Connection
 
 var epubsNumberOfPages map[string]int
 
-type topicNamesForDisplay map[string][]string
-
 func Init(server string, port int) error {
 	var err error
 	conn, err = solr.Init(server, port, "enm-pages")
@@ -38,7 +36,7 @@ func AddPage(page *models.Page) error {
 	var topicNames []string
 	// Using underscore in variable name to match Solr field name
 	var topicNames_facet []string
-	var topicNamesForDisplay topicNamesForDisplay = make(map[string][]string)
+	var topicNamesForDisplay map[string][]string = make(map[string][]string)
 
 	pageTopicNames := db.GetPageTopicNamesByPageId(page.ID)
 

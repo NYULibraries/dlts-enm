@@ -203,7 +203,7 @@ func GetPageTopicNamesByPageId(pageId int) (pageTopicNames []models.PageTopicNam
 	` page_id, topic_id, topic_display_name, topic_name` +
 	` FROM enm.page_topic_names` +
 	` WHERE page_id = ` + strconv.Itoa(pageId) +
-	` ORDER BY page_id, topic_id, topic_display_name, topic_name`
+	` ORDER BY topic_display_name_sort_key, topic_name_sort_key`
 
 	var (
 		topicId int

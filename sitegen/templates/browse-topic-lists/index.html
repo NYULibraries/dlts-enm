@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <?php require('includes/banner.html'); ?>
+  {{template "banner.html" .}}
   <main class="enm-browsetopicspage">
     <section class="hero  is-link">
       <div class="hero-body">
@@ -24,7 +24,7 @@
                 Browse Topics
               </p>
               <p class="subtitle">
-                Explore 45,000 people, places, things, ideas
+                Explore people, places, things, ideas
               </p>
             </div>
           </div>
@@ -126,12 +126,19 @@
           <a class="navbar-item is-tab " href="">
             Z
           </a>
+          <a class="navbar-item is-tab " href="">
+            0-9
+          </a>
+          <a class="navbar-item is-tab " href="">
+            ?#@
+          </a>
+
         </div>
       </div>
     </nav>
     <div class="container enm-topiclist">
-     
-        <?php require('includes/browseTopics/topicsatoz.html'); ?>
+
+    {{template "a-to-z.html" .}}
     </div>
   </main>
 </body>

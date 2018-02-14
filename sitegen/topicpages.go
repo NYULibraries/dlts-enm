@@ -22,6 +22,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"strconv"
 
 	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
@@ -116,19 +117,29 @@ func GenerateTopicPagesFromCache(){
 
 	var cacheFiles []string
 
-	err := filepath.Walk(cache.SitegenTopicpagesCache, func(path string, info os.FileInfo, err error) error {
-		if info.IsDir() {
+	if (len(TopicIDs) > 0) {
+		for _, topicID := range TopicIDs {
+			intTopicID, err := strconv.Atoi(topicID)
+			if (err != nil) {
+				panic(err)
+			}
+			cacheFiles = append(cacheFiles, cache.SitegenTopicpagesCacheFile(intTopicID))
+		}
+	} else {
+		err := filepath.Walk(cache.SitegenTopicpagesCache, func(path string, info os.FileInfo, err error) error {
+			if info.IsDir() {
+				return nil
+			}
+
+			if filepath.Ext(path) == ".json" {
+				cacheFiles = append(cacheFiles, path)
+			}
+
 			return nil
+		})
+		if err != nil {
+			panic(err)
 		}
-
-		if filepath.Ext(path) == ".json" {
-			cacheFiles = append(cacheFiles, path)
-		}
-
-		return nil
-	})
-	if err != nil {
-		panic(err)
 	}
 
 	var topicPageData TopicPageData

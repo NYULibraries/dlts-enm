@@ -37,8 +37,8 @@ var BrowseTopicListsDir string
 func GenerateBrowseTopicLists(destination string) {
 	BrowseTopicListsDir = destination + "/browse-topic-lists"
 
-	if _, err := os.Stat(TopicPagesDir); os.IsNotExist(err) {
-		mkdirErr := os.Mkdir(TopicPagesDir, os.FileMode(0755))
+	if _, err := os.Stat(BrowseTopicListsDir); os.IsNotExist(err) {
+		mkdirErr := os.Mkdir(BrowseTopicListsDir, os.FileMode(0755))
 		if mkdirErr != nil {
 			panic(mkdirErr)
 		}

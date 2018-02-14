@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"os"
 
-	_ "github.com/nyulibraries/dlts-enm/db"
-	_ "github.com/nyulibraries/dlts-enm/db/models"
+	"github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/db/models"
 )
 
 // Tricky...this assumes that location of the templates relative to working directory
@@ -55,5 +55,8 @@ func GenerateBrowseTopicLists(destination string) {
 }
 
 func GenerateBrowseTopicListsFromDatabase() {
+	var topicsWithSortKeys []models.TopicsWithSortKeys
 
+	topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp("^a")
+	fmt.Println(topicsWithSortKeys)
 }

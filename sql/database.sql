@@ -189,7 +189,9 @@ SET character_set_client = utf8;
   `page_id` tinyint NOT NULL,
   `topic_id` tinyint NOT NULL,
   `topic_display_name` tinyint NOT NULL,
-  `topic_name` tinyint NOT NULL
+  `topic_name` tinyint NOT NULL,
+  `topic_display_name_sort_key` tinyint NOT NULL,
+  `topic_name_sort_key` tinyint NOT NULL
 ) ENGINE=MyISAM */;
 SET character_set_client = @saved_cs_client;
 
@@ -496,7 +498,7 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `page_topic_names` AS select `p`.`id` AS `page_id`,`t`.`tct_id` AS `topic_id`,`t`.`display_name_do_not_use` AS `topic_display_name`,`n`.`name` AS `topic_name` from (((`pages` `p` left join `occurrences` `o` on((`p`.`id` = `o`.`location_id`))) left join `topics` `t` on((`o`.`topic_id` = `t`.`tct_id`))) join `names` `n` on((`n`.`topic_id` = `t`.`tct_id`))) where (`t`.`tct_id` is not null) order by `p`.`id`,`t`.`tct_id`,`n`.`name` */;
+/*!50001 VIEW `page_topic_names` AS select `o`.`location_id` AS `page_id`,`t`.`tct_id` AS `topic_id`,`t`.`display_name_do_not_use` AS `topic_display_name`,`n`.`name` AS `topic_name`,(case when (left(`t`.`display_name_do_not_use`,1) = '"') then lcase(substr(`t`.`display_name_do_not_use`,2)) else lcase(`t`.`display_name_do_not_use`) end) AS `topic_display_name_sort_key`,(case when (left(`n`.`name`,1) = '"') then lcase(substr(`n`.`name`,2)) else lcase(`n`.`name`) end) AS `topic_name_sort_key` from ((`occurrences` `o` join `topics` `t` on((`o`.`topic_id` = `t`.`tct_id`))) join `names` `n` on((`n`.`topic_id` = `t`.`tct_id`))) order by `o`.`location_id`,(case when (left(`t`.`display_name_do_not_use`,1) = '"') then lcase(substr(`t`.`display_name_do_not_use`,2)) else lcase(`t`.`display_name_do_not_use`) end),(case when (left(`n`.`name`,1) = '"') then lcase(substr(`n`.`name`,2)) else lcase(`n`.`name`) end) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -548,4 +550,4 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-12-15 17:10:44
+-- Dump completed on 2018-02-14 15:57:50

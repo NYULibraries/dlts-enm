@@ -36,7 +36,7 @@ import (
 // could be calling the built binary from anywhere relative to templates.
 // Consider including the templates in the binary using something like
 // https://github.com/jteeuwen/go-bindata
-const TemplateDirectory =  "sitegen/templates/topic-page"
+const TopicPageTemplateDirectory =  "sitegen/templates/topic-page"
 
 var Source string
 
@@ -316,9 +316,9 @@ func WritePage(topicPageData TopicPageData) (err error){
 
 	tpl := template.New("index.html").Funcs(funcs)
 	tpl, err = tpl.ParseFiles(
-		TemplateDirectory + "/index.html",
-		TemplateDirectory + "/epub.html",
-		TemplateDirectory + "/banner.html",
+		TopicPageTemplateDirectory+ "/index.html",
+		TopicPageTemplateDirectory+ "/epub.html",
+		TopicPageTemplateDirectory+ "/banner.html",
 	)
 
 	if err != nil {

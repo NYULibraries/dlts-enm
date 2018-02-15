@@ -122,7 +122,7 @@ func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKe
 
 		topic := BrowseTopicsListPageDataTopic{
 			Name: topicWithSortKeys.DisplayNameDoNotUse,
-			URL: "/enm/enm-web/prototypes/topic-pages/" + GetRelativeFilepathForTopicPage(topicWithSortKeys.TctID),
+			URL: "../topic-pages/" + GetRelativeFilepathForTopicPage(topicWithSortKeys.TctID),
 		}
 		browseTopicsListPageData.Topics = append(browseTopicsListPageData.Topics, topic)
 	}

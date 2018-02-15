@@ -418,6 +418,24 @@ CREATE TABLE `topics_weblinks` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Temporary table structure for view `topics_with_sort_keys`
+--
+
+DROP TABLE IF EXISTS `topics_with_sort_keys`;
+/*!50001 DROP VIEW IF EXISTS `topics_with_sort_keys`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE TABLE `topics_with_sort_keys` (
+  `tct_id` tinyint NOT NULL,
+  `display_name_do_not_use` tinyint NOT NULL,
+  `editorial_review_status_reviewer` tinyint NOT NULL,
+  `editorial_review_status_time` tinyint NOT NULL,
+  `editorial_review_status_state_id` tinyint NOT NULL,
+  `display_name_do_not_use_sort_key` tinyint NOT NULL
+) ENGINE=MyISAM */;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Table structure for table `weblinks`
 --
 
@@ -540,6 +558,25 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `topics_with_sort_keys`
+--
+
+/*!50001 DROP TABLE IF EXISTS `topics_with_sort_keys`*/;
+/*!50001 DROP VIEW IF EXISTS `topics_with_sort_keys`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_unicode_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `topics_with_sort_keys` AS select `t`.`tct_id` AS `tct_id`,`t`.`display_name_do_not_use` AS `display_name_do_not_use`,`t`.`editorial_review_status_reviewer` AS `editorial_review_status_reviewer`,`t`.`editorial_review_status_time` AS `editorial_review_status_time`,`t`.`editorial_review_status_state_id` AS `editorial_review_status_state_id`,(case when (left(`t`.`display_name_do_not_use`,1) = '"') then lcase(substr(`t`.`display_name_do_not_use`,2)) else lcase(`t`.`display_name_do_not_use`) end) AS `display_name_do_not_use_sort_key` from `topics` `t` order by (case when (left(`t`.`display_name_do_not_use`,1) = '"') then lcase(substr(`t`.`display_name_do_not_use`,2)) else lcase(`t`.`display_name_do_not_use`) end) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -550,4 +587,4 @@ CREATE TABLE `weblinks_vocabulary` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-14 15:57:50
+-- Dump completed on 2018-02-14 18:12:17

@@ -377,6 +377,42 @@ ORDER BY t.display_name_do_not_use, n.name
 	return
 }
 
+func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topicsWithSortKeys []models.TopicsWithSortKeys) {
+	// sql query
+	var sqlstr = `SELECT` +
+		` tct_id, display_name_do_not_use` +
+		` FROM enm.topics_with_sort_keys` +
+		` WHERE LEFT(display_name_do_not_use_sort_key, 1) REGEXP "` + regexp + `"` +
+		` ORDER BY display_name_do_not_use_sort_key`
+
+	var (
+		id int
+		name string
+	)
+	rows, err := DB.Query(sqlstr)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	for rows.Next() {
+		err := rows.Scan(&id, &name)
+		if err != nil {
+			panic(err)
+		}
+		topicsWithSortKeys = append(topicsWithSortKeys, models.TopicsWithSortKeys{
+			TctID: id,
+			DisplayNameDoNotUse: name,
+		})
+	}
+	err = rows.Err()
+	if err != nil {
+		panic(err)
+	}
+
+	return
+}
+
 func Reload() {
 	loadEditorialReviewStatusStates()
 

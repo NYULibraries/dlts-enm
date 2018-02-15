@@ -15,7 +15,7 @@
 package sitegen
 
 import (
-	_ "html/template"
+	"html/template"
 	_ "io/ioutil"
 	"fmt"
 	"os"
@@ -31,6 +31,18 @@ import (
 // Consider including the templates in the binary using something like
 // https://github.com/jteeuwen/go-bindata
 const BrowseTopicListsTemplateDirectory = "sitegen/templates/browse-topics-lists"
+
+type BrowseTopicsListPageData struct{
+
+}
+
+type BrowseTopicsListsEntry struct{
+	Label string
+	FileBasename string
+	Regexp string
+}
+
+var BrowseTopicsLists []BrowseTopicsListsEntry
 
 var BrowseTopicsListsDir string
 
@@ -54,9 +66,40 @@ func GenerateBrowseTopicsLists(destination string) {
 	}
 }
 
-func GenerateBrowseTopicListsFromDatabase() {
+func GenerateBrowseTopicsListsFromDatabase() {
 	var topicsWithSortKeys []models.TopicsWithSortKeys
 
-	topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp("^a")
-	fmt.Println(topicsWithSortKeys)
+	for _, browseTopicsListsEntry := range BrowseTopicsLists {
+		topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsEntry.Regexp)
+		fmt.Println(topicsWithSortKeys)
+		filename := browseTopicsListsEntry.Label + ".html"
+		WriteBrowseTopicsListPage(filename, BrowseTopicsListPageData{})
+	}
+
+}
+
+func WriteBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){
+	tpl := template.New("a-to-z.html")
+	tpl, err = tpl.ParseFiles(
+		TemplateDirectory + "/a-to-z.html",
+		TemplateDirectory + "/a-to-z-content.html",
+		TemplateDirectory + "/banner.html",
+	)
+
+	if err != nil {
+		return err
+	}
+
+	file := TopicPagesDir + "/" + filename
+	f, err := os.Create(file)
+	if err != nil {
+		return err
+	}
+
+	err = tpl.Execute(f, browseTopicsListPageData)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }

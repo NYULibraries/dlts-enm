@@ -30,22 +30,22 @@ import (
 // could be calling the built binary from anywhere relative to templates.
 // Consider including the templates in the binary using something like
 // https://github.com/jteeuwen/go-bindata
-const BrowseTopicListsTemplateDirectory = "sitegen/templates/browse-topic-lists"
+const BrowseTopicListsTemplateDirectory = "sitegen/templates/browse-topics-lists"
 
-var BrowseTopicListsDir string
+var BrowseTopicsListsDir string
 
-func GenerateBrowseTopicLists(destination string) {
-	BrowseTopicListsDir = destination + "/browse-topic-lists"
+func GenerateBrowseTopicsLists(destination string) {
+	BrowseTopicsListsDir = destination + "/browse-topics-lists"
 
-	if _, err := os.Stat(BrowseTopicListsDir); os.IsNotExist(err) {
-		mkdirErr := os.Mkdir(BrowseTopicListsDir, os.FileMode(0755))
+	if _, err := os.Stat(BrowseTopicsListsDir); os.IsNotExist(err) {
+		mkdirErr := os.Mkdir(BrowseTopicsListsDir, os.FileMode(0755))
 		if mkdirErr != nil {
 			panic(mkdirErr)
 		}
 	}
 
 	if Source == "database" {
-		GenerateBrowseTopicListsFromDatabase()
+		GenerateBrowseTopicsListsFromDatabase()
 	} else if Source == "cache" {
 		// Don't know if will be implementing this
 		fmt.Println("Generation of topic browse lists pages has not yet been implemented.")

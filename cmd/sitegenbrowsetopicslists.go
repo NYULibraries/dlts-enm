@@ -20,25 +20,25 @@ import (
 	"github.com/nyulibraries/dlts-enm/sitegen"
 )
 
-// browseTopicListsCmd represents the topicpages command
-var browseTopicListsCmd = &cobra.Command{
-	Use:   "browsetopiclists",
-	Short: "Creates ENM website browse topic lists pages",
-	Long: `Creates ENM website browse topic lists pages`,
+// browseTopicsListsCmd represents the browsetopicslists command
+var browseTopicsListsCmd = &cobra.Command{
+	Use:   "browsetopicslists",
+	Short: "Creates ENM website browse topics lists pages",
+	Long: `Creates ENM website browse topics lists pages`,
 	Run: func(cmd *cobra.Command, args []string) {
 		sitegen.Source = SitegenSource
-		sitegen.GenerateBrowseTopicLists(Destination)
+		sitegen.GenerateBrowseTopicsLists(Destination)
 	},
 }
 
 func init() {
-	sitegenCmd.AddCommand(browseTopicListsCmd)
+	sitegenCmd.AddCommand(browseTopicsListsCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// browseTopicListsCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// browseTopicsListsCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:

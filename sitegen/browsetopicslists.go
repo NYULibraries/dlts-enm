@@ -33,7 +33,14 @@ import (
 const BrowseTopicListsTemplateDirectory = "sitegen/templates/browse-topics-lists"
 
 type BrowseTopicsListPageData struct{
+	ActiveNavbarTab string
+	NavbarTabs []BrowseTopicsListsEntry
+	Topics []BrowseTopicsListPageDataTopic
+}
 
+type BrowseTopicsListPageDataTopic struct{
+	Name string
+	URL string
 }
 
 type BrowseTopicsListsEntry struct{
@@ -41,6 +48,8 @@ type BrowseTopicsListsEntry struct{
 	FileBasename string
 	Regexp string
 }
+
+var BrowseTopicsListsCategories []BrowseTopicsListsEntry
 
 var BrowseTopicsListsDir string
 
@@ -54,10 +63,10 @@ func GenerateBrowseTopicsLists(destination string) {
 		}
 	}
 
-	browseTopicsListsCategories := browseTopicsListsCategories()
+	fillBrowseTopicsListsCategories()
 
 	if Source == "database" {
-		GenerateBrowseTopicsListsFromDatabase(browseTopicsListsCategories)
+		GenerateBrowseTopicsListsFromDatabase()
 	} else if Source == "cache" {
 		// Don't know if will be implementing this
 		fmt.Println("Generation of topic browse lists pages has not yet been implemented.")
@@ -66,7 +75,7 @@ func GenerateBrowseTopicsLists(destination string) {
 	}
 }
 
-func browseTopicsListsCategories() (browseTopicsListsCategories []BrowseTopicsListsEntry) {
+func fillBrowseTopicsListsCategories() {
 	const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 	for i := 0; i < len(alphabet); i++ {
@@ -76,15 +85,15 @@ func browseTopicsListsCategories() (browseTopicsListsCategories []BrowseTopicsLi
 			FileBasename : letter,
 			Regexp : "^" + letter,
 		}
-		browseTopicsListsCategories = append(browseTopicsListsCategories, browseTopicsListsEntry)
+		BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, browseTopicsListsEntry)
 	}
 
-	browseTopicsListsCategories = append(browseTopicsListsCategories, BrowseTopicsListsEntry{
+	BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, BrowseTopicsListsEntry{
 		Label : "0-9",
 		FileBasename : "0-9",
 		Regexp : "^[0-9]",
 	})
-	browseTopicsListsCategories = append(browseTopicsListsCategories, BrowseTopicsListsEntry{
+	BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, BrowseTopicsListsEntry{
 		Label : "?#@",
 		FileBasename : "non-alphanumeric",
 		Regexp : "^[^a-z0-9]",
@@ -93,35 +102,51 @@ func browseTopicsListsCategories() (browseTopicsListsCategories []BrowseTopicsLi
 	return
 }
 
-func GenerateBrowseTopicsListsFromDatabase(browseTopicsListsCategories []BrowseTopicsListsEntry) {
+func GenerateBrowseTopicsListsFromDatabase() {
 	var topicsWithSortKeys []models.TopicsWithSortKeys
 
-	for _, browseTopicsListsCategory := range browseTopicsListsCategories {
+	for _, browseTopicsListsCategory := range BrowseTopicsListsCategories {
 		topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
-		filename := browseTopicsListsCategory.Label + ".html"
-		browseTopicsListPageData := CreateBrowseTopicsListPageData(topicsWithSortKeys)
-		WriteBrowseTopicsListPage(filename, browseTopicsListPageData)
+		filename := browseTopicsListsCategory.FileBasename + ".html"
+		browseTopicsListPageData := CreateBrowseTopicsListPageData(topicsWithSortKeys, browseTopicsListsCategory.Label)
+		err := WriteBrowseTopicsListPage(filename, browseTopicsListPageData)
+		if (err != nil) {
+			panic(err)
+		}
 	}
 
 }
 
-func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKeys) BrowseTopicsListPageData {
-	return nil
+func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKeys, browseTopicsListsCategoryLabel string) (browseTopicsListPageData BrowseTopicsListPageData) {
+	for _, topicWithSortKeys := range topicsWithSortKeys {
+
+		topic := BrowseTopicsListPageDataTopic{
+			Name: topicWithSortKeys.DisplayNameDoNotUse,
+			URL: "/enm/enm-web/prototypes/topic-pages/" + GetRelativeFilepathForTopicPage(topicWithSortKeys.TctID),
+		}
+		browseTopicsListPageData.Topics = append(browseTopicsListPageData.Topics, topic)
+	}
+
+	browseTopicsListPageData.ActiveNavbarTab = browseTopicsListsCategoryLabel
+
+	browseTopicsListPageData.NavbarTabs = BrowseTopicsListsCategories
+
+	return
 }
 
 func WriteBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){
 	tpl := template.New("a-to-z.html")
 	tpl, err = tpl.ParseFiles(
-		TemplateDirectory + "/a-to-z.html",
-		TemplateDirectory + "/a-to-z-content.html",
-		TemplateDirectory + "/banner.html",
+		BrowseTopicListsTemplateDirectory + "/a-to-z.html",
+		BrowseTopicListsTemplateDirectory + "/a-to-z-content.html",
+		BrowseTopicListsTemplateDirectory + "/banner.html",
 	)
 
 	if err != nil {
 		return err
 	}
 
-	file := TopicPagesDir + "/" + filename
+	file := BrowseTopicsListsDir + "/" + filename
 	f, err := os.Create(file)
 	if err != nil {
 		return err

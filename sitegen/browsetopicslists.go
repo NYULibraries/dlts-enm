@@ -16,9 +16,9 @@ package sitegen
 
 import (
 	"html/template"
-	_ "io/ioutil"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db"
 	"github.com/nyulibraries/dlts-enm/db/models"
@@ -42,8 +42,6 @@ type BrowseTopicsListsEntry struct{
 	Regexp string
 }
 
-var BrowseTopicsLists []BrowseTopicsListsEntry
-
 var BrowseTopicsListsDir string
 
 func GenerateBrowseTopicsLists(destination string) {
@@ -56,8 +54,10 @@ func GenerateBrowseTopicsLists(destination string) {
 		}
 	}
 
+	browseTopicsListsCategories := browseTopicsListsCategories()
+
 	if Source == "database" {
-		GenerateBrowseTopicsListsFromDatabase()
+		GenerateBrowseTopicsListsFromDatabase(browseTopicsListsCategories)
 	} else if Source == "cache" {
 		// Don't know if will be implementing this
 		fmt.Println("Generation of topic browse lists pages has not yet been implemented.")
@@ -66,16 +66,47 @@ func GenerateBrowseTopicsLists(destination string) {
 	}
 }
 
-func GenerateBrowseTopicsListsFromDatabase() {
-	var topicsWithSortKeys []models.TopicsWithSortKeys
+func browseTopicsListsCategories() (browseTopicsListsCategories []BrowseTopicsListsEntry) {
+	const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-	for _, browseTopicsListsEntry := range BrowseTopicsLists {
-		topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsEntry.Regexp)
-		fmt.Println(topicsWithSortKeys)
-		filename := browseTopicsListsEntry.Label + ".html"
-		WriteBrowseTopicsListPage(filename, BrowseTopicsListPageData{})
+	for i := 0; i < len(alphabet); i++ {
+		letter := string(alphabet[i])
+		browseTopicsListsEntry := BrowseTopicsListsEntry{
+			Label : strings.ToUpper(letter),
+			FileBasename : letter,
+			Regexp : "^" + letter,
+		}
+		browseTopicsListsCategories = append(browseTopicsListsCategories, browseTopicsListsEntry)
 	}
 
+	browseTopicsListsCategories = append(browseTopicsListsCategories, BrowseTopicsListsEntry{
+		Label : "0-9",
+		FileBasename : "0-9",
+		Regexp : "^[0-9]",
+	})
+	browseTopicsListsCategories = append(browseTopicsListsCategories, BrowseTopicsListsEntry{
+		Label : "?#@",
+		FileBasename : "non-alphanumeric",
+		Regexp : "^[^a-z0-9]",
+	})
+
+	return
+}
+
+func GenerateBrowseTopicsListsFromDatabase(browseTopicsListsCategories []BrowseTopicsListsEntry) {
+	var topicsWithSortKeys []models.TopicsWithSortKeys
+
+	for _, browseTopicsListsCategory := range browseTopicsListsCategories {
+		topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
+		filename := browseTopicsListsCategory.Label + ".html"
+		browseTopicsListPageData := CreateBrowseTopicsListPageData(topicsWithSortKeys)
+		WriteBrowseTopicsListPage(filename, browseTopicsListPageData)
+	}
+
+}
+
+func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKeys) BrowseTopicsListPageData {
+	return nil
 }
 
 func WriteBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){

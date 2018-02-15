@@ -30,7 +30,7 @@ import (
 // could be calling the built binary from anywhere relative to templates.
 // Consider including the templates in the binary using something like
 // https://github.com/jteeuwen/go-bindata
-const BrowseTopicListsTemplateDirectory =  "sitegen/templates/browse-topic-lists"
+const BrowseTopicListsTemplateDirectory = "sitegen/templates/browse-topic-lists"
 
 var BrowseTopicListsDir string
 

@@ -22,4 +22,6 @@ var Source string
 // could be calling the built binary from anywhere relative to templates.
 // Consider including the templates in the binary using something like
 // https://github.com/jteeuwen/go-bindata
+const BrowseTopicListsTemplateDirectory = "sitegen/templates/browse-topics-lists"
 const SharedTemplateDirectory = "sitegen/templates/shared"
+const TemplateDirectory =  "sitegen/templates/topic-page"

@@ -306,8 +306,8 @@ func WritePage(topicPageData TopicPageData) (err error){
 
 	tpl := template.New("index.html").Funcs(funcs)
 	tpl, err = tpl.ParseFiles(
-		TemplateDirectory       + "/index.html",
-		TemplateDirectory       + "/epub.html",
+		TopicPageTemplateDirectory + "/index.html",
+		TopicPageTemplateDirectory + "/epub.html",
 		SharedTemplateDirectory + "/banner.html",
 	)
 

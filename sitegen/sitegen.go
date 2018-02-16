@@ -24,4 +24,4 @@ var Source string
 // https://github.com/jteeuwen/go-bindata
 const BrowseTopicListsTemplateDirectory = "sitegen/templates/browse-topics-lists"
 const SharedTemplateDirectory = "sitegen/templates/shared"
-const TemplateDirectory =  "sitegen/templates/topic-page"
+const TopicPageTemplateDirectory =  "sitegen/templates/topic-page"

@@ -78,6 +78,8 @@ type VisualizationData struct{
 	Links []Link `json:"links"`
 }
 
+var tpl *template.Template
+
 var TopicIDs []string
 var TopicPagesDir string
 
@@ -90,6 +92,9 @@ func GenerateTopicPages(destination string) {
 		}
 	}
 
+	// Caching the template for speed
+	tpl = NewTemplate()
+
 	if Source == "database" {
 		GenerateTopicPagesFromDatabase()
 	} else if Source == "cache" {
@@ -97,6 +102,28 @@ func GenerateTopicPages(destination string) {
 	} else {
 		// Should never get here
 	}
+}
+
+func NewTemplate() (tpl *template.Template){
+	funcs := template.FuncMap{
+		"stringsJoin": func (arrayOfStrings []string) template.HTML{
+			return template.HTML(strings.Join(arrayOfStrings, "&nbsp;&bull;&nbsp;"))
+		},
+		"lastIndex": func (s []ExternalRelation) int {
+			return len(s) - 1;
+		},
+	}
+	tpl = template.New("index.html").Funcs(funcs)
+	tpl, err := tpl.ParseFiles(
+		TopicPageTemplateDirectory + "/index.html",
+		TopicPageTemplateDirectory + "/epub.html",
+		SharedTemplateDirectory + "/banner.html",
+	)
+	if err != nil {
+		panic(err)
+	}
+
+	return
 }
 
 func GenerateTopicPagesFromCache(){
@@ -291,26 +318,6 @@ func WriteCacheFile(topicPageData TopicPageData) (err error){
 }
 
 func WritePage(topicPageData TopicPageData) (err error){
-	funcs := template.FuncMap{
-		"stringsJoin": func (arrayOfStrings []string) template.HTML{
-			return template.HTML(strings.Join(arrayOfStrings, "&nbsp;&bull;&nbsp;"))
-		},
-		"lastIndex": func (s []ExternalRelation) int {
-			return len(s) - 1;
-		},
-	}
-
-	tpl := template.New("index.html").Funcs(funcs)
-	tpl, err = tpl.ParseFiles(
-		TopicPageTemplateDirectory + "/index.html",
-		TopicPageTemplateDirectory + "/epub.html",
-		SharedTemplateDirectory + "/banner.html",
-	)
-
-	if err != nil {
-		return err
-	}
-
 	filename := TopicPagesDir + "/" + GetRelativeFilepathForTopicPage(topicPageData.TopicID)
 	f, err := util.CreateFileWithAllParentDirectories(filename)
 	if err != nil {

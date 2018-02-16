@@ -139,7 +139,7 @@ func WriteBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseT
 	tpl, err = tpl.ParseFiles(
 		BrowseTopicListsTemplateDirectory + "/a-to-z.html",
 		BrowseTopicListsTemplateDirectory + "/a-to-z-content.html",
-		BrowseTopicListsTemplateDirectory + "/banner.html",
+		SharedTemplateDirectory           + "/banner.html",
 	)
 
 	if err != nil {

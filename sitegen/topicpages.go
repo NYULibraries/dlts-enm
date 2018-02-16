@@ -314,9 +314,9 @@ func WritePage(topicPageData TopicPageData) (err error){
 
 	tpl := template.New("index.html").Funcs(funcs)
 	tpl, err = tpl.ParseFiles(
-		TemplateDirectory + "/index.html",
-		TemplateDirectory + "/epub.html",
-		TemplateDirectory + "/banner.html",
+		TemplateDirectory       + "/index.html",
+		TemplateDirectory       + "/epub.html",
+		SharedTemplateDirectory + "/banner.html",
 	)
 
 	if err != nil {

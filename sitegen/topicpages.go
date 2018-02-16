@@ -56,10 +56,6 @@ type Node struct{
 	Path string `json:"path"`
 }
 
-type Paths struct{
-	WebRoot string
-}
-
 type RelatedTopic struct{
 	ID int
 	Name string

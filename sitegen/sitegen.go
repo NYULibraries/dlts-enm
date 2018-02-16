@@ -14,6 +14,10 @@
 
 package sitegen
 
+type Paths struct{
+	WebRoot string
+}
+
 var Source string
 
 // Tricky...this assumes that location of the templates relative to working directory

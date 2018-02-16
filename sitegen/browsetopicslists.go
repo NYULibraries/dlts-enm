@@ -27,6 +27,9 @@ import (
 type BrowseTopicsListPageData struct{
 	ActiveNavbarTab string
 	NavbarTabs []BrowseTopicsListsEntry
+	Paths struct{
+		WebRoot string
+	}
 	Topics []BrowseTopicsListPageDataTopic
 }
 
@@ -120,8 +123,8 @@ func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKe
 	}
 
 	browseTopicsListPageData.ActiveNavbarTab = browseTopicsListsCategoryLabel
-
 	browseTopicsListPageData.NavbarTabs = BrowseTopicsListsCategories
+	browseTopicsListPageData.Paths = Paths{ WebRoot: ".." }
 
 	return
 }

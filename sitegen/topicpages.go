@@ -323,6 +323,7 @@ func WritePage(topicPageData TopicPageData) (err error){
 	if err != nil {
 		return err
 	}
+	defer f.Close()
 
 	err = tpl.Execute(f, topicPageData)
 	if err != nil {

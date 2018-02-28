@@ -62,8 +62,6 @@ forceSimulation.force( "charge_force", chargeForce )
     .force( "center_force", d3.forceCenter( width / 4, height / 3 ) )
     .force( "links", linkForce );
 
-forceSimulation.on( "tick", tickActions );
-
 node.append( "circle" )
     .attr( "r", calculateRadius )
     .attr( "class", "circle" );
@@ -81,6 +79,14 @@ node.on( "click", function ( d ) {
 } );
 
 zoomHandler( svg );
+
+// This must be called after enabling zoom handling, otherwise the graph nodes
+// will no longer be draggable.  Not sure why this is.  Laura's original code
+// made the calls in this order, and when they were reversed, dragging broke.
+// This ticket might pertain:
+// "Unable to drag nodes in a force layout graph when zooming is added #1412"
+// https://github.com/d3/d3/issues/1412
+forceSimulation.on( "tick", tickActions );
 
 renderedWidth  = d3.select( '.holdAll' ).node().getBoundingClientRect().width;
 renderedHeight = d3.select( '.holdAll' ).node().getBoundingClientRect().height;

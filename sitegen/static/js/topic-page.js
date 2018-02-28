@@ -11,15 +11,15 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
     // visualizationData is defined and initialized in a previous <script> tag
     forceSimulation        = d3.forceSimulation().nodes( visualizationData.nodes ),
     link_force             = d3.forceLink( visualizationData.links )
-                       .id(
-                           function ( d ) {
-                               return d.id;
-                           }
-                       ),
+                                   .id(
+                                       function ( d ) {
+                                           return d.id;
+                                       }
+                                   ),
     charge_force           = d3.forceManyBody()
-                         .strength( -3500 )
-                         .distanceMax( 500 )
-                         .distanceMin( 100 ),
+                                   .strength( -3500 )
+                                   .distanceMax( 500 )
+                                   .distanceMin( 100 ),
 
     holdAll                = svg.append( "g" ).attr( "class", "holdAll" ),
 

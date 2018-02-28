@@ -50,7 +50,16 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
                 .on( "drag", dragged )
                 .on( "end", dragended ) ),
 
-    zoomHandler = d3.zoom().on( "zoom", zoom_actions );
+    zoomHandler = d3.zoom().on( "zoom", zoom_actions ),
+
+    renderedWidth, renderedHeight;
+
+
+forceSimulation.force( "charge_force", chargeForce )
+    .force( "center_force", d3.forceCenter( width / 4, height / 3 ) )
+    .force( "links", linkForce );
+
+forceSimulation.on( "tick", tickActions );
 
 node.append( "circle" )
     .attr( "r", calculateRadius )
@@ -68,22 +77,20 @@ node.on( "click", function ( d ) {
     window.location.href = basepath + '/' + d.path;
 } );
 
-forceSimulation.force( "charge_force", chargeForce )
-    .force( "center_force", d3.forceCenter( width / 4, height / 3 ) )
-    .force( "links", linkForce );
-
 zoomHandler( svg );
+
+renderedWidth  = d3.select( '.holdAll' ).node().getBoundingClientRect().width;
+renderedHeight = d3.select( '.holdAll' ).node().getBoundingClientRect().height;
+
+console.log( "width of visualization " + renderedWidth );
+console.log( "height of visualization " + renderedHeight );
 
 //Zoom functions
 function zoom_actions() {
     wrapperG.attr( "transform", d3.event.transform );
 }
 
-forceSimulation.on( "tick", tickActions );
-var renderedWidth  = d3.select( '.holdAll' ).node().getBoundingClientRect().width;
-var renderedHeight = d3.select( '.holdAll' ).node().getBoundingClientRect().height;
-console.log( "width of visualization " + renderedWidth );
-console.log( "height of visualization " + renderedHeight );
+
 
 function calculateRadius( d ) {
     return (

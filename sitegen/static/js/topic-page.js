@@ -24,7 +24,7 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
         .distanceMax( 500 )
         .distanceMin( 100 ),
 
-    wrapperG = svg.append( "g" ).attr( "class", "holdAll" ),
+    wrapperG = svg.append( "g" ).attr( "class", "wrapper-g" ),
 
     link = wrapperG.append( "g" )
             .attr( "class", "links" )
@@ -88,8 +88,8 @@ zoomHandler( svg );
 // https://github.com/d3/d3/issues/1412
 forceSimulation.on( "tick", tickActions );
 
-renderedWidth  = d3.select( '.holdAll' ).node().getBoundingClientRect().width;
-renderedHeight = d3.select( '.holdAll' ).node().getBoundingClientRect().height;
+renderedWidth  = wrapperG.node().getBoundingClientRect().width;
+renderedHeight = wrapperG.node().getBoundingClientRect().height;
 
 console.log( "width of visualization " + renderedWidth );
 console.log( "height of visualization " + renderedHeight );

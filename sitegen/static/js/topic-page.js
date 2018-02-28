@@ -10,7 +10,7 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
 
     // visualizationData is defined and initialized in a previous <script> tag
     forceSimulation = d3.forceSimulation().nodes( visualizationData.nodes ),
-    linkForce   = d3.forceLink( visualizationData.links )
+    linkForce = d3.forceLink( visualizationData.links )
         .id(
             function ( d ) {
                 return d.id;

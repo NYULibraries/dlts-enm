@@ -1,27 +1,27 @@
-var basepath        = window.location.href.split( '/' ).slice( 0, -5 ).join( '/' ),
+var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).join( '/' ),
 
-    activeTopicId   = parseInt( /(\d*).html/.exec( window.location.href )[ 1 ] ),
+    activeTopicId          = parseInt( /(\d*).html/.exec( window.location.href )[ 1 ] ),
 
-    svg             = d3.select( "svg" ),
+    svg                    = d3.select( "svg" ),
 
-    forceSimulation = document.getElementById( "force-simulation" ),
-    width           = forceSimulation.clientWidth,
-    height          = forceSimulation.clientHeight,
+    forceSimulationElement = document.getElementById( "force-simulation" ),
+    width                  = forceSimulationElement.clientWidth,
+    height                 = forceSimulationElement.clientHeight,
 
     // visualizationData is defined and initialized in a previous <script> tag
-    simulation = d3.forceSimulation().nodes( visualizationData.nodes ),
-    link_force = d3.forceLink( visualizationData.links )
+    forceSimulation        = d3.forceSimulation().nodes( visualizationData.nodes ),
+    link_force             = d3.forceLink( visualizationData.links )
                        .id(
                            function ( d ) {
                                return d.id;
                            }
                        ),
-    charge_force = d3.forceManyBody()
+    charge_force           = d3.forceManyBody()
                          .strength( -3500 )
                          .distanceMax( 500 )
                          .distanceMin( 100 ),
 
-    holdAll = svg.append( "g" ).attr( "class", "holdAll" ),
+    holdAll                = svg.append( "g" ).attr( "class", "holdAll" ),
 
     link = holdAll.append( "g" )
         .attr( "class", "links" )
@@ -31,7 +31,7 @@ var basepath        = window.location.href.split( '/' ).slice( 0, -5 ).join( '/'
         .attr( "stroke-width", .7 )
         .style( "stroke", "black" ),
 
-    node = holdAll.append( "g" )
+    node                   = holdAll.append( "g" )
         .attr( "class", "nodes" )
         .selectAll( "circle" )
         .data( visualizationData.nodes )
@@ -50,9 +50,9 @@ var basepath        = window.location.href.split( '/' ).slice( 0, -5 ).join( '/'
                    .on( "drag", dragged )
                    .on( "end", dragended ) ),
 
-    zoom_handler = d3.zoom().on( "zoom", zoom_actions );
+    zoom_handler           = d3.zoom().on( "zoom", zoom_actions );
 
-simulation.force( "charge_force", charge_force )
+forceSimulation.force( "charge_force", charge_force )
     .force( "center_force", d3.forceCenter( width / 4, height / 3 ) )
     .force( "links", link_force );
 
@@ -77,7 +77,7 @@ function zoom_actions() {
     holdAll.attr( "transform", d3.event.transform );
 }
 
-simulation.on( "tick", tickActions );
+forceSimulation.on( "tick", tickActions );
 var renderedWidth  = d3.select( '.holdAll' ).node().getBoundingClientRect().width;
 var renderedHeight = d3.select( '.holdAll' ).node().getBoundingClientRect().height;
 console.log( "width of visualization " + renderedWidth );
@@ -128,7 +128,7 @@ function dragged( d ) {
 function dragended( d ) {
     d.fx = null;
     d.fy = null;
-    simulation.alphaTarget( 0.1 );
+    forceSimulation.alphaTarget( 0.1 );
 }
 
 function tickActions() {

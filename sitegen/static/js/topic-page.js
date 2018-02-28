@@ -83,13 +83,6 @@ function getId( d ) {
     );
 }
 
-function getNodeNum( d ) {
-
-    return (
-        d.id
-    );
-}
-
 function isActive( d ) {
 
     if ( d.id == thisTopicNum ) {

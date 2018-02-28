@@ -111,7 +111,7 @@ function getId( d ) {
 
 function isActive( d ) {
 
-    if ( d.id == activeTopicId ) {
+    if ( d.id === activeTopicId ) {
         return "node active"
     } else {
         return "node";

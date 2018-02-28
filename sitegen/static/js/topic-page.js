@@ -120,9 +120,6 @@ function isActive( d ) {
 }
 
 function dragStarted( d ) {
-    console.log( "dragStarted" );
-    // simulation.restart();
-    //  simulation.alpha(0.7);
     d.fx = d.x;
     d.fy = d.y;
 }
@@ -139,11 +136,6 @@ function dragEnded( d ) {
 }
 
 function tickActions() {
-    //update circle positions to reflect node updates on each tick of the simulation
-    /* node
-         .attr("cx", function(d) { return d.x; })
-         .attr("cy", function(d) { return d.y; });*/
-
     node.attr( "transform", function ( d ) {
         return "translate(" + d.x + "," + d.y + ")";
     } );

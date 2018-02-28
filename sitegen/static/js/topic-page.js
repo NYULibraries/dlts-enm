@@ -40,7 +40,7 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
         .data( visualizationData.nodes )
         .enter().append( "g" )
             .attr( "class", "node" )
-            .attr( "id", getId )
+            .attr( "id", getNodeId )
             .attr( "data-ocount", function ( d ) {
                 return d.ocount;
             } )
@@ -101,7 +101,7 @@ function determineOffset( d ) {
     return minNodeOffset + d.ocount;
 }
 
-function getId( d ) {
+function getNodeId( d ) {
 
     return "nodenum" + d.id;
 }

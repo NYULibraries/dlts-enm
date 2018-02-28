@@ -2,8 +2,8 @@ var svg            = d3.select( "svg" ),
     topicmapholder = document.getElementById( "topicmapholder" ),
     width          = topicmapholder.clientWidth,
     height         = topicmapholder.clientHeight,
-    regex1         = /topic(\d*)/,
-    thisTopicNum   = regex1.exec( window.location.href )[ 1 ];
+    thisTopicNum   = parseInt(/(\d*).html/.exec(window.location.href)[1]);
+
 
 var basepath = window.location.href.split( '/' ).slice( 0, -5 ).join( '/' );
 

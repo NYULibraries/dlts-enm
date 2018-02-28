@@ -1,53 +1,60 @@
-var svg             = d3.select( "svg" ),
+var basepath        = window.location.href.split( '/' ).slice( 0, -5 ).join( '/' ),
+
+    activeTopicId   = parseInt( /(\d*).html/.exec( window.location.href )[ 1 ] ),
+
+    svg             = d3.select( "svg" ),
+
     forceSimulation = document.getElementById( "force-simulation" ),
     width           = forceSimulation.clientWidth,
     height          = forceSimulation.clientHeight,
-    activeTopicId   = parseInt( /(\d*).html/.exec( window.location.href )[ 1 ] );
 
+    // visualizationData is defined and initialized in a previous <script> tag
+    simulation = d3.forceSimulation().nodes( visualizationData.nodes ),
+    link_force = d3.forceLink( visualizationData.links )
+                       .id(
+                           function ( d ) {
+                               return d.id;
+                           }
+                       ),
+    charge_force = d3.forceManyBody()
+                         .strength( -3500 )
+                         .distanceMax( 500 )
+                         .distanceMin( 100 ),
 
-var basepath = window.location.href.split( '/' ).slice( 0, -5 ).join( '/' );
+    holdAll = svg.append( "g" ).attr( "class", "holdAll" ),
 
-var simulation = d3.forceSimulation().nodes( visualizationData.nodes );
+    link = holdAll.append( "g" )
+        .attr( "class", "links" )
+        .selectAll( "line" )
+        .data( visualizationData.links )
+        .enter().append( "line" )
+        .attr( "stroke-width", .7 )
+        .style( "stroke", "black" ),
 
-var link_force   = d3.forceLink( visualizationData.links ).id( function ( d ) {
-    return d.id;
-} );
-//add forces
-var charge_force = d3.forceManyBody().strength( -3500 ).distanceMax( 500 ).distanceMin( 100 );
-// var charge_force = d3.forceManyBody().distanceMin(160);
-simulation
-    .force( "charge_force", charge_force )
+    node = holdAll.append( "g" )
+        .attr( "class", "nodes" )
+        .selectAll( "circle" )
+        .data( visualizationData.nodes )
+        .enter().append( "g" )
+        .attr( "class", "node" )
+        .attr( "id", getId )
+        .attr( "data-ocount", function ( d ) {
+            return d.ocount;
+        } )
+        .attr( "data-nodenum", function ( d ) {
+            return d.id;
+        } )
+        .attr( "class", isActive )
+        .call( d3.drag()
+                   .on( "start", dragstarted )
+                   .on( "drag", dragged )
+                   .on( "end", dragended ) ),
+
+    zoom_handler = d3.zoom().on( "zoom", zoom_actions );
+
+simulation.force( "charge_force", charge_force )
     .force( "center_force", d3.forceCenter( width / 4, height / 3 ) )
     .force( "links", link_force );
-var holdAll = svg.append( "g" ).attr( "class", "holdAll" );
-
-
-var link = holdAll.append( "g" )
-    .attr( "class", "links" )
-    .selectAll( "line" )
-    .data( visualizationData.links )
-    .enter().append( "line" )
-    .attr( "stroke-width", .7 )
-    .style( "stroke", "black" );
-
-var node = holdAll.append( "g" )
-    .attr( "class", "nodes" )
-    .selectAll( "circle" )
-    .data( visualizationData.nodes )
-    .enter().append( "g" )
-    .attr( "class", "node" )
-    .attr( "id", getId )
-    .attr( "data-ocount", function ( d ) {
-        return d.ocount;
-    } )
-    .attr( "data-nodenum", function ( d ) {
-        return d.id;
-    } )
-    .attr( "class", isActive )
-    .call( d3.drag()
-               .on( "start", dragstarted )
-               .on( "drag", dragged )
-               .on( "end", dragended ) );
 
 node.append( "circle" )
     .attr( "r", calculateRadius )
@@ -63,6 +70,18 @@ node.on( "click", function ( d ) {
     window.location.href = basepath + '/' + d.path;
 } );
 
+zoom_handler( svg );
+
+//Zoom functions
+function zoom_actions() {
+    holdAll.attr( "transform", d3.event.transform );
+}
+
+simulation.on( "tick", tickActions );
+var renderedWidth  = d3.select( '.holdAll' ).node().getBoundingClientRect().width;
+var renderedHeight = d3.select( '.holdAll' ).node().getBoundingClientRect().height;
+console.log( "width of visualization " + renderedWidth );
+console.log( "height of visualization " + renderedHeight );
 
 function calculateRadius( d ) {
     return (
@@ -138,20 +157,3 @@ function tickActions() {
             return d.target.y;
         } );
 }
-
-
-//add zoom capabilities
-var zoom_handler = d3.zoom().on( "zoom", zoom_actions );
-
-zoom_handler( svg );
-
-//Zoom functions
-function zoom_actions() {
-    holdAll.attr( "transform", d3.event.transform );
-}
-
-simulation.on( "tick", tickActions );
-var renderedWidth  = d3.select( '.holdAll' ).node().getBoundingClientRect().width;
-var renderedHeight = d3.select( '.holdAll' ).node().getBoundingClientRect().height;
-console.log( "width of visualization " + renderedWidth );
-console.log( "height of visualization " + renderedHeight );

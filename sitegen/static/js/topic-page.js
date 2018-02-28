@@ -103,9 +103,7 @@ function determineOffset( d ) {
 
 function getId( d ) {
 
-    return (
-        "nodenum" + d.id
-    );
+    return "nodenum" + d.id;
 }
 
 function isActive( d ) {

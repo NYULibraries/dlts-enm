@@ -85,12 +85,10 @@ renderedHeight = d3.select( '.holdAll' ).node().getBoundingClientRect().height;
 console.log( "width of visualization " + renderedWidth );
 console.log( "height of visualization " + renderedHeight );
 
-//Zoom functions
+// Zoom functions
 function zoom_actions() {
     wrapperG.attr( "transform", d3.event.transform );
 }
-
-
 
 function calculateRadius( d ) {
     return (

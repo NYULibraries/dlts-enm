@@ -132,6 +132,7 @@ function dragged( d ) {
 function dragEnded( d ) {
     d.fx = null;
     d.fy = null;
+
     forceSimulation.alphaTarget( 0.1 );
 }
 
@@ -139,9 +140,9 @@ function tickActions() {
     node.attr( "transform", function ( d ) {
         return "translate(" + d.x + "," + d.y + ")";
     } );
-    //update link positions
-    //simply tells one end of the line to follow one node around
-    //and the other end of the line to follow the other node around
+    // Update link positions
+    // Simply tells one end of the line to follow one node around
+    // and the other end of the line to follow the other node around
     link
         .attr( "x1", function ( d ) {
             return d.source.x;

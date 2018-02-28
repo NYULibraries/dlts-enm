@@ -10,16 +10,16 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
 
     // visualizationData is defined and initialized in a previous <script> tag
     forceSimulation = d3.forceSimulation().nodes( visualizationData.nodes ),
-    linkForce       = d3.forceLink( visualizationData.links )
-                                   .id(
-                                       function ( d ) {
-                                           return d.id;
-                                       }
-                                   ),
+    linkForce   = d3.forceLink( visualizationData.links )
+                        .id(
+                            function ( d ) {
+                                return d.id;
+                            }
+                        ),
     chargeForce = d3.forceManyBody()
-                                   .strength( -3500 )
-                                   .distanceMax( 500 )
-                                   .distanceMin( 100 ),
+                        .strength( -3500 )
+                        .distanceMax( 500 )
+                        .distanceMin( 100 ),
 
     wrapperG    = svg.append( "g" ).attr( "class", "holdAll" ),
 

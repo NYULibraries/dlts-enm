@@ -8,6 +8,9 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
     width                  = forceSimulationElement.clientWidth,
     height                 = forceSimulationElement.clientHeight,
 
+    minNodeRadius = 7,
+    minNodeOffset = 10,
+
     // visualizationData is defined and initialized in a previous <script> tag
     forceSimulation = d3.forceSimulation().nodes( visualizationData.nodes ),
     linkForce = d3.forceLink( visualizationData.links )
@@ -91,15 +94,11 @@ function zoom_actions() {
 }
 
 function calculateRadius( d ) {
-    return (
-        7 + d.ocount
-    );
+    return minNodeRadius + d.ocount;
 }
 
 function determineOffset( d ) {
-    return (
-        10 + d.ocount
-    );
+    return minNodeOffset + d.ocount;
 }
 
 function getId( d ) {

@@ -46,9 +46,9 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
             } )
             .attr( "class", isActive )
             .call( d3.drag()
-                .on( "start", dragstarted )
+                .on( "start", dragStarted )
                 .on( "drag", dragged )
-                .on( "end", dragended ) ),
+                .on( "end", dragEnded ) ),
 
     zoomHandler = d3.zoom().on( "zoom", zoom_actions ),
 
@@ -119,8 +119,8 @@ function isActive( d ) {
 
 }
 
-function dragstarted( d ) {
-    console.log( "dragstarted" );
+function dragStarted( d ) {
+    console.log( "dragStarted" );
     // simulation.restart();
     //  simulation.alpha(0.7);
     d.fx = d.x;
@@ -132,7 +132,7 @@ function dragged( d ) {
     d.fy = d3.event.y;
 }
 
-function dragended( d ) {
+function dragEnded( d ) {
     d.fx = null;
     d.fy = null;
     forceSimulation.alphaTarget( 0.1 );

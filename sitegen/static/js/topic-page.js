@@ -9,21 +9,21 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
     height                 = forceSimulationElement.clientHeight,
 
     // visualizationData is defined and initialized in a previous <script> tag
-    forceSimulation        = d3.forceSimulation().nodes( visualizationData.nodes ),
-    link_force             = d3.forceLink( visualizationData.links )
+    forceSimulation = d3.forceSimulation().nodes( visualizationData.nodes ),
+    linkForce       = d3.forceLink( visualizationData.links )
                                    .id(
                                        function ( d ) {
                                            return d.id;
                                        }
                                    ),
-    charge_force           = d3.forceManyBody()
+    chargeForce     = d3.forceManyBody()
                                    .strength( -3500 )
                                    .distanceMax( 500 )
                                    .distanceMin( 100 ),
 
-    holdAll                = svg.append( "g" ).attr( "class", "holdAll" ),
+    holdAll         = svg.append( "g" ).attr( "class", "holdAll" ),
 
-    link = holdAll.append( "g" )
+    link            = holdAll.append( "g" )
         .attr( "class", "links" )
         .selectAll( "line" )
         .data( visualizationData.links )
@@ -31,7 +31,7 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
         .attr( "stroke-width", .7 )
         .style( "stroke", "black" ),
 
-    node                   = holdAll.append( "g" )
+    node            = holdAll.append( "g" )
         .attr( "class", "nodes" )
         .selectAll( "circle" )
         .data( visualizationData.nodes )
@@ -50,11 +50,11 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
                    .on( "drag", dragged )
                    .on( "end", dragended ) ),
 
-    zoom_handler           = d3.zoom().on( "zoom", zoom_actions );
+    zoom_handler    = d3.zoom().on( "zoom", zoom_actions );
 
-forceSimulation.force( "charge_force", charge_force )
+forceSimulation.force( "charge_force", chargeForce )
     .force( "center_force", d3.forceCenter( width / 4, height / 3 ) )
-    .force( "links", link_force );
+    .force( "links", linkForce );
 
 node.append( "circle" )
     .attr( "r", calculateRadius )

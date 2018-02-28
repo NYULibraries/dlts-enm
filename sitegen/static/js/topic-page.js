@@ -16,14 +16,14 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
                                            return d.id;
                                        }
                                    ),
-    chargeForce     = d3.forceManyBody()
+    chargeForce = d3.forceManyBody()
                                    .strength( -3500 )
                                    .distanceMax( 500 )
                                    .distanceMin( 100 ),
 
-    holdAll         = svg.append( "g" ).attr( "class", "holdAll" ),
+    wrapperG    = svg.append( "g" ).attr( "class", "holdAll" ),
 
-    link            = holdAll.append( "g" )
+    link        = wrapperG.append( "g" )
         .attr( "class", "links" )
         .selectAll( "line" )
         .data( visualizationData.links )
@@ -31,7 +31,7 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
         .attr( "stroke-width", .7 )
         .style( "stroke", "black" ),
 
-    node            = holdAll.append( "g" )
+    node        = wrapperG.append( "g" )
         .attr( "class", "nodes" )
         .selectAll( "circle" )
         .data( visualizationData.nodes )
@@ -74,7 +74,7 @@ zoom_handler( svg );
 
 //Zoom functions
 function zoom_actions() {
-    holdAll.attr( "transform", d3.event.transform );
+    wrapperG.attr( "transform", d3.event.transform );
 }
 
 forceSimulation.on( "tick", tickActions );

@@ -1,8 +1,8 @@
-var svg            = d3.select( "svg" ),
-    topicmapholder = document.getElementById( "topicmapholder" ),
-    width          = topicmapholder.clientWidth,
-    height         = topicmapholder.clientHeight,
-    thisTopicNum   = parseInt(/(\d*).html/.exec(window.location.href)[1]);
+var svg             = d3.select( "svg" ),
+    forceSimulation = document.getElementById( "force-simulation" ),
+    width           = forceSimulation.clientWidth,
+    height          = forceSimulation.clientHeight,
+    thisTopicNum    = parseInt(/(\d*).html/.exec(window.location.href)[1]);
 
 
 var basepath = window.location.href.split( '/' ).slice( 0, -5 ).join( '/' );

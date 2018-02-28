@@ -2,7 +2,7 @@ var svg             = d3.select( "svg" ),
     forceSimulation = document.getElementById( "force-simulation" ),
     width           = forceSimulation.clientWidth,
     height          = forceSimulation.clientHeight,
-    activeTopicId   = parseInt( /(\d*).html/.exec( window.location.href)[1]);
+    activeTopicId   = parseInt( /(\d*).html/.exec( window.location.href )[ 1 ] );
 
 
 var basepath = window.location.href.split( '/' ).slice( 0, -5 ).join( '/' );

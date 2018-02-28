@@ -50,7 +50,7 @@ var basepath               = window.location.href.split( '/' ).slice( 0, -5 ).jo
                    .on( "drag", dragged )
                    .on( "end", dragended ) ),
 
-    zoom_handler    = d3.zoom().on( "zoom", zoom_actions );
+    zoomHandler = d3.zoom().on( "zoom", zoom_actions );
 
 forceSimulation.force( "charge_force", chargeForce )
     .force( "center_force", d3.forceCenter( width / 4, height / 3 ) )
@@ -70,7 +70,7 @@ node.on( "click", function ( d ) {
     window.location.href = basepath + '/' + d.path;
 } );
 
-zoom_handler( svg );
+zoomHandler( svg );
 
 //Zoom functions
 function zoom_actions() {

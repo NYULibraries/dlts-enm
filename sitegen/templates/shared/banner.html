@@ -1,9 +1,10 @@
+<div class="skipnav"><a href="#maincontent">Skip to main content</a></div>
 <div class="enm-topnav">
-  <div class="container ">
+  <div class="container is-fluid">
     <nav class="navbar is-transparent">
       <div class="navbar-brand">
         <h1 class="navbar-item enm-logo">
-          <a href="#">
+          <a href="{{.Paths.WebRoot}}">
             Enhanced Networked Monographs
             <!--https://jira.nyu.edu/jira/browse/NYUP-360-->
             <span id="navPrototypeLabel" class="tag is-danger">PROTOTYPE</span>
@@ -20,57 +21,20 @@
           <div class="navbar-item">
             <a class="navbar-item" href="{{.Paths.WebRoot}}/search-results/">Search</a>
           </div>
+           <div class="navbar-item">
+            <a class="navbar-item" href="{{.Paths.WebRoot}}/about/">About</a>
+          </div>
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link  " href="#">
+            <a class="navbar-link" href="{{.Paths.WebRoot}}/browse-topics-lists/featured.html">
               Browse
             </a>
             <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item " href="{{.Paths.WebRoot}}/browse-topics-lists/featured.html">
+                Featured topics
+              </a>
+               <hr class="navbar-divider">
               <a class="navbar-item " href="{{.Paths.WebRoot}}/browse-topics-lists/a.html">
                 All topics
-              </a>
-              <a class="navbar-item " href="#">
-                All books
-              </a>
-              <hr class="navbar-divider">
-              <div class="navbar-item">
-                <div>
-                  <p class="is-size-6-desktop">
-                    <strong>Featured Topics</strong>
-                  </p>
-                  <a class="navbar-item" href="#">Women</a>
-                  <a class="navbar-item" href="#">Art</a>
-                  <a class="navbar-item" href="#">Food</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <div class="navbar-link">
-              Visualize
-            </div>
-            <div id="moreDropdown" class="navbar-dropdown is-boxed">
-              <a class="navbar-item " href="#">
-                <p>
-                  <strong>Persons</strong>
-                  <br>
-                  <small>A nicely laid out description of this item </small>
-                </p>
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item " href="#">
-                <p>
-                  <strong>Places</strong>
-                  <br>
-                  <small>A nicely laid out description of this item </small>
-                </p>
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item " href="#">
-                <p>
-                  <strong>Things</strong>
-                  <br>
-                  <small>A nicely laid out description of this item </small>
-                </p>
               </a>
             </div>
           </div>

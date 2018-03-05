@@ -14,49 +14,10 @@
 </head>
 
 <body>
-  <div class="skipnav"><a href="#maincontent">Skip to main content</a></div>
-<div class="enm-topnav">
-  <div class="container is-fluid">
-    <nav class="navbar is-transparent">
-      <div class="navbar-brand">
-        <h1 class="navbar-item enm-logo">
-          <a href="./">
-            Enhanced Networked Monographs
-          </a> &nbsp;<span id="navPrototypeLabel" class="tag is-danger">PROTOTYPE</span>
-        </h1>
-        <div class="navbar-burger burger" data-target="navMenuIndex">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div id="navMenuIndex" class="navbar-menu">
-        <div class="navbar-start">
-          <div class="navbar-item">
-            <a class="navbar-item" href="search.php">Search</a>
-          </div>
-          <div class="navbar-item">
-            <a class="navbar-item" href="about.php">About</a>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link  " href="#">
-              Browse
-            </a>
-            <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item " href="browseTopics.php">
-                Featured topics
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item " href="browseTopicsAll.php">
-                All topics
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-</div>  <main class="enm-browsetopicspage">
+
+{{template "banner.html" .}}
+
+<main class="enm-browsetopicspage">
     <section class="hero is-primary">
       <div class="hero-body">
         <div class="container">

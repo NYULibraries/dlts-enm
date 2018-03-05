@@ -88,12 +88,6 @@ zoomHandler( svg );
 // https://github.com/d3/d3/issues/1412
 forceSimulation.on( "tick", tickActions );
 
-renderedWidth  = wrapperG.node().getBoundingClientRect().width;
-renderedHeight = wrapperG.node().getBoundingClientRect().height;
-
-console.log( "width of visualization " + renderedWidth );
-console.log( "height of visualization " + renderedHeight );
-
 // Zoom functions
 function zoom_actions() {
     wrapperG.attr( "transform", d3.event.transform );

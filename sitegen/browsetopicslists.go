@@ -68,6 +68,10 @@ func GenerateBrowseTopicsLists(destination string) {
 	} else {
 		// Should never get here
 	}
+
+	// These browse topics lists are currently unchanging, with all topics
+	// hardcoded into the templates.
+	WriteStaticBrowseTopicsListsPage("enm-picks")
 }
 
 func fillBrowseTopicsListsCategories() {
@@ -127,6 +131,34 @@ func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKe
 	browseTopicsListPageData.Paths = Paths{ WebRoot: ".." }
 
 	return
+}
+
+func WriteStaticBrowseTopicsListsPage(listname string) (err error){
+	var filename = listname + ".html"
+	var templateFile = listname + ".html"
+
+	tpl := template.New(filename)
+	tpl, err = tpl.ParseFiles(
+		BrowseTopicListsTemplateDirectory + "/" + templateFile,
+		SharedTemplateDirectory    + "/banner.html",
+	)
+
+	if err != nil {
+		return err
+	}
+
+	file := BrowseTopicsListsDir + "/" + filename
+	f, err := os.Create(file)
+	if err != nil {
+		return err
+	}
+
+	err = tpl.Execute(f, nil)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func WriteDynamicBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){

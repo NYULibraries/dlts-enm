@@ -8927,43 +8927,49 @@ section.searchecho {
     padding-left: 1rem;
     display: inline-block;
     font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
-  /* line 24, ../sass/_enmtopicpages.scss */
-  .enm-topicpage .enm-linked-data .message a:link,
-  .enm-topicpage .enm-linked-data .message a:visited {
-    color: white;
-    text-decoration: none; }
+  /* line 23, ../sass/_enmtopicpages.scss */
+  .enm-topicpage .enm-linked-data .message {
+    background-color: #138684; }
+    /* line 25, ../sass/_enmtopicpages.scss */
+    .enm-topicpage .enm-linked-data .message .message-body {
+      border: 1px solid #0a5858; }
+    /* line 28, ../sass/_enmtopicpages.scss */
+    .enm-topicpage .enm-linked-data .message a:link,
+    .enm-topicpage .enm-linked-data .message a:visited {
+      color: white;
+      text-decoration: none; }
 
-/* line 34, ../sass/_enmtopicpages.scss */
+/* line 38, ../sass/_enmtopicpages.scss */
 .enm-books-with-topic .enm-title {
   font-size: .9rem;
   text-transform: uppercase;
   color: #525252;
   margin-bottom: 5px; }
-/* line 40, ../sass/_enmtopicpages.scss */
+/* line 44, ../sass/_enmtopicpages.scss */
 .enm-books-with-topic .enm-thumbnail {
   max-width: 65px; }
-/* line 43, ../sass/_enmtopicpages.scss */
+/* line 47, ../sass/_enmtopicpages.scss */
 .enm-books-with-topic nav {
   margin-top: 10px; }
 
-/* line 48, ../sass/_enmtopicpages.scss */
+/* line 52, ../sass/_enmtopicpages.scss */
 .enm-topic-items {
   margin-top: 1rem;
   position: relative; }
-  /* line 51, ../sass/_enmtopicpages.scss */
+  /* line 55, ../sass/_enmtopicpages.scss */
   .enm-topic-items .enm-topicmap {
     line-height: 1;
     padding: 0; }
 
-/* line 57, ../sass/_enmtopicpages.scss */
+/* line 61, ../sass/_enmtopicpages.scss */
 .enm-featured-topics {
   display: flex;
   flex-wrap: wrap; }
-  /* line 60, ../sass/_enmtopicpages.scss */
+  /* line 64, ../sass/_enmtopicpages.scss */
   .enm-featured-topics > li {
     width: 33%;
     float: left; }
-    /* line 64, ../sass/_enmtopicpages.scss */
+    /* line 68, ../sass/_enmtopicpages.scss */
     .enm-featured-topics > li a {
       padding: 5px 20px 5px 0 !important;
       display: block; }

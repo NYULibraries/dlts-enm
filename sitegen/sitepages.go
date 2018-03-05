@@ -52,7 +52,15 @@ func WriteSitePage(pageName string) (err error){
 		return err
 	}
 
-	err = tpl.Execute(f, nil)
+	pageData := struct{
+		Paths
+	}{
+		Paths: Paths{
+			WebRoot: ".",
+		},
+	}
+
+	err = tpl.Execute(f, pageData)
 	if err != nil {
 		return err
 	}

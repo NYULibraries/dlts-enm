@@ -29,6 +29,7 @@ var sitegenCmd = &cobra.Command{
 	Short: "Generate ENM website components",
 	Long: `Generate the following ENM website components:
 
+	* Site pages: About, Home
 	* Topics browse lists
 	* Topic pages
 	`,

@@ -104,7 +104,7 @@ func GenerateDynamicBrowseTopicsListsFromDatabase() {
 		topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
 		filename := browseTopicsListsCategory.FileBasename + ".html"
 		browseTopicsListPageData := CreateBrowseTopicsListPageData(topicsWithSortKeys, browseTopicsListsCategory.Label)
-		err := WriteBrowseTopicsListPage(filename, browseTopicsListPageData)
+		err := WriteDynamicBrowseTopicsListPage(filename, browseTopicsListPageData)
 		if (err != nil) {
 			panic(err)
 		}
@@ -129,7 +129,7 @@ func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKe
 	return
 }
 
-func WriteBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){
+func WriteDynamicBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){
 	tpl := template.New("a-to-z.html")
 	tpl, err = tpl.ParseFiles(
 		BrowseTopicListsTemplateDirectory + "/a-to-z.html",

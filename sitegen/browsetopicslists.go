@@ -61,7 +61,7 @@ func GenerateBrowseTopicsLists(destination string) {
 	fillBrowseTopicsListsCategories()
 
 	if Source == "database" {
-		GenerateBrowseTopicsListsFromDatabase()
+		GenerateDynamicBrowseTopicsListsFromDatabase()
 	} else if Source == "cache" {
 		// Don't know if will be implementing this
 		fmt.Println("Generation of topic browse lists pages has not yet been implemented.")
@@ -97,7 +97,7 @@ func fillBrowseTopicsListsCategories() {
 	return
 }
 
-func GenerateBrowseTopicsListsFromDatabase() {
+func GenerateDynamicBrowseTopicsListsFromDatabase() {
 	var topicsWithSortKeys []models.TopicsWithSortKeys
 
 	for _, browseTopicsListsCategory := range BrowseTopicsListsCategories {

@@ -61,13 +61,17 @@ func GenerateBrowseTopicsLists(destination string) {
 	fillBrowseTopicsListsCategories()
 
 	if Source == "database" {
-		GenerateBrowseTopicsListsFromDatabase()
+		GenerateDynamicBrowseTopicsListsFromDatabase()
 	} else if Source == "cache" {
 		// Don't know if will be implementing this
 		fmt.Println("Generation of topic browse lists pages has not yet been implemented.")
 	} else {
 		// Should never get here
 	}
+
+	// These browse topics lists are currently unchanging, with all topics
+	// hardcoded into the templates.
+	WriteStaticBrowseTopicsListsPage("enm-picks")
 }
 
 func fillBrowseTopicsListsCategories() {
@@ -97,14 +101,14 @@ func fillBrowseTopicsListsCategories() {
 	return
 }
 
-func GenerateBrowseTopicsListsFromDatabase() {
+func GenerateDynamicBrowseTopicsListsFromDatabase() {
 	var topicsWithSortKeys []models.TopicsWithSortKeys
 
 	for _, browseTopicsListsCategory := range BrowseTopicsListsCategories {
 		topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
 		filename := browseTopicsListsCategory.FileBasename + ".html"
 		browseTopicsListPageData := CreateBrowseTopicsListPageData(topicsWithSortKeys, browseTopicsListsCategory.Label)
-		err := WriteBrowseTopicsListPage(filename, browseTopicsListPageData)
+		err := WriteDynamicBrowseTopicsListPage(filename, browseTopicsListPageData)
 		if (err != nil) {
 			panic(err)
 		}
@@ -129,7 +133,35 @@ func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKe
 	return
 }
 
-func WriteBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){
+func WriteStaticBrowseTopicsListsPage(listname string) (err error){
+	var filename = listname + ".html"
+	var templateFile = listname + ".html"
+
+	tpl := template.New(filename)
+	tpl, err = tpl.ParseFiles(
+		BrowseTopicListsTemplateDirectory + "/" + templateFile,
+		SharedTemplateDirectory    + "/banner.html",
+	)
+
+	if err != nil {
+		return err
+	}
+
+	file := BrowseTopicsListsDir + "/" + filename
+	f, err := os.Create(file)
+	if err != nil {
+		return err
+	}
+
+	err = tpl.Execute(f, nil)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func WriteDynamicBrowseTopicsListPage(filename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){
 	tpl := template.New("a-to-z.html")
 	tpl, err = tpl.ParseFiles(
 		BrowseTopicListsTemplateDirectory + "/a-to-z.html",

@@ -1,5 +1,14 @@
 {{- $short := (shortname .Type.Name "err" "sqlstr" "db" "q" "res" "XOLog" .Fields) -}}
 {{- $table := (schema .Schema .Type.Table.TableName) -}}
+
+{{/* Prevent "[FUNCTION] redeclared in this block" errors
+     See https://jira.nyu.edu/jira/browse/NYUP-397 */}}
+{{- if (eq "hit_hit_name_7ea0901f_like" .Index.IndexName) -}}
+{{- else -}}
+    {{- if (eq "hit_hit_slug_b92dee21_like" .Index.IndexName) -}}
+    {{- else -}}
+        {{- if not (eq "lex_recognizer_replacer_0ef1a2a2_like" .Index.IndexName) -}}
+
 // {{ .FuncName }} retrieves a row from '{{ $table }}' as a {{ .Type.Name }}.
 //
 // Generated from index '{{ .Index.IndexName }}'.
@@ -55,4 +64,9 @@ func {{ .FuncName }}(db XODB{{ goparamlist .Fields true true }}) ({{ if not .Ind
 	return res, nil
 {{- end }}
 }
+
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
 

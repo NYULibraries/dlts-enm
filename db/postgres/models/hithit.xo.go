@@ -360,45 +360,6 @@ func HitHitByNameScopeID(db XODB, name string, scopeID int) (*HitHit, error) {
 	return &hh, nil
 }
 
-// HitHitsByName retrieves a row from 'public.hit_hit' as a HitHit.
-//
-// Generated from index 'hit_hit_name_7ea0901f_like'.
-func HitHitsByName(db XODB, name string) ([]*HitHit, error) {
-	var err error
-
-	// sql query
-	const sqlstr = `SELECT ` +
-		`id, name, slug, hidden, preferred, bypass, basket_id, scope_id, kind ` +
-		`FROM public.hit_hit ` +
-		`WHERE name = $1`
-
-	// run query
-	XOLog(sqlstr, name)
-	q, err := db.Query(sqlstr, name)
-	if err != nil {
-		return nil, err
-	}
-	defer q.Close()
-
-	// load results
-	res := []*HitHit{}
-	for q.Next() {
-		hh := HitHit{
-			_exists: true,
-		}
-
-		// scan
-		err = q.Scan(&hh.ID, &hh.Name, &hh.Slug, &hh.Hidden, &hh.Preferred, &hh.Bypass, &hh.BasketID, &hh.ScopeID, &hh.Kind)
-		if err != nil {
-			return nil, err
-		}
-
-		res = append(res, &hh)
-	}
-
-	return res, nil
-}
-
 // HitHitByID retrieves a row from 'public.hit_hit' as a HitHit.
 //
 // Generated from index 'hit_hit_pkey'.
@@ -423,43 +384,4 @@ func HitHitByID(db XODB, id int) (*HitHit, error) {
 	}
 
 	return &hh, nil
-}
-
-// HitHitsBySlug retrieves a row from 'public.hit_hit' as a HitHit.
-//
-// Generated from index 'hit_hit_slug_b92dee21_like'.
-func HitHitsBySlug(db XODB, slug string) ([]*HitHit, error) {
-	var err error
-
-	// sql query
-	const sqlstr = `SELECT ` +
-		`id, name, slug, hidden, preferred, bypass, basket_id, scope_id, kind ` +
-		`FROM public.hit_hit ` +
-		`WHERE slug = $1`
-
-	// run query
-	XOLog(sqlstr, slug)
-	q, err := db.Query(sqlstr, slug)
-	if err != nil {
-		return nil, err
-	}
-	defer q.Close()
-
-	// load results
-	res := []*HitHit{}
-	for q.Next() {
-		hh := HitHit{
-			_exists: true,
-		}
-
-		// scan
-		err = q.Scan(&hh.ID, &hh.Name, &hh.Slug, &hh.Hidden, &hh.Preferred, &hh.Bypass, &hh.BasketID, &hh.ScopeID, &hh.Kind)
-		if err != nil {
-			return nil, err
-		}
-
-		res = append(res, &hh)
-	}
-
-	return res, nil
 }

@@ -7,7 +7,7 @@
 {{- else -}}
     {{- if (eq "hit_hit_slug_b92dee21_like" .Index.IndexName) -}}
     {{- else -}}
-        {{- if not (eq "lex_recognizer_replacer_0ef1a2a2_like" .Index.IndexName) -}}
+        {{- if not (eq "lex_recognizer_replacer_0ef1a2a2_like" .Index.IndexName) }}
 
 // {{ .FuncName }} retrieves a row from '{{ $table }}' as a {{ .Type.Name }}.
 //

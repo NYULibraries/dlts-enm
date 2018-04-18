@@ -12,7 +12,6 @@ import (
 type RelationRelationtype struct {
 	ID          int            `json:"id"`          // id
 	Rtype       string         `json:"rtype"`       // rtype
-// Duplicate Rtype field declaration removed
 	Description sql.NullString `json:"description"` // description
 	RoleFrom    string         `json:"role_from"`   // role_from
 	RoleTo      string         `json:"role_to"`     // role_to
@@ -43,14 +42,14 @@ func (rr *RelationRelationtype) Insert(db XODB) error {
 
 	// sql insert query, primary key provided by sequence
 	const sqlstr = `INSERT INTO public.relation_relationtype (` +
-		`rtype, rtype, description, role_from, role_to, symmetrical` +
+		`rtype, description, role_from, role_to, symmetrical` +
 		`) VALUES (` +
-		`$1, $2, $3, $4, $5, $6` +
+		`$1, $2, $3, $4, $5` +
 		`) RETURNING id`
 
 	// run query
-	XOLog(sqlstr, rr.Rtype, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical)
-	err = db.QueryRow(sqlstr, rr.Rtype, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical).Scan(&rr.ID)
+	XOLog(sqlstr, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical)
+	err = db.QueryRow(sqlstr, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical).Scan(&rr.ID)
 	if err != nil {
 		return err
 	}
@@ -77,14 +76,14 @@ func (rr *RelationRelationtype) Update(db XODB) error {
 
 	// sql query
 	const sqlstr = `UPDATE public.relation_relationtype SET (` +
-		`rtype, rtype, description, role_from, role_to, symmetrical` +
+		`rtype, description, role_from, role_to, symmetrical` +
 		`) = ( ` +
-		`$1, $2, $3, $4, $5, $6` +
-		`) WHERE id = $7`
+		`$1, $2, $3, $4, $5` +
+		`) WHERE id = $6`
 
 	// run query
-	XOLog(sqlstr, rr.Rtype, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical, rr.ID)
-	_, err = db.Exec(sqlstr, rr.Rtype, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical, rr.ID)
+	XOLog(sqlstr, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical, rr.ID)
+	_, err = db.Exec(sqlstr, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical, rr.ID)
 	return err
 }
 
@@ -110,18 +109,18 @@ func (rr *RelationRelationtype) Upsert(db XODB) error {
 
 	// sql query
 	const sqlstr = `INSERT INTO public.relation_relationtype (` +
-		`id, rtype, rtype, description, role_from, role_to, symmetrical` +
+		`id, rtype, description, role_from, role_to, symmetrical` +
 		`) VALUES (` +
-		`$1, $2, $3, $4, $5, $6, $7` +
+		`$1, $2, $3, $4, $5, $6` +
 		`) ON CONFLICT (id) DO UPDATE SET (` +
-		`id, rtype, rtype, description, role_from, role_to, symmetrical` +
+		`id, rtype, description, role_from, role_to, symmetrical` +
 		`) = (` +
-		`EXCLUDED.id, EXCLUDED.rtype, EXCLUDED.rtype, EXCLUDED.description, EXCLUDED.role_from, EXCLUDED.role_to, EXCLUDED.symmetrical` +
+		`EXCLUDED.id, EXCLUDED.rtype, EXCLUDED.description, EXCLUDED.role_from, EXCLUDED.role_to, EXCLUDED.symmetrical` +
 		`)`
 
 	// run query
-	XOLog(sqlstr, rr.ID, rr.Rtype, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical)
-	_, err = db.Exec(sqlstr, rr.ID, rr.Rtype, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical)
+	XOLog(sqlstr, rr.ID, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical)
+	_, err = db.Exec(sqlstr, rr.ID, rr.Rtype, rr.Description, rr.RoleFrom, rr.RoleTo, rr.Symmetrical)
 	if err != nil {
 		return err
 	}
@@ -170,7 +169,7 @@ func RelationRelationtypeByID(db XODB, id int) (*RelationRelationtype, error) {
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`id, rtype, rtype, description, role_from, role_to, symmetrical ` +
+		`id, rtype, description, role_from, role_to, symmetrical ` +
 		`FROM public.relation_relationtype ` +
 		`WHERE id = $1`
 
@@ -180,7 +179,7 @@ func RelationRelationtypeByID(db XODB, id int) (*RelationRelationtype, error) {
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, id).Scan(&rr.ID, &rr.Rtype, &rr.Rtype, &rr.Description, &rr.RoleFrom, &rr.RoleTo, &rr.Symmetrical)
+	err = db.QueryRow(sqlstr, id).Scan(&rr.ID, &rr.Rtype, &rr.Description, &rr.RoleFrom, &rr.RoleTo, &rr.Symmetrical)
 	if err != nil {
 		return nil, err
 	}
@@ -196,7 +195,7 @@ func RelationRelationtypesByRtype(db XODB, rtype string) ([]*RelationRelationtyp
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`id, rtype, rtype, description, role_from, role_to, symmetrical ` +
+		`id, rtype, description, role_from, role_to, symmetrical ` +
 		`FROM public.relation_relationtype ` +
 		`WHERE rtype = $1`
 
@@ -216,7 +215,7 @@ func RelationRelationtypesByRtype(db XODB, rtype string) ([]*RelationRelationtyp
 		}
 
 		// scan
-		err = q.Scan(&rr.ID, &rr.Rtype, &rr.Rtype, &rr.Description, &rr.RoleFrom, &rr.RoleTo, &rr.Symmetrical)
+		err = q.Scan(&rr.ID, &rr.Rtype, &rr.Description, &rr.RoleFrom, &rr.RoleTo, &rr.Symmetrical)
 		if err != nil {
 			return nil, err
 		}
@@ -235,7 +234,7 @@ func RelationRelationtypeByRtypeRoleFromRoleTo(db XODB, rtype string, roleFrom s
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`id, rtype, rtype, description, role_from, role_to, symmetrical ` +
+		`id, rtype, description, role_from, role_to, symmetrical ` +
 		`FROM public.relation_relationtype ` +
 		`WHERE rtype = $1 AND role_from = $2 AND role_to = $3`
 
@@ -245,7 +244,7 @@ func RelationRelationtypeByRtypeRoleFromRoleTo(db XODB, rtype string, roleFrom s
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, rtype, roleFrom, roleTo).Scan(&rr.ID, &rr.Rtype, &rr.Rtype, &rr.Description, &rr.RoleFrom, &rr.RoleTo, &rr.Symmetrical)
+	err = db.QueryRow(sqlstr, rtype, roleFrom, roleTo).Scan(&rr.ID, &rr.Rtype, &rr.Description, &rr.RoleFrom, &rr.RoleTo, &rr.Symmetrical)
 	if err != nil {
 		return nil, err
 	}
@@ -261,7 +260,7 @@ func RelationRelationtypeByRtype(db XODB, rtype string) (*RelationRelationtype, 
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`id, rtype, rtype, description, role_from, role_to, symmetrical ` +
+		`id, rtype, description, role_from, role_to, symmetrical ` +
 		`FROM public.relation_relationtype ` +
 		`WHERE rtype = $1`
 
@@ -271,7 +270,7 @@ func RelationRelationtypeByRtype(db XODB, rtype string) (*RelationRelationtype, 
 		_exists: true,
 	}
 
-	err = db.QueryRow(sqlstr, rtype).Scan(&rr.ID, &rr.Rtype, &rr.Rtype, &rr.Description, &rr.RoleFrom, &rr.RoleTo, &rr.Symmetrical)
+	err = db.QueryRow(sqlstr, rtype).Scan(&rr.ID, &rr.Rtype, &rr.Description, &rr.RoleFrom, &rr.RoleTo, &rr.Symmetrical)
 	if err != nil {
 		return nil, err
 	}

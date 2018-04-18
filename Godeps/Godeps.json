@@ -1,7 +1,7 @@
 {
 	"ImportPath": "github.com/nyulibraries/dlts-enm",
-	"GoVersion": "go1.8",
-	"GodepVersion": "v79",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
 	"Deps": [
 		{
 			"ImportPath": "github.com/fsnotify/fsnotify",

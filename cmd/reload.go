@@ -17,8 +17,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/nyulibraries/dlts-enm/db/mysql"
-	"github.com/nyulibraries/dlts-enm/tct"
+	"fmt"
 )
 
 var ReloadSource string
@@ -29,10 +28,18 @@ var reloadCmd = &cobra.Command{
 	Short: "Reload database from TCT",
 	Long: `Truncates all database tables and reload from TCT API responses.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		tct.Source = ReloadSource
+		// Disabled.  See comments below.  Keeping around for now until we are 100%
+		// we'll never need to extract from the TCT JSON API again and will never
+		// revive the original prototype MySQL ENM database.
+		fmt.Println("`reload` is obsolete.  The last (probably) " +
+			"working version was https://github.com/NYULibraries/dlts-enm/releases/tag/final-commit-before-moving-to-postgres.")
+		fmt.Println("For more details, see https://jira.nyu.edu/jira/browse/NYUP-413.")
 
-		mysql.ClearTables()
-		mysql.Reload()
+		// This is what this command used to do:
+		// tct.Source = ReloadSource
+        //
+		// mysql.ClearTables()
+		// mysql.Reload()
 	},
 }
 

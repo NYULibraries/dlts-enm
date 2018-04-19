@@ -25,7 +25,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	"github.com/nyulibraries/dlts-enm/db/models"
+	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/tct"
 )
 

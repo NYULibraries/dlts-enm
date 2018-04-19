@@ -21,7 +21,7 @@ import (
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db"
-	"github.com/nyulibraries/dlts-enm/db/models"
+	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 )
 
 type BrowseTopicsListPageData struct{

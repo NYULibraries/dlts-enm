@@ -4,7 +4,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/nyulibraries/dlts-enm/db/models"
+	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	solr "github.com/rtt/Go-Solr"
 	"github.com/nyulibraries/dlts-enm/db"
 	"encoding/json"

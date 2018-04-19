@@ -10,7 +10,7 @@ import(
 	"strings"
 	"strconv"
 
-	"github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/db/mysql"
 )
 
 const VisualizationBoilerplateDir = "dataviz/visualization-boilerplate"
@@ -33,7 +33,7 @@ func (node *Node) AddChildNodes(ancestors []int) (depth int, err error){
 
 	//fmt.Printf("topic %d (%v)\n", node.TopicId, ancestors)
 
-	subentryTopics := db.GetTopicSubEntries(node.TopicId)
+	subentryTopics := mysql.GetTopicSubEntries(node.TopicId)
 	for _, subentryTopic := range subentryTopics {
 
 		//fmt.Printf("subentry %d\n", subentryTopic.TctID)
@@ -91,7 +91,7 @@ func Trees1() {
 	trees1TopicsDir := trees1Dir + "/" + trees1TopicsSubdir
 	os.Mkdir(trees1TopicsDir, os.FileMode(0755))
 
-	topics := db.GetTopicsAll()
+	topics := mysql.GetTopicsAll()
 
 	var treeAnchorTags []string
 	for _, topic := range topics {

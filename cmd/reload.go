@@ -17,7 +17,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/db/mysql"
 	"github.com/nyulibraries/dlts-enm/tct"
 )
 
@@ -31,8 +31,8 @@ var reloadCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		tct.Source = ReloadSource
 
-		db.ClearTables()
-		db.Reload()
+		mysql.ClearTables()
+		mysql.Reload()
 	},
 }
 

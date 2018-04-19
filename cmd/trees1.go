@@ -14,8 +14,11 @@
 package cmd
 
 import (
+	"fmt"
+	// Disabled.  See comments below.  Keeping around for now until we are 100%
+	// we'll never revive the original prototype MySQL ENM database.
+	_ "github.com/nyulibraries/dlts-enm/dataviz"
 	"github.com/spf13/cobra"
-	"github.com/nyulibraries/dlts-enm/dataviz"
 )
 
 // trees1Cmd represents the trees1 command
@@ -27,8 +30,13 @@ var trees1Cmd = &cobra.Command{
 "ENM Data visualization: create expanding topic tree for Topics"
 https://jira.nyu.edu/jira/browse/NYUP-234`,
 	Run: func(cmd *cobra.Command, args []string) {
-		dataviz.OutputDir = OutputDir
-		dataviz.Trees1()
+		fmt.Println("`dataviz trees1` is obsolete.  The last (probably) " +
+"working version was https://github.com/NYULibraries/dlts-enm/releases/tag/final-commit-before-moving-to-postgres.")
+		fmt.Println("For more details, see https://jira.nyu.edu/jira/browse/NYUP-413.")
+
+		// This is what this command used to do:
+		// dataviz.OutputDir = OutputDir
+		// dataviz.Trees1()
 	},
 }
 

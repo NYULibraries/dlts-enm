@@ -26,7 +26,7 @@ import (
 
 	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
-	"github.com/nyulibraries/dlts-enm/db/models"
+	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/util"
 )
 

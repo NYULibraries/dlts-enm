@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ENM">
+  <title>ENM Topic: Zinn, Howard</title>
+  <link rel="stylesheet" href="../../../../../shared/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../../shared/css/bulma.css">
+</head>
+
+<body>
+  <div class="skipnav"><a href="#maincontent">Skip to main content</a></div>
+<div class="enm-topnav">
+  <div class="container is-fluid">
+    <nav class="navbar is-transparent">
+      <div class="navbar-brand">
+        <h1 class="navbar-item enm-logo">
+          <a href="../../../../..">
+            Enhanced Networked Monographs
+            
+            <span id="navPrototypeLabel" class="tag is-danger">PROTOTYPE</span>
+          </a>
+        </h1>
+        <div class="navbar-burger burger" data-target="navMenuIndex">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div id="navMenuIndex" class="navbar-menu">
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <a class="navbar-item" href="../../../../../search-results/">Search</a>
+          </div>
+           <div class="navbar-item">
+            <a class="navbar-item" href="../../../../../about.html">About</a>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link" href="../../../../../browse-topics-lists/enm-picks.html">
+              Browse
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item " href="../../../../../browse-topics-lists/enm-picks.html">
+                Featured topics
+              </a>
+               <hr class="navbar-divider">
+              <a class="navbar-item " href="../../../../../browse-topics-lists/a.html">
+                All topics
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+  <main class="enm-topicpage">
+    <section class="hero  is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <header class="columns is-vcentered">
+            <div class="column is-two-thirds">
+              <div class="supertitle ">
+                TOPIC
+              </div>
+              <div class="title enm-topictitle">
+                Zinn, Howard
+                
+              </div>
+            </div>
+            
+            <div class="column enm-linked-data">
+              <article class="message">
+                <div class="message-header">Linked Data
+                </div>
+                <div class="message-body">
+                  
+                  
+                  <a href="http://id.loc.gov/authorities/names/n79059761">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      Library of Congress: http://id.loc.gov/authorities/names/n79059761 (exactMatch)
+                  </a>
+                  <br>
+                  
+                  <a href="http://id.worldcat.org/fast/1734796">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      Library of Congress: http://id.worldcat.org/fast/1734796 (exactMatch)
+                  </a>
+                  <br>
+                  
+                  <a href="http://viaf.org/viaf/106986472">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      Library of Congress: http://viaf.org/viaf/106986472 (exactMatch)
+                  </a>
+                  <br>
+                  
+                  <a href="https://www.wikidata.org/entity/Q119546">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      Library of Congress: https://www.wikidata.org/entity/Q119546 (exactMatch)
+                  </a>
+                  
+                  
+                </div>
+              </article>
+            </div>
+            
+          </header>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="enm-topic-items columns ">
+          <div id="force-simulation" class="enm-topicmap column is-two-thirds">
+            <svg viewBox="100 30 700 300" preserveAspectRatio="xMinYMin meet" style="height:100%; width:100%">
+            </svg>
+          </div>
+          <div class=" enm-books-with-topic column">
+            <h2 class="enm-title">This topic referenced in:</h2>
+            
+            <div class="box">
+  <article class="media enm-book">
+    <div class="media-left">
+      <figure class="image enm-thumbnail">
+        <img src="/enm/enm-web/prototypes/shared/assets/covers/9780816676507.jpg" alt="">
+      </figure>
+    </div>
+    <div class="media-content">
+      <h3 class="title is-5">
+     Health Rights Are Civil Rights</h3>
+      <div class="meta">Jenna M. Loyd; University of Minnesota Press</div>
+      <nav class="level is-mobile">
+        <div class="level-right">
+          <a class="button level-item is-primary is-outlined is-small">Open in Reader</a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+            
+            <hr>
+            <article class="box">
+              <a href="#">Leave feedback</a> on this topic
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>var visualizationData = {"nodes":[{"id":43816,"name":"Zinn, Howard","ocount":2,"path":"00/00/04/38/0000043816.html"}],"links":[]}</script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="../../../../../shared/js/topic-page.js"></script>
+</body>
+
+</html>

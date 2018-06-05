@@ -19,6 +19,7 @@ import (
 	"strings"
 	"os"
 	"path/filepath"
+	"path"
 )
 
 func CreateFileWithAllParentDirectories(file string) (f *os.File, err error) {
@@ -59,6 +60,13 @@ func GetRelativeFilepathInLargeDirectoryTree(prefix string, ID int, extension st
 		zeroPaddedString[6:8] +
 		"/" +
 		filename
+}
+
+func GetTopicIDFromTopicPagePath(topicPagePath string) string {
+	filename := path.Base(topicPagePath)
+	basename := strings.TrimSuffix(filename, ".html")
+
+	return strings.TrimLeft(basename, "0")
 }
 
 func SnakeToCamelCase(snakeCaseString string) (camelCaseString string){

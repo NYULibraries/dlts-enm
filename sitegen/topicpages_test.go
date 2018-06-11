@@ -10,8 +10,6 @@ import (
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
-const TopicPagesGoldenFilesDirectory = "testdata/golden/topic-pages"
-
 func TestGenerateTopicPages(t *testing.T) {
 	wd, err := os.Getwd()
 	if (err != nil) {
@@ -19,6 +17,8 @@ func TestGenerateTopicPages(t *testing.T) {
 	}
 
 	rootDirectory := path.Dir(wd)
+
+	TopicPagesGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/topic-pages"
 
 	destination := rootDirectory + "/sitegen/testdata/tmp"
 	err = os.RemoveAll(destination)
@@ -55,4 +55,14 @@ func TestGenerateTopicPages(t *testing.T) {
 	}
 
 	GenerateTopicPages(destination)
+
+	diffOutput, err := util.Diff(TopicPagesGoldenFilesDirectory, destination + "/topic-pages")
+	if (err != nil) {
+		t.Fatal("Diff of " + TopicPagesGoldenFilesDirectory + " and " +
+			destination + " failed to run: " + err.Error())
+	}
+
+	if (diffOutput != "") {
+		t.Errorf("%s", diffOutput)
+	}
 }

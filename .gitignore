@@ -39,3 +39,6 @@
 # to what is created by `godep save`, which does not copy certain files and directories by design.
 # (see documentation for `godep save` for details).
 vendor/
+
+sitegen/testdata/tmp/*
+!sitegen/testdata/tmp/.commit-empty-directory

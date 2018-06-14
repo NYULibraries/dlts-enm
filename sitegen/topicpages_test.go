@@ -21,7 +21,8 @@ func TestGenerateTopicPages(t *testing.T) {
 	TopicPagesGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/topic-pages"
 
 	destination := rootDirectory + "/sitegen/testdata/tmp"
-	err = os.RemoveAll(destination)
+	outputDir := destination + "/topic-pages"
+	err = os.RemoveAll(outputDir)
 	if (err != nil) {
 		t.Fatal( "os.Remove(" + destination + ") failed: " + err.Error())
 	}
@@ -56,7 +57,7 @@ func TestGenerateTopicPages(t *testing.T) {
 
 	GenerateTopicPages(destination)
 
-	diffOutput, err := util.Diff(TopicPagesGoldenFilesDirectory, destination + "/topic-pages")
+	diffOutput, err := util.Diff(TopicPagesGoldenFilesDirectory, outputDir)
 	if (err != nil) {
 		t.Fatal("Diff of " + TopicPagesGoldenFilesDirectory + " and " +
 			destination + " failed to run: " + err.Error())

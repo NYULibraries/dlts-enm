@@ -1,16 +1,14 @@
 package sitegen
 
 import (
-	"path/filepath"
 	"testing"
-	"strings"
 	"os"
 	"path"
 
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
-func TestGenerateTopicPages(t *testing.T) {
+func TestGenerateBrowseTopicsLists(t *testing.T) {
 	wd, err := os.Getwd()
 	if (err != nil) {
 		t.Fatal( "os.Getwd() failed: " + err.Error())
@@ -18,10 +16,10 @@ func TestGenerateTopicPages(t *testing.T) {
 
 	rootDirectory := path.Dir(wd)
 
-	TopicPagesGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/topic-pages"
+	BrowseTopicsListsGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/browse-topics-lists"
 
 	destination := rootDirectory + "/sitegen/testdata/tmp"
-	outputDir := destination + "/topic-pages"
+	outputDir := destination + "/browse-topics-lists"
 	err = os.RemoveAll(outputDir)
 	if (err != nil) {
 		t.Fatal( "os.Remove(" + destination + ") failed: " + err.Error())
@@ -35,31 +33,11 @@ func TestGenerateTopicPages(t *testing.T) {
 
 	Source = "database"
 
-	goldenFiles := []string{}
-	err = filepath.Walk(TopicPagesGoldenFilesDirectory, func(path string, f os.FileInfo, err error) error {
-		if (f.IsDir()) {
-			return nil
-		} else if (strings.HasSuffix(path, ".html")) {
-			goldenFiles = append(goldenFiles, path)
-		} else {
-			t.Fatal("Unexpected file encountered: " + path)
-		}
+	GenerateBrowseTopicsLists(destination)
 
-		return nil
-	})
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	for _, goldenFile := range goldenFiles {
-		TopicIDs = append(TopicIDs, util.GetTopicIDFromTopicPagePath(goldenFile))
-	}
-
-	GenerateTopicPages(destination)
-
-	diffOutput, err := util.Diff(TopicPagesGoldenFilesDirectory, outputDir)
+	diffOutput, err := util.Diff(BrowseTopicsListsGoldenFilesDirectory, outputDir)
 	if (err != nil) {
-		t.Fatal("Diff of " + TopicPagesGoldenFilesDirectory + " and " +
+		t.Fatal("Diff of " + BrowseTopicsListsGoldenFilesDirectory + " and " +
 			destination + " failed to run: " + err.Error())
 	}
 

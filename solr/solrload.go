@@ -1,32 +1,29 @@
-package solrutil
+package solr
 
 import (
 	"log"
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db/mysql/models"
-	solr "github.com/rtt/Go-Solr"
 	"github.com/nyulibraries/dlts-enm/db"
 	"encoding/json"
 	"fmt"
 )
 
-var Port int
-var Server string
-var conn *solr.Connection
-
 var epubsNumberOfPages map[string]int
 
-func Init(server string, port int) error {
-	var err error
-	conn, err = solr.Init(server, port, "enm-pages")
-	if err != nil {
-		return err
-	}
-
+func Load() error {
 	epubsNumberOfPages = make(map[string]int)
 	for _, epubNumberOfPage := range db.GetEpubsNumberOfPages() {
 		epubsNumberOfPages[ epubNumberOfPage.Isbn ] = int(epubNumberOfPage.NumberOfPages)
+	}
+
+	pages := db.GetPagesAll()
+	for _, page := range pages {
+		err := AddPage(page)
+		if err != nil {
+			panic(fmt.Sprintf("ERROR: couldn't add page %d to Solr index: \"%s\"\n", page.ID, err.Error()))
+		}
 	}
 
 	return nil

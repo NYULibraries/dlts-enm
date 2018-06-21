@@ -18,7 +18,6 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/nyulibraries/dlts-enm/db"
 	"github.com/nyulibraries/dlts-enm/solr"
 )
 
@@ -28,18 +27,12 @@ var solrLoadCmd = &cobra.Command{
 	Short: "Loads the Solr index",
 	Long: `Loads the Solr index from views pages and page_topics`,
 	Run: func(cmd *cobra.Command, args []string) {
-		err := solrutil.Init(Server, Port)
+		err := solr.Init(Server, Port)
 		if err != nil {
 			panic(fmt.Sprintf("ERROR: couldn't initialize solrutil: %s\n", err.Error()))
 		}
 
-		pages := db.GetPagesAll()
-		for _, page := range pages {
-			err := solrutil.AddPage(page)
-			if err != nil {
-				panic(fmt.Sprintf("ERROR: couldn't add page %d to Solr index: \"%s\"\n", page.ID, err.Error()))
-			}
-		}
+		solr.Load()
 	},
 }
 

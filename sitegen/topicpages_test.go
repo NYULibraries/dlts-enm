@@ -27,7 +27,6 @@ func TestGenerateTopicPages(t *testing.T) {
 		t.Fatal( "os.Remove(" + destination + ") failed: " + err.Error())
 	}
 
-	Source = "cache"
 	BrowseTopicListsTemplateDirectory = rootDirectory + "/" + BrowseTopicListsTemplateDirectory
 	SharedTemplateDirectory = rootDirectory + "/" + SharedTemplateDirectory
 	SitePagesTemplateDirectory = rootDirectory + "/" + SitePagesTemplateDirectory

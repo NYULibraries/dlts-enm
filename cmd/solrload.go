@@ -29,7 +29,7 @@ var solrLoadCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		err := solr.Init(Server, Port)
 		if err != nil {
-			panic(fmt.Sprintf("ERROR: couldn't initialize solrutil: %s\n", err.Error()))
+			panic(fmt.Sprintf("ERROR: couldn't initialize solr: %s\n", err.Error()))
 		}
 
 		solr.Load()

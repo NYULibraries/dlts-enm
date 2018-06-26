@@ -27,7 +27,7 @@ var solrLoadCmd = &cobra.Command{
 	Short: "Loads the Solr index",
 	Long: `Loads the Solr index from views pages and page_topics`,
 	Run: func(cmd *cobra.Command, args []string) {
-		err := solr.Init(Server, Port)
+		err := solr.Init(Server, Port, nil)
 		if err != nil {
 			panic(fmt.Sprintf("ERROR: couldn't initialize solr: %s\n", err.Error()))
 		}

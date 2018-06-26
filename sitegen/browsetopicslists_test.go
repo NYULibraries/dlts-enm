@@ -22,7 +22,7 @@ func TestGenerateBrowseTopicsLists(t *testing.T) {
 	outputDir := destination + "/browse-topics-lists"
 	err = os.RemoveAll(outputDir)
 	if (err != nil) {
-		t.Fatal( "os.Remove(" + destination + ") failed: " + err.Error())
+		t.Fatal( "os.RemoveAll(" + destination + ") failed: " + err.Error())
 	}
 
 	BrowseTopicListsTemplateDirectory = rootDirectory + "/" + BrowseTopicListsTemplateDirectory

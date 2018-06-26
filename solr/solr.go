@@ -16,11 +16,11 @@ func Init(server string, port int, injectedConn solrConnection) error {
 	if injectedConn != nil {
 		conn = injectedConn
 	} else {
-		goSolrConn, err := solr.Init(server, port, "enm-pages")
+		var err error
+		conn, err = solr.Init(server, port, "enm-pages")
 		if err != nil {
 			return err
 		}
-		conn = goSolrConn
 	}
 
 	return nil

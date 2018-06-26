@@ -1,0 +1,28 @@
+{
+    "add": [
+        {
+            "authors": "Mark G. Winiarski",
+            "epubNumberOfPages": 392,
+            "id": 22366,
+            "isbn": "9780814793114",
+            "pageLocalId": "page_116",
+            "pageNumberForDisplay": "116",
+            "pageSequenceNumber": 150,
+            "pageText": "8 Secondary Prevention: Working with People with HIV to Prevent Transmission to Others\nKathy Parish\nWhen John and Susan married eighteen years ago, they thought his hemophilia would be their greatest health challenge. Having learned to live with its unpredictability and treatment needs, they went on to have two children, at which point they decided that their family was complete. John had a vasectomy, and they threw away Susan’s diaphragm. About twelve years ago, though, they started hearing concerns about AIDS being transmitted through the blood supply. John was told that he might be at risk for contracting the AIDS virus but that the blood supply was thought to be pretty safe by then and that, anyway, not treating his hemophilia with the blood product factor concentrate would most certainly have negative consequences, as compared to the small possibility that he would get AIDS.\nIn 1986 John was tested and learned he was infected with HIV. Susan was tested as well, and she was not infected. Thus, they learned they were a “serodiscordant couple,” and they were advised to practice safer sex by using condoms. They had many reactions: shock, disbelief, and fear about his diagnosis; different coping styles that sometimes clashed; fear of John’s dying; fear of giving or getting the virus; anger at the doctors and the government; confusion, distrust, resentment, and discomfort about having to use condoms, when they had no experience using them and had no ",
+            "publisher": "New York University Press",
+            "title": "HIV Mental Health for the 21st Century",
+            "topicNames": [
+                "Prevention -- secondary",
+                "Serodiscordant couples -- hemophilia",
+                "Transmission of HIV -- and heterosexual sex"
+            ],
+            "topicNamesForDisplay": "[[\"Prevention -- secondary\"],[\"Serodiscordant couples -- hemophilia\"],[\"Transmission of HIV -- and heterosexual sex\"]]",
+            "topicNames_facet": [
+                "Prevention -- secondary",
+                "Serodiscordant couples -- hemophilia",
+                "Transmission of HIV -- and heterosexual sex"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

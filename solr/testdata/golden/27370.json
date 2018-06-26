@@ -1,0 +1,40 @@
+{
+    "add": [
+        {
+            "authors": "Niobe Way",
+            "epubNumberOfPages": 320,
+            "id": 27370,
+            "isbn": "9780814793398",
+            "pageLocalId": "page_277",
+            "pageNumberForDisplay": "277",
+            "pageSequenceNumber": 287,
+            "pageText": "Appendix B\nConceptually Clustered Matrix for Relationships with Peers\n\n",
+            "publisher": "New York University Press",
+            "title": "Everyday Courage",
+            "topicNames": [
+                "Boyfriend(s) -- conceptually clustered matrix for relationship with",
+                "Analysis of data",
+                "Data -- analysis of",
+                "Friendship(s) -- conceptually clustered matrix for",
+                "Girlfriend(s) -- conceptually clustered matrix for relationship with",
+                "Marie (case study) -- conceptually clustered matrix for relationship with boyfriends",
+                "Conceptually clustered matrices, in analysis of data",
+                "Matrices, conceptually clustered, in analysis of data",
+                "Relationships -- with peers, conceptually clustered matrix for",
+                "Study, details of -- analysis of data"
+            ],
+            "topicNamesForDisplay": "[[\"Boyfriend(s) -- conceptually clustered matrix for relationship with\"],[\"Data -- analysis of\",\"Analysis of data\"],[\"Friendship(s) -- conceptually clustered matrix for\"],[\"Girlfriend(s) -- conceptually clustered matrix for relationship with\"],[\"Marie (case study) -- conceptually clustered matrix for relationship with boyfriends\"],[\"Matrices, conceptually clustered, in analysis of data\",\"Conceptually clustered matrices, in analysis of data\"],[\"Relationships -- with peers, conceptually clustered matrix for\"],[\"Study, details of -- analysis of data\"]]",
+            "topicNames_facet": [
+                "Boyfriend(s) -- conceptually clustered matrix for relationship with",
+                "Data -- analysis of",
+                "Friendship(s) -- conceptually clustered matrix for",
+                "Girlfriend(s) -- conceptually clustered matrix for relationship with",
+                "Marie (case study) -- conceptually clustered matrix for relationship with boyfriends",
+                "Matrices, conceptually clustered, in analysis of data",
+                "Relationships -- with peers, conceptually clustered matrix for",
+                "Study, details of -- analysis of data"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

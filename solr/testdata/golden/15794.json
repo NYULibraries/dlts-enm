@@ -1,0 +1,33 @@
+{
+    "add": [
+        {
+            "authors": "Mark Hertzog",
+            "epubNumberOfPages": 288,
+            "id": 15794,
+            "isbn": "9780814735305",
+            "pageLocalId": "page_32",
+            "pageNumberForDisplay": "32",
+            "pageSequenceNumber": 42,
+            "pageText": "or rebellion—be it violent or not—as a means of achieving relief from their isolation and suffering?\nThis question is especially pertinent in the American electoral system, with its single-member districts, plurality voting, and the duopoly of the Democratic and Republican parties; American general elections (though not always the party nominating processes) emphasize the need to compromise and reach toward the center, wherever it may lie. In this context, what is the allure of voting to a member of a marginalized and oppressed group? What makes voting worthwhile, as opposed to recusing oneself from the electoral process or confronting it by other means?\nThe literature offers three answers. First is the divorcement of “diffuse” support for the nation and its form of government, which is high and relatively stable, from “specific” support for policies and politicians (Easton 1965; Abramowitz in Almond and Verba 1980). Second is the “participatory” nature of American political culture and the value that culture places on voting as an affirmation of the form of government and democratic ideals (Almond and Verba 1963; Elazar 1965; Abramowitz in Almond and Verba 1980). Third is the usefulness of voting to achieve symbolic goals even when the connection between voting and substantive policy change is tenuous (Edelman 1964; Browning et al. 1990).\nOne answer is supplied by Easton’s model (1965) separating “diffuse” support for the nation and its forms and institutions of government from “specific” support for policies and public officials. At the time he wrote, both “diffuse” and “specific” support for the United States government were quite high. In the succeeding years of Vietnam, Watergate, economic troubles, and social unrest, “specific” support for government plummeted (Abramowitz in Almond and Verba 1980), although, as Abramowitz points out, general questions on “specific” support appear to elicit responses based on evaluations of the president and executive branch. In the 1980s, “specific” support climbed again during the height of the Reagan administration, though not to anywhere near its levels in the early 1960s, then fell again as the 1980s came to a close. In the meantime, levels of support for both the nation and the basic system of government remained remarkably high; the pessimism about politics, politicians, and policies did not translate into an erosion of confidence in our constitutional framework.\nSimilar results, interestingly, were obtained across racial groups. This may not be difficult to understand. Even members of disinherited groups are raised on the promises of the Declaration of Independence, and are taught American history filled with examples of groups overcoming poverty, hardship, oppression, ",
+            "publisher": "New York University Press",
+            "title": "The Lavender Vote",
+            "topicNames": [
+                "Civic Culture, The (Almond and Verba)",
+                "\"Diffuse support\" for political system",
+                "Edelman, Murray J.",
+                "Political -- culture",
+                "Political culture",
+                "Symbolic politics"
+            ],
+            "topicNamesForDisplay": "[[\"Civic Culture, The (Almond and Verba)\"],[\"\\\"Diffuse support\\\" for political system\"],[\"Edelman, Murray J.\"],[\"Political -- culture\",\"Political culture\"],[\"Symbolic politics\"]]",
+            "topicNames_facet": [
+                "Civic Culture, The (Almond and Verba)",
+                "\"Diffuse support\" for political system",
+                "Edelman, Murray J.",
+                "Political -- culture",
+                "Symbolic politics"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

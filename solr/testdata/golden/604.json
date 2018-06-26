@@ -1,0 +1,36 @@
+{
+    "add": [
+        {
+            "authors": "Syvertsen, Trine; Enli, Gunn; Mjøs, Ole J.; Moe, Hallvard",
+            "epubNumberOfPages": 164,
+            "id": 604,
+            "isbn": "9780472120314",
+            "pageLocalId": "page_29",
+            "pageNumberForDisplay": "29",
+            "pageSequenceNumber": 37,
+            "pageText": "\nregarded as an advanced information society. In the Nordic countries, 9 out of 10 people use the Internet. Along with Luxembourg and the Netherlands, the Nordic population has the highest proportion of Internet users in Europe (Eurostat 2011, fig. 8.22; World Economic Forum 2012, fig. 6.02). Most Nordic households with an Internet connection also have broadband, although the capacity varies (Nordicom 2010a, figs. 1.16, 1.22). Moreover, broadband Internet has transformed social communication in education, health, and trade, and is essential for use of the Internet for social, creative, and communicative purposes (below).\n\nAnother key indicator is the dissemination of mobile phones. Again, Nordic users have been early adaptors. Practically every young and adult person in the Nordic countries owns a mobile telephone, and there has been a rapid dissemination of smartphones (TNS Gallup 2011). Mobile telephones are increasingly used as computers, changing the very understanding of what “computers” and “media” entails. Terry Flew (2008, 35) sums up the changes from the 1990s until the 2000s:\n \nWhile new media in the 1990s was largely associated with the internet, as accessed from computers, and for most people computers were boxy devices with screens that sat on desks, in the 2000s the range of digital devices that enable access to information and communication in ways that maximize speed and mobility has proliferated.\n \nThis coincides with the trend toward ubiquitous network connectivity and mobile broadband, which implies that consumers can always be online. In the Nordic countries there has been a rapid take-up of mobile broadband, thus indicating that consumers have gotten used to having access to advanced Internet services everywhere (Post- og teletilsynet 2009).\nWhy have the Nordic populations embraced and exploited convergence? And how has the region moved to a position of distinction regarding the penetration and use of information technology? Some of the elements that we have identified as constituting the Media Welfare State provide important explanatory factors: high public investment in infrastructure, high educational and skill levels, open economies, a business-friendly climate, and a commitment to universality and consensual solutions. For example, Nordic policymakers have seen broadband as crucial to economic and social progress, and have made a considerable amount of investments (e.g., Post-og teletilsynet 2010, 41–42). In our discussion of the Nordic Model (chap. 1), we referred to the historically strong state influence, whereby the state played a part as both a proprietor and operator of the communication infrastructure. In recent decades, this role has changed with the overall liberalization and marketization\n",
+            "publisher": "The University of Michigan Press",
+            "title": "The Media Welfare State: Nordic Media in the Digital Era",
+            "topicNames": [
+                "convergence",
+                "Convergence",
+                "information cultures",
+                "Luxembourg",
+                "marketization",
+                "Marketization",
+                "Netherlands",
+                "telecommunications -- and mobile telephony"
+            ],
+            "topicNamesForDisplay": "[[\"convergence\",\"Convergence\"],[\"information cultures\"],[\"Luxembourg\"],[\"marketization\",\"Marketization\"],[\"Netherlands\"],[\"telecommunications -- and mobile telephony\"]]",
+            "topicNames_facet": [
+                "convergence",
+                "information cultures",
+                "Luxembourg",
+                "marketization",
+                "Netherlands",
+                "telecommunications -- and mobile telephony"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

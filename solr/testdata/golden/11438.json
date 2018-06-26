@@ -1,0 +1,34 @@
+{
+    "add": [
+        {
+            "authors": "charles b.craver",
+            "epubNumberOfPages": 226,
+            "id": 11438,
+            "isbn": "9780814715123",
+            "pageLocalId": "page_102",
+            "pageNumberForDisplay": "102",
+            "pageSequenceNumber": 114,
+            "pageText": "resort to threats or similarly opprobrious behavior, their actions would be beyond the scope of Section 8(b)(1)(B). A labor organization would only subject itself to Section 8(b)(1)(B) liability if its officers threatened a corporate director with respect to the board’s selection of bargaining or grievance adjustment representatives, or if it sought to discipline union members because of the manner in which they voted on such matters. A union may not impose sanctions on members as a result of the way in which they carry out their managerial functions.93\nCodetermination programs might be challenged under Section 8(a)(2) of the NLRA,94 which makes it unlawful for an employer “to dominate or interfere with the formation or administration of any labor organization....” The potential problem is caused by the fact that Section 2(5) of the NLRA95 broadly defines “labor organization” to include “any organization of any kind, or any agency or employee representation committee or plan, in which employees participate and which exists for the purpose, in whole or in part, of dealing with employers concerning grievances, labor disputes, wages, rates of pay, hours of employment, or conditions of work.” If the Labor Board or courts were to decide that joint employer-employee committees constitute “labor organizations” under Section 2(5), the presence of management representatives on such committees might be considered unlawful domination under Section 8(a)(2). Even though Section 14(a)96 permits supervisory personnel to be members of representative labor organizations, such management agents are not allowed to hold union office.97 So long as worker participation programs are conducted on an egalitarian basis without being subject to supervisory control, Section 8(a)(2) should not preclude such cooperative ventures.\nSection 8(a)(2) was primarily designed to outlaw “company unions” that had been established by business firms to prevent the selection of independent bargaining agents.98 Early Labor Board decisions concluded that Congress not only intended in Section 8(a)(2) to outlaw company unions, but also to proscribe employee committees that were created to enable workers to participate in the adjustment of individual grievances. In NLRB v. Newport News Shipbuilding \u0026 Dry Dock Co.,99 the Supreme Court sustained this statutory interpretation. Although the employer-assisted worker representation plan operated to the apparent satisfaction of the employees, the Court concluded that Congress required a strict separation between workers and management.100 The Court further ",
+            "publisher": "New York University Press",
+            "title": "Can Unions Survive?",
+            "topicNames": [
+                "Codetermination programs",
+                "Company unions",
+                "National Labor Relations Act",
+                "National Labor Relations Act (NLRA)",
+                "NLRA",
+                "Wagner Act",
+                "Wagner Act National Labor Relations Board",
+                "Worker participation programs"
+            ],
+            "topicNamesForDisplay": "[[\"Codetermination programs\"],[\"Company unions\"],[\"Wagner Act National Labor Relations Board\",\"National Labor Relations Act\",\"National Labor Relations Act (NLRA)\",\"NLRA\",\"Wagner Act\"],[\"Worker participation programs\"]]",
+            "topicNames_facet": [
+                "Codetermination programs",
+                "Company unions",
+                "Wagner Act National Labor Relations Board",
+                "Worker participation programs"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

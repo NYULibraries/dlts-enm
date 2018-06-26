@@ -1,0 +1,47 @@
+{
+    "add": [
+        {
+            "authors": "Eisner, Caroline; Vicinus, Martha",
+            "epubNumberOfPages": 277,
+            "id": 2292,
+            "isbn": "9780472024445",
+            "pageLocalId": "page_65",
+            "pageNumberForDisplay": "65",
+            "pageSequenceNumber": 73,
+            "pageText": "\nthe copied data tells machines how to reproduce objects. It neither depicts, nor reproduces them.\nThese subtle distinctions are present in U.S. copyright law, but only in regard to architecture. Descriptions of buildings, in the form of plans, can be copyrighted.1 However, 17 U.S.C. §120(a) provides for a right of depiction:\n(a) Pictorial Representations Permitted.—The copyright in an architectural work that has been constructed does not include the right to prevent the making, distributing, or public display of pictures, paintings, photographs, or other pictorial representations of the work, if the building in which the work is embodied is located in or ordinarily visible from a public place.\nThis right only extends to architecture; no other category in copyright law offers similar exclusions. The statute uses the term “representation” rather than depiction and only concerns pictorial representations. Nonetheless, U.S.C. 17 §120(a) differentiates between representation and reproduction and classifies photography among representative technologies.\nPhotography's depictive power is often conflated with the descriptiveness of its reproductions. Its ability to describe physical objects into two-dimensional projections is unparalleled. Photographs “tell” us things about the subject, but also provide raw material for imagination. A photograph is not a “copy” of its subject. I am sympathetic to Kendall L. Walton's controversial assertion that depictive photographs are essentially fictions facilitating imagination. “To be a depiction is to have the function of serving as a prop in visual games of make believe” (Walton, Mimesis 296). A depiction does more than “copy” reality. Nonetheless, because of the power of its descriptions, photography is more suspect than painting or sketching. A person sketching a public landmark is less likely to be interrogated than a person with a camera. The right to photograph in public does not exist by statute, except in the case of architecture.\nFollowing a 2005 controversy regarding Anish Kapoor's sculpture Cloud Gate, this chapter revisits the concept of reproducibility in art. Kapoor's sculpture captured the imagination of Internet users who warned of a new prohibition of photography taking hold. Though Walter Benjamin's “The Work of Art in the Age of Mechanical Reproduction” loses some of its prophetic luster in the aftermath of Cloud Gate, most of the mechanisms involved remain relevant. As a monument to capitalism and a “copyrightable” property, the sculpture provides a locus for discussing the right to photograph in public spaces and the use of media, both new and old.\n",
+            "publisher": "University of Michigan Press and University of Michigan Library",
+            "title": "Originality, Imitation, and Plagiarism",
+            "topicNames": [
+                "Architecture",
+                "architecture",
+                "Benjamin, Walter -- \"The Work of Art in the Age of Mechanical Reproduction\"",
+                "copyright law -- United States",
+                "depiction",
+                "description",
+                "Internet",
+                "internet",
+                "pictures",
+                "Pictures, The",
+                "reproduction",
+                "Reproduction",
+                "17 U.S.C. §120(a)",
+                "U.S. Code 17 § 120 (a)",
+                "Walton, Kendall L."
+            ],
+            "topicNamesForDisplay": "[[\"architecture\",\"Architecture\"],[\"Benjamin, Walter -- \\\"The Work of Art in the Age of Mechanical Reproduction\\\"\"],[\"copyright law -- United States\"],[\"depiction\"],[\"description\"],[\"internet\",\"Internet\"],[\"Pictures, The\",\"pictures\"],[\"reproduction\",\"Reproduction\"],[\"U.S. Code 17 § 120 (a)\",\"17 U.S.C. §120(a)\"],[\"Walton, Kendall L.\"]]",
+            "topicNames_facet": [
+                "architecture",
+                "Benjamin, Walter -- \"The Work of Art in the Age of Mechanical Reproduction\"",
+                "copyright law -- United States",
+                "depiction",
+                "description",
+                "internet",
+                "Pictures, The",
+                "reproduction",
+                "U.S. Code 17 § 120 (a)",
+                "Walton, Kendall L."
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

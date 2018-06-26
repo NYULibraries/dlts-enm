@@ -1,0 +1,37 @@
+{
+    "add": [
+        {
+            "authors": "John Marshall",
+            "epubNumberOfPages": 373,
+            "id": 12959,
+            "isbn": "9780814731437",
+            "pageLocalId": "page_115",
+            "pageNumberForDisplay": "115",
+            "pageSequenceNumber": 126,
+            "pageText": "Abolishing Slavery\nNo assessment of William Cushing’s contributions to American law and politics would be complete without discussing his role in the abolition of slavery in Massachusetts* In fact, Robert M. Cover, in Justice Accused: Antislavery and the judicial Process, describes a case[] in which William Cushing, then the Massachusetts chief justice, participated as the first case in the United States to confront the institution of slavery as a matter of constitutional law.80 That case—which has been called “the most famous slave case[] in America prior to the Dred Scott decision”81—was actually a series of cases now known as the Quock Walker Case.\nThe complex series of cases began in 1781 as civil actions (in which Cushing did not participate) for the assault and battery a master, Jennison, allegedly perpetrated on his runaway slave, Walker, and on another man, Caldwell, who sheltered Walker. Jennison’s defense was that he was merely attempting to recover his property, a runaway slave. Walker and Caldwell countered that Walker could not be a slave because the 1780 Massachusetts Constitution abolished slavery. Article I read:\nAll men are born free and equal, and have certain natural, essential, and unalienable rights; among which may be reckoned the right of enjoying and defending their lives and liberties; that of acquiring, possessing, and protecting property. . . .\nThe civil actions resulted in inconsistent verdicts: Jennison was found liable for beating Walker, but Caldwell was found liable for enticing Walker to flee. As the civil actions worked their way through the appeals process, a criminal indictment was brought against Jennison for assault and battery. The criminal case went to trial in 1783, and it was this trial that resulted in a famous jury charge issued by Cushing. It is important here to point out that in Massachusetts at the time all judicial cases, including appeals, were tried before a jury.\n",
+            "publisher": "New York University Press",
+            "title": "Seriatim",
+            "topicNames": [
+                "Bar admission, and William Cushing",
+                "Cover, Robert, on slavery in the Massachusetts judicial process",
+                "Grand jury charges -- and William Cushing",
+                "Massachusetts -- and slavery",
+                "Slavery -- and Massachusetts",
+                "Quock Walker case",
+                "Slavery -- and Massachusetts Constitution of 1780",
+                "Slavery -- William Cushing on"
+            ],
+            "topicNamesForDisplay": "[[\"Bar admission, and William Cushing\"],[\"Cover, Robert, on slavery in the Massachusetts judicial process\"],[\"Grand jury charges -- and William Cushing\"],[\"Massachusetts -- and slavery\",\"Slavery -- and Massachusetts\"],[\"Quock Walker case\"],[\"Slavery -- and Massachusetts Constitution of 1780\"],[\"Slavery -- William Cushing on\"]]",
+            "topicNames_facet": [
+                "Bar admission, and William Cushing",
+                "Cover, Robert, on slavery in the Massachusetts judicial process",
+                "Grand jury charges -- and William Cushing",
+                "Massachusetts -- and slavery",
+                "Quock Walker case",
+                "Slavery -- and Massachusetts Constitution of 1780",
+                "Slavery -- William Cushing on"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

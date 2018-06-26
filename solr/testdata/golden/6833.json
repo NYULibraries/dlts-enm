@@ -1,0 +1,33 @@
+{
+    "add": [
+        {
+            "authors": "Turrow, Joseph; Tsui, Lokman",
+            "epubNumberOfPages": 325,
+            "id": 6833,
+            "isbn": "9780472024537",
+            "pageLocalId": "page_59",
+            "pageNumberForDisplay": "59",
+            "pageSequenceNumber": 64,
+            "pageText": "\nthe basic criteria that we associate with traditional mass media. Detailed discussions of this issue can be found elsewhere.4 To briefly summarize, the common characteristics of traditional mass media include a one-to-many orientation (and an associated lack of interactivity); the prominence of “institutional communicators”; a strong commercial orientation; and an associated emphasis on audience maximization and, consequently, mass appeal content.5\nAudience Behavior\nCertain well-established aspects of audience behavior—across many media—can compel new media technologies to function along the lines of traditional media, particularly by encouraging audiences to maintain strong connections with one-to-many and noninteractive communicative forms, as well as connections to content with traditional mass appeal (as opposed to highly targeted and specialized niche content). There is, for instance, the well-documented tendency toward passivity in audience behavior.6 There is a limit to the extent to which audiences want their media consumption to involve substantial interactivity or substantial search activities, although this limit may (or does?) vary across media, as well as across usage categories and demographic groups.\nFrom an audience behavior standpoint, it is also important to recognize that there is a well-documented tendency across media for audiences to prefer content with higher production budgets and to interpret production budgets as some sort of (imperfect) manifestation of quality.7 Of course, higher production budgets require the presumption of a satisfactory return; therefore, higher-budget content typically is geared toward having greater mass appeal. Thus the distribution of audience attention in most media contexts tends to cluster around high-budget, mass appeal content, which of course also tends to be the content produced by the traditional institutional communicators (with the resources to expend on big-budget content).8\nMedia Economics\nThe preceding discussion of audience behavior leads naturally into some of the basics of media economics. Perhaps the first key principle involves the powerful economies of scale that exist in the production of media content. Media content is defined in economic terms as a “public good.”9 Some key characteristics of public goods are high fixed costs,\n",
+            "publisher": "University of Michigan Press",
+            "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "topicNames": [
+                "advertising",
+                "Advertising",
+                "Public good",
+                "Public goods",
+                "television",
+                "Television",
+                "television.",
+                "TV"
+            ],
+            "topicNamesForDisplay": "[[\"advertising\",\"Advertising\"],[\"Public goods\",\"Public good\"],[\"television.\",\"television\",\"Television\",\"TV\"]]",
+            "topicNames_facet": [
+                "advertising",
+                "Public goods",
+                "television."
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "add": [
+        {
+            "authors": "Gabrys, Jennifer",
+            "epubNumberOfPages": 238,
+            "id": 4701,
+            "isbn": "9780472029402",
+            "pageLocalId": "page_167",
+            "pageNumberForDisplay": "167",
+            "pageSequenceNumber": 196,
+            "pageText": "\nChapter 1\nDonna Haraway, “Cyborgs, Coyotes, and Dogs: A Kinship of Feminist Figurations” and “There Are Always More Things Going on Than You Thought! Methodologies as Thinking Technologies: An Interview with Donna Haraway,” conducted in two parts by Nina Lykke, Randi Markussen, and Finn Olesen, in Haraway Reader, 338.\n1. Jim Fisher, “Poison Valley: Is Workers’ Health the Price We Pay for High-Tech Progress?” Salon, July 30, 2001, http://archive.salon.com/tech/feature/2001/07/30/almaden1/. As Fisher writes, these “aspiring cities are founded on the reduction of a new precious metal—the computer chip—which in the end is just a metalized piece of sand, or silicon.”\n2. Albert Borgmann, Holding On to Reality: The Nature of Information at the Turn of the Millennium (Chicago: University of Chicago Press, 1999), 144. This basic theory of information, which can be traced to Claude Shannon and Warren Weaver, demonstrates how the “bit,” as a switching model, is closely tied to the actual operation of electrical currents. In this sense, material systems and informational systems are interdependent. See Claude E. Shannon and Warren Weaver, The Mathematical Theory of Communication (1949; repr., Urbana: University of Illinois Press, 1962); Hayles, How We Became Posthuman.\n3. Christophe Lécuyer and David C. Brock undertake a material investigation into electronic innovation and suggest that not only are microelectronics “under materialized,” but that by focusing on materials entirely new questions about the material networks and ecologies of electronics emerge. See “The Materiality of Microelectronics,” History and Technology 22, no. 3 (September 2006): 301–25.\n4. For a detailed analysis of microchip resources and inputs, see Ruediger Kuehr, German T. Velasquez, and Eric Williams, “Computers and the Environment: An Introduction to Understanding and Managing Their Impacts,” in Kuehr and Williams, Computers and the Environment, 1–16.\n5. For reports on the historic development and dot-com to dot-bomb culture of technology in Silicon Valley, see Christophe Lecuyer, Making Silicon Valley: Innovation and the Growth of High Tech, 1930–1970 (Cambridge, MA: MIT Press, 2005); Christine A. Finn, Artifacts: An Archaeologist's Year in Silicon Valley (Cambridge, MA: MIT Press, 2001).\n6. Fisher, “Poison Valley.” See also the listings for Santa Clara County in the EPA's National Priorities List, http://yosemite.epa.gov/r9/sfund/r9sfdocw.nsf/WSOState!OpenView\u0026Start=1\u0026Count=1000\u0026Expand=2.29#2.29.\nInformation on Superfund sites in Silicon Valley in the form of legal documents and records of decision was initially made available through the EPA office in San Francisco. Much of this information is now available at http://www.epa.gov/region09/superfund/superfundsites.html. The Silicon Valley Toxics Coalition also features a “Silicon Valley Toxic Tour” on its Web site, where an interactive map allows users to view the different Silicon Valley Superfund sites. See http://www.svtc.org/site/PageServer?pagename=svtc_silicon_valley_toxic_tour.\n7. Cleanup is also not an absolute process, as chemicals potentially break down and migrate in unexpected ways to become newly toxic. See Matt Ritchel, “E.P.A. Takes Second Look at Many Superfund Sites,” New York Times, January 31, 2003.\n8. Intel Corporation, “From Sand to Circuits,” 2005, ftp://download.intel.com/museum/sand_to_circuits.pdf.\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Digital Rubbish: A Natural History of Electronics",
+            "topicNames": [
+                "dot-com crash",
+                "Fisher, Jim",
+                "Haraway, Donna",
+                "Lécuyer, Christophe, and David C. Brock",
+                "materiality",
+                "Shannon, Claude, and Warren Weaver",
+                "Silicon Valley",
+                "Superfund sites",
+                "superfund sites"
+            ],
+            "topicNamesForDisplay": "[[\"dot-com crash\"],[\"Fisher, Jim\"],[\"Haraway, Donna\"],[\"Lécuyer, Christophe, and David C. Brock\"],[\"materiality\"],[\"Shannon, Claude, and Warren Weaver\"],[\"Silicon Valley\"],[\"superfund sites\",\"Superfund sites\"]]",
+            "topicNames_facet": [
+                "dot-com crash",
+                "Fisher, Jim",
+                "Haraway, Donna",
+                "Lécuyer, Christophe, and David C. Brock",
+                "materiality",
+                "Shannon, Claude, and Warren Weaver",
+                "Silicon Valley",
+                "superfund sites"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

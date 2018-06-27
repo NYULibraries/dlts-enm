@@ -28,8 +28,8 @@ func (s solrStub) Update(m map[string]interface{}, commit bool) (*solr.UpdateRes
 		return nil, err
 	}
 
-	locationId := m[ "add" ].([]interface{})[0].(interface{}).(map[string]interface{})["id"].(int)
-	err = ioutil.WriteFile(solrLoadTestTmpDirectory+ "/" + strconv.Itoa(locationId) + ".json", b, 0644)
+	locationID := m[ "add" ].([]interface{})[0].(interface{}).(map[string]interface{})["id"].(int)
+	err = ioutil.WriteFile(solrLoadTestTmpDirectory+ "/" + strconv.Itoa(locationID) + ".json", b, 0644)
 	if err != nil {
 		panic(err)
 	}

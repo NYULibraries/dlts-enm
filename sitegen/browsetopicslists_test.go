@@ -1,12 +1,12 @@
 package sitegen
 
 import (
-	"testing"
 	"os"
 	"path"
+	"strings"
+	"testing"
 
 	"github.com/nyulibraries/dlts-enm/util"
-	"strings"
 )
 
 func TestGenerateBrowseTopicsLists(t *testing.T) {

@@ -1,11 +1,11 @@
 package sitegen
 
 import (
-	"path/filepath"
-	"testing"
-	"strings"
 	"os"
 	"path"
+	"path/filepath"
+	"strings"
+	"testing"
 
 	"github.com/nyulibraries/dlts-enm/util"
 )

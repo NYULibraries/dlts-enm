@@ -88,5 +88,36 @@ func TestLoad(t *testing.T) {
 
 	Init("", 0,  solrStub)
 
+	wd, err := os.Getwd()
+	if (err != nil) {
+		t.Fatal( "os.Getwd() failed: " + err.Error())
+	}
+
+	rootDirectory := path.Dir(wd)
+
+	solrGoldenFilesDirectory = rootDirectory + "/solr/testdata/golden"
+	getGoldenFileLocationIDs()
+
+	solrLoadTestTmpDirectory = rootDirectory + "/solr/testdata/tmp/load"
+	err = os.RemoveAll(solrLoadTestTmpDirectory)
+	if (err != nil) {
+		t.Fatal( "os.RemoveAll(" + solrLoadTestTmpDirectory + ") failed: " + err.Error())
+	}
+
+	mkdirErr := os.MkdirAll(solrLoadTestTmpDirectory, os.FileMode(0755))
+	if mkdirErr != nil {
+		t.Fatal(mkdirErr)
+	}
+
 	Load()
+
+	diffOutput, err := util.Diff(solrGoldenFilesDirectory, solrLoadTestTmpDirectory)
+	if (err != nil) {
+		t.Fatal("Diff of " + solrGoldenFilesDirectory + " and " +
+			solrLoadTestTmpDirectory + " failed to run: " + err.Error())
+	}
+
+	if (diffOutput != "") {
+		t.Errorf("%s", diffOutput)
+	}
 }

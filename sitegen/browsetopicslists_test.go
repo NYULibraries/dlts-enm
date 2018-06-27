@@ -6,6 +6,7 @@ import (
 	"path"
 
 	"github.com/nyulibraries/dlts-enm/util"
+	"strings"
 )
 
 func TestGenerateBrowseTopicsLists(t *testing.T) {
@@ -25,10 +26,13 @@ func TestGenerateBrowseTopicsLists(t *testing.T) {
 		t.Fatal( "os.RemoveAll(" + destination + ") failed: " + err.Error())
 	}
 
-	BrowseTopicListsTemplateDirectory = rootDirectory + "/" + BrowseTopicListsTemplateDirectory
-	SharedTemplateDirectory = rootDirectory + "/" + SharedTemplateDirectory
-	SitePagesTemplateDirectory = rootDirectory + "/" + SitePagesTemplateDirectory
-	TopicPageTemplateDirectory = rootDirectory + "/" + TopicPageTemplateDirectory
+	// Only do this if another sitegen test hasn't already
+	if ! strings.HasPrefix(BrowseTopicListsTemplateDirectory, rootDirectory) {
+		BrowseTopicListsTemplateDirectory = rootDirectory + "/" + BrowseTopicListsTemplateDirectory
+		SharedTemplateDirectory = rootDirectory + "/" + SharedTemplateDirectory
+		SitePagesTemplateDirectory = rootDirectory + "/" + SitePagesTemplateDirectory
+		TopicPageTemplateDirectory = rootDirectory + "/" + TopicPageTemplateDirectory
+	}
 
 	Source = "database"
 

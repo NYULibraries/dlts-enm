@@ -29,6 +29,7 @@ var solrLoadTestTmpDirectory string
 func (s solrStub) Update(m map[string]interface{}, commit bool) (*solr.UpdateResponse, error) {
 	locationID := m[ "add" ].([]interface{})[0].(interface{}).(map[string]interface{})["id"].(int)
 
+	// Write out files for later comparison with golden files
 	if (goldenFileLocationIDs[locationID] == true) {
 		b, err := json.MarshalIndent(m, "", "    ")
 		if err != nil {
@@ -46,17 +47,8 @@ func (s solrStub) Update(m map[string]interface{}, commit bool) (*solr.UpdateRes
 	return nil, nil
 }
 
-// Based on Go Solr solr.Init()
+// Use same signature as Go Solr solr.Init()
 func newSolrStub(host string, port int, core string) (*solrStub, error) {
-
-	if len(host) == 0 {
-		return nil, fmt.Errorf("Invalid hostname (must be length >= 1)")
-	}
-
-	if port <= 0 || port > 65535 {
-		return nil, fmt.Errorf("Invalid port (must be 1..65535)")
-	}
-
 	url := fmt.Sprintf("http://%s:%d/solr/%s", host, port, core)
 
 	return &solrStub{URL: url}, nil

@@ -1,0 +1,30 @@
+{
+    "add": [
+        {
+            "authors": "Ian Shapiro",
+            "epubNumberOfPages": 351,
+            "id": 21949,
+            "isbn": "9780814780978",
+            "pageLocalId": "page_72",
+            "pageNumberForDisplay": "72",
+            "pageSequenceNumber": 84,
+            "pageText": "The conclusion to be drawn is not that Kant’s account of conscience is wrong but that it has the descriptive shortcoming of presenting a particular account of moral psychology as if it were universally human. Conscience probably plays some role in any morality, as Annette Baier suggested when she defined morality as “the culturally acquired art of selecting which harms to notice or worry about, where the worry takes the form of bad conscience or resentment.5  Or at least conscience plays an important role in accounts of morality that focus on the internal life of moral agents. But these accounts may exhibit different assumptions about moral psychology. Kant’s account of conscience also exhibits what might be called a normative shortcoming in that it suggests that commitment to the Categorical Imperative entails this particular model of conscience and moral psychology. Yet one can be committed to humanity as an end in itself, and to the importance of self-scrutiny, without embracing the more austere elements of Kant’s account of conscience. In other words, Kant’s account of conscience may be parochial in ways that Kant’s conception of humanity as an end in itself is not.\nII.\nMy second concern about the Kantian account of conscience also involves issues of moral psychology. In Kant’s view, the project of developing one’s conscience, and indeed of developing one’s capacities as a moral agent, are primarily framed in intellectual terms. Yet there is another common understanding of conscience that views it as first and foremost an emotional capacity to empathize with others. The cruel side of conscience is that people may, and do, inflict harm on others in good conscience because they view these others as enemies or as beings without moral status. Torturers and terrorists are dramatic examples of this human capacity, which is more widely observable in the everyday callousness of which all of us are guilty. Cruelty to others takes another form, sometimes popularly described as being “without conscience”: the condition of those who commit violence and abuse without any apparent remorse, often against randomly selected victims. These actions are not prompted by conscientious adherence to an exclusionary moral framework but appear to ",
+            "publisher": "New York University Press",
+            "title": "Integrity and Conscience",
+            "topicNames": [
+                "Baier, Annette",
+                "Categorical imperative",
+                "Moral agency (Kant)",
+                "Morality, definition of"
+            ],
+            "topicNamesForDisplay": "[[\"Baier, Annette\"],[\"Categorical imperative\"],[\"Moral agency (Kant)\"],[\"Morality, definition of\"]]",
+            "topicNames_facet": [
+                "Baier, Annette",
+                "Categorical imperative",
+                "Moral agency (Kant)",
+                "Morality, definition of"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "add": [
+        {
+            "authors": "Richard K. Vedder and Lowell E. Gallaway",
+            "epubNumberOfPages": 408,
+            "id": 21305,
+            "isbn": "9780814787922",
+            "pageLocalId": "page_42",
+            "pageNumberForDisplay": "42",
+            "pageSequenceNumber": 60,
+            "pageText": "absolute certainty, econometrics can strongly demonstrate their real-world insight in a convincing manner. Virtually every economist, for example, accepts empirically verified propositions that the quantity of almost any good demanded varies inversely with its price, or that increases in the quantity of money are associated with increases in prices. The validity of hypotheses about human economic behavior has been successfully demonstrated on countless occasions by the use of techniques similar to those used in this book.\nDATA PROBLEMS\nTurning to some specific potential problems in the previous statistical analysis, there are legitimate concerns about the quality of the data used. Questions have been raised about the basic accuracy of the government unemployment-rate data; the wage series used is subject to an unknown but potentially considerable amount of error, particularly before 1947; and the consumer price index has been considerably maligned by economists and others for years.\nTo deal with these difficulties, we reexamined the basic model outlined in equation (4), substituting alternative data sources. We used the unemployment-rate estimates for most of the period developed by Christina Romer, along with Michael Darby’s calculations for the 1930–43 period.16 We are not certain that these estimates are correct; we merely wish to see if the statistical estimation reported above is highly sensitive to which data are used.17\nRegarding wages, we developed two alternative wage series. The wage information used so far derives hourly earnings by dividing annual earnings data by an estimate of average annual hours worked. The estimate of hours worked is based on a subset of the employed population, and thus may be in error. As a first alternative, we selected the wage series developed by Paul David and Peter Solar for hourly earnings for lower-skilled workers.18 The David-Solar estimates might be viewed as inferior as they relate only to one subset of the working population, unskilled workers. On the other hand, that category is particularly vulnerable historically to unemployment. Moreover, the accuracy of the data is believed to be relatively high. After 1974, we spliced hourly wage data for production workers in manufacturing to the David-Solar series. Those workers are not all unskilled, but a large proportion are.19\nOne might argue that the David-Solar data are a useful measure before 1947 (a period for which the data on hours worked are somewhat suspect), but that after that date the widely used BLS employee compensation data ",
+            "publisher": "New York University Press",
+            "title": "Out of Work",
+            "topicNames": [
+                "Darby, Michael",
+                "David, Paul",
+                "David-Solar wage series",
+                "Romer, Christina",
+                "Solar, Peter",
+                "Unemployment -- money wages and",
+                "Unemployment -- prices and",
+                "Unemployment -- productivity and"
+            ],
+            "topicNamesForDisplay": "[[\"Darby, Michael\"],[\"David, Paul\"],[\"David-Solar wage series\"],[\"Romer, Christina\"],[\"Solar, Peter\"],[\"Unemployment -- money wages and\"],[\"Unemployment -- prices and\"],[\"Unemployment -- productivity and\"]]",
+            "topicNames_facet": [
+                "Darby, Michael",
+                "David, Paul",
+                "David-Solar wage series",
+                "Romer, Christina",
+                "Solar, Peter",
+                "Unemployment -- money wages and",
+                "Unemployment -- prices and",
+                "Unemployment -- productivity and"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

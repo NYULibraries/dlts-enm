@@ -1,0 +1,34 @@
+{
+    "add": [
+        {
+            "authors": "John Marshall",
+            "epubNumberOfPages": 373,
+            "id": 12863,
+            "isbn": "9780814731437",
+            "pageLocalId": "page_19",
+            "pageNumberForDisplay": "19",
+            "pageSequenceNumber": 30,
+            "pageText": "William Casto approaches his essay on Oliver Ellsworth as an assault upon anachronistic preconceptions that many scholars have about the Founding generation. Specifically, Casto argues that there is a tendency to emphasize the secular aspects of political life in the early republic and to deemphasize the religious dimensions. Casto also insists that our late-twentieth-century preconceptions of the proper role of judges in political life has distorted our analyses of judicial conduct in the early American republic. The concept of separation of powers and the ideal of judicial aloofness from political controversy have changed substantially over the past twenty years, Casto maintains.39\nCasto uses Ellsworth as an archetype to illustrate two points. Ellsworth was a thoroughgoing religionist who viewed his public and private activities through the lens of Calvinism. The point is not that Ellsworth’s religion caused him to act in different ways—although Casto suspects that it did. Instead, Casto believes that Calvinism was the organizing philosophy of Ellsworth’s life and that he and others like him cannot be understood if his faith is marginalized. With respect to his judicial conduct in the early republic, Chief Justice Ellsworth is depicted as one who was deeply involved in the national politics of the late 1790s. Casto believes that Ellsworth viewed himself not so much as a judge but, rather, as an active participant in public life who happened to be a judge.\nFinally, in his essay on Bushrod Washington, James Stoner makes a powerful case for viewing Washington as a bridge between the pre-Marshall Court and the more famous Marshall Court. Consequently, Stoner explodes the myth that Washington and Marshall should be viewed, as William Johnson once charged, as “one Judge.”\nStoner argues that though Bushrod Washington lived in the shadow of two great men—his uncle George Washington and his friend of fifty years, John Marshall—he was an independent man who left his mark on federal justice and helped make possible the extraordinary unity of the Marshall Court. (This latter achievement is yet another for which Marshall receives undue credit.) Educated in law by George Wythe and James Wilson, distinguishing himself at an early age on the Richmond bar, Washington was appointed to the Court by John Adams in 1798. From the start, his jurisprudence is characterized by respect for legislative authority, a sense of exact justice, and a certain moderation. Stoner makes it clear that although Washington is largely overlooked today, he was a highly respected judge in his own day.\n",
+            "publisher": "New York University Press",
+            "title": "Seriatim",
+            "topicNames": [
+                "Adams, John",
+                "Adams, John Quincy",
+                "Marshall, John",
+                "Separation of powers",
+                "separation of powers",
+                "Washington, George",
+                "Wythe, George"
+            ],
+            "topicNamesForDisplay": "[[\"Adams, John Quincy\",\"Adams, John\"],[\"Marshall, John\"],[\"separation of powers\",\"Separation of powers\"],[\"Washington, George\"],[\"Wythe, George\"]]",
+            "topicNames_facet": [
+                "Adams, John Quincy",
+                "Marshall, John",
+                "separation of powers",
+                "Washington, George",
+                "Wythe, George"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

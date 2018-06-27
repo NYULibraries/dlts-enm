@@ -1,0 +1,52 @@
+{
+    "add": [
+        {
+            "authors": "Gabrys, Jennifer",
+            "epubNumberOfPages": 238,
+            "id": 4722,
+            "isbn": "9780472029402",
+            "pageLocalId": "page_188",
+            "pageNumberForDisplay": "188",
+            "pageSequenceNumber": 217,
+            "pageText": "\n24. Indeed, MyLifeBits assumes such an underlying condition of transience, which presents cause for one's personal database to grow. This is due to the fact that “external” data, such as Web sites, are so transient that it is necessary to store this desired data on one's own system in order to ensure continuing access.\n25. In Chris Marker's film Sans Soleil (1982), the narrator predicts, “The New Bible will be of Magnetic Memory, and will have to rerecord itself constantly just to remember itself.” This is a situation of “total recall” and “total amnesia,” of a memory that is as extended as it is volatile.\n26. Friedrich Kittler writes, “Emulation would seem to be the answer to the oft-repeated paradox that the computer as a medium can archive all other media except itself. In his essay Trancemedia: from Simulation to Emulation, Arjen Mulder suggests that emulation is the only means at the computer's disposal to secure and access its own history. Emulation of all earlier hardware plus software is the only way in which computer history can be written using a computer” (“The Exhibition as Emulator,” trans. James Boekbinder, text commissioned for the 2000 InfoArcadia exhibition, http://www.mediamatic.net/article-8740-en.html).\n27. Molotch, Where Stuff Comes From, 2–3.\n28. Bruce Sterling, “Built on Digital Sand: A Media Archaeologist Digs the Lonely Shores of Binary Obsolescence,” in “Ghost: Archive, Evolution, Entropy,” Horizon Zero 18 (2004), http://www.horizonzero.ca/textsite/ghost.php?is=18\u0026file=4\u0026tlang=0.\n29. Ibid.\n30. Ibid.\n31. Geert Lovink, “Archive Rumblings: Interview with German Media Archaeologist Wolfgang Ernst,” Nettime, February 25, 2003, http://www.nettime.org/Lists-Archives/nettime-l-0302/msg00132.html.\n32. Ibid.\n33. This concept is expressed in varying ways by authors as far-ranging as Stiegler, Hansen, Lyotard, and Sterling. For a more extended discussion, see especially Stiegler's Technics and Time. In this work, Stiegler writes, “There is a historicity to the technical object that makes its descriptions as a mere hump of inert matter impossible. This inorganic matter organizes itself. In organizing itself, it becomes indivisible and conquers a quasi-ipseity from which its dynamic proceeds absolutely: the history of this becoming-organic is not that of the humans who ‘made’ the object” (71).\n34. Bruce Sterling, Shaping Things (Cambridge, MA: MIT Press, 2005), 58.\n35. Franz Alt, Evaluation of Automatic Computing Machines (Washington, DC: National Bureau of Standards, 1951).\n36. Ceruzzi, History of Modern Computing, ix.\n37. Ibid.\n38. A number of scholars write on the multiple implications of this term. See, for example, Jonathan Sterne, “Out with the Trash: On the Future of New Media,” in Residual Media, ed. Charles Acland (Minneapolis: University of Minnesota Press, 2007), 16–31; Wendy Hui Kyong Chun and Thomas Keenan, eds., New Media, Old Media (New York: Routledge, 2006); Lisa Gitelman, Always Already New: Media, History, and the Data of Culture (Cambridge, MA: MIT Press, 2006). Writing in what seems to be a Benjaminian register, Paul Rabinow suggests the “contemporary” emerges not through the elimination of the new, but through the shaping of distinctive ",
+            "publisher": "The University of Michigan Press",
+            "title": "Digital Rubbish: A Natural History of Electronics",
+            "topicNames": [
+                "Chun, Wendy Hui Kyong",
+                "emulation systems",
+                "Gitelman, Lisa",
+                "Keenan, Thomas",
+                "Kittler, Friedrich",
+                "Mulder, Arjen",
+                "MyLifeBits",
+                "New media",
+                "\"new media\"",
+                "obsolescence",
+                "Packard -- Vance",
+                "Packard, Vance",
+                "Rabinow, Paul",
+                "Sans Soleil",
+                "Sterne, Jonathan",
+                "Stiegler, Bernard"
+            ],
+            "topicNamesForDisplay": "[[\"Chun, Wendy Hui Kyong\"],[\"emulation systems\"],[\"Gitelman, Lisa\"],[\"Keenan, Thomas\"],[\"Kittler, Friedrich\"],[\"Mulder, Arjen\"],[\"MyLifeBits\"],[\"\\\"new media\\\"\",\"New media\"],[\"obsolescence\"],[\"Packard -- Vance\",\"Packard, Vance\"],[\"Rabinow, Paul\"],[\"Sans Soleil\"],[\"Sterne, Jonathan\"],[\"Stiegler, Bernard\"]]",
+            "topicNames_facet": [
+                "Chun, Wendy Hui Kyong",
+                "emulation systems",
+                "Gitelman, Lisa",
+                "Keenan, Thomas",
+                "Kittler, Friedrich",
+                "Mulder, Arjen",
+                "MyLifeBits",
+                "\"new media\"",
+                "obsolescence",
+                "Packard -- Vance",
+                "Rabinow, Paul",
+                "Sans Soleil",
+                "Sterne, Jonathan",
+                "Stiegler, Bernard"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

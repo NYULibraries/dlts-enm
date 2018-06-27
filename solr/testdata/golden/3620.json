@@ -1,0 +1,50 @@
+{
+    "add": [
+        {
+            "authors": "Pinchbeck, Dan",
+            "epubNumberOfPages": 197,
+            "id": 3620,
+            "isbn": "9780472028931",
+            "pageLocalId": "page_85",
+            "pageNumberForDisplay": "85",
+            "pageSequenceNumber": 93,
+            "pageText": "\nas the rapid fire is much more likely to trigger a pain reflex in the target, reducing its ability to fight back, but the gun is compromised by limited resources and potentially severe drawbacks at range. It's this combination of factors in the weapon balance that is most critically combined with level design. In other words, inclusion of the plasma gun within a level requires reduced ammo (which can be profoundly disappointing for a player all excited about their new toy) or inclusion of areas where, like the shotgun, the weapon's capabilities are reduced. Equally, placing a rocket launcher is likely to mean any other weapon is bumped off the top spot, but it's going straight back into the holster if we suddenly hit a section of small, winding tunnels. Since DOOM, weapons with splash effect and projectiles like the plasma gun have become like old friends, and we all know that a shotgun is the best thing in a tight squeeze. Yet understanding how to balance shifting the player from weapon to weapon—not just providing the chance for favoritism to shine, but rewarding a dynamic, balanced, and considered approach to deploying one's arsenal—is surprisingly difficult, judging by the evidence. This is significantly more complex than Wolfenstein 3D, which had only one ammo counter, so the only strategy to be considered was the potential waste of bullets when sweeping an area with the chaingun.\nE2M2 Containment Area is generally remembered for the large warehouse section it opens with, although that's actually only one facet of a large and complex level—even if it does take up nearly half of the actual floor plan. While, in some respects, it's not a million miles away from the claustrophobic tunnel crawls of earlier levels (in terms of fast reactions being required to cope with Imps popping up around tight bends and reduced lines of sight), the high ceiling and light, airy feel creates a quite different tone (fig. 13). Also, for the first time in the game, it is possible to climb boxes if the correct sizes are near to each other, a more sophisticated and player-friendly version of pseudoplatforming than we found in the Military Base. Give it a year or two and the addition of a jump function, and crate hopping in a beast-filled warehouse would be standard FPS fare. Once out of the warehouse, however—and it doesn't take long to get out of it—the rest of the level is a mix of gothic green castle and high-concept sci-fi, complete with blue pulsing energy tunnels, rising and falling pistons, a lava pit with a secret rising walkway, a series of five crushing ceilings, a nukage river, a sort of industrial warehouse room with a chaingun on a plinth, and a pillared area that almost resembles a high-tech jail, with incarcerated hellspawn. Containment Area also introduces two new features to the game: another\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Doom: Scarydarkfast",
+            "topicNames": [
+                "ammo",
+                "balance",
+                "Chaingun",
+                "First Person Shooter (FPS)",
+                "gothic",
+                "Hell",
+                "lava",
+                "plasma gun",
+                "platforming",
+                "projectile",
+                "rocket launcher",
+                "shotgun",
+                "weapons",
+                "Wolfenstein 3D"
+            ],
+            "topicNamesForDisplay": "[[\"ammo\"],[\"balance\"],[\"Chaingun\"],[\"First Person Shooter (FPS)\"],[\"gothic\"],[\"Hell\"],[\"lava\"],[\"plasma gun\"],[\"platforming\"],[\"projectile\"],[\"rocket launcher\"],[\"shotgun\"],[\"weapons\"],[\"Wolfenstein 3D\"]]",
+            "topicNames_facet": [
+                "ammo",
+                "balance",
+                "Chaingun",
+                "First Person Shooter (FPS)",
+                "gothic",
+                "Hell",
+                "lava",
+                "plasma gun",
+                "platforming",
+                "projectile",
+                "rocket launcher",
+                "shotgun",
+                "weapons",
+                "Wolfenstein 3D"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

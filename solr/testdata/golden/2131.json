@@ -1,0 +1,35 @@
+{
+    "add": [
+        {
+            "authors": "Lee, Chin-Chuan",
+            "epubNumberOfPages": 338,
+            "id": 2131,
+            "isbn": "9780472120789",
+            "pageLocalId": "page_244",
+            "pageNumberForDisplay": "244",
+            "pageSequenceNumber": 250,
+            "pageText": "\nCHAPTER TWELVE\nTranslation, Communication, and East-West Understanding\nZhang Longxi\nAs human beings, we are all born in medias res, that is, in a particular social, historical, and political environment with a particular language and a culture already in place before and after us. That pre-given environment and our upbringing determine the native language we speak, our social customs and cultural values, our basic points of view, our horizon of understanding, and our sense of belonging or identity. Such predetermined elements obtain in individual lives as well as in social fabrics, in the positions taken and choices made by individuals, groups, communities, and nations. That is to say, all human beings start out to be terribly parochial. The wonderful thing about being human, however, lies precisely in the capability to transcend our self-enclosures on the individual level and to go beyond the social enclaves on the level of communities and nations. Parochialism and cosmopolitanism, nationalist tendencies and cross-cultural openness are forces that contend constantly, and human life is always a process of negotiation that tries to keep a delicate balance.\nIt is almost “natural” to tip the balance toward the parochial, while the cultivation of a cosmopolitan spirit and openness of the mind requires a lot of effort. Border-crossing in languages and cultures is indeed a distinctly human act, an indication of a person’s level of education and ability, and therefore of his or her social standing. This is true not only of a person in our time, but has been true almost since time immemorial. Those who\n",
+            "publisher": "University of Michigan Press",
+            "title": "Internationalizing “International Communication”",
+            "topicNames": [
+                "Cosmopolitan spirit (outlook, ethic)",
+                "Cosmopolitanism",
+                "cosmopolitanism",
+                "Cross-cultural comparison (experiences, meaning, dialogue, interpretation)",
+                "Cultural border-crossing",
+                "Cultural values",
+                "Parochialism"
+            ],
+            "topicNamesForDisplay": "[[\"Cosmopolitan spirit (outlook, ethic)\"],[\"cosmopolitanism\",\"Cosmopolitanism\"],[\"Cross-cultural comparison (experiences, meaning, dialogue, interpretation)\"],[\"Cultural border-crossing\"],[\"Cultural values\"],[\"Parochialism\"]]",
+            "topicNames_facet": [
+                "Cosmopolitan spirit (outlook, ethic)",
+                "cosmopolitanism",
+                "Cross-cultural comparison (experiences, meaning, dialogue, interpretation)",
+                "Cultural border-crossing",
+                "Cultural values",
+                "Parochialism"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

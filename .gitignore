@@ -42,3 +42,6 @@ vendor/
 
 sitegen/testdata/tmp/*
 !sitegen/testdata/tmp/.commit-empty-directory
+
+solr/testdata/tmp/*
+!solr/testdata/tmp/.commit-empty-directory

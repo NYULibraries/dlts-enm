@@ -4,9 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 	"path"
+	"path/filepath"
 	"strconv"
+	"strings"
 	"testing"
 
 	"github.com/rtt/Go-Solr"

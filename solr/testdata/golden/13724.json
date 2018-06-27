@@ -1,0 +1,35 @@
+{
+    "add": [
+        {
+            "authors": "John W. Chapman",
+            "epubNumberOfPages": 373,
+            "id": 13724,
+            "isbn": "9780814714539",
+            "pageLocalId": "page_314",
+            "pageNumberForDisplay": "314",
+            "pageSequenceNumber": 326,
+            "pageText": "with shooting a man. Only a proper understanding of her rights permits us to distinguish a noncompensable injury inflicted by the woman in self-defense during the course of his attempt to rape her from a compensable battery that she inflicted wrongfully upon him. Regardless of which description of rights is the more accurate, the injury to the man is quite the same.\nIn sum, the liberal conception of justice underlying the Anglo-American common law is rights-based not injury-based and Sunstein’s definition of compensatory justice misses this crucial entitlements dimension. There are, however, two distinct ways of viewing the rights or entitlements that galvanize the common law. One could adhere to the view of Oliver Wendell Holmes and say that rights of persons are nothing more than the legal remedies they can receive in court. According to the Holmesian conception of rights, the availability of a legal remedy entirely and precisely defines the rights of the parties; the concept of right or entitlement adds nothing to the analysis. The Holmesian identification of rights with remedies is sometimes referred to as the “bad man” theory of law since it views law from the perspective of the person who cares nothing for the law and is influenced only by the prospective legal sanction:\n\nIf you want to know the law and nothing else, you must look at it as a bad man, who cares only for the material consequences which such knowledge enables him to predict, not as a good one, who finds his reasons for conduct whether inside the law or outside it, in the vaguer sanctions of conscience.1\n\nIn contrast with the Holmesian conception of rights as defined by the availability of legal relief, one can view rights as justifying the availability of legal relief. According to the liberal conception of rights, a legal remedy is not identical to the right that justifies its imposition. Rather, a legal remedy vindicates an antecedent right of the plaintiff that was violated by the defendant. In this way, the “legal right” or remedy available in a court is distinguished from the underlying or “background right” that morally justifies the court’s imposition of legal force on a defendant.2 Although this distinction between legal and background rights is correctly associated with natural rights thinking, the term natural rights evokes a controversy concerning the origin ",
+            "publisher": "New York University Press",
+            "title": "Compensatory Justice",
+            "topicNames": [
+                "Holmes, O. W.",
+                "Holmes, Oliver Wendell",
+                "Judges -- Oliver Wendell Holmes",
+                "Rights -- background",
+                "Rights -- legal",
+                "Natural rights",
+                "Rights -- natural",
+                "Sunstein, Cass R."
+            ],
+            "topicNamesForDisplay": "[[\"Judges -- Oliver Wendell Holmes\",\"Holmes, O. W.\",\"Holmes, Oliver Wendell\"],[\"Rights -- background\"],[\"Rights -- legal\"],[\"Rights -- natural\",\"Natural rights\"],[\"Sunstein, Cass R.\"]]",
+            "topicNames_facet": [
+                "Judges -- Oliver Wendell Holmes",
+                "Rights -- background",
+                "Rights -- legal",
+                "Rights -- natural",
+                "Sunstein, Cass R."
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

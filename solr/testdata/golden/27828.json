@@ -1,0 +1,34 @@
+{
+    "add": [
+        {
+            "authors": "Peter N. Stearns",
+            "epubNumberOfPages": 378,
+            "id": 27828,
+            "isbn": "9780814779965",
+            "pageLocalId": "page_146",
+            "pageNumberForDisplay": "146",
+            "pageSequenceNumber": 156,
+            "pageText": "but probably most important attack on guilt. According to this approach, people would learn through their upbringing that inappropriate emotional expression could be condemned as immature. The warnings to parents to keep the results of their own misguided upbringings under control not only credited the possibility of rational dominance—parents could learn to behave before they distorted their own kids—but also reminded parents that mistakes reflected an essential childishness that should embarrass any mature adult.\nAs in the Victorian period, explicit emphasis on shame in childrearing remained fairly subdued. Children were not to be taunted or exposed to the scorn of their siblings. Indeed, twentieth-century parents, and even the schools, moved farther from reliance on shame than the Victorians had done, reducing public humiliations in the classroom, for example. With shame still downplayed and guilt now attacked as well, emphasis in childrearing, at least as conceived in the mainstream middle-class culture, shifted to rational explanation and persuasion as the proper reactions to bad behavior, supplemented by an emotionally neutral denial of privileges if necessary. Unpleasant emotions were neither to be scorned nor attacked through guilt but rather ventilated, enabling children to defuse the emotional experience through labeling and talking out. Because it dissociated emotion from action, this tactic minimized the need for formal adult response. Ventilation was the alternative to adult riposte (with its potential for harmful guilt) and to the dreaded festering that might convert a passing negative experience into a personality trait. Reliance on ventilation formed the new first stage in the complex task of disciplining oneself without rousing intense emotional impulses either as motivations for good behavior or as side effects. This strategy was supplemented, of course, by parental tactics designed to constrain opportunities for bad behavior or negative emotional experience. Revealingly, school honor codes, a classic way to express reliance on a regime of guilt, ossified after the mid-twentieth century, with only two American universities (Air Force Academy and Dartmouth College) launching a new honor code program after 1945.10 Here, too, efforts to help avoid both temptation and potential guilt pangs forced new kinds of adult supervision or manipulation.\nThe childhood phase did not, however, directly carry through to adulthood. Whereas in Victorian days guilt instilled in childhood was meant to serve as a lifelong guide, in the twentieth century the relationship ",
+            "publisher": "New York University Press",
+            "title": "American Cool",
+            "topicNames": [
+                "childishness",
+                "honor code",
+                "Rationality",
+                "rationality",
+                "Shame",
+                "shame",
+                "ventilation"
+            ],
+            "topicNamesForDisplay": "[[\"childishness\"],[\"honor code\"],[\"rationality\",\"Rationality\"],[\"shame\",\"Shame\"],[\"ventilation\"]]",
+            "topicNames_facet": [
+                "childishness",
+                "honor code",
+                "rationality",
+                "shame",
+                "ventilation"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

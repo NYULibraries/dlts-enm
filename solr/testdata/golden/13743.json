@@ -1,0 +1,31 @@
+{
+    "add": [
+        {
+            "authors": "John W. Chapman",
+            "epubNumberOfPages": 373,
+            "id": 13743,
+            "isbn": "9780814714539",
+            "pageLocalId": "page_333",
+            "pageNumberForDisplay": "333",
+            "pageSequenceNumber": 345,
+            "pageText": "account by any satisfactory effort to address the problems raised by probabilistic and systemic harms.\nA. The Classical Liberal Conception\nThe classical liberal conception of state and society is defined by two major features.\nIndividualism. First, individuals are assumed to be the only significant actors in society. Legal “persons,” including partnerships and limited liability corporations, eventually were recognized as actors by some of the theorists who formulated this liberal view in the eighteenth and nineteenth centuries, but neither informal groups nor the more clearly defined status rankings of the ancien regime were believed to deserve legal recognition. One implication of this assumption is that it is nonsensical to treat groups either as agents or as objects of action except in a metaphorical sense. John Stuart Mill expressed this view when he insisted that voluntary actions should be prohibited only when they impose “perceptible hurt” upon some “assignable individual” other than the actor or violate some “specific duty” to the public.4\nVoluntary Transactions. Second, voluntary actions and transactions among individuals enjoy a special status in this conception. State intervention to restrict voluntary actions and transactions is viewed as an evil, though in some circumstances a necessary one. In general the purpose of intervention should be only to enforce voluntary transactions by ensuring that the parties involved keep their promises and to prevent involuntary harms. John Locke appears to have had something like this conception of social order in mind when he argued that “the end of Law is not to abolish or restrain, but to preserve and enlarge Freedom” conceived as “a Liberty to dispose, and order, as he lists, his Person, Actions, Possessions, and his whole Property, within the Allowance of those Laws under which he is.”5\nProponents of the classical liberal view generally believe that society is fundamental and primary while legal and political structures are superstructural and secondary. For most purposes ",
+            "publisher": "New York University Press",
+            "title": "Compensatory Justice",
+            "topicNames": [
+                "Locke",
+                "Locke -- John",
+                "Locke John",
+                "Locke, John",
+                "Mill, John Stuart",
+                "Probabilistic torts"
+            ],
+            "topicNamesForDisplay": "[[\"Locke -- John\",\"Locke\",\"Locke John\",\"Locke, John\"],[\"Mill, John Stuart\"],[\"Probabilistic torts\"]]",
+            "topicNames_facet": [
+                "Locke -- John",
+                "Mill, John Stuart",
+                "Probabilistic torts"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "add": [
+        {
+            "authors": "Steven Goldberg",
+            "epubNumberOfPages": 269,
+            "id": 27559,
+            "isbn": "9780814730911",
+            "pageLocalId": "page_142",
+            "pageNumberForDisplay": "142",
+            "pageSequenceNumber": 156,
+            "pageText": "There is no reason early analysis cannot provide a spur to certain areas of scientific research that seem particularly promising from a social perspective.\nBut, more importantly, SIPI represented a deviation from the usual laissez-faire attitude of the courts and the legal system to basic research. And because of the broad language of NEPA, SIPI had the potential to alter the status quo in a wide variety of areas. But the Supreme Court put an end to that possibility when it rejected the SIPI holding and thus brought NEPA into conformance with the law’s usual approach to basic science.\nThe relevant case was Kleppe v. Sierra Club,37 which involved the Department of Interior’s coal leasing program in the Northern Great Plains region. In Kleppe, environmental groups brought suit against the Department of the Interior claiming that a comprehensive environmental impact statement was necessary to assess the government’s program of issuing coal leases, approving mining plans, and otherwise licensing private companies and public utilities to develop coal reserves on federal land. The plaintiffs maintained that only by looking at the program as a whole could serious environmental analysis be done. The Court of Appeals for the District of Columbia Circuit adapted its four-part SIPI test to include all federal actions, not just technology development programs, and it concluded that enough information was already available on the overall program to do environmental analysis and that the potential environmental effects of the program were severe. The U.S. Supreme Court, however, squarely rejected the SIPI approach:\nThe [appellate] Court’s reasoning and action find no support in the language or legislative history of NEPA. The statute clearly states when an impact statement is required, and mentions nothing about a balancing of factors. Rather … under the first sentence of 102 (2)(C) the moment at which an agency must have a final statement ready “is the time at which it makes a recommendation or report on a proposal for federal action.” 38\nThe Supreme Court did recognize that in some circumstances a variety of agency actions might be so closely connected to each other that it would be irrational for an agency to deny that it had made a proposal for a broad program and thus an agency would have to do a programmatic environmental impact statement. But the Court emphasized that ordinarily the question of whether an agency had to do a programmatic ",
+            "publisher": "New York University Press",
+            "title": "Culture Clash",
+            "topicNames": [
+                "Kleppe v. Sierra Club"
+            ],
+            "topicNamesForDisplay": "[[\"Kleppe v. Sierra Club\"]]",
+            "topicNames_facet": [
+                "Kleppe v. Sierra Club"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "add": [
+        {
+            "authors": "Ruth Colker",
+            "epubNumberOfPages": 265,
+            "id": 17727,
+            "isbn": "9780814715635",
+            "pageLocalId": "page_125",
+            "pageNumberForDisplay": "125",
+            "pageSequenceNumber": 139,
+            "pageText": "Canadian courts have not been hampered by the special treatment/equal treatment debate. For example, in Alberta Hospital Association v. Parcels,52 the Alberta Court of Queen’s Bench was confronted with the question of whether it was discriminatory to deny sick leave benefits to women who were on maternity leave. Sick leave benefits were somewhat more generous than maternity benefits, but as in the Maganuco case, employees were not allowed to use maternity and sick leave benefits sequentially. An employee had to choose one or another. Plaintiff Susan Parcels had elected maternity benefits because they were longer in duration but wanted to take advantage of sick leave benefits for that period of her maternity leave in which she was physically incapacitated.\nThe Alberta court found that Parcels did have a valid claim of sex discrimination because the employer’s policy posed a burden to women at the workplace. The employer was not entitled to consider maternity leave as only an example of general non-health-related leave without recognizing its unique health-related aspects. The court ruled that maternity leave “cannot be neatly pigeon-holed because of its hybrid nature. ... It is a unique situation. As a result, maternity leave should be removed from the leave of absence article in the collective agreement and placed in a category by itself.” Rather than adopt a comparative approach, the Alberta court analyzed the situation from the perspective of the well-being of both women and children.\n[T]hose who bear children and benefit society as a whole should not be economically or socially disadvantaged by this activity. ... [I]t is unfair to impose all of the costs of procreation on one-half of the population. The function of anti-discrimination legislation is to remove this unfair burden from women.\n",
+            "publisher": "New York University Press",
+            "title": "American Law in the Age of Hypercapitalism",
+            "topicNames": [
+                "Alberta Hospital Assocation v. Parcels, 90 D.L.R.4th 703 (Alberta Ct. of Queen's Bench 1992)",
+                "Canada -- and pregnancy leave"
+            ],
+            "topicNamesForDisplay": "[[\"Alberta Hospital Assocation v. Parcels, 90 D.L.R.4th 703 (Alberta Ct. of Queen's Bench 1992)\"],[\"Canada -- and pregnancy leave\"]]",
+            "topicNames_facet": [
+                "Alberta Hospital Assocation v. Parcels, 90 D.L.R.4th 703 (Alberta Ct. of Queen's Bench 1992)",
+                "Canada -- and pregnancy leave"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

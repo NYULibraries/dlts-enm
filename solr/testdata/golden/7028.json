@@ -1,0 +1,35 @@
+{
+    "add": [
+        {
+            "authors": "Turrow, Joseph; Tsui, Lokman",
+            "epubNumberOfPages": 325,
+            "id": 7028,
+            "isbn": "9780472024537",
+            "pageLocalId": "page_253",
+            "pageNumberForDisplay": "253",
+            "pageSequenceNumber": 259,
+            "pageText": "\nFor Sunstein's and Turow's predictions to be realized, audiences need to become not only more fragmented but also more concentrated. The danger lies not in rising audiences for politically biased news outlets per se but in exclusive exposure to outlets that are all biased in the same direction. Several important pieces of evidence suggest that fears of this kind of audience concentration may be exaggerated. Examining Nielsen audience data, Webster finds little evidence of overall audience concentration by channel. Instead, his data indicate a considerable overlap between audiences for CNN and the Fox News Channel (as well as other cable news channels).15 Even heavy consumers of a particular television channel devote only a small fraction of their total viewing to that channel.16\nAccording to Webster's data for February 2003, those who watched at least some FOX News spent 7.5 percent of their overall viewing time with the FOX News Channel but another 6 percent with the other four cable networks (CNN, CNN Headline News, CNBC, MSNBC). Viewers who never watched FOX News also spent less time, under 3 percent of their total television consumption, watching other cable news channels. Likewise, CNN viewers, who spent 4.7 percent of their viewing time watching CNN, devoted another 6.8 percent of their viewing to the other four cable channels, including 3.7 percent to FOX News. The 65 percent of viewers who never watched CNN also rarely watched other cable channels (for less than 3 percent of their total viewing time). MSNBC viewers—23 percent of the adult population who spent 3 percent of their viewing time with MSNBC—watched other news channels for an additional 9 percent of their total television use. For viewers who avoided MSNBC, that share is only 4.2 percent. Even though these averages may hide more polarized viewing patterns among small subsets of cable news viewers, they offer little support for claims that the fragmentation of the cable news environment fosters political polarization by encouraging selective exposure to only one side of an issue. Survey data and diaries of television viewing also indicate considerable overlap of audiences for Fox News Channel and CNN.17\nAnother indicator of overlap between cable news audiences is the exclusive “cume” rating, which records the number of unique viewers for a network that do not watch a specified set of other networks. In December 2004, for example, the cumulative audience for CNN was fifty-five million (i.e., fifty-five million different people watched CNN for at least six minutes on at least one day of the month). In reference to the other cable networks, CNN's exclusive cume in this period was only twelve million.\n",
+            "publisher": "University of Michigan Press",
+            "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "topicNames": [
+                "CNN",
+                "FOX",
+                "Fox News",
+                "Fox News Channel",
+                "Network",
+                "Networking",
+                "networks",
+                "Networks"
+            ],
+            "topicNamesForDisplay": "[[\"CNN\"],[\"FOX\"],[\"Fox News\"],[\"Fox News Channel\"],[\"Networking\",\"Network\",\"networks\",\"Networks\"]]",
+            "topicNames_facet": [
+                "CNN",
+                "FOX",
+                "Fox News",
+                "Fox News Channel",
+                "Networking"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

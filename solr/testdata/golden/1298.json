@@ -1,0 +1,32 @@
+{
+    "add": [
+        {
+            "authors": "Cummings, Robert E.; Barton, Matt",
+            "epubNumberOfPages": 276,
+            "id": 1298,
+            "isbn": "9780472024513",
+            "pageLocalId": "page_95",
+            "pageNumberForDisplay": "95",
+            "pageSequenceNumber": 115,
+            "pageText": "\nCaMILE project is recognizable in the mainstream of CSCL.17 The key idea in the CaMILE project—a Web-based threaded discussion forum—was “anchored instruction,” utilizing the World Wide Web's fundamental technology: the link. Guzdial's substantial research on collaborative discussion forums showed that these linkages were important to “create more sustained discussion than traditional classroom newsgroup discussions. But in our work, the anchors were always created by the teachers. Was it the anchor, or the fact that the teacher said to go there? Could students create anchors?”18 Echoing Scardamalia and Bereiter, Guzdial asked who will be in charge of designing and developing educational applications. “Literature from the computer-supported collaborative learning conferences suggests it will be researchers and developers.”19 Forum software like CaMILE still required layers of instructional and/or administrative support, so that the actual deployment of CSCL systems was a major challenge, despite whatever cognitive or pedagogical wonders the software promised. Guzdial complained that it was all they could do to get faculty to “adopt” learning technologies, let alone direct them or exercise any creative agency.\nThe antidote, they found, was in Ward Cunningham's wiki concept, which Guzdial and his team implemented to create a new and simpler tool called CoWeb. By shifting to the simplicity of a wiki, Guzdial and his colleagues found they could devolve the organizational responsibilities to teachers or even students themselves. In their article “Beyond Adoption to Invention,” Guzdial, Rick, and Kehoe report that teachers, rather than struggling to adopt a technology platform, were now inventing applications “that the developers have not considered.”20 Interestingly, CoWeb is not the result of extensive research into cognitive psychology, user interface design, or information architecture; rather, it is based on Cunningham's principle of the simplest thing that could possibly work:\nThough we have created over a dozen iterations on our version of Cunningham's tool in the last three years to make it work better for classroom applications, the core ideas and features that are making it so successful in encouraging teacher innovation are not ours. Rather, we are reporting on a discovery—that the CoWeb is an example of an application in which teachers actively invent their own uses.21\n",
+            "publisher": "University of Michigan Press and University of Michigan Library",
+            "title": "Wiki Writing: Collaborative Learning in the College Classroom",
+            "topicNames": [
+                "CaMILE project",
+                "CoWeb",
+                "Guzdial, Mark",
+                "Kehoe, Colleen",
+                "Rick, Jochen"
+            ],
+            "topicNamesForDisplay": "[[\"CaMILE project\"],[\"CoWeb\"],[\"Guzdial, Mark\"],[\"Kehoe, Colleen\"],[\"Rick, Jochen\"]]",
+            "topicNames_facet": [
+                "CaMILE project",
+                "CoWeb",
+                "Guzdial, Mark",
+                "Kehoe, Colleen",
+                "Rick, Jochen"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

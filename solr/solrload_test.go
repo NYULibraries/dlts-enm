@@ -27,15 +27,20 @@ var solrGoldenFilesDirectory string
 var solrLoadTestTmpDirectory string
 
 func (s solrStub) Update(m map[string]interface{}, commit bool) (*solr.UpdateResponse, error) {
-	b, err := json.MarshalIndent(m, "", "    ")
-	if err != nil {
-		return nil, err
-	}
-
 	locationID := m[ "add" ].([]interface{})[0].(interface{}).(map[string]interface{})["id"].(int)
-	err = ioutil.WriteFile(solrLoadTestTmpDirectory+ "/" + strconv.Itoa(locationID) + ".json", b, 0644)
-	if err != nil {
-		panic(err)
+
+	if (goldenFileLocationIDs[locationID] == true) {
+		b, err := json.MarshalIndent(m, "", "    ")
+		if err != nil {
+			return nil, err
+		}
+
+		err = ioutil.WriteFile(solrLoadTestTmpDirectory+ "/" + strconv.Itoa(locationID) + ".json", b, 0644)
+		if err != nil {
+			panic(err)
+		}
+	} else {
+		// Do nothing
 	}
 
 	return nil, nil

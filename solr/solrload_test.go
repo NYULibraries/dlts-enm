@@ -22,6 +22,7 @@ type solrStub struct {
 	Version []int
 }
 
+var goldenFileLocationIDs map[int]bool
 var solrGoldenFilesDirectory string
 var solrLoadTestTmpDirectory string
 
@@ -54,6 +55,24 @@ func newSolrStub(host string, port int, core string) (*solrStub, error) {
 	url := fmt.Sprintf("http://%s:%d/solr/%s", host, port, core)
 
 	return &solrStub{URL: url}, nil
+}
+
+func getGoldenFileLocationIDs() {
+	files, err := ioutil.ReadDir(solrGoldenFilesDirectory)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	goldenFileLocationIDs = make(map[int]bool)
+
+	for _, file := range files {
+		var locationID, err = strconv.Atoi(strings.TrimSuffix(file.Name(), filepath.Ext(file.Name())))
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		goldenFileLocationIDs[locationID] = true
+	}
 }
 
 func TestLoad(t *testing.T) {

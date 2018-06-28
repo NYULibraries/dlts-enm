@@ -18,24 +18,24 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/nyulibraries/dlts-enm/solr"
+	"github.com/nyulibraries/dlts-enm/solrmysql"
 )
 
-// solrLoadCmd represents the add command
-var solrLoadCmd = &cobra.Command{
-	Use:   "load",
-	Short: "Loads the Solr index",
-	Long: `Loads the Solr index from views pages and page_topics`,
+// solrLoadMySQLCmd represents the add command
+var solrLoadMySQLCmd = &cobra.Command{
+	Use:   "loadmysql",
+	Short: "Loads the Solr index from MySQL",
+	Long: "Loads the Solr index from MySQL views pages and page_topics.",
 	Run: func(cmd *cobra.Command, args []string) {
-		err := solr.Init(Server, Port, nil)
+		err := solrmysql.Init(Server, Port, nil)
 		if err != nil {
-			panic(fmt.Sprintf("ERROR: couldn't initialize solr: %s\n", err.Error()))
+			panic(fmt.Sprintf("ERROR: couldn't initialize solrmysql: %s\n", err.Error()))
 		}
 
-		solr.Load()
+		solrmysql.Load()
 	},
 }
 
 func init() {
-	solrCmd.AddCommand(solrLoadCmd)
+	solrCmd.AddCommand(solrLoadMySQLCmd)
 }

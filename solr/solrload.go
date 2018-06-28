@@ -1,13 +1,13 @@
 package solr
 
 import (
+	"encoding/json"
+	"fmt"
 	"log"
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/db"
-	"encoding/json"
-	"fmt"
 )
 
 var epubsNumberOfPages map[string]int

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package sitegenmsyql
+package sitegenmysql
 
 type Paths struct{
 	WebRoot string
@@ -31,7 +31,7 @@ var Source string
 //
 // Consider including the templates in the binary using something like
 // https://github.com/jteeuwen/go-bindata
-var BrowseTopicListsTemplateDirectory = "sitegenmsyql/templates/browse-topics-lists"
-var SharedTemplateDirectory = "sitegenmsyql/templates/shared"
-var SitePagesTemplateDirectory = "sitegenmsyql/templates"
-var TopicPageTemplateDirectory =  "sitegenmsyql/templates/topic-page"
+var BrowseTopicListsTemplateDirectory = "sitegenmysql/templates/browse-topics-lists"
+var SharedTemplateDirectory = "sitegenmysql/templates/shared"
+var SitePagesTemplateDirectory = "sitegenmysql/templates"
+var TopicPageTemplateDirectory =  "sitegenmysql/templates/topic-page"

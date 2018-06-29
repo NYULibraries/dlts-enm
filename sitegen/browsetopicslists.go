@@ -43,8 +43,6 @@ type BrowseTopicsListsEntry struct{
 	Regexp string
 }
 
-var BrowseTopicsListsCategories []BrowseTopicsListsEntry
-
 var BrowseTopicsListsDir string
 
 func GenerateBrowseTopicsLists(destination string) {
@@ -56,8 +54,6 @@ func GenerateBrowseTopicsLists(destination string) {
 			panic(mkdirErr)
 		}
 	}
-
-	fillBrowseTopicsListsCategories()
 
 	if Source == "database" {
 		GenerateDynamicBrowseTopicsListsFromDatabase()
@@ -73,7 +69,7 @@ func GenerateBrowseTopicsLists(destination string) {
 	WriteStaticBrowseTopicsListsPage("enm-picks")
 }
 
-func fillBrowseTopicsListsCategories() {
+func getBrowseTopicsListsCategories() (browseTopicsListsCategories []BrowseTopicsListsEntry){
 	const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 	for i := 0; i < len(alphabet); i++ {
@@ -83,15 +79,15 @@ func fillBrowseTopicsListsCategories() {
 			FileBasename : letter,
 			Regexp : letter,
 		}
-		BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, browseTopicsListsEntry)
+		browseTopicsListsCategories = append(browseTopicsListsCategories, browseTopicsListsEntry)
 	}
 
-	BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, BrowseTopicsListsEntry{
+	browseTopicsListsCategories = append(browseTopicsListsCategories, BrowseTopicsListsEntry{
 		Label : "0-9",
 		FileBasename : "0-9",
 		Regexp : "[0-9]",
 	})
-	BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, BrowseTopicsListsEntry{
+	browseTopicsListsCategories = append(browseTopicsListsCategories, BrowseTopicsListsEntry{
 		Label : "?#@",
 		FileBasename : "non-alphanumeric",
 		Regexp : "[^a-z0-9]",
@@ -103,10 +99,13 @@ func fillBrowseTopicsListsCategories() {
 func GenerateDynamicBrowseTopicsListsFromDatabase() {
 	var topics []db.Topic
 
-	for _, browseTopicsListsCategory := range BrowseTopicsListsCategories {
+	browseTopicsListsCategories := getBrowseTopicsListsCategories()
+
+	for _, browseTopicsListsCategory := range browseTopicsListsCategories {
 		topics = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
 		filename := browseTopicsListsCategory.FileBasename + ".html"
-		browseTopicsListPageData := CreateBrowseTopicsListPageData(topics, browseTopicsListsCategory.Label)
+		browseTopicsListPageData :=
+			CreateBrowseTopicsListPageData(topics, browseTopicsListsCategory.Label, browseTopicsListsCategories)
 		err := WriteDynamicBrowseTopicsListPage(filename, browseTopicsListPageData)
 		if (err != nil) {
 			panic(err)
@@ -115,7 +114,10 @@ func GenerateDynamicBrowseTopicsListsFromDatabase() {
 
 }
 
-func CreateBrowseTopicsListPageData(topicsFromDatabase []db.Topic, browseTopicsListsCategoryLabel string) (browseTopicsListPageData BrowseTopicsListPageData) {
+func CreateBrowseTopicsListPageData(
+	topicsFromDatabase []db.Topic,
+	browseTopicsListsCategoryLabel string,
+	browseTopicsListsCategories []BrowseTopicsListsEntry) (browseTopicsListPageData BrowseTopicsListPageData) {
 	for _, topicFromDatabase := range topicsFromDatabase {
 
 		topic := BrowseTopicsListPageDataTopic{
@@ -126,7 +128,7 @@ func CreateBrowseTopicsListPageData(topicsFromDatabase []db.Topic, browseTopicsL
 	}
 
 	browseTopicsListPageData.ActiveNavbarTab = browseTopicsListsCategoryLabel
-	browseTopicsListPageData.NavbarTabs = BrowseTopicsListsCategories
+	browseTopicsListPageData.NavbarTabs = browseTopicsListsCategories
 	browseTopicsListPageData.Paths = Paths{ WebRoot: ".." }
 
 	return

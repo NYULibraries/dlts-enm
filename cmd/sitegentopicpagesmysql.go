@@ -1,4 +1,4 @@
-// Copyright © 2018 NYU
+// Copyright © 2017 NYU
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,28 +20,29 @@ import (
 	"github.com/nyulibraries/dlts-enm/sitegenmysql"
 )
 
-// browseTopicsListsCmd represents the browsetopicslists command
-var browseTopicsListsMySQLCmd = &cobra.Command{
-	Use:   "browsetopicslistsmysql",
-	Short: "Creates ENM website browse topics lists pages from MySQL",
-	Long: `Creates ENM website browse topics lists pages from MySQL`,
+// topicpagesCmd represents the topicpages command
+var topicpagesMySQLCmd = &cobra.Command{
+	Use:   "topicpagesmysql",
+	Short: "Creates ENM website topic pages from MySQL",
+	Long: `Creates an ENM website topic page for every topic from MySQL`,
 	Run: func(cmd *cobra.Command, args []string) {
 		sitegenmysql.Source = SitegenSource
-		sitegenmysql.GenerateBrowseTopicsLists(Destination)
+		sitegenmysql.TopicIDs = args
+		sitegenmysql.GenerateTopicPages(Destination)
 	},
 }
 
 func init() {
-	sitegenCmd.AddCommand(browseTopicsListsMySQLCmd)
+	sitegenCmd.AddCommand(topicpagesMySQLCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// browseTopicsListsMySQLCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// topicpagesMySQLCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// browseTopicsListsMySQLCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// topicpagesMySQLCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
 }

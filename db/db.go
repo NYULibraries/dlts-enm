@@ -86,17 +86,17 @@ func init() {
 	password = os.Getenv("ENM_POSTGRES_DATABASE_PASSWORD")
 
 	if Database == "" {
-		panic("db: ENM_DATABASE not set")
+		panic("db: ENM_POSTGRES_DATABASE not set")
 
 	}
 
 	if username == "" {
-		panic("db: ENM_DATABASE_USERNAME not set")
+		panic("db: ENM_POSTGRES_DATABASE_USERNAME not set")
 
 	}
 
 	if password == "" {
-		panic("db: ENM_DATABASE_PASSWORD not set")
+		panic("db: ENM_POSTGRES_DATABASE_PASSWORD not set")
 	}
 
 	connStr := fmt.Sprintf("postgres://%s:%s@localhost/%s?sslmode=disable", username, password, Database)

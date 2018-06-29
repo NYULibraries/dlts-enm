@@ -59,7 +59,7 @@ func GenerateBrowseTopicsLists(destination string) {
 		GenerateDynamicBrowseTopicsListsFromDatabase()
 	} else if Source == "cache" {
 		// Don't know if will be implementing this
-		fmt.Println("Generation of topic browse lists pages has not yet been implemented.")
+		fmt.Println("Generation of topic browse lists pages from cache has not yet been implemented.")
 	} else {
 		// Should never get here
 	}

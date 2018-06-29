@@ -23,11 +23,16 @@ import (
 	"strconv"
 	"strings"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 
 	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/tct"
 )
+
+type Topic struct {
+	ID          int
+	DisplayName string
+}
 
 var username string
 var password string
@@ -76,9 +81,9 @@ var weblinkVocabularyId int = 0
 var defaultEditorialReviewStatusStateId int = 1
 
 func init() {
-	Database = os.Getenv("ENM_DATABASE")
-	username = os.Getenv("ENM_DATABASE_USERNAME")
-	password = os.Getenv("ENM_DATABASE_PASSWORD")
+	Database = os.Getenv("ENM_POSTGRES_DATABASE")
+	username = os.Getenv("ENM_POSTGRES_DATABASE_USERNAME")
+	password = os.Getenv("ENM_POSTGRES_DATABASE_PASSWORD")
 
 	if Database == "" {
 		panic("db: ENM_DATABASE not set")
@@ -94,8 +99,9 @@ func init() {
 		panic("db: ENM_DATABASE_PASSWORD not set")
 	}
 
+	connStr := fmt.Sprintf("postgres://%s:%s@localhost/%s?sslmode=disable", username, password, Database)
 	var err error
-	DB, err = sql.Open("mysql", username + ":" + password + "@/" + Database)
+	DB, err = sql.Open("postgres", connStr)
 	if err != nil {
 		panic(err.Error())
 	}
@@ -377,13 +383,12 @@ ORDER BY t.display_name_do_not_use, n.name
 	return
 }
 
-func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topicsWithSortKeys []models.TopicsWithSortKeys) {
+func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topics []Topic) {
 	// sql query
-	var sqlstr = `SELECT` +
-		` tct_id, display_name_do_not_use` +
-		` FROM enm.topics_with_sort_keys` +
-		` WHERE LEFT(display_name_do_not_use_sort_key, 1) REGEXP "` + regexp + `"` +
-		` ORDER BY display_name_do_not_use_sort_key`
+	var sqlstr = ` SELECT id, display_name, LEFT(display_name,1)` +
+	` FROM hit_basket` +
+	` WHERE LEFT(display_name,1) SIMILAR TO '` + regexp + `[^a-z0-9]'` +
+	` ORDER BY display_name`;
 
 	var (
 		id int
@@ -400,9 +405,9 @@ func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topicsW
 		if err != nil {
 			panic(err)
 		}
-		topicsWithSortKeys = append(topicsWithSortKeys, models.TopicsWithSortKeys{
-			TctID: id,
-			DisplayNameDoNotUse: name,
+		topics = append(topics, Topic{
+			ID: id,
+			DisplayName: name,
 		})
 	}
 	err = rows.Err()

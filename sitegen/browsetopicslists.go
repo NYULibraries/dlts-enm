@@ -21,7 +21,6 @@ import (
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db"
-	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 )
 
 type BrowseTopicsListPageData struct{
@@ -102,12 +101,12 @@ func fillBrowseTopicsListsCategories() {
 }
 
 func GenerateDynamicBrowseTopicsListsFromDatabase() {
-	var topicsWithSortKeys []models.TopicsWithSortKeys
+	var topics []db.Topic
 
 	for _, browseTopicsListsCategory := range BrowseTopicsListsCategories {
-		topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
+		topics = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
 		filename := browseTopicsListsCategory.FileBasename + ".html"
-		browseTopicsListPageData := CreateBrowseTopicsListPageData(topicsWithSortKeys, browseTopicsListsCategory.Label)
+		browseTopicsListPageData := CreateBrowseTopicsListPageData(topics, browseTopicsListsCategory.Label)
 		err := WriteDynamicBrowseTopicsListPage(filename, browseTopicsListPageData)
 		if (err != nil) {
 			panic(err)
@@ -116,12 +115,12 @@ func GenerateDynamicBrowseTopicsListsFromDatabase() {
 
 }
 
-func CreateBrowseTopicsListPageData(topicsWithSortKeys []models.TopicsWithSortKeys, browseTopicsListsCategoryLabel string) (browseTopicsListPageData BrowseTopicsListPageData) {
-	for _, topicWithSortKeys := range topicsWithSortKeys {
+func CreateBrowseTopicsListPageData(topicsFromDatabase []db.Topic, browseTopicsListsCategoryLabel string) (browseTopicsListPageData BrowseTopicsListPageData) {
+	for _, topicFromDatabase := range topicsFromDatabase {
 
 		topic := BrowseTopicsListPageDataTopic{
-			Name: topicWithSortKeys.DisplayNameDoNotUse,
-			URL: "../topic-pages/" + GetRelativeFilepathForTopicPage(topicWithSortKeys.TctID),
+			Name: topicFromDatabase.DisplayName,
+			URL:  "../topic-pages/" + GetRelativeFilepathForTopicPage(topicFromDatabase.ID),
 		}
 		browseTopicsListPageData.Topics = append(browseTopicsListPageData.Topics, topic)
 	}

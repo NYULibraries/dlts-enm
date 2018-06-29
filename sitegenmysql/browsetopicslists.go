@@ -20,7 +20,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/db/mysql"
 	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 )
 
@@ -105,7 +105,7 @@ func GenerateDynamicBrowseTopicsListsFromDatabase() {
 	var topicsWithSortKeys []models.TopicsWithSortKeys
 
 	for _, browseTopicsListsCategory := range BrowseTopicsListsCategories {
-		topicsWithSortKeys = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
+		topicsWithSortKeys = mysql.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
 		filename := browseTopicsListsCategory.FileBasename + ".html"
 		browseTopicsListPageData := CreateBrowseTopicsListPageData(topicsWithSortKeys, browseTopicsListsCategory.Label)
 		err := WriteDynamicBrowseTopicsListPage(filename, browseTopicsListPageData)

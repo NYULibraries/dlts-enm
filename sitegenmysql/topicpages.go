@@ -25,7 +25,7 @@ import (
 	"strconv"
 
 	"github.com/nyulibraries/dlts-enm/cache"
-	"github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/db/mysql"
 	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/util"
 )
@@ -177,9 +177,9 @@ func GenerateTopicPagesFromCache(){
 func GenerateTopicPagesFromDatabase() {
 	var topicsWithAlternateNames []*models.TopicAlternateName
 	if (len(TopicIDs) > 0) {
-		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesByTopicIDs(TopicIDs)
+		topicsWithAlternateNames = mysql.GetTopicsWithAlternateNamesByTopicIDs(TopicIDs)
 	} else {
-		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesAll()
+		topicsWithAlternateNames = mysql.GetTopicsWithAlternateNamesAll()
 	}
 
 	var alternateNames []string
@@ -215,7 +215,7 @@ func GenerateTopicPagesFromDatabase() {
 func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []string) error {
 	visualizationData := VisualizationData{}
 	relatedTopics := []RelatedTopic{}
-	relatedTopicNamesWithNumberOfOccurrences := db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID)
+	relatedTopicNamesWithNumberOfOccurrences := mysql.GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID)
 	for _, relatedTopic := range relatedTopicNamesWithNumberOfOccurrences {
 		relatedTopics = append(relatedTopics, RelatedTopic{
 			ID: relatedTopic.Topic2ID,
@@ -239,7 +239,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	visualizationData.Nodes = append(visualizationData.Nodes, Node{
 		Name: topicDisplayName,
 		ID: topicID,
-		OCount: db.GetTopicNumberOfOccurrencesByTopicId(topicID),
+		OCount: mysql.GetTopicNumberOfOccurrencesByTopicId(topicID),
 		Path: GetRelativeFilepathForTopicPage(topicID),
 	})
 
@@ -248,7 +248,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	}
 
 	epubMatches := []EPUBMatch{}
-	for _, epubForTopicWithNumberOfMatchedPages := range db.GetEpubsForTopicWithNumberOfMatchedPages(topicID) {
+	for _, epubForTopicWithNumberOfMatchedPages := range mysql.GetEpubsForTopicWithNumberOfMatchedPages(topicID) {
 		epubMatches = append(epubMatches, EPUBMatch{
 			Title:               epubForTopicWithNumberOfMatchedPages.Title,
 			Authors:             epubForTopicWithNumberOfMatchedPages.Author,
@@ -259,7 +259,7 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	}
 
 	externalRelations := []ExternalRelation{}
-	for _, externalRelationsForTopic := range db.GetExternalRelationsForTopics(topicID) {
+	for _, externalRelationsForTopic := range mysql.GetExternalRelationsForTopics(topicID) {
 		externalRelations = append(externalRelations, ExternalRelation{
 			Relationship: externalRelationsForTopic.Relationship,
 			URL: externalRelationsForTopic.URL,

@@ -21,6 +21,9 @@ import (
 	"os/exec"
 	"path/filepath"
 	"path"
+
+	"golang.org/x/text/collate"
+	"golang.org/x/text/language"
 )
 
 func CreateFileWithAllParentDirectories(file string) (f *os.File, err error) {
@@ -96,4 +99,9 @@ func SnakeToCamelCase(snakeCaseString string) (camelCaseString string){
 	}
 
 	return
+}
+
+func CompareUsingEnglishCollation(a, b string) (int) {
+	cl := collate.New(language.English, collate.Loose)
+	return cl.CompareString(a, b)
 }

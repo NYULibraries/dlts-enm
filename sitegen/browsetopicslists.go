@@ -81,7 +81,7 @@ func fillBrowseTopicsListsCategories() {
 		browseTopicsListsEntry := BrowseTopicsListsEntry{
 			Label : strings.ToUpper(letter),
 			FileBasename : letter,
-			Regexp : "^" + letter,
+			Regexp : letter,
 		}
 		BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, browseTopicsListsEntry)
 	}
@@ -89,12 +89,12 @@ func fillBrowseTopicsListsCategories() {
 	BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, BrowseTopicsListsEntry{
 		Label : "0-9",
 		FileBasename : "0-9",
-		Regexp : "^[0-9]",
+		Regexp : "[0-9]",
 	})
 	BrowseTopicsListsCategories = append(BrowseTopicsListsCategories, BrowseTopicsListsEntry{
 		Label : "?#@",
 		FileBasename : "non-alphanumeric",
-		Regexp : "^[^a-z0-9]",
+		Regexp : "[^a-z0-9]",
 	})
 
 	return

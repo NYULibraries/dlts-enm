@@ -385,14 +385,26 @@ ORDER BY t.display_name_do_not_use, n.name
 
 func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topics []Topic) {
 	// sql query
-	var sqlstr = ` SELECT id, display_name, LEFT(display_name,1)` +
+	var sqlstr = `SELECT id, display_name,` +
+		` CASE WHEN LEFT( display_name, 1 ) = '"'` +
+		`      THEN LOWER( SUBSTR( display_name, 2 ) )` +
+		`      ELSE LOWER( display_name )` +
+		` END AS display_name_sort_key` +
+
 	` FROM hit_basket` +
-	` WHERE LEFT(display_name,1) SIMILAR TO '` + regexp + `[^a-z0-9]'` +
-	` ORDER BY display_name`;
+
+	` WHERE` +
+	` CASE WHEN LEFT( display_name, 1 ) = '"'` +
+	`      THEN LOWER( SUBSTR( display_name, 2, 1) )` +
+	`      ELSE LOWER( LEFT( display_name, 1 ) )` +
+    ` END SIMILAR TO '` + regexp + `'` +
+
+    ` ORDER BY display_name_sort_key`;
 
 	var (
 		id int
 		name string
+		sortKey string
 	)
 	rows, err := DB.Query(sqlstr)
 	if err != nil {
@@ -401,7 +413,7 @@ func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topics 
 	defer rows.Close()
 
 	for rows.Next() {
-		err := rows.Scan(&id, &name)
+		err := rows.Scan(&id, &name, &sortKey)
 		if err != nil {
 			panic(err)
 		}

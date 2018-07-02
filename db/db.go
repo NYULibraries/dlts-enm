@@ -23,11 +23,17 @@ import (
 	"strconv"
 	"strings"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/lib/pq"
 
 	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/tct"
 )
+
+type Topic struct {
+	ID          int
+	DisplayName string
+	DisplayNameSortKey string
+}
 
 var username string
 var password string
@@ -76,26 +82,27 @@ var weblinkVocabularyId int = 0
 var defaultEditorialReviewStatusStateId int = 1
 
 func init() {
-	Database = os.Getenv("ENM_DATABASE")
-	username = os.Getenv("ENM_DATABASE_USERNAME")
-	password = os.Getenv("ENM_DATABASE_PASSWORD")
+	Database = os.Getenv("ENM_POSTGRES_DATABASE")
+	username = os.Getenv("ENM_POSTGRES_DATABASE_USERNAME")
+	password = os.Getenv("ENM_POSTGRES_DATABASE_PASSWORD")
 
 	if Database == "" {
-		panic("db: ENM_DATABASE not set")
+		panic("db: ENM_POSTGRES_DATABASE not set")
 
 	}
 
 	if username == "" {
-		panic("db: ENM_DATABASE_USERNAME not set")
+		panic("db: ENM_POSTGRES_DATABASE_USERNAME not set")
 
 	}
 
 	if password == "" {
-		panic("db: ENM_DATABASE_PASSWORD not set")
+		panic("db: ENM_POSTGRES_DATABASE_PASSWORD not set")
 	}
 
+	connStr := fmt.Sprintf("postgres://%s:%s@localhost/%s?sslmode=disable", username, password, Database)
 	var err error
-	DB, err = sql.Open("mysql", username + ":" + password + "@/" + Database)
+	DB, err = sql.Open("postgres", connStr)
 	if err != nil {
 		panic(err.Error())
 	}
@@ -377,17 +384,28 @@ ORDER BY t.display_name_do_not_use, n.name
 	return
 }
 
-func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topicsWithSortKeys []models.TopicsWithSortKeys) {
+func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topics []Topic) {
 	// sql query
-	var sqlstr = `SELECT` +
-		` tct_id, display_name_do_not_use` +
-		` FROM enm.topics_with_sort_keys` +
-		` WHERE LEFT(display_name_do_not_use_sort_key, 1) REGEXP "` + regexp + `"` +
-		` ORDER BY display_name_do_not_use_sort_key`
+	var sqlstr = `SELECT id, display_name,` +
+		` CASE WHEN LEFT( display_name, 1 ) = '"'` +
+		`      THEN LOWER( SUBSTR( display_name, 2 ) )` +
+		`      ELSE LOWER( display_name )` +
+		` END AS display_name_sort_key` +
+
+	` FROM hit_basket` +
+
+	` WHERE` +
+	` CASE WHEN LEFT( display_name, 1 ) = '"'` +
+	`      THEN LOWER( SUBSTR( display_name, 2, 1) )` +
+	`      ELSE LOWER( LEFT( display_name, 1 ) )` +
+    ` END SIMILAR TO '` + regexp + `'` +
+
+    ` ORDER BY display_name_sort_key`;
 
 	var (
 		id int
 		name string
+		sortKey string
 	)
 	rows, err := DB.Query(sqlstr)
 	if err != nil {
@@ -396,13 +414,14 @@ func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topicsW
 	defer rows.Close()
 
 	for rows.Next() {
-		err := rows.Scan(&id, &name)
+		err := rows.Scan(&id, &name, &sortKey)
 		if err != nil {
 			panic(err)
 		}
-		topicsWithSortKeys = append(topicsWithSortKeys, models.TopicsWithSortKeys{
-			TctID: id,
-			DisplayNameDoNotUse: name,
+		topics = append(topics, Topic{
+			ID: id,
+			DisplayName: name,
+			DisplayNameSortKey: sortKey,
 		})
 	}
 	err = rows.Err()

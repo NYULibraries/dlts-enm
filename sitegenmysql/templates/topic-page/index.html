@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ENM">
+  <title>ENM Topic: {{.DisplayName}}</title>
+  <link rel="stylesheet" href="{{.Paths.WebRoot}}/shared/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+  <link rel="stylesheet" href="{{.Paths.WebRoot}}/shared/css/bulma.css">
+</head>
+
+<body>
+  {{template "banner.html" .}}
+  <main class="enm-topicpage">
+    <section class="hero  is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <header class="columns is-vcentered">
+            <div class="column is-two-thirds">
+              <div class="supertitle ">
+                TOPIC
+              </div>
+              <div class="title enm-topictitle">
+                {{.DisplayName}}
+                {{if .AlternateNames}}
+                <span class="subtitle">
+                    {{$numberOfAlternateNames := len .AlternateNames}}
+                    {{if gt $numberOfAlternateNames 1}}
+                        (Alternative names: {{stringsJoin .AlternateNames}})
+                    {{else}}
+                        (Alternate name: {{.AlternateNames}})
+                    {{end}}
+                </span>
+                {{end}}
+              </div>
+            </div>
+            {{if .ExternalRelations}}
+            <div class="column enm-linked-data">
+              <article class="message">
+                <div class="message-header">Linked Data
+                </div>
+                <div class="message-body">
+                  {{$lastIndex := lastIndex .ExternalRelations}}
+                  {{range $index, $relation := .ExternalRelations}}
+                  <a href="{{$relation.URL}}">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                      {{$relation.Vocabulary}}: {{$relation.URL}} ({{$relation.Relationship}})
+                  </a>
+                  {{if ne $index $lastIndex}}<br>{{end}}
+                  {{end}}
+                </div>
+              </article>
+            </div>
+            {{end}}
+          </header>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="enm-topic-items columns ">
+          <div id="force-simulation" class="enm-topicmap column is-two-thirds">
+            <svg viewBox="100 30 700 300" preserveAspectRatio="xMinYMin meet" style="height:100%; width:100%">
+            </svg>
+          </div>
+          <div class=" enm-books-with-topic column">
+            <h2 class="enm-title">This topic referenced in:</h2>
+            {{range .EPUBMatches}}
+            {{template "epub.html" .}}
+            {{end}}
+            <hr>
+            <article class="box">
+              <a href="#">Leave feedback</a> on this topic
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>var visualizationData = {{.VisualizationData}}</script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="{{.Paths.WebRoot}}/shared/js/topic-page.js"></script>
+</body>
+
+</html>

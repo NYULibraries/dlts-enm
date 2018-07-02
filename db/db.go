@@ -32,6 +32,7 @@ import (
 type Topic struct {
 	ID          int
 	DisplayName string
+	DisplayNameSortKey string
 }
 
 var username string
@@ -420,6 +421,7 @@ func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topics 
 		topics = append(topics, Topic{
 			ID: id,
 			DisplayName: name,
+			DisplayNameSortKey: sortKey,
 		})
 	}
 	err = rows.Err()

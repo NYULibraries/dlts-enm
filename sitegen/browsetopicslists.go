@@ -18,9 +18,11 @@ import (
 	"html/template"
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db"
+	"github.com/nyulibraries/dlts-enm/util"
 )
 
 type BrowseTopicsListPageData struct{
@@ -103,6 +105,12 @@ func GenerateDynamicBrowseTopicsListsFromDatabase() {
 
 	for _, browseTopicsListsCategory := range browseTopicsListsCategories {
 		topics = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
+
+		sort.Slice(topics, func(i, j int) bool {
+			return util.CompareUsingEnglishCollation(
+				topics[i].DisplayNameSortKey, topics[j].DisplayNameSortKey) == -1
+		} )
+
 		filename := browseTopicsListsCategory.FileBasename + ".html"
 		browseTopicsListPageData :=
 			CreateBrowseTopicsListPageData(topics, browseTopicsListsCategory.Label, browseTopicsListsCategories)

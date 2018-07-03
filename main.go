@@ -25,8 +25,6 @@ import (
 
 //go:generate xo postgres://${ENM_POSTGRES_DATABASE_USERNAME}:${ENM_POSTGRES_DATABASE_PASSWORD}@localhost/${ENM_POSTGRES_DATABASE}?sslmode=disable --query-mode --query-trim --query-strip --query "SELECT hb.id, hb.display_name, hh.name FROM hit_basket hb INNER JOIN hit_hit hh ON hb.id = hh.basket_id ORDER BY display_name, name" --query-type TopicAlternateNames --out db/postgres/models
 
-//go:generate xo/scripts/postgres/fix-relationrelationtype.xo.go.sh
-
 func main() {
 	if err := cmd.RootCmd.Execute(); err != nil {
 		fmt.Println(err)

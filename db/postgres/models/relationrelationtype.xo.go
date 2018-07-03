@@ -12,7 +12,6 @@ import (
 type RelationRelationtype struct {
 	ID          int            `json:"id"`          // id
 	Rtype       string         `json:"rtype"`       // rtype
-// Duplicate Rtype field declaration removed
 	Description sql.NullString `json:"description"` // description
 	RoleFrom    string         `json:"role_from"`   // role_from
 	RoleTo      string         `json:"role_to"`     // role_to

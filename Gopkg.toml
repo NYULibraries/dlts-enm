@@ -47,6 +47,10 @@ required = ["github.com/xo/xo"]
   version = "1.0.2"
 
 [[constraint]]
+  name = "github.com/xo/xo"
+  revision = "61f41375ea6f0f04be136dc9dd21ddb89228ac46"
+
+[[constraint]]
   name = "golang.org/x/text"
   version = "0.3.0"
 

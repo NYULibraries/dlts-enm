@@ -2,10 +2,43 @@
 
 
 [[projects]]
+  name = "cloud.google.com/go"
+  packages = ["civil"]
+  revision = "777200caa7fb8936aed0f12b1fd79af64cc83ec9"
+  version = "v0.24.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/alexflint/go-arg"
+  packages = ["."]
+  revision = "f7c0423bd11ee80ab81d25c6d46f492998af8547"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/alexflint/go-scalar"
+  packages = ["."]
+  revision = "e80c3b7ed292b052c7083b6fd7154a8422c33f65"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/denisenkom/go-mssqldb"
+  packages = [
+    ".",
+    "internal/cp"
+  ]
+  revision = "3724b4745ca99cd0374ace516e93c022c00dfda9"
+
+[[projects]]
   name = "github.com/fsnotify/fsnotify"
   packages = ["."]
   revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
   version = "v1.4.7"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/gedex/inflector"
+  packages = ["."]
+  revision = "16278e9db8130ac7ec405dc174cfb94344f16325"
 
 [[projects]]
   name = "github.com/go-sql-driver/mysql"
@@ -38,6 +71,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/knq/snaker"
+  packages = ["."]
+  revision = "d9ad1e7f342a5b58202aa92c5f1106d7bb8b9c73"
+
+[[projects]]
+  branch = "master"
   name = "github.com/lib/pq"
   packages = [
     ".",
@@ -52,6 +91,12 @@
   version = "v1.8.0"
 
 [[projects]]
+  name = "github.com/mattn/go-sqlite3"
+  packages = ["."]
+  revision = "25ecb14adfc7543176f7d85291ec7dba82c6f7e4"
+  version = "v1.9.0"
+
+[[projects]]
   branch = "master"
   name = "github.com/mitchellh/mapstructure"
   packages = ["."]
@@ -62,6 +107,12 @@
   packages = ["."]
   revision = "c01d1270ff3e442a8a57cddc1c92dc1138598194"
   version = "v1.2.0"
+
+[[projects]]
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
+  version = "v0.8.0"
 
 [[projects]]
   branch = "master"
@@ -110,6 +161,48 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/xo/dburl"
+  packages = ["."]
+  revision = "cd61869a0c089d2d6fa2f73676dceeaa958132ca"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/xo/xo"
+  packages = [
+    ".",
+    "internal",
+    "loaders",
+    "models",
+    "tplbin"
+  ]
+  revision = "61f41375ea6f0f04be136dc9dd21ddb89228ac46"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/xo/xoutil"
+  packages = ["."]
+  revision = "46189f4026a5a53537a3d5b99092accf968d572b"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/crypto"
+  packages = ["md4"]
+  revision = "a49355c7e3f8fe157a85be2f77e6e269a0f89602"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/net"
+  packages = ["context"]
+  revision = "ed29d75add3d7c4bf7ca65aac0c6df3d1420216f"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sync"
+  packages = ["errgroup"]
+  revision = "1d60e4601c6fd243af51cc01ddf169918a5407ca"
+
+[[projects]]
+  branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
   revision = "7138fd3d9dc8335c567ca206f4333fb75eb05d56"
@@ -139,6 +232,16 @@
   version = "v1.1.0"
 
 [[projects]]
+  name = "gopkg.in/rana/ora.v4"
+  packages = [
+    ".",
+    "date",
+    "num"
+  ]
+  revision = "7a9ff49e7315c80623bc2b49c64fba1900e07209"
+  version = "v4.1.15"
+
+[[projects]]
   name = "gopkg.in/yaml.v2"
   packages = ["."]
   revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
@@ -147,6 +250,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "e0f7fb6c6902a7cd31998a03ccb21414ff6c3823bc464634b2a2ce1be214b9b7"
+  inputs-digest = "ed3429a75ec5f229edf99ab480ffcf9dccedade8f8fd13cc441d62f9d0211201"
   solver-name = "gps-cdcl"
   solver-version = 1

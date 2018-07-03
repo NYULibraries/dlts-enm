@@ -24,6 +24,7 @@
 #   go-tests = true
 #   unused-packages = true
 
+required = ["github.com/xo/xo"]
 
 [[constraint]]
   name = "github.com/go-sql-driver/mysql"

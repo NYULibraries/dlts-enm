@@ -5,7 +5,7 @@ package models
 
 // TopicAlternateName represents a row from '[custom topic_alternate_name]'.
 type TopicAlternateName struct {
-	ID          int    // id
+	TctID       int    // tct_id
 	DisplayName string // display_name
 	Name        string // name
 }
@@ -15,7 +15,7 @@ func GetTopicAlternateNames(db XODB) ([]*TopicAlternateName, error) {
 	var err error
 
 	// sql query
-	const sqlstr = `SELECT hb.id, hb.display_name, hh.name FROM hit_basket hb INNER JOIN hit_hit hh ON hb.id = hh.basket_id ORDER BY display_name, name`
+	const sqlstr = `SELECT hb.id AS tct_id, hb.display_name, hh.name FROM hit_basket hb INNER JOIN hit_hit hh ON hb.id = hh.basket_id ORDER BY display_name, name`
 
 	// run query
 	XOLog(sqlstr)
@@ -31,7 +31,7 @@ func GetTopicAlternateNames(db XODB) ([]*TopicAlternateName, error) {
 		tan := TopicAlternateName{}
 
 		// scan
-		err = q.Scan(&tan.ID, &tan.DisplayName, &tan.Name)
+		err = q.Scan(&tan.TctID, &tan.DisplayName, &tan.Name)
 		if err != nil {
 			return nil, err
 		}

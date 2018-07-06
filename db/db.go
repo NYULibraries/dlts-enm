@@ -338,8 +338,8 @@ ORDER BY t2.display_name_do_not_use`
 	return
 }
 
-func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*models.TopicAlternateName) {
-	topicsWithAlternateNames, err := models.GetTopicAlternateNames(DB)
+func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*TopicAlternateName) {
+	topicsWithAlternateNames, err := pmodels.GetTopicAlternateNames(DB)
 	if err != nil {
 		panic("db.GetTopicsWithAlternateNamesAll: " + err.Error())
 	}

@@ -348,7 +348,7 @@ func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*TopicAlternat
 }
 
 // TODO: DRY up -- this query duplicates xo/queries/topics-alternate-names.sql
-func GetTopicsWithAlternateNamesByTopicIDs(topicIDs []string) (topicsWithAlternateNames []*models.TopicAlternateName) {
+func GetTopicsWithAlternateNamesByTopicIDs(topicIDs []string) (topicsWithAlternateNames []*TopicAlternateName) {
 	topicIDsList := strings.Join(topicIDs, ",")
 
 	sqlstr := fmt.Sprintf(`SELECT t.tct_id, t.display_name_do_not_use, n.name
@@ -373,9 +373,9 @@ ORDER BY t.display_name_do_not_use, n.name
 		if err != nil {
 			panic(err)
 		}
-		topicsWithAlternateNames = append(topicsWithAlternateNames, &models.TopicAlternateName{
+		topicsWithAlternateNames = append(topicsWithAlternateNames, &pmodels.TopicAlternateName{
 			TctID: tctID,
-			DisplayNameDoNotUse: displayName,
+			DisplayName: displayName,
 			Name: name,
 		})
 	}

@@ -175,16 +175,15 @@ func GenerateTopicPagesFromCache(){
 }
 
 func GenerateTopicPagesFromDatabase() {
-	var topicsWithAlternateNames []*models.TopicAlternateName
+	var topicsWithAlternateNames []*db.TopicAlternateName
 	if (len(TopicIDs) > 0) {
 		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesByTopicIDs(TopicIDs)
 	} else {
 		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesAll()
 	}
-
 	var alternateNames []string
 	inProgressTopicID := topicsWithAlternateNames[0].TctID
-	inProgressTopicName := topicsWithAlternateNames[0].DisplayNameDoNotUse
+	inProgressTopicName := topicsWithAlternateNames[0].DisplayName
 	for _, topicWithAlternateNames := range topicsWithAlternateNames{
 		// Finished getting alternate names for in-process topic.
 		if (topicWithAlternateNames.TctID != inProgressTopicID) {

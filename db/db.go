@@ -26,6 +26,7 @@ import (
 	_ "github.com/lib/pq"
 
 	"github.com/nyulibraries/dlts-enm/db/mysql/models"
+	pmodels "github.com/nyulibraries/dlts-enm/db/postgres/models"
 	"github.com/nyulibraries/dlts-enm/tct"
 )
 
@@ -34,6 +35,8 @@ type Topic struct {
 	DisplayName string
 	DisplayNameSortKey string
 }
+
+type TopicAlternateName = pmodels.TopicAlternateName
 
 var username string
 var password string

@@ -26,7 +26,6 @@ import (
 
 	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
-	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
@@ -196,7 +195,7 @@ func GenerateTopicPagesFromDatabase() {
 			// Clear alternate names and set new in progress topic.
 			alternateNames = []string{}
 			inProgressTopicID = topicWithAlternateNames.TctID
-			inProgressTopicName = topicWithAlternateNames.DisplayNameDoNotUse
+			inProgressTopicName = topicWithAlternateNames.DisplayName
 		}
 
 		if (topicWithAlternateNames.Name != inProgressTopicName) {

@@ -20,6 +20,7 @@ import (
 	"fmt"
 	"os"
 	"regexp"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -347,41 +348,20 @@ func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*TopicAlternat
 	return topicsWithAlternateNames
 }
 
-// TODO: DRY up -- this query duplicates xo/queries/topics-alternate-names.sql
-func GetTopicsWithAlternateNamesByTopicIDs(topicIDs []string) (topicsWithAlternateNames []*TopicAlternateName) {
-	topicIDsList := strings.Join(topicIDs, ",")
+func GetTopicsWithAlternateNamesByTopicIDs(topicIDs []string) (topicsWithAlternateNamesByTopicIDs []*TopicAlternateName) {
+	sort.Strings(topicIDs)
 
-	sqlstr := fmt.Sprintf(`SELECT t.tct_id, t.display_name_do_not_use, n.name
-FROM topics t INNER JOIN names n ON t.tct_id = n.topic_id
-WHERE t.tct_id IN (%s)
-ORDER BY t.display_name_do_not_use, n.name
-`, topicIDsList)
+	topicsWithAlternateNamesByTopicIDs = make([]*TopicAlternateName, 0)
 
-	var (
-		tctID int
-		displayName string
-		name string
-	)
-	rows, err := DB.Query(sqlstr)
-	if err != nil {
-		panic(err)
-	}
-	defer rows.Close()
+	topicsWithAlternateNamesAll := GetTopicsWithAlternateNamesAll()
 
-	for rows.Next() {
-		err := rows.Scan(&tctID, &displayName, &name)
-		if err != nil {
-			panic(err)
+	for _, topicWithAlternateName := range topicsWithAlternateNamesAll {
+		topicIDToTest := strconv.Itoa(topicWithAlternateName.TctID)
+		i := sort.SearchStrings( topicIDs, topicIDToTest )
+		if i < len(topicIDs) && topicIDs[i] == topicIDToTest {
+			topicsWithAlternateNamesByTopicIDs =
+				append(topicsWithAlternateNamesByTopicIDs, topicWithAlternateName)
 		}
-		topicsWithAlternateNames = append(topicsWithAlternateNames, &pmodels.TopicAlternateName{
-			TctID: tctID,
-			DisplayName: displayName,
-			Name: name,
-		})
-	}
-	err = rows.Err()
-	if err != nil {
-		panic(err)
 	}
 
 	return

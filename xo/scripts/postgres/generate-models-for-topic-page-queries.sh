@@ -13,4 +13,5 @@ function xo_generate() {
         --out db/postgres/models
 }
 
+xo_generate xo/queries/postgres/epubs-for-topic-with-number-of-matched-pages.sql EpubsForTopicWithNumberOfMatchedPages
 xo_generate xo/queries/postgres/related-topic-names-for-topic-with-number-of-occurrences.sql RelatedTopicNamesForTopicWithNumberOfOccurrences

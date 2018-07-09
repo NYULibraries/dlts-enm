@@ -37,6 +37,7 @@ type Topic struct {
 	DisplayNameSortKey string
 }
 
+type RelatedTopicNamesForTopicWithNumberOfOccurrences = pmodels.RelatedTopicNamesForTopicWithNumberOfOccurrences
 type TopicAlternateName = pmodels.TopicAlternateName
 
 var username string
@@ -248,8 +249,11 @@ func GetPageTopicNamesByPageId(pageId int) (pageTopicNames []models.PageTopicNam
 	return
 }
 
-func GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID int) (relatedTopicsWithNumberOfOccurrences []*models.RelatedTopicNamesForTopicWithNumberOfOccurrences) {
-	relatedTopicsWithNumberOfOccurrences, err := models.RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id(DB, topicID)
+func GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID int) (relatedTopicsWithNumberOfOccurrences []*RelatedTopicNamesForTopicWithNumberOfOccurrences) {
+	// xo-generated model requires 4 topic IDs because there are 4 placeholders
+	// in the query for the 4 times the topic ID is needed.
+	relatedTopicsWithNumberOfOccurrences, err :=
+		pmodels.RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id_1Topic_id_2Topic_id_3Topic_id_4(DB, topicID, topicID, topicID, topicID)
 	if err != nil {
 		panic("db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences: " + err.Error())
 	}

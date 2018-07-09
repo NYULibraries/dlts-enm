@@ -216,21 +216,21 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	relatedTopicNamesWithNumberOfOccurrences := db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID)
 	for _, relatedTopic := range relatedTopicNamesWithNumberOfOccurrences {
 		relatedTopics = append(relatedTopics, RelatedTopic{
-			ID: relatedTopic.Topic2ID,
-			Name: relatedTopic.DisplayNameDoNotUse,
+			ID: relatedTopic.ID,
+			Name: relatedTopic.DisplayName,
 			NumberOfOccurrences: int(relatedTopic.NumberOfOccurrences),
 		})
 
 		visualizationData.Links = append(visualizationData.Links, Link{
 			Source: topicID,
-			Target: relatedTopic.Topic2ID,
+			Target: relatedTopic.ID,
 		})
 
 		visualizationData.Nodes = append(visualizationData.Nodes, Node{
-			Name: relatedTopic.DisplayNameDoNotUse,
-			ID: relatedTopic.Topic2ID,
+			Name: relatedTopic.DisplayName,
+			ID: relatedTopic.ID,
 			OCount: int(relatedTopic.NumberOfOccurrences),
-			Path: GetRelativeFilepathForTopicPage(relatedTopic.Topic2ID),
+			Path: GetRelativeFilepathForTopicPage(relatedTopic.ID),
 		})
 	}
 

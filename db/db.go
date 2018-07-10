@@ -40,6 +40,7 @@ type Topic struct {
 type EpubsForTopicWithNumberOfMatchedPages = pmodels.EpubsForTopicWithNumberOfMatchedPages
 type RelatedTopicNamesForTopicWithNumberOfOccurrences = pmodels.RelatedTopicNamesForTopicWithNumberOfOccurrences
 type TopicAlternateName = pmodels.TopicAlternateName
+type TopicNumberOfOccurrences = pmodels.TopicNumberOfOccurrences
 
 var username string
 var password string
@@ -294,7 +295,7 @@ func GetTopicsAll() (topics []models.Topic) {
 }
 
 func GetTopicNumberOfOccurrencesByTopicId(topicID int) int {
-	topicNumberOfOccurrences, err := models.TopicNumberOfOccurrencesByTopic_id(DB, topicID)
+	topicNumberOfOccurrences, err := pmodels.TopicNumberOfOccurrencesByTopic_id(DB, topicID)
 	if err != nil {
 		panic("db.GetTopicNumberOfOccurrencesByTopicId: " + err.Error())
 	}

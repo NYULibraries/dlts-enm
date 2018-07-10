@@ -37,6 +37,7 @@ type Topic struct {
 	DisplayNameSortKey string
 }
 
+type EpubsForTopicWithNumberOfMatchedPages = pmodels.EpubsForTopicWithNumberOfMatchedPages
 type RelatedTopicNamesForTopicWithNumberOfOccurrences = pmodels.RelatedTopicNamesForTopicWithNumberOfOccurrences
 type TopicAlternateName = pmodels.TopicAlternateName
 
@@ -173,8 +174,8 @@ func ClearTables() {
 	tx.Commit()
 }
 
-func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*models.EpubsForTopicWithNumberOfMatchedPages{
-	epubsForTopicWithNumberOfMatchedPages, err := models.EpubsForTopicWithNumberOfMatchedPagesByTopic_id(DB, topicID)
+func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*EpubsForTopicWithNumberOfMatchedPages{
+	epubsForTopicWithNumberOfMatchedPages, err := pmodels.EpubsForTopicWithNumberOfMatchedPagesByTopic_id(DB, topicID)
 	if err != nil {
 		panic("db.GetEpubsForTopicWithNumberOfMatchedPages: " + err.Error())
 	}

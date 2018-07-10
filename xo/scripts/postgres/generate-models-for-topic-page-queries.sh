@@ -14,5 +14,6 @@ function xo_generate() {
 }
 
 xo_generate xo/queries/postgres/epubs-for-topic-with-number-of-matched-pages.sql EpubsForTopicWithNumberOfMatchedPages
+xo_generate xo/queries/postgres/external-relations-for-topic.sql ExternalRelationsForTopic
 xo_generate xo/queries/postgres/related-topic-names-for-topic-with-number-of-occurrences.sql RelatedTopicNamesForTopicWithNumberOfOccurrences
 xo_generate xo/queries/postgres/topic-number-of-occurrences.sql TopicNumberOfOccurrences

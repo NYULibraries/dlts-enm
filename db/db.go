@@ -38,6 +38,7 @@ type Topic struct {
 }
 
 type EpubsForTopicWithNumberOfMatchedPages = pmodels.EpubsForTopicWithNumberOfMatchedPages
+type ExternalRelationsForTopic = pmodels.ExternalRelationsForTopic
 type RelatedTopicNamesForTopicWithNumberOfOccurrences = pmodels.RelatedTopicNamesForTopicWithNumberOfOccurrences
 type TopicAlternateName = pmodels.TopicAlternateName
 type TopicNumberOfOccurrences = pmodels.TopicNumberOfOccurrences
@@ -193,8 +194,8 @@ func GetEpubsNumberOfPages() (epubsNumberOfPages []*models.EpubsNumberOfPage) {
 	return epubsNumberOfPages
 }
 
-func GetExternalRelationsForTopics(topicID int) []*models.ExternalRelationsForTopic{
-	externalRelationsForTopic, err := models.ExternalRelationsForTopicsByTopic_id(DB, topicID)
+func GetExternalRelationsForTopics(topicID int) []*ExternalRelationsForTopic{
+	externalRelationsForTopic, err := pmodels.ExternalRelationsForTopicsByTopic_id(DB, topicID)
 	if err != nil {
 		panic("db.GetExternalRelationsForTopic: " + err.Error())
 	}

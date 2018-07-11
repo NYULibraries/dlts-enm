@@ -62,6 +62,10 @@ func Diff(path1 string, path2 string) (string, error) {
 	return string(outputBytes), nil
 }
 
+func GetNormalizedTopicNameForSorting(topicName string) string {
+	return strings.ToLower(strings.TrimPrefix(topicName, "\""))
+}
+
 func GetMapKeys(m map[string]string) (keys []string) {
 	keys = make([]string, len(m))
 

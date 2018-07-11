@@ -27,6 +27,7 @@ import (
 	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
 	"github.com/nyulibraries/dlts-enm/util"
+	"sort"
 )
 
 type EPUBMatch struct{
@@ -180,6 +181,9 @@ func GenerateTopicPagesFromDatabase() {
 	} else {
 		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesAll()
 	}
+
+	SortTopicsWithAlternateNames(topicsWithAlternateNames)
+
 	var alternateNames []string
 	inProgressTopicID := topicsWithAlternateNames[0].TctID
 	inProgressTopicName := topicsWithAlternateNames[0].DisplayName
@@ -214,6 +218,9 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	visualizationData := VisualizationData{}
 	relatedTopics := []RelatedTopic{}
 	relatedTopicNamesWithNumberOfOccurrences := db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID)
+
+	SortRelatedTopicNamesWithNumberOfOccurrences(relatedTopicNamesWithNumberOfOccurrences)
+
 	for _, relatedTopic := range relatedTopicNamesWithNumberOfOccurrences {
 		relatedTopics = append(relatedTopics, RelatedTopic{
 			ID: relatedTopic.ID,
@@ -329,4 +336,26 @@ func WritePage(topicPageData TopicPageData) (err error){
 	}
 
 	return nil
+}
+
+func SortRelatedTopicNamesWithNumberOfOccurrences(relatedTopicNamesWithNumberOfOccurrences []*db.RelatedTopicNamesForTopicWithNumberOfOccurrences) {
+	sort.Slice(relatedTopicNamesWithNumberOfOccurrences, func(i, j int) bool {
+		return util.CompareUsingEnglishCollation(
+			util.GetNormalizedTopicNameForSorting(relatedTopicNamesWithNumberOfOccurrences[i].DisplayName),
+			util.GetNormalizedTopicNameForSorting(relatedTopicNamesWithNumberOfOccurrences[j].DisplayName)) == -1
+	} )
+}
+
+func SortTopicsWithAlternateNames(topicAlternateNames []*db.TopicAlternateName) {
+	sort.Slice(topicAlternateNames, func(i, j int) bool {
+		return util.CompareUsingEnglishCollation(
+			util.GetNormalizedTopicNameForSorting(topicAlternateNames[i].Name),
+			util.GetNormalizedTopicNameForSorting(topicAlternateNames[j].Name)) == -1
+	} )
+
+	sort.Slice(topicAlternateNames, func(i, j int) bool {
+		return util.CompareUsingEnglishCollation(
+			util.GetNormalizedTopicNameForSorting(topicAlternateNames[i].DisplayName),
+			util.GetNormalizedTopicNameForSorting(topicAlternateNames[j].DisplayName)) == -1
+	} )
 }

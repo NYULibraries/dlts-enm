@@ -16,7 +16,7 @@ func ExternalRelationsForTopicsByTopic_id(db XODB, topic_id int) ([]*ExternalRel
 
 	// sql query
 	const sqlstr = `SELECT ` +
-		`SUBSTRING(oww.content FROM '^(.*) *\([^()]+\)$') AS vocabulary, ` +
+		`TRIM(both ' ' FROM SUBSTRING(oww.content FROM '^(.*)\([^()]+\)$')) AS vocabulary, ` +
 		`oww.url, ` +
 		`SUBSTRING(oww.content FROM '\(([^()]+)\)$') AS relationship ` +
 		` ` +

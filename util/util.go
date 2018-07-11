@@ -26,6 +26,11 @@ import (
 	"golang.org/x/text/language"
 )
 
+func CompareUsingEnglishCollation(a, b string) (int) {
+	cl := collate.New(language.English, collate.Loose)
+	return cl.CompareString(a, b)
+}
+
 func CreateFileWithAllParentDirectories(file string) (f *os.File, err error) {
 	f, err = os.Create(file)
 	if err != nil {
@@ -99,9 +104,4 @@ func SnakeToCamelCase(snakeCaseString string) (camelCaseString string){
 	}
 
 	return
-}
-
-func CompareUsingEnglishCollation(a, b string) (int) {
-	cl := collate.New(language.English, collate.Loose)
-	return cl.CompareString(a, b)
 }

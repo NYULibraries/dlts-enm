@@ -26,6 +26,11 @@ import (
 	"golang.org/x/text/language"
 )
 
+func CompareUsingEnglishCollation(a, b string) (int) {
+	cl := collate.New(language.English, collate.Loose)
+	return cl.CompareString(a, b)
+}
+
 func CreateFileWithAllParentDirectories(file string) (f *os.File, err error) {
 	f, err = os.Create(file)
 	if err != nil {
@@ -55,6 +60,10 @@ func Diff(path1 string, path2 string) (string, error) {
 	}
 
 	return string(outputBytes), nil
+}
+
+func GetNormalizedTopicNameForSorting(topicName string) string {
+	return strings.ToLower(strings.TrimPrefix(topicName, "\""))
 }
 
 func GetMapKeys(m map[string]string) (keys []string) {
@@ -99,9 +108,4 @@ func SnakeToCamelCase(snakeCaseString string) (camelCaseString string){
 	}
 
 	return
-}
-
-func CompareUsingEnglishCollation(a, b string) (int) {
-	cl := collate.New(language.English, collate.Loose)
-	return cl.CompareString(a, b)
 }

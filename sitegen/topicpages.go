@@ -26,8 +26,8 @@ import (
 
 	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
-	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/util"
+	"sort"
 )
 
 type EPUBMatch struct{
@@ -175,16 +175,18 @@ func GenerateTopicPagesFromCache(){
 }
 
 func GenerateTopicPagesFromDatabase() {
-	var topicsWithAlternateNames []*models.TopicAlternateName
+	var topicsWithAlternateNames []*db.TopicAlternateName
 	if (len(TopicIDs) > 0) {
 		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesByTopicIDs(TopicIDs)
 	} else {
 		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesAll()
 	}
 
+	SortTopicsWithAlternateNames(topicsWithAlternateNames)
+
 	var alternateNames []string
 	inProgressTopicID := topicsWithAlternateNames[0].TctID
-	inProgressTopicName := topicsWithAlternateNames[0].DisplayNameDoNotUse
+	inProgressTopicName := topicsWithAlternateNames[0].DisplayName
 	for _, topicWithAlternateNames := range topicsWithAlternateNames{
 		// Finished getting alternate names for in-process topic.
 		if (topicWithAlternateNames.TctID != inProgressTopicID) {
@@ -197,7 +199,7 @@ func GenerateTopicPagesFromDatabase() {
 			// Clear alternate names and set new in progress topic.
 			alternateNames = []string{}
 			inProgressTopicID = topicWithAlternateNames.TctID
-			inProgressTopicName = topicWithAlternateNames.DisplayNameDoNotUse
+			inProgressTopicName = topicWithAlternateNames.DisplayName
 		}
 
 		if (topicWithAlternateNames.Name != inProgressTopicName) {
@@ -216,23 +218,26 @@ func GenerateTopicPage(topicID int, topicDisplayName string, alternateNames []st
 	visualizationData := VisualizationData{}
 	relatedTopics := []RelatedTopic{}
 	relatedTopicNamesWithNumberOfOccurrences := db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID)
+
+	SortRelatedTopicNamesWithNumberOfOccurrences(relatedTopicNamesWithNumberOfOccurrences)
+
 	for _, relatedTopic := range relatedTopicNamesWithNumberOfOccurrences {
 		relatedTopics = append(relatedTopics, RelatedTopic{
-			ID: relatedTopic.Topic2ID,
-			Name: relatedTopic.DisplayNameDoNotUse,
+			ID: relatedTopic.ID,
+			Name: relatedTopic.DisplayName,
 			NumberOfOccurrences: int(relatedTopic.NumberOfOccurrences),
 		})
 
 		visualizationData.Links = append(visualizationData.Links, Link{
 			Source: topicID,
-			Target: relatedTopic.Topic2ID,
+			Target: relatedTopic.ID,
 		})
 
 		visualizationData.Nodes = append(visualizationData.Nodes, Node{
-			Name: relatedTopic.DisplayNameDoNotUse,
-			ID: relatedTopic.Topic2ID,
+			Name: relatedTopic.DisplayName,
+			ID: relatedTopic.ID,
 			OCount: int(relatedTopic.NumberOfOccurrences),
-			Path: GetRelativeFilepathForTopicPage(relatedTopic.Topic2ID),
+			Path: GetRelativeFilepathForTopicPage(relatedTopic.ID),
 		})
 	}
 
@@ -331,4 +336,26 @@ func WritePage(topicPageData TopicPageData) (err error){
 	}
 
 	return nil
+}
+
+func SortRelatedTopicNamesWithNumberOfOccurrences(relatedTopicNamesWithNumberOfOccurrences []*db.RelatedTopicNamesForTopicWithNumberOfOccurrences) {
+	sort.Slice(relatedTopicNamesWithNumberOfOccurrences, func(i, j int) bool {
+		return util.CompareUsingEnglishCollation(
+			util.GetNormalizedTopicNameForSorting(relatedTopicNamesWithNumberOfOccurrences[i].DisplayName),
+			util.GetNormalizedTopicNameForSorting(relatedTopicNamesWithNumberOfOccurrences[j].DisplayName)) == -1
+	} )
+}
+
+func SortTopicsWithAlternateNames(topicAlternateNames []*db.TopicAlternateName) {
+	sort.Slice(topicAlternateNames, func(i, j int) bool {
+		return util.CompareUsingEnglishCollation(
+			util.GetNormalizedTopicNameForSorting(topicAlternateNames[i].Name),
+			util.GetNormalizedTopicNameForSorting(topicAlternateNames[j].Name)) == -1
+	} )
+
+	sort.Slice(topicAlternateNames, func(i, j int) bool {
+		return util.CompareUsingEnglishCollation(
+			util.GetNormalizedTopicNameForSorting(topicAlternateNames[i].DisplayName),
+			util.GetNormalizedTopicNameForSorting(topicAlternateNames[j].DisplayName)) == -1
+	} )
 }

@@ -14,8 +14,8 @@ var epubsNumberOfPages map[string]int
 
 func Load() error {
 	epubsNumberOfPages = make(map[string]int)
-	for _, epubNumberOfPage := range db.GetEpubsNumberOfPages() {
-		epubsNumberOfPages[ epubNumberOfPage.Isbn ] = int(epubNumberOfPage.NumberOfPages)
+	for _, epubNumberOfPages := range db.GetEpubsNumberOfPages() {
+		epubsNumberOfPages[ epubNumberOfPages.Isbn ] = int(epubNumberOfPages.NumberOfPages)
 	}
 
 	pages := db.GetPagesAll()

@@ -18,7 +18,7 @@ func TopicNamesForPagesByPage_id(db XODB, page_id int) ([]*TopicNamesForPage, er
 	var err error
 
 	// sql query
-	const sqlstr = `SELECT ` +
+	const sqlstr = `SELECT DISTINCT ` +
 		`oo.location_id AS page_id, ` +
 		`hb.id AS topic_id, ` +
 		`hb.display_name AS topic_display_name, ` +

@@ -1,4 +1,4 @@
-SELECT
+SELECT DISTINCT
   oo.location_id AS page_id,
   hb.id AS topic_id,
   hb.display_name AS topic_display_name,

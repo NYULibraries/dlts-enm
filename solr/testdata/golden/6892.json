@@ -13,18 +13,18 @@
             "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
             "topicNames": [
                 "blog",
-                "blogs",
                 "Blogs",
+                "blogs",
                 "Civil society",
                 "civil society",
                 "Hypertext",
                 "Network",
                 "Networking",
-                "networks",
                 "Networks",
+                "networks",
                 "Track backs"
             ],
-            "topicNamesForDisplay": "[[\"blogs\",\"blog\",\"Blogs\"],[\"civil society\",\"Civil society\"],[\"Hypertext\"],[\"Networking\",\"Network\",\"networks\",\"Networks\"],[\"Track backs\"]]",
+            "topicNamesForDisplay": "[[\"blogs\",\"blog\",\"Blogs\"],[\"civil society\",\"Civil society\"],[\"Hypertext\"],[\"Networking\",\"Network\",\"Networks\",\"networks\"],[\"Track backs\"]]",
             "topicNames_facet": [
                 "blogs",
                 "civil society",

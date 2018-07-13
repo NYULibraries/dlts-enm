@@ -23,10 +23,10 @@
                 "kleptomania",
                 "shopping",
                 "Woman",
-                "women",
-                "Women"
+                "Women",
+                "women"
             ],
-            "topicNamesForDisplay": "[[\"advertisements\",\"ad\",\"Advertisements\"],[\"animals\"],[\"clothing\"],[\"eighteenth century\"],[\"envy\"],[\"inner-directedness\"],[\"kleptomania\"],[\"shopping\"],[\"Woman\",\"women\",\"Women\"]]",
+            "topicNamesForDisplay": "[[\"advertisements\",\"ad\",\"Advertisements\"],[\"animals\"],[\"clothing\"],[\"eighteenth century\"],[\"envy\"],[\"inner-directedness\"],[\"kleptomania\"],[\"shopping\"],[\"Woman\",\"Women\",\"women\"]]",
             "topicNames_facet": [
                 "advertisements",
                 "animals",

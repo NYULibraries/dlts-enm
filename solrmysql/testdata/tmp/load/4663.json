@@ -1,0 +1,24 @@
+{
+    "add": [
+        {
+            "authors": "Gabrys, Jennifer",
+            "epubNumberOfPages": 238,
+            "id": 4663,
+            "isbn": "9780472029402",
+            "pageLocalId": "page_157",
+            "pageNumberForDisplay": "157",
+            "pageSequenceNumber": 158,
+            "pageText": "\n\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Digital Rubbish: A Natural History of Electronics",
+            "topicNames": [
+                "ICL"
+            ],
+            "topicNamesForDisplay": "[[\"ICL\"]]",
+            "topicNames_facet": [
+                "ICL"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

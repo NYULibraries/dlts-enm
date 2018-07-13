@@ -1,0 +1,28 @@
+{
+    "add": [
+        {
+            "authors": "John Marshall",
+            "epubNumberOfPages": 373,
+            "id": 13087,
+            "isbn": "9780814731437",
+            "pageLocalId": "page_243",
+            "pageNumberForDisplay": "243",
+            "pageSequenceNumber": 254,
+            "pageText": "must ultimately be responsible to Congress, or their constituted authority.121\nThe other justices expressed a narrower view of the powers of the Continental Congress, though agreeing that the states had given to Congress external sovereignty sufficient for the present case.122 Justice Blair noted the argument that New Hampshire could revoke the authority it had given to Congress and said that a satisfactory answer was made to this: if the state had the right, it was never exercised.123\nAn overriding issue in the early federal courts was their power to review state acts and, especially, acts of Congress.124 Paterson had introduced the supremacy clause of the Constitution during the convention as part of the New Jersey plan.125 In addition, Oliver Ellsworth and William Paterson had coauthored in the Senate the Judiciary Act of 1789.126 Section 25 of that act gave to the federal judiciary not only the power to pass upon state legislation but also the power to reverse or affirm a decision of a state court passing upon the validity of an act of Congress.127 In the April Term of 1795, Justice Paterson, sitting in the Pennsylvania District of the United States Circuit Court, met the issue judicially for the first time.128 The Vanhorne’s Lessee case involved conflicting claims of title to Pennsylvania land in the possession of the defendant.129 The plaintiff based his claim on a chain of title from the proprietors of the colony; the defendant based his on the claim of settlers from Connecticut, whose title rested on a “quieting and confirming act” passed by the Pennsylvania legislature.130 The act declared title to the land to be in the settlers and recited that those who had title to the land who will be “deprived thereof by the operation of this act” should be compensated in equivalent lands.131\nPaterson’s charge to the jury is reported.132 The principal question he considered was the constitutionality of the quieting and confirming act.133 Eight years before Marbury v. Madison134 Paterson delivered the following charge:\nWhat is a Constitution? It is the form of government, delineated by the mighty hand of the people, in which certain first principles of fundamental laws are established. The Constitution is certain and fixed; it contains the permanent will of the people, and is the supreme law of the land; it is paramount to the Power of the Legislature, and can be revoked or altered only by the authority that made it. . . . What are Legislatures? Creatures of the Constitution; they owe their existence to the Constitution; they derive their ",
+            "publisher": "New York University Press",
+            "title": "Seriatim",
+            "topicNames": [
+                "Judicial review -- and William Paterson",
+                "Stuart v. Laird (1803)",
+                "Vanhornes's Lessee v. Dorrance (1795)"
+            ],
+            "topicNamesForDisplay": "[[\"Judicial review -- and William Paterson\"],[\"Stuart v. Laird (1803)\"],[\"Vanhornes's Lessee v. Dorrance (1795)\"]]",
+            "topicNames_facet": [
+                "Judicial review -- and William Paterson",
+                "Stuart v. Laird (1803)",
+                "Vanhornes's Lessee v. Dorrance (1795)"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

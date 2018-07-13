@@ -1,0 +1,20 @@
+{
+    "add": [
+        {
+            "authors": "Bill Ong Hing",
+            "epubNumberOfPages": 256,
+            "id": 18295,
+            "isbn": "9780814735237",
+            "pageLocalId": "page_v",
+            "pageNumberForDisplay": "v",
+            "pageSequenceNumber": 5,
+            "pageText": "For my children, Eric, Sharon, and Julianne\n",
+            "publisher": "NEW YORK UNIVERSITY PRESS",
+            "title": "TO BE AN AMERICAN",
+            "topicNames": null,
+            "topicNamesForDisplay": "[]",
+            "topicNames_facet": null,
+            "yearOfPublication": 0
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "add": [
+        {
+            "authors": "Ben-Ami Scharfstein",
+            "epubNumberOfPages": 240,
+            "id": 18637,
+            "isbn": "9780814779163",
+            "pageLocalId": "page_73",
+            "pageNumberForDisplay": "73",
+            "pageSequenceNumber": 91,
+            "pageText": "necessary, desirable, and dangerous—something that can be done to good effect only if we give things general names and learn standard reactions to each such name, as if everything with the same class-name were identical. This basis in experience is strengthened by what we usually learn of science. Biology now teaches that a living body is ruled in form and function by the structure of its genes; physics has long taught that its equations rule nature with inescapable precision; and mathematics has always taught that its abstract structures are truths that perhaps rule the whole of existence. All of these practical and theoretical lessons are reinforced by the passion of certain thinkers, notably mathematicians, for abstract thought and are summed up metaphysically in realism (Davis and Hersh 1981, 318–22, 378–79).\nThe basis in experience for nominalism must be the repeated lesson that individual human beings react very differently, that appearances deceive, and that generalizations are more likely to be inadequate rules of thumb than truths always to be honored and obeyed.\nTemperament also plays a role in the choice between nominalism and realism. The person who is especially aware of the finer details of experience, who takes an esthetic pleasure in nuance, leans, it can be supposed, toward nominalism. The nature of true nominalists is to decentralize experience, democratize it, and make light of its constancy, while the nature of true realists is to center experience, endow its hierarchies with ontological authority, and make as much as possible of its constancy.\nAs everyone knows, the debate between nominalism and realism is one of the enduring themes of the history of philosophy. Both positions have proved difficult. Aristotle, who along with Plato began the classic debate, was almost always a firm but moderate realist. To him, it was the form of things that allowed the intellect to grasp them for what they were. Their individual peculiarities were known not by the intellect, he said, but by perception. Unlike Plato, Aristotle refused to believe that the individual’s essence, form, or nature existed separately (except in the case of “the active reason”). He took it to be a fact that an individual thing could be grasped, with all its peculiarities, as a whole; but he had no developed, ",
+            "publisher": "New York University Press",
+            "title": "The Dilemma of Context",
+            "topicNames": [
+                "Aristotle",
+                "Biology",
+                "Davis, P. J.",
+                "Generalizations",
+                "Hersh, Reuben",
+                "Mathematics",
+                "physics",
+                "Physics",
+                "Plato",
+                "Science",
+                "science",
+                "Temperament"
+            ],
+            "topicNamesForDisplay": "[[\"Aristotle\"],[\"Biology\"],[\"Davis, P. J.\"],[\"Generalizations\"],[\"Hersh, Reuben\"],[\"Mathematics\"],[\"physics\",\"Physics\"],[\"Plato\"],[\"science\",\"Science\"],[\"Temperament\"]]",
+            "topicNames_facet": [
+                "Aristotle",
+                "Biology",
+                "Davis, P. J.",
+                "Generalizations",
+                "Hersh, Reuben",
+                "Mathematics",
+                "physics",
+                "Plato",
+                "science",
+                "Temperament"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "add": [
+        {
+            "authors": "Shackelford, Laura",
+            "epubNumberOfPages": 273,
+            "id": 5365,
+            "isbn": "9780472120680",
+            "pageLocalId": "page_87",
+            "pageNumberForDisplay": "87",
+            "pageSequenceNumber": 95,
+            "pageText": "\n\n",
+            "publisher": "University of Michigan Press",
+            "title": "Tactics of the Human: Experimental Technics in American Fiction",
+            "topicNames": [
+                "Bioinformatics -- evolutionary time and becoming",
+                "Darwinian evolutionary theory -- social Darwinism",
+                "nationalism -- becoming American",
+                "neoliberalism -- biopower",
+                "subalternity",
+                "subjectivity -- modes and processes of subject-formation"
+            ],
+            "topicNamesForDisplay": "[[\"Bioinformatics -- evolutionary time and becoming\"],[\"Darwinian evolutionary theory -- social Darwinism\"],[\"nationalism -- becoming American\"],[\"neoliberalism -- biopower\"],[\"subalternity\"],[\"subjectivity -- modes and processes of subject-formation\"]]",
+            "topicNames_facet": [
+                "Bioinformatics -- evolutionary time and becoming",
+                "Darwinian evolutionary theory -- social Darwinism",
+                "nationalism -- becoming American",
+                "neoliberalism -- biopower",
+                "subalternity",
+                "subjectivity -- modes and processes of subject-formation"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

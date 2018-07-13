@@ -1,0 +1,20 @@
+{
+    "add": [
+        {
+            "authors": "David Kleinbard",
+            "epubNumberOfPages": 300,
+            "id": 10719,
+            "isbn": "9780814746677",
+            "pageLocalId": "page_i",
+            "pageNumberForDisplay": "i",
+            "pageSequenceNumber": 1,
+            "pageText": "The Beginning of Terror\n\n",
+            "publisher": "New York University Press",
+            "title": "The Beginning of Terror",
+            "topicNames": null,
+            "topicNamesForDisplay": "[]",
+            "topicNames_facet": null,
+            "yearOfPublication": 0
+        }
+    ]
+}

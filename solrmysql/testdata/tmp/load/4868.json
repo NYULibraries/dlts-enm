@@ -1,0 +1,35 @@
+{
+    "add": [
+        {
+            "authors": "Perron, Bernard",
+            "epubNumberOfPages": 170,
+            "id": 4868,
+            "isbn": "9780472027835",
+            "pageLocalId": "page_117",
+            "pageNumberForDisplay": "117",
+            "pageSequenceNumber": 125,
+            "pageText": "\nSparks show that one would intuitively think that prior knowledge about an upcoming frightening event would reduce its emotional impact by reducing the degree of uncertainty about what will happen. On the contrary, the notion “forewarned is forearmed” does not lead to “emotional defences” or effective coping strategy so much as a buildup of lasting arousal prior to the event (1984, 22–23). Using heart rate as the measure of physiological arousal, and describing in more or less detail the events forthcoming in four vampire scenes, Cantor, Ziemke. and Sparks asked the subjects of their experiment to rate their anxiety, fright, and upset13 with regard to the scenes. Their answers resulted in the following observation:\nForewarning of upcoming events did the opposite of “forearming” subjects against emotional reactions. Subjects who were given prior knowledge of upcoming frightening events reported more intense fright and upset in response to the movie than did those who had no forewarning.\nIt is interesting to note that reports of fright and upset were intensified by forewarning, but reports of anxiety were not. As will be recalled, fright and upset were expected to reflect responses to specific depicted or anticipated events, whereas anxiety was presumed to denote an uneasiness over uncertain outcomes. Given that forewarning should have decreased rather than increased uncertainty, it does not seem surprising that anxiety ratings were not increased by forewarning. (1984, 30)\nThese conclusions help to explain why the visceral experience of Silent Hill is more intricate than mere automatic response, more about terror than (art-)horror as it was distinguished in the first chapter. Travis, Harry, James, Heather, and Alex, of course, carry a great forewarning tool. The pocket radio is a fundamental element of the games. While a few reviewers have suggested turning it off (in order to have an experience like that in Resident Evil), it seems better to follow the SH2 manual's advice: “The monsters cannot hear the radio noise, so turning it off would be foolish.” Every time it starts to transmit white noise so as to warn you that one or many monsters are nearby, you take fright at what you'll be confronting, and this heightens awareness of the encounter. Without doubt, your heart rate will accelerate (one can only wonder what Cantor, Ziemke, and Sparks's experiment conducted with survival horror games would have given as a result). Yet, contrary to Cantor, Ziemke, and Sparks's forewarning, which precisely describes the frightening event,14 the pocket radio of Silent Hill signifies a threat, but does not reveal anything regarding what is about to occur. There\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Silent Hill: The Terror Engine",
+            "topicNames": [
+                "coping",
+                "horror (vs. terror)",
+                "terror (vs. horror)",
+                "monster",
+                "pocket radio",
+                "Resident Evil (game)",
+                "Silent Hill 2"
+            ],
+            "topicNamesForDisplay": "[[\"coping\"],[\"horror (vs. terror)\",\"terror (vs. horror)\"],[\"monster\"],[\"pocket radio\"],[\"Resident Evil (game)\"],[\"Silent Hill 2\"]]",
+            "topicNames_facet": [
+                "coping",
+                "horror (vs. terror)",
+                "monster",
+                "pocket radio",
+                "Resident Evil (game)",
+                "Silent Hill 2"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

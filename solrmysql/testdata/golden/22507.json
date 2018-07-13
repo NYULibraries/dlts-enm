@@ -1,0 +1,28 @@
+{
+    "add": [
+        {
+            "authors": "Mark G. Winiarski",
+            "epubNumberOfPages": 392,
+            "id": 22507,
+            "isbn": "9780814793114",
+            "pageLocalId": "page_257",
+            "pageNumberForDisplay": "257",
+            "pageSequenceNumber": 291,
+            "pageText": "16 A Comprehensive Center for Women with HIV\nKaren Meredith and Rebecca Bathon\n\nPeople who make me feel like a normal person, who are not afraid of me because I have HIV, who treat me with respect, who give me love, support, and friendship.\n— Common responses to a survey that asked fifty women, enrolled at the Helena Hatch Special Care Center, what they need from a center for women who have HIV\n\nFor HIV-infected women, HIV/AIDS is at the nexus of who they are in society—daughter, mother and mate—how they are positioned in society—in terms of power and control over their own lives—and who they are within themselves. To care for them cannot simply be a biomedical task. HIV/AIDS caregivers must care for the entirety of a woman’s being.\nWhile programs of the early epidemic focused primarily on white gay males (Novello, 1993; Rosser, 1991), the increasing impact of HIV disease on women has necessitated a rethinking of our response to the disease (Health Resources and Services Administration, 1995).\nThrough June 1996, the Centers for Disease Control and Prevention reported 78,654 AIDS cases in adolescent and adult females in the United States. This represents 14.5 percent of this country’s cumulative total of AIDS cases in these age groups (Centers for Disease Control and Prevention, 1996). It is among the leading causes of morbidity and mortality in women, especially those of childbearing age (Centers for Disease Control and Prevention, 1995; Quinn, 1995).\n",
+            "publisher": "New York University Press",
+            "title": "HIV Mental Health for the 21st Century",
+            "topicNames": [
+                "Acquired Immune Deficiency Syndrome -- incidence among women",
+                "Models of service delivery -- women's center",
+                "Women -- center for"
+            ],
+            "topicNamesForDisplay": "[[\"Acquired Immune Deficiency Syndrome -- incidence among women\"],[\"Models of service delivery -- women's center\"],[\"Women -- center for\"]]",
+            "topicNames_facet": [
+                "Acquired Immune Deficiency Syndrome -- incidence among women",
+                "Models of service delivery -- women's center",
+                "Women -- center for"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

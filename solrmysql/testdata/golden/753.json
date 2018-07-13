@@ -1,0 +1,41 @@
+{
+    "add": [
+        {
+            "authors": "Amy Koritz and George J. Sanchez",
+            "epubNumberOfPages": 252,
+            "id": 753,
+            "isbn": "9780472024483",
+            "pageLocalId": "page_10",
+            "pageNumberForDisplay": "10",
+            "pageSequenceNumber": 22,
+            "pageText": "\ncitizens not shared by other professionals. This is the responsibility to ensure that citizens have the tools to insist on a socially effective use of expertise, not in its technical application but in defining the broad goals, and judging the success, of its application. To the extent that this responsibility is in real conflict with the understanding of professional expertise that guides the careers of many academics, we in academia have a problem.\nConstructive civic engagement on the part of higher education, however, also requires community partners with the capacity and commitment to partner with university teachers and researchers in good faith. In New Orleans, effective citizen-driven action has frequently been inhibited by a lack of organizational capacity in distressed communities exacerbated by a political culture of insider patronage. The past and continuing poverty of the region plays a part in this circumstance. According to the Bureau of Governmental Research, a local, private, nonpartisan group, the percentage of government-subsidized rental households in New Orleans is holding steady at pre-Katrina levels. Sixty-five percent of the metropolitan region's very low income households live in the city as opposed to 70 percent prior to the storm.9 The economic profile of New Orleans has changed little. The racial profile has shifted slightly, reducing the majority held by the African American population and increasing the Hispanic population.10 Although pockets of well-organized civic action emerged, they were often driven by middle-class professionals with a stake in a specific neighborhood or issue.\nDespite the high-profile posturing of government officials in the wake of natural and man-made disasters, weakly organized long-term responses seem to be characteristic of our era of neoconservative politics and colorblind racism. In the immediate aftermath of the 1992 Los Angeles riots, for example, under the watch of the first President Bush, the federal government also promised to revitalize South Central Los Angeles, while local government leaders enacted a plan to “Rebuild L.A.” Most of the federal government's plan, however, consisted of blueprints already available to enact a “Conservative War on Poverty,” consisting of the promotion of enterprise zones, a “Weed and Seed” program light on seeds but heavy on the incarceration of minority youth, and the privatization of school choice to allow parents to send their children to private schools with public dollars. Peter Ueberroth's Rebuild L.A. initiative also emphasized private initiatives over public sector improvements, and neither did much to slow down the rapid loss of jobs available to South Los Angeles residents. What Los Angeles needed, much like what New Orleans needs today, was an initiative\n",
+            "publisher": "University of Michigan Press",
+            "title": "Civic Engagement in the Wake of Katrina",
+            "topicNames": [
+                "African Americans -- population",
+                "Bureau of Governmental Research",
+                "Bush, G. W.",
+                "Bush, George W.",
+                "Creative Forces -- recruits",
+                "Los Angeles, Calif. -- riots",
+                "low income",
+                "low-income",
+                "racism",
+                "Racism",
+                "Ueberroth, Peter"
+            ],
+            "topicNamesForDisplay": "[[\"African Americans -- population\"],[\"Bureau of Governmental Research\"],[\"Bush, George W.\",\"Bush, G. W.\"],[\"Creative Forces -- recruits\"],[\"Los Angeles, Calif. -- riots\"],[\"low income\",\"low-income\"],[\"racism\",\"Racism\"],[\"Ueberroth, Peter\"]]",
+            "topicNames_facet": [
+                "African Americans -- population",
+                "Bureau of Governmental Research",
+                "Bush, George W.",
+                "Creative Forces -- recruits",
+                "Los Angeles, Calif. -- riots",
+                "low income",
+                "racism",
+                "Ueberroth, Peter"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

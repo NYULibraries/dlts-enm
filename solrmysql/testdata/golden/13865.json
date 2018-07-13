@@ -1,0 +1,28 @@
+{
+    "add": [
+        {
+            "authors": "Ryuzo Sato",
+            "epubNumberOfPages": 239,
+            "id": 13865,
+            "isbn": "9780814780213",
+            "pageLocalId": "page_76",
+            "pageNumberForDisplay": "76",
+            "pageSequenceNumber": 94,
+            "pageText": "complete understanding can be achieved through monosyllables, the rules governing communication and other ordinary activities do not need to be set down in writing or even explicitly articulated. Someone who submits a contract to be signed or proposes a set of rules to be followed runs the risk of being frowned upon for “alien” or “unsociable” behavior. In general, Japanese feel strongly that it is a not a virtue to prescribe rules. This is a major difference between the United States and Japan.\nJapanese also feel more comfortable with vagueness and ambiguity than Americans do. When American children study English in school, they are always urged to “be precise” and “use the exact word.” Clarity and precision in the expression of ideas may be considered virtues for the speaker or writer of English, but they are not prized by the speaker or writer of Japanese. Out of respect for the feelings of others, Japanese have a strong tendency to put themselves in the other person’s position, to try to imagine how he or she might feel, and then to gear their own speech and behavior to fit these views. Avoiding forthright assertions of opinions is a traditional strategy for preventing conflict in a homogeneous society. This preference for oblique forms of expression is reflected in the Japanese language, which does not normally specify gender or number or require that sentences have definite subjects and thus lends itself perfectly to an indirect approach. In international exchanges, however, vague responses that mean neither “yes” nor “no” are no longer acceptable. Japanese negotiators must be able to take a firm stand and present their case convincingly to the American side.\n",
+            "publisher": "New York University Press",
+            "title": "The Chrysanthemum and the Eagle",
+            "topicNames": [
+                "Ambiguity",
+                "Clarity, Japanese and",
+                "Conflict, resolving"
+            ],
+            "topicNamesForDisplay": "[[\"Ambiguity\"],[\"Clarity, Japanese and\"],[\"Conflict, resolving\"]]",
+            "topicNames_facet": [
+                "Ambiguity",
+                "Clarity, Japanese and",
+                "Conflict, resolving"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

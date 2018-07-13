@@ -1,0 +1,46 @@
+{
+    "add": [
+        {
+            "authors": "Eisner, Caroline; Vicinus, Martha",
+            "epubNumberOfPages": 277,
+            "id": 2260,
+            "isbn": "9780472024445",
+            "pageLocalId": "page_33",
+            "pageNumberForDisplay": "33",
+            "pageSequenceNumber": 41,
+            "pageText": "\nThe ORI website includes numerous educational initiatives, including “a guide to ethical writing” (Roig). The criteria for plagiarism are quite elastic, ranging from finding a certain minimal number of identical words in a sentence or phrase to substantial lifting of text or data from other published works. For example, the term “plagiarism” covers the lifting of extensive text, figures, or tables from another author without attribution; duplicate publication by the same author; and a very restrictive definition of any six consecutive identical words. In this era of electronic searches for phrases, it is simple to run a search on suspicious statements or phrases. The subset of self-plagiarism is generally frowned upon; a more serious problem is dividing one publishable set of work into numerous overlapping or redundant papers submitted to multiple journals. Whatever the definition, an inoffensive, actually desirable, use of redundant language arises from identical descriptions of experimental and analytical methods, reflecting standardized procedures. A May 19, 2005, editorial in Nature on plagiarism led to a flurry of letters and further articles. In general, federal requirements and university procedures are focused on fabrication and falsification of data, with much less attention to plagiarism. Universities and faculty groups chart an uneasy course between fearing adverse publicity and public and congressional stereotyping and threats of litigation from accused individuals.\nThe broad category of plagiarism raises numerous ethical questions about careerism versus appropriate shared standards. How much overlap in successive publications is permissible by an author? How can the sequencing of a series of publications by one research group be made more coherent? Authors have little control of the actual timing of their publications. Increasingly, authors utilize electronic listservs and appropriate websites to maintain collaborative and mutually informative relationships. Journals are putting articles on line when accepted, sometimes months before the printed journal appears. Since monographs and book chapters generally summarize and synthesize previously published work, what must authors do to avoid a potential charge of plagiarism? One approach to avoid self-plagiarism is to hold new material for peer-reviewed submissions. The reviews then could focus on the integration of published material, hopefully with fresh interpretations.\nJournals could screen manuscripts for plagiarism, once criteria are agreed upon. As the editors of Nature have noted, arbitrary word limits for detection of plagiarism or self-plagiarism are unwise; they suggest a useful, user-friendly software tool that identified acceptable duplication (authors'\n",
+            "publisher": "University of Michigan Press and University of Michigan Library",
+            "title": "Originality, Imitation, and Plagiarism",
+            "topicNames": [
+                "authors -- and timing of publication",
+                "description",
+                "fabrication",
+                "falsification",
+                "Falsification",
+                "nature",
+                "peer review",
+                "Peer review",
+                "Peer reviews",
+                "plagiarism -- criteria",
+                "self-plagiarism",
+                "words",
+                "Web",
+                "World Wide Web"
+            ],
+            "topicNamesForDisplay": "[[\"authors -- and timing of publication\"],[\"description\"],[\"fabrication\"],[\"falsification\",\"Falsification\"],[\"nature\"],[\"Peer reviews\",\"peer review\",\"Peer review\"],[\"plagiarism -- criteria\"],[\"self-plagiarism\"],[\"words\"],[\"World Wide Web\",\"Web\"]]",
+            "topicNames_facet": [
+                "authors -- and timing of publication",
+                "description",
+                "fabrication",
+                "falsification",
+                "nature",
+                "Peer reviews",
+                "plagiarism -- criteria",
+                "self-plagiarism",
+                "words",
+                "World Wide Web"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

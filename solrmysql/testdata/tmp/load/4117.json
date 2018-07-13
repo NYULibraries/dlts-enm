@@ -1,0 +1,20 @@
+{
+    "add": [
+        {
+            "authors": "Bonnie A. Nardi",
+            "epubNumberOfPages": 238,
+            "id": 4117,
+            "isbn": "9780472026715",
+            "pageLocalId": "page_144",
+            "pageNumberForDisplay": "144",
+            "pageSequenceNumber": 147,
+            "pageText": "BN: So where do you get these good ideas?\nKarl: I don’t know. Either from the community—someone says, “Hey, I wish there was an addon that did this.” Or, an addon where I look at it and say, “Oh, I wish it did this.” And so either I modify it, or make my own addon that does it. Or just something off the top of my head.\nGenerally, modders wanted to explore new directions and deepen their connection to the game. Isenberg said that he started creating WoW modifications when he attained the first level cap of 60:\nSo after I hit 60, so after I hit the initial cap, I started looking for even more things to do with the game. And so I got into modding and my first addon was, like, a leet-speak translator [a translator for player-coded words].\nMod authors usually began modding for fun. Some then realized the economic potential of their labors and collected donations or developed “premium” versions of their mods. Sites that compiled and distributed mods generated revenue from advertising and might eventually be sold to larger companies.\nMost mod authoring, however, was a labor of love—“an entertainment” in Isenberg’s words. Isenberg described a modder he knew:\nHe’s pretty stinking smart and he writes things just because he likes playing with new features. So he does theoretical tests like proof of concepts on various new features or things that haven’t been done before.\nThe authors of some of the most popular World of Warcraft mods posted the following on their website.\nIf you would be interested in working on some of the most used projects in World of Warcraft, please feel free to contact us . . . Unfortunately this isn’t a “job” for us, it’s what we do in our free time, so we aren’t able to offer monetary compensation. Our primary goal is to get the sites to a self-sustaining state, where they pay for themselves, and don’t require us to pull out the checkbook. (ctmod.net)\nCTMod claimed over 100 million downloads—an astonishing figure for any software.\n",
+            "publisher": "The University of Michigan Press",
+            "title": "My Life as a Night Elf Priest",
+            "topicNames": null,
+            "topicNamesForDisplay": "[]",
+            "topicNames_facet": null,
+            "yearOfPublication": 0
+        }
+    ]
+}

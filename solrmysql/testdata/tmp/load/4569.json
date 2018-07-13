@@ -1,0 +1,47 @@
+{
+    "add": [
+        {
+            "authors": "Gabrys, Jennifer",
+            "epubNumberOfPages": 238,
+            "id": 4569,
+            "isbn": "9780472029402",
+            "pageLocalId": "page_63",
+            "pageNumberForDisplay": "63",
+            "pageSequenceNumber": 64,
+            "pageText": "it inevitably leaks into material structures, demonstrating that while the program of software operates as a code of effectivity, it is irrevocably bound up with material and technological processes that enable these performances. Software facilitates the increasingly refined programming of matter and exchanges; but even more, it allows for the sense of expanded possibilities for transforming that matter—to dispense with it, to distribute it, and to generally minimize material requirements so that the process itself can appear infinite, even if the resources are not. The “program” of automation may help to explain further why this tension between material structures and apparent erasure has such a lasting influence on the performativity of electronic networks.\nAutomation: Programming Matter\nThe soft and hard technologies that fuel electronic markets were a long time in the making, and depending on which influences we would choose as most critical, we could find major contributing factors in the nineteenth century, with Charles Babbage and his Difference Engine, or in developments during the World War II era, including the Turing machine and ENIAC. But the advent of the second wave of automation, in the 1950s, may most directly inform this analysis of electronic markets. Automation allowed for the control of stock and inventory and began the movement toward “automatic programming” that would enable machines to coordinate entire financial and industrial processes without human intervention. Taking up the term automation and applying it to manufacturing and businesses alike, John Diebold used the notion as a tool for rethinking economic processes through computerized feedback. Of this new model of 1950s industrial practice, he wrote, “The pushbutton age is already obsolete; the buttons now push themselves.”60 Automation is relevant to this investigation into electronics not just because the first mainframe to be applied to industry and financial use, the UNIVAC, was employed by General Electric and NASDAQ alike but also because it was within the theories of automation that notions pertaining to programmed exchange and a dematerialized stock exchange were first developed.\nIn the same book in which he popularized the term automation, Diebold put forward a proposal to rethink “the problem of the New York Stock Exchange” through automation.61 The NYSE required more than just the mere appendage of some “new gadgets” to what were “obsolete processes,” ",
+            "publisher": "The University of Michigan Press",
+            "title": "Digital Rubbish: A Natural History of Electronics",
+            "topicNames": [
+                "automation",
+                "Automation",
+                "Babbage, Charles",
+                "Diebold, John",
+                "ENIAC",
+                "exchange",
+                "General Electric",
+                "NASDAQ",
+                "\"natural history\" methodology",
+                "New York Stock Exchange",
+                "performativity",
+                "software",
+                "Turing machine"
+            ],
+            "topicNamesForDisplay": "[[\"automation\",\"Automation\"],[\"Babbage, Charles\"],[\"Diebold, John\"],[\"ENIAC\"],[\"exchange\"],[\"General Electric\"],[\"NASDAQ\"],[\"\\\"natural history\\\" methodology\"],[\"New York Stock Exchange\"],[\"performativity\"],[\"software\"],[\"Turing machine\"]]",
+            "topicNames_facet": [
+                "automation",
+                "Babbage, Charles",
+                "Diebold, John",
+                "ENIAC",
+                "exchange",
+                "General Electric",
+                "NASDAQ",
+                "\"natural history\" methodology",
+                "New York Stock Exchange",
+                "performativity",
+                "software",
+                "Turing machine"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

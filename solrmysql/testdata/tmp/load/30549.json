@@ -1,0 +1,38 @@
+{
+    "add": [
+        {
+            "authors": "David Mitchell",
+            "epubNumberOfPages": 291,
+            "id": 30549,
+            "isbn": "9780816689972",
+            "pageLocalId": "page_9",
+            "pageNumberForDisplay": "9",
+            "pageSequenceNumber": 47,
+            "pageText": "the male seed governed the formation of the embryo; the seed contains a formative virtue that transforms the female menstrual blood into body; the embryo passes by stages through insentient vegetative through to sentient animal and rational human life; and a male fetus is formed and animated after forty days, the female after ninety days. The Aristotelian account is profoundly hylomorphic and patriocentric. Hylomorphism is the view that an active virtue (i.e., formal cause) gives shape to passive matter (the material cause). What is patriocentric is the assumption that the male seed forms passive menstrual matter of the female. According to Hippocratic science, by contrast, both parents supply seed that goes toward conceiving offspring; depending on the quality and quantities of seminal and humoral fluids, the hereditary characteristics and sex of the offspring are set; numerous heterogeneous elements and contexts exert further influence, resulting in the formation or deformation of the fetus; a male infant is formed after thirty days, a female after forty-two days. A key later figure in the Hippocratic vein is Galen (AD 129–199), who emphasized the roles of the uterine environment, teaching, for example, that sex differences result from the placement of the fetus in the womb (right for boys, left for girls). As becomes evident, Aristotle’s polarization of elements (seed and menstruum) contrasts with the Hippocratic–Galenic parallelism (two seeds), but in both cases, procreation takes account of manifold causes and heterogeneous substances. Even Aristotle admits circumstantial determinants (efficient causes besides the formal cause), unable to segregate them.30 All authorities credit multiple material and environmental factors besides seminal virtue even as they privilege some over others (form over matter, activity over passivity, warmth over cold, male over female). That is, in the mainline traditions—philosophical and medical—human generation is described as a temporal and localized process of embodiment with many intermediate stages and unpredictable outcomes. Much is the matter here.\n        The Middle Ages inherited understandings of conception and fetal development from several intermediaries, notably Arabic writings, including those of Avicenna and Averroes (in the eleventh and twelfth centuries), and, if anything, presented and explored further complicating factors and contingencies. An important transmission line to the West was the eleventh-century monk Constantine the African, who favored Hippocratic and Galenic embryology. Aristotle’s works on biology and ",
+            "publisher": "University of Minnesota Press",
+            "title": "Becoming Human",
+            "topicNames": [
+                "embryology -- formative virtue",
+                "embryology -- liquid origins",
+                "embryology -- plurality of forms",
+                "embryology -- time to development",
+                "embryology -- uterine existence and environment",
+                "Galen",
+                "hylomorphism, formed matter and",
+                "menstrual fluid, female matter and"
+            ],
+            "topicNamesForDisplay": "[[\"embryology -- formative virtue\"],[\"embryology -- liquid origins\"],[\"embryology -- plurality of forms\"],[\"embryology -- time to development\"],[\"embryology -- uterine existence and environment\"],[\"Galen\"],[\"hylomorphism, formed matter and\"],[\"menstrual fluid, female matter and\"]]",
+            "topicNames_facet": [
+                "embryology -- formative virtue",
+                "embryology -- liquid origins",
+                "embryology -- plurality of forms",
+                "embryology -- time to development",
+                "embryology -- uterine existence and environment",
+                "Galen",
+                "hylomorphism, formed matter and",
+                "menstrual fluid, female matter and"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

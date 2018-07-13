@@ -1,0 +1,28 @@
+{
+    "add": [
+        {
+            "authors": "Richard K. Vedder and Lowell E. Gallaway",
+            "epubNumberOfPages": 408,
+            "id": 21430,
+            "isbn": "9780814787922",
+            "pageLocalId": "page_167",
+            "pageNumberForDisplay": "167",
+            "pageSequenceNumber": 185,
+            "pageText": "TABLE 8.5SELECTED CHARACTERISTICS OF THE AMERICAN LABOR FORCE, JUNE 1945 AND 1946\n\nThe Postwar Reconversion and the Adjusted Real Wage Model\nTurning our attention back to labor markets and the adjusted real wage model, it is interesting to compare labor-force statistics at the height of mobilization, June 1945, with statistics exactly one year later, June 1946 (see table 8.5).\nThe total labor pool grew by nearly 1 million over the year, yet the labor force fell by nearly 5.6 million. The end of the war was accompanied by an enormous drop in the labor force participation rate. In particular, millions of women voluntarily decided to withdraw from the labor force and reverted to their traditional roles as mothers, wives, and housekeepers. About 56 percent of the potential unemployment created by the almost 10-million-person decline in federal employment was absorbed by voluntary exit from the labor force.\nThe word “voluntary” in the preceding paragraph is important. It is presumed in a free society that labor voluntarily enters into labor-market ",
+            "publisher": "New York University Press",
+            "title": "Out of Work",
+            "topicNames": [
+                "Employment -- changes in 1945–56",
+                "Employment-population ratio",
+                "Unemployment -- adjusted real wage and"
+            ],
+            "topicNamesForDisplay": "[[\"Employment -- changes in 1945–56\"],[\"Employment-population ratio\"],[\"Unemployment -- adjusted real wage and\"]]",
+            "topicNames_facet": [
+                "Employment -- changes in 1945–56",
+                "Employment-population ratio",
+                "Unemployment -- adjusted real wage and"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

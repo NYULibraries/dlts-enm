@@ -1,0 +1,24 @@
+{
+    "add": [
+        {
+            "authors": "Kee, Kevin",
+            "epubNumberOfPages": 346,
+            "id": 242,
+            "isbn": "9780472120482",
+            "pageLocalId": "page_234",
+            "pageNumberForDisplay": "234",
+            "pageSequenceNumber": 242,
+            "pageText": "game in order to anticipate the types of resources and support students will need to analyze the game. These fall into two categories. The first category encompasses the historical issues modeled by gameplay itself. These are the problems agents in the past faced that are part of the simulation’s core play. They correspond to the content of a history course. The most important of these is generally how to assess and make trade-offs. A trade-off exists whenever there are multiple decisions the player can make, the decisions cannot all be satisfied simultaneously, and there is no clear-cut correct priority, but rather a variety of priorities that can shift depending on the goals of the player. Simulation games tend to revolve around this mechanic.\nThe second kind of problem is one of interpretation. These are the metalevel problems that must be considered when using simulation games effectively. If students are not asked to reflect on the accuracy of the models in the simulations they play, the teacher has simply replaced one authoritarian source of truth, whether a textbook, film, primary source, or the teacher, with another: the game. This will not do. The great strength of a foundation in history is that it imparts the skills to critique and question claims to the truth, not to accept others’ claims without substantiation. Hence, teachers should encourage students to consider the problems of interpretation in a game, not just the problems of content.\nIdentifying a game’s interpretation of the past is no more a natural exercise for most students than unearthing the bias of a primary source or the underlying assumptions of a modern author. Concrete guidelines, therefore, are needed to scaffold students as they examine a simulation’s interpretation. The following questions are at the core of uncovering any simulation’s point of view:\n \n•   What is the role of the player in the game world and what are the challenges the game world presents to the player?\n•   What actions can the player take or not take to overcome the challenges? What resources does the player have with which to overcome challenges?\n•   What are the trade-offs in the game when it comes to actions and the spending of resources?\n•   What strategies or actions lead to success or failure and how are success and failure measured in the game?\n \nA game reveals its designer’s vision of the past by expressing success and failure in certain terms—a number of votes, an amount of money, a certain population size—and dictating the types of actions the player’s historical persona can take.\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Pastplay: Teaching and Learning History with Technology",
+            "topicNames": [
+                "historical models, critique of, in simulation games"
+            ],
+            "topicNamesForDisplay": "[[\"historical models, critique of, in simulation games\"]]",
+            "topicNames_facet": [
+                "historical models, critique of, in simulation games"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

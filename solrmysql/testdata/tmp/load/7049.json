@@ -1,0 +1,28 @@
+{
+    "add": [
+        {
+            "authors": "Turrow, Joseph; Tsui, Lokman",
+            "epubNumberOfPages": 325,
+            "id": 7049,
+            "isbn": "9780472024537",
+            "pageLocalId": "page_274",
+            "pageNumberForDisplay": "274",
+            "pageSequenceNumber": 280,
+            "pageText": "\naccount demonstrates. Benkler relies heavily on a piece of scholarship from NEC Research Institute to support his claim that clusters of Web sites are less concentrated—and thus more transparent—at the microlevel. In the article “Winners Don't Take All,” Pennock and others look at clusters of Web sites in a variety of different categories, from online retailers and media Web sites to university Web sites and sites of photographers.34 Benkler cites this research as the most important piece of evidence that we find more egalitarian patterns at the microlevel of the Web. Several other researchers and works cited by Benkler address the same issue but report apparently contradictory findings.35 Benkler's rationale for accepting the ostensible conclusions of Pennock and others over those of other researchers is not made clear.\nGiven the significance of the research of Pennock and others to Benkler's argument, it is important to note that their claims seem to have been misread. Pennock and others do not contradict the much larger, well-established volume of literature concluding that most communities of Web sites are highly concentrated. Pennock and others model microlevel traffic by assuming that sites get some baseline number of hyper-links just for being part of a community, while another—highly skewed—portion of their hyperlinks depend on their rank within the community.\nPennock and others do find that in some communities of content, sites seem to get a greater portion of links just for belonging. Still, the majority of categories they examine distribute more than 90 percent of their links according to winners-take-all patterns. Moreover, the groups of Web sites that Pennock and others find to be less concentrated are exceptional. The Web sites of professional photographers face natural geographical limits: you cannot hire a wedding photographer from Maine if you are having your ceremony in Florida. Links from one university Web site to another, another apparent exception, are parasitic upon real-world social networks that provide both horizontal and vertical visibility. For example, professors are likely to be aware of scholars at Harvard and Yale and Princeton, as well as scholars at nearby institutions.\nBenkler also points to Drezner and Farrel,36 arguing that their research confirms that political content is less concentrated than other online content, making it possible for political Web sites to provide adequate levels of visibility to numerous participants. Yet here again, “less concentrated” is a relative term. Drezner and Farrel are actually making a more technical argument, about whether the distribution of links and traffic among blogs better fits a power law or an extreme lognormal distribution. Even the smaller claim that Drezner and Farrel are making is\n",
+            "publisher": "University of Michigan Press",
+            "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "topicNames": [
+                "NEC Research Institute",
+                "PDA.",
+                "Social networks"
+            ],
+            "topicNamesForDisplay": "[[\"NEC Research Institute\"],[\"PDA.\"],[\"Social networks\"]]",
+            "topicNames_facet": [
+                "NEC Research Institute",
+                "PDA.",
+                "Social networks"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

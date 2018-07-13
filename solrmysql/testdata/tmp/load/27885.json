@@ -1,0 +1,51 @@
+{
+    "add": [
+        {
+            "authors": "Peter N. Stearns",
+            "epubNumberOfPages": 378,
+            "id": 27885,
+            "isbn": "9780814779965",
+            "pageLocalId": "page_203",
+            "pageNumberForDisplay": "203",
+            "pageSequenceNumber": 213,
+            "pageText": "certain striking events could affect advice about emotional standards. Advice in the 1920s and 1930s was colored by American reactions to the perceived irrationality and childishness of European warmongers, stirred initially by the fears roused during World War I and its aftermath. We have seen that some popularizations, particularly those dealing with grief, delighted in contrasting American rationality with European ungoverned impulse. Connections grew more explicit with the advent of Nazism and World War II, particularly with regard to growing concern about anger—or, more properly, about what was now termed “aggression”—in light of such sweeping evidence of what untrammeled rage could do to a civilized society.19 It is hard to determine how much the atmosphere of the world war years colored basic changes in emotional standards, but there is no question that individual experts and whole schools of thought, such as behaviorism, were affected by a desire to define standards of socialization that would keep Americans free from the madness they thought they saw in other parts of the world.\nExperts and popularizers alone do not an emotional culture make. There is a tendency among some historically minded students of changes in emotional culture to ignore issues of authorship, treating their sources as automatic reflections of larger and more interesting changes in the society around them. Indeed, the new breed of popularizers who were cutting their teeth in the 1920s largely mirrored developments in the economy and in wider culture that in turn serve as the principal explanations of why emotional standards shifted away from Victorianism. In addition, only these larger factors account for the growing audience for the experts—the people who thronged to the lectures of the marriage counselors, for example, or who gobbled up the stories in Esquire or the advice columns in Parents’ Magazine. Furthermore, specific intellectual schools among the experts largely pale beside the broader changes that their theories mirrored. Behaviorism, as we have seen, played a role in some of the new emotional standards, though Watson’s theories were not uniformly adopted and particularly affected revisions in the areas of fear and motherlove. By the 1940s the somewhat greater Freudian influence ushered in certain changes in popularized advice, while the growth of a more permissive attitude symbolized by the early Dr. Spock, which was deliberately directed against behaviorism, modified emotional norms in a few cases. In general, however, the new emotionological trends overrode the seemingly vital fluctuations in dominant psychological ",
+            "publisher": "New York University Press",
+            "title": "American Cool",
+            "topicNames": [
+                "Aggression",
+                "aggression",
+                "behaviorism",
+                "Freudianism",
+                "Grief",
+                "grief",
+                "Nazism",
+                "permissiveness",
+                "psychology",
+                "Psychology",
+                "Spock, Benjamin",
+                "Watson, John B.",
+                "World War II",
+                "World War Two",
+                "WW II",
+                "World War I",
+                "World War One",
+                "WW I"
+            ],
+            "topicNamesForDisplay": "[[\"aggression\",\"Aggression\"],[\"behaviorism\"],[\"Freudianism\"],[\"grief\",\"Grief\"],[\"Nazism\"],[\"permissiveness\"],[\"psychology\",\"Psychology\"],[\"Spock, Benjamin\"],[\"Watson, John B.\"],[\"World War II\",\"World War Two\",\"WW II\"],[\"World War One\",\"World War I\",\"WW I\"]]",
+            "topicNames_facet": [
+                "aggression",
+                "behaviorism",
+                "Freudianism",
+                "grief",
+                "Nazism",
+                "permissiveness",
+                "psychology",
+                "Spock, Benjamin",
+                "Watson, John B.",
+                "World War II",
+                "World War One"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

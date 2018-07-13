@@ -19,4 +19,5 @@ xo_generate xo/queries/postgres/external-relations-for-topic.sql ExternalRelatio
 xo_generate xo/queries/postgres/page.sql Page
 xo_generate xo/queries/postgres/related-topic-names-for-topic-with-number-of-occurrences.sql RelatedTopicNamesForTopicWithNumberOfOccurrences
 xo_generate xo/queries/postgres/topic-alternate-name.sql TopicAlternateName
+xo_generate xo/queries/postgres/topic-names-for-page.sql TopicNamesForPage
 xo_generate xo/queries/postgres/topic-number-of-occurrences.sql TopicNumberOfOccurrences

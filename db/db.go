@@ -23,7 +23,7 @@ import (
 	"strconv"
 	_ "github.com/lib/pq"
 
-	models "github.com/nyulibraries/dlts-enm/db/postgres/models"
+	"github.com/nyulibraries/dlts-enm/db/postgres/models"
 	"github.com/nyulibraries/dlts-enm/tct"
 )
 

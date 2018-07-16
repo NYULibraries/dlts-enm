@@ -1,7 +1,0 @@
-This SQL file is never actually used for `xo` model generation.
-It's been updated for informational purposes only and to prevent confusion by
-leaving the old buggy SQL.
-
-For details, see comments in xo/scripts/generate-models-for-topic-page-queries.sh,
-and also JIRA ticket comments:
-https://jira.nyu.edu/jira/browse/NYUP-414?focusedCommentId=99202&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-99202

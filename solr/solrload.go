@@ -4,18 +4,20 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"sort"
 	"strings"
 
-	"github.com/nyulibraries/dlts-enm/db/mysql/models"
 	"github.com/nyulibraries/dlts-enm/db"
+	pmodels "github.com/nyulibraries/dlts-enm/db/postgres/models"
+	"github.com/nyulibraries/dlts-enm/util"
 )
 
 var epubsNumberOfPages map[string]int
 
 func Load() error {
 	epubsNumberOfPages = make(map[string]int)
-	for _, epubNumberOfPage := range db.GetEpubsNumberOfPages() {
-		epubsNumberOfPages[ epubNumberOfPage.Isbn ] = int(epubNumberOfPage.NumberOfPages)
+	for _, epubNumberOfPages := range db.GetEpubsNumberOfPages() {
+		epubsNumberOfPages[ epubNumberOfPages.Isbn ] = int(epubNumberOfPages.NumberOfPages)
 	}
 
 	pages := db.GetPagesAll()
@@ -29,7 +31,7 @@ func Load() error {
 	return nil
 }
 
-func AddPage(page *models.Page) error {
+func AddPage(page *pmodels.Page) error {
 	var topicNames []string
 	// Using underscore in variable name to match Solr field name
 	var topicNames_facet []string
@@ -50,6 +52,8 @@ func AddPage(page *models.Page) error {
 	var sortedTopicDisplayNames []string
 
 	pageTopicNames := db.GetPageTopicNamesByPageId(page.ID)
+
+	SortTopicNamesForPage(pageTopicNames)
 
 	// We are assuming that the pageTopicNames are sorted by TopicDisplayNameSortKey
 	// and sub-sorted by TopicNameSortKey, which themselves are meant to implement
@@ -113,6 +117,18 @@ func AddPage(page *models.Page) error {
 	log.Printf("Added page %d\n", page.ID)
 
 	return nil
+}
+
+func SortTopicNamesForPage(topicNamesForPage []*db.TopicNamesForPage) {
+	sort.Slice(topicNamesForPage, func(i, j int) bool {
+		a := util.GetNormalizedTopicNameForSorting(topicNamesForPage[i].TopicDisplayName) +
+			util.GetNormalizedTopicNameForSorting(topicNamesForPage[i].TopicName)
+
+		b := util.GetNormalizedTopicNameForSorting(topicNamesForPage[j].TopicDisplayName) +
+			util.GetNormalizedTopicNameForSorting(topicNamesForPage[j].TopicName)
+
+		return util.CompareUsingEnglishCollation(a,b) == -1
+	} )
 }
 
 func pageNumberForDisplay(pageLocalId string) (pageNumber string) {

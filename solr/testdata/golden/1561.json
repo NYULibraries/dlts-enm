@@ -12,22 +12,22 @@
             "publisher": "University of Michigan Press",
             "title": "Owning the Olympics: Narratives of the New China",
             "topicNames": [
+                "Human rights -- and IOC",
                 "Human rights",
                 "human rights",
-                "Human rights -- and IOC",
+                "International Olympic Committee (IOC) -- and human rights",
                 "International Olympic Committee",
                 "International Olympic Committee (IOC)",
                 "IOC.",
-                "International Olympic Committee (IOC) -- and human rights",
                 "Rogge, Jacques",
                 "Tibet"
             ],
-            "topicNamesForDisplay": "[[\"human rights\",\"Human rights\"],[\"Human rights -- and IOC\"],[\"International Olympic Committee (IOC)\",\"International Olympic Committee\",\"IOC.\"],[\"International Olympic Committee (IOC) -- and human rights\"],[\"Rogge, Jacques\"],[\"Tibet\"]]",
+            "topicNamesForDisplay": "[[\"Human rights -- and IOC\"],[\"human rights\",\"Human rights\"],[\"International Olympic Committee (IOC) -- and human rights\"],[\"International Olympic Committee (IOC)\",\"International Olympic Committee\",\"IOC.\"],[\"Rogge, Jacques\"],[\"Tibet\"]]",
             "topicNames_facet": [
-                "human rights",
                 "Human rights -- and IOC",
-                "International Olympic Committee (IOC)",
+                "human rights",
                 "International Olympic Committee (IOC) -- and human rights",
+                "International Olympic Committee (IOC)",
                 "Rogge, Jacques",
                 "Tibet"
             ],

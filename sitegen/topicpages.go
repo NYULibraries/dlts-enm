@@ -182,7 +182,7 @@ func GenerateTopicPagesFromDatabase() {
 		topicsWithAlternateNames = db.GetTopicsWithAlternateNamesAll()
 	}
 
-	SortTopicsWithAlternateNames(topicsWithAlternateNames)
+	SortTopicAlternateNames(topicsWithAlternateNames)
 
 	var alternateNames []string
 	inProgressTopicID := topicsWithAlternateNames[0].TctID
@@ -346,7 +346,7 @@ func SortRelatedTopicNamesWithNumberOfOccurrences(relatedTopicNamesWithNumberOfO
 	} )
 }
 
-func SortTopicsWithAlternateNames(topicAlternateNames []*db.TopicAlternateName) {
+func SortTopicAlternateNames(topicAlternateNames []*db.TopicAlternateName) {
 	sort.Slice(topicAlternateNames, func(i, j int) bool {
 		return util.CompareUsingEnglishCollation(
 			util.GetNormalizedTopicNameForSorting(topicAlternateNames[i].Name),

@@ -12,17 +12,17 @@
             "publisher": "York University Press",
             "title": "Teaching What You’re Not",
             "topicNames": [
-                "Expertise",
                 "Expertise -- student",
+                "Expertise",
                 "Freire, P.",
                 "Freire, Paolo",
                 "Freire, Paulo",
                 "Mostern, Kenneth"
             ],
-            "topicNamesForDisplay": "[[\"Expertise\"],[\"Expertise -- student\"],[\"Freire, Paolo\",\"Freire, P.\",\"Freire, Paulo\"],[\"Mostern, Kenneth\"]]",
+            "topicNamesForDisplay": "[[\"Expertise -- student\"],[\"Expertise\"],[\"Freire, Paolo\",\"Freire, P.\",\"Freire, Paulo\"],[\"Mostern, Kenneth\"]]",
             "topicNames_facet": [
-                "Expertise",
                 "Expertise -- student",
+                "Expertise",
                 "Freire, Paolo",
                 "Mostern, Kenneth"
             ],

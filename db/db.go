@@ -37,10 +37,13 @@ type Topic struct {
 	DisplayNameSortKey string
 }
 
+type EpubsNumberOfPage = pmodels.EpubsNumberOfPages
 type EpubsForTopicWithNumberOfMatchedPages = pmodels.EpubsForTopicWithNumberOfMatchedPages
 type ExternalRelationsForTopic = pmodels.ExternalRelationsForTopic
+type Page = pmodels.Page
 type RelatedTopicNamesForTopicWithNumberOfOccurrences = pmodels.RelatedTopicNamesForTopicWithNumberOfOccurrences
 type TopicAlternateName = pmodels.TopicAlternateName
+type TopicNamesForPage = pmodels.TopicNamesForPage
 type TopicNumberOfOccurrences = pmodels.TopicNumberOfOccurrences
 
 var username string
@@ -185,8 +188,8 @@ func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*EpubsForTopicWithN
 	return epubsForTopicWithNumberOfMatchedPages
 }
 
-func GetEpubsNumberOfPages() (epubsNumberOfPages []*models.EpubsNumberOfPage) {
-	epubsNumberOfPages, err := models.GetEpubsNumberOfPages(DB)
+func GetEpubsNumberOfPages() (epubsNumberOfPages []*EpubsNumberOfPage) {
+	epubsNumberOfPages, err := pmodels.GetEpubsNumberOfPages(DB)
 	if err != nil {
 		panic("db.GetEpubsNumberOfPages: " + err.Error())
 	}
@@ -203,8 +206,8 @@ func GetExternalRelationsForTopics(topicID int) []*ExternalRelationsForTopic{
 	return externalRelationsForTopic
 }
 
-func GetPagesAll() (pages []*models.Page) {
-	pages, err := models.GetPages(DB)
+func GetPagesAll() (pages []*Page) {
+	pages, err := pmodels.GetPages(DB)
 	if err != nil {
 		panic("db.GetPagesAll: " + err.Error())
 	}
@@ -212,44 +215,13 @@ func GetPagesAll() (pages []*models.Page) {
 	return pages
 }
 
-func GetPageTopicNamesByPageId(pageId int) (pageTopicNames []models.PageTopicName) {
-	// sql query
-	var sqlstr = `SELECT DISTINCTROW` +
-	` page_id, topic_id, topic_display_name, BINARY topic_name` +
-	` FROM enm.page_topic_names` +
-	` WHERE page_id = ` + strconv.Itoa(pageId) +
-	` ORDER BY topic_display_name_sort_key, topic_name_sort_key`
-
-	var (
-		topicId int
-		topicDisplayName string
-		topicName string
-	)
-
-	rows, err := DB.Query(sqlstr)
+func GetPageTopicNamesByPageId(pageId int) (topicNamesForPage []*TopicNamesForPage) {
+	topicNamesForPage, err := pmodels.TopicNamesForPagesByPage_id(DB, pageId)
 	if err != nil {
-		panic(err)
-	}
-	defer rows.Close()
-
-	for rows.Next() {
-		err := rows.Scan(&pageId, &topicId, &topicDisplayName, &topicName)
-		if err != nil {
-			panic(err)
-		}
-		pageTopicNames = append(pageTopicNames, models.PageTopicName{
-			PageID: pageId,
-			TopicID: topicId,
-			TopicDisplayName: topicDisplayName,
-			TopicName: topicName,
-		})
-	}
-	err = rows.Err()
-	if err != nil {
-		panic(err)
+		panic("db.GetPageTopicNamesByPageId: " + err.Error())
 	}
 
-	return
+	return topicNamesForPage
 }
 
 func GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID int) (relatedTopicsWithNumberOfOccurrences []*RelatedTopicNamesForTopicWithNumberOfOccurrences) {

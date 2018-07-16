@@ -8,7 +8,6 @@ import (
 	"strings"
 
 	"github.com/nyulibraries/dlts-enm/db"
-	pmodels "github.com/nyulibraries/dlts-enm/db/postgres/models"
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
@@ -31,7 +30,7 @@ func Load() error {
 	return nil
 }
 
-func AddPage(page *pmodels.Page) error {
+func AddPage(page *db.Page) error {
 	var topicNames []string
 	// Using underscore in variable name to match Solr field name
 	var topicNames_facet []string

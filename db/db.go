@@ -23,7 +23,7 @@ import (
 	"strconv"
 	_ "github.com/lib/pq"
 
-	pmodels "github.com/nyulibraries/dlts-enm/db/postgres/models"
+	models "github.com/nyulibraries/dlts-enm/db/postgres/models"
 	"github.com/nyulibraries/dlts-enm/tct"
 )
 
@@ -33,14 +33,14 @@ type Topic struct {
 	DisplayNameSortKey string
 }
 
-type EpubsNumberOfPage = pmodels.EpubsNumberOfPages
-type EpubsForTopicWithNumberOfMatchedPages = pmodels.EpubsForTopicWithNumberOfMatchedPages
-type ExternalRelationsForTopic = pmodels.ExternalRelationsForTopic
-type Page = pmodels.Page
-type RelatedTopicNamesForTopicWithNumberOfOccurrences = pmodels.RelatedTopicNamesForTopicWithNumberOfOccurrences
-type TopicAlternateName = pmodels.TopicAlternateName
-type TopicNamesForPage = pmodels.TopicNamesForPage
-type TopicNumberOfOccurrences = pmodels.TopicNumberOfOccurrences
+type EpubsNumberOfPage = models.EpubsNumberOfPages
+type EpubsForTopicWithNumberOfMatchedPages = models.EpubsForTopicWithNumberOfMatchedPages
+type ExternalRelationsForTopic = models.ExternalRelationsForTopic
+type Page = models.Page
+type RelatedTopicNamesForTopicWithNumberOfOccurrences = models.RelatedTopicNamesForTopicWithNumberOfOccurrences
+type TopicAlternateName = models.TopicAlternateName
+type TopicNamesForPage = models.TopicNamesForPage
+type TopicNumberOfOccurrences = models.TopicNumberOfOccurrences
 
 var username string
 var password string
@@ -176,7 +176,7 @@ func ClearTables() {
 }
 
 func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*EpubsForTopicWithNumberOfMatchedPages{
-	epubsForTopicWithNumberOfMatchedPages, err := pmodels.EpubsForTopicWithNumberOfMatchedPagesByTopic_id(DB, topicID)
+	epubsForTopicWithNumberOfMatchedPages, err := models.EpubsForTopicWithNumberOfMatchedPagesByTopic_id(DB, topicID)
 	if err != nil {
 		panic("db.GetEpubsForTopicWithNumberOfMatchedPages: " + err.Error())
 	}
@@ -185,7 +185,7 @@ func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*EpubsForTopicWithN
 }
 
 func GetEpubsNumberOfPages() (epubsNumberOfPages []*EpubsNumberOfPage) {
-	epubsNumberOfPages, err := pmodels.GetEpubsNumberOfPages(DB)
+	epubsNumberOfPages, err := models.GetEpubsNumberOfPages(DB)
 	if err != nil {
 		panic("db.GetEpubsNumberOfPages: " + err.Error())
 	}
@@ -194,7 +194,7 @@ func GetEpubsNumberOfPages() (epubsNumberOfPages []*EpubsNumberOfPage) {
 }
 
 func GetExternalRelationsForTopics(topicID int) []*ExternalRelationsForTopic{
-	externalRelationsForTopic, err := pmodels.ExternalRelationsForTopicsByTopic_id(DB, topicID)
+	externalRelationsForTopic, err := models.ExternalRelationsForTopicsByTopic_id(DB, topicID)
 	if err != nil {
 		panic("db.GetExternalRelationsForTopic: " + err.Error())
 	}
@@ -203,7 +203,7 @@ func GetExternalRelationsForTopics(topicID int) []*ExternalRelationsForTopic{
 }
 
 func GetPagesAll() (pages []*Page) {
-	pages, err := pmodels.GetPages(DB)
+	pages, err := models.GetPages(DB)
 	if err != nil {
 		panic("db.GetPagesAll: " + err.Error())
 	}
@@ -212,7 +212,7 @@ func GetPagesAll() (pages []*Page) {
 }
 
 func GetPageTopicNamesByPageId(pageId int) (topicNamesForPage []*TopicNamesForPage) {
-	topicNamesForPage, err := pmodels.TopicNamesForPagesByPage_id(DB, pageId)
+	topicNamesForPage, err := models.TopicNamesForPagesByPage_id(DB, pageId)
 	if err != nil {
 		panic("db.GetPageTopicNamesByPageId: " + err.Error())
 	}
@@ -224,7 +224,7 @@ func GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID int) (relatedTo
 	// xo-generated model requires 4 topic IDs because there are 4 placeholders
 	// in the query for the 4 times the topic ID is needed.
 	relatedTopicsWithNumberOfOccurrences, err :=
-		pmodels.RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id_1Topic_id_2Topic_id_3Topic_id_4(DB, topicID, topicID, topicID, topicID)
+		models.RelatedTopicNamesForTopicWithNumberOfOccurrencesByTopic_id_1Topic_id_2Topic_id_3Topic_id_4(DB, topicID, topicID, topicID, topicID)
 	if err != nil {
 		panic("db.GetRelatedTopicNamesForTopicWithNumberOfOccurrences: " + err.Error())
 	}
@@ -233,7 +233,7 @@ func GetRelatedTopicNamesForTopicWithNumberOfOccurrences(topicID int) (relatedTo
 }
 
 func GetTopicNumberOfOccurrencesByTopicId(topicID int) int {
-	topicNumberOfOccurrences, err := pmodels.TopicNumberOfOccurrencesByTopic_id(DB, topicID)
+	topicNumberOfOccurrences, err := models.TopicNumberOfOccurrencesByTopic_id(DB, topicID)
 	if err != nil {
 		panic("db.GetTopicNumberOfOccurrencesByTopicId: " + err.Error())
 	}
@@ -246,7 +246,7 @@ func GetTopicNumberOfOccurrencesByTopicId(topicID int) int {
 }
 
 func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*TopicAlternateName) {
-	topicsWithAlternateNames, err := pmodels.GetTopicAlternateNames(DB)
+	topicsWithAlternateNames, err := models.GetTopicAlternateNames(DB)
 	if err != nil {
 		panic("db.GetTopicsWithAlternateNamesAll: " + err.Error())
 	}

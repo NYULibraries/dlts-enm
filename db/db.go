@@ -24,7 +24,6 @@ import (
 	_ "github.com/lib/pq"
 
 	"github.com/nyulibraries/dlts-enm/db/postgres/models"
-	"github.com/nyulibraries/dlts-enm/tct"
 )
 
 type Topic struct {
@@ -47,46 +46,6 @@ var password string
 
 var DB *sql.DB
 var Database string
-
-// Tables in order that they would need to be in when deleting all data table-by-table.
-var tables = []string{
-	"names",
-	"relations",
-	"occurrences",
-	"topics_weblinks",
-	"topics",
-	"topic_type",
-	"editorial_review_status_state",
-	"weblinks",
-	"weblinks_relationship",
-	"weblinks_vocabulary",
-	"scopes",
-	"relation_type",
-	"relation_direction",
-	"locations",
-	"epubs",
-	"indexpatterns",
-}
-
-var editorialReviewStatusStatesMap map[tct.EditorialReviewStatusState]EditorialStatusStateTableRow
-
-type EditorialStatusStateTableRow struct {
-	Id int
-	State string
-}
-
-// Incremented ids for relation_direction table
-var relationDirectionId int = 0
-
-// Incremented ids for weblinks_relationship table
-var weblinkRelationshipId int = 0
-
-// Incremented ids for weblinks_vocabulary table
-var weblinkVocabularyId int = 0
-
-// For initial load of topics table we don't have editorial review status data yet,
-// but need to fill in FK column with a valid, non-null value
-var defaultEditorialReviewStatusStateId int = 1
 
 func init() {
 	Database = os.Getenv("ENM_POSTGRES_DATABASE")
@@ -117,62 +76,6 @@ func init() {
 	if err = DB.Ping(); err != nil {
 		panic(err.Error())
 	}
-
-	editorialReviewStatusStatesMap =
-		make(map[tct.EditorialReviewStatusState]EditorialStatusStateTableRow)
-
-	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
-		ReviewerIsNull: true,
-		TimeIsNull: true,
-		Changed: false,
-		Reviewed: false,
-	}] = EditorialStatusStateTableRow{
-		Id: defaultEditorialReviewStatusStateId,
-		State: "Not Reviewed",
-	}
-	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
-		ReviewerIsNull: false,
-		TimeIsNull: false,
-		Changed: false,
-		Reviewed: true,
-	}] = EditorialStatusStateTableRow{
-		Id: 2,
-		State: "Reviewed, Unchanged",
-	}
-	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
-		ReviewerIsNull: false,
-		TimeIsNull: false,
-		Changed: true,
-		Reviewed: true,
-	}] = EditorialStatusStateTableRow{
-		Id: 3,
-		State: "Reviewed, Changed",
-	}
-	editorialReviewStatusStatesMap[tct.EditorialReviewStatusState{
-		ReviewerIsNull: false,
-		TimeIsNull: false,
-		Changed: false,
-		Reviewed: false,
-	}] = EditorialStatusStateTableRow{
-		Id: 4,
-		State: "Reviewed Status Revoked",
-	}
-}
-
-func ClearTables() {
-	tx, err := DB.Begin()
-	if err != nil {
-		panic( "db.ClearTables: " + err.Error())
-	}
-
-	for _, table := range tables {
-		_, err = tx.Exec(fmt.Sprintf("DELETE FROM %s", table))
-		if err != nil {
-			panic("db.ClearTables: " + err.Error())
-		}
-	}
-
-	tx.Commit()
 }
 
 func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*EpubsForTopicWithNumberOfMatchedPages{

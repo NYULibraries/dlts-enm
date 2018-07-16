@@ -23,16 +23,12 @@ import (
 var cacheCmd = &cobra.Command{
 	Use:   "cache",
 	Short: "Cache responses from TCT API",
-	Long: `Cache all TCT API responses needed to run a full reload from cache.
-Existing cached files are not cleared first, but are overwritten as new responses
-are fetched.  :
+	Long: `Cache all TCT API responses.  Existing cached files are not cleared first,
+but are overwritten as new responses are fetched.  :
 
-	./enm cache
-	# Sometime in the future, or on a different machine which has a copy of the
-	# generated cache:
-	./enm reload --source=cache`,
+	./enm cache`,
 	Run: func(cmd *cobra.Command, args []string) {
-		tct.Source = ReloadSource
+		tct.Source = "tct-api"
 
 		tctTopics := tct.GetTopicsAll()
 

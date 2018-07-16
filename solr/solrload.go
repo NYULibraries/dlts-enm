@@ -85,7 +85,7 @@ func AddPage(page *pmodels.Page) error {
 	// Map of topic display names to alternate names as marshalled JSON
 	topicNamesForDisplayBytes, err := json.Marshal(topicNamesForDisplayArray)
 	if err != nil {
-		panic(fmt.Sprintf("ERROR: couldn't marshal topicNamesForDisplay for %s", page.ID))
+		panic(fmt.Sprintf("ERROR: couldn't marshal topicNamesForDisplay for %d", page.ID))
 	}
 
 	doc := map[string]interface{}{

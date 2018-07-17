@@ -50,12 +50,10 @@ func init() {
 
 	if database == "" {
 		panic("db: ENM_POSTGRES_DATABASE not set")
-
 	}
 
 	if username == "" {
 		panic("db: ENM_POSTGRES_DATABASE_USERNAME not set")
-
 	}
 
 	if password == "" {

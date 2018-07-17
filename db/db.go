@@ -45,11 +45,16 @@ var DB *sql.DB
 
 func init() {
 	database := os.Getenv("ENM_POSTGRES_DATABASE")
+	hostname := os.Getenv("ENM_POSTGRES_DATABASE_HOSTNAME")
 	username := os.Getenv("ENM_POSTGRES_DATABASE_USERNAME")
 	password := os.Getenv("ENM_POSTGRES_DATABASE_PASSWORD")
 
 	if database == "" {
 		panic("db: ENM_POSTGRES_DATABASE not set")
+	}
+
+	if hostname == "" {
+			panic("db: ENM_POSTGRES_DATABASE_HOSTNAME not set")
 	}
 
 	if username == "" {
@@ -60,7 +65,7 @@ func init() {
 		panic("db: ENM_POSTGRES_DATABASE_PASSWORD not set")
 	}
 
-	connStr := fmt.Sprintf("postgres://%s:%s@localhost/%s?sslmode=disable", username, password, database)
+	connStr := fmt.Sprintf("postgres://%s:%s@%s/%s?sslmode=disable", username, password, hostname, database)
 	var err error
 	DB, err = sql.Open("postgres", connStr)
 	if err != nil {

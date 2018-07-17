@@ -41,16 +41,12 @@ type TopicAlternateName = models.TopicAlternateName
 type TopicNamesForPage = models.TopicNamesForPage
 type TopicNumberOfOccurrences = models.TopicNumberOfOccurrences
 
-var username string
-var password string
-
 var DB *sql.DB
-var database string
 
 func init() {
-	database = os.Getenv("ENM_POSTGRES_DATABASE")
-	username = os.Getenv("ENM_POSTGRES_DATABASE_USERNAME")
-	password = os.Getenv("ENM_POSTGRES_DATABASE_PASSWORD")
+	database := os.Getenv("ENM_POSTGRES_DATABASE")
+	username := os.Getenv("ENM_POSTGRES_DATABASE_USERNAME")
+	password := os.Getenv("ENM_POSTGRES_DATABASE_PASSWORD")
 
 	if database == "" {
 		panic("db: ENM_POSTGRES_DATABASE not set")

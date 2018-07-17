@@ -41,32 +41,31 @@ type TopicAlternateName = models.TopicAlternateName
 type TopicNamesForPage = models.TopicNamesForPage
 type TopicNumberOfOccurrences = models.TopicNumberOfOccurrences
 
-var username string
-var password string
-
 var DB *sql.DB
-var Database string
 
 func init() {
-	Database = os.Getenv("ENM_POSTGRES_DATABASE")
-	username = os.Getenv("ENM_POSTGRES_DATABASE_USERNAME")
-	password = os.Getenv("ENM_POSTGRES_DATABASE_PASSWORD")
+	database := os.Getenv("ENM_POSTGRES_DATABASE")
+	hostname := os.Getenv("ENM_POSTGRES_DATABASE_HOSTNAME")
+	username := os.Getenv("ENM_POSTGRES_DATABASE_USERNAME")
+	password := os.Getenv("ENM_POSTGRES_DATABASE_PASSWORD")
 
-	if Database == "" {
+	if database == "" {
 		panic("db: ENM_POSTGRES_DATABASE not set")
+	}
 
+	if hostname == "" {
+			panic("db: ENM_POSTGRES_DATABASE_HOSTNAME not set")
 	}
 
 	if username == "" {
 		panic("db: ENM_POSTGRES_DATABASE_USERNAME not set")
-
 	}
 
 	if password == "" {
 		panic("db: ENM_POSTGRES_DATABASE_PASSWORD not set")
 	}
 
-	connStr := fmt.Sprintf("postgres://%s:%s@localhost/%s?sslmode=disable", username, password, Database)
+	connStr := fmt.Sprintf("postgres://%s:%s@%s/%s?sslmode=disable", username, password, hostname, database)
 	var err error
 	DB, err = sql.Open("postgres", connStr)
 	if err != nil {

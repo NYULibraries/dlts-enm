@@ -13,20 +13,20 @@
             "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
             "topicNames": [
                 "CNN",
-                "FOX",
-                "Fox News",
                 "Fox News Channel",
+                "Fox News",
+                "FOX",
                 "Network",
                 "Networking",
-                "networks",
-                "Networks"
+                "Networks",
+                "networks"
             ],
-            "topicNamesForDisplay": "[[\"CNN\"],[\"FOX\"],[\"Fox News\"],[\"Fox News Channel\"],[\"Networking\",\"Network\",\"networks\",\"Networks\"]]",
+            "topicNamesForDisplay": "[[\"CNN\"],[\"Fox News Channel\"],[\"Fox News\"],[\"FOX\"],[\"Networking\",\"Network\",\"Networks\",\"networks\"]]",
             "topicNames_facet": [
                 "CNN",
-                "FOX",
-                "Fox News",
                 "Fox News Channel",
+                "Fox News",
+                "FOX",
                 "Networking"
             ],
             "yearOfPublication": 0

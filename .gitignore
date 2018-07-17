@@ -45,3 +45,9 @@ sitegen/testdata/tmp/*
 
 solr/testdata/tmp/*
 !solr/testdata/tmp/.commit-empty-directory
+
+sitegenmysql/testdata/tmp/*
+!sitegenmysql/testdata/tmp/.commit-empty-directory
+
+solrmysql/testdata/tmp/*
+!solrmysql/testdata/tmp/.commit-empty-directory

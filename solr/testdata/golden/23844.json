@@ -14,11 +14,11 @@
             "topicNames": [
                 "Eliot, T. S.",
                 "Fluidity",
+                "Freud, Sigmund -- \"On Narcissism: An Introduction\"",
+                "\"On Narcissism\" (Freud)",
                 "Freud",
                 "Freud, S.",
                 "Freud, Sigmund",
-                "Freud, Sigmund -- \"On Narcissism: An Introduction\"",
-                "\"On Narcissism\" (Freud)",
                 "Idealization -- compared to sublimation",
                 "Primary processes",
                 "Skura, Meredith",
@@ -27,12 +27,12 @@
                 "Warren, Austen",
                 "Welleck, Rene"
             ],
-            "topicNamesForDisplay": "[[\"Eliot, T. S.\"],[\"Fluidity\"],[\"Freud, Sigmund\",\"Freud\",\"Freud, S.\"],[\"Freud, Sigmund -- \\\"On Narcissism: An Introduction\\\"\",\"\\\"On Narcissism\\\" (Freud)\"],[\"Idealization -- compared to sublimation\"],[\"Primary processes\"],[\"Skura, Meredith\"],[\"Sublimations\",\"Sublimation\"],[\"Warren, Austen\"],[\"Welleck, Rene\"]]",
+            "topicNamesForDisplay": "[[\"Eliot, T. S.\"],[\"Fluidity\"],[\"Freud, Sigmund -- \\\"On Narcissism: An Introduction\\\"\",\"\\\"On Narcissism\\\" (Freud)\"],[\"Freud, Sigmund\",\"Freud\",\"Freud, S.\"],[\"Idealization -- compared to sublimation\"],[\"Primary processes\"],[\"Skura, Meredith\"],[\"Sublimations\",\"Sublimation\"],[\"Warren, Austen\"],[\"Welleck, Rene\"]]",
             "topicNames_facet": [
                 "Eliot, T. S.",
                 "Fluidity",
-                "Freud, Sigmund",
                 "Freud, Sigmund -- \"On Narcissism: An Introduction\"",
+                "Freud, Sigmund",
                 "Idealization -- compared to sublimation",
                 "Primary processes",
                 "Skura, Meredith",

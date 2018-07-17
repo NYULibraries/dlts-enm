@@ -1,11 +1,11 @@
 package sitegen
 
 import (
-	"path/filepath"
-	"testing"
-	"strings"
 	"os"
 	"path"
+	"path/filepath"
+	"strings"
+	"testing"
 
 	"github.com/nyulibraries/dlts-enm/util"
 )
@@ -27,10 +27,13 @@ func TestGenerateTopicPages(t *testing.T) {
 		t.Fatal( "os.Remove(" + destination + ") failed: " + err.Error())
 	}
 
-	BrowseTopicListsTemplateDirectory = rootDirectory + "/" + BrowseTopicListsTemplateDirectory
-	SharedTemplateDirectory = rootDirectory + "/" + SharedTemplateDirectory
-	SitePagesTemplateDirectory = rootDirectory + "/" + SitePagesTemplateDirectory
-	TopicPageTemplateDirectory = rootDirectory + "/" + TopicPageTemplateDirectory
+	// Only do this if another sitegen test hasn't already
+	if ! strings.HasPrefix(BrowseTopicListsTemplateDirectory, rootDirectory) {
+		BrowseTopicListsTemplateDirectory = rootDirectory + "/" + BrowseTopicListsTemplateDirectory
+		SharedTemplateDirectory = rootDirectory + "/" + SharedTemplateDirectory
+		SitePagesTemplateDirectory = rootDirectory + "/" + SitePagesTemplateDirectory
+		TopicPageTemplateDirectory = rootDirectory + "/" + TopicPageTemplateDirectory
+	}
 
 	Source = "database"
 

@@ -12,17 +12,17 @@
             "publisher": "University of Michigan Press",
             "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
             "topicNames": [
-                "advertising",
                 "Advertising",
-                "radio",
+                "advertising",
+                "Radio Shack",
                 "Radio",
-                "Radio Shack"
+                "radio"
             ],
-            "topicNamesForDisplay": "[[\"advertising\",\"Advertising\"],[\"radio\",\"Radio\"],[\"Radio Shack\"]]",
+            "topicNamesForDisplay": "[[\"advertising\",\"Advertising\"],[\"Radio Shack\"],[\"radio\",\"Radio\"]]",
             "topicNames_facet": [
                 "advertising",
-                "radio",
-                "Radio Shack"
+                "Radio Shack",
+                "radio"
             ],
             "yearOfPublication": 0
         }

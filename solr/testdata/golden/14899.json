@@ -12,21 +12,21 @@
             "publisher": "New York University Press",
             "title": "Embracing the Other",
             "topicNames": [
+                "‘Abdu'l-Bahá",
                 "Allport, G",
                 "Allport, G.",
                 "Allport, Gordon",
                 "Extensivity -- in Bahá'í teachings",
                 "Humanity, wholeness of",
-                "Shoghi Effendi",
-                "‘Abdu'l-Bahá"
+                "Shoghi Effendi"
             ],
-            "topicNamesForDisplay": "[[\"Allport, Gordon\",\"Allport, G\",\"Allport, G.\"],[\"Extensivity -- in Bahá'í teachings\"],[\"Humanity, wholeness of\"],[\"Shoghi Effendi\"],[\"‘Abdu'l-Bahá\"]]",
+            "topicNamesForDisplay": "[[\"‘Abdu'l-Bahá\"],[\"Allport, Gordon\",\"Allport, G\",\"Allport, G.\"],[\"Extensivity -- in Bahá'í teachings\"],[\"Humanity, wholeness of\"],[\"Shoghi Effendi\"]]",
             "topicNames_facet": [
+                "‘Abdu'l-Bahá",
                 "Allport, Gordon",
                 "Extensivity -- in Bahá'í teachings",
                 "Humanity, wholeness of",
-                "Shoghi Effendi",
-                "‘Abdu'l-Bahá"
+                "Shoghi Effendi"
             ],
             "yearOfPublication": 0
         }

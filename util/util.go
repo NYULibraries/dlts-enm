@@ -66,18 +66,6 @@ func GetNormalizedTopicNameForSorting(topicName string) string {
 	return strings.ToLower(strings.TrimPrefix(topicName, "\""))
 }
 
-func GetMapKeys(m map[string]string) (keys []string) {
-	keys = make([]string, len(m))
-
-	i := 0
-	for key := range m {
-		keys[i] = key
-		i++
-	}
-
-	return
-}
-
 func GetRelativeFilepathInLargeDirectoryTree(prefix string, ID int, extension string) string {
 	zeroPaddedString := fmt.Sprintf("%010d", ID)
 	filename := prefix + zeroPaddedString + extension

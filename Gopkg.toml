@@ -27,10 +27,6 @@
 required = ["github.com/xo/xo"]
 
 [[constraint]]
-  name = "github.com/go-sql-driver/mysql"
-  version = "1.4.0"
-
-[[constraint]]
   branch = "master"
   name = "github.com/lib/pq"
 

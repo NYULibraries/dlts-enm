@@ -82,8 +82,10 @@ var tpl *template.Template
 
 var TopicIDs []string
 
+var topicPagesDir string
+
 func GenerateTopicPages(destination string) {
-	topicPagesDir := destination + "/topic-pages"
+	topicPagesDir = destination + "/topic-pages"
 	if _, err := os.Stat(topicPagesDir); os.IsNotExist(err) {
 		mkdirErr := os.MkdirAll(topicPagesDir, os.FileMode(0755))
 		if mkdirErr != nil {
@@ -322,7 +324,7 @@ func WriteCacheFile(topicPageData TopicPageData) (err error){
 }
 
 func WritePage(topicPageData TopicPageData) (err error){
-	filename := TopicPagesDir + "/" + GetRelativeFilepathForTopicPage(topicPageData.TopicID)
+	filename := topicPagesDir + "/" + GetRelativeFilepathForTopicPage(topicPageData.TopicID)
 	f, err := util.CreateFileWithAllParentDirectories(filename)
 	if err != nil {
 		return err

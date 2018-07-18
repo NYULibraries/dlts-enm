@@ -87,13 +87,3 @@ func GetTopicIDFromTopicPagePath(topicPagePath string) string {
 
 	return strings.TrimLeft(basename, "0")
 }
-
-func SnakeToCamelCase(snakeCaseString string) (camelCaseString string){
-	tokens := strings.Split(snakeCaseString, "_")
-
-	for _, token := range tokens {
-		camelCaseString += strings.Title(token)
-	}
-
-	return
-}

@@ -19,12 +19,12 @@ import (
 	"os"
 )
 
-var SitePagesDir string
+var sitePagesDir string
 
 func GenerateSitePages(destination string) {
-	SitePagesDir = destination + "/"
+	sitePagesDir = destination + "/"
 
-	if _, err := os.Stat(SitePagesDir); os.IsNotExist(err) {
+	if _, err := os.Stat(sitePagesDir); os.IsNotExist(err) {
 		panic(err)
 	}
 
@@ -46,7 +46,7 @@ func WriteSitePage(pageName string) (err error){
 		return err
 	}
 
-	file := SitePagesDir + "/" + filename
+	file := sitePagesDir + "/" + filename
 	f, err := os.Create(file)
 	if err != nil {
 		return err

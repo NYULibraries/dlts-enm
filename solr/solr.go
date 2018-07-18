@@ -22,8 +22,6 @@ type solrConnection interface {
 	Update(m map[string]interface{}, commit bool) (*solr.UpdateResponse, error)
 }
 
-var Port int
-var Server string
 var conn solrConnection
 
 func Init(server string, port int, injectedConn solrConnection) error {

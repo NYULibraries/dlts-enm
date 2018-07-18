@@ -24,7 +24,7 @@ import (
 	"github.com/nyulibraries/dlts-enm/cache"
 )
 
-const TctBaseUrl = "https://nyuapi.infoloom.nyc"
+const tctBaseUrl = "https://nyuapi.infoloom.nyc"
 
 // How many times to retry a request
 var MaxRetries = 3
@@ -69,7 +69,7 @@ func GetResponseBody(params ...string) (body []byte) {
 		}
 		body = cachedData
 	} else if (Source == "tct-api"){
-		var url = TctBaseUrl + TctApiEndpoints[request]
+		var url = tctBaseUrl + TctApiEndpoints[request]
 		if id != "" {
 			url += id
 		}

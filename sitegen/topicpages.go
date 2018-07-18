@@ -81,12 +81,11 @@ type VisualizationData struct{
 var tpl *template.Template
 
 var TopicIDs []string
-var TopicPagesDir string
 
 func GenerateTopicPages(destination string) {
-	TopicPagesDir = destination + "/topic-pages"
-	if _, err := os.Stat(TopicPagesDir); os.IsNotExist(err) {
-		mkdirErr := os.MkdirAll(TopicPagesDir, os.FileMode(0755))
+	topicPagesDir := destination + "/topic-pages"
+	if _, err := os.Stat(topicPagesDir); os.IsNotExist(err) {
+		mkdirErr := os.MkdirAll(topicPagesDir, os.FileMode(0755))
 		if mkdirErr != nil {
 			panic(mkdirErr)
 		}

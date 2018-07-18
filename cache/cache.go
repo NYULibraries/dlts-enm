@@ -27,11 +27,11 @@ import (
 //   * Use subdirectories:
 //       * reload command
 //       * sitegentopicpages command
-const Cache = "/tmp/enm-cache"
-const SitegenTopicpagesCache = Cache + "/sitegen-topicpages"
+const cache = "/tmp/enm-cache"
+const SitegenTopicpagesCache = cache + "/sitegen-topicpages"
 
 func init() {
-	if _, err := os.Stat(Cache); os.IsNotExist(err) {
+	if _, err := os.Stat(cache); os.IsNotExist(err) {
 		os.MkdirAll(SitegenTopicpagesCache, 0700)
 	} else if err != nil {
 		panic(err.Error())
@@ -39,7 +39,7 @@ func init() {
 }
 
 func CacheFile(request string, id string) (cacheFile string) {
-	cacheFile = Cache + "/" + request;
+	cacheFile = cache + "/" + request;
 	if id != "" {
 		cacheFile += "-" + id + ".json"
 	} else {

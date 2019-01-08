@@ -341,6 +341,7 @@ func WritePage(topicPageData TopicPageData) (err error){
 
 func SortRelatedTopicNamesWithNumberOfOccurrences(relatedTopicNamesWithNumberOfOccurrences []*db.RelatedTopicNamesForTopicWithNumberOfOccurrences) {
 	sort.SliceStable(relatedTopicNamesWithNumberOfOccurrences, func(i, j int) bool {
+		// Note that i is the higher index, it is j+1
 		return util.CompareUsingEnglishCollation(
 			util.GetNormalizedTopicNameForSorting(relatedTopicNamesWithNumberOfOccurrences[i].DisplayName),
 			util.GetNormalizedTopicNameForSorting(relatedTopicNamesWithNumberOfOccurrences[j].DisplayName)) == -1
@@ -349,12 +350,14 @@ func SortRelatedTopicNamesWithNumberOfOccurrences(relatedTopicNamesWithNumberOfO
 
 func SortTopicAlternateNames(topicAlternateNames []*db.TopicAlternateName) {
 	sort.SliceStable(topicAlternateNames, func(i, j int) bool {
+		// Note that i is the higher index, it is j+1
 		return util.CompareUsingEnglishCollation(
 			util.GetNormalizedTopicNameForSorting(topicAlternateNames[i].Name),
 			util.GetNormalizedTopicNameForSorting(topicAlternateNames[j].Name)) == -1
 	} )
 
 	sort.SliceStable(topicAlternateNames, func(i, j int) bool {
+		// Note that i is the higher index, it is j+1
 		return util.CompareUsingEnglishCollation(
 			util.GetNormalizedTopicNameForSorting(topicAlternateNames[i].DisplayName),
 			util.GetNormalizedTopicNameForSorting(topicAlternateNames[j].DisplayName)) == -1

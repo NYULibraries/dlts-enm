@@ -134,6 +134,7 @@ func AddPage(page *db.Page) error {
 
 func SortTopicNamesForPage(topicNamesForPage []*db.TopicNamesForPage) {
 	sort.SliceStable(topicNamesForPage, func(i, j int) bool {
+		// Note that i is the higher index, it is j+1
 		a := util.GetNormalizedTopicNameForSorting(topicNamesForPage[i].TopicDisplayName) +
 			util.GetNormalizedTopicNameForSorting(topicNamesForPage[i].TopicName)
 

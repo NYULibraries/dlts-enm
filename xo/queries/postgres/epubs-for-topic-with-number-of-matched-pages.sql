@@ -11,5 +11,5 @@ WHERE hb.id = %%topic_id int%%
 
 GROUP BY od.title, od.author, oee.publisher, isbn
 
-ORDER BY number_of_occurrences DESC
+ORDER BY number_of_occurrences, od.title DESC
 

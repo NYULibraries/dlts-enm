@@ -27,7 +27,9 @@ import (
 )
 
 func CompareUsingEnglishCollation(a, b string) (int) {
-	cl := collate.New(language.English, collate.Loose)
+	// Do not use collate.IgnoreCase or collate.Loose options.  We need to be able
+	// to distinguish between topic names like Culture and culture
+	cl := collate.New(language.English, collate.IgnoreDiacritics, collate.IgnoreWidth)
 	return cl.CompareString(a, b)
 }
 
@@ -63,7 +65,9 @@ func Diff(path1 string, path2 string) (string, error) {
 }
 
 func GetNormalizedTopicNameForSorting(topicName string) string {
-	return strings.ToLower(strings.TrimPrefix(topicName, "\""))
+	// Retain case-sensitivity, as topic names can differ only by case.
+	// Example: "Culture" and "culture" are distinct topic names.
+	return strings.TrimPrefix(topicName, "\"")
 }
 
 func GetRelativeFilepathInLargeDirectoryTree(prefix string, ID int, extension string) string {

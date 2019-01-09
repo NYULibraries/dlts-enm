@@ -106,7 +106,9 @@ func GenerateDynamicBrowseTopicsListsFromDatabase() {
 	for _, browseTopicsListsCategory := range browseTopicsListsCategories {
 		topics = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
 
-		sort.Slice(topics, func(i, j int) bool {
+		// Must use SliceStable to ensure deterministic sort for tests.
+		sort.SliceStable(topics, func(i, j int) bool {
+			// Note that i is the higher index, it is j+1
 			return util.CompareUsingEnglishCollation(
 				topics[i].DisplayNameSortKey, topics[j].DisplayNameSortKey) == -1
 		} )

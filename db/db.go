@@ -190,7 +190,13 @@ func GetTopicsWithSortKeysByFirstSortableCharacterRegexp(regexp string) (topics 
 	`      ELSE LOWER( LEFT( display_name, 1 ) )` +
     ` END SIMILAR TO '` + regexp + `'` +
 
-    ` ORDER BY display_name_sort_key`;
+	// Note that duplicate display_name_sort_key values should not be possible
+	// because topics are not supposed to share display names, but we do in fact
+	// have some duplicates in TCT for whatever reason, and there is no technical
+	// safeguard against it happening again in the future even after the current
+	// duplicates are fixed.  We need a sub-sort to keep order deterministic for
+	// tests.
+    ` ORDER BY display_name_sort_key, id`;
 
 	var (
 		id int

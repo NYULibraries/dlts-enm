@@ -21,6 +21,7 @@ import (
 )
 
 var Destination string
+var GoogleAnalytics bool
 var SitegenSource string
 
 // sitegenCmd represents the sitegen command
@@ -59,5 +60,13 @@ func init() {
 		"s",
 		"database",
 		"Specify data source: database, cache",
+	)
+
+	sitegenCmd.PersistentFlags().BoolVarP(
+		&GoogleAnalytics,
+		"google-analytics",
+		"g",
+		false,
+		"Generate Google Analytics code",
 	)
 }

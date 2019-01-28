@@ -18,6 +18,7 @@ type Paths struct{
 	WebRoot string
 }
 
+var GoogleAnalytics bool
 var Source string
 
 // Tricky...this assumes that location of the templates relative to working directory

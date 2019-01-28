@@ -119,6 +119,7 @@ func NewTemplate() (tpl *template.Template){
 		TopicPageTemplateDirectory + "/index.html",
 		TopicPageTemplateDirectory + "/epub.html",
 		SharedTemplateDirectory + "/banner.html",
+		SharedTemplateDirectory + "/google-analytics.html",
 	)
 	if err != nil {
 		panic(err)
@@ -331,7 +332,12 @@ func WritePage(topicPageData TopicPageData) (err error){
 	}
 	defer f.Close()
 
-	err = tpl.Execute(f, topicPageData)
+	pageData := struct{
+		TopicPageData
+		GoogleAnalytics bool
+	}{ topicPageData, GoogleAnalytics}
+
+	err = tpl.Execute(f, pageData)
 	if err != nil {
 		return err
 	}

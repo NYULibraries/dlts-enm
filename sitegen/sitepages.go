@@ -40,6 +40,7 @@ func WriteSitePage(pageName string) (err error){
 	tpl, err = tpl.ParseFiles(
 		SitePagesTemplateDirectory + "/" + templateFile,
 		SharedTemplateDirectory    + "/banner.html",
+		SharedTemplateDirectory    + "/google-analytics.html",
 	)
 
 	if err != nil {
@@ -53,8 +54,10 @@ func WriteSitePage(pageName string) (err error){
 	}
 
 	pageData := struct{
+		GoogleAnalytics bool
 		Paths
 	}{
+		GoogleAnalytics: GoogleAnalytics,
 		Paths: Paths{
 			WebRoot: ".",
 		},

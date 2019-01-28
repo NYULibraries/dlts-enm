@@ -26,6 +26,7 @@ var browseTopicsListsCmd = &cobra.Command{
 	Short: "Creates ENM website browse topics lists pages",
 	Long: `Creates ENM website browse topics lists pages`,
 	Run: func(cmd *cobra.Command, args []string) {
+		sitegen.GoogleAnalytics = GoogleAnalytics
 		sitegen.Source = SitegenSource
 		sitegen.GenerateBrowseTopicsLists(Destination)
 	},

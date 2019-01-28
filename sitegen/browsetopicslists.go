@@ -152,6 +152,7 @@ func WriteStaticBrowseTopicsListsPage(listname string) (err error){
 	tpl, err = tpl.ParseFiles(
 		BrowseTopicListsTemplateDirectory + "/" + templateFile,
 		SharedTemplateDirectory    + "/banner.html",
+		SharedTemplateDirectory    + "/google-analytics.html",
 	)
 
 	if err != nil {
@@ -165,8 +166,10 @@ func WriteStaticBrowseTopicsListsPage(listname string) (err error){
 	}
 
 	pageData := struct{
+		GoogleAnalytics bool
 		Paths
 	}{
+		GoogleAnalytics: GoogleAnalytics,
 		Paths: Paths{
 			WebRoot: "..",
 		},
@@ -186,6 +189,7 @@ func WriteDynamicBrowseTopicsListPage(filename string, browseTopicsListPageData 
 		BrowseTopicListsTemplateDirectory + "/a-to-z.html",
 		BrowseTopicListsTemplateDirectory + "/a-to-z-content.html",
 		SharedTemplateDirectory           + "/banner.html",
+		SharedTemplateDirectory           + "/google-analytics.html",
 	)
 
 	if err != nil {
@@ -198,7 +202,14 @@ func WriteDynamicBrowseTopicsListPage(filename string, browseTopicsListPageData 
 		return err
 	}
 
-	err = tpl.Execute(f, browseTopicsListPageData)
+	pageData := struct{
+		BrowseTopicsListPageData
+		GoogleAnalytics bool
+	}{
+		browseTopicsListPageData,
+		GoogleAnalytics,
+	}
+	err = tpl.Execute(f, pageData)
 	if err != nil {
 		return err
 	}

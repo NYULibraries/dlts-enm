@@ -26,6 +26,7 @@ var sitePagesCmd = &cobra.Command{
 	Short: "Creates ENM website site pages: About, Home",
 	Long: `Creates ENM website site pages: About, Home`,
 	Run: func(cmd *cobra.Command, args []string) {
+		sitegen.GoogleAnalytics = GoogleAnalytics
 		sitegen.Source = SitegenSource
 		sitegen.GenerateSitePages(Destination)
 	},

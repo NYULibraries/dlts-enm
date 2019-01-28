@@ -15,6 +15,7 @@
 package sitegen
 
 import (
+	"errors"
 	"os"
 	"path"
 	"path/filepath"
@@ -24,21 +25,40 @@ import (
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
-func TestGenerateTopicPages(t *testing.T) {
+func TestGenerateTopicPagesNoGoogleAnalytics(t *testing.T) {
+	GoogleAnalytics = false
+
+	_, err := testGenerateTopicPages()
+	if (err != nil) {
+		t.Fatal(err.Error())
+	}
+}
+
+func TestGenerateTopicPagesWithGoogleAnalytics(t *testing.T) {
+	GoogleAnalytics = true
+
+	_, err := testGenerateTopicPages()
+	if (err != nil) {
+		t.Fatal(err.Error())
+	}
+}
+
+func testGenerateTopicPages() (bool, error) {
 	wd, err := os.Getwd()
 	if (err != nil) {
-		t.Fatal( "os.Getwd() failed: " + err.Error())
+		return false, errors.New("os.Getwd() failed: " + err.Error())
 	}
 
 	rootDirectory := path.Dir(wd)
 
-	TopicPagesGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/topic-pages"
+	TopicPagesGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/topic-pages" +
+		"/" + getGoldenFileSubdirectory()
 
 	destination := rootDirectory + "/sitegen/testdata/tmp"
 	outputDir := destination + "/topic-pages"
 	err = os.RemoveAll(outputDir)
 	if (err != nil) {
-		t.Fatal( "os.Remove(" + destination + ") failed: " + err.Error())
+		return false, errors.New("os.Remove(" + destination + ") failed: " + err.Error())
 	}
 
 	// Only do this if another sitegen test hasn't already
@@ -58,13 +78,13 @@ func TestGenerateTopicPages(t *testing.T) {
 		} else if (strings.HasSuffix(path, ".html")) {
 			goldenFiles = append(goldenFiles, path)
 		} else {
-			t.Fatal("Unexpected file encountered: " + path)
+			return errors.New("Unexpected file encountered: " + path)
 		}
 
 		return nil
 	})
 	if err != nil {
-		t.Fatal(err)
+		return false, errors.New(err.Error())
 	}
 
 	for _, goldenFile := range goldenFiles {
@@ -75,11 +95,13 @@ func TestGenerateTopicPages(t *testing.T) {
 
 	diffOutput, err := util.Diff(TopicPagesGoldenFilesDirectory, outputDir)
 	if (err != nil) {
-		t.Fatal("Diff of " + TopicPagesGoldenFilesDirectory + " and " +
+		return false, errors.New("Diff of " + TopicPagesGoldenFilesDirectory + " and " +
 			destination + " failed to run: " + err.Error())
 	}
 
 	if (diffOutput != "") {
-		t.Errorf("%s", diffOutput)
+		return false, errors.New(diffOutput)
 	}
+
+	return true, nil
 }

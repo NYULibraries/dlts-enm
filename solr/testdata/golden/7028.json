@@ -18,10 +18,10 @@
                 "FOX",
                 "Network",
                 "Networking",
-                "Networks",
-                "networks"
+                "networks",
+                "Networks"
             ],
-            "topicNamesForDisplay": "[[\"CNN\"],[\"Fox News Channel\"],[\"Fox News\"],[\"FOX\"],[\"Networking\",\"Network\",\"Networks\",\"networks\"]]",
+            "topicNamesForDisplay": "[[\"CNN\"],[\"Fox News Channel\"],[\"Fox News\"],[\"FOX\"],[\"Networking\",\"Network\",\"networks\",\"Networks\"]]",
             "topicNames_facet": [
                 "CNN",
                 "Fox News Channel",

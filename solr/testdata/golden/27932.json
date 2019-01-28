@@ -12,10 +12,10 @@
             "publisher": "New York University Press",
             "title": "American Cool",
             "topicNames": [
-                "Empathy",
                 "empathy",
-                "Therapy",
-                "therapy"
+                "Empathy",
+                "therapy",
+                "Therapy"
             ],
             "topicNamesForDisplay": "[[\"empathy\",\"Empathy\"],[\"therapy\",\"Therapy\"]]",
             "topicNames_facet": [

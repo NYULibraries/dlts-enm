@@ -13,8 +13,8 @@
             "title": "American Cool",
             "topicNames": [
                 "cremation",
-                "Mourning",
-                "mourning"
+                "mourning",
+                "Mourning"
             ],
             "topicNamesForDisplay": "[[\"cremation\"],[\"mourning\",\"Mourning\"]]",
             "topicNames_facet": [

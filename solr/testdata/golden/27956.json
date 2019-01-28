@@ -13,8 +13,8 @@
             "title": "American Cool",
             "topicNames": [
                 "ad",
-                "Advertisements",
                 "advertisements",
+                "Advertisements",
                 "animals",
                 "clothing",
                 "eighteenth century",
@@ -23,10 +23,10 @@
                 "kleptomania",
                 "shopping",
                 "Woman",
-                "Women",
-                "women"
+                "women",
+                "Women"
             ],
-            "topicNamesForDisplay": "[[\"advertisements\",\"ad\",\"Advertisements\"],[\"animals\"],[\"clothing\"],[\"eighteenth century\"],[\"envy\"],[\"inner-directedness\"],[\"kleptomania\"],[\"shopping\"],[\"Woman\",\"Women\",\"women\"]]",
+            "topicNamesForDisplay": "[[\"advertisements\",\"ad\",\"Advertisements\"],[\"animals\"],[\"clothing\"],[\"eighteenth century\"],[\"envy\"],[\"inner-directedness\"],[\"kleptomania\"],[\"shopping\"],[\"Woman\",\"women\",\"Women\"]]",
             "topicNames_facet": [
                 "advertisements",
                 "animals",

@@ -12,21 +12,21 @@
             "publisher": "The University of Michigan Press",
             "title": "Making News at The New York Times",
             "topicNames": [
-                "Branding",
                 "branding",
+                "Branding",
                 "citizen contributors",
                 "engagement",
-                "Ethics",
                 "ethics",
+                "Ethics",
                 "Facebook",
                 "interactivity -- values",
                 "Twitter",
-                "Value",
                 "value",
-                "Values",
-                "values"
+                "Value",
+                "values",
+                "Values"
             ],
-            "topicNamesForDisplay": "[[\"branding\",\"Branding\"],[\"citizen contributors\"],[\"engagement\"],[\"ethics\",\"Ethics\"],[\"Facebook\"],[\"interactivity -- values\"],[\"Twitter\"],[\"values\",\"Value\",\"value\",\"Values\"]]",
+            "topicNamesForDisplay": "[[\"branding\",\"Branding\"],[\"citizen contributors\"],[\"engagement\"],[\"ethics\",\"Ethics\"],[\"Facebook\"],[\"interactivity -- values\"],[\"Twitter\"],[\"values\",\"value\",\"Value\",\"Values\"]]",
             "topicNames_facet": [
                 "branding",
                 "citizen contributors",

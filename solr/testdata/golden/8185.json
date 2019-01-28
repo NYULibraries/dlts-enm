@@ -14,13 +14,13 @@
             "topicNames": [
                 "Advisors -- campaign",
                 "Democratic -- party",
-                "Democratic Party",
                 "Democratic party",
+                "Democratic Party",
                 "Emotional",
                 "Mondale, Walter",
                 "Muskie, Edmund"
             ],
-            "topicNamesForDisplay": "[[\"Advisors -- campaign\"],[\"Democratic -- party\",\"Democratic Party\",\"Democratic party\"],[\"Emotional\"],[\"Mondale, Walter\"],[\"Muskie, Edmund\"]]",
+            "topicNamesForDisplay": "[[\"Advisors -- campaign\"],[\"Democratic -- party\",\"Democratic party\",\"Democratic Party\"],[\"Emotional\"],[\"Mondale, Walter\"],[\"Muskie, Edmund\"]]",
             "topicNames_facet": [
                 "Advisors -- campaign",
                 "Democratic -- party",

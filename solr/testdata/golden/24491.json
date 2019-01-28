@@ -12,13 +12,13 @@
             "publisher": "York University Press",
             "title": "Teaching What You’re Not",
             "topicNames": [
-                "Civil Rights Movement",
-                "Civil Rights movement",
-                "Civil rights movement",
                 "civil rights movement",
+                "Civil rights movement",
+                "Civil Rights movement",
+                "Civil Rights Movement",
                 "Nommo"
             ],
-            "topicNamesForDisplay": "[[\"civil rights movement\",\"Civil Rights Movement\",\"Civil Rights movement\",\"Civil rights movement\"],[\"Nommo\"]]",
+            "topicNamesForDisplay": "[[\"civil rights movement\",\"Civil rights movement\",\"Civil Rights movement\",\"Civil Rights Movement\"],[\"Nommo\"]]",
             "topicNames_facet": [
                 "civil rights movement",
                 "Nommo"

@@ -16,13 +16,13 @@
                 "affection",
                 "Father",
                 "Father(s)",
-                "Fathers",
                 "fathers",
-                "Intensity",
+                "Fathers",
                 "intensity",
+                "Intensity",
                 "Spock, Benjamin"
             ],
-            "topicNamesForDisplay": "[[\"adoption\"],[\"affection\"],[\"Father(s)\",\"Father\",\"Fathers\",\"fathers\"],[\"intensity\",\"Intensity\"],[\"Spock, Benjamin\"]]",
+            "topicNamesForDisplay": "[[\"adoption\"],[\"affection\"],[\"Father(s)\",\"Father\",\"fathers\",\"Fathers\"],[\"intensity\",\"Intensity\"],[\"Spock, Benjamin\"]]",
             "topicNames_facet": [
                 "adoption",
                 "affection",

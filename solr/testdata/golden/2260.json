@@ -15,11 +15,11 @@
                 "authors -- and timing of publication",
                 "description",
                 "fabrication",
-                "Falsification",
                 "falsification",
+                "Falsification",
                 "nature",
-                "Peer review",
                 "peer review",
+                "Peer review",
                 "Peer reviews",
                 "plagiarism -- criteria",
                 "self-plagiarism",
@@ -27,7 +27,7 @@
                 "Web",
                 "World Wide Web"
             ],
-            "topicNamesForDisplay": "[[\"authors -- and timing of publication\"],[\"description\"],[\"fabrication\"],[\"falsification\",\"Falsification\"],[\"nature\"],[\"Peer reviews\",\"Peer review\",\"peer review\"],[\"plagiarism -- criteria\"],[\"self-plagiarism\"],[\"words\"],[\"World Wide Web\",\"Web\"]]",
+            "topicNamesForDisplay": "[[\"authors -- and timing of publication\"],[\"description\"],[\"fabrication\"],[\"falsification\",\"Falsification\"],[\"nature\"],[\"Peer reviews\",\"peer review\",\"Peer review\"],[\"plagiarism -- criteria\"],[\"self-plagiarism\"],[\"words\"],[\"World Wide Web\",\"Web\"]]",
             "topicNames_facet": [
                 "authors -- and timing of publication",
                 "description",

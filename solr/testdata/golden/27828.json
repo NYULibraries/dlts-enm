@@ -14,10 +14,10 @@
             "topicNames": [
                 "childishness",
                 "honor code",
-                "Rationality",
                 "rationality",
-                "Shame",
+                "Rationality",
                 "shame",
+                "Shame",
                 "ventilation"
             ],
             "topicNamesForDisplay": "[[\"childishness\"],[\"honor code\"],[\"rationality\",\"Rationality\"],[\"shame\",\"Shame\"],[\"ventilation\"]]",

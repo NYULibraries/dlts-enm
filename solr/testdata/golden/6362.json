@@ -12,14 +12,14 @@
             "publisher": "The University of Michigan Press",
             "title": "Making News at The New York Times",
             "topicNames": [
-                "Home Page",
-                "Home page",
                 "home page",
+                "Home page",
+                "Home Page",
                 "Page One",
                 "Roberts, Jim",
                 "Sulzberger, Arthur Ochs, Jr."
             ],
-            "topicNamesForDisplay": "[[\"home page\",\"Home Page\",\"Home page\"],[\"Page One\"],[\"Roberts, Jim\"],[\"Sulzberger, Arthur Ochs, Jr.\"]]",
+            "topicNamesForDisplay": "[[\"home page\",\"Home page\",\"Home Page\"],[\"Page One\"],[\"Roberts, Jim\"],[\"Sulzberger, Arthur Ochs, Jr.\"]]",
             "topicNames_facet": [
                 "home page",
                 "Page One",

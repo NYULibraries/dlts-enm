@@ -12,16 +12,16 @@
             "publisher": "University of Michigan Press",
             "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
             "topicNames": [
-                "Advertising",
                 "advertising",
+                "Advertising",
                 "Public good",
                 "Public goods",
-                "Television",
                 "television",
+                "Television",
                 "television.",
                 "TV"
             ],
-            "topicNamesForDisplay": "[[\"advertising\",\"Advertising\"],[\"Public goods\",\"Public good\"],[\"television.\",\"Television\",\"television\",\"TV\"]]",
+            "topicNamesForDisplay": "[[\"advertising\",\"Advertising\"],[\"Public goods\",\"Public good\"],[\"television.\",\"television\",\"Television\",\"TV\"]]",
             "topicNames_facet": [
                 "advertising",
                 "Public goods",

@@ -10,8 +10,9 @@ function usage() {
 
     cat <<EOF
 
-usage: ${script_name} [-g] [-u username] environment
+usage: ${script_name} [-g] [-h] [-u username] environment
     -g:          generate static in dist/
+    -h:          print this usage message
     -u username: username on bastion host and web server
     environment: "dev", "stage", or "prod"
 
@@ -90,10 +91,11 @@ STATIC_SITE_PATH=/www/sites/enm
 
 generate_site=false
 
-while getopts gu: opt
+while getopts ghu: opt
 do
     case $opt in
         g) generate_site=true ;;
+        h) usage; exit 0 ;;
         u) username=$OPTARG ;;
         *) echo >&2 "Options not set correctly."; usage; exit 1 ;;
     esac

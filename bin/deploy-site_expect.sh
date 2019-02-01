@@ -34,7 +34,24 @@ usage: ${script_name} environment
 EOF
 }
 
+while getopts h opt
+do
+    case $opt in
+        h) usage; exit 0 ;;
+        *) echo >&2 "Options not set correctly."; usage; exit 1 ;;
+    esac
+done
+
+shift $((OPTIND-1))
+
 deploy_to_environment=$1
+
+if [ -z "$deploy_to_environment" ]
+then
+    usage
+
+    exit 0
+fi
 
 validate_environment_arg $deploy_to_environment
 

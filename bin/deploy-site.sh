@@ -75,8 +75,6 @@ function copy_files() {
     local server=$3
     local static_site_path=$4
 
-    cp -pr $ROOT/sitegen/static $DIST/shared
-
     for f in about.html index.html browse-topics-lists/ shared/ topic-pages/
     do
         rsync --archive --compress --delete --human-readable --verbose \
@@ -120,6 +118,9 @@ server=$( get_server $deploy_to_environment )
 if $generate_site
 then
     clean_dist $DIST
+
+    cp -pr $ROOT/sitegen/static $DIST/shared
+
     generate_site $DIST $google_analytics_flag
 fi
 

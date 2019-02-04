@@ -20,6 +20,9 @@
 .idea
 *~
 
+dist/*
+!dist/.commit-empty-directory
+
 # Running `godep save` automatically checks vendor/ into source control.
 # For now, don't commit it.  To generate vendor/, can do this:
 #

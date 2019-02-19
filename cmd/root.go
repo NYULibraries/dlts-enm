@@ -13,13 +13,22 @@ var cfgFile string
 // RootCmd represents the base command when called without any subcommands
 var RootCmd = &cobra.Command{
 	Use:   "enm",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "CLI application for generating the Enhanced Networked Monographs (ENM) static website  and Solr index.",
+	Long: `enm is a CLI application for performing various backend ENM functions:
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+* Create website static pages
+    * About
+    * Home
+    * Create browse topics lists
+    * Create topic pages
+* Load enm-pages Solr index
+* Create cached data files which can be used in place of the Postgres database in ` +
+`subsequent jobs
+
+` +
+"The enm program has not been productionized.  Enough development was done to "      +
+"create an initial stable and correct demo site.  ENM data is currently frozen and " +
+"there are no active plans to add or change data at this time.",
 // Uncomment the following line if your bare application
 // has an action associated with it:
 //	Run: func(cmd *cobra.Command, args []string) { },

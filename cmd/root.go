@@ -22,8 +22,6 @@ var RootCmd = &cobra.Command{
     * Create browse topics lists
     * Create topic pages
 * Load enm-pages Solr index
-* Create cached data files which can be used in place of the Postgres database in ` +
-`subsequent jobs
 
 ` +
 "The enm program has not been productionized.  Enough development was done to "      +

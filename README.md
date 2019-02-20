@@ -383,8 +383,9 @@ database access.
 `panic` calls
 * `solr load` caching of Postgres data, for improved performance and for decoupling
 from the TCT Postgres database (and TCT in general)
-* Maybe embed the `sitegen` templates into the `enm` binary using something like
-https://github.com/jteeuwen/go-bindata (see comment in `sitegen/sitegen.go`)
+* (maybe) Embedding of `sitegen` templates into the `enm` binary using something like
+https://github.com/jteeuwen/go-bindata (for motivation see comment in
+`sitegen/sitegen.go`)
 
 ## ENM project Github repos
 

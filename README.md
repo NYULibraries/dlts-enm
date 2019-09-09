@@ -360,9 +360,15 @@ ENM site deployment completed.
 
 ## Running the tests
 
+Make sure access to the Postgres database has already been set up before running
+the tests.  See [Set environment variables](#set-environment-variables).
+
 ```shell
 go test ./...
 ```
+
+Ideally for tests Postgres would be stubbed out with a fake.  This might be done
+as a future improvement. 
 
 ## Generation of code files in `db/postgres/models`
 
@@ -386,6 +392,8 @@ from the TCT Postgres database (and TCT in general)
 * (maybe) Embedding of `sitegen` templates into the `enm` binary using something like
 https://github.com/jteeuwen/go-bindata (for motivation see comment in
 `sitegen/sitegen.go`)
+* Write more tests, and stub out Postgres in tests in the `solr` and `sitegen` packages
+(and in all future tests).
 
 ## ENM project Github repos
 

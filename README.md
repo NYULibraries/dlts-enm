@@ -386,6 +386,8 @@ from the TCT Postgres database (and TCT in general)
 * (maybe) Embedding of `sitegen` templates into the `enm` binary using something like
 https://github.com/jteeuwen/go-bindata (for motivation see comment in
 `sitegen/sitegen.go`)
+* Write more tests, and stub out Postgres in tests in the `solr` and `sitegen` packages
+(and in all future tests).
 
 ## ENM project Github repos
 

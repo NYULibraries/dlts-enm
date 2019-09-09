@@ -360,9 +360,15 @@ ENM site deployment completed.
 
 ## Running the tests
 
+Make sure access to the Postgres database has already been set up before running
+the tests.  See [Set environment variables](#set-environment-variables).
+
 ```shell
 go test ./...
 ```
+
+Ideally for tests Postgres would be stubbed out with a fake.  This might be done
+as a future improvement. 
 
 ## Generation of code files in `db/postgres/models`
 

@@ -1,89 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51495518-4"></script>
-  <script>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51495518-4"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'UA-51495518-4', { 'anonymize_ip': true });
-  </script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ENM">
-  <title>ENM</title>
-  <link rel="stylesheet" href="shared/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="shared/css/bulma.min.css">
-</head>
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Enhanced Networked Monographs Topic Explorer allows users to search and browse through the full text of open-access books from the University of Michigan Press, the University of Minnesota Press, and NYU Press. The application exposes and visualizes topics derived from back-of-the-book indexes.">
+    <title>Enhanced Networked Monographs: Explore Open Access books by topic</title>
+    <link rel="stylesheet" href="shared/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="shared/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+      main {
+        background: #ffffff url("./shared/assets/network.svg") no-repeat right;
+        background-size: contain;
+        min-height: calc( 100vh - 6rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-<body class="enm enm-about enm-page">
-  <div class="skipnav"><a href="#maincontent">Skip to main content</a></div>
-<div class="enm-topnav">
-  <div class="container is-fluid">
-    <nav class="navbar is-transparent">
-      <div class="navbar-brand">
-        <h1 class="navbar-item enm-logo">
-          <a href=".">
-            Enhanced Networked Monographs
-          </a>
-        </h1>
-        <div class="navbar-burger burger" data-target="navMenuIndex">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-      <div id="navMenuIndex" class="navbar-menu">
-        <div class="navbar-start">
-          <div class="navbar-item">
-            <a class="navbar-item" href="./search/">Search</a>
-          </div>
-           <div class="navbar-item">
-            <a class="navbar-item" href="./about.html">About</a>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link" href="./browse-topics-lists/enm-picks.html">
-              Browse
-            </a>
-            <div class="navbar-dropdown is-boxed">
-              <a class="navbar-item " href="./browse-topics-lists/enm-picks.html">
-                Featured topics
-              </a>
-               <hr class="navbar-divider">
-              <a class="navbar-item " href="./browse-topics-lists/a.html">
-                All topics
-              </a>
+      .intro-text {
+        font-size: 1.5rem;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      @media screen and (max-width:768px) {
+        .intro-text {
+          font-size: 1.25rem;
+
+        }
+      }
+
+      .logos-hold {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 70%;
+        margin-left: -5px;
+        align-items: flex-end;
+      }
+
+      .logos-hold img {
+        padding: 5px;
+        display: block;
+      }
+
+      .logo-item1 {
+        flex: 0 1 100px;
+      }
+
+      .logo-item2 {
+        max-width: 67%;
+      }
+
+      .logo-group1 {
+        flex: 0 0 80%;
+      }
+    </style>
+  </head>
+
+  <body class="enm enm-about enm-page">
+    <div class="skipnav"><a href="#maincontent">Skip to main content</a></div>
+    <div class="enm-topnav">
+      <div class="container is-fluid">
+        <nav class="navbar is-transparent">
+          <div class="navbar-brand">
+            <h1 class="navbar-item enm-logo">
+              <a href="."> Enhanced Networked Monographs </a>
+            </h1>
+            <div class="navbar-burger burger" data-target="navMenuIndex">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
-        </div>
+          <div id="navMenuIndex" class="navbar-menu">
+            <div class="navbar-start">
+              <div class="navbar-item">
+                <a class="navbar-item" href="./search/">Search</a>
+              </div>
+              <div class="navbar-item">
+                <a class="navbar-item" href="./about.html">About</a>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="./browse-topics-lists/enm-picks.html"> Browse </a>
+                <div class="navbar-dropdown is-boxed">
+                  <a class="navbar-item " href="./browse-topics-lists/enm-picks.html"> Featured topics </a>
+                  <hr class="navbar-divider">
+                  <a class="navbar-item " href="./browse-topics-lists/a.html"> All topics </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
-  </div>
-</div>
-  <main class="enm-about">
-    <section class="hero is-primary">
-      <div class="hero-body">
+    </div>
+    <main class="enm-about">
+      <section class="section">
+        <div class="container" id="maincontent">
+          <div class="content">
+            <p class="intro-text">The Enhanced Networked Monographs Topic Explorer allows users to search and browse through the full text of open-access books from the University of Michigan Press, the University of Minnesota Press, and NYU Press. The application exposes and visualizes topics derived from back-of-the-book indexes. </p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
         <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column">
-              <h1 class="title">
-                Explore EPubs
-              </h1>
+          <div class="content">
+            <div class="logos-hold">
+              <div class="logo-item logo-item1"><img src="./shared/assets/logos/minnesota.gif" alt="University of Minnesota Press logo" /></div>
+              <div class="logo-group1">
+                <div class="logo-item logo-item2"><img src="./shared/assets/logos/LogoNYUPress.jpg" alt="New York University Press logo" /></div>
+                <div class="logo-item logo-item3"><img src="./shared/assets/logos/michigan-press.png" alt="University of Michigan Press logo" /></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container" id="maincontent">
-        <div class="content">&nbsp;
-        </div>
-      </div>
-    </section>
-  </main>
-</body>
+      </section>
+    </main>
+    <footer>
+      <p class="is-centered"><a href="https://nyupress.org/">NYU Press</a> • <a href="http://dlib.nyu.edu/dlts/">NYU DLTS</a></p>
+    </footer>
+  </body>
 
 </html>

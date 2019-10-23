@@ -45,7 +45,7 @@ func testGenerateTopicPages() (bool, error) {
 	outputDir := destination + "/topic-pages"
 	err = os.RemoveAll(outputDir)
 	if (err != nil) {
-		return false, errors.New("os.Remove(" + destination + ") failed: " + err.Error())
+		return false, errors.New("os.Remove(" + outputDir + ") failed: " + err.Error())
 	}
 
 	// Only do this if another sitegen test hasn't already

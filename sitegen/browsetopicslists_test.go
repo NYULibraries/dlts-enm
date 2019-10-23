@@ -44,7 +44,7 @@ func testGenerateBrowseTopicsLists() (bool, error) {
 	outputDir := destination + "/browse-topics-lists"
 	err = os.RemoveAll(outputDir)
 	if (err != nil) {
-		return false, errors.New("os.RemoveAll(" + destination + ") failed: " + err.Error())
+		return false, errors.New("os.RemoveAll(" + outputDir + ") failed: " + err.Error())
 	}
 
 	// Only do this if another sitegen test hasn't already

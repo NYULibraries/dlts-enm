@@ -40,7 +40,8 @@ func testGenerateTopicPages() (bool, error) {
 	TopicPagesGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/topic-pages" +
 		"/" + getGoldenFileSubdirectory()
 
-	destination := rootDirectory + "/sitegen/testdata/tmp"
+	destination := rootDirectory + "/sitegen/testdata/tmp/topic-pages/" +
+		getGoldenFileSubdirectory()
 	outputDir := destination + "/topic-pages"
 	err = os.RemoveAll(outputDir)
 	if (err != nil) {

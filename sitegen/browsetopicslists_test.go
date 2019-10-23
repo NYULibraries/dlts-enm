@@ -39,7 +39,8 @@ func testGenerateBrowseTopicsLists() (bool, error) {
 	BrowseTopicsListsGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/browse-topics-lists" +
 		"/" + getGoldenFileSubdirectory()
 
-	destination := rootDirectory + "/sitegen/testdata/tmp"
+	destination := rootDirectory + "/sitegen/testdata/tmp/browse-topics-lists/" +
+		getGoldenFileSubdirectory()
 	outputDir := destination + "/browse-topics-lists"
 	err = os.RemoveAll(outputDir)
 	if (err != nil) {

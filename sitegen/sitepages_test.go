@@ -39,7 +39,9 @@ func testGenerateSitePages() (bool, error) {
 	SitePagesGoldenFilesDirectory := rootDirectory + "/sitegen/testdata/golden/site-pages" +
 		"/" + getGoldenFileSubdirectory()
 
-	outputDir := rootDirectory + "/sitegen/testdata/tmp/site-pages"
+	outputDir := rootDirectory + "/sitegen/testdata/tmp/site-pages" +
+		"/" + getGoldenFileSubdirectory()
+
 	// Delete all the contents, but don't delete the directory itself
 	err = os.RemoveAll(outputDir)
 	err = os.MkdirAll(outputDir, 0700)

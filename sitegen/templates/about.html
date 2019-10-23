@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>{{if .GoogleAnalytics}}{{template "google-analytics.html" .}}{{end}}
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ENM">
-  <title>About: ENM</title>
-  <link rel="stylesheet" href="shared/font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="shared/css/bulma.min.css">
-</head>
+  <head>{{if .GoogleAnalytics}}{{template "google-analytics.html" .}}{{end}}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ENM">
+    <title>About: ENM</title>
+    <link rel="stylesheet" href="shared/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="shared/css/bulma.min.css">
+    <style>
+      .enm-about footer{
+        margin-top: 100px;
+      }
+      h4 {
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
 
-<body class="enm enm-about enm-page">
-  {{template "banner.html" .}}
-  <main class="enm-about">
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column">
-              <h1 class="title">
-                About this project
-              </h1>
+  <body class="enm enm-about enm-page">
+{{template "banner.html" .}}    <main class="enm-about">
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-vcentered">
+              <div class="column">
+                <h1 class="title">About</h1>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container" id="maincontent">
-         <div class="content">&nbsp;
+      </section>
+      <section class="section">
+        <div class="container" id="maincontent">
+          <div class="content">
+            <h2>Enhanced Networked Monographs</h2>
+            <p>A collaboration between <a href="https://nyupress.org/">NYU Press</a> and <a href="http://dlib.nyu.edu/dlts/">Digital Library Technology Services</a>, Enhanced Networked Monographs (ENM) is an experimental open access publishing project funded by <a href="https://mellon.org/">The Andrew W. Mellon Foundation</a>. The ENM Topic Explorer provides free, web-based access to selected eBooks from NYU Press, <a href="https://www.upress.umn.edu/">University of Minnesota Press</a>, and <a href="https://www.press.umich.edu/">University of Michigan Press</a>. Expanding on work done for the NYU Press <a href="http://opensquare.nyupress.org">Open Square</a> website, ENM’s prototype discovery and reading environments enable <strong>full-text search</strong> and <strong>navigation via a &#8220;topic map&#8221;</strong> derived from back-of-book index entries.</p>
+            <p>For more background on what went into the project, visit the <a href="https://wp.nyu.edu/enmproject/">ENM project blog</a>.</p>
+            <h3>Project Team</h3>
+            <h4>NYU Libraries, Digital Library Technology Services (DLTS)</h4>
+            <p>David Millman, Assistant Dean, Digital Library Technology Services and Principal Investigator</p>
+            <p>Carol Kassel, Senior Manager, Digital Infrastructure</p>
+            <p>Laura Henze, Designer</p>
+            <p>David Arjanik, Programmer Analyst</p>
+            <h4>NYU Press</h4>
+            <p>Ellen Chodosh, Director</p>
+            <p>Eric Zinner, Associate Director and Editor-in-Chief</p>
+            <p>Jonathan Greenberg, Digital Scholarly Publishing Specialist</p>
+            <h4>Collaborators</h4>
+            <p><a href="https://infoloom.com/">Infoloom, Inc</a></p>
+            <p><a href="http://evidentpoint.com/">Evident Point</a></p>
+            <p><a href="https://web.hypothes.is/">Hypothes.is</a></p>
+            <h4>Former team members</h4>
+            <p>Monica McCormick, Digital Scholarly Publishing Officer and Project Manager</p>
+            <p>Alexandra Provo, Project Manager and Digital Production Editor</p>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
+      </section>
+    </main>
+    <footer>
+      <p class="is-centered"><a href="https://nyupress.org/">NYU Press</a> • <a href="http://dlib.nyu.edu/dlts/">NYU DLTS</a></p>
+    </footer>
+  </body>
+
 </html>

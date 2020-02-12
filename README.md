@@ -79,7 +79,6 @@ host.
 These environment variables must be set before running any `enm` command, even
 the ones that do not technically need database access.  Failure to do so will
 cause a `panic`.
-```
 
 #### Set up SSH tunnel to devdb1
 

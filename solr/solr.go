@@ -9,6 +9,7 @@ type solrConnection interface {
 }
 
 var conn solrConnection
+var Source string
 
 func Init(server string, port int, injectedConn solrConnection) error {
 	if injectedConn != nil {

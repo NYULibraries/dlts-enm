@@ -14,20 +14,28 @@ import (
 var epubsNumberOfPages map[string]int
 
 func Load() error {
-	epubsNumberOfPages = make(map[string]int)
-	for _, epubNumberOfPages := range db.GetEpubsNumberOfPages() {
-		epubsNumberOfPages[ epubNumberOfPages.Isbn ] = int(epubNumberOfPages.NumberOfPages)
-	}
-
-	pages := db.GetPagesAll()
-	for _, page := range pages {
-		err := AddPage(page)
-		if err != nil {
-			panic(fmt.Sprintf("ERROR: couldn't add page %d to Solr index: \"%s\"\n", page.ID, err.Error()))
+	if Source == "database" {
+		epubsNumberOfPages = make(map[string]int)
+		for _, epubNumberOfPages := range db.GetEpubsNumberOfPages() {
+			epubsNumberOfPages[ epubNumberOfPages.Isbn ] = int(epubNumberOfPages.NumberOfPages)
 		}
-	}
 
-	return nil
+		pages := db.GetPagesAll()
+		for _, page := range pages {
+			err := AddPage(page)
+			if err != nil {
+				panic(fmt.Sprintf("ERROR: couldn't add page %d to Solr index: \"%s\"\n", page.ID, err.Error()))
+			}
+		}
+
+		return nil
+	} else if Source == "cache" {
+		fmt.Println("Cache!")
+
+		return nil
+	} else {
+		panic(fmt.Sprintf("ERROR: \"%s\" is not a valid --source option.", Source))
+	}
 }
 
 func AddPage(page *db.Page) error {

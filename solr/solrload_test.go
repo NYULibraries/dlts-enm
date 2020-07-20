@@ -101,6 +101,8 @@ func TestLoad(t *testing.T) {
 		t.Fatal(mkdirErr)
 	}
 
+	Source = "database"
+
 	Load()
 
 	diffOutput, err := util.Diff(solrGoldenFilesDirectory, solrLoadTestTmpDirectory)

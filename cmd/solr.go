@@ -23,7 +23,7 @@ func init() {
 	solrCmd.PersistentFlags().StringVarP(
 		&Server,
 		"server",
-		"s",
+		"",
 		"localhost",
 		"Solr server",
 	)
@@ -31,7 +31,7 @@ func init() {
 	solrCmd.PersistentFlags().StringVarP(
 		&SolrSource,
 		"source",
-		"",
+		"s",
 		"database",
 		"Specify data source: database, cache",
 	)

@@ -72,7 +72,15 @@ func getGoldenFileLocationIDs() {
 	}
 }
 
-func TestLoad(t *testing.T) {
+func TestLoadFromCache(t *testing.T) {
+	_Load(t, "cache")
+}
+
+func TestLoadFromDatabase(t *testing.T) {
+	_Load(t, "database")
+}
+
+func _Load(t *testing.T, source string) {
 	solrStub, err := newSolrStub("fakesolr.dlib.nyu.edu", 8983, "enm-pages")
 	if err != nil {
 		t.Fatal(err)
@@ -101,7 +109,7 @@ func TestLoad(t *testing.T) {
 		t.Fatal(mkdirErr)
 	}
 
-	Source = "database"
+	Source = source
 
 	Load()
 

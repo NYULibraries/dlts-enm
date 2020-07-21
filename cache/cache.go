@@ -18,7 +18,10 @@ const SitegenTopicpagesCache = cache + "/sitegen-topicpages"
 
 func init() {
 	if _, err := os.Stat(cache); os.IsNotExist(err) {
-		os.MkdirAll(SitegenTopicpagesCache, 0700)
+		err := os.MkdirAll(SitegenTopicpagesCache, 0700)
+		if (err != nil) {
+			panic(err)
+		}
 	} else if err != nil {
 		panic(err.Error())
 	}

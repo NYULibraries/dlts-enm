@@ -15,10 +15,16 @@ import (
 //       * sitegentopicpages command
 const cache = "/tmp/enm-cache"
 const SitegenTopicpagesCache = cache + "/sitegen-topicpages"
+const SolrLoadCache = cache + "/solr-load"
 
 func init() {
 	if _, err := os.Stat(cache); os.IsNotExist(err) {
 		err := os.MkdirAll(SitegenTopicpagesCache, 0700)
+		if (err != nil) {
+			panic(err)
+		}
+
+		err = os.MkdirAll(SolrLoadCache, 0700)
 		if (err != nil) {
 			panic(err)
 		}

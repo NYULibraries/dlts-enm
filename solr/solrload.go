@@ -15,27 +15,35 @@ var epubsNumberOfPages map[string]int
 
 func Load() error {
 	if Source == "database" {
-		epubsNumberOfPages = make(map[string]int)
-		for _, epubNumberOfPages := range db.GetEpubsNumberOfPages() {
-			epubsNumberOfPages[ epubNumberOfPages.Isbn ] = int(epubNumberOfPages.NumberOfPages)
-		}
-
-		pages := db.GetPagesAll()
-		for _, page := range pages {
-			err := AddPage(page)
-			if err != nil {
-				panic(fmt.Sprintf("ERROR: couldn't add page %d to Solr index: \"%s\"\n", page.ID, err.Error()))
-			}
-		}
-
-		return nil
+		return LoadFromDatabase()
 	} else if Source == "cache" {
-		fmt.Println("Cache!")
-
-		return nil
+		return LoadFromCache()
 	} else {
 		panic(fmt.Sprintf("ERROR: \"%s\" is not a valid --source option.", Source))
 	}
+}
+
+func LoadFromCache() error {
+	fmt.Println("Cache!")
+
+	return nil
+}
+
+func LoadFromDatabase() error {
+	epubsNumberOfPages = make(map[string]int)
+	for _, epubNumberOfPages := range db.GetEpubsNumberOfPages() {
+		epubsNumberOfPages[ epubNumberOfPages.Isbn ] = int(epubNumberOfPages.NumberOfPages)
+	}
+
+	pages := db.GetPagesAll()
+	for _, page := range pages {
+		err := AddPage(page)
+		if err != nil {
+			panic(fmt.Sprintf("ERROR: couldn't add page %d to Solr index: \"%s\"\n", page.ID, err.Error()))
+		}
+	}
+
+	return nil
 }
 
 func AddPage(page *db.Page) error {

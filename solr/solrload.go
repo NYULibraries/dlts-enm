@@ -129,7 +129,7 @@ func AddPage(page *db.Page) error {
 
 	WriteCacheFile(doc)
 
-	_, err = conn.Update(doc, true)
+	err = Update(doc)
 	if err != nil {
 		return err
 	}
@@ -150,6 +150,15 @@ func SortTopicNamesForPage(topicNamesForPage []*db.TopicNamesForPage) {
 
 		return util.CompareUsingEnglishCollation(a,b) == -1
 	} )
+}
+
+func Update(doc SolrDoc) error {
+	_, err := conn.Update(doc, true)
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
 func WriteCacheFile(solrDoc SolrDoc) (err error){

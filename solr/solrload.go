@@ -3,11 +3,11 @@ package solr
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/nyulibraries/dlts-enm/cache"
 	"log"
 	"sort"
 	"strings"
 
+	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
 	"github.com/nyulibraries/dlts-enm/util"
 )

@@ -106,7 +106,7 @@ func AddPage(page *db.Page) error {
 		panic(fmt.Sprintf("ERROR: couldn't marshal topicNamesForDisplay for %d", page.ID))
 	}
 
-	doc := map[string]interface{}{
+	doc := SolrDoc{
 		"add": []interface{}{
 			map[string]interface{}{
 				"id": page.ID,

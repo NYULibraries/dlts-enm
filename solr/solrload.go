@@ -3,7 +3,10 @@ package solr
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
+	"os"
+	"path/filepath"
 	"sort"
 	"strings"
 
@@ -27,7 +30,54 @@ func Load() error {
 }
 
 func LoadFromCache() error {
-	fmt.Println("Cache!")
+	err := filepath.Walk(cache.SolrLoadCache, func(path string, info os.FileInfo, err error) error {
+		if (err != nil) {
+			return err
+		}
+		if (! info.IsDir() && strings.HasSuffix(info.Name(), ".json")) {
+			var solrDocWithFloat64Values SolrDoc
+
+			jsonBytes, err := ioutil.ReadFile(path)
+			if err != nil {
+				panic(err)
+			}
+
+			err = json.Unmarshal(jsonBytes, &solrDocWithFloat64Values)
+			if err != nil {
+				panic(err)
+			}
+
+			addDoc := solrDocWithFloat64Values["add"].([]interface{})[0].(map[string]interface{})
+
+			solrDoc := SolrDoc{
+				"add": []interface{}{
+					map[string]interface{}{
+						"id": int(addDoc["id"].(float64)),
+						"isbn": addDoc["isbn"],
+						"authors": addDoc["authors"],
+						"epubNumberOfPages": addDoc["epubNumberOfPages"],
+						"publisher": addDoc["publisher"],
+						"title": addDoc["title"],
+						"yearOfPublication": 0,
+						"pageLocalId": addDoc["pageLocalId"],
+						"pageNumberForDisplay": pageNumberForDisplay(addDoc["pageLocalId"].(string)),
+						"pageSequenceNumber": addDoc["pageSequenceNumber"],
+						"pageText": addDoc["pageText"],
+						"topicNames": addDoc["topicNames"],
+						"topicNames_facet": addDoc["topicNames_facet"],
+						"topicNamesForDisplay": addDoc["topicNamesForDisplay"],
+					},
+				},
+			}
+
+			Update(solrDoc)
+		}
+
+		return nil
+	})
+	if (err != nil) {
+		return err
+	}
 
 	return nil
 }

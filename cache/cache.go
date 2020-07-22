@@ -1,8 +1,8 @@
 package cache
 
 import (
-	"os"
 	"github.com/nyulibraries/dlts-enm/util"
+	"os"
 )
 
 // TODO:
@@ -40,6 +40,12 @@ func CacheFile(request string, id string) (cacheFile string) {
 	} else {
 		cacheFile += ".json"
 	}
+
+	return
+}
+
+func SolrLoadCacheFile(isbn string, page string) (cacheFile string) {
+	cacheFile = SolrLoadCache + "/" + isbn + "/" + page + ".json"
 
 	return
 }

@@ -3,6 +3,7 @@ package solr
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/nyulibraries/dlts-enm/cache"
 	"log"
 	"sort"
 	"strings"
@@ -10,6 +11,8 @@ import (
 	"github.com/nyulibraries/dlts-enm/db"
 	"github.com/nyulibraries/dlts-enm/util"
 )
+
+type SolrDoc map[string]interface{}
 
 var epubsNumberOfPages map[string]int
 
@@ -124,6 +127,8 @@ func AddPage(page *db.Page) error {
 		},
 	}
 
+	WriteCacheFile(doc)
+
 	_, err = conn.Update(doc, true)
 	if err != nil {
 		return err
@@ -145,6 +150,29 @@ func SortTopicNamesForPage(topicNamesForPage []*db.TopicNamesForPage) {
 
 		return util.CompareUsingEnglishCollation(a,b) == -1
 	} )
+}
+
+func WriteCacheFile(solrDoc SolrDoc) (err error){
+	solrDocJSON, err := json.MarshalIndent(solrDoc,"","    ")
+	if err != nil {
+		panic(err)
+	}
+
+	addDocArray := solrDoc["add"].([]interface{})
+	doc := addDocArray[0].(map[string]interface{})
+
+	cacheFile := cache.SolrLoadCacheFile(doc["isbn"].(string), doc["pageNumberForDisplay"].(string))
+	f, err := util.CreateFileWithAllParentDirectories(cacheFile)
+	if err != nil {
+		panic(err)
+	}
+
+	_, err = f.Write(solrDocJSON)
+	if err != nil {
+		panic(err)
+	}
+
+	return nil
 }
 
 func pageNumberForDisplay(pageLocalId string) (pageNumber string) {

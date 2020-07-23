@@ -98,7 +98,7 @@ func _Load(t *testing.T, source string) {
 	solrGoldenFilesDirectory = rootDirectory + "/solr/testdata/golden"
 	getGoldenFileLocationIDs()
 
-	solrLoadTestTmpDirectory = rootDirectory + "/solr/testdata/tmp/load"
+	solrLoadTestTmpDirectory = rootDirectory + "/solr/testdata/tmp/load/" + source
 	err = os.RemoveAll(solrLoadTestTmpDirectory)
 	if (err != nil) {
 		t.Fatal( "os.RemoveAll(" + solrLoadTestTmpDirectory + ") failed: " + err.Error())

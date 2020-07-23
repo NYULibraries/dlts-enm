@@ -10,8 +10,8 @@ and Solr index.
 * Create static pages
   * About
   * Home
-  * Create browse topics lists: e.g. [featured topics](http://dlib.nyu.edu/enm/browse-topics-lists/enm-picks.html)
-  * Create topic pages: e.g. [culture -- popular](http://dlib.nyu.edu/enm/topic-pages/00/00/00/78/0000007805.html)
+  * Create browse topics lists: e.g. [featured topics](http://enm.dlib.nyu.edu/browse-topics-lists/enm-picks.html)
+  * Create topic pages: e.g. [culture -- popular](http://enm.dlib.nyu.edu/topic-pages/00/00/00/78/0000007805.html)
 * Load `enm-pages` Solr index
 * Automatically create cached data files which can be used in place of the Postgres database in
 subsequent jobs: [nyudlts/enm\-cache](https://github.com/nyudlts/enm-cache)

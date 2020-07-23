@@ -220,7 +220,8 @@ func WriteCacheFile(solrDoc SolrDoc) (err error){
 	addDocArray := solrDoc["add"].([]interface{})
 	doc := addDocArray[0].(map[string]interface{})
 
-	cacheFile := cache.SolrLoadCacheFile(doc["isbn"].(string), doc["pageNumberForDisplay"].(string))
+	cacheFile := cache.SolrLoadCacheFile(
+		doc["isbn"].(string), doc["pageNumberForDisplay"].(string), doc["id"].(int))
 	f, err := util.CreateFileWithAllParentDirectories(cacheFile)
 	if err != nil {
 		panic(err)

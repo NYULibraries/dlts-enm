@@ -3,6 +3,7 @@ package cache
 import (
 	"github.com/nyulibraries/dlts-enm/util"
 	"os"
+	"strconv"
 )
 
 // TODO:
@@ -44,8 +45,8 @@ func CacheFile(request string, id string) (cacheFile string) {
 	return
 }
 
-func SolrLoadCacheFile(isbn string, page string) (cacheFile string) {
-	cacheFile = SolrLoadCache + "/" + isbn + "/" + page + ".json"
+func SolrLoadCacheFile(isbn string, page string, id int) (cacheFile string) {
+	cacheFile = SolrLoadCache + "/" + isbn + "/" + page + "__" + strconv.Itoa(id) + ".json"
 
 	return
 }

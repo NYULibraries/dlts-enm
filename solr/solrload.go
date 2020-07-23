@@ -225,6 +225,7 @@ func WriteCacheFile(solrDoc SolrDoc) (err error){
 	if err != nil {
 		panic(err)
 	}
+	defer f.Close()
 
 	_, err = f.Write(solrDocJSON)
 	if err != nil {

@@ -13,7 +13,7 @@ import (
 func TestGenerateBrowseTopicsListsNoGoogleAnalytics(t *testing.T) {
 	GoogleAnalytics = false
 
-	_, err := testGenerateBrowseTopicsLists()
+	_, err := testGenerateBrowseTopicsLists("database")
 	if (err != nil) {
 		t.Fatal(err.Error())
 	}
@@ -22,13 +22,13 @@ func TestGenerateBrowseTopicsListsNoGoogleAnalytics(t *testing.T) {
 func TestGenerateBrowseTopicsListsWithGoogleAnalytics(t *testing.T) {
 	GoogleAnalytics = true
 
-	_, err := testGenerateBrowseTopicsLists()
+	_, err := testGenerateBrowseTopicsLists("database")
 	if (err != nil) {
 		t.Fatal(err.Error())
 	}
 }
 
-func testGenerateBrowseTopicsLists() (bool, error) {
+func testGenerateBrowseTopicsLists(source string) (bool, error) {
 	wd, err := os.Getwd()
 	if (err != nil) {
 		return false, errors.New("os.Getwd() failed: " + err.Error())
@@ -55,7 +55,7 @@ func testGenerateBrowseTopicsLists() (bool, error) {
 		TopicPageTemplateDirectory = rootDirectory + "/" + TopicPageTemplateDirectory
 	}
 
-	Source = "database"
+	Source = source
 
 	GenerateBrowseTopicsLists(destination)
 

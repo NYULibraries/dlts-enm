@@ -54,7 +54,7 @@ func CacheFile(request string, id string) (cacheFile string) {
 }
 
 func SolrLoadCacheFile(isbn string, page string, id int) (cacheFile string) {
-	cacheFile = SolrLoadCache + "/" + isbn + "/" + page + "__" + strconv.Itoa(id) + ".json"
+	cacheFile = path.Join(SolrLoadCache, isbn, page + "__" + strconv.Itoa(id) + ".json")
 
 	return
 }
@@ -72,9 +72,8 @@ func SitegenBrowseTopicListsCategoryCacheFile(categoryFileBasename string) (cach
 }
 
 func SitegenTopicpagesCacheFile(topicID int) (cacheFile string) {
-	cacheFile = SitegenTopicpagesCache +
-		        "/" +
-		        util.GetRelativeFilepathInLargeDirectoryTree("", topicID, ".json")
+	cacheFile = path.Join(SitegenTopicpagesCache,
+		util.GetRelativeFilepathInLargeDirectoryTree("", topicID, ".json"))
 
 	return
 }

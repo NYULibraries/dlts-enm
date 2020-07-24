@@ -2,9 +2,9 @@ package sitegen
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/nyulibraries/dlts-enm/cache"
 	"html/template"
+	"io/ioutil"
 	"os"
 	"sort"
 	"strings"
@@ -48,8 +48,7 @@ func GenerateBrowseTopicsLists(destination string) {
 	if Source == "database" {
 		GenerateDynamicBrowseTopicsListsFromDatabase()
 	} else if Source == "cache" {
-		// Don't know if will be implementing this
-		fmt.Println("Generation of topic browse lists pages from cache has not yet been implemented.")
+		GenerateDynamicBrowseTopicsListsFromCache()
 	} else {
 		// Should never get here
 	}
@@ -84,6 +83,40 @@ func getBrowseTopicsListsCategories() (browseTopicsListsCategories []BrowseTopic
 	})
 
 	return
+}
+
+func GenerateDynamicBrowseTopicsListsFromCache() {
+	jsonBytes, err := ioutil.ReadFile(cache.SitegenBrowseTopicListsCategoriesCacheFile())
+	if err != nil {
+		panic(err)
+	}
+
+	var browseTopicsListsCategories []BrowseTopicsListsEntry
+	err = json.Unmarshal(jsonBytes,&browseTopicsListsCategories)
+	if err != nil {
+		panic(err)
+	}
+
+	for _, browseTopicsListsCategory := range browseTopicsListsCategories {
+		jsonBytes, err := ioutil.ReadFile(cache.SitegenBrowseTopicListsCategoryCacheFile(browseTopicsListsCategory.FileBasename))
+		if err != nil {
+			panic(err)
+		}
+
+		var browseTopicsListPageData BrowseTopicsListPageData
+		err = json.Unmarshal(jsonBytes,&browseTopicsListPageData)
+		if err != nil {
+			panic(err)
+		}
+
+		filename := browseTopicsListsCategory.FileBasename + ".html"
+
+		err = WriteDynamicBrowseTopicsListPage(filename, browseTopicsListPageData)
+		if (err != nil) {
+			panic(err)
+		}
+	}
+
 }
 
 func GenerateDynamicBrowseTopicsListsFromDatabase() {

@@ -4,6 +4,7 @@ import (
 	"github.com/nyulibraries/dlts-enm/util"
 	"os"
 	"path"
+	"path/filepath"
 	"strconv"
 )
 
@@ -12,13 +13,29 @@ import (
 //   * Allow user to specify cache path
 // Tried using os.TempDir(), but it was returning
 // /var/folders/dh/48wd7vnj3xqd1w_f126tcnvh0000gn/T/, which was not as convenient.
-const cache = "/tmp/enm-cache"
-const SitegenBrowseTopicListsCache = cache + "/sitegen-browsetopiclists"
-const SitegenBrowseTopicListsCategoriesCache = SitegenBrowseTopicListsCache + "/categories"
-const SitegenTopicpagesCache = cache + "/sitegen-topicpages"
-const SolrLoadCache = cache + "/solr-load"
+var cache = "/tmp/enm-cache"
+var SitegenBrowseTopicListsCache string
+var SitegenBrowseTopicListsCategoriesCache string
+var SitegenTopicpagesCache string
+var SolrLoadCache string
 
 func init() {
+	// User can override the default cache using environment variable
+	cacheEnvVar := os.Getenv("ENM_CACHE")
+	if cacheEnvVar != "" {
+		// Need to declare this otherwise cache var is shadowed through use of :=
+		var err error
+		cache, err = filepath.Abs(cacheEnvVar)
+		if (err != nil) {
+			panic(err)
+		}
+	}
+
+	SitegenBrowseTopicListsCache = cache + "/sitegen-browsetopiclists"
+	SitegenBrowseTopicListsCategoriesCache = SitegenBrowseTopicListsCache + "/categories"
+	SitegenTopicpagesCache = cache + "/sitegen-topicpages"
+	SolrLoadCache = cache + "/solr-load"
+
 	if _, err := os.Stat(cache); os.IsNotExist(err) {
 		err := os.MkdirAll(SitegenBrowseTopicListsCategoriesCache, 0700)
 		if (err != nil) {

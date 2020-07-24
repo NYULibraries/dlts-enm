@@ -12,9 +12,6 @@ import (
 //   * Allow user to specify cache path
 // Tried using os.TempDir(), but it was returning
 // /var/folders/dh/48wd7vnj3xqd1w_f126tcnvh0000gn/T/, which was not as convenient.
-//   * Use subdirectories:
-//       * reload command
-//       * sitegentopicpages command
 const cache = "/tmp/enm-cache"
 const SitegenBrowseTopicListsCache = cache + "/sitegen-browsetopiclists"
 const SitegenBrowseTopicListsCategoriesCache = SitegenBrowseTopicListsCache + "/categories"

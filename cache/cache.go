@@ -64,8 +64,8 @@ func SitegenBrowseTopicListsCategoriesCacheFile() (cacheFile string) {
 	return
 }
 
-func SitegenBrowseTopicListsCategoryCacheFile(fileBasename string) (cacheFile string) {
-	cacheFile = path.Join(SitegenBrowseTopicListsCache, fileBasename + ".json")
+func SitegenBrowseTopicListsCategoryCacheFile(categoryFileBasename string) (cacheFile string) {
+	cacheFile = path.Join(SitegenBrowseTopicListsCache, categoryFileBasename+ ".json")
 
 	return
 }

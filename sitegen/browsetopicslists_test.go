@@ -10,7 +10,25 @@ import (
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
-func TestGenerateBrowseTopicsListsNoGoogleAnalytics(t *testing.T) {
+func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromCache(t *testing.T) {
+	GoogleAnalytics = false
+
+	_, err := testGenerateBrowseTopicsLists("cache")
+	if (err != nil) {
+		t.Fatal(err.Error())
+	}
+}
+
+func TestGenerateBrowseTopicsListsWithGoogleAnalyticsFromCache(t *testing.T) {
+	GoogleAnalytics = true
+
+	_, err := testGenerateBrowseTopicsLists("cache")
+	if (err != nil) {
+		t.Fatal(err.Error())
+	}
+}
+
+func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromDatabase(t *testing.T) {
 	GoogleAnalytics = false
 
 	_, err := testGenerateBrowseTopicsLists("database")
@@ -19,7 +37,7 @@ func TestGenerateBrowseTopicsListsNoGoogleAnalytics(t *testing.T) {
 	}
 }
 
-func TestGenerateBrowseTopicsListsWithGoogleAnalytics(t *testing.T) {
+func TestGenerateBrowseTopicsListsWithGoogleAnalyticsFromDatabase(t *testing.T) {
 	GoogleAnalytics = true
 
 	_, err := testGenerateBrowseTopicsLists("database")

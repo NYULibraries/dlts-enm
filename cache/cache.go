@@ -17,12 +17,13 @@ import (
 //       * sitegentopicpages command
 const cache = "/tmp/enm-cache"
 const SitegenBrowseTopicListsCache = cache + "/sitegen-browsetopiclists"
+const SitegenBrowseTopicListsCategoriesCache = SitegenBrowseTopicListsCache + "/categories"
 const SitegenTopicpagesCache = cache + "/sitegen-topicpages"
 const SolrLoadCache = cache + "/solr-load"
 
 func init() {
 	if _, err := os.Stat(cache); os.IsNotExist(err) {
-		err := os.MkdirAll(SitegenBrowseTopicListsCache, 0700)
+		err := os.MkdirAll(SitegenBrowseTopicListsCategoriesCache, 0700)
 		if (err != nil) {
 			panic(err)
 		}
@@ -65,7 +66,7 @@ func SitegenBrowseTopicListsCategoriesCacheFile() (cacheFile string) {
 }
 
 func SitegenBrowseTopicListsCategoryCacheFile(categoryFileBasename string) (cacheFile string) {
-	cacheFile = path.Join(SitegenBrowseTopicListsCache, categoryFileBasename+ ".json")
+	cacheFile = path.Join(SitegenBrowseTopicListsCategoriesCache, categoryFileBasename+ ".json")
 
 	return
 }

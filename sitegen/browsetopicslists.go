@@ -1,8 +1,10 @@
 package sitegen
 
 import (
-	"html/template"
+	"encoding/json"
 	"fmt"
+	"github.com/nyulibraries/dlts-enm/cache"
+	"html/template"
 	"os"
 	"sort"
 	"strings"
@@ -89,6 +91,8 @@ func GenerateDynamicBrowseTopicsListsFromDatabase() {
 
 	browseTopicsListsCategories := getBrowseTopicsListsCategories()
 
+	WriteCategoriesCacheFile(browseTopicsListsCategories)
+
 	for _, browseTopicsListsCategory := range browseTopicsListsCategories {
 		topics = db.GetTopicsWithSortKeysByFirstSortableCharacterRegexp(browseTopicsListsCategory.Regexp)
 
@@ -128,6 +132,27 @@ func CreateBrowseTopicsListPageData(
 	browseTopicsListPageData.Paths = Paths{ WebRoot: ".." }
 
 	return
+}
+
+func WriteCategoriesCacheFile(browseTopicsListsCategories []BrowseTopicsListsEntry) (err error){
+	browseTopicsListsCategoriesJSON, err := json.MarshalIndent(browseTopicsListsCategories,"","    ")
+	if err != nil {
+		panic(err)
+	}
+
+	cacheFile := cache.SitegenBrowseTopicListsCategoriesCacheFile()
+	f, err := util.CreateFileWithAllParentDirectories(cacheFile)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	_, err = f.Write(browseTopicsListsCategoriesJSON)
+	if err != nil {
+		panic(err)
+	}
+
+	return nil
 }
 
 func WriteStaticBrowseTopicsListsPage(listname string) (err error){

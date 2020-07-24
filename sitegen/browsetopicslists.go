@@ -106,6 +106,9 @@ func GenerateDynamicBrowseTopicsListsFromDatabase() {
 		filename := browseTopicsListsCategory.FileBasename + ".html"
 		browseTopicsListPageData :=
 			CreateBrowseTopicsListPageData(topics, browseTopicsListsCategory.Label, browseTopicsListsCategories)
+
+		WriteCategoryCacheFile(browseTopicsListsCategory.FileBasename, browseTopicsListPageData)
+
 		err := WriteDynamicBrowseTopicsListPage(filename, browseTopicsListPageData)
 		if (err != nil) {
 			panic(err)
@@ -148,6 +151,27 @@ func WriteCategoriesCacheFile(browseTopicsListsCategories []BrowseTopicsListsEnt
 	defer f.Close()
 
 	_, err = f.Write(browseTopicsListsCategoriesJSON)
+	if err != nil {
+		panic(err)
+	}
+
+	return nil
+}
+
+func WriteCategoryCacheFile(categoryFileBasename string, browseTopicsListPageData BrowseTopicsListPageData) (err error){
+	browseTopicsListsCategoryJSON, err := json.MarshalIndent(browseTopicsListPageData,"","    ")
+	if err != nil {
+		panic(err)
+	}
+
+	cacheFile := cache.SitegenBrowseTopicListsCategoryCacheFile(categoryFileBasename)
+	f, err := util.CreateFileWithAllParentDirectories(cacheFile)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	_, err = f.Write(browseTopicsListsCategoryJSON)
 	if err != nil {
 		panic(err)
 	}

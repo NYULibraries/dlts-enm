@@ -38,6 +38,7 @@ func init() {
 	TCTResponseCache = cache + "/tct"
 
 	if _, err := os.Stat(cache); os.IsNotExist(err) {
+		// This will create SitegenBrowseTopicListsCache at the same time.
 		err := os.MkdirAll(SitegenBrowseTopicListsCategoriesCache, 0700)
 		if (err != nil) {
 			panic(err)

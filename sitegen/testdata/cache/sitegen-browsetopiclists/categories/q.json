@@ -1,0 +1,490 @@
+{
+    "ActiveNavbarTab": "Q",
+    "NavbarTabs": [
+        {
+            "Label": "A",
+            "FileBasename": "a",
+            "Regexp": "a"
+        },
+        {
+            "Label": "B",
+            "FileBasename": "b",
+            "Regexp": "b"
+        },
+        {
+            "Label": "C",
+            "FileBasename": "c",
+            "Regexp": "c"
+        },
+        {
+            "Label": "D",
+            "FileBasename": "d",
+            "Regexp": "d"
+        },
+        {
+            "Label": "E",
+            "FileBasename": "e",
+            "Regexp": "e"
+        },
+        {
+            "Label": "F",
+            "FileBasename": "f",
+            "Regexp": "f"
+        },
+        {
+            "Label": "G",
+            "FileBasename": "g",
+            "Regexp": "g"
+        },
+        {
+            "Label": "H",
+            "FileBasename": "h",
+            "Regexp": "h"
+        },
+        {
+            "Label": "I",
+            "FileBasename": "i",
+            "Regexp": "i"
+        },
+        {
+            "Label": "J",
+            "FileBasename": "j",
+            "Regexp": "j"
+        },
+        {
+            "Label": "K",
+            "FileBasename": "k",
+            "Regexp": "k"
+        },
+        {
+            "Label": "L",
+            "FileBasename": "l",
+            "Regexp": "l"
+        },
+        {
+            "Label": "M",
+            "FileBasename": "m",
+            "Regexp": "m"
+        },
+        {
+            "Label": "N",
+            "FileBasename": "n",
+            "Regexp": "n"
+        },
+        {
+            "Label": "O",
+            "FileBasename": "o",
+            "Regexp": "o"
+        },
+        {
+            "Label": "P",
+            "FileBasename": "p",
+            "Regexp": "p"
+        },
+        {
+            "Label": "Q",
+            "FileBasename": "q",
+            "Regexp": "q"
+        },
+        {
+            "Label": "R",
+            "FileBasename": "r",
+            "Regexp": "r"
+        },
+        {
+            "Label": "S",
+            "FileBasename": "s",
+            "Regexp": "s"
+        },
+        {
+            "Label": "T",
+            "FileBasename": "t",
+            "Regexp": "t"
+        },
+        {
+            "Label": "U",
+            "FileBasename": "u",
+            "Regexp": "u"
+        },
+        {
+            "Label": "V",
+            "FileBasename": "v",
+            "Regexp": "v"
+        },
+        {
+            "Label": "W",
+            "FileBasename": "w",
+            "Regexp": "w"
+        },
+        {
+            "Label": "X",
+            "FileBasename": "x",
+            "Regexp": "x"
+        },
+        {
+            "Label": "Y",
+            "FileBasename": "y",
+            "Regexp": "y"
+        },
+        {
+            "Label": "Z",
+            "FileBasename": "z",
+            "Regexp": "z"
+        },
+        {
+            "Label": "0-9",
+            "FileBasename": "0-9",
+            "Regexp": "[0-9]"
+        },
+        {
+            "Label": "?#@",
+            "FileBasename": "non-alphanumeric",
+            "Regexp": "[^a-z0-9]"
+        }
+    ],
+    "Paths": {
+        "WebRoot": ".."
+    },
+    "Topics": [
+        {
+            "Name": "Q-Bert (Filipino DJ)",
+            "URL": "../topic-pages/00/00/04/23/0000042340.html"
+        },
+        {
+            "Name": "Q-Bert (Filipino DJ) -- liberal pluralism",
+            "URL": "../topic-pages/00/00/04/23/0000042341.html"
+        },
+        {
+            "Name": "Q-Bert (Filipino DJ) -- orchestrated scratch routines",
+            "URL": "../topic-pages/00/00/04/23/0000042342.html"
+        },
+        {
+            "Name": "QAD",
+            "URL": "../topic-pages/00/00/00/16/0000001680.html"
+        },
+        {
+            "Name": "Qadaffi, Mohmmar",
+            "URL": "../topic-pages/00/00/00/52/0000005235.html"
+        },
+        {
+            "Name": "Qayyara, Simon",
+            "URL": "../topic-pages/00/00/01/80/0000018066.html"
+        },
+        {
+            "Name": "Qeri and ketiv",
+            "URL": "../topic-pages/00/00/01/80/0000018067.html"
+        },
+        {
+            "Name": "Qianmen",
+            "URL": "../topic-pages/00/00/00/20/0000002043.html"
+        },
+        {
+            "Name": "Qiu, J.",
+            "URL": "../topic-pages/00/00/04/70/0000047099.html"
+        },
+        {
+            "Name": "Qohelet (Ecclesiastes)",
+            "URL": "../topic-pages/00/00/01/80/0000018068.html"
+        },
+        {
+            "Name": "Qu'ran",
+            "URL": "../topic-pages/00/00/01/05/0000010594.html"
+        },
+        {
+            "Name": "Quadagno, Jill",
+            "URL": "../topic-pages/00/00/04/34/0000043451.html"
+        },
+        {
+            "Name": "Quail (Gramont)",
+            "URL": "../topic-pages/00/00/02/81/0000028110.html"
+        },
+        {
+            "Name": "Quake (video game)",
+            "URL": "../topic-pages/00/00/04/71/0000047100.html"
+        },
+        {
+            "Name": "Quake series",
+            "URL": "../topic-pages/00/00/00/54/0000005473.html"
+        },
+        {
+            "Name": "Quakers, comparison with Jews",
+            "URL": "../topic-pages/00/00/03/43/0000034307.html"
+        },
+        {
+            "Name": "Quality circles of Japan",
+            "URL": "../topic-pages/00/00/01/76/0000017603.html"
+        },
+        {
+            "Name": "Quality of life",
+            "URL": "../topic-pages/00/00/03/37/0000033721.html"
+        },
+        {
+            "Name": "Quality of life -- and AIDS Dementia Complex",
+            "URL": "../topic-pages/00/00/03/37/0000033722.html"
+        },
+        {
+            "Name": "Quality of life -- of mental health providers",
+            "URL": "../topic-pages/00/00/03/37/0000033723.html"
+        },
+        {
+            "Name": "\"Quality of work life\" programs",
+            "URL": "../topic-pages/00/00/01/76/0000017604.html"
+        },
+        {
+            "Name": "Quantico, Virginia",
+            "URL": "../topic-pages/00/00/02/45/0000024507.html"
+        },
+        {
+            "Name": "quantification for learning",
+            "URL": "../topic-pages/00/00/01/16/0000011688.html"
+        },
+        {
+            "Name": "quantified self",
+            "URL": "../topic-pages/00/00/01/16/0000011689.html"
+        },
+        {
+            "Name": "Quantum mechanics",
+            "URL": "../topic-pages/00/00/02/75/0000027580.html"
+        },
+        {
+            "Name": "Quarles, Denise",
+            "URL": "../topic-pages/00/00/00/40/0000004056.html"
+        },
+        {
+            "Name": "Quarrier, Samuel",
+            "URL": "../topic-pages/00/00/02/27/0000022783.html"
+        },
+        {
+            "Name": "Quartermain, Peter",
+            "URL": "../topic-pages/00/00/01/52/0000015217.html"
+        },
+        {
+            "Name": "Quartz",
+            "URL": "../topic-pages/00/00/00/84/0000008446.html"
+        },
+        {
+            "Name": "\"Quasi modo geniti infantes\" (liturgy)",
+            "URL": "../topic-pages/00/00/04/58/0000045896.html"
+        },
+        {
+            "Name": "Quatres Filles du Docteur March, Les",
+            "URL": "../topic-pages/00/00/00/14/0000001429.html"
+        },
+        {
+            "Name": "Quayle, Dan: attitudes of, toward LGBs",
+            "URL": "../topic-pages/00/00/02/40/0000024000.html"
+        },
+        {
+            "Name": "Quayle, Vice President Dan",
+            "URL": "../topic-pages/00/00/02/70/0000027078.html"
+        },
+        {
+            "Name": "Quebec Act",
+            "URL": "../topic-pages/00/00/02/55/0000025593.html"
+        },
+        {
+            "Name": "Queeg (The Caine Mutiny)",
+            "URL": "../topic-pages/00/00/01/23/0000012367.html"
+        },
+        {
+            "Name": "\"Queen for a Day\" rule",
+            "URL": "../topic-pages/00/00/03/29/0000032995.html"
+        },
+        {
+            "Name": "Queen Min and the Sino-Japanese War (film, Shin)",
+            "URL": "../topic-pages/00/00/04/51/0000045197.html"
+        },
+        {
+            "Name": "Queen of Criminals",
+            "URL": "../topic-pages/00/00/00/79/0000007906.html"
+        },
+        {
+            "Name": "Queen, Carol A.",
+            "URL": "../topic-pages/00/00/03/87/0000038713.html"
+        },
+        {
+            "Name": "Queens Bergen Hunt and Fish Club",
+            "URL": "../topic-pages/00/00/02/45/0000024508.html"
+        },
+        {
+            "Name": "Queens Veterans Affairs Hospital",
+            "URL": "../topic-pages/00/00/00/40/0000004057.html"
+        },
+        {
+            "Name": "queer",
+            "URL": "../topic-pages/00/00/03/65/0000036500.html"
+        },
+        {
+            "Name": "Queer -- as term",
+            "URL": "../topic-pages/00/00/03/66/0000036651.html"
+        },
+        {
+            "Name": "Queer -- liberation",
+            "URL": "../topic-pages/00/00/03/85/0000038532.html"
+        },
+        {
+            "Name": "Queer -- movement",
+            "URL": "../topic-pages/00/00/02/39/0000023918.html"
+        },
+        {
+            "Name": "Queer -- people",
+            "URL": "../topic-pages/00/00/03/85/0000038534.html"
+        },
+        {
+            "Name": "Queer -- politics",
+            "URL": "../topic-pages/00/00/03/85/0000038531.html"
+        },
+        {
+            "Name": "Queer -- straights",
+            "URL": "../topic-pages/00/00/03/85/0000038533.html"
+        },
+        {
+            "Name": "Queer -- to be",
+            "URL": "../topic-pages/00/00/03/85/0000038535.html"
+        },
+        {
+            "Name": "Queer Nation",
+            "URL": "../topic-pages/00/00/03/09/0000030942.html"
+        },
+        {
+            "Name": "Queer theory",
+            "URL": "../topic-pages/00/00/03/27/0000032777.html"
+        },
+        {
+            "Name": "Queer theory -- critique of",
+            "URL": "../topic-pages/00/00/03/29/0000032997.html"
+        },
+        {
+            "Name": "Queer theory -- defined",
+            "URL": "../topic-pages/00/00/03/29/0000032998.html"
+        },
+        {
+            "Name": "Queer theory -- race in",
+            "URL": "../topic-pages/00/00/03/29/0000032999.html"
+        },
+        {
+            "Name": "Queers United Against Straight-acting Homosexuals (QUASH)",
+            "URL": "../topic-pages/00/00/03/29/0000032996.html"
+        },
+        {
+            "Name": "Quest for meaning, in Great Expectations",
+            "URL": "../topic-pages/00/00/02/20/0000022009.html"
+        },
+        {
+            "Name": "Question Concerning Technology, The (Heidegger)",
+            "URL": "../topic-pages/00/00/02/51/0000025105.html"
+        },
+        {
+            "Name": "\"Question of a Weltanschauung, The\" (Freud)",
+            "URL": "../topic-pages/00/00/02/51/0000025107.html"
+        },
+        {
+            "Name": "Question of Lay Analysis, The (Freud)",
+            "URL": "../topic-pages/00/00/02/51/0000025106.html"
+        },
+        {
+            "Name": "questionable research practices",
+            "URL": "../topic-pages/00/00/00/30/0000003001.html"
+        },
+        {
+            "Name": "Questions (for presidential candidates)",
+            "URL": "../topic-pages/00/00/01/37/0000013757.html"
+        },
+        {
+            "Name": "Questions (for presidential candidates) -- early and middle adulthood experiences",
+            "URL": "../topic-pages/00/00/01/37/0000013759.html"
+        },
+        {
+            "Name": "Questions (for presidential candidates) -- early childhood and adolescent experiences and",
+            "URL": "../topic-pages/00/00/01/37/0000013758.html"
+        },
+        {
+            "Name": "Questions (for presidential candidates) -- guidelines for asking",
+            "URL": "../topic-pages/00/00/01/37/0000013760.html"
+        },
+        {
+            "Name": "Questions (for presidential candidates) -- to be asked of all presidential candidates",
+            "URL": "../topic-pages/00/00/01/37/0000013761.html"
+        },
+        {
+            "Name": "Quête de l'Oiseau du Temps, La",
+            "URL": "../topic-pages/00/00/00/14/0000001430.html"
+        },
+        {
+            "Name": "Quiche-Maya",
+            "URL": "../topic-pages/00/00/00/30/0000003002.html"
+        },
+        {
+            "Name": "\"Quickie\" strikes",
+            "URL": "../topic-pages/00/00/01/76/0000017605.html"
+        },
+        {
+            "Name": "Quiet American, The (Greene)",
+            "URL": "../topic-pages/00/00/03/19/0000031966.html"
+        },
+        {
+            "Name": "Quin, Mike",
+            "URL": "../topic-pages/00/00/01/47/0000014768.html"
+        },
+        {
+            "Name": "Quincy, Josiah",
+            "URL": "../topic-pages/00/00/02/27/0000022784.html"
+        },
+        {
+            "Name": "Quindlen, Anna",
+            "URL": "../topic-pages/00/00/03/51/0000035192.html"
+        },
+        {
+            "Name": "Quinn, Kevin",
+            "URL": "../topic-pages/00/00/04/09/0000040924.html"
+        },
+        {
+            "Name": "Quinn, Rosemary",
+            "URL": "../topic-pages/00/00/00/08/0000000870.html"
+        },
+        {
+            "Name": "Quintillian",
+            "URL": "../topic-pages/00/00/00/30/0000003003.html"
+        },
+        {
+            "Name": "Quintillian -- Institutio Oratorio",
+            "URL": "../topic-pages/00/00/00/30/0000003004.html"
+        },
+        {
+            "Name": "Quirat, Nader",
+            "URL": "../topic-pages/00/00/00/14/0000001431.html"
+        },
+        {
+            "Name": "Quirat, Nader -- Japan and",
+            "URL": "../topic-pages/00/00/00/14/0000001433.html"
+        },
+        {
+            "Name": "Quirat, Nader -- news coverage of",
+            "URL": "../topic-pages/00/00/00/14/0000001434.html"
+        },
+        {
+            "Name": "Quirat, Nader -- television and",
+            "URL": "../topic-pages/00/00/00/14/0000001435.html"
+        },
+        {
+            "Name": "Quixote, Don",
+            "URL": "../topic-pages/00/00/03/96/0000039648.html"
+        },
+        {
+            "Name": "Quock Walker case",
+            "URL": "../topic-pages/00/00/02/01/0000020105.html"
+        },
+        {
+            "Name": "Quotas",
+            "URL": "../topic-pages/00/00/02/36/0000023677.html"
+        },
+        {
+            "Name": "Quotas -- in education",
+            "URL": "../topic-pages/00/00/02/36/0000023678.html"
+        },
+        {
+            "Name": "Quotas -- in immigration",
+            "URL": "../topic-pages/00/00/02/36/0000023679.html"
+        }
+    ]
+}

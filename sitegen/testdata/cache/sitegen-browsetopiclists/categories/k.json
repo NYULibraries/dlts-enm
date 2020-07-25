@@ -1,0 +1,4230 @@
+{
+    "ActiveNavbarTab": "K",
+    "NavbarTabs": [
+        {
+            "Label": "A",
+            "FileBasename": "a",
+            "Regexp": "a"
+        },
+        {
+            "Label": "B",
+            "FileBasename": "b",
+            "Regexp": "b"
+        },
+        {
+            "Label": "C",
+            "FileBasename": "c",
+            "Regexp": "c"
+        },
+        {
+            "Label": "D",
+            "FileBasename": "d",
+            "Regexp": "d"
+        },
+        {
+            "Label": "E",
+            "FileBasename": "e",
+            "Regexp": "e"
+        },
+        {
+            "Label": "F",
+            "FileBasename": "f",
+            "Regexp": "f"
+        },
+        {
+            "Label": "G",
+            "FileBasename": "g",
+            "Regexp": "g"
+        },
+        {
+            "Label": "H",
+            "FileBasename": "h",
+            "Regexp": "h"
+        },
+        {
+            "Label": "I",
+            "FileBasename": "i",
+            "Regexp": "i"
+        },
+        {
+            "Label": "J",
+            "FileBasename": "j",
+            "Regexp": "j"
+        },
+        {
+            "Label": "K",
+            "FileBasename": "k",
+            "Regexp": "k"
+        },
+        {
+            "Label": "L",
+            "FileBasename": "l",
+            "Regexp": "l"
+        },
+        {
+            "Label": "M",
+            "FileBasename": "m",
+            "Regexp": "m"
+        },
+        {
+            "Label": "N",
+            "FileBasename": "n",
+            "Regexp": "n"
+        },
+        {
+            "Label": "O",
+            "FileBasename": "o",
+            "Regexp": "o"
+        },
+        {
+            "Label": "P",
+            "FileBasename": "p",
+            "Regexp": "p"
+        },
+        {
+            "Label": "Q",
+            "FileBasename": "q",
+            "Regexp": "q"
+        },
+        {
+            "Label": "R",
+            "FileBasename": "r",
+            "Regexp": "r"
+        },
+        {
+            "Label": "S",
+            "FileBasename": "s",
+            "Regexp": "s"
+        },
+        {
+            "Label": "T",
+            "FileBasename": "t",
+            "Regexp": "t"
+        },
+        {
+            "Label": "U",
+            "FileBasename": "u",
+            "Regexp": "u"
+        },
+        {
+            "Label": "V",
+            "FileBasename": "v",
+            "Regexp": "v"
+        },
+        {
+            "Label": "W",
+            "FileBasename": "w",
+            "Regexp": "w"
+        },
+        {
+            "Label": "X",
+            "FileBasename": "x",
+            "Regexp": "x"
+        },
+        {
+            "Label": "Y",
+            "FileBasename": "y",
+            "Regexp": "y"
+        },
+        {
+            "Label": "Z",
+            "FileBasename": "z",
+            "Regexp": "z"
+        },
+        {
+            "Label": "0-9",
+            "FileBasename": "0-9",
+            "Regexp": "[0-9]"
+        },
+        {
+            "Label": "?#@",
+            "FileBasename": "non-alphanumeric",
+            "Regexp": "[^a-z0-9]"
+        }
+    ],
+    "Paths": {
+        "WebRoot": ".."
+    },
+    "Topics": [
+        {
+            "Name": "K'veer",
+            "URL": "../topic-pages/00/00/00/51/0000005168.html"
+        },
+        {
+            "Name": "Ka'ahumanu, L.",
+            "URL": "../topic-pages/00/00/03/86/0000038670.html"
+        },
+        {
+            "Name": "Kaahumanu, Lani",
+            "URL": "../topic-pages/00/00/03/64/0000036469.html"
+        },
+        {
+            "Name": "Kabakov, Aleksandr",
+            "URL": "../topic-pages/00/00/01/92/0000019242.html"
+        },
+        {
+            "Name": "Kabanov, V.",
+            "URL": "../topic-pages/00/00/01/92/0000019243.html"
+        },
+        {
+            "Name": "Kabbalah",
+            "URL": "../topic-pages/00/00/01/79/0000017938.html"
+        },
+        {
+            "Name": "Kabbalah -- commandments in",
+            "URL": "../topic-pages/00/00/02/83/0000028318.html"
+        },
+        {
+            "Name": "Kabbalah -- early",
+            "URL": "../topic-pages/00/00/02/84/0000028422.html"
+        },
+        {
+            "Name": "Kabbalah -- interpretation of creation in",
+            "URL": "../topic-pages/00/00/02/83/0000028326.html"
+        },
+        {
+            "Name": "Kabbalah -- Jewish rationalism and",
+            "URL": "../topic-pages/00/00/02/84/0000028402.html"
+        },
+        {
+            "Name": "Kabbalah -- Kabbalists",
+            "URL": "../topic-pages/00/00/01/79/0000017939.html"
+        },
+        {
+            "Name": "Kabbalah -- Lurianic",
+            "URL": "../topic-pages/00/00/01/79/0000017940.html"
+        },
+        {
+            "Name": "Kabbalah -- prayer in",
+            "URL": "../topic-pages/00/00/02/84/0000028423.html"
+        },
+        {
+            "Name": "Kabbalistic symbol",
+            "URL": "../topic-pages/00/00/02/84/0000028424.html"
+        },
+        {
+            "Name": "Kabbalistic symbol -- nature of",
+            "URL": "../topic-pages/00/00/02/84/0000028425.html"
+        },
+        {
+            "Name": "Kabbalistic symbol -- philosophical term and",
+            "URL": "../topic-pages/00/00/02/84/0000028426.html"
+        },
+        {
+            "Name": "Kaboolian, Linda",
+            "URL": "../topic-pages/00/00/02/43/0000024332.html"
+        },
+        {
+            "Name": "Kaczynski, Ted",
+            "URL": "../topic-pages/00/00/00/46/0000004687.html"
+        },
+        {
+            "Name": "Kades, Eric",
+            "URL": "../topic-pages/00/00/03/23/0000032382.html"
+        },
+        {
+            "Name": "Kadrey, Richard",
+            "URL": "../topic-pages/00/00/00/51/0000005165.html"
+        },
+        {
+            "Name": "Kaf ha-Ketoret",
+            "URL": "../topic-pages/00/00/02/84/0000028427.html"
+        },
+        {
+            "Name": "Kafai, Y.",
+            "URL": "../topic-pages/00/00/04/69/0000046923.html"
+        },
+        {
+            "Name": "Kafka Chronicles, The (Amerika)",
+            "URL": "../topic-pages/00/00/01/51/0000015103.html"
+        },
+        {
+            "Name": "Kafka, Franz",
+            "URL": "../topic-pages/00/00/01/51/0000015102.html"
+        },
+        {
+            "Name": "Kafka, Franz -- \"The Judgment\"",
+            "URL": "../topic-pages/00/00/01/64/0000016463.html"
+        },
+        {
+            "Name": "Kafka, Franz -- \"The Metamorphosis\"",
+            "URL": "../topic-pages/00/00/01/64/0000016464.html"
+        },
+        {
+            "Name": "Kafka, Franz -- Letter to His Father",
+            "URL": "../topic-pages/00/00/01/64/0000016462.html"
+        },
+        {
+            "Name": "Kagame, Alexis",
+            "URL": "../topic-pages/00/00/02/74/0000027448.html"
+        },
+        {
+            "Name": "Kagan, J.",
+            "URL": "../topic-pages/00/00/02/31/0000023117.html"
+        },
+        {
+            "Name": "Kaganovich, L.",
+            "URL": "../topic-pages/00/00/01/92/0000019244.html"
+        },
+        {
+            "Name": "Kagay, M. R.",
+            "URL": "../topic-pages/00/00/03/54/0000035413.html"
+        },
+        {
+            "Name": "Kagh",
+            "URL": "../topic-pages/00/00/02/98/0000029887.html"
+        },
+        {
+            "Name": "Kahahawai, Joseph",
+            "URL": "../topic-pages/00/00/03/99/0000039996.html"
+        },
+        {
+            "Name": "Kahal Adath Jeshurun of Washington Heights (New York)",
+            "URL": "../topic-pages/00/00/02/35/0000023550.html"
+        },
+        {
+            "Name": "Kahane, Meier",
+            "URL": "../topic-pages/00/00/03/41/0000034159.html"
+        },
+        {
+            "Name": "Kahaneman, Joseph",
+            "URL": "../topic-pages/00/00/02/35/0000023551.html"
+        },
+        {
+            "Name": "Kahlo, F.",
+            "URL": "../topic-pages/00/00/01/13/0000011366.html"
+        },
+        {
+            "Name": "Kahn v. Shevin",
+            "URL": "../topic-pages/00/00/03/13/0000031326.html"
+        },
+        {
+            "Name": "Kahn, Charles",
+            "URL": "../topic-pages/00/00/02/74/0000027449.html"
+        },
+        {
+            "Name": "Kahn, Joseph",
+            "URL": "../topic-pages/00/00/00/19/0000001956.html"
+        },
+        {
+            "Name": "Kahne, Joseph",
+            "URL": "../topic-pages/00/00/01/03/0000010394.html"
+        },
+        {
+            "Name": "Kahneman, D.",
+            "URL": "../topic-pages/00/00/01/40/0000014088.html"
+        },
+        {
+            "Name": "Kairos",
+            "URL": "../topic-pages/00/00/00/90/0000009035.html"
+        },
+        {
+            "Name": "Kairys, David",
+            "URL": "../topic-pages/00/00/03/99/0000039997.html"
+        },
+        {
+            "Name": "Kaiser, Charles",
+            "URL": "../topic-pages/00/00/03/18/0000031838.html"
+        },
+        {
+            "Name": "Kakar, S.",
+            "URL": "../topic-pages/00/00/02/74/0000027450.html"
+        },
+        {
+            "Name": "Kakar, Sudhir",
+            "URL": "../topic-pages/00/00/01/44/0000014405.html"
+        },
+        {
+            "Name": "Kakutani, Michiko",
+            "URL": "../topic-pages/00/00/03/51/0000035140.html"
+        },
+        {
+            "Name": "Kala Kila (Black Fort)",
+            "URL": "../topic-pages/00/00/04/46/0000044631.html"
+        },
+        {
+            "Name": "Kalčik, Susan J.",
+            "URL": "../topic-pages/00/00/01/44/0000014406.html"
+        },
+        {
+            "Name": "Kaldor-Hicks efficiency",
+            "URL": "../topic-pages/00/00/02/03/0000020389.html"
+        },
+        {
+            "Name": "Kalecki, Michael",
+            "URL": "../topic-pages/00/00/03/23/0000032383.html"
+        },
+        {
+            "Name": "\"Kalina\"",
+            "URL": "../topic-pages/00/00/01/92/0000019245.html"
+        },
+        {
+            "Name": "Kallay, Miklos",
+            "URL": "../topic-pages/00/00/01/85/0000018596.html"
+        },
+        {
+            "Name": "Kallay, Miklos -- proposal for expulsion of Jews",
+            "URL": "../topic-pages/00/00/01/85/0000018597.html"
+        },
+        {
+            "Name": "Kallen, Horace",
+            "URL": "../topic-pages/00/00/02/35/0000023552.html"
+        },
+        {
+            "Name": "Kallinikos, J.",
+            "URL": "../topic-pages/00/00/04/69/0000046924.html"
+        },
+        {
+            "Name": "Kamen, Paula",
+            "URL": "../topic-pages/00/00/03/13/0000031327.html"
+        },
+        {
+            "Name": "kamenka",
+            "URL": "../topic-pages/00/00/01/92/0000019246.html"
+        },
+        {
+            "Name": "Kamenskii -- Z. A.",
+            "URL": "../topic-pages/00/00/01/92/0000019247.html"
+        },
+        {
+            "Name": "Kameny, Frank",
+            "URL": "../topic-pages/00/00/02/39/0000023944.html"
+        },
+        {
+            "Name": "Kamin, Blair",
+            "URL": "../topic-pages/00/00/00/28/0000002813.html"
+        },
+        {
+            "Name": "Kamin, Leon J.",
+            "URL": "../topic-pages/00/00/03/69/0000036996.html"
+        },
+        {
+            "Name": "Kaminer, Wendy",
+            "URL": "../topic-pages/00/00/02/89/0000028973.html"
+        },
+        {
+            "Name": "Kamisar, Y.",
+            "URL": "../topic-pages/00/00/03/54/0000035414.html"
+        },
+        {
+            "Name": "Kamler, Richard",
+            "URL": "../topic-pages/00/00/00/36/0000003658.html"
+        },
+        {
+            "Name": "Kämmen, Michael: A Machine That Would Go of Itself",
+            "URL": "../topic-pages/00/00/03/64/0000036470.html"
+        },
+        {
+            "Name": "Kampelman, Max",
+            "URL": "../topic-pages/00/00/02/35/0000023553.html"
+        },
+        {
+            "Name": "Kampf, Louis",
+            "URL": "../topic-pages/00/00/03/64/0000036471.html"
+        },
+        {
+            "Name": "Kan, Naoto",
+            "URL": "../topic-pages/00/00/00/12/0000001295.html"
+        },
+        {
+            "Name": "Kanban system",
+            "URL": "../topic-pages/00/00/02/09/0000020900.html"
+        },
+        {
+            "Name": "Kandinsky, Vassily",
+            "URL": "../topic-pages/00/00/00/46/0000004688.html"
+        },
+        {
+            "Name": "Kane, Gordon",
+            "URL": "../topic-pages/00/00/00/28/0000002814.html"
+        },
+        {
+            "Name": "Kane, Irie",
+            "URL": "../topic-pages/00/00/00/12/0000001296.html"
+        },
+        {
+            "Name": "Kane, M.",
+            "URL": "../topic-pages/00/00/00/97/0000009720.html"
+        },
+        {
+            "Name": "Kaneko, Emi",
+            "URL": "../topic-pages/00/00/00/36/0000003659.html"
+        },
+        {
+            "Name": "Kanemaru, Shin, arrest of",
+            "URL": "../topic-pages/00/00/02/09/0000020901.html"
+        },
+        {
+            "Name": "Kang Kyŏng-ae",
+            "URL": "../topic-pages/00/00/04/50/0000045038.html"
+        },
+        {
+            "Name": "Kang Kyŏng-ae -- Salt",
+            "URL": "../topic-pages/00/00/04/50/0000045039.html"
+        },
+        {
+            "Name": "Kanji",
+            "URL": "../topic-pages/00/00/01/57/0000015772.html"
+        },
+        {
+            "Name": "Kansa, Eric C., Archaeology 2.0",
+            "URL": "../topic-pages/00/00/00/90/0000009036.html"
+        },
+        {
+            "Name": "Kansas Army National Guard, 102nd Military History Detachment",
+            "URL": "../topic-pages/00/00/00/06/0000000660.html"
+        },
+        {
+            "Name": "Kansas City",
+            "URL": "../topic-pages/00/00/00/38/0000003806.html"
+        },
+        {
+            "Name": "Kansas City crime family",
+            "URL": "../topic-pages/00/00/02/43/0000024333.html"
+        },
+        {
+            "Name": "Kansas City, MO",
+            "URL": "../topic-pages/00/00/00/28/0000002816.html"
+        },
+        {
+            "Name": "Kansas State University",
+            "URL": "../topic-pages/00/00/00/28/0000002817.html"
+        },
+        {
+            "Name": "Kansas-Nebraska Act",
+            "URL": "../topic-pages/00/00/03/07/0000030704.html"
+        },
+        {
+            "Name": "Kansas.",
+            "URL": "../topic-pages/00/00/00/28/0000002815.html"
+        },
+        {
+            "Name": "Kant -- Immanuel",
+            "URL": "../topic-pages/00/00/01/79/0000017941.html"
+        },
+        {
+            "Name": "Kant -- on teleology and intention",
+            "URL": "../topic-pages/00/00/01/79/0000017942.html"
+        },
+        {
+            "Name": "Kant -- on the commandments",
+            "URL": "../topic-pages/00/00/01/79/0000017943.html"
+        },
+        {
+            "Name": "Kant, Immanuel -- and civil disobedience",
+            "URL": "../topic-pages/00/00/03/32/0000033236.html"
+        },
+        {
+            "Name": "Kant, Immanuel: neo-Kantian theory and law",
+            "URL": "../topic-pages/00/00/03/90/0000039049.html"
+        },
+        {
+            "Name": "Kantor, J. R.",
+            "URL": "../topic-pages/00/00/03/69/0000036997.html"
+        },
+        {
+            "Name": "Kantor, Mickey",
+            "URL": "../topic-pages/00/00/02/69/0000026960.html"
+        },
+        {
+            "Name": "Kantor, R. E.",
+            "URL": "../topic-pages/00/00/01/40/0000014089.html"
+        },
+        {
+            "Name": "Kanzer, M.",
+            "URL": "../topic-pages/00/00/02/49/0000024915.html"
+        },
+        {
+            "Name": "Kanzer, Mark",
+            "URL": "../topic-pages/00/00/01/92/0000019248.html"
+        },
+        {
+            "Name": "KAPF",
+            "URL": "../topic-pages/00/00/04/50/0000045040.html"
+        },
+        {
+            "Name": "Kapferer, Bruce",
+            "URL": "../topic-pages/00/00/01/44/0000014407.html"
+        },
+        {
+            "Name": "Kapi, Bela",
+            "URL": "../topic-pages/00/00/01/85/0000018598.html"
+        },
+        {
+            "Name": "Kaplan, Abraham",
+            "URL": "../topic-pages/00/00/01/40/0000014090.html"
+        },
+        {
+            "Name": "Kaplan, Amy",
+            "URL": "../topic-pages/00/00/04/30/0000043033.html"
+        },
+        {
+            "Name": "Kaplan, Amy, \"Manifest Domesticity\"",
+            "URL": "../topic-pages/00/00/00/66/0000006674.html"
+        },
+        {
+            "Name": "Kaplan, Ann",
+            "URL": "../topic-pages/00/00/00/90/0000009037.html"
+        },
+        {
+            "Name": "Kaplan, Erin",
+            "URL": "../topic-pages/00/00/00/36/0000003660.html"
+        },
+        {
+            "Name": "Kaplan, Fred",
+            "URL": "../topic-pages/00/00/01/44/0000014408.html"
+        },
+        {
+            "Name": "Kaplan, G. T.",
+            "URL": "../topic-pages/00/00/03/86/0000038671.html"
+        },
+        {
+            "Name": "Kaplan, Israel",
+            "URL": "../topic-pages/00/00/02/35/0000023554.html"
+        },
+        {
+            "Name": "Kaplan, J.",
+            "URL": "../topic-pages/00/00/02/31/0000023118.html"
+        },
+        {
+            "Name": "Kaplan, Kivie",
+            "URL": "../topic-pages/00/00/03/41/0000034160.html"
+        },
+        {
+            "Name": "Kaplan, Mordecai",
+            "URL": "../topic-pages/00/00/01/79/0000017944.html"
+        },
+        {
+            "Name": "Kaplan, Rachel",
+            "URL": "../topic-pages/00/00/03/86/0000038672.html"
+        },
+        {
+            "Name": "Kaplan, Rebecca",
+            "URL": "../topic-pages/00/00/03/86/0000038673.html"
+        },
+        {
+            "Name": "Kaplan, Yosef",
+            "URL": "../topic-pages/00/00/01/79/0000017945.html"
+        },
+        {
+            "Name": "Kapoor, Anish: Cloud Gate (sculpture)",
+            "URL": "../topic-pages/00/00/00/28/0000002818.html"
+        },
+        {
+            "Name": "Kappus, Franz Xaver",
+            "URL": "../topic-pages/00/00/01/64/0000016465.html"
+        },
+        {
+            "Name": "Kaptelinin, V.",
+            "URL": "../topic-pages/00/00/04/69/0000046925.html"
+        },
+        {
+            "Name": "Kapusto, Yuri",
+            "URL": "../topic-pages/00/00/01/92/0000019249.html"
+        },
+        {
+            "Name": "Karadžić, Radovan",
+            "URL": "../topic-pages/00/00/04/16/0000041617.html"
+        },
+        {
+            "Name": "Karadžić, Radovan -- International War Crimes Tribunal indictments against",
+            "URL": "../topic-pages/00/00/04/16/0000041618.html"
+        },
+        {
+            "Name": "Karaites, Karaism",
+            "URL": "../topic-pages/00/00/01/79/0000017946.html"
+        },
+        {
+            "Name": "Karaitic literature",
+            "URL": "../topic-pages/00/00/02/84/0000028428.html"
+        },
+        {
+            "Name": "Karakazov, Dmitrii",
+            "URL": "../topic-pages/00/00/01/92/0000019250.html"
+        },
+        {
+            "Name": "Karamazov, Dmitrii",
+            "URL": "../topic-pages/00/00/01/92/0000019251.html"
+        },
+        {
+            "Name": "Karamcheti, Indira",
+            "URL": "../topic-pages/00/00/03/64/0000036472.html"
+        },
+        {
+            "Name": "Karataev, Platon (Tolstoy)",
+            "URL": "../topic-pages/00/00/01/92/0000019252.html"
+        },
+        {
+            "Name": "Karazhan (Kara) dungeon",
+            "URL": "../topic-pages/00/00/04/69/0000046926.html"
+        },
+        {
+            "Name": "Kardiner, Abram",
+            "URL": "../topic-pages/00/00/02/49/0000024916.html"
+        },
+        {
+            "Name": "Kardos, Erzsébet",
+            "URL": "../topic-pages/00/00/01/70/0000017077.html"
+        },
+        {
+            "Name": "Karenga, Maulana",
+            "URL": "../topic-pages/00/00/03/64/0000036473.html"
+        },
+        {
+            "Name": "Karenina, Anna (Tolstoy)",
+            "URL": "../topic-pages/00/00/01/92/0000019253.html"
+        },
+        {
+            "Name": "Karinthy, Frigyes",
+            "URL": "../topic-pages/00/00/01/70/0000017078.html"
+        },
+        {
+            "Name": "Karl, Frederick",
+            "URL": "../topic-pages/00/00/03/59/0000035956.html"
+        },
+        {
+            "Name": "Karlen, A.",
+            "URL": "../topic-pages/00/00/03/54/0000035415.html"
+        },
+        {
+            "Name": "Karlsson, Michael",
+            "URL": "../topic-pages/00/00/00/82/0000008299.html"
+        },
+        {
+            "Name": "Karma",
+            "URL": "../topic-pages/00/00/03/18/0000031839.html"
+        },
+        {
+            "Name": "Karman, Harvey",
+            "URL": "../topic-pages/00/00/04/30/0000043034.html"
+        },
+        {
+            "Name": "Karmazin, Michelle",
+            "URL": "../topic-pages/00/00/03/64/0000036474.html"
+        },
+        {
+            "Name": "Karnavas, Michael",
+            "URL": "../topic-pages/00/00/03/99/0000039998.html"
+        },
+        {
+            "Name": "Karnik, H. R.",
+            "URL": "../topic-pages/00/00/01/44/0000014409.html"
+        },
+        {
+            "Name": "Karnow, Stanley",
+            "URL": "../topic-pages/00/00/03/18/0000031840.html"
+        },
+        {
+            "Name": "Karolyi, Gyula",
+            "URL": "../topic-pages/00/00/01/85/0000018599.html"
+        },
+        {
+            "Name": "Karolyi, Mihaly",
+            "URL": "../topic-pages/00/00/01/70/0000017079.html"
+        },
+        {
+            "Name": "Karsai, Elek",
+            "URL": "../topic-pages/00/00/01/86/0000018600.html"
+        },
+        {
+            "Name": "Karst, Kenneth",
+            "URL": "../topic-pages/00/00/03/13/0000031328.html"
+        },
+        {
+            "Name": "Karweit, Nancy",
+            "URL": "../topic-pages/00/00/04/04/0000040455.html"
+        },
+        {
+            "Name": "Karylowski, J.",
+            "URL": "../topic-pages/00/00/02/31/0000023119.html"
+        },
+        {
+            "Name": "Kaschak, E.",
+            "URL": "../topic-pages/00/00/03/77/0000037720.html"
+        },
+        {
+            "Name": "Kasdan, Lawrence",
+            "URL": "../topic-pages/00/00/03/18/0000031841.html"
+        },
+        {
+            "Name": "Kasem, Casey",
+            "URL": "../topic-pages/00/00/00/46/0000004689.html"
+        },
+        {
+            "Name": "Kashrut",
+            "URL": "../topic-pages/00/00/02/34/0000023431.html"
+        },
+        {
+            "Name": "Kashrut -- hygienic arguments for",
+            "URL": "../topic-pages/00/00/02/35/0000023555.html"
+        },
+        {
+            "Name": "Kasl, C. D.",
+            "URL": "../topic-pages/00/00/03/77/0000037721.html"
+        },
+        {
+            "Name": "Kasovich, Israel Isser",
+            "URL": "../topic-pages/00/00/02/35/0000023557.html"
+        },
+        {
+            "Name": "Kass, Frederic",
+            "URL": "../topic-pages/00/00/01/92/0000019254.html"
+        },
+        {
+            "Name": "Kassabian, A.",
+            "URL": "../topic-pages/00/00/01/13/0000011367.html"
+        },
+        {
+            "Name": "Kasson, John",
+            "URL": "../topic-pages/00/00/04/11/0000041191.html"
+        },
+        {
+            "Name": "Katerli, Nina",
+            "URL": "../topic-pages/00/00/01/92/0000019255.html"
+        },
+        {
+            "Name": "Kattenburg, Paul",
+            "URL": "../topic-pages/00/00/03/18/0000031842.html"
+        },
+        {
+            "Name": "Katyal, Sonia",
+            "URL": "../topic-pages/00/00/00/58/0000005801.html"
+        },
+        {
+            "Name": "Katyn",
+            "URL": "../topic-pages/00/00/02/03/0000020390.html"
+        },
+        {
+            "Name": "Katz v. United States",
+            "URL": "../topic-pages/00/00/04/08/0000040845.html"
+        },
+        {
+            "Name": "Katz, Anita",
+            "URL": "../topic-pages/00/00/01/92/0000019256.html"
+        },
+        {
+            "Name": "Katz, E.",
+            "URL": "../topic-pages/00/00/00/97/0000009721.html"
+        },
+        {
+            "Name": "Katz, Elihu",
+            "URL": "../topic-pages/00/00/00/22/0000002291.html"
+        },
+        {
+            "Name": "Katz, J.",
+            "URL": "../topic-pages/00/00/03/54/0000035416.html"
+        },
+        {
+            "Name": "Katz, J. N.",
+            "URL": "../topic-pages/00/00/03/86/0000038674.html"
+        },
+        {
+            "Name": "Katz, Jacob",
+            "URL": "../topic-pages/00/00/01/79/0000017947.html"
+        },
+        {
+            "Name": "Katz, Jay",
+            "URL": "../topic-pages/00/00/03/51/0000035141.html"
+        },
+        {
+            "Name": "Katz, Jerrold",
+            "URL": "../topic-pages/00/00/03/41/0000034161.html"
+        },
+        {
+            "Name": "Katz, Phyllis",
+            "URL": "../topic-pages/00/00/02/63/0000026381.html"
+        },
+        {
+            "Name": "Katz, Shlomo",
+            "URL": "../topic-pages/00/00/03/41/0000034162.html"
+        },
+        {
+            "Name": "Katz, Stanley",
+            "URL": "../topic-pages/00/00/00/90/0000009038.html"
+        },
+        {
+            "Name": "Katz, V. S.",
+            "URL": "../topic-pages/00/00/01/13/0000011368.html"
+        },
+        {
+            "Name": "Katzburg, Nathaniel",
+            "URL": "../topic-pages/00/00/01/86/0000018601.html"
+        },
+        {
+            "Name": "Kaufman, Ariella",
+            "URL": "../topic-pages/00/00/00/36/0000003661.html"
+        },
+        {
+            "Name": "Kaufman, Ariella -- coordinator",
+            "URL": "../topic-pages/00/00/00/36/0000003662.html"
+        },
+        {
+            "Name": "Kaufman, Ariella -- executive committee",
+            "URL": "../topic-pages/00/00/00/36/0000003663.html"
+        },
+        {
+            "Name": "Kaufman, Jonathan",
+            "URL": "../topic-pages/00/00/03/41/0000034163.html"
+        },
+        {
+            "Name": "Kaufman, Michael",
+            "URL": "../topic-pages/00/00/03/13/0000031329.html"
+        },
+        {
+            "Name": "Kaufman, Michael T.",
+            "URL": "../topic-pages/00/00/04/16/0000041619.html"
+        },
+        {
+            "Name": "Kaufman, Yeḥezkel",
+            "URL": "../topic-pages/00/00/01/79/0000017948.html"
+        },
+        {
+            "Name": "Kaufmann, W.",
+            "URL": "../topic-pages/00/00/02/74/0000027451.html"
+        },
+        {
+            "Name": "Kavelin, K. D.",
+            "URL": "../topic-pages/00/00/01/92/0000019257.html"
+        },
+        {
+            "Name": "Kavetsky, J.",
+            "URL": "../topic-pages/00/00/04/69/0000046927.html"
+        },
+        {
+            "Name": "Kaviraj, Sudipta",
+            "URL": "../topic-pages/00/00/04/46/0000044632.html"
+        },
+        {
+            "Name": "Kavka, Gregory",
+            "URL": "../topic-pages/00/00/02/54/0000025426.html"
+        },
+        {
+            "Name": "Kavvanah, idea of",
+            "URL": "../topic-pages/00/00/02/35/0000023558.html"
+        },
+        {
+            "Name": "Kawano, Yoh, HyperCities",
+            "URL": "../topic-pages/00/00/00/90/0000009039.html"
+        },
+        {
+            "Name": "Kay, P.",
+            "URL": "../topic-pages/00/00/02/74/0000027452.html"
+        },
+        {
+            "Name": "Kazin, A.",
+            "URL": "../topic-pages/00/00/01/54/0000015493.html"
+        },
+        {
+            "Name": "Kazin, Alfred",
+            "URL": "../topic-pages/00/00/02/35/0000023559.html"
+        },
+        {
+            "Name": "KDD",
+            "URL": "../topic-pages/00/00/00/12/0000001297.html"
+        },
+        {
+            "Name": "Keagle, Sue",
+            "URL": "../topic-pages/00/00/00/36/0000003664.html"
+        },
+        {
+            "Name": "Kearney, Wendy",
+            "URL": "../topic-pages/00/00/00/36/0000003665.html"
+        },
+        {
+            "Name": "Kearns, D.",
+            "URL": "../topic-pages/00/00/01/40/0000014091.html"
+        },
+        {
+            "Name": "Kearny, Michael",
+            "URL": "../topic-pages/00/00/01/44/0000014410.html"
+        },
+        {
+            "Name": "Keating, Charles",
+            "URL": "../topic-pages/00/00/01/74/0000017477.html"
+        },
+        {
+            "Name": "Keats, John",
+            "URL": "../topic-pages/00/00/00/28/0000002819.html"
+        },
+        {
+            "Name": "Keats, John -- \"On a Grecian Urn\"",
+            "URL": "../topic-pages/00/00/02/79/0000027981.html"
+        },
+        {
+            "Name": "Keats, John -- Endymion",
+            "URL": "../topic-pages/00/00/02/78/0000027891.html"
+        },
+        {
+            "Name": "Keck, Michael",
+            "URL": "../topic-pages/00/00/00/36/0000003666.html"
+        },
+        {
+            "Name": "Kedhar, Anusha",
+            "URL": "../topic-pages/00/00/01/03/0000010395.html"
+        },
+        {
+            "Name": "Keen, Andrew, The Cult of the Amateur",
+            "URL": "../topic-pages/00/00/00/46/0000004690.html"
+        },
+        {
+            "Name": "Keen, Gabe, \"You and We\"",
+            "URL": "../topic-pages/00/00/00/46/0000004691.html"
+        },
+        {
+            "Name": "Keenan, Edward",
+            "URL": "../topic-pages/00/00/01/92/0000019258.html"
+        },
+        {
+            "Name": "Keenan, Thomas",
+            "URL": "../topic-pages/00/00/00/62/0000006201.html"
+        },
+        {
+            "Name": "keening",
+            "URL": "../topic-pages/00/00/01/92/0000019259.html"
+        },
+        {
+            "Name": "Kefauver Committee hearings",
+            "URL": "../topic-pages/00/00/02/43/0000024334.html"
+        },
+        {
+            "Name": "Kegan, R.",
+            "URL": "../topic-pages/00/00/02/31/0000023121.html"
+        },
+        {
+            "Name": "Kehillah movement",
+            "URL": "../topic-pages/00/00/02/35/0000023561.html"
+        },
+        {
+            "Name": "Kehillah, the New York",
+            "URL": "../topic-pages/00/00/02/35/0000023560.html"
+        },
+        {
+            "Name": "Kehoe, Colleen",
+            "URL": "../topic-pages/00/00/00/16/0000001646.html"
+        },
+        {
+            "Name": "Keillor, Garrison",
+            "URL": "../topic-pages/00/00/02/25/0000022587.html"
+        },
+        {
+            "Name": "Keith, A. B.",
+            "URL": "../topic-pages/00/00/02/74/0000027453.html"
+        },
+        {
+            "Name": "Keith, Minor C.",
+            "URL": "../topic-pages/00/00/03/64/0000036475.html"
+        },
+        {
+            "Name": "Keitt, David",
+            "URL": "../topic-pages/00/00/02/43/0000024335.html"
+        },
+        {
+            "Name": "Kelemen, Kornel",
+            "URL": "../topic-pages/00/00/01/86/0000018602.html"
+        },
+        {
+            "Name": "Kellen, Jennifer",
+            "URL": "../topic-pages/00/00/03/64/0000036476.html"
+        },
+        {
+            "Name": "Keller, Bill",
+            "URL": "../topic-pages/00/00/00/83/0000008300.html"
+        },
+        {
+            "Name": "Keller, Gottfried",
+            "URL": "../topic-pages/00/00/01/64/0000016466.html"
+        },
+        {
+            "Name": "Keller, Helen",
+            "URL": "../topic-pages/00/00/02/74/0000027454.html"
+        },
+        {
+            "Name": "Keller, K.",
+            "URL": "../topic-pages/00/00/01/54/0000015494.html"
+        },
+        {
+            "Name": "Keller, Michael",
+            "URL": "../topic-pages/00/00/00/90/0000009040.html"
+        },
+        {
+            "Name": "Kellerman, B.",
+            "URL": "../topic-pages/00/00/01/40/0000014092.html"
+        },
+        {
+            "Name": "Kellerman, Barbara",
+            "URL": "../topic-pages/00/00/03/51/0000035143.html"
+        },
+        {
+            "Name": "Kelley, Clarence",
+            "URL": "../topic-pages/00/00/02/43/0000024336.html"
+        },
+        {
+            "Name": "Kelley, H.",
+            "URL": "../topic-pages/00/00/03/54/0000035417.html"
+        },
+        {
+            "Name": "Kelley, Norman",
+            "URL": "../topic-pages/00/00/00/58/0000005802.html"
+        },
+        {
+            "Name": "Kelley, Richard W",
+            "URL": "../topic-pages/00/00/03/51/0000035144.html"
+        },
+        {
+            "Name": "Kelley, Robin",
+            "URL": "../topic-pages/00/00/00/58/0000005803.html"
+        },
+        {
+            "Name": "Kelley, Robin D. G.",
+            "URL": "../topic-pages/00/00/04/30/0000043035.html"
+        },
+        {
+            "Name": "Kelley, Robin D.G.",
+            "URL": "../topic-pages/00/00/04/22/0000042278.html"
+        },
+        {
+            "Name": "Kelley, V.",
+            "URL": "../topic-pages/00/00/01/40/0000014093.html"
+        },
+        {
+            "Name": "Kelley, Virginia",
+            "URL": "../topic-pages/00/00/03/48/0000034840.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- ambition of",
+            "URL": "../topic-pages/00/00/03/48/0000034843.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- as an abandoning mother",
+            "URL": "../topic-pages/00/00/03/48/0000034841.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- as an adoring, doting mother",
+            "URL": "../topic-pages/00/00/03/48/0000034842.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- attraction to charming, narcissistic men",
+            "URL": "../topic-pages/00/00/03/48/0000034844.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- attraction to drinking and night life",
+            "URL": "../topic-pages/00/00/03/48/0000034845.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- attunement to her children",
+            "URL": "../topic-pages/00/00/03/48/0000034846.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- Auntie Mame persona of",
+            "URL": "../topic-pages/00/00/03/48/0000034847.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- belief that she knew best",
+            "URL": "../topic-pages/00/00/03/48/0000034848.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- conflict with mother over Bill",
+            "URL": "../topic-pages/00/00/03/48/0000034849.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- dates her son's political ambitions",
+            "URL": "../topic-pages/00/00/03/48/0000034850.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- decision to leave Hope to get advanced training",
+            "URL": "../topic-pages/00/00/03/48/0000034851.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- desire to be noticed",
+            "URL": "../topic-pages/00/00/03/48/0000034852.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- difficulties with boundaries, conventions, and rules",
+            "URL": "../topic-pages/00/00/03/48/0000034853.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- fidelity to others",
+            "URL": "../topic-pages/00/00/03/48/0000034854.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- importance in Bill Clinton's life of",
+            "URL": "../topic-pages/00/00/03/48/0000034856.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- importance of attractiveness to",
+            "URL": "../topic-pages/00/00/03/48/0000034855.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- importance of pleasure versus work",
+            "URL": "../topic-pages/00/00/03/48/0000034857.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- influence on her son's competitiveness",
+            "URL": "../topic-pages/00/00/03/48/0000034858.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- judgment of",
+            "URL": "../topic-pages/00/00/03/48/0000034859.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- lack of self-reflection",
+            "URL": "../topic-pages/00/00/03/48/0000034860.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- marriage to William Blythe (first husband)",
+            "URL": "../topic-pages/00/00/03/48/0000034861.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- narcissism of",
+            "URL": "../topic-pages/00/00/03/48/0000034862.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- relationship with father",
+            "URL": "../topic-pages/00/00/03/48/0000034863.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- relationship with George J. \"Jeff\" Dwire (fourth husband)",
+            "URL": "../topic-pages/00/00/03/48/0000034865.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- relationship with mother",
+            "URL": "../topic-pages/00/00/03/48/0000034864.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- relationship with Richard Fenwick (first boyfriend)",
+            "URL": "../topic-pages/00/00/03/48/0000034866.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- relationship with Richard W. Kelley (fifth husband)",
+            "URL": "../topic-pages/00/00/03/48/0000034867.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- relationship with Roger \"Dude\" Clinton (second and third husband)",
+            "URL": "../topic-pages/00/00/03/48/0000034868.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- relationship with son Roger",
+            "URL": "../topic-pages/00/00/03/48/0000034869.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- role of crisis in the life of",
+            "URL": "../topic-pages/00/00/03/48/0000034870.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- self-esteem of",
+            "URL": "../topic-pages/00/00/03/48/0000034871.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- use of appropriate theories to understand",
+            "URL": "../topic-pages/00/00/03/48/0000034872.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- use of denial",
+            "URL": "../topic-pages/00/00/03/48/0000034873.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- usefulness of autobiography",
+            "URL": "../topic-pages/00/00/03/48/0000034874.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- usefulness of interviews with",
+            "URL": "../topic-pages/00/00/03/48/0000034875.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- view of her own life",
+            "URL": "../topic-pages/00/00/03/48/0000034878.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- view of herself as a doting mother",
+            "URL": "../topic-pages/00/00/03/48/0000034876.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- view of herself as soft hearted",
+            "URL": "../topic-pages/00/00/03/48/0000034877.html"
+        },
+        {
+            "Name": "Kelley, Virginia -- work as instrumental for",
+            "URL": "../topic-pages/00/00/03/48/0000034879.html"
+        },
+        {
+            "Name": "Kelling, George",
+            "URL": "../topic-pages/00/00/04/30/0000043036.html"
+        },
+        {
+            "Name": "Kellogg Foundation",
+            "URL": "../topic-pages/00/00/00/36/0000003667.html"
+        },
+        {
+            "Name": "Kellogg, Robert",
+            "URL": "../topic-pages/00/00/01/22/0000012266.html"
+        },
+        {
+            "Name": "Kelly v. Arriba Soft",
+            "URL": "../topic-pages/00/00/00/24/0000002475.html"
+        },
+        {
+            "Name": "Kelly, Alfred",
+            "URL": "../topic-pages/00/00/03/32/0000033237.html"
+        },
+        {
+            "Name": "Kelly, Grace",
+            "URL": "../topic-pages/00/00/00/12/0000001298.html"
+        },
+        {
+            "Name": "Kelly, Kathleen",
+            "URL": "../topic-pages/00/00/04/57/0000045705.html"
+        },
+        {
+            "Name": "Kelly, Kevin",
+            "URL": "../topic-pages/00/00/00/62/0000006202.html"
+        },
+        {
+            "Name": "Kelly, M.",
+            "URL": "../topic-pages/00/00/01/40/0000014094.html"
+        },
+        {
+            "Name": "Kelly, Robert",
+            "URL": "../topic-pages/00/00/00/46/0000004692.html"
+        },
+        {
+            "Name": "Kelly, T. Mills, Teaching History in the Digital Age",
+            "URL": "../topic-pages/00/00/00/90/0000009041.html"
+        },
+        {
+            "Name": "Kelly, Walt, Pogo",
+            "URL": "../topic-pages/00/00/03/07/0000030705.html"
+        },
+        {
+            "Name": "Kelly, Walter",
+            "URL": "../topic-pages/00/00/01/44/0000014411.html"
+        },
+        {
+            "Name": "Kelman, Mark",
+            "URL": "../topic-pages/00/00/02/63/0000026382.html"
+        },
+        {
+            "Name": "Kelsen, Hans",
+            "URL": "../topic-pages/00/00/03/32/0000033238.html"
+        },
+        {
+            "Name": "Kelsey, Carl",
+            "URL": "../topic-pages/00/00/03/69/0000036998.html"
+        },
+        {
+            "Name": "Kelty, C.",
+            "URL": "../topic-pages/00/00/04/69/0000046928.html"
+        },
+        {
+            "Name": "Kelty, Christopher",
+            "URL": "../topic-pages/00/00/01/03/0000010396.html"
+        },
+        {
+            "Name": "Kemmerer, Edwin W",
+            "URL": "../topic-pages/00/00/03/23/0000032384.html"
+        },
+        {
+            "Name": "Kemp, Andrew",
+            "URL": "../topic-pages/00/00/00/36/0000003668.html"
+        },
+        {
+            "Name": "Kemp, Harry",
+            "URL": "../topic-pages/00/00/03/07/0000030706.html"
+        },
+        {
+            "Name": "Kemp, Harry -- \"God the Architect\"",
+            "URL": "../topic-pages/00/00/03/07/0000030707.html"
+        },
+        {
+            "Name": "Kemp, Jack",
+            "URL": "../topic-pages/00/00/03/23/0000032385.html"
+        },
+        {
+            "Name": "Kempe, Margery",
+            "URL": "../topic-pages/00/00/04/57/0000045706.html"
+        },
+        {
+            "Name": "Kempton, Murray",
+            "URL": "../topic-pages/00/00/03/41/0000034164.html"
+        },
+        {
+            "Name": "Kendal, Samuel",
+            "URL": "../topic-pages/00/00/02/25/0000022588.html"
+        },
+        {
+            "Name": "Kendall College of Art and Design",
+            "URL": "../topic-pages/00/00/00/36/0000003669.html"
+        },
+        {
+            "Name": "Kendall, L.",
+            "URL": "../topic-pages/00/00/04/69/0000046929.html"
+        },
+        {
+            "Name": "Kendrick, Alexander",
+            "URL": "../topic-pages/00/00/03/18/0000031843.html"
+        },
+        {
+            "Name": "Kendrick, Deborah: \"For Tess Gallagher\"",
+            "URL": "../topic-pages/00/00/03/64/0000036477.html"
+        },
+        {
+            "Name": "Kendrick, John",
+            "URL": "../topic-pages/00/00/03/23/0000032386.html"
+        },
+        {
+            "Name": "Kennan, George",
+            "URL": "../topic-pages/00/00/01/92/0000019260.html"
+        },
+        {
+            "Name": "Kennan, George, article by",
+            "URL": "../topic-pages/00/00/02/09/0000020902.html"
+        },
+        {
+            "Name": "Kennedy income tax cut",
+            "URL": "../topic-pages/00/00/03/23/0000032387.html"
+        },
+        {
+            "Name": "Kennedy-Mills National Health Insurance Program (NHIP)",
+            "URL": "../topic-pages/00/00/04/30/0000043039.html"
+        },
+        {
+            "Name": "Kennedy, Anthony",
+            "URL": "../topic-pages/00/00/02/62/0000026213.html"
+        },
+        {
+            "Name": "Kennedy, David",
+            "URL": "../topic-pages/00/00/03/90/0000039050.html"
+        },
+        {
+            "Name": "Kennedy, Duncan",
+            "URL": "../topic-pages/00/00/03/90/0000039051.html"
+        },
+        {
+            "Name": "Kennedy, Edward",
+            "URL": "../topic-pages/00/00/01/35/0000013569.html"
+        },
+        {
+            "Name": "Kennedy, Edward (\"Ted\")",
+            "URL": "../topic-pages/00/00/01/32/0000013232.html"
+        },
+        {
+            "Name": "Kennedy, Edward M.",
+            "URL": "../topic-pages/00/00/04/30/0000043037.html"
+        },
+        {
+            "Name": "Kennedy, Ethel",
+            "URL": "../topic-pages/00/00/04/30/0000043038.html"
+        },
+        {
+            "Name": "Kennedy, H.",
+            "URL": "../topic-pages/00/00/04/69/0000046930.html"
+        },
+        {
+            "Name": "Kennedy, Jack",
+            "URL": "../topic-pages/00/00/00/36/0000003670.html"
+        },
+        {
+            "Name": "Kennedy, John F.",
+            "URL": "../topic-pages/00/00/01/32/0000013233.html"
+        },
+        {
+            "Name": "Kennedy, John F. -- extramarital affairs of",
+            "URL": "../topic-pages/00/00/01/32/0000013234.html"
+        },
+        {
+            "Name": "Kennedy, John F., \"New Frontier,\" -- versus Nixon on Cold War",
+            "URL": "../topic-pages/00/00/03/07/0000030709.html"
+        },
+        {
+            "Name": "Kennedy, John F., \"New Frontier\"",
+            "URL": "../topic-pages/00/00/03/07/0000030708.html"
+        },
+        {
+            "Name": "Kennedy, John Pendleton",
+            "URL": "../topic-pages/00/00/03/69/0000036999.html"
+        },
+        {
+            "Name": "Kennedy, Justice Anthony",
+            "URL": "../topic-pages/00/00/03/95/0000039520.html"
+        },
+        {
+            "Name": "Kennedy, Justice Anthony -- and judicial policymaking",
+            "URL": "../topic-pages/00/00/03/95/0000039524.html"
+        },
+        {
+            "Name": "Kennedy, Justice Anthony -- constitutionality of forced drugging in criminal case",
+            "URL": "../topic-pages/00/00/03/95/0000039521.html"
+        },
+        {
+            "Name": "Kennedy, Justice Anthony -- death penalty",
+            "URL": "../topic-pages/00/00/03/95/0000039522.html"
+        },
+        {
+            "Name": "Kennedy, Justice Anthony -- disparate impact analysis",
+            "URL": "../topic-pages/00/00/03/95/0000039523.html"
+        },
+        {
+            "Name": "Kennedy, Michael",
+            "URL": "../topic-pages/00/00/02/43/0000024337.html"
+        },
+        {
+            "Name": "Kennedy, Paul, book by",
+            "URL": "../topic-pages/00/00/02/09/0000020903.html"
+        },
+        {
+            "Name": "Kennedy, Peter",
+            "URL": "../topic-pages/00/00/01/44/0000014412.html"
+        },
+        {
+            "Name": "Kennedy, Randall",
+            "URL": "../topic-pages/00/00/00/58/0000005804.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- \"silencing\"",
+            "URL": "../topic-pages/00/00/03/95/0000039538.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- academic merit",
+            "URL": "../topic-pages/00/00/03/95/0000039525.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- and Clarence Thomas",
+            "URL": "../topic-pages/00/00/03/95/0000039539.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- and Democratic Leadership Conference",
+            "URL": "../topic-pages/00/00/03/95/0000039531.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- and Lani Guinier",
+            "URL": "../topic-pages/00/00/03/95/0000039533.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- and Martin Luther King",
+            "URL": "../topic-pages/00/00/03/95/0000039536.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- and Shelby Steele",
+            "URL": "../topic-pages/00/00/03/95/0000039537.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- and Stephen Carter",
+            "URL": "../topic-pages/00/00/03/95/0000039526.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- claims of objectivity",
+            "URL": "../topic-pages/00/00/03/95/0000039527.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- commitment to African America",
+            "URL": "../topic-pages/00/00/03/95/0000039528.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- confirmation conversion",
+            "URL": "../topic-pages/00/00/03/95/0000039529.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- critical race theory",
+            "URL": "../topic-pages/00/00/03/95/0000039530.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- group interests",
+            "URL": "../topic-pages/00/00/03/95/0000039532.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- intellectual independence",
+            "URL": "../topic-pages/00/00/03/95/0000039534.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- law as science",
+            "URL": "../topic-pages/00/00/03/95/0000039535.html"
+        },
+        {
+            "Name": "Kennedy, Randall -- U.S. Supreme Court",
+            "URL": "../topic-pages/00/00/03/95/0000039540.html"
+        },
+        {
+            "Name": "Kennedy, Robert",
+            "URL": "../topic-pages/00/00/01/32/0000013235.html"
+        },
+        {
+            "Name": "Kennedy, Robert -- as attorney general",
+            "URL": "../topic-pages/00/00/02/43/0000024338.html"
+        },
+        {
+            "Name": "Kennedy, Robert F.",
+            "URL": "../topic-pages/00/00/01/03/0000010397.html"
+        },
+        {
+            "Name": "Kennedy, Sen. Edward",
+            "URL": "../topic-pages/00/00/03/28/0000032849.html"
+        },
+        {
+            "Name": "Kennedy, William H., lll",
+            "URL": "../topic-pages/00/00/03/51/0000035145.html"
+        },
+        {
+            "Name": "Kenner, La.",
+            "URL": "../topic-pages/00/00/00/06/0000000661.html"
+        },
+        {
+            "Name": "Kennesaw State University",
+            "URL": "../topic-pages/00/00/00/06/0000000662.html"
+        },
+        {
+            "Name": "Kenney, George",
+            "URL": "../topic-pages/00/00/04/16/0000041620.html"
+        },
+        {
+            "Name": "Kenney, P. J.",
+            "URL": "../topic-pages/00/00/01/40/0000014095.html"
+        },
+        {
+            "Name": "kenosis",
+            "URL": "../topic-pages/00/00/01/92/0000019261.html"
+        },
+        {
+            "Name": "Kensing, F.",
+            "URL": "../topic-pages/00/00/04/69/0000046931.html"
+        },
+        {
+            "Name": "Kent Family Chronicles (Jakes)",
+            "URL": "../topic-pages/00/00/03/18/0000031844.html"
+        },
+        {
+            "Name": "Kent State University",
+            "URL": "../topic-pages/00/00/03/18/0000031845.html"
+        },
+        {
+            "Name": "Kent, James",
+            "URL": "../topic-pages/00/00/02/25/0000022589.html"
+        },
+        {
+            "Name": "Kentucky",
+            "URL": "../topic-pages/00/00/00/06/0000000663.html"
+        },
+        {
+            "Name": "Kenya",
+            "URL": "../topic-pages/00/00/00/36/0000003671.html"
+        },
+        {
+            "Name": "Kenyatta, Reuben",
+            "URL": "../topic-pages/00/00/00/36/0000003672.html"
+        },
+        {
+            "Name": "Kenyon College",
+            "URL": "../topic-pages/00/00/00/46/0000004693.html"
+        },
+        {
+            "Name": "Kenyon Review",
+            "URL": "../topic-pages/00/00/00/46/0000004694.html"
+        },
+        {
+            "Name": "Kenyon Review Online",
+            "URL": "../topic-pages/00/00/00/46/0000004695.html"
+        },
+        {
+            "Name": "Képés, Suzanne",
+            "URL": "../topic-pages/00/00/02/89/0000028974.html"
+        },
+        {
+            "Name": "Kerber, Linda",
+            "URL": "../topic-pages/00/00/01/99/0000019981.html"
+        },
+        {
+            "Name": "Kerblay, B.",
+            "URL": "../topic-pages/00/00/01/92/0000019262.html"
+        },
+        {
+            "Name": "Kerman, Joseph",
+            "URL": "../topic-pages/00/00/02/74/0000027455.html"
+        },
+        {
+            "Name": "Kermode, Frank",
+            "URL": "../topic-pages/00/00/01/51/0000015104.html"
+        },
+        {
+            "Name": "Kern-Foxworth, Marilyn",
+            "URL": "../topic-pages/00/00/00/58/0000005805.html"
+        },
+        {
+            "Name": "Kern, Jerome",
+            "URL": "../topic-pages/00/00/03/41/0000034165.html"
+        },
+        {
+            "Name": "Kernberg, O.",
+            "URL": "../topic-pages/00/00/01/40/0000014096.html"
+        },
+        {
+            "Name": "Kernberg, Otto",
+            "URL": "../topic-pages/00/00/01/70/0000017080.html"
+        },
+        {
+            "Name": "Kernberg, Otto F.",
+            "URL": "../topic-pages/00/00/02/66/0000026674.html"
+        },
+        {
+            "Name": "Kernberg, Otto P.",
+            "URL": "../topic-pages/00/00/02/66/0000026608.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- Felix",
+            "URL": "../topic-pages/00/00/02/66/0000026614.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- Middlemarch",
+            "URL": "../topic-pages/00/00/02/66/0000026615.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- on aggression/rage",
+            "URL": "../topic-pages/00/00/02/66/0000026609.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- on narcissism/ narcissistic personality",
+            "URL": "../topic-pages/00/00/02/66/0000026610.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- on splitting",
+            "URL": "../topic-pages/00/00/02/66/0000026612.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- on the self",
+            "URL": "../topic-pages/00/00/02/66/0000026611.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- Romola",
+            "URL": "../topic-pages/00/00/02/66/0000026616.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- theory applied to characters in Deronda",
+            "URL": "../topic-pages/00/00/02/66/0000026613.html"
+        },
+        {
+            "Name": "Kernberg, Otto P. -- theory applied to Eliot",
+            "URL": "../topic-pages/00/00/02/66/0000026617.html"
+        },
+        {
+            "Name": "Kernell, S.",
+            "URL": "../topic-pages/00/00/01/40/0000014097.html"
+        },
+        {
+            "Name": "Kerner Commission",
+            "URL": "../topic-pages/00/00/04/30/0000043040.html"
+        },
+        {
+            "Name": "Kerouac, Jack",
+            "URL": "../topic-pages/00/00/00/46/0000004696.html"
+        },
+        {
+            "Name": "Kerr, Clark",
+            "URL": "../topic-pages/00/00/01/51/0000015105.html"
+        },
+        {
+            "Name": "Kerr, D.",
+            "URL": "../topic-pages/00/00/03/54/0000035418.html"
+        },
+        {
+            "Name": "Kerr, Michael C.",
+            "URL": "../topic-pages/00/00/03/70/0000037000.html"
+        },
+        {
+            "Name": "Kerr, Pete",
+            "URL": "../topic-pages/00/00/00/36/0000003673.html"
+        },
+        {
+            "Name": "Kerry, J.",
+            "URL": "../topic-pages/00/00/00/97/0000009722.html"
+        },
+        {
+            "Name": "Kerry, John",
+            "URL": "../topic-pages/00/00/02/39/0000023957.html"
+        },
+        {
+            "Name": "Kerry, Sen. John",
+            "URL": "../topic-pages/00/00/03/28/0000032850.html"
+        },
+        {
+            "Name": "Kertzer, Morris",
+            "URL": "../topic-pages/00/00/03/41/0000034166.html"
+        },
+        {
+            "Name": "Kessler, Herbert L.",
+            "URL": "../topic-pages/00/00/04/57/0000045707.html"
+        },
+        {
+            "Name": "Kessler, R.",
+            "URL": "../topic-pages/00/00/03/54/0000035419.html"
+        },
+        {
+            "Name": "Keston, John",
+            "URL": "../topic-pages/00/00/00/51/0000005166.html"
+        },
+        {
+            "Name": "Keta",
+            "URL": "../topic-pages/00/00/00/51/0000005167.html"
+        },
+        {
+            "Name": "Ketcham, Ralph",
+            "URL": "../topic-pages/00/00/02/25/0000022590.html"
+        },
+        {
+            "Name": "Keter Shem Tov (Rabbi Shem Tob ibn Gaon)",
+            "URL": "../topic-pages/00/00/02/84/0000028429.html"
+        },
+        {
+            "Name": "Kettoskereszt Verszovetseg (Blood Alliance of the Double Cross)",
+            "URL": "../topic-pages/00/00/01/82/0000018266.html"
+        },
+        {
+            "Name": "Ketwig, John",
+            "URL": "../topic-pages/00/00/03/18/0000031846.html"
+        },
+        {
+            "Name": "Key Tronic Corporation, and impact of NAFTA",
+            "URL": "../topic-pages/00/00/02/69/0000026961.html"
+        },
+        {
+            "Name": "Key, Ellen",
+            "URL": "../topic-pages/00/00/01/64/0000016467.html"
+        },
+        {
+            "Name": "keycard",
+            "URL": "../topic-pages/00/00/00/54/0000005420.html"
+        },
+        {
+            "Name": "Keyes, Cheryl L.",
+            "URL": "../topic-pages/00/00/04/22/0000042279.html"
+        },
+        {
+            "Name": "Keying of concepts",
+            "URL": "../topic-pages/00/00/00/21/0000002193.html"
+        },
+        {
+            "Name": "Keying of concepts (modernization/imperialism/dependency/globalization)",
+            "URL": "../topic-pages/00/00/00/22/0000002292.html"
+        },
+        {
+            "Name": "Keynes, John Maynard",
+            "URL": "../topic-pages/00/00/01/99/0000019982.html"
+        },
+        {
+            "Name": "Keynesian economics",
+            "URL": "../topic-pages/00/00/03/23/0000032388.html"
+        },
+        {
+            "Name": "Keynesian Revolution",
+            "URL": "../topic-pages/00/00/03/23/0000032389.html"
+        },
+        {
+            "Name": "KGB",
+            "URL": "../topic-pages/00/00/02/03/0000020391.html"
+        },
+        {
+            "Name": "Khalid, Wardah",
+            "URL": "../topic-pages/00/00/01/03/0000010398.html"
+        },
+        {
+            "Name": "Khalifa, Wiz",
+            "URL": "../topic-pages/00/00/01/03/0000010399.html"
+        },
+        {
+            "Name": "Khan, Lena",
+            "URL": "../topic-pages/00/00/01/04/0000010400.html"
+        },
+        {
+            "Name": "Khan, Masud",
+            "URL": "../topic-pages/00/00/02/17/0000021727.html"
+        },
+        {
+            "Name": "Khanga, Yelena",
+            "URL": "../topic-pages/00/00/01/92/0000019263.html"
+        },
+        {
+            "Name": "Kharchev, A.",
+            "URL": "../topic-pages/00/00/01/92/0000019264.html"
+        },
+        {
+            "Name": "Khatau, Sunit",
+            "URL": "../topic-pages/00/00/04/46/0000044633.html"
+        },
+        {
+            "Name": "Khatua Textile Mill",
+            "URL": "../topic-pages/00/00/04/46/0000044634.html"
+        },
+        {
+            "Name": "khlysty",
+            "URL": "../topic-pages/00/00/01/92/0000019265.html"
+        },
+        {
+            "Name": "Khomiakov, Aleksei",
+            "URL": "../topic-pages/00/00/01/92/0000019266.html"
+        },
+        {
+            "Name": "Khripkova, A.",
+            "URL": "../topic-pages/00/00/01/92/0000019267.html"
+        },
+        {
+            "Name": "Khrushchev, Nikita",
+            "URL": "../topic-pages/00/00/01/32/0000013236.html"
+        },
+        {
+            "Name": "Khrushchev, Nikita: kitchen debate",
+            "URL": "../topic-pages/00/00/04/30/0000043041.html"
+        },
+        {
+            "Name": "Kibera (Nairobi)",
+            "URL": "../topic-pages/00/00/04/46/0000044635.html"
+        },
+        {
+            "Name": "Kibria, Nazli",
+            "URL": "../topic-pages/00/00/01/04/0000010401.html"
+        },
+        {
+            "Name": "kick-and-lick theory",
+            "URL": "../topic-pages/00/00/04/46/0000044636.html"
+        },
+        {
+            "Name": "Kidd, Ross",
+            "URL": "../topic-pages/00/00/00/36/0000003674.html"
+        },
+        {
+            "Name": "Kidnapped (Stevenson)",
+            "URL": "../topic-pages/00/00/02/98/0000029888.html"
+        },
+        {
+            "Name": "Kidnapping",
+            "URL": "../topic-pages/00/00/02/89/0000028975.html"
+        },
+        {
+            "Name": "Kidnapping -- by pimps",
+            "URL": "../topic-pages/00/00/02/89/0000028977.html"
+        },
+        {
+            "Name": "Kidnapping -- of Patricia Hearst",
+            "URL": "../topic-pages/00/00/02/89/0000028976.html"
+        },
+        {
+            "Name": "Kids Rethink New Orleans Schools",
+            "URL": "../topic-pages/00/00/00/06/0000000664.html"
+        },
+        {
+            "Name": "\"Kids' Informal Learning with Digital Media\"",
+            "URL": "../topic-pages/00/00/00/71/0000007133.html"
+        },
+        {
+            "Name": "Kier",
+            "URL": "../topic-pages/00/00/01/13/0000011369.html"
+        },
+        {
+            "Name": "Kierkegaard, S.",
+            "URL": "../topic-pages/00/00/02/31/0000023122.html"
+        },
+        {
+            "Name": "Kierkegaard, Soren",
+            "URL": "../topic-pages/00/00/01/44/0000014413.html"
+        },
+        {
+            "Name": "Kierkegaard, Søren",
+            "URL": "../topic-pages/00/00/01/63/0000016390.html"
+        },
+        {
+            "Name": "Kierkegaard, Soren, and postmodern epistemology",
+            "URL": "../topic-pages/00/00/03/07/0000030710.html"
+        },
+        {
+            "Name": "Kiessling, Nicolas",
+            "URL": "../topic-pages/00/00/01/44/0000014414.html"
+        },
+        {
+            "Name": "Kilborn, P. T.",
+            "URL": "../topic-pages/00/00/01/40/0000014098.html"
+        },
+        {
+            "Name": "Kilby, Jack",
+            "URL": "../topic-pages/00/00/00/62/0000006203.html"
+        },
+        {
+            "Name": "Kilichjian, Aram",
+            "URL": "../topic-pages/00/00/02/31/0000023123.html"
+        },
+        {
+            "Name": "Killingsworth, Mark R.",
+            "URL": "../topic-pages/00/00/02/54/0000025427.html"
+        },
+        {
+            "Name": "Killough, Norma",
+            "URL": "../topic-pages/00/00/00/36/0000003675.html"
+        },
+        {
+            "Name": "Killzone 3",
+            "URL": "../topic-pages/00/00/00/54/0000005421.html"
+        },
+        {
+            "Name": "Kim Chi-ha",
+            "URL": "../topic-pages/00/00/04/50/0000045042.html"
+        },
+        {
+            "Name": "Kim Chi-mi",
+            "URL": "../topic-pages/00/00/04/50/0000045043.html"
+        },
+        {
+            "Name": "Kim Chong-wŏn",
+            "URL": "../topic-pages/00/00/04/50/0000045044.html"
+        },
+        {
+            "Name": "Kim Dae Jung",
+            "URL": "../topic-pages/00/00/04/50/0000045045.html"
+        },
+        {
+            "Name": "Kim Hak-su",
+            "URL": "../topic-pages/00/00/04/50/0000045046.html"
+        },
+        {
+            "Name": "Kim Il-Sung",
+            "URL": "../topic-pages/00/00/04/50/0000045047.html"
+        },
+        {
+            "Name": "Kim Il-Sung -- as composer and playwright",
+            "URL": "../topic-pages/00/00/04/50/0000045048.html"
+        },
+        {
+            "Name": "Kim Il-Sung -- importance of filmmaking for",
+            "URL": "../topic-pages/00/00/04/50/0000045049.html"
+        },
+        {
+            "Name": "Kim Jong-Il",
+            "URL": "../topic-pages/00/00/04/50/0000045050.html"
+        },
+        {
+            "Name": "Kim Jong-Il -- as filmmaker",
+            "URL": "../topic-pages/00/00/04/50/0000045051.html"
+        },
+        {
+            "Name": "Kim Jong-Il -- On the Art of the Cinema",
+            "URL": "../topic-pages/00/00/04/50/0000045052.html"
+        },
+        {
+            "Name": "Kim Jong-Il -- Shin's relationship with",
+            "URL": "../topic-pages/00/00/04/50/0000045053.html"
+        },
+        {
+            "Name": "Kim Kang-yun",
+            "URL": "../topic-pages/00/00/04/50/0000045054.html"
+        },
+        {
+            "Name": "Kim Kap-hŭi",
+            "URL": "../topic-pages/00/00/04/50/0000045055.html"
+        },
+        {
+            "Name": "Kim Ki-yŏng",
+            "URL": "../topic-pages/00/00/04/50/0000045056.html"
+        },
+        {
+            "Name": "Kim Ki-yŏng -- Housemaid",
+            "URL": "../topic-pages/00/00/04/50/0000045057.html"
+        },
+        {
+            "Name": "Kim Phuc",
+            "URL": "../topic-pages/00/00/03/18/0000031847.html"
+        },
+        {
+            "Name": "Kim Sisters",
+            "URL": "../topic-pages/00/00/04/50/0000045058.html"
+        },
+        {
+            "Name": "Kim So-yŏng",
+            "URL": "../topic-pages/00/00/04/50/0000045060.html"
+        },
+        {
+            "Name": "Kim Sŏng-gyun",
+            "URL": "../topic-pages/00/00/04/50/0000045059.html"
+        },
+        {
+            "Name": "Kim Su-nam",
+            "URL": "../topic-pages/00/00/04/50/0000045061.html"
+        },
+        {
+            "Name": "Kim Su-yong",
+            "URL": "../topic-pages/00/00/04/50/0000045062.html"
+        },
+        {
+            "Name": "Kim Su-yong -- Classroom of Youth",
+            "URL": "../topic-pages/00/00/04/50/0000045063.html"
+        },
+        {
+            "Name": "Kim Su-yong -- Sorrow Even in Heaven",
+            "URL": "../topic-pages/00/00/04/50/0000045064.html"
+        },
+        {
+            "Name": "Kim Tae-jung",
+            "URL": "../topic-pages/00/00/04/50/0000045065.html"
+        },
+        {
+            "Name": "Kim Tong-ch'un",
+            "URL": "../topic-pages/00/00/04/50/0000045066.html"
+        },
+        {
+            "Name": "Kim Ŭi-hyang",
+            "URL": "../topic-pages/00/00/04/50/0000045067.html"
+        },
+        {
+            "Name": "Kim Yŏng-ho, One-Armed Man of the Wilds",
+            "URL": "../topic-pages/00/00/04/50/0000045068.html"
+        },
+        {
+            "Name": "Kim Yu-yŏng",
+            "URL": "../topic-pages/00/00/04/50/0000045069.html"
+        },
+        {
+            "Name": "Kimba, the White Lion",
+            "URL": "../topic-pages/00/00/00/12/0000001299.html"
+        },
+        {
+            "Name": "Kimball, Jeffrey",
+            "URL": "../topic-pages/00/00/03/18/0000031848.html"
+        },
+        {
+            "Name": "Kimball, Roger",
+            "URL": "../topic-pages/00/00/01/46/0000014698.html"
+        },
+        {
+            "Name": "Kimball, Roger -- Tenured Radicals",
+            "URL": "../topic-pages/00/00/03/64/0000036478.html"
+        },
+        {
+            "Name": "Kimball, S.",
+            "URL": "../topic-pages/00/00/01/54/0000015495.html"
+        },
+        {
+            "Name": "Kimmel, Michael",
+            "URL": "../topic-pages/00/00/02/25/0000022591.html"
+        },
+        {
+            "Name": "Kimmel, Stanley",
+            "URL": "../topic-pages/00/00/01/46/0000014699.html"
+        },
+        {
+            "Name": "Kimura, Takuya",
+            "URL": "../topic-pages/00/00/00/13/0000001300.html"
+        },
+        {
+            "Name": "Kin selection",
+            "URL": "../topic-pages/00/00/02/31/0000023120.html"
+        },
+        {
+            "Name": "Kincaid, Jamaica",
+            "URL": "../topic-pages/00/00/03/64/0000036479.html"
+        },
+        {
+            "Name": "Kincaid, Jamaica -- Annie John",
+            "URL": "../topic-pages/00/00/03/64/0000036480.html"
+        },
+        {
+            "Name": "Kincaid, Jamaica -- Green Cane and Juicy Flotsam",
+            "URL": "../topic-pages/00/00/03/64/0000036481.html"
+        },
+        {
+            "Name": "Kinder, Marsha, Transmedia Frictions: The Digital, The Arts, and The Humanities",
+            "URL": "../topic-pages/00/00/00/90/0000009042.html"
+        },
+        {
+            "Name": "Kindle, digital book reader by Amazon",
+            "URL": "../topic-pages/00/00/00/80/0000008044.html"
+        },
+        {
+            "Name": "Kindleberger, Charles",
+            "URL": "../topic-pages/00/00/03/23/0000032390.html"
+        },
+        {
+            "Name": "Kindner, D. R.",
+            "URL": "../topic-pages/00/00/01/40/0000014099.html"
+        },
+        {
+            "Name": "Kinematograph and Lantern Weekly",
+            "URL": "../topic-pages/00/00/00/77/0000007765.html"
+        },
+        {
+            "Name": "King John (Shakespeare)",
+            "URL": "../topic-pages/00/00/01/22/0000012267.html"
+        },
+        {
+            "Name": "King Kong",
+            "URL": "../topic-pages/00/00/00/13/0000001301.html"
+        },
+        {
+            "Name": "King Lear: discussed",
+            "URL": "../topic-pages/00/00/01/54/0000015496.html"
+        },
+        {
+            "Name": "King Must Die, The (Renault)",
+            "URL": "../topic-pages/00/00/02/98/0000029889.html"
+        },
+        {
+            "Name": "King of Tars, The",
+            "URL": "../topic-pages/00/00/04/57/0000045708.html"
+        },
+        {
+            "Name": "King-Drew Medical Center",
+            "URL": "../topic-pages/00/00/04/30/0000043049.html"
+        },
+        {
+            "Name": "King-Drew Medical Center -- and liberalism, limits of",
+            "URL": "../topic-pages/00/00/04/30/0000043051.html"
+        },
+        {
+            "Name": "King-Drew Medical Center -- and public housing",
+            "URL": "../topic-pages/00/00/04/30/0000043052.html"
+        },
+        {
+            "Name": "King-Drew Medical Center -- closure of",
+            "URL": "../topic-pages/00/00/04/30/0000043050.html"
+        },
+        {
+            "Name": "King-Drew Medical Center -- services, resumption of",
+            "URL": "../topic-pages/00/00/04/30/0000043053.html"
+        },
+        {
+            "Name": "King-Hammond, Leslie",
+            "URL": "../topic-pages/00/00/00/58/0000005807.html"
+        },
+        {
+            "Name": "King, C. B.",
+            "URL": "../topic-pages/00/00/03/99/0000039999.html"
+        },
+        {
+            "Name": "King, C. D.",
+            "URL": "../topic-pages/00/00/01/41/0000014100.html"
+        },
+        {
+            "Name": "King, Carol",
+            "URL": "../topic-pages/00/00/00/36/0000003676.html"
+        },
+        {
+            "Name": "King, Coretta Scott",
+            "URL": "../topic-pages/00/00/04/30/0000043042.html"
+        },
+        {
+            "Name": "King, Coretta Scott -- on urban reconstruction",
+            "URL": "../topic-pages/00/00/04/30/0000043043.html"
+        },
+        {
+            "Name": "King, Coretta Scott -- on welfare cuts",
+            "URL": "../topic-pages/00/00/04/30/0000043044.html"
+        },
+        {
+            "Name": "King, Dr. Martin Luther, Jr., Chicago riots after the assassination of",
+            "URL": "../topic-pages/00/00/00/46/0000004698.html"
+        },
+        {
+            "Name": "King, George C.",
+            "URL": "../topic-pages/00/00/03/70/0000037001.html"
+        },
+        {
+            "Name": "King, K.",
+            "URL": "../topic-pages/00/00/04/60/0000046057.html"
+        },
+        {
+            "Name": "King, L. S.",
+            "URL": "../topic-pages/00/00/01/41/0000014101.html"
+        },
+        {
+            "Name": "King, Larry",
+            "URL": "../topic-pages/00/00/03/51/0000035146.html"
+        },
+        {
+            "Name": "King, Lovalerie",
+            "URL": "../topic-pages/00/00/00/58/0000005806.html"
+        },
+        {
+            "Name": "King, Martin Luther, Jr.",
+            "URL": "../topic-pages/00/00/00/28/0000002822.html"
+        },
+        {
+            "Name": "King, Martin Luther, Jr. -- \"I Have a Dream\"",
+            "URL": "../topic-pages/00/00/03/07/0000030711.html"
+        },
+        {
+            "Name": "King, Martin Luther, Jr. -- assassination of",
+            "URL": "../topic-pages/00/00/04/30/0000043045.html"
+        },
+        {
+            "Name": "King, Martin Luther, Jr. -- LA Freedom Rally speech",
+            "URL": "../topic-pages/00/00/04/30/0000043047.html"
+        },
+        {
+            "Name": "King, Martin Luther, Jr. -- on health injustice",
+            "URL": "../topic-pages/00/00/04/30/0000043046.html"
+        },
+        {
+            "Name": "King, Martin Luther, Jr. -- Poor People's Campaign",
+            "URL": "../topic-pages/00/00/04/30/0000043048.html"
+        },
+        {
+            "Name": "King, Mary",
+            "URL": "../topic-pages/00/00/00/36/0000003678.html"
+        },
+        {
+            "Name": "King, Nancy Jean",
+            "URL": "../topic-pages/00/00/00/36/0000003679.html"
+        },
+        {
+            "Name": "King, Rodney",
+            "URL": "../topic-pages/00/00/00/06/0000000665.html"
+        },
+        {
+            "Name": "King, Stephen",
+            "URL": "../topic-pages/00/00/00/64/0000006428.html"
+        },
+        {
+            "Name": "King, Willford I.",
+            "URL": "../topic-pages/00/00/03/23/0000032391.html"
+        },
+        {
+            "Name": "King's Circle",
+            "URL": "../topic-pages/00/00/04/46/0000044637.html"
+        },
+        {
+            "Name": "King's College",
+            "URL": "../topic-pages/00/00/00/90/0000009043.html"
+        },
+        {
+            "Name": "King's College London, Department of History",
+            "URL": "../topic-pages/00/00/00/90/0000009044.html"
+        },
+        {
+            "Name": "King's College, and John Jay",
+            "URL": "../topic-pages/00/00/01/99/0000019983.html"
+        },
+        {
+            "Name": "Kingdom of the Eye",
+            "URL": "../topic-pages/00/00/00/47/0000004700.html"
+        },
+        {
+            "Name": "Kingsley, Charles",
+            "URL": "../topic-pages/00/00/02/17/0000021728.html"
+        },
+        {
+            "Name": "Kingston-Mann, E.",
+            "URL": "../topic-pages/00/00/01/92/0000019268.html"
+        },
+        {
+            "Name": "Kingston, Maxine Hong",
+            "URL": "../topic-pages/00/00/00/28/0000002823.html"
+        },
+        {
+            "Name": "Kingston, Maxine Hong -- \"No Name Woman\"",
+            "URL": "../topic-pages/00/00/00/28/0000002824.html"
+        },
+        {
+            "Name": "Kingston, Maxine Hong -- China Men",
+            "URL": "../topic-pages/00/00/03/16/0000031641.html"
+        },
+        {
+            "Name": "Kingston, Maxine Hong -- Woman Warrior",
+            "URL": "../topic-pages/00/00/00/28/0000002825.html"
+        },
+        {
+            "Name": "Kinnard, Mr., editor of Anderson Herald",
+            "URL": "../topic-pages/00/00/00/47/0000004702.html"
+        },
+        {
+            "Name": "Kinneavy, James",
+            "URL": "../topic-pages/00/00/03/59/0000035957.html"
+        },
+        {
+            "Name": "Kinnell, Galway",
+            "URL": "../topic-pages/00/00/00/47/0000004704.html"
+        },
+        {
+            "Name": "Kinsey reports",
+            "URL": "../topic-pages/00/00/03/84/0000038487.html"
+        },
+        {
+            "Name": "Kinsey scale",
+            "URL": "../topic-pages/00/00/03/84/0000038488.html"
+        },
+        {
+            "Name": "Kinsey study, exclusion of African-Americans",
+            "URL": "../topic-pages/00/00/01/60/0000016083.html"
+        },
+        {
+            "Name": "Kinsey, A.",
+            "URL": "../topic-pages/00/00/03/54/0000035420.html"
+        },
+        {
+            "Name": "Kinsey, A. C.",
+            "URL": "../topic-pages/00/00/03/86/0000038675.html"
+        },
+        {
+            "Name": "Kinsey, Alfred",
+            "URL": "../topic-pages/00/00/01/92/0000019269.html"
+        },
+        {
+            "Name": "Kinsey, Alfred C.",
+            "URL": "../topic-pages/00/00/01/44/0000014415.html"
+        },
+        {
+            "Name": "Kinsey, Alfred, Sexual Behavior in the Human Male",
+            "URL": "../topic-pages/00/00/03/07/0000030712.html"
+        },
+        {
+            "Name": "Kinsley, David",
+            "URL": "../topic-pages/00/00/01/44/0000014416.html"
+        },
+        {
+            "Name": "Kinzie, Mary",
+            "URL": "../topic-pages/00/00/00/28/0000002826.html"
+        },
+        {
+            "Name": "Kipling, Rudyard",
+            "URL": "../topic-pages/00/00/00/77/0000007766.html"
+        },
+        {
+            "Name": "Kipling, Rudyard -- \"Mrs Bathurst\"",
+            "URL": "../topic-pages/00/00/00/77/0000007767.html"
+        },
+        {
+            "Name": "Kireevsky, Ivan",
+            "URL": "../topic-pages/00/00/01/92/0000019270.html"
+        },
+        {
+            "Name": "Kirikou",
+            "URL": "../topic-pages/00/00/00/13/0000001302.html"
+        },
+        {
+            "Name": "Kirilov (Dostoevsky)",
+            "URL": "../topic-pages/00/00/01/92/0000019271.html"
+        },
+        {
+            "Name": "Kirk, M.",
+            "URL": "../topic-pages/00/00/03/54/0000035421.html"
+        },
+        {
+            "Name": "Kirk, Marshall",
+            "URL": "../topic-pages/00/00/02/39/0000023958.html"
+        },
+        {
+            "Name": "Kirk, R.",
+            "URL": "../topic-pages/00/00/02/74/0000027456.html"
+        },
+        {
+            "Name": "Kirkland, Ewan",
+            "URL": "../topic-pages/00/00/00/64/0000006429.html"
+        },
+        {
+            "Name": "Kirkland, Lane",
+            "URL": "../topic-pages/00/00/02/69/0000026962.html"
+        },
+        {
+            "Name": "Kirkpatrick, J.",
+            "URL": "../topic-pages/00/00/02/74/0000027457.html"
+        },
+        {
+            "Name": "Kirkpatrick, Reagan Kelly",
+            "URL": "../topic-pages/00/00/01/60/0000016084.html"
+        },
+        {
+            "Name": "Kirov, Sergey Mironovich",
+            "URL": "../topic-pages/00/00/02/03/0000020392.html"
+        },
+        {
+            "Name": "Kirschenbaum, Matthew",
+            "URL": "../topic-pages/00/00/00/90/0000009045.html"
+        },
+        {
+            "Name": "Kirschenbaum, Matthew -- \"What is Digital Humanities and What's it Doing in English Departments?\"",
+            "URL": "../topic-pages/00/00/00/90/0000009046.html"
+        },
+        {
+            "Name": "Kirschenbaum, Matthew, Mechanisms",
+            "URL": "../topic-pages/00/00/00/66/0000006675.html"
+        },
+        {
+            "Name": "Kirschstein, Ruth",
+            "URL": "../topic-pages/00/00/04/08/0000040846.html"
+        },
+        {
+            "Name": "Kirshbaum, L.",
+            "URL": "../topic-pages/00/00/01/54/0000015497.html"
+        },
+        {
+            "Name": "Kirtland, Robert",
+            "URL": "../topic-pages/00/00/01/99/0000019984.html"
+        },
+        {
+            "Name": "Kis, Gyorgy",
+            "URL": "../topic-pages/00/00/01/86/0000018605.html"
+        },
+        {
+            "Name": "Kisaeng tourism",
+            "URL": "../topic-pages/00/00/02/89/0000028978.html"
+        },
+        {
+            "Name": "Kiser, Jackson",
+            "URL": "../topic-pages/00/00/03/13/0000031330.html"
+        },
+        {
+            "Name": "Kishimoto, Yoriko",
+            "URL": "../topic-pages/00/00/02/09/0000020904.html"
+        },
+        {
+            "Name": "Kiskun-Felegyhaza (town)",
+            "URL": "../topic-pages/00/00/01/86/0000018606.html"
+        },
+        {
+            "Name": "Kiskunhalas (town)",
+            "URL": "../topic-pages/00/00/01/86/0000018607.html"
+        },
+        {
+            "Name": "Kiss",
+            "URL": "../topic-pages/00/00/00/47/0000004705.html"
+        },
+        {
+            "Name": "Kiss of the Spider Woman (Puig)",
+            "URL": "../topic-pages/00/00/02/98/0000029890.html"
+        },
+        {
+            "Name": "Kissam, Benjamin, and John Jay's legal apprenticeship",
+            "URL": "../topic-pages/00/00/01/99/0000019985.html"
+        },
+        {
+            "Name": "Kissinger, Henry",
+            "URL": "../topic-pages/00/00/02/09/0000020905.html"
+        },
+        {
+            "Name": "Kitch, E.",
+            "URL": "../topic-pages/00/00/03/54/0000035422.html"
+        },
+        {
+            "Name": "Kitchin, Rob",
+            "URL": "../topic-pages/00/00/00/66/0000006676.html"
+        },
+        {
+            "Name": "Kittler, Friedrich",
+            "URL": "../topic-pages/00/00/00/62/0000006204.html"
+        },
+        {
+            "Name": "Kittler, Friedrich, Gramophone, Film, Typewriter",
+            "URL": "../topic-pages/00/00/00/47/0000004706.html"
+        },
+        {
+            "Name": "Kittredge, George L.",
+            "URL": "../topic-pages/00/00/01/44/0000014417.html"
+        },
+        {
+            "Name": "Kitty Want a Corner",
+            "URL": "../topic-pages/00/00/00/36/0000003680.html"
+        },
+        {
+            "Name": "Kitvey Yad be-Kabbalah (Gershom Scholem)",
+            "URL": "../topic-pages/00/00/02/84/0000028430.html"
+        },
+        {
+            "Name": "Kitwana, Bakari",
+            "URL": "../topic-pages/00/00/04/22/0000042280.html"
+        },
+        {
+            "Name": "Kitzinger, C.",
+            "URL": "../topic-pages/00/00/03/86/0000038676.html"
+        },
+        {
+            "Name": "Kiva, A.",
+            "URL": "../topic-pages/00/00/01/92/0000019272.html"
+        },
+        {
+            "Name": "Kiva.org",
+            "URL": "../topic-pages/00/00/01/04/0000010402.html"
+        },
+        {
+            "Name": "Kiwi (Filipino MC)",
+            "URL": "../topic-pages/00/00/04/22/0000042281.html"
+        },
+        {
+            "Name": "Kizer, Carolyn",
+            "URL": "../topic-pages/00/00/00/47/0000004707.html"
+        },
+        {
+            "Name": "Klapisch-Zuber, Christiane",
+            "URL": "../topic-pages/00/00/04/57/0000045709.html"
+        },
+        {
+            "Name": "Klastrup, L.",
+            "URL": "../topic-pages/00/00/04/69/0000046932.html"
+        },
+        {
+            "Name": "Klausner, Joseph",
+            "URL": "../topic-pages/00/00/01/79/0000017949.html"
+        },
+        {
+            "Name": "Kleck, R.",
+            "URL": "../topic-pages/00/00/03/54/0000035423.html"
+        },
+        {
+            "Name": "Klein Sexual Orientation Grid (KSOG)",
+            "URL": "../topic-pages/00/00/03/84/0000038489.html"
+        },
+        {
+            "Name": "Klein, A. M.",
+            "URL": "../topic-pages/00/00/01/54/0000015499.html"
+        },
+        {
+            "Name": "Klein, Ethel",
+            "URL": "../topic-pages/00/00/03/13/0000031331.html"
+        },
+        {
+            "Name": "Klein, F.",
+            "URL": "../topic-pages/00/00/03/86/0000038677.html"
+        },
+        {
+            "Name": "Klein, G. S",
+            "URL": "../topic-pages/00/00/01/54/0000015498.html"
+        },
+        {
+            "Name": "Klein, George",
+            "URL": "../topic-pages/00/00/01/70/0000017081.html"
+        },
+        {
+            "Name": "Klein, J.",
+            "URL": "../topic-pages/00/00/01/41/0000014102.html"
+        },
+        {
+            "Name": "Klein, Lawrence",
+            "URL": "../topic-pages/00/00/03/23/0000032392.html"
+        },
+        {
+            "Name": "Klein, M. -- contributions to object relations theory",
+            "URL": "../topic-pages/00/00/01/55/0000015501.html"
+        },
+        {
+            "Name": "Klein, M. -- death instinct",
+            "URL": "../topic-pages/00/00/01/55/0000015502.html"
+        },
+        {
+            "Name": "Klein, M. -- depressive anxiety",
+            "URL": "../topic-pages/00/00/01/55/0000015503.html"
+        },
+        {
+            "Name": "Klein, M. -- grief",
+            "URL": "../topic-pages/00/00/01/55/0000015504.html"
+        },
+        {
+            "Name": "Klein, M. -- idealization as defense",
+            "URL": "../topic-pages/00/00/01/55/0000015505.html"
+        },
+        {
+            "Name": "Klein, M. -- inter-pretation of fantasy",
+            "URL": "../topic-pages/00/00/01/55/0000015507.html"
+        },
+        {
+            "Name": "Klein, M. -- internalized objects",
+            "URL": "../topic-pages/00/00/01/55/0000015506.html"
+        },
+        {
+            "Name": "Klein, M. -- object relations, centrality of",
+            "URL": "../topic-pages/00/00/01/55/0000015508.html"
+        },
+        {
+            "Name": "Klein, M. -- on aggression",
+            "URL": "../topic-pages/00/00/01/55/0000015500.html"
+        },
+        {
+            "Name": "Klein, M. -- part objects",
+            "URL": "../topic-pages/00/00/01/55/0000015509.html"
+        },
+        {
+            "Name": "Klein, M. -- persecutory objects",
+            "URL": "../topic-pages/00/00/01/55/0000015510.html"
+        },
+        {
+            "Name": "Klein, M. -- schizoid estrangement",
+            "URL": "../topic-pages/00/00/01/55/0000015511.html"
+        },
+        {
+            "Name": "Klein, M. -- splitting",
+            "URL": "../topic-pages/00/00/01/55/0000015513.html"
+        },
+        {
+            "Name": "Klein, M. -- views on sexuality",
+            "URL": "../topic-pages/00/00/01/55/0000015512.html"
+        },
+        {
+            "Name": "Klein, Maria",
+            "URL": "../topic-pages/00/00/02/31/0000023124.html"
+        },
+        {
+            "Name": "Klein, Melanie",
+            "URL": "../topic-pages/00/00/01/22/0000012269.html"
+        },
+        {
+            "Name": "Kleinberg, Ethan",
+            "URL": "../topic-pages/00/00/00/90/0000009047.html"
+        },
+        {
+            "Name": "Kleinberg, S. J.",
+            "URL": "../topic-pages/00/00/04/30/0000043054.html"
+        },
+        {
+            "Name": "Kleinian psychology",
+            "URL": "../topic-pages/00/00/02/17/0000021729.html"
+        },
+        {
+            "Name": "Kleinman, A.",
+            "URL": "../topic-pages/00/00/02/74/0000027458.html"
+        },
+        {
+            "Name": "Kleist, Heinrich von",
+            "URL": "../topic-pages/00/00/01/64/0000016468.html"
+        },
+        {
+            "Name": "Kleist, Heinrich von -- On the Marionette Theater",
+            "URL": "../topic-pages/00/00/01/64/0000016469.html"
+        },
+        {
+            "Name": "Kleist, Heinrich von, The Marquise von O",
+            "URL": "../topic-pages/00/00/01/44/0000014418.html"
+        },
+        {
+            "Name": "Kleppe v. Sierra Club",
+            "URL": "../topic-pages/00/00/04/08/0000040847.html"
+        },
+        {
+            "Name": "kleptomania",
+            "URL": "../topic-pages/00/00/00/77/0000007768.html"
+        },
+        {
+            "Name": "Kletschka v. Driver",
+            "URL": "../topic-pages/00/00/04/08/0000040848.html"
+        },
+        {
+            "Name": "Klibanov, A. I.",
+            "URL": "../topic-pages/00/00/01/92/0000019273.html"
+        },
+        {
+            "Name": "Klienburg, Otto",
+            "URL": "../topic-pages/00/00/03/70/0000037002.html"
+        },
+        {
+            "Name": "Kligler-Vilenchik, Neta",
+            "URL": "../topic-pages/00/00/01/04/0000010403.html"
+        },
+        {
+            "Name": "Klimas, I. S.",
+            "URL": "../topic-pages/00/00/01/92/0000019274.html"
+        },
+        {
+            "Name": "Kline, Daniel T.",
+            "URL": "../topic-pages/00/00/04/57/0000045710.html"
+        },
+        {
+            "Name": "Kline, W.",
+            "URL": "../topic-pages/00/00/03/54/0000035424.html"
+        },
+        {
+            "Name": "Klinenberg, Eric",
+            "URL": "../topic-pages/00/00/00/83/0000008301.html"
+        },
+        {
+            "Name": "Klintworth, Phil",
+            "URL": "../topic-pages/00/00/00/36/0000003681.html"
+        },
+        {
+            "Name": "Klonsky, Mike",
+            "URL": "../topic-pages/00/00/03/41/0000034167.html"
+        },
+        {
+            "Name": "Klossowska, Elizabeth Dorothee (\"Baladine,\" \"Merline\")",
+            "URL": "../topic-pages/00/00/01/64/0000016470.html"
+        },
+        {
+            "Name": "Kluckhohn, Clyde",
+            "URL": "../topic-pages/00/00/01/92/0000019275.html"
+        },
+        {
+            "Name": "Kluger, Richard",
+            "URL": "../topic-pages/00/00/03/32/0000033239.html"
+        },
+        {
+            "Name": "Klugh, Dr. \"Buddy\"",
+            "URL": "../topic-pages/00/00/03/51/0000035147.html"
+        },
+        {
+            "Name": "Klugman, Jeffry",
+            "URL": "../topic-pages/00/00/01/92/0000019276.html"
+        },
+        {
+            "Name": "Klute",
+            "URL": "../topic-pages/00/00/03/57/0000035749.html"
+        },
+        {
+            "Name": "Knee Deep in the Dead",
+            "URL": "../topic-pages/00/00/00/54/0000005422.html"
+        },
+        {
+            "Name": "Knelman, Judith",
+            "URL": "../topic-pages/00/00/00/77/0000007769.html"
+        },
+        {
+            "Name": "Knight Foundation",
+            "URL": "../topic-pages/00/00/00/83/0000008302.html"
+        },
+        {
+            "Name": "Knight News Challenge",
+            "URL": "../topic-pages/00/00/00/83/0000008303.html"
+        },
+        {
+            "Name": "Knight-Ridder",
+            "URL": "../topic-pages/00/00/00/83/0000008304.html"
+        },
+        {
+            "Name": "Knight, Frank",
+            "URL": "../topic-pages/00/00/03/23/0000032393.html"
+        },
+        {
+            "Name": "Knight, G. Wilson",
+            "URL": "../topic-pages/00/00/01/51/0000015106.html"
+        },
+        {
+            "Name": "Knight, Keith",
+            "URL": "../topic-pages/00/00/00/06/0000000666.html"
+        },
+        {
+            "Name": "Knight, P. T.",
+            "URL": "../topic-pages/00/00/00/90/0000009048.html"
+        },
+        {
+            "Name": "Knobel, M.",
+            "URL": "../topic-pages/00/00/00/71/0000007134.html"
+        },
+        {
+            "Name": "Knoblock, Judith A.",
+            "URL": "../topic-pages/00/00/01/44/0000014419.html"
+        },
+        {
+            "Name": "Knoepfle, John",
+            "URL": "../topic-pages/00/00/00/47/0000004708.html"
+        },
+        {
+            "Name": "Knoespel, Kenneth",
+            "URL": "../topic-pages/00/00/00/90/0000009049.html"
+        },
+        {
+            "Name": "Knoop, Vera",
+            "URL": "../topic-pages/00/00/01/63/0000016342.html"
+        },
+        {
+            "Name": "Knoop, Vera -- and Rilke's inner Mädchen",
+            "URL": "../topic-pages/00/00/01/64/0000016474.html"
+        },
+        {
+            "Name": "Knoop, Vera -- dancer, musician, and artist",
+            "URL": "../topic-pages/00/00/01/64/0000016471.html"
+        },
+        {
+            "Name": "Knoop, Vera -- illness and death",
+            "URL": "../topic-pages/00/00/01/64/0000016472.html"
+        },
+        {
+            "Name": "Knoop, Vera -- openness to the world",
+            "URL": "../topic-pages/00/00/01/64/0000016473.html"
+        },
+        {
+            "Name": "Knoop, Vera -- Rilke's internalization of",
+            "URL": "../topic-pages/00/00/01/64/0000016475.html"
+        },
+        {
+            "Name": "Knoop, Vera -- Rilke's sense of intimacy with",
+            "URL": "../topic-pages/00/00/01/64/0000016476.html"
+        },
+        {
+            "Name": "Knorr-Cetina, Karin, and Urs Bruegger",
+            "URL": "../topic-pages/00/00/00/62/0000006205.html"
+        },
+        {
+            "Name": "Knorr, Jeff",
+            "URL": "../topic-pages/00/00/00/47/0000004709.html"
+        },
+        {
+            "Name": "Know-Nothing Party",
+            "URL": "../topic-pages/00/00/02/69/0000026963.html"
+        },
+        {
+            "Name": "knowledge",
+            "URL": "../topic-pages/00/00/00/28/0000002827.html"
+        },
+        {
+            "Name": "Knowledge -- and law",
+            "URL": "../topic-pages/00/00/03/95/0000039541.html"
+        },
+        {
+            "Name": "Knowledge -- and power",
+            "URL": "../topic-pages/00/00/03/95/0000039542.html"
+        },
+        {
+            "Name": "Knowledge -- claims",
+            "URL": "../topic-pages/00/00/04/74/0000047441.html"
+        },
+        {
+            "Name": "knowledge -- common",
+            "URL": "../topic-pages/00/00/00/04/0000000482.html"
+        },
+        {
+            "Name": "Knowledge -- local",
+            "URL": "../topic-pages/00/00/04/74/0000047442.html"
+        },
+        {
+            "Name": "Knowledge -- narrative",
+            "URL": "../topic-pages/00/00/04/74/0000047443.html"
+        },
+        {
+            "Name": "knowledge -- ownership of",
+            "URL": "../topic-pages/00/00/00/28/0000002828.html"
+        },
+        {
+            "Name": "Knowledge -- production of",
+            "URL": "../topic-pages/00/00/00/23/0000002384.html"
+        },
+        {
+            "Name": "Knowledge -- rational",
+            "URL": "../topic-pages/00/00/04/74/0000047444.html"
+        },
+        {
+            "Name": "Knowledge -- sensate",
+            "URL": "../topic-pages/00/00/04/74/0000047445.html"
+        },
+        {
+            "Name": "Knowledge -- visceral",
+            "URL": "../topic-pages/00/00/04/74/0000047446.html"
+        },
+        {
+            "Name": "Knowledge and Politics (Unger)",
+            "URL": "../topic-pages/00/00/03/90/0000039052.html"
+        },
+        {
+            "Name": "Knowledge Forum",
+            "URL": "../topic-pages/00/00/00/16/0000001647.html"
+        },
+        {
+            "Name": "Knowledge industries, development of",
+            "URL": "../topic-pages/00/00/02/09/0000020906.html"
+        },
+        {
+            "Name": "Knowledge problem",
+            "URL": "../topic-pages/00/00/02/03/0000020393.html"
+        },
+        {
+            "Name": "Knowledge problem -- freedom of contract and",
+            "URL": "../topic-pages/00/00/02/03/0000020394.html"
+        },
+        {
+            "Name": "Knowledge problem -- rights of several property and",
+            "URL": "../topic-pages/00/00/02/03/0000020395.html"
+        },
+        {
+            "Name": "Knowledge problem -- risk management and",
+            "URL": "../topic-pages/00/00/02/03/0000020396.html"
+        },
+        {
+            "Name": "Knowles, John",
+            "URL": "../topic-pages/00/00/04/30/0000043055.html"
+        },
+        {
+            "Name": "Knox, General Henry",
+            "URL": "../topic-pages/00/00/02/25/0000022592.html"
+        },
+        {
+            "Name": "Knutson, J. N.",
+            "URL": "../topic-pages/00/00/01/41/0000014103.html"
+        },
+        {
+            "Name": "Ko Chong-ok",
+            "URL": "../topic-pages/00/00/04/50/0000045070.html"
+        },
+        {
+            "Name": "Kobuszewska, E.",
+            "URL": "../topic-pages/00/00/02/31/0000023125.html"
+        },
+        {
+            "Name": "Koch, Charles and David",
+            "URL": "../topic-pages/00/00/01/04/0000010404.html"
+        },
+        {
+            "Name": "Koch, Edward",
+            "URL": "../topic-pages/00/00/02/39/0000023959.html"
+        },
+        {
+            "Name": "Koch, Kenneth",
+            "URL": "../topic-pages/00/00/00/47/0000004710.html"
+        },
+        {
+            "Name": "Kochan, Lionel",
+            "URL": "../topic-pages/00/00/01/79/0000017950.html"
+        },
+        {
+            "Name": "Kochubei, Boris",
+            "URL": "../topic-pages/00/00/01/92/0000019277.html"
+        },
+        {
+            "Name": "Kodak",
+            "URL": "../topic-pages/00/00/00/19/0000001958.html"
+        },
+        {
+            "Name": "Kodály, Zoltán",
+            "URL": "../topic-pages/00/00/01/70/0000017082.html"
+        },
+        {
+            "Name": "Koedt, A.",
+            "URL": "../topic-pages/00/00/03/86/0000038678.html"
+        },
+        {
+            "Name": "Koenigsberg, Richard",
+            "URL": "../topic-pages/00/00/01/92/0000019278.html"
+        },
+        {
+            "Name": "Koestler, Arthur",
+            "URL": "../topic-pages/00/00/02/03/0000020397.html"
+        },
+        {
+            "Name": "Koffend, John B.",
+            "URL": "../topic-pages/00/00/01/44/0000014420.html"
+        },
+        {
+            "Name": "Koffler, K.",
+            "URL": "../topic-pages/00/00/03/86/0000038679.html"
+        },
+        {
+            "Name": "Kofman, Daniel",
+            "URL": "../topic-pages/00/00/04/16/0000041621.html"
+        },
+        {
+            "Name": "Kofsky, Frank",
+            "URL": "../topic-pages/00/00/00/58/0000005808.html"
+        },
+        {
+            "Name": "Koh, Adeline",
+            "URL": "../topic-pages/00/00/00/90/0000009050.html"
+        },
+        {
+            "Name": "Koh, Adeline -- \"Document Your Role in Collaborative Projects\"",
+            "URL": "../topic-pages/00/00/00/90/0000009051.html"
+        },
+        {
+            "Name": "Koh, Adeline -- \"Introduction to Digital Humanities\"",
+            "URL": "../topic-pages/00/00/00/90/0000009052.html"
+        },
+        {
+            "Name": "Koh, Adeline -- \"Understand that Digital Projects are Diverse\"",
+            "URL": "../topic-pages/00/00/00/90/0000009053.html"
+        },
+        {
+            "Name": "Kohl, Herbert",
+            "URL": "../topic-pages/00/00/00/36/0000003682.html"
+        },
+        {
+            "Name": "Kohl, Herbert -- 36 Children",
+            "URL": "../topic-pages/00/00/00/36/0000003683.html"
+        },
+        {
+            "Name": "Kohlberg, Kravis, Roberts and Company, LBO by",
+            "URL": "../topic-pages/00/00/02/09/0000020907.html"
+        },
+        {
+            "Name": "Kohlberg, Lawrence",
+            "URL": "../topic-pages/00/00/02/31/0000023126.html"
+        },
+        {
+            "Name": "Kohler, Kaufmann",
+            "URL": "../topic-pages/00/00/02/35/0000023562.html"
+        },
+        {
+            "Name": "Kohn, Aaron",
+            "URL": "../topic-pages/00/00/03/41/0000034168.html"
+        },
+        {
+            "Name": "Kohn, Abraham",
+            "URL": "../topic-pages/00/00/02/35/0000023563.html"
+        },
+        {
+            "Name": "Kohn, Donald",
+            "URL": "../topic-pages/00/00/00/83/0000008305.html"
+        },
+        {
+            "Name": "Kohn, Hans",
+            "URL": "../topic-pages/00/00/01/92/0000019279.html"
+        },
+        {
+            "Name": "Kohn, Jaakov: \"Time: Two Interviews\"",
+            "URL": "../topic-pages/00/00/02/98/0000029891.html"
+        },
+        {
+            "Name": "Kohut, Heinz",
+            "URL": "../topic-pages/00/00/01/41/0000014104.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- and self psychology",
+            "URL": "../topic-pages/00/00/01/70/0000017083.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- Deronda",
+            "URL": "../topic-pages/00/00/02/66/0000026626.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- Middlemarch",
+            "URL": "../topic-pages/00/00/02/66/0000026628.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- Mill",
+            "URL": "../topic-pages/00/00/02/66/0000026627.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- on aggression/rage",
+            "URL": "../topic-pages/00/00/02/66/0000026618.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- on narcissistic personality disorder",
+            "URL": "../topic-pages/00/00/02/66/0000026619.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- on narcissistic rage",
+            "URL": "../topic-pages/00/00/02/66/0000026620.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- on principle of complementarity",
+            "URL": "../topic-pages/00/00/02/66/0000026621.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- on self-disorder",
+            "URL": "../topic-pages/00/00/02/66/0000026623.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- on self-object",
+            "URL": "../topic-pages/00/00/02/66/0000026624.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- on the self",
+            "URL": "../topic-pages/00/00/02/66/0000026622.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- on transmuting internalization",
+            "URL": "../topic-pages/00/00/02/66/0000026630.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- theory applied to characters in Bede",
+            "URL": "../topic-pages/00/00/02/66/0000026625.html"
+        },
+        {
+            "Name": "Kohut, Heinz -- theory applied to Eliot,185",
+            "URL": "../topic-pages/00/00/02/66/0000026629.html"
+        },
+        {
+            "Name": "Koito Manufacturing Company, Pickens and",
+            "URL": "../topic-pages/00/00/02/09/0000020908.html"
+        },
+        {
+            "Name": "Kok, Winnifred de",
+            "URL": "../topic-pages/00/00/04/11/0000041192.html"
+        },
+        {
+            "Name": "Kokomo Dispatch",
+            "URL": "../topic-pages/00/00/00/47/0000004712.html"
+        },
+        {
+            "Name": "Kokoschka, Oskar",
+            "URL": "../topic-pages/00/00/01/64/0000016477.html"
+        },
+        {
+            "Name": "Kokudaka (rice production)",
+            "URL": "../topic-pages/00/00/02/09/0000020909.html"
+        },
+        {
+            "Name": "Kol Ishah",
+            "URL": "../topic-pages/00/00/03/41/0000034169.html"
+        },
+        {
+            "Name": "Kolakowski, Leszek",
+            "URL": "../topic-pages/00/00/01/92/0000019280.html"
+        },
+        {
+            "Name": "Kolbenschlag, Madonna",
+            "URL": "../topic-pages/00/00/01/44/0000014421.html"
+        },
+        {
+            "Name": "Kolchin, Levis",
+            "URL": "../topic-pages/00/00/03/23/0000032394.html"
+        },
+        {
+            "Name": "Kolchin, Peter",
+            "URL": "../topic-pages/00/00/01/92/0000019281.html"
+        },
+        {
+            "Name": "Kolesnitskaia, I. M.",
+            "URL": "../topic-pages/00/00/01/92/0000019282.html"
+        },
+        {
+            "Name": "Kolesov, D.",
+            "URL": "../topic-pages/00/00/01/92/0000019283.html"
+        },
+        {
+            "Name": "Kolis",
+            "URL": "../topic-pages/00/00/04/46/0000044638.html"
+        },
+        {
+            "Name": "Koliwada",
+            "URL": "../topic-pages/00/00/04/46/0000044639.html"
+        },
+        {
+            "Name": "Kollek, Teddy (former mayor of Jerusalem)",
+            "URL": "../topic-pages/00/00/04/16/0000041622.html"
+        },
+        {
+            "Name": "Kollmann, Nancy",
+            "URL": "../topic-pages/00/00/01/92/0000019284.html"
+        },
+        {
+            "Name": "Kolnai, Aurél",
+            "URL": "../topic-pages/00/00/01/70/0000017084.html"
+        },
+        {
+            "Name": "Kolodny, Annette",
+            "URL": "../topic-pages/00/00/01/44/0000014422.html"
+        },
+        {
+            "Name": "Kolozsvari-Borcsa, Mihaly",
+            "URL": "../topic-pages/00/00/01/86/0000018608.html"
+        },
+        {
+            "Name": "Kolpakova, N. P.",
+            "URL": "../topic-pages/00/00/01/92/0000019285.html"
+        },
+        {
+            "Name": "Koltay, Inspector",
+            "URL": "../topic-pages/00/00/01/86/0000018609.html"
+        },
+        {
+            "Name": "Komar, Kathleen L.",
+            "URL": "../topic-pages/00/00/01/64/0000016478.html"
+        },
+        {
+            "Name": "Komarovich, V. L.",
+            "URL": "../topic-pages/00/00/01/92/0000019286.html"
+        },
+        {
+            "Name": "Komarovsky (Pasternak)",
+            "URL": "../topic-pages/00/00/01/92/0000019287.html"
+        },
+        {
+            "Name": "Kompert, Leopold",
+            "URL": "../topic-pages/00/00/02/35/0000023564.html"
+        },
+        {
+            "Name": "Komunyakaa, Yusef",
+            "URL": "../topic-pages/00/00/00/47/0000004713.html"
+        },
+        {
+            "Name": "Kon, Igor'",
+            "URL": "../topic-pages/00/00/01/92/0000019288.html"
+        },
+        {
+            "Name": "Konarzewski, Krzysztof",
+            "URL": "../topic-pages/00/00/02/31/0000023127.html"
+        },
+        {
+            "Name": "Kondo, Dorinne",
+            "URL": "../topic-pages/00/00/00/13/0000001303.html"
+        },
+        {
+            "Name": "Kondo, Dorinne: spiritual training",
+            "URL": "../topic-pages/00/00/01/57/0000015773.html"
+        },
+        {
+            "Name": "Kongsberg Vaapenfabrikk",
+            "URL": "../topic-pages/00/00/02/09/0000020910.html"
+        },
+        {
+            "Name": "Konieczko, Dell",
+            "URL": "../topic-pages/00/00/00/36/0000003684.html"
+        },
+        {
+            "Name": "Konig, David Thomas",
+            "URL": "../topic-pages/00/00/01/99/0000019986.html"
+        },
+        {
+            "Name": "Konishiki, Mr.",
+            "URL": "../topic-pages/00/00/02/09/0000020911.html"
+        },
+        {
+            "Name": "Konstantinovsky, Matvei",
+            "URL": "../topic-pages/00/00/01/92/0000019289.html"
+        },
+        {
+            "Name": "Kony, Joseph",
+            "URL": "../topic-pages/00/00/01/04/0000010405.html"
+        },
+        {
+            "Name": "Konzen, Emily",
+            "URL": "../topic-pages/00/00/00/36/0000003685.html"
+        },
+        {
+            "Name": "Kook, Abraham Isaac",
+            "URL": "../topic-pages/00/00/02/35/0000023565.html"
+        },
+        {
+            "Name": "Kool Herc (hip-hop DJ)",
+            "URL": "../topic-pages/00/00/04/22/0000042282.html"
+        },
+        {
+            "Name": "Kool Herc DJ",
+            "URL": "../topic-pages/00/00/00/58/0000005809.html"
+        },
+        {
+            "Name": "Koolhaas, Rem",
+            "URL": "../topic-pages/00/00/00/19/0000001959.html"
+        },
+        {
+            "Name": "Koon, Stacey C.",
+            "URL": "../topic-pages/00/00/02/63/0000026383.html"
+        },
+        {
+            "Name": "Koonan, Karen Jo",
+            "URL": "../topic-pages/00/00/04/00/0000040000.html"
+        },
+        {
+            "Name": "Koopmans, R.",
+            "URL": "../topic-pages/00/00/00/97/0000009723.html"
+        },
+        {
+            "Name": "Kooser, Ted",
+            "URL": "../topic-pages/00/00/00/47/0000004714.html"
+        },
+        {
+            "Name": "Kopelin, Louis, on Debs",
+            "URL": "../topic-pages/00/00/03/07/0000030713.html"
+        },
+        {
+            "Name": "Kopelson, Arnold",
+            "URL": "../topic-pages/00/00/03/70/0000037003.html"
+        },
+        {
+            "Name": "Kopit, Arthur",
+            "URL": "../topic-pages/00/00/03/18/0000031849.html"
+        },
+        {
+            "Name": "Kopkind, Andrew",
+            "URL": "../topic-pages/00/00/03/41/0000034170.html"
+        },
+        {
+            "Name": "Kopp, Q.",
+            "URL": "../topic-pages/00/00/03/54/0000035425.html"
+        },
+        {
+            "Name": "Koppel, Ted",
+            "URL": "../topic-pages/00/00/03/51/0000035148.html"
+        },
+        {
+            "Name": "Korb, Lawrence",
+            "URL": "../topic-pages/00/00/03/28/0000032851.html"
+        },
+        {
+            "Name": "Korchagin, Pavel",
+            "URL": "../topic-pages/00/00/01/92/0000019290.html"
+        },
+        {
+            "Name": "Korea",
+            "URL": "../topic-pages/00/00/00/13/0000001304.html"
+        },
+        {
+            "Name": "Korea -- authoritarianism in",
+            "URL": "../topic-pages/00/00/04/50/0000045071.html"
+        },
+        {
+            "Name": "Korea -- military prostitution",
+            "URL": "../topic-pages/00/00/02/89/0000028979.html"
+        },
+        {
+            "Name": "Korea -- politics in",
+            "URL": "../topic-pages/00/00/04/50/0000045073.html"
+        },
+        {
+            "Name": "Korea -- postliberation",
+            "URL": "../topic-pages/00/00/04/50/0000045074.html"
+        },
+        {
+            "Name": "Korea -- prostitution statistics",
+            "URL": "../topic-pages/00/00/02/89/0000028980.html"
+        },
+        {
+            "Name": "Korea -- sex tourism",
+            "URL": "../topic-pages/00/00/02/89/0000028981.html"
+        },
+        {
+            "Name": "Korea -- West's relationship to",
+            "URL": "../topic-pages/00/00/04/50/0000045075.html"
+        },
+        {
+            "Name": "Korea (film, Shin)",
+            "URL": "../topic-pages/00/00/04/50/0000045076.html"
+        },
+        {
+            "Name": "Korea Artista Proletaria Federatio (KAPF)",
+            "URL": "../topic-pages/00/00/04/50/0000045041.html"
+        },
+        {
+            "Name": "Korean Americans",
+            "URL": "../topic-pages/00/00/02/69/0000026964.html"
+        },
+        {
+            "Name": "Korean Americans -- and African Americans",
+            "URL": "../topic-pages/00/00/02/69/0000026965.html"
+        },
+        {
+            "Name": "Korean Americans -- and social separatism",
+            "URL": "../topic-pages/00/00/02/69/0000026966.html"
+        },
+        {
+            "Name": "Korean Americans -- and South Central Los Angeles uprising",
+            "URL": "../topic-pages/00/00/02/69/0000026967.html"
+        },
+        {
+            "Name": "Korean Council for the Women Drafted for Military Sexual Slavery by Japan",
+            "URL": "../topic-pages/00/00/02/89/0000028982.html"
+        },
+        {
+            "Name": "Korean Film Council",
+            "URL": "../topic-pages/00/00/04/50/0000045077.html"
+        },
+        {
+            "Name": "Korean Film Producers Association",
+            "URL": "../topic-pages/00/00/04/50/0000045078.html"
+        },
+        {
+            "Name": "Korean War",
+            "URL": "../topic-pages/00/00/03/07/0000030714.html"
+        },
+        {
+            "Name": "Korean Wave films",
+            "URL": "../topic-pages/00/00/04/50/0000045080.html"
+        },
+        {
+            "Name": "Koreans, ethnic",
+            "URL": "../topic-pages/00/00/04/50/0000045079.html"
+        },
+        {
+            "Name": "Koretsky, Allen C.",
+            "URL": "../topic-pages/00/00/04/57/0000045711.html"
+        },
+        {
+            "Name": "Koritz, Amy",
+            "URL": "../topic-pages/00/00/00/06/0000000667.html"
+        },
+        {
+            "Name": "Korn, Bertram",
+            "URL": "../topic-pages/00/00/03/41/0000034171.html"
+        },
+        {
+            "Name": "Kornbluh, Mark",
+            "URL": "../topic-pages/00/00/00/90/0000009054.html"
+        },
+        {
+            "Name": "Kornfield, Phyllis",
+            "URL": "../topic-pages/00/00/00/36/0000003686.html"
+        },
+        {
+            "Name": "Kornfield, Phyllis -- Cell Block Visions",
+            "URL": "../topic-pages/00/00/00/36/0000003687.html"
+        },
+        {
+            "Name": "Kosak, David",
+            "URL": "../topic-pages/00/00/03/61/0000036138.html"
+        },
+        {
+            "Name": "Kosambi, D. D.",
+            "URL": "../topic-pages/00/00/01/44/0000014423.html"
+        },
+        {
+            "Name": "Koshchei the Deathless",
+            "URL": "../topic-pages/00/00/01/92/0000019291.html"
+        },
+        {
+            "Name": "Koshland, Daniel",
+            "URL": "../topic-pages/00/00/02/74/0000027459.html"
+        },
+        {
+            "Name": "Kosovo",
+            "URL": "../topic-pages/00/00/04/16/0000041623.html"
+        },
+        {
+            "Name": "Kosovo -- Serbian attacks",
+            "URL": "../topic-pages/00/00/04/16/0000041624.html"
+        },
+        {
+            "Name": "Kosovo -- Serbian defeat by Turks",
+            "URL": "../topic-pages/00/00/04/16/0000041625.html"
+        },
+        {
+            "Name": "Kosovo -- Serbs terminate autonomy of",
+            "URL": "../topic-pages/00/00/04/16/0000041626.html"
+        },
+        {
+            "Name": "Koss, Mary",
+            "URL": "../topic-pages/00/00/02/89/0000028983.html"
+        },
+        {
+            "Name": "Kossler, James",
+            "URL": "../topic-pages/00/00/02/43/0000024339.html"
+        },
+        {
+            "Name": "Kossuth, Lajos",
+            "URL": "../topic-pages/00/00/01/86/0000018610.html"
+        },
+        {
+            "Name": "Kostelanetz, Richard",
+            "URL": "../topic-pages/00/00/01/51/0000015107.html"
+        },
+        {
+            "Name": "Kostoglotov (Solzhenitsyn)",
+            "URL": "../topic-pages/00/00/01/92/0000019292.html"
+        },
+        {
+            "Name": "Kostović, Ivan",
+            "URL": "../topic-pages/00/00/04/16/0000041627.html"
+        },
+        {
+            "Name": "Kosven, M. O.",
+            "URL": "../topic-pages/00/00/01/92/0000019293.html"
+        },
+        {
+            "Name": "Kosztolányi, Dezső",
+            "URL": "../topic-pages/00/00/01/70/0000017085.html"
+        },
+        {
+            "Name": "Kotelchuck, Ronda",
+            "URL": "../topic-pages/00/00/04/30/0000043056.html"
+        },
+        {
+            "Name": "Kothari, Miloon",
+            "URL": "../topic-pages/00/00/04/46/0000044640.html"
+        },
+        {
+            "Name": "Kotkin, Joel",
+            "URL": "../topic-pages/00/00/02/09/0000020912.html"
+        },
+        {
+            "Name": "Kotler, Aaron",
+            "URL": "../topic-pages/00/00/02/35/0000023566.html"
+        },
+        {
+            "Name": "Kotliar, A. E.",
+            "URL": "../topic-pages/00/00/01/92/0000019294.html"
+        },
+        {
+            "Name": "Kotlikoff, Laurence",
+            "URL": "../topic-pages/00/00/02/54/0000025428.html"
+        },
+        {
+            "Name": "Kotz, Nick, coauthor of The Unions",
+            "URL": "../topic-pages/00/00/04/00/0000040001.html"
+        },
+        {
+            "Name": "Koutsantoni, Dimitra",
+            "URL": "../topic-pages/00/00/00/28/0000002829.html"
+        },
+        {
+            "Name": "Kovacs, Emil",
+            "URL": "../topic-pages/00/00/01/86/0000018611.html"
+        },
+        {
+            "Name": "Kovács, Frigyes",
+            "URL": "../topic-pages/00/00/01/70/0000017086.html"
+        },
+        {
+            "Name": "Kovács, Vilma",
+            "URL": "../topic-pages/00/00/01/70/0000017087.html"
+        },
+        {
+            "Name": "Kovalevskii, Maxime",
+            "URL": "../topic-pages/00/00/01/92/0000019295.html"
+        },
+        {
+            "Name": "Koven, Seth",
+            "URL": "../topic-pages/00/00/04/30/0000043057.html"
+        },
+        {
+            "Name": "Kovic, Ron",
+            "URL": "../topic-pages/00/00/03/18/0000031850.html"
+        },
+        {
+            "Name": "Kow, Y. M.",
+            "URL": "../topic-pages/00/00/04/69/0000046933.html"
+        },
+        {
+            "Name": "kowtowing",
+            "URL": "../topic-pages/00/00/01/92/0000019296.html"
+        },
+        {
+            "Name": "Kozac, E. B.",
+            "URL": "../topic-pages/00/00/03/54/0000035426.html"
+        },
+        {
+            "Name": "Kozinski, Alex",
+            "URL": "../topic-pages/00/00/03/57/0000035750.html"
+        },
+        {
+            "Name": "Kozlovskii, Mikhail",
+            "URL": "../topic-pages/00/00/01/92/0000019297.html"
+        },
+        {
+            "Name": "Kozol, Jonathan",
+            "URL": "../topic-pages/00/00/00/36/0000003688.html"
+        },
+        {
+            "Name": "Kozol, Jonathan -- The Night Is Dark and I Am Far from Home",
+            "URL": "../topic-pages/00/00/00/36/0000003689.html"
+        },
+        {
+            "Name": "Kraditor, Aileen",
+            "URL": "../topic-pages/00/00/03/07/0000030715.html"
+        },
+        {
+            "Name": "Kraditor, Aileen -- on Debs",
+            "URL": "../topic-pages/00/00/03/07/0000030716.html"
+        },
+        {
+            "Name": "Kraditor, Aileen -- on martyrdom in abolitionism",
+            "URL": "../topic-pages/00/00/03/07/0000030717.html"
+        },
+        {
+            "Name": "Kraemer, Ross S.",
+            "URL": "../topic-pages/00/00/01/44/0000014424.html"
+        },
+        {
+            "Name": "Krafft-Ebing, Richard",
+            "URL": "../topic-pages/00/00/01/92/0000019298.html"
+        },
+        {
+            "Name": "Krafft-Ebing, Richard Von",
+            "URL": "../topic-pages/00/00/00/77/0000007770.html"
+        },
+        {
+            "Name": "Kraft, Quentin G",
+            "URL": "../topic-pages/00/00/03/59/0000035958.html"
+        },
+        {
+            "Name": "Kraidy, Marwan",
+            "URL": "../topic-pages/00/00/00/13/0000001305.html"
+        },
+        {
+            "Name": "Kraidy, Marwan -- and Patrick Murphy",
+            "URL": "../topic-pages/00/00/00/13/0000001306.html"
+        },
+        {
+            "Name": "Krajina",
+            "URL": "../topic-pages/00/00/04/16/0000041628.html"
+        },
+        {
+            "Name": "Krajina -- blockade of roads",
+            "URL": "../topic-pages/00/00/04/16/0000041629.html"
+        },
+        {
+            "Name": "Krajina -- Croat recapture of",
+            "URL": "../topic-pages/00/00/04/16/0000041630.html"
+        },
+        {
+            "Name": "Krajina -- Serbian revolt",
+            "URL": "../topic-pages/00/00/04/16/0000041631.html"
+        },
+        {
+            "Name": "Kramer vs. Kramer",
+            "URL": "../topic-pages/00/00/03/18/0000031851.html"
+        },
+        {
+            "Name": "Kramer, Aaron, on prophecy in nineteenth-century poetry",
+            "URL": "../topic-pages/00/00/03/07/0000030718.html"
+        },
+        {
+            "Name": "Kramer, H.",
+            "URL": "../topic-pages/00/00/03/77/0000037722.html"
+        },
+        {
+            "Name": "Kramer, Hilton",
+            "URL": "../topic-pages/00/00/03/64/0000036483.html"
+        },
+        {
+            "Name": "Kramer, Larry",
+            "URL": "../topic-pages/00/00/02/38/0000023861.html"
+        },
+        {
+            "Name": "Kramer, S.",
+            "URL": "../topic-pages/00/00/00/97/0000009724.html"
+        },
+        {
+            "Name": "Kramnick, Isaac",
+            "URL": "../topic-pages/00/00/01/99/0000019987.html"
+        },
+        {
+            "Name": "Krappe, Alexander H.",
+            "URL": "../topic-pages/00/00/01/44/0000014425.html"
+        },
+        {
+            "Name": "Krasner, Barbara",
+            "URL": "../topic-pages/00/00/03/41/0000034172.html"
+        },
+        {
+            "Name": "\"krasota\" (headgear)",
+            "URL": "../topic-pages/00/00/01/92/0000019299.html"
+        },
+        {
+            "Name": "Kraus, Karl",
+            "URL": "../topic-pages/00/00/02/49/0000024917.html"
+        },
+        {
+            "Name": "Krauss, Robert M.",
+            "URL": "../topic-pages/00/00/00/90/0000009055.html"
+        },
+        {
+            "Name": "Krauss, Rosalind",
+            "URL": "../topic-pages/00/00/00/62/0000006206.html"
+        },
+        {
+            "Name": "Krausz, M.",
+            "URL": "../topic-pages/00/00/02/74/0000027460.html"
+        },
+        {
+            "Name": "Kraut, R.",
+            "URL": "../topic-pages/00/00/04/69/0000046934.html"
+        },
+        {
+            "Name": "Krebs, Dennis",
+            "URL": "../topic-pages/00/00/02/31/0000023128.html"
+        },
+        {
+            "Name": "Kremer-Sadlik, T.",
+            "URL": "../topic-pages/00/00/01/13/0000011370.html"
+        },
+        {
+            "Name": "Kress, Gunther",
+            "URL": "../topic-pages/00/00/00/16/0000001648.html"
+        },
+        {
+            "Name": "Krieger, Albert",
+            "URL": "../topic-pages/00/00/02/43/0000024340.html"
+        },
+        {
+            "Name": "Kriegman, Daniel",
+            "URL": "../topic-pages/00/00/01/93/0000019300.html"
+        },
+        {
+            "Name": "Krier, Theresa M.",
+            "URL": "../topic-pages/00/00/04/57/0000045712.html"
+        },
+        {
+            "Name": "Krim, Seymour",
+            "URL": "../topic-pages/00/00/03/41/0000034173.html"
+        },
+        {
+            "Name": "Krinsky, Y. L.",
+            "URL": "../topic-pages/00/00/01/79/0000017951.html"
+        },
+        {
+            "Name": "Kripke, S. A.",
+            "URL": "../topic-pages/00/00/02/74/0000027461.html"
+        },
+        {
+            "Name": "Krippendorf, K.",
+            "URL": "../topic-pages/00/00/03/54/0000035427.html"
+        },
+        {
+            "Name": "Krippendorff's alpha",
+            "URL": "../topic-pages/00/00/00/97/0000009725.html"
+        },
+        {
+            "Name": "Kris, E.",
+            "URL": "../topic-pages/00/00/02/49/0000024918.html"
+        },
+        {
+            "Name": "Kris, Ernst",
+            "URL": "../topic-pages/00/00/01/70/0000017088.html"
+        },
+        {
+            "Name": "Krishna, Gopal",
+            "URL": "../topic-pages/00/00/00/62/0000006207.html"
+        },
+        {
+            "Name": "Kristeva, J.",
+            "URL": "../topic-pages/00/00/01/93/0000019301.html"
+        },
+        {
+            "Name": "Kristeva, Julia: Strangers to Ourselves",
+            "URL": "../topic-pages/00/00/03/64/0000036484.html"
+        },
+        {
+            "Name": "Kristof, Nicholas",
+            "URL": "../topic-pages/00/00/00/13/0000001307.html"
+        },
+        {
+            "Name": "Kristof, Nick",
+            "URL": "../topic-pages/00/00/00/83/0000008306.html"
+        },
+        {
+            "Name": "Kristol, Irving",
+            "URL": "../topic-pages/00/00/02/62/0000026214.html"
+        },
+        {
+            "Name": "Kristol, William",
+            "URL": "../topic-pages/00/00/01/51/0000015108.html"
+        },
+        {
+            "Name": "Krochmal, Abraham",
+            "URL": "../topic-pages/00/00/01/79/0000017952.html"
+        },
+        {
+            "Name": "Krochmal, Nachman",
+            "URL": "../topic-pages/00/00/01/79/0000017953.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- and Karaites",
+            "URL": "../topic-pages/00/00/01/79/0000017961.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- and Talmudic education",
+            "URL": "../topic-pages/00/00/01/79/0000017971.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- his \"medievalism\"",
+            "URL": "../topic-pages/00/00/01/79/0000017963.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- life of",
+            "URL": "../topic-pages/00/00/01/79/0000017962.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on aggadah",
+            "URL": "../topic-pages/00/00/01/77/0000017739.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on existence of God",
+            "URL": "../topic-pages/00/00/01/79/0000017956.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on God as spirit",
+            "URL": "../topic-pages/00/00/01/79/0000017957.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on Ibn Ezra",
+            "URL": "../topic-pages/00/00/01/79/0000017960.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on Jewish history",
+            "URL": "../topic-pages/00/00/01/79/0000017958.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on Jews as bearers of absolute spirit",
+            "URL": "../topic-pages/00/00/01/79/0000017959.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on progress in history",
+            "URL": "../topic-pages/00/00/01/79/0000017965.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on Psalms",
+            "URL": "../topic-pages/00/00/01/79/0000017966.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on pseudepigraphy",
+            "URL": "../topic-pages/00/00/01/79/0000017967.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on Qohelet",
+            "URL": "../topic-pages/00/00/01/79/0000017968.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on rabbinic tradition",
+            "URL": "../topic-pages/00/00/01/79/0000017969.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on second Isaiah",
+            "URL": "../topic-pages/00/00/01/79/0000017970.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on teleology and intention",
+            "URL": "../topic-pages/00/00/01/79/0000017972.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on the commandments",
+            "URL": "../topic-pages/00/00/01/79/0000017955.html"
+        },
+        {
+            "Name": "Krochmal, Nachman -- on the Mishnah",
+            "URL": "../topic-pages/00/00/01/79/0000017964.html"
+        },
+        {
+            "Name": "Krochmalnik, Shalom",
+            "URL": "../topic-pages/00/00/01/79/0000017973.html"
+        },
+        {
+            "Name": "Kroeber, Alfred",
+            "URL": "../topic-pages/00/00/02/74/0000027462.html"
+        },
+        {
+            "Name": "Kroeber, Alfred L.",
+            "URL": "../topic-pages/00/00/03/70/0000037004.html"
+        },
+        {
+            "Name": "Kroeber, Karl",
+            "URL": "../topic-pages/00/00/02/74/0000027463.html"
+        },
+        {
+            "Name": "Kroll-Smith and Ladd",
+            "URL": "../topic-pages/00/00/03/61/0000036140.html"
+        },
+        {
+            "Name": "Kroll-Smith, Steve",
+            "URL": "../topic-pages/00/00/03/61/0000036139.html"
+        },
+        {
+            "Name": "Kropotkin, Peter",
+            "URL": "../topic-pages/00/00/00/77/0000007771.html"
+        },
+        {
+            "Name": "Kropotkin, Petr",
+            "URL": "../topic-pages/00/00/01/93/0000019302.html"
+        },
+        {
+            "Name": "Krosnick, J. A.",
+            "URL": "../topic-pages/00/00/01/41/0000014105.html"
+        },
+        {
+            "Name": "Krouse, Richard",
+            "URL": "../topic-pages/00/00/02/54/0000025429.html"
+        },
+        {
+            "Name": "Krouskoff, P.",
+            "URL": "../topic-pages/00/00/03/86/0000038680.html"
+        },
+        {
+            "Name": "KRS-One",
+            "URL": "../topic-pages/00/00/00/58/0000005810.html"
+        },
+        {
+            "Name": "Krueger, Alan",
+            "URL": "../topic-pages/00/00/03/23/0000032395.html"
+        },
+        {
+            "Name": "Kruger, Steven",
+            "URL": "../topic-pages/00/00/01/44/0000014426.html"
+        },
+        {
+            "Name": "Kruger, Steven F.",
+            "URL": "../topic-pages/00/00/04/57/0000045713.html"
+        },
+        {
+            "Name": "Kruglov, Iu. G.",
+            "URL": "../topic-pages/00/00/01/93/0000019303.html"
+        },
+        {
+            "Name": "Krumholz, Linda",
+            "URL": "../topic-pages/00/00/00/58/0000005811.html"
+        },
+        {
+            "Name": "Krupskaya, Nadezhda",
+            "URL": "../topic-pages/00/00/01/93/0000019304.html"
+        },
+        {
+            "Name": "Krushchev, Nikita",
+            "URL": "../topic-pages/00/00/00/47/0000004715.html"
+        },
+        {
+            "Name": "Krypton",
+            "URL": "../topic-pages/00/00/01/04/0000010406.html"
+        },
+        {
+            "Name": "Krzywinska, Tanya",
+            "URL": "../topic-pages/00/00/00/64/0000006430.html"
+        },
+        {
+            "Name": "Ktav Tamim (Rabbi Moses Taku)",
+            "URL": "../topic-pages/00/00/02/84/0000028431.html"
+        },
+        {
+            "Name": "Ku Klux Klan",
+            "URL": "../topic-pages/00/00/00/58/0000005812.html"
+        },
+        {
+            "Name": "Ku Klux Klan Act",
+            "URL": "../topic-pages/00/00/03/70/0000037005.html"
+        },
+        {
+            "Name": "Kubie, Lawrence: \"The Fantasy of Dirt\"",
+            "URL": "../topic-pages/00/00/02/98/0000029892.html"
+        },
+        {
+            "Name": "Kubler-Ross, Elisabeth",
+            "URL": "../topic-pages/00/00/04/11/0000041193.html"
+        },
+        {
+            "Name": "Kubota, Ryuko",
+            "URL": "../topic-pages/00/00/00/28/0000002830.html"
+        },
+        {
+            "Name": "Kubozuka, Yôsuke",
+            "URL": "../topic-pages/00/00/00/13/0000001308.html"
+        },
+        {
+            "Name": "Kubrick, Stanley",
+            "URL": "../topic-pages/00/00/03/18/0000031852.html"
+        },
+        {
+            "Name": "Kuby, Ronald",
+            "URL": "../topic-pages/00/00/04/00/0000040002.html"
+        },
+        {
+            "Name": "Kucera, Henry",
+            "URL": "../topic-pages/00/00/03/59/0000035959.html"
+        },
+        {
+            "Name": "Kucklich, J.",
+            "URL": "../topic-pages/00/00/04/69/0000046935.html"
+        },
+        {
+            "Name": "Kudia, Joe",
+            "URL": "../topic-pages/00/00/00/36/0000003690.html"
+        },
+        {
+            "Name": "Kuebler, John",
+            "URL": "../topic-pages/00/00/02/43/0000024341.html"
+        },
+        {
+            "Name": "Kuenning, Dolores",
+            "URL": "../topic-pages/00/00/03/18/0000031853.html"
+        },
+        {
+            "Name": "Kuhn, A.",
+            "URL": "../topic-pages/00/00/03/54/0000035428.html"
+        },
+        {
+            "Name": "Kuhn, Thomas",
+            "URL": "../topic-pages/00/00/00/22/0000002293.html"
+        },
+        {
+            "Name": "Kuhn, Thomas -- ideas misapplied in law",
+            "URL": "../topic-pages/00/00/03/95/0000039543.html"
+        },
+        {
+            "Name": "Kuhn, Thomas -- lawyers distinguished from scientists",
+            "URL": "../topic-pages/00/00/03/95/0000039544.html"
+        },
+        {
+            "Name": "Kuhn, Virginia",
+            "URL": "../topic-pages/00/00/00/90/0000009056.html"
+        },
+        {
+            "Name": "Kuhn, Virginia -- Horizontal Interdisciplinarity",
+            "URL": "../topic-pages/00/00/00/90/0000009057.html"
+        },
+        {
+            "Name": "Kuhn, Virginia -- Vertical Interdisciplinarity",
+            "URL": "../topic-pages/00/00/00/90/0000009058.html"
+        },
+        {
+            "Name": "Kuhne, Michael",
+            "URL": "../topic-pages/00/00/00/36/0000003691.html"
+        },
+        {
+            "Name": "Kukje Yŏnghwa (magazine)",
+            "URL": "../topic-pages/00/00/04/50/0000045081.html"
+        },
+        {
+            "Name": "Kuklin, Bailey",
+            "URL": "../topic-pages/00/00/03/90/0000039053.html"
+        },
+        {
+            "Name": "kulaks",
+            "URL": "../topic-pages/00/00/02/03/0000020398.html"
+        },
+        {
+            "Name": "Kuligowski, Larry",
+            "URL": "../topic-pages/00/00/00/36/0000003692.html"
+        },
+        {
+            "Name": "Kumalo, Simanga",
+            "URL": "../topic-pages/00/00/00/36/0000003693.html"
+        },
+        {
+            "Name": "Kumar, M.",
+            "URL": "../topic-pages/00/00/01/41/0000014106.html"
+        },
+        {
+            "Name": "Kumbhars",
+            "URL": "../topic-pages/00/00/04/46/0000044641.html"
+        },
+        {
+            "Name": "Kumbharwada",
+            "URL": "../topic-pages/00/00/04/46/0000044642.html"
+        },
+        {
+            "Name": "Kumin, Maxine: \"Making the Jam without You\"",
+            "URL": "../topic-pages/00/00/03/64/0000036485.html"
+        },
+        {
+            "Name": "Kummer, H.",
+            "URL": "../topic-pages/00/00/02/31/0000023129.html"
+        },
+        {
+            "Name": "Kumpfv. Steinhaus, 779 F.2d 1323 (7th Cir. 1985)",
+            "URL": "../topic-pages/00/00/02/62/0000026215.html"
+        },
+        {
+            "Name": "Kun government: collapse of",
+            "URL": "../topic-pages/00/00/01/86/0000018612.html"
+        },
+        {
+            "Name": "Kun, Bela",
+            "URL": "../topic-pages/00/00/01/70/0000017089.html"
+        },
+        {
+            "Name": "Kunder, Antal",
+            "URL": "../topic-pages/00/00/01/86/0000018613.html"
+        },
+        {
+            "Name": "Kunfi, Zsigmond",
+            "URL": "../topic-pages/00/00/01/70/0000017090.html"
+        },
+        {
+            "Name": "Kung Fu Theater",
+            "URL": "../topic-pages/00/00/00/13/0000001309.html"
+        },
+        {
+            "Name": "Kunkin, Art",
+            "URL": "../topic-pages/00/00/04/30/0000043058.html"
+        },
+        {
+            "Name": "Kunstler, William",
+            "URL": "../topic-pages/00/00/04/00/0000040003.html"
+        },
+        {
+            "Name": "Kuper, Hilda",
+            "URL": "../topic-pages/00/00/02/74/0000027464.html"
+        },
+        {
+            "Name": "Kupers, Terry",
+            "URL": "../topic-pages/00/00/00/36/0000003694.html"
+        },
+        {
+            "Name": "Kuptsch, Julius",
+            "URL": "../topic-pages/00/00/01/86/0000018614.html"
+        },
+        {
+            "Name": "Kurashige, Scott",
+            "URL": "../topic-pages/00/00/04/30/0000043059.html"
+        },
+        {
+            "Name": "Kurdeck, L. A.",
+            "URL": "../topic-pages/00/00/03/54/0000035429.html"
+        },
+        {
+            "Name": "Kurek-Lesik, Ewa",
+            "URL": "../topic-pages/00/00/02/31/0000023130.html"
+        },
+        {
+            "Name": "Kuristan",
+            "URL": "../topic-pages/00/00/04/16/0000041632.html"
+        },
+        {
+            "Name": "Kuroda, Yoshihirô",
+            "URL": "../topic-pages/00/00/00/13/0000001310.html"
+        },
+        {
+            "Name": "Kurosawa, Akira",
+            "URL": "../topic-pages/00/00/04/50/0000045082.html"
+        },
+        {
+            "Name": "Kurzweil, Baruch",
+            "URL": "../topic-pages/00/00/02/84/0000028432.html"
+        },
+        {
+            "Name": "Kushner, Tony",
+            "URL": "../topic-pages/00/00/03/07/0000030719.html"
+        },
+        {
+            "Name": "Kusky, Timothy M.",
+            "URL": "../topic-pages/00/00/00/06/0000000668.html"
+        },
+        {
+            "Name": "Kustovskii, E. S.",
+            "URL": "../topic-pages/00/00/01/93/0000019305.html"
+        },
+        {
+            "Name": "Kutepov, K.",
+            "URL": "../topic-pages/00/00/01/93/0000019306.html"
+        },
+        {
+            "Name": "Kuttin' Kandi (hip-hop DJ)",
+            "URL": "../topic-pages/00/00/04/22/0000042283.html"
+        },
+        {
+            "Name": "Kuttner, Robert",
+            "URL": "../topic-pages/00/00/02/62/0000026216.html"
+        },
+        {
+            "Name": "Kuutti, K.",
+            "URL": "../topic-pages/00/00/04/69/0000046936.html"
+        },
+        {
+            "Name": "Kuwait",
+            "URL": "../topic-pages/00/00/00/97/0000009726.html"
+        },
+        {
+            "Name": "Kuwait, trafficking from Asia and Southeast Asia",
+            "URL": "../topic-pages/00/00/02/89/0000028984.html"
+        },
+        {
+            "Name": "Kuzari (Rabbi Judah ha-Levi)",
+            "URL": "../topic-pages/00/00/02/84/0000028433.html"
+        },
+        {
+            "Name": "Kuznets, Simon",
+            "URL": "../topic-pages/00/00/03/23/0000032396.html"
+        },
+        {
+            "Name": "Kuznetsova, Larisa",
+            "URL": "../topic-pages/00/00/01/93/0000019307.html"
+        },
+        {
+            "Name": "Kwoh, Stewart",
+            "URL": "../topic-pages/00/00/02/69/0000026968.html"
+        },
+        {
+            "Name": "Kwŏn Ch'ŏl-hwi, Public Cemetery under the Moon",
+            "URL": "../topic-pages/00/00/04/50/0000045083.html"
+        },
+        {
+            "Name": "Kwŏn Yŏng-min",
+            "URL": "../topic-pages/00/00/04/50/0000045084.html"
+        },
+        {
+            "Name": "Kyoiku mama",
+            "URL": "../topic-pages/00/00/01/57/0000015774.html"
+        },
+        {
+            "Name": "Kyoiku mama -- as drill instructor",
+            "URL": "../topic-pages/00/00/01/57/0000015776.html"
+        },
+        {
+            "Name": "Kyoiku mama -- as modern role",
+            "URL": "../topic-pages/00/00/01/57/0000015777.html"
+        },
+        {
+            "Name": "Kyoiku mama -- as reinforcers of school values",
+            "URL": "../topic-pages/00/00/01/57/0000015778.html"
+        },
+        {
+            "Name": "Kyoiku mama -- competition",
+            "URL": "../topic-pages/00/00/01/57/0000015775.html"
+        },
+        {
+            "Name": "Kyoiku mama -- summer vacation homework",
+            "URL": "../topic-pages/00/00/01/57/0000015779.html"
+        },
+        {
+            "Name": "Kyubin, Sagawa, influence buying by",
+            "URL": "../topic-pages/00/00/02/09/0000020913.html"
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+[
+    {
+        "Label": "A",
+        "FileBasename": "a",
+        "Regexp": "a"
+    },
+    {
+        "Label": "B",
+        "FileBasename": "b",
+        "Regexp": "b"
+    },
+    {
+        "Label": "C",
+        "FileBasename": "c",
+        "Regexp": "c"
+    },
+    {
+        "Label": "D",
+        "FileBasename": "d",
+        "Regexp": "d"
+    },
+    {
+        "Label": "E",
+        "FileBasename": "e",
+        "Regexp": "e"
+    },
+    {
+        "Label": "F",
+        "FileBasename": "f",
+        "Regexp": "f"
+    },
+    {
+        "Label": "G",
+        "FileBasename": "g",
+        "Regexp": "g"
+    },
+    {
+        "Label": "H",
+        "FileBasename": "h",
+        "Regexp": "h"
+    },
+    {
+        "Label": "I",
+        "FileBasename": "i",
+        "Regexp": "i"
+    },
+    {
+        "Label": "J",
+        "FileBasename": "j",
+        "Regexp": "j"
+    },
+    {
+        "Label": "K",
+        "FileBasename": "k",
+        "Regexp": "k"
+    },
+    {
+        "Label": "L",
+        "FileBasename": "l",
+        "Regexp": "l"
+    },
+    {
+        "Label": "M",
+        "FileBasename": "m",
+        "Regexp": "m"
+    },
+    {
+        "Label": "N",
+        "FileBasename": "n",
+        "Regexp": "n"
+    },
+    {
+        "Label": "O",
+        "FileBasename": "o",
+        "Regexp": "o"
+    },
+    {
+        "Label": "P",
+        "FileBasename": "p",
+        "Regexp": "p"
+    },
+    {
+        "Label": "Q",
+        "FileBasename": "q",
+        "Regexp": "q"
+    },
+    {
+        "Label": "R",
+        "FileBasename": "r",
+        "Regexp": "r"
+    },
+    {
+        "Label": "S",
+        "FileBasename": "s",
+        "Regexp": "s"
+    },
+    {
+        "Label": "T",
+        "FileBasename": "t",
+        "Regexp": "t"
+    },
+    {
+        "Label": "U",
+        "FileBasename": "u",
+        "Regexp": "u"
+    },
+    {
+        "Label": "V",
+        "FileBasename": "v",
+        "Regexp": "v"
+    },
+    {
+        "Label": "W",
+        "FileBasename": "w",
+        "Regexp": "w"
+    },
+    {
+        "Label": "X",
+        "FileBasename": "x",
+        "Regexp": "x"
+    },
+    {
+        "Label": "Y",
+        "FileBasename": "y",
+        "Regexp": "y"
+    },
+    {
+        "Label": "Z",
+        "FileBasename": "z",
+        "Regexp": "z"
+    },
+    {
+        "Label": "0-9",
+        "FileBasename": "0-9",
+        "Regexp": "[0-9]"
+    },
+    {
+        "Label": "?#@",
+        "FileBasename": "non-alphanumeric",
+        "Regexp": "[^a-z0-9]"
+    }
+]

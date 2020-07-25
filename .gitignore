@@ -47,7 +47,7 @@ dist/*
 vendor/
 
 sitegen/testdata/cache/*
-!sitegen/testdata/cache/.commit-empty-directory
+!sitegen/testdata/cache/sitegen-browsetopiclists/
 
 sitegen/testdata/tmp/*
 !sitegen/testdata/tmp/.commit-empty-directory

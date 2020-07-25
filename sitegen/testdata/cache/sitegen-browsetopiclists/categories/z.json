@@ -1,0 +1,738 @@
+{
+    "ActiveNavbarTab": "Z",
+    "NavbarTabs": [
+        {
+            "Label": "A",
+            "FileBasename": "a",
+            "Regexp": "a"
+        },
+        {
+            "Label": "B",
+            "FileBasename": "b",
+            "Regexp": "b"
+        },
+        {
+            "Label": "C",
+            "FileBasename": "c",
+            "Regexp": "c"
+        },
+        {
+            "Label": "D",
+            "FileBasename": "d",
+            "Regexp": "d"
+        },
+        {
+            "Label": "E",
+            "FileBasename": "e",
+            "Regexp": "e"
+        },
+        {
+            "Label": "F",
+            "FileBasename": "f",
+            "Regexp": "f"
+        },
+        {
+            "Label": "G",
+            "FileBasename": "g",
+            "Regexp": "g"
+        },
+        {
+            "Label": "H",
+            "FileBasename": "h",
+            "Regexp": "h"
+        },
+        {
+            "Label": "I",
+            "FileBasename": "i",
+            "Regexp": "i"
+        },
+        {
+            "Label": "J",
+            "FileBasename": "j",
+            "Regexp": "j"
+        },
+        {
+            "Label": "K",
+            "FileBasename": "k",
+            "Regexp": "k"
+        },
+        {
+            "Label": "L",
+            "FileBasename": "l",
+            "Regexp": "l"
+        },
+        {
+            "Label": "M",
+            "FileBasename": "m",
+            "Regexp": "m"
+        },
+        {
+            "Label": "N",
+            "FileBasename": "n",
+            "Regexp": "n"
+        },
+        {
+            "Label": "O",
+            "FileBasename": "o",
+            "Regexp": "o"
+        },
+        {
+            "Label": "P",
+            "FileBasename": "p",
+            "Regexp": "p"
+        },
+        {
+            "Label": "Q",
+            "FileBasename": "q",
+            "Regexp": "q"
+        },
+        {
+            "Label": "R",
+            "FileBasename": "r",
+            "Regexp": "r"
+        },
+        {
+            "Label": "S",
+            "FileBasename": "s",
+            "Regexp": "s"
+        },
+        {
+            "Label": "T",
+            "FileBasename": "t",
+            "Regexp": "t"
+        },
+        {
+            "Label": "U",
+            "FileBasename": "u",
+            "Regexp": "u"
+        },
+        {
+            "Label": "V",
+            "FileBasename": "v",
+            "Regexp": "v"
+        },
+        {
+            "Label": "W",
+            "FileBasename": "w",
+            "Regexp": "w"
+        },
+        {
+            "Label": "X",
+            "FileBasename": "x",
+            "Regexp": "x"
+        },
+        {
+            "Label": "Y",
+            "FileBasename": "y",
+            "Regexp": "y"
+        },
+        {
+            "Label": "Z",
+            "FileBasename": "z",
+            "Regexp": "z"
+        },
+        {
+            "Label": "0-9",
+            "FileBasename": "0-9",
+            "Regexp": "[0-9]"
+        },
+        {
+            "Label": "?#@",
+            "FileBasename": "non-alphanumeric",
+            "Regexp": "[^a-z0-9]"
+        }
+    ],
+    "Paths": {
+        "WebRoot": ".."
+    },
+    "Topics": [
+        {
+            "Name": "Z-Trip",
+            "URL": "../topic-pages/00/00/04/24/0000042419.html"
+        },
+        {
+            "Name": "Zabriskie Point",
+            "URL": "../topic-pages/00/00/03/22/0000032202.html"
+        },
+        {
+            "Name": "Zachary, Caroline",
+            "URL": "../topic-pages/00/00/04/13/0000041348.html"
+        },
+        {
+            "Name": "Zack, Naomi",
+            "URL": "../topic-pages/00/00/01/62/0000016211.html"
+        },
+        {
+            "Name": "Zacks, Ellie",
+            "URL": "../topic-pages/00/00/03/56/0000035619.html"
+        },
+        {
+            "Name": "Zaddik",
+            "URL": "../topic-pages/00/00/02/85/0000028554.html"
+        },
+        {
+            "Name": "Zadeh, Lotfi",
+            "URL": "../topic-pages/00/00/02/77/0000027717.html"
+        },
+        {
+            "Name": "Zadok ha–Kohen",
+            "URL": "../topic-pages/00/00/01/81/0000018171.html"
+        },
+        {
+            "Name": "Zadravecz, Istvan",
+            "URL": "../topic-pages/00/00/01/89/0000018943.html"
+        },
+        {
+            "Name": "Zagorin, Perez",
+            "URL": "../topic-pages/00/00/02/61/0000026103.html"
+        },
+        {
+            "Name": "Zagreb",
+            "URL": "../topic-pages/00/00/04/18/0000041897.html"
+        },
+        {
+            "Name": "Zagreb -- cluster bomb shelling",
+            "URL": "../topic-pages/00/00/04/18/0000041898.html"
+        },
+        {
+            "Name": "Zahm, Barbara",
+            "URL": "../topic-pages/00/00/04/73/0000047348.html"
+        },
+        {
+            "Name": "Zahm, Barbara -- The Last Graduation",
+            "URL": "../topic-pages/00/00/00/43/0000004369.html"
+        },
+        {
+            "Name": "Zaibatsu, disintegration of",
+            "URL": "../topic-pages/00/00/02/12/0000021266.html"
+        },
+        {
+            "Name": "Zaitsev, Viacheslav",
+            "URL": "../topic-pages/00/00/01/97/0000019706.html"
+        },
+        {
+            "Name": "Zakany, Gyula",
+            "URL": "../topic-pages/00/00/01/89/0000018944.html"
+        },
+        {
+            "Name": "Zakar, Tamas",
+            "URL": "../topic-pages/00/00/01/89/0000018945.html"
+        },
+        {
+            "Name": "Zaks, Stan",
+            "URL": "../topic-pages/00/00/04/01/0000040149.html"
+        },
+        {
+            "Name": "Zala (province)",
+            "URL": "../topic-pages/00/00/01/89/0000018946.html"
+        },
+        {
+            "Name": "Zalk, Marvin",
+            "URL": "../topic-pages/00/00/02/46/0000024633.html"
+        },
+        {
+            "Name": "Zalkind, Norman",
+            "URL": "../topic-pages/00/00/04/01/0000040150.html"
+        },
+        {
+            "Name": "Zaloom, Caitlin",
+            "URL": "../topic-pages/00/00/00/63/0000006350.html"
+        },
+        {
+            "Name": "Zamenhof, Mark",
+            "URL": "../topic-pages/00/00/02/38/0000023837.html"
+        },
+        {
+            "Name": "Zametica, Jovan",
+            "URL": "../topic-pages/00/00/04/18/0000041899.html"
+        },
+        {
+            "Name": "Zamiatin, Evgenii",
+            "URL": "../topic-pages/00/00/01/97/0000019707.html"
+        },
+        {
+            "Name": "Zamir, Tzachi",
+            "URL": "../topic-pages/00/00/04/60/0000046043.html"
+        },
+        {
+            "Name": "Zamosc, David",
+            "URL": "../topic-pages/00/00/02/38/0000023838.html"
+        },
+        {
+            "Name": "Zandberg, Moshe",
+            "URL": "../topic-pages/00/00/01/89/0000018947.html"
+        },
+        {
+            "Name": "Zangwill, Israel",
+            "URL": "../topic-pages/00/00/02/82/0000028275.html"
+        },
+        {
+            "Name": "Zangwill, Israel, The Melting Pot",
+            "URL": "../topic-pages/00/00/00/68/0000006870.html"
+        },
+        {
+            "Name": "Zapatista Army of National Liberation",
+            "URL": "../topic-pages/00/00/00/68/0000006871.html"
+        },
+        {
+            "Name": "Zaphiris, P.",
+            "URL": "../topic-pages/00/00/04/73/0000047334.html"
+        },
+        {
+            "Name": "Zarembka, Arlene",
+            "URL": "../topic-pages/00/00/03/11/0000031164.html"
+        },
+        {
+            "Name": "Zaslavskaia, Tatiana",
+            "URL": "../topic-pages/00/00/01/97/0000019708.html"
+        },
+        {
+            "Name": "Zasulich, Vera",
+            "URL": "../topic-pages/00/00/00/80/0000008020.html"
+        },
+        {
+            "Name": "Zavarzadeh, Mas'ud",
+            "URL": "../topic-pages/00/00/01/53/0000015323.html"
+        },
+        {
+            "Name": "ZDNet",
+            "URL": "../topic-pages/00/00/00/99/0000009981.html"
+        },
+        {
+            "Name": "zeal",
+            "URL": "../topic-pages/00/00/04/13/0000041349.html"
+        },
+        {
+            "Name": "Zeck, Shari",
+            "URL": "../topic-pages/00/00/03/56/0000035620.html"
+        },
+        {
+            "Name": "Zeckhauser, Richard",
+            "URL": "../topic-pages/00/00/02/12/0000021267.html"
+        },
+        {
+            "Name": "Zederbaum, Alexander Zvi",
+            "URL": "../topic-pages/00/00/02/38/0000023839.html"
+        },
+        {
+            "Name": "Zeeman, Nicolette",
+            "URL": "../topic-pages/00/00/04/60/0000046044.html"
+        },
+        {
+            "Name": "Zehle, Soenke",
+            "URL": "../topic-pages/00/00/00/63/0000006351.html"
+        },
+        {
+            "Name": "Zeig, Sande",
+            "URL": "../topic-pages/00/00/03/56/0000035621.html"
+        },
+        {
+            "Name": "Zelenbaba, Suzana",
+            "URL": "../topic-pages/00/00/04/19/0000041900.html"
+        },
+        {
+            "Name": "Zelenin, Dmitrii",
+            "URL": "../topic-pages/00/00/01/97/0000019709.html"
+        },
+        {
+            "Name": "Zell, Sam",
+            "URL": "../topic-pages/00/00/00/85/0000008576.html"
+        },
+        {
+            "Name": "\"zemliaki\"",
+            "URL": "../topic-pages/00/00/01/97/0000019710.html"
+        },
+        {
+            "Name": "Zen'kovskii, Sergei",
+            "URL": "../topic-pages/00/00/01/97/0000019711.html"
+        },
+        {
+            "Name": "Zenova, Natal'ja N.",
+            "URL": "../topic-pages/00/00/01/97/0000019712.html"
+        },
+        {
+            "Name": "Zephaniah",
+            "URL": "../topic-pages/00/00/03/11/0000031165.html"
+        },
+        {
+            "Name": "Zero Dark 30",
+            "URL": "../topic-pages/00/00/01/07/0000010759.html"
+        },
+        {
+            "Name": "Zero Dollar Laptop",
+            "URL": "../topic-pages/00/00/00/63/0000006352.html"
+        },
+        {
+            "Name": "zero waste",
+            "URL": "../topic-pages/00/00/00/63/0000006353.html"
+        },
+        {
+            "Name": "Zerubabbel",
+            "URL": "../topic-pages/00/00/01/81/0000018172.html"
+        },
+        {
+            "Name": "Zhang Dali",
+            "URL": "../topic-pages/00/00/00/21/0000002109.html"
+        },
+        {
+            "Name": "Zhang Ziyi",
+            "URL": "../topic-pages/00/00/00/21/0000002111.html"
+        },
+        {
+            "Name": "Zhang, Bin",
+            "URL": "../topic-pages/00/00/00/99/0000009982.html"
+        },
+        {
+            "Name": "Zhang, Yimou",
+            "URL": "../topic-pages/00/00/00/21/0000002110.html"
+        },
+        {
+            "Name": "Zhitlovsky, Chaim",
+            "URL": "../topic-pages/00/00/02/38/0000023840.html"
+        },
+        {
+            "Name": "Zhivago, Yurii (Pasternak)",
+            "URL": "../topic-pages/00/00/01/97/0000019713.html"
+        },
+        {
+            "Name": "Zhivov, Viktor Markovich",
+            "URL": "../topic-pages/00/00/01/97/0000019714.html"
+        },
+        {
+            "Name": "Zholkovskii, Aleksandr",
+            "URL": "../topic-pages/00/00/01/97/0000019715.html"
+        },
+        {
+            "Name": "Zhukhovitskii, Leonid",
+            "URL": "../topic-pages/00/00/01/97/0000019716.html"
+        },
+        {
+            "Name": "Zichy, Janos",
+            "URL": "../topic-pages/00/00/01/89/0000018948.html"
+        },
+        {
+            "Name": "Zichy, Nandor",
+            "URL": "../topic-pages/00/00/01/89/0000018949.html"
+        },
+        {
+            "Name": "Zicsy, Gyula",
+            "URL": "../topic-pages/00/00/01/89/0000018950.html"
+        },
+        {
+            "Name": "Zidovudine, description",
+            "URL": "../topic-pages/00/00/03/38/0000033823.html"
+        },
+        {
+            "Name": "Zielinksi, Siegfried",
+            "URL": "../topic-pages/00/00/00/63/0000006354.html"
+        },
+        {
+            "Name": "Ziff, Joel",
+            "URL": "../topic-pages/00/00/03/44/0000034449.html"
+        },
+        {
+            "Name": "Zigler, Edward",
+            "URL": "../topic-pages/00/00/02/63/0000026308.html"
+        },
+        {
+            "Name": "Zijderveld, A. C.",
+            "URL": "../topic-pages/00/00/03/56/0000035622.html"
+        },
+        {
+            "Name": "Zilboorg, Gregory",
+            "URL": "../topic-pages/00/00/01/45/0000014581.html"
+        },
+        {
+            "Name": "Zilly, Judge Thomas S.",
+            "URL": "../topic-pages/00/00/03/31/0000033106.html"
+        },
+        {
+            "Name": "Zimmerman, Ann",
+            "URL": "../topic-pages/00/00/00/99/0000009983.html"
+        },
+        {
+            "Name": "Zimmerman, Arely M.",
+            "URL": "../topic-pages/00/00/01/07/0000010760.html"
+        },
+        {
+            "Name": "Zimmerman, Bonnie",
+            "URL": "../topic-pages/00/00/03/56/0000035623.html"
+        },
+        {
+            "Name": "Zimmerman, E.",
+            "URL": "../topic-pages/00/00/04/73/0000047335.html"
+        },
+        {
+            "Name": "Zimmerman, John",
+            "URL": "../topic-pages/00/00/04/01/0000040151.html"
+        },
+        {
+            "Name": "Zimmerman, Warren (U.S. ambassador to Yugoslavia)",
+            "URL": "../topic-pages/00/00/04/19/0000041902.html"
+        },
+        {
+            "Name": "Zina Ordinance",
+            "URL": "../topic-pages/00/00/02/95/0000029503.html"
+        },
+        {
+            "Name": "Zinik, Gary",
+            "URL": "../topic-pages/00/00/03/87/0000038760.html"
+        },
+        {
+            "Name": "Zinn, Howard",
+            "URL": "../topic-pages/00/00/04/38/0000043816.html"
+        },
+        {
+            "Name": "Zinnser, Judith",
+            "URL": "../topic-pages/00/00/03/56/0000035624.html"
+        },
+        {
+            "Name": "Zinoviev, Aleksandr",
+            "URL": "../topic-pages/00/00/01/97/0000019717.html"
+        },
+        {
+            "Name": "Zinzins de l'Espace, Les",
+            "URL": "../topic-pages/00/00/00/15/0000001583.html"
+        },
+        {
+            "Name": "Ziolkowski, Margaret",
+            "URL": "../topic-pages/00/00/01/97/0000019718.html"
+        },
+        {
+            "Name": "Zionism",
+            "URL": "../topic-pages/00/00/02/38/0000023842.html"
+        },
+        {
+            "Name": "Zionism -- of Jewish feminists",
+            "URL": "../topic-pages/00/00/03/44/0000034450.html"
+        },
+        {
+            "Name": "Zionism -- of Jewish New Left",
+            "URL": "../topic-pages/00/00/03/44/0000034451.html"
+        },
+        {
+            "Name": "Zionism and the Arabs",
+            "URL": "../topic-pages/00/00/02/38/0000023850.html"
+        },
+        {
+            "Name": "Zionism, Christian support of",
+            "URL": "../topic-pages/00/00/02/38/0000023843.html"
+        },
+        {
+            "Name": "Zionism, varieties of",
+            "URL": "../topic-pages/00/00/02/36/0000023620.html"
+        },
+        {
+            "Name": "Zionism, varieties of -- Labor",
+            "URL": "../topic-pages/00/00/02/38/0000023844.html"
+        },
+        {
+            "Name": "Zionism, varieties of -- Political",
+            "URL": "../topic-pages/00/00/02/38/0000023845.html"
+        },
+        {
+            "Name": "Zionism, varieties of -- Religious",
+            "URL": "../topic-pages/00/00/02/38/0000023846.html"
+        },
+        {
+            "Name": "Zionism, varieties of -- Revisionist",
+            "URL": "../topic-pages/00/00/02/38/0000023847.html"
+        },
+        {
+            "Name": "Zionism, varieties of -- Socialist",
+            "URL": "../topic-pages/00/00/02/38/0000023848.html"
+        },
+        {
+            "Name": "Zionism, varieties of -- Spiritual or Cultural",
+            "URL": "../topic-pages/00/00/02/38/0000023849.html"
+        },
+        {
+            "Name": "Zionist Bank",
+            "URL": "../topic-pages/00/00/02/38/0000023851.html"
+        },
+        {
+            "Name": "Zionist Organization of America (ZOA)",
+            "URL": "../topic-pages/00/00/02/34/0000023420.html"
+        },
+        {
+            "Name": "Zipes, Jack",
+            "URL": "../topic-pages/00/00/01/45/0000014582.html"
+        },
+        {
+            "Name": "Zipowie",
+            "URL": "../topic-pages/00/00/02/46/0000024634.html"
+        },
+        {
+            "Name": "Zipper",
+            "URL": "../topic-pages/00/00/00/15/0000001584.html"
+        },
+        {
+            "Name": "Zito, Benny",
+            "URL": "../topic-pages/00/00/02/46/0000024635.html"
+        },
+        {
+            "Name": "Zittrain, Jonathan L.",
+            "URL": "../topic-pages/00/00/00/99/0000009984.html"
+        },
+        {
+            "Name": "Zlatovratskii, Nikolai Nikolaevich",
+            "URL": "../topic-pages/00/00/01/97/0000019719.html"
+        },
+        {
+            "Name": "Zobrest v. Catalina Foothills School District",
+            "URL": "../topic-pages/00/00/02/61/0000026104.html"
+        },
+        {
+            "Name": "Zohar",
+            "URL": "../topic-pages/00/00/01/81/0000018173.html"
+        },
+        {
+            "Name": "Zohar -- authorship",
+            "URL": "../topic-pages/00/00/02/85/0000028555.html"
+        },
+        {
+            "Name": "Zohar -- composition",
+            "URL": "../topic-pages/00/00/02/85/0000028556.html"
+        },
+        {
+            "Name": "Zohar -- divine world structure",
+            "URL": "../topic-pages/00/00/02/85/0000028557.html"
+        },
+        {
+            "Name": "Zohar -- good and evil",
+            "URL": "../topic-pages/00/00/02/85/0000028558.html"
+        },
+        {
+            "Name": "Zohar -- Man's role",
+            "URL": "../topic-pages/00/00/02/85/0000028559.html"
+        },
+        {
+            "Name": "Zohar -- pseudepigraphical nature",
+            "URL": "../topic-pages/00/00/02/85/0000028560.html"
+        },
+        {
+            "Name": "Zohar -- sexual symbolism",
+            "URL": "../topic-pages/00/00/02/85/0000028561.html"
+        },
+        {
+            "Name": "Zola, Emile",
+            "URL": "../topic-pages/00/00/02/77/0000027718.html"
+        },
+        {
+            "Name": "Zoldi, Marton",
+            "URL": "../topic-pages/00/00/01/89/0000018951.html"
+        },
+        {
+            "Name": "Zolkiev",
+            "URL": "../topic-pages/00/00/01/81/0000018174.html"
+        },
+        {
+            "Name": "Zombie fandom",
+            "URL": "../topic-pages/00/00/01/07/0000010761.html"
+        },
+        {
+            "Name": "zombie/zombies",
+            "URL": "../topic-pages/00/00/00/55/0000005533.html"
+        },
+        {
+            "Name": "Zombiecon",
+            "URL": "../topic-pages/00/00/01/07/0000010762.html"
+        },
+        {
+            "Name": "\"Zone of privacy\"",
+            "URL": "../topic-pages/00/00/01/39/0000013957.html"
+        },
+        {
+            "Name": "zone of proximal development (ZPD), learning in",
+            "URL": "../topic-pages/00/00/00/74/0000007454.html"
+        },
+        {
+            "Name": "zoning",
+            "URL": "../topic-pages/00/00/04/47/0000044777.html"
+        },
+        {
+            "Name": "zoning laws",
+            "URL": "../topic-pages/00/00/04/38/0000043817.html"
+        },
+        {
+            "Name": "zoning laws -- restrictive",
+            "URL": "../topic-pages/00/00/04/38/0000043818.html"
+        },
+        {
+            "Name": "Zopadpatti Bachao Samyukta Kruti Samiti (Joint Action Committee to Save the Slum Dwellers)",
+            "URL": "../topic-pages/00/00/04/47/0000044779.html"
+        },
+        {
+            "Name": "Zorach v. Clauson",
+            "URL": "../topic-pages/00/00/02/61/0000026105.html"
+        },
+        {
+            "Name": "Zorich, Diane",
+            "URL": "../topic-pages/00/00/00/94/0000009489.html"
+        },
+        {
+            "Name": "Zorin, Nikolaj V.",
+            "URL": "../topic-pages/00/00/01/97/0000019720.html"
+        },
+        {
+            "Name": "Zorro",
+            "URL": "../topic-pages/00/00/00/15/0000001585.html"
+        },
+        {
+            "Name": "Zoshchenko, Mikhail",
+            "URL": "../topic-pages/00/00/01/97/0000019721.html"
+        },
+        {
+            "Name": "Zosima (Dostoevsky)",
+            "URL": "../topic-pages/00/00/01/97/0000019722.html"
+        },
+        {
+            "Name": "Zotero, Digital Humanities Education",
+            "URL": "../topic-pages/00/00/00/94/0000009490.html"
+        },
+        {
+            "Name": "Zuckerman, Ethan",
+            "URL": "../topic-pages/00/00/01/07/0000010763.html"
+        },
+        {
+            "Name": "Zuckoff, Aviva Cantor",
+            "URL": "../topic-pages/00/00/03/44/0000034452.html"
+        },
+        {
+            "Name": "Zukin, Cliff",
+            "URL": "../topic-pages/00/00/01/07/0000010764.html"
+        },
+        {
+            "Name": "Zulick, Margaret",
+            "URL": "../topic-pages/00/00/03/11/0000031166.html"
+        },
+        {
+            "Name": "Zulu Nation",
+            "URL": "../topic-pages/00/00/00/15/0000001586.html"
+        },
+        {
+            "Name": "Zuni, the",
+            "URL": "../topic-pages/00/00/04/13/0000041350.html"
+        },
+        {
+            "Name": "Zuniga, Markos Moulitsas",
+            "URL": "../topic-pages/00/00/00/99/0000009985.html"
+        },
+        {
+            "Name": "Zunser, Eliakum",
+            "URL": "../topic-pages/00/00/02/38/0000023854.html"
+        },
+        {
+            "Name": "Zunz, Leopold",
+            "URL": "../topic-pages/00/00/01/81/0000018175.html"
+        },
+        {
+            "Name": "Zwerdling, Alex",
+            "URL": "../topic-pages/00/00/02/22/0000022291.html"
+        },
+        {
+            "Name": "Zwingli, Huldreich",
+            "URL": "../topic-pages/00/00/02/59/0000025992.html"
+        }
+    ]
+}

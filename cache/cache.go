@@ -56,17 +56,6 @@ func init() {
 	}
 }
 
-func CacheFile(request string, id string) (cacheFile string) {
-	cacheFile = cache + "/" + request;
-	if id != "" {
-		cacheFile += "-" + id + ".json"
-	} else {
-		cacheFile += ".json"
-	}
-
-	return
-}
-
 func SitegenBrowseTopicListsCategoriesCacheFile() (cacheFile string) {
 	cacheFile = path.Join(SitegenBrowseTopicListsCache, "categories.json")
 
@@ -88,6 +77,17 @@ func SitegenTopicpagesCacheFile(topicID int) (cacheFile string) {
 
 func SolrLoadCacheFile(isbn string, page string, id int) (cacheFile string) {
 	cacheFile = path.Join(SolrLoadCache, isbn, page+"__"+strconv.Itoa(id)+".json")
+
+	return
+}
+
+func TCTCacheFile(request string, id string) (cacheFile string) {
+	cacheFile = cache + "/" + request;
+	if id != "" {
+		cacheFile += "-" + id + ".json"
+	} else {
+		cacheFile += ".json"
+	}
 
 	return
 }

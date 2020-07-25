@@ -46,6 +46,9 @@ dist/*
 # (see documentation for `godep save` for details).
 vendor/
 
+sitegen/testdata/cache/*
+!sitegen/testdata/cache/.commit-empty-directory
+
 sitegen/testdata/tmp/*
 !sitegen/testdata/tmp/.commit-empty-directory
 

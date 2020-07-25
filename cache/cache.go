@@ -53,6 +53,11 @@ func init() {
 		if (err != nil) {
 			panic(err)
 		}
+
+		err = os.MkdirAll(TCTResponseCache, 0700)
+		if (err != nil) {
+			panic(err)
+		}
 	} else if err != nil {
 		panic(err.Error())
 	}

@@ -24,13 +24,6 @@ func init() {
 	// User can override the default cache using environment variable
 	cacheEnvVar := os.Getenv("ENM_CACHE")
 	if cacheEnvVar != "" {
-		// Need to declare this otherwise cache var is shadowed through use of :=
-		var err error
-		cacheEnvVar, err = filepath.Abs(cacheEnvVar)
-		if (err != nil) {
-			panic(err)
-		}
-
 		SetCacheLocation(cacheEnvVar)
 	} else {
 		SetCacheLocation(defaultCache)
@@ -38,6 +31,11 @@ func init() {
 }
 
 func SetCacheLocation(cache string) {
+	cache, err := filepath.Abs(cache)
+	if (err != nil) {
+		panic(err)
+	}
+
 	SitegenBrowseTopicListsCache = cache + "/sitegen-browsetopiclists"
 	SitegenBrowseTopicListsCategoriesCache = SitegenBrowseTopicListsCache + "/categories"
 	SitegenTopicpagesCache = cache + "/sitegen-topicpages"

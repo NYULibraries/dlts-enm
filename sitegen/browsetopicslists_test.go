@@ -7,11 +7,16 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
+const testCache = "./testdata/cache"
+
 func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromCache(t *testing.T) {
 	GoogleAnalytics = false
+
+	cache.SetCacheLocation(testCache)
 
 	_, err := testGenerateBrowseTopicsLists("cache")
 	if (err != nil) {
@@ -22,6 +27,8 @@ func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromCache(t *testing.T) {
 func TestGenerateBrowseTopicsListsWithGoogleAnalyticsFromCache(t *testing.T) {
 	GoogleAnalytics = true
 
+	cache.SetCacheLocation(testCache)
+
 	_, err := testGenerateBrowseTopicsLists("cache")
 	if (err != nil) {
 		t.Fatal(err.Error())
@@ -31,6 +38,8 @@ func TestGenerateBrowseTopicsListsWithGoogleAnalyticsFromCache(t *testing.T) {
 func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromDatabase(t *testing.T) {
 	GoogleAnalytics = false
 
+	cache.SetCacheLocation(cache.DefaultCache)
+
 	_, err := testGenerateBrowseTopicsLists("database")
 	if (err != nil) {
 		t.Fatal(err.Error())
@@ -39,6 +48,8 @@ func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromDatabase(t *testing.T) {
 
 func TestGenerateBrowseTopicsListsWithGoogleAnalyticsFromDatabase(t *testing.T) {
 	GoogleAnalytics = true
+
+	cache.SetCacheLocation(cache.DefaultCache)
 
 	_, err := testGenerateBrowseTopicsLists("database")
 	if (err != nil) {

@@ -12,7 +12,8 @@ import (
 //   * Figure out if there's a better place to put this
 // Tried using os.TempDir(), but it was returning
 // /var/folders/dh/48wd7vnj3xqd1w_f126tcnvh0000gn/T/, which was not as convenient.
-var cache = "/tmp/enm-cache"
+const defaultCache = "/tmp/enm-cache"
+
 var SitegenBrowseTopicListsCache string
 var SitegenBrowseTopicListsCategoriesCache string
 var SitegenTopicpagesCache string
@@ -25,12 +26,18 @@ func init() {
 	if cacheEnvVar != "" {
 		// Need to declare this otherwise cache var is shadowed through use of :=
 		var err error
-		cache, err = filepath.Abs(cacheEnvVar)
+		cacheEnvVar, err = filepath.Abs(cacheEnvVar)
 		if (err != nil) {
 			panic(err)
 		}
-	}
 
+		SetCacheLocation(cacheEnvVar)
+	} else {
+		SetCacheLocation(defaultCache)
+	}
+}
+
+func SetCacheLocation(cache string) {
 	SitegenBrowseTopicListsCache = cache + "/sitegen-browsetopiclists"
 	SitegenBrowseTopicListsCategoriesCache = SitegenBrowseTopicListsCache + "/categories"
 	SitegenTopicpagesCache = cache + "/sitegen-topicpages"

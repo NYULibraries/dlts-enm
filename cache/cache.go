@@ -18,6 +18,7 @@ var SitegenBrowseTopicListsCache string
 var SitegenBrowseTopicListsCategoriesCache string
 var SitegenTopicpagesCache string
 var SolrLoadCache string
+var TCTResponseCache string
 
 func init() {
 	// User can override the default cache using environment variable
@@ -35,6 +36,7 @@ func init() {
 	SitegenBrowseTopicListsCategoriesCache = SitegenBrowseTopicListsCache + "/categories"
 	SitegenTopicpagesCache = cache + "/sitegen-topicpages"
 	SolrLoadCache = cache + "/solr-load"
+	TCTResponseCache = cache + "/tct"
 
 	if _, err := os.Stat(cache); os.IsNotExist(err) {
 		err := os.MkdirAll(SitegenBrowseTopicListsCategoriesCache, 0700)
@@ -82,7 +84,7 @@ func SolrLoadCacheFile(isbn string, page string, id int) (cacheFile string) {
 }
 
 func TCTCacheFile(request string, id string) (cacheFile string) {
-	cacheFile = cache + "/" + request;
+	cacheFile = TCTResponseCache + "/" + request;
 	if id != "" {
 		cacheFile += "-" + id + ".json"
 	} else {

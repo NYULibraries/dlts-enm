@@ -1,0 +1,39 @@
+{
+    "AlternateNames": [],
+    "DisplayName": "Llull, Ramon",
+    "EPUBMatches": [],
+    "ExternalRelations": [],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [
+        {
+            "ID": 35,
+            "Name": "ciphers",
+            "NumberOfOccurrences": 2
+        }
+    ],
+    "TopicID": 36,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 35,
+                "name": "ciphers",
+                "ocount": 2,
+                "path": "00/00/00/00/0000000035.html"
+            },
+            {
+                "id": 36,
+                "name": "Llull, Ramon",
+                "ocount": 0,
+                "path": "00/00/00/00/0000000036.html"
+            }
+        ],
+        "links": [
+            {
+                "source": 36,
+                "target": 35
+            }
+        ]
+    }
+}

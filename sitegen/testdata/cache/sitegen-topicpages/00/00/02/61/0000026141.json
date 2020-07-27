@@ -1,0 +1,4060 @@
+{
+    "AlternateNames": [
+        "Clinton, B.",
+        "Clinton, Bill",
+        "Clinton, Bill, President",
+        "Clinton, President Bill",
+        "Clinton, William J."
+    ],
+    "DisplayName": "Clinton, William Jefferson",
+    "EPUBMatches": [
+        {
+            "Title": "The Employment of English",
+            "Authors": "Michael Bérubé",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814713013",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Poetry's Afterlife: Verse in the Digital Age",
+            "Authors": "Stein, Kevin",
+            "Publisher": "The University of Michigan Press",
+            "ISBN": "9780472026708",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "American Law in the Age of Hypercapitalism",
+            "Authors": "Ruth Colker",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814715635",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "Authors": "Turrow, Joseph; Tsui, Lokman",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472024537",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "The Chrysanthemum and the Eagle",
+            "Authors": "Ryuzo Sato",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814780213",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "TO BE AN AMERICAN",
+            "Authors": "Bill Ong Hing",
+            "Publisher": "NEW YORK UNIVERSITY PRESS",
+            "ISBN": "9780814735237",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "The Scar That Binds",
+            "Authors": "Keith Beattie",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814713266",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project",
+            "Authors": "Alexander, Buzz",
+            "Publisher": "The University of Michigan Press and The University of Michigan Library",
+            "ISBN": "9780472027446",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Freedom to Differ",
+            "Authors": "Diane Helene Miller",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814755969",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "Title": "This Time We Knew",
+            "Authors": "Thomas Cushman",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814715352",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "Title": "Clarence Thomas and the Tough Love Crowd",
+            "Authors": "Ronald Suresh Roberts",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814774816",
+            "NumberOfOccurrences": 13
+        },
+        {
+            "Title": "The Psychological Assessment of Presidential Candidates",
+            "Authors": "Stanley A. Renshon",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814774694",
+            "NumberOfOccurrences": 22
+        }
+    ],
+    "ExternalRelations": [],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [
+        {
+            "ID": 32619,
+            "Name": "Achtenberg, Roberta -- as Clinton supporter",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34460,
+            "Name": "Affirmative action -- Clinton and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34462,
+            "Name": "Affirmative action -- Clinton's cabinet and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34461,
+            "Name": "Affirmative action -- in Clinton health care program",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 23860,
+            "Name": "AIDS (acquired immune deficiency syndrome): as area of political issue",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12528,
+            "Name": "Ambition -- Clinton draft controversy as an issue of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12527,
+            "Name": "Ambition -- William J. Clinton and",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 30374,
+            "Name": "Bush, George, accused by Clinton campaign of McCarthyism",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12655,
+            "Name": "Campaign(s) and campaigning -- William J. Clinton's",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 12670,
+            "Name": "Candidate(s) and candidacies -- William J. Clinton",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12740,
+            "Name": "Character integrity -- William J. Clinton's",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12755,
+            "Name": "Character issues -- William J. Clinton and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 41452,
+            "Name": "Clinton administration",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 30376,
+            "Name": "Clinton, Bill -- \"New Covenant\"",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 23883,
+            "Name": "Clinton, Bill -- and 1992 election",
+            "NumberOfOccurrences": 10
+        },
+        {
+            "ID": 32703,
+            "Name": "Clinton, Bill -- and Achtenberg nomination",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 23882,
+            "Name": "Clinton, Bill -- and AIDS",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 20673,
+            "Name": "Clinton, Bill -- economic policies of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 20674,
+            "Name": "Clinton, Bill -- health care and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 30375,
+            "Name": "Clinton, Bill -- lesbian and gay support for",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 23884,
+            "Name": "Clinton, Bill -- pledge to lift military ban",
+            "NumberOfOccurrences": 8
+        },
+        {
+            "ID": 32705,
+            "Name": "Clinton, Bill -- record on lesbian and gay rights",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 20675,
+            "Name": "Clinton, Bill -- U.S.–Japanese relations and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 1851,
+            "Name": "Clinton, Bill, 1998 visit to China",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 41453,
+            "Name": "Clinton, Bill, President -- inaction on Bosnia",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34514,
+            "Name": "Clinton, Hillary Rodham -- Bill Clinton's view of political role of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12825,
+            "Name": "Clinton, William J. -- \"yes and\" approach to public policy",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12806,
+            "Name": "Clinton, William J. -- advisory system of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12573,
+            "Name": "Clinton, William J. -- anger of",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 46113,
+            "Name": "Clinton, William J. -- basic public dilemma and",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 12807,
+            "Name": "Clinton, William J. -- character of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12808,
+            "Name": "Clinton, William J. -- developmental history of",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 12809,
+            "Name": "Clinton, William J. -- dislike of limits and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12810,
+            "Name": "Clinton, William J. -- draft controversy and",
+            "NumberOfOccurrences": 8
+        },
+        {
+            "ID": 12811,
+            "Name": "Clinton, William J. -- empathy of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12813,
+            "Name": "Clinton, William J. -- foreign policy of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12812,
+            "Name": "Clinton, William J. -- Gennifer Flowers affair and",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 12814,
+            "Name": "Clinton, William J. -- governorship of",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 12815,
+            "Name": "Clinton, William J. -- integrity of",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 12816,
+            "Name": "Clinton, William J. -- interpersonal relations and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12817,
+            "Name": "Clinton, William J. -- judgment of",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 12818,
+            "Name": "Clinton, William J. -- leadership style of",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 12820,
+            "Name": "Clinton, William J. -- need to be appreciated",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12819,
+            "Name": "Clinton, William J. -- need to be liked",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12821,
+            "Name": "Clinton, William J. -- parallels to Richard Nixon",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12822,
+            "Name": "Clinton, William J. -- persistence of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12823,
+            "Name": "Clinton, William J. -- problems of public trust and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 12824,
+            "Name": "Clinton, William J. -- wish to have it both ways",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34567,
+            "Name": "Clinton, William J., and family life",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 34581,
+            "Name": "Clinton, William J., and family life -- \"The Man from Hope\" film and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34570,
+            "Name": "Clinton, William J., and family life -- annotated chronology of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34568,
+            "Name": "Clinton, William J., and family life -- as adored child",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34569,
+            "Name": "Clinton, William J., and family life -- as adult child of an alcoholic (ACOA)",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34574,
+            "Name": "Clinton, William J., and family life -- as golden boy in high school",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34586,
+            "Name": "Clinton, William J., and family life -- as parent to himself",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34592,
+            "Name": "Clinton, William J., and family life -- as special child",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34571,
+            "Name": "Clinton, William J., and family life -- boundary problems and",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34572,
+            "Name": "Clinton, William J., and family life -- confrontations with stepfather",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34573,
+            "Name": "Clinton, William J., and family life -- experience of two different mothers",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34575,
+            "Name": "Clinton, William J., and family life -- grandmother's feelings toward",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34576,
+            "Name": "Clinton, William J., and family life -- hiring of nanny",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34577,
+            "Name": "Clinton, William J., and family life -- household rules",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34578,
+            "Name": "Clinton, William J., and family life -- impact of grandmother (Edith Cassidy) on",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34579,
+            "Name": "Clinton, William J., and family life -- lack of reliable figures to impart ideals",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34580,
+            "Name": "Clinton, William J., and family life -- loss of father",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34582,
+            "Name": "Clinton, William J., and family life -- mother's autobiography as source for",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34583,
+            "Name": "Clinton, William J., and family life -- mother's early absence",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34584,
+            "Name": "Clinton, William J., and family life -- mother's remarriage to Roger",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34585,
+            "Name": "Clinton, William J., and family life -- myth of",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34587,
+            "Name": "Clinton, William J., and family life -- role as caretaker for his brother",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34588,
+            "Name": "Clinton, William J., and family life -- role as caretaker for his mother",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34589,
+            "Name": "Clinton, William J., and family life -- role of grandparents in",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34590,
+            "Name": "Clinton, William J., and family life -- role of religion in",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34593,
+            "Name": "Clinton, William J., and family life -- stepfather (Roger Clinton) as alcoholic",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34594,
+            "Name": "Clinton, William J., and family life -- stepfather's reliability",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34591,
+            "Name": "Clinton, William J., and family life -- the shrine",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34595,
+            "Name": "Clinton, William J., and family life -- view of mother",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34709,
+            "Name": "Clinton, William J., presidency of",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 34765,
+            "Name": "Clinton, William J., presidency of -- \"triangulation\" strategy",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34766,
+            "Name": "Clinton, William J., presidency of -- \"trust deficit\" and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34710,
+            "Name": "Clinton, William J., presidency of -- ability to integrate diverse policy views",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34711,
+            "Name": "Clinton, William J., presidency of -- activist president in an age of public distrust",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34712,
+            "Name": "Clinton, William J., presidency of -- ambition and public overload",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34713,
+            "Name": "Clinton, William J., presidency of -- ambition fulfilled by second term",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34714,
+            "Name": "Clinton, William J., presidency of -- ambitious agenda of",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 34715,
+            "Name": "Clinton, William J., presidency of -- ambitious agenda of, and aides' worries",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34716,
+            "Name": "Clinton, William J., presidency of -- ambitious agenda of, compared to agenda as governor",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34717,
+            "Name": "Clinton, William J., presidency of -- appointment of ambassadors",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34748,
+            "Name": "Clinton, William J., presidency of -- as \"New Democrat\"",
+            "NumberOfOccurrences": 15
+        },
+        {
+            "ID": 34718,
+            "Name": "Clinton, William J., presidency of -- attempts to bypass press",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34719,
+            "Name": "Clinton, William J., presidency of -- basic contradictions of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34720,
+            "Name": "Clinton, William J., presidency of -- basic public dilemma of",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34721,
+            "Name": "Clinton, William J., presidency of -- bolstering a sense of public urgency",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34722,
+            "Name": "Clinton, William J., presidency of -- cabinet appointments reflecting conflicting views",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34723,
+            "Name": "Clinton, William J., presidency of -- candor regarding policies",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34724,
+            "Name": "Clinton, William J., presidency of -- centralization of power",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34725,
+            "Name": "Clinton, William J., presidency of -- commitment to cut White House staff",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34726,
+            "Name": "Clinton, William J., presidency of -- commitment to social change",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34727,
+            "Name": "Clinton, William J., presidency of -- compared with leadership as governor",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34728,
+            "Name": "Clinton, William J., presidency of -- concern with appearances",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34729,
+            "Name": "Clinton, William J., presidency of -- danger of frustration in a possible second term",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34730,
+            "Name": "Clinton, William J., presidency of -- decision making style",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 34731,
+            "Name": "Clinton, William J., presidency of -- demonization of enemies",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34732,
+            "Name": "Clinton, William J., presidency of -- domestic uncertainty and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34733,
+            "Name": "Clinton, William J., presidency of -- early conflict of interest guidelines",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34734,
+            "Name": "Clinton, William J., presidency of -- educating the public",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34735,
+            "Name": "Clinton, William J., presidency of -- emphasis on domestic policy",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34736,
+            "Name": "Clinton, William J., presidency of -- endurance",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34737,
+            "Name": "Clinton, William J., presidency of -- ethical standards",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34738,
+            "Name": "Clinton, William J., presidency of -- evidence of expansive thinking",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34739,
+            "Name": "Clinton, William J., presidency of -- forced resignation of key administration officials",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34740,
+            "Name": "Clinton, William J., presidency of -- foreign policy advisors and problems of collegiality",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34741,
+            "Name": "Clinton, William J., presidency of -- inconsistent policy stands",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34742,
+            "Name": "Clinton, William J., presidency of -- inexperience of White house aides",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34743,
+            "Name": "Clinton, William J., presidency of -- institutional setting and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34744,
+            "Name": "Clinton, William J., presidency of -- lack of trust in public",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34745,
+            "Name": "Clinton, William J., presidency of -- legal defense fund set up for",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34746,
+            "Name": "Clinton, William J., presidency of -- lost opportunities of first term",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34747,
+            "Name": "Clinton, William J., presidency of -- mismatch between administration and public ambitions",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34749,
+            "Name": "Clinton, William J., presidency of -- order banning replacement of striking workers",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34750,
+            "Name": "Clinton, William J., presidency of -- paradox of legislative success and public doubt",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34751,
+            "Name": "Clinton, William J., presidency of -- persistence and determination",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34752,
+            "Name": "Clinton, William J., presidency of -- political center and",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34753,
+            "Name": "Clinton, William J., presidency of -- possibility of statement in a second term",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34754,
+            "Name": "Clinton, William J., presidency of -- possible nature of a second term",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34755,
+            "Name": "Clinton, William J., presidency of -- post cold-war period and",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34756,
+            "Name": "Clinton, William J., presidency of -- problem of focus",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34757,
+            "Name": "Clinton, William J., presidency of -- public's hopes for",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34758,
+            "Name": "Clinton, William J., presidency of -- resolving policy dilemmas",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34759,
+            "Name": "Clinton, William J., presidency of -- role of political consultants",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34760,
+            "Name": "Clinton, William J., presidency of -- selection of advisors on the basis of chemistry",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34761,
+            "Name": "Clinton, William J., presidency of -- selling policies versus educating the public",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34762,
+            "Name": "Clinton, William J., presidency of -- shifting public response to",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34763,
+            "Name": "Clinton, William J., presidency of -- skill in selling programs",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34764,
+            "Name": "Clinton, William J., presidency of -- staff as serving not constraining",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34767,
+            "Name": "Clinton, William J., presidency of -- use of questionable financial calculations for public policies",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34768,
+            "Name": "Clinton, William J., presidency of -- Whitewater investigations and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34596,
+            "Name": "Clinton, William J., psychology of",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 34641,
+            "Name": "Clinton, William J., psychology of -- \"Friends of Bill\" and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34664,
+            "Name": "Clinton, William J., psychology of -- 1994 election as a repudiation of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34597,
+            "Name": "Clinton, William J., psychology of -- ability to do several things at once",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34598,
+            "Name": "Clinton, William J., psychology of -- ability to focus",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34599,
+            "Name": "Clinton, William J., psychology of -- ability to learn from mistakes",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34600,
+            "Name": "Clinton, William J., psychology of -- abusiveness with aides",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34601,
+            "Name": "Clinton, William J., psychology of -- accomplishments as \"educational governor\" and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34602,
+            "Name": "Clinton, William J., psychology of -- achievement motivation",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34603,
+            "Name": "Clinton, William J., psychology of -- activities at Georgetown and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34604,
+            "Name": "Clinton, William J., psychology of -- activities in high school and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34605,
+            "Name": "Clinton, William J., psychology of -- activity levels",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34606,
+            "Name": "Clinton, William J., psychology of -- activity levels, psychological meaning of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34607,
+            "Name": "Clinton, William J., psychology of -- aides' views of core values",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34608,
+            "Name": "Clinton, William J., psychology of -- ambition",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 34609,
+            "Name": "Clinton, William J., psychology of -- anger",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34610,
+            "Name": "Clinton, William J., psychology of -- appointment of Henry Foster, Jr., and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34611,
+            "Name": "Clinton, William J., psychology of -- appointment of Lani Guinier and",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34625,
+            "Name": "Clinton, William J., psychology of -- as \"comeback kid\"",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34654,
+            "Name": "Clinton, William J., psychology of -- as kaleidoscope",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34655,
+            "Name": "Clinton, William J., psychology of -- as masked active-negative type",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34669,
+            "Name": "Clinton, William J., psychology of -- as pragmatic leader",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34683,
+            "Name": "Clinton, William J., psychology of -- as robust and complex",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34685,
+            "Name": "Clinton, William J., psychology of -- as Roosevelt",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34693,
+            "Name": "Clinton, William J., psychology of -- as skilled political strategist",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34708,
+            "Name": "Clinton, William J., psychology of -- as wishing to have it both ways",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34612,
+            "Name": "Clinton, William J., psychology of -- attention to details",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34613,
+            "Name": "Clinton, William J., psychology of -- backtracking",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34614,
+            "Name": "Clinton, William J., psychology of -- bargaining skills",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34615,
+            "Name": "Clinton, William J., psychology of -- belief that he can convince others",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34616,
+            "Name": "Clinton, William J., psychology of -- belief that he knows what is best",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34618,
+            "Name": "Clinton, William J., psychology of -- campaign promises and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34617,
+            "Name": "Clinton, William J., psychology of -- candor",
+            "NumberOfOccurrences": 7
+        },
+        {
+            "ID": 34619,
+            "Name": "Clinton, William J., psychology of -- capability of making basic errors",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34621,
+            "Name": "Clinton, William J., psychology of -- capacity for introspection",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34620,
+            "Name": "Clinton, William J., psychology of -- capacity to be alone",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34622,
+            "Name": "Clinton, William J., psychology of -- character integrity",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34623,
+            "Name": "Clinton, William J., psychology of -- charm",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34624,
+            "Name": "Clinton, William J., psychology of -- chemistry, importance of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34626,
+            "Name": "Clinton, William J., psychology of -- commitment to change",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34627,
+            "Name": "Clinton, William J., psychology of -- competitiveness",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34628,
+            "Name": "Clinton, William J., psychology of -- controversial nature of his presidency",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34629,
+            "Name": "Clinton, William J., psychology of -- decision to run against George Bush",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34630,
+            "Name": "Clinton, William J., psychology of -- desire to be in charge",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34631,
+            "Name": "Clinton, William J., psychology of -- difficulties in being prepared",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34632,
+            "Name": "Clinton, William J., psychology of -- difficulties in maintaining boundaries and limits",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 34633,
+            "Name": "Clinton, William J., psychology of -- early ambition",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34634,
+            "Name": "Clinton, William J., psychology of -- empathy",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34635,
+            "Name": "Clinton, William J., psychology of -- energy",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34636,
+            "Name": "Clinton, William J., psychology of -- enormous appetites",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34637,
+            "Name": "Clinton, William J., psychology of -- excitement of working for",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34638,
+            "Name": "Clinton, William J., psychology of -- fidelity to ideals",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34639,
+            "Name": "Clinton, William J., psychology of -- fidelity to others",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34640,
+            "Name": "Clinton, William J., psychology of -- foreign policy and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34642,
+            "Name": "Clinton, William J., psychology of -- funds to support Arkansas legislative program as governor and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34643,
+            "Name": "Clinton, William J., psychology of -- grandiosity",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34644,
+            "Name": "Clinton, William J., psychology of -- honesty",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34645,
+            "Name": "Clinton, William J., psychology of -- identification with the public",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34646,
+            "Name": "Clinton, William J., psychology of -- impatience",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34647,
+            "Name": "Clinton, William J., psychology of -- impressive memory",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34648,
+            "Name": "Clinton, William J., psychology of -- inconsistencies",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34649,
+            "Name": "Clinton, William J., psychology of -- indecisiveness, and \"unveto\" story",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34650,
+            "Name": "Clinton, William J., psychology of -- intelligence",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 34651,
+            "Name": "Clinton, William J., psychology of -- intelligence, limits of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34652,
+            "Name": "Clinton, William J., psychology of -- intense but episodic interests",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34653,
+            "Name": "Clinton, William J., psychology of -- investment in his activities",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34656,
+            "Name": "Clinton, William J., psychology of -- meeting John F. Kennedy and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34657,
+            "Name": "Clinton, William J., psychology of -- mother as \"character\" and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34658,
+            "Name": "Clinton, William J., psychology of -- movement toward others",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34659,
+            "Name": "Clinton, William J., psychology of -- NAFTA and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34660,
+            "Name": "Clinton, William J., psychology of -- need for approval",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34663,
+            "Name": "Clinton, William J., psychology of -- need for validation",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34661,
+            "Name": "Clinton, William J., psychology of -- need to be liked",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34662,
+            "Name": "Clinton, William J., psychology of -- need to be liked, difficulties of theory and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34665,
+            "Name": "Clinton, William J., psychology of -- permanent campaign and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34666,
+            "Name": "Clinton, William J., psychology of -- persistence of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34667,
+            "Name": "Clinton, William J., psychology of -- political identity of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34668,
+            "Name": "Clinton, William J., psychology of -- popular vote of, in 1992",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34673,
+            "Name": "Clinton, William J., psychology of -- promise of",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34670,
+            "Name": "Clinton, William J., psychology of -- public's distrust of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34671,
+            "Name": "Clinton, William J., psychology of -- public's hopes for",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34672,
+            "Name": "Clinton, William J., psychology of -- public's strong ambivalent feelings toward",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 34674,
+            "Name": "Clinton, William J., psychology of -- questions regarding core values",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34675,
+            "Name": "Clinton, William J., psychology of -- reconciling Left-Right issues",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34676,
+            "Name": "Clinton, William J., psychology of -- rectifying errors",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34677,
+            "Name": "Clinton, William J., psychology of -- relationship with Hillary Clinton",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34678,
+            "Name": "Clinton, William J., psychology of -- relationship with the media",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34679,
+            "Name": "Clinton, William J., psychology of -- resemblance to Richard Nixon",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34680,
+            "Name": "Clinton, William J., psychology of -- response to 1994 election and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34681,
+            "Name": "Clinton, William J., psychology of -- response to others when they don't agree and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34682,
+            "Name": "Clinton, William J., psychology of -- risk taking",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34684,
+            "Name": "Clinton, William J., psychology of -- Rolling Stone interview and",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34686,
+            "Name": "Clinton, William J., psychology of -- self-absorption",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34687,
+            "Name": "Clinton, William J., psychology of -- self-confidence",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34688,
+            "Name": "Clinton, William J., psychology of -- self-idealization",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34689,
+            "Name": "Clinton, William J., psychology of -- self-imposed deadlines and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34690,
+            "Name": "Clinton, William J., psychology of -- sense of being special",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34691,
+            "Name": "Clinton, William J., psychology of -- sense of own correctness",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34692,
+            "Name": "Clinton, William J., psychology of -- short-term flexibility of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34694,
+            "Name": "Clinton, William J., psychology of -- strategic empathy and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34695,
+            "Name": "Clinton, William J., psychology of -- substantial talents of",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 34697,
+            "Name": "Clinton, William J., psychology of -- success of, academic",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34698,
+            "Name": "Clinton, William J., psychology of -- success of, paradoxical consequences",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34699,
+            "Name": "Clinton, William J., psychology of -- success of, political",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34696,
+            "Name": "Clinton, William J., psychology of -- success, importance of, to",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34700,
+            "Name": "Clinton, William J., psychology of -- taking responsibility",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34701,
+            "Name": "Clinton, William J., psychology of -- trust in others",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 34702,
+            "Name": "Clinton, William J., psychology of -- use of connections",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34703,
+            "Name": "Clinton, William J., psychology of -- use of loopholes",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 34704,
+            "Name": "Clinton, William J., psychology of -- verbal ability",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34705,
+            "Name": "Clinton, William J., psychology of -- view of own ambitions",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 34706,
+            "Name": "Clinton, William J., psychology of -- view of own character integrity",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34707,
+            "Name": "Clinton, William J., psychology of -- view of own values",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12899,
+            "Name": "Decisions/decision making -- William J. Clinton's",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 41501,
+            "Name": "Dole-Lieberman bill -- Clinton veto of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 12960,
+            "Name": "Early political roles -- Jimmy Carter, William J. Clinton, and Ronald Reagan's governorships",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 13140,
+            "Name": "Holmes, Colonel Eugene",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 46524,
+            "Name": "Judgment -- William J. Clinton's",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34856,
+            "Name": "Kelley, Virginia -- importance in Bill Clinton's life of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 13286,
+            "Name": "Media -- William J. Clinton's candidacy and",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 13333,
+            "Name": "Needs and motives -- William J. Clinton's",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 13444,
+            "Name": "Policy -- positions of George Bush, William J. Clinton, and Ross Perot",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 13534,
+            "Name": "President(ial)",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 13568,
+            "Name": "Presidential candidates and candidacies -- Paul Tsongas",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 13864,
+            "Name": "Stamina -- of William J. Clinton",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 13878,
+            "Name": "Style -- William J. Clinton's",
+            "NumberOfOccurrences": 2
+        }
+    ],
+    "TopicID": 26141,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 32619,
+                "name": "Achtenberg, Roberta -- as Clinton supporter",
+                "ocount": 2,
+                "path": "00/00/03/26/0000032619.html"
+            },
+            {
+                "id": 34460,
+                "name": "Affirmative action -- Clinton and",
+                "ocount": 2,
+                "path": "00/00/03/44/0000034460.html"
+            },
+            {
+                "id": 34462,
+                "name": "Affirmative action -- Clinton's cabinet and",
+                "ocount": 1,
+                "path": "00/00/03/44/0000034462.html"
+            },
+            {
+                "id": 34461,
+                "name": "Affirmative action -- in Clinton health care program",
+                "ocount": 1,
+                "path": "00/00/03/44/0000034461.html"
+            },
+            {
+                "id": 23860,
+                "name": "AIDS (acquired immune deficiency syndrome): as area of political issue",
+                "ocount": 2,
+                "path": "00/00/02/38/0000023860.html"
+            },
+            {
+                "id": 12528,
+                "name": "Ambition -- Clinton draft controversy as an issue of",
+                "ocount": 2,
+                "path": "00/00/01/25/0000012528.html"
+            },
+            {
+                "id": 12527,
+                "name": "Ambition -- William J. Clinton and",
+                "ocount": 3,
+                "path": "00/00/01/25/0000012527.html"
+            },
+            {
+                "id": 30374,
+                "name": "Bush, George, accused by Clinton campaign of McCarthyism",
+                "ocount": 1,
+                "path": "00/00/03/03/0000030374.html"
+            },
+            {
+                "id": 12655,
+                "name": "Campaign(s) and campaigning -- William J. Clinton's",
+                "ocount": 5,
+                "path": "00/00/01/26/0000012655.html"
+            },
+            {
+                "id": 12670,
+                "name": "Candidate(s) and candidacies -- William J. Clinton",
+                "ocount": 2,
+                "path": "00/00/01/26/0000012670.html"
+            },
+            {
+                "id": 12740,
+                "name": "Character integrity -- William J. Clinton's",
+                "ocount": 2,
+                "path": "00/00/01/27/0000012740.html"
+            },
+            {
+                "id": 12755,
+                "name": "Character issues -- William J. Clinton and",
+                "ocount": 2,
+                "path": "00/00/01/27/0000012755.html"
+            },
+            {
+                "id": 41452,
+                "name": "Clinton administration",
+                "ocount": 5,
+                "path": "00/00/04/14/0000041452.html"
+            },
+            {
+                "id": 30376,
+                "name": "Clinton, Bill -- \"New Covenant\"",
+                "ocount": 1,
+                "path": "00/00/03/03/0000030376.html"
+            },
+            {
+                "id": 23883,
+                "name": "Clinton, Bill -- and 1992 election",
+                "ocount": 10,
+                "path": "00/00/02/38/0000023883.html"
+            },
+            {
+                "id": 32703,
+                "name": "Clinton, Bill -- and Achtenberg nomination",
+                "ocount": 2,
+                "path": "00/00/03/27/0000032703.html"
+            },
+            {
+                "id": 23882,
+                "name": "Clinton, Bill -- and AIDS",
+                "ocount": 2,
+                "path": "00/00/02/38/0000023882.html"
+            },
+            {
+                "id": 20673,
+                "name": "Clinton, Bill -- economic policies of",
+                "ocount": 2,
+                "path": "00/00/02/06/0000020673.html"
+            },
+            {
+                "id": 20674,
+                "name": "Clinton, Bill -- health care and",
+                "ocount": 1,
+                "path": "00/00/02/06/0000020674.html"
+            },
+            {
+                "id": 30375,
+                "name": "Clinton, Bill -- lesbian and gay support for",
+                "ocount": 5,
+                "path": "00/00/03/03/0000030375.html"
+            },
+            {
+                "id": 23884,
+                "name": "Clinton, Bill -- pledge to lift military ban",
+                "ocount": 8,
+                "path": "00/00/02/38/0000023884.html"
+            },
+            {
+                "id": 32705,
+                "name": "Clinton, Bill -- record on lesbian and gay rights",
+                "ocount": 1,
+                "path": "00/00/03/27/0000032705.html"
+            },
+            {
+                "id": 20675,
+                "name": "Clinton, Bill -- U.S.–Japanese relations and",
+                "ocount": 1,
+                "path": "00/00/02/06/0000020675.html"
+            },
+            {
+                "id": 1851,
+                "name": "Clinton, Bill, 1998 visit to China",
+                "ocount": 1,
+                "path": "00/00/00/18/0000001851.html"
+            },
+            {
+                "id": 41453,
+                "name": "Clinton, Bill, President -- inaction on Bosnia",
+                "ocount": 1,
+                "path": "00/00/04/14/0000041453.html"
+            },
+            {
+                "id": 34514,
+                "name": "Clinton, Hillary Rodham -- Bill Clinton's view of political role of",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034514.html"
+            },
+            {
+                "id": 12825,
+                "name": "Clinton, William J. -- \"yes and\" approach to public policy",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012825.html"
+            },
+            {
+                "id": 12806,
+                "name": "Clinton, William J. -- advisory system of",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012806.html"
+            },
+            {
+                "id": 12573,
+                "name": "Clinton, William J. -- anger of",
+                "ocount": 6,
+                "path": "00/00/01/25/0000012573.html"
+            },
+            {
+                "id": 46113,
+                "name": "Clinton, William J. -- basic public dilemma and",
+                "ocount": 3,
+                "path": "00/00/04/61/0000046113.html"
+            },
+            {
+                "id": 12807,
+                "name": "Clinton, William J. -- character of",
+                "ocount": 2,
+                "path": "00/00/01/28/0000012807.html"
+            },
+            {
+                "id": 12808,
+                "name": "Clinton, William J. -- developmental history of",
+                "ocount": 3,
+                "path": "00/00/01/28/0000012808.html"
+            },
+            {
+                "id": 12809,
+                "name": "Clinton, William J. -- dislike of limits and",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012809.html"
+            },
+            {
+                "id": 12810,
+                "name": "Clinton, William J. -- draft controversy and",
+                "ocount": 8,
+                "path": "00/00/01/28/0000012810.html"
+            },
+            {
+                "id": 12811,
+                "name": "Clinton, William J. -- empathy of",
+                "ocount": 2,
+                "path": "00/00/01/28/0000012811.html"
+            },
+            {
+                "id": 12813,
+                "name": "Clinton, William J. -- foreign policy of",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012813.html"
+            },
+            {
+                "id": 12812,
+                "name": "Clinton, William J. -- Gennifer Flowers affair and",
+                "ocount": 6,
+                "path": "00/00/01/28/0000012812.html"
+            },
+            {
+                "id": 12814,
+                "name": "Clinton, William J. -- governorship of",
+                "ocount": 5,
+                "path": "00/00/01/28/0000012814.html"
+            },
+            {
+                "id": 12815,
+                "name": "Clinton, William J. -- integrity of",
+                "ocount": 3,
+                "path": "00/00/01/28/0000012815.html"
+            },
+            {
+                "id": 12816,
+                "name": "Clinton, William J. -- interpersonal relations and",
+                "ocount": 2,
+                "path": "00/00/01/28/0000012816.html"
+            },
+            {
+                "id": 12817,
+                "name": "Clinton, William J. -- judgment of",
+                "ocount": 3,
+                "path": "00/00/01/28/0000012817.html"
+            },
+            {
+                "id": 12818,
+                "name": "Clinton, William J. -- leadership style of",
+                "ocount": 4,
+                "path": "00/00/01/28/0000012818.html"
+            },
+            {
+                "id": 12820,
+                "name": "Clinton, William J. -- need to be appreciated",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012820.html"
+            },
+            {
+                "id": 12819,
+                "name": "Clinton, William J. -- need to be liked",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012819.html"
+            },
+            {
+                "id": 12821,
+                "name": "Clinton, William J. -- parallels to Richard Nixon",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012821.html"
+            },
+            {
+                "id": 12822,
+                "name": "Clinton, William J. -- persistence of",
+                "ocount": 2,
+                "path": "00/00/01/28/0000012822.html"
+            },
+            {
+                "id": 12823,
+                "name": "Clinton, William J. -- problems of public trust and",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012823.html"
+            },
+            {
+                "id": 12824,
+                "name": "Clinton, William J. -- wish to have it both ways",
+                "ocount": 1,
+                "path": "00/00/01/28/0000012824.html"
+            },
+            {
+                "id": 34567,
+                "name": "Clinton, William J., and family life",
+                "ocount": 0,
+                "path": "00/00/03/45/0000034567.html"
+            },
+            {
+                "id": 34581,
+                "name": "Clinton, William J., and family life -- \"The Man from Hope\" film and",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034581.html"
+            },
+            {
+                "id": 34570,
+                "name": "Clinton, William J., and family life -- annotated chronology of",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034570.html"
+            },
+            {
+                "id": 34568,
+                "name": "Clinton, William J., and family life -- as adored child",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034568.html"
+            },
+            {
+                "id": 34569,
+                "name": "Clinton, William J., and family life -- as adult child of an alcoholic (ACOA)",
+                "ocount": 3,
+                "path": "00/00/03/45/0000034569.html"
+            },
+            {
+                "id": 34574,
+                "name": "Clinton, William J., and family life -- as golden boy in high school",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034574.html"
+            },
+            {
+                "id": 34586,
+                "name": "Clinton, William J., and family life -- as parent to himself",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034586.html"
+            },
+            {
+                "id": 34592,
+                "name": "Clinton, William J., and family life -- as special child",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034592.html"
+            },
+            {
+                "id": 34571,
+                "name": "Clinton, William J., and family life -- boundary problems and",
+                "ocount": 3,
+                "path": "00/00/03/45/0000034571.html"
+            },
+            {
+                "id": 34572,
+                "name": "Clinton, William J., and family life -- confrontations with stepfather",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034572.html"
+            },
+            {
+                "id": 34573,
+                "name": "Clinton, William J., and family life -- experience of two different mothers",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034573.html"
+            },
+            {
+                "id": 34575,
+                "name": "Clinton, William J., and family life -- grandmother's feelings toward",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034575.html"
+            },
+            {
+                "id": 34576,
+                "name": "Clinton, William J., and family life -- hiring of nanny",
+                "ocount": 2,
+                "path": "00/00/03/45/0000034576.html"
+            },
+            {
+                "id": 34577,
+                "name": "Clinton, William J., and family life -- household rules",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034577.html"
+            },
+            {
+                "id": 34578,
+                "name": "Clinton, William J., and family life -- impact of grandmother (Edith Cassidy) on",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034578.html"
+            },
+            {
+                "id": 34579,
+                "name": "Clinton, William J., and family life -- lack of reliable figures to impart ideals",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034579.html"
+            },
+            {
+                "id": 34580,
+                "name": "Clinton, William J., and family life -- loss of father",
+                "ocount": 5,
+                "path": "00/00/03/45/0000034580.html"
+            },
+            {
+                "id": 34582,
+                "name": "Clinton, William J., and family life -- mother's autobiography as source for",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034582.html"
+            },
+            {
+                "id": 34583,
+                "name": "Clinton, William J., and family life -- mother's early absence",
+                "ocount": 4,
+                "path": "00/00/03/45/0000034583.html"
+            },
+            {
+                "id": 34584,
+                "name": "Clinton, William J., and family life -- mother's remarriage to Roger",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034584.html"
+            },
+            {
+                "id": 34585,
+                "name": "Clinton, William J., and family life -- myth of",
+                "ocount": 5,
+                "path": "00/00/03/45/0000034585.html"
+            },
+            {
+                "id": 34587,
+                "name": "Clinton, William J., and family life -- role as caretaker for his brother",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034587.html"
+            },
+            {
+                "id": 34588,
+                "name": "Clinton, William J., and family life -- role as caretaker for his mother",
+                "ocount": 2,
+                "path": "00/00/03/45/0000034588.html"
+            },
+            {
+                "id": 34589,
+                "name": "Clinton, William J., and family life -- role of grandparents in",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034589.html"
+            },
+            {
+                "id": 34590,
+                "name": "Clinton, William J., and family life -- role of religion in",
+                "ocount": 2,
+                "path": "00/00/03/45/0000034590.html"
+            },
+            {
+                "id": 34593,
+                "name": "Clinton, William J., and family life -- stepfather (Roger Clinton) as alcoholic",
+                "ocount": 3,
+                "path": "00/00/03/45/0000034593.html"
+            },
+            {
+                "id": 34594,
+                "name": "Clinton, William J., and family life -- stepfather's reliability",
+                "ocount": 2,
+                "path": "00/00/03/45/0000034594.html"
+            },
+            {
+                "id": 34591,
+                "name": "Clinton, William J., and family life -- the shrine",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034591.html"
+            },
+            {
+                "id": 34595,
+                "name": "Clinton, William J., and family life -- view of mother",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034595.html"
+            },
+            {
+                "id": 34709,
+                "name": "Clinton, William J., presidency of",
+                "ocount": 0,
+                "path": "00/00/03/47/0000034709.html"
+            },
+            {
+                "id": 34765,
+                "name": "Clinton, William J., presidency of -- \"triangulation\" strategy",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034765.html"
+            },
+            {
+                "id": 34766,
+                "name": "Clinton, William J., presidency of -- \"trust deficit\" and",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034766.html"
+            },
+            {
+                "id": 34710,
+                "name": "Clinton, William J., presidency of -- ability to integrate diverse policy views",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034710.html"
+            },
+            {
+                "id": 34711,
+                "name": "Clinton, William J., presidency of -- activist president in an age of public distrust",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034711.html"
+            },
+            {
+                "id": 34712,
+                "name": "Clinton, William J., presidency of -- ambition and public overload",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034712.html"
+            },
+            {
+                "id": 34713,
+                "name": "Clinton, William J., presidency of -- ambition fulfilled by second term",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034713.html"
+            },
+            {
+                "id": 34714,
+                "name": "Clinton, William J., presidency of -- ambitious agenda of",
+                "ocount": 6,
+                "path": "00/00/03/47/0000034714.html"
+            },
+            {
+                "id": 34715,
+                "name": "Clinton, William J., presidency of -- ambitious agenda of, and aides' worries",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034715.html"
+            },
+            {
+                "id": 34716,
+                "name": "Clinton, William J., presidency of -- ambitious agenda of, compared to agenda as governor",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034716.html"
+            },
+            {
+                "id": 34717,
+                "name": "Clinton, William J., presidency of -- appointment of ambassadors",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034717.html"
+            },
+            {
+                "id": 34748,
+                "name": "Clinton, William J., presidency of -- as \"New Democrat\"",
+                "ocount": 15,
+                "path": "00/00/03/47/0000034748.html"
+            },
+            {
+                "id": 34718,
+                "name": "Clinton, William J., presidency of -- attempts to bypass press",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034718.html"
+            },
+            {
+                "id": 34719,
+                "name": "Clinton, William J., presidency of -- basic contradictions of",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034719.html"
+            },
+            {
+                "id": 34720,
+                "name": "Clinton, William J., presidency of -- basic public dilemma of",
+                "ocount": 5,
+                "path": "00/00/03/47/0000034720.html"
+            },
+            {
+                "id": 34721,
+                "name": "Clinton, William J., presidency of -- bolstering a sense of public urgency",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034721.html"
+            },
+            {
+                "id": 34722,
+                "name": "Clinton, William J., presidency of -- cabinet appointments reflecting conflicting views",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034722.html"
+            },
+            {
+                "id": 34723,
+                "name": "Clinton, William J., presidency of -- candor regarding policies",
+                "ocount": 4,
+                "path": "00/00/03/47/0000034723.html"
+            },
+            {
+                "id": 34724,
+                "name": "Clinton, William J., presidency of -- centralization of power",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034724.html"
+            },
+            {
+                "id": 34725,
+                "name": "Clinton, William J., presidency of -- commitment to cut White House staff",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034725.html"
+            },
+            {
+                "id": 34726,
+                "name": "Clinton, William J., presidency of -- commitment to social change",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034726.html"
+            },
+            {
+                "id": 34727,
+                "name": "Clinton, William J., presidency of -- compared with leadership as governor",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034727.html"
+            },
+            {
+                "id": 34728,
+                "name": "Clinton, William J., presidency of -- concern with appearances",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034728.html"
+            },
+            {
+                "id": 34729,
+                "name": "Clinton, William J., presidency of -- danger of frustration in a possible second term",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034729.html"
+            },
+            {
+                "id": 34730,
+                "name": "Clinton, William J., presidency of -- decision making style",
+                "ocount": 6,
+                "path": "00/00/03/47/0000034730.html"
+            },
+            {
+                "id": 34731,
+                "name": "Clinton, William J., presidency of -- demonization of enemies",
+                "ocount": 3,
+                "path": "00/00/03/47/0000034731.html"
+            },
+            {
+                "id": 34732,
+                "name": "Clinton, William J., presidency of -- domestic uncertainty and",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034732.html"
+            },
+            {
+                "id": 34733,
+                "name": "Clinton, William J., presidency of -- early conflict of interest guidelines",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034733.html"
+            },
+            {
+                "id": 34734,
+                "name": "Clinton, William J., presidency of -- educating the public",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034734.html"
+            },
+            {
+                "id": 34735,
+                "name": "Clinton, William J., presidency of -- emphasis on domestic policy",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034735.html"
+            },
+            {
+                "id": 34736,
+                "name": "Clinton, William J., presidency of -- endurance",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034736.html"
+            },
+            {
+                "id": 34737,
+                "name": "Clinton, William J., presidency of -- ethical standards",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034737.html"
+            },
+            {
+                "id": 34738,
+                "name": "Clinton, William J., presidency of -- evidence of expansive thinking",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034738.html"
+            },
+            {
+                "id": 34739,
+                "name": "Clinton, William J., presidency of -- forced resignation of key administration officials",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034739.html"
+            },
+            {
+                "id": 34740,
+                "name": "Clinton, William J., presidency of -- foreign policy advisors and problems of collegiality",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034740.html"
+            },
+            {
+                "id": 34741,
+                "name": "Clinton, William J., presidency of -- inconsistent policy stands",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034741.html"
+            },
+            {
+                "id": 34742,
+                "name": "Clinton, William J., presidency of -- inexperience of White house aides",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034742.html"
+            },
+            {
+                "id": 34743,
+                "name": "Clinton, William J., presidency of -- institutional setting and",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034743.html"
+            },
+            {
+                "id": 34744,
+                "name": "Clinton, William J., presidency of -- lack of trust in public",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034744.html"
+            },
+            {
+                "id": 34745,
+                "name": "Clinton, William J., presidency of -- legal defense fund set up for",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034745.html"
+            },
+            {
+                "id": 34746,
+                "name": "Clinton, William J., presidency of -- lost opportunities of first term",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034746.html"
+            },
+            {
+                "id": 34747,
+                "name": "Clinton, William J., presidency of -- mismatch between administration and public ambitions",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034747.html"
+            },
+            {
+                "id": 34749,
+                "name": "Clinton, William J., presidency of -- order banning replacement of striking workers",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034749.html"
+            },
+            {
+                "id": 34750,
+                "name": "Clinton, William J., presidency of -- paradox of legislative success and public doubt",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034750.html"
+            },
+            {
+                "id": 34751,
+                "name": "Clinton, William J., presidency of -- persistence and determination",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034751.html"
+            },
+            {
+                "id": 34752,
+                "name": "Clinton, William J., presidency of -- political center and",
+                "ocount": 3,
+                "path": "00/00/03/47/0000034752.html"
+            },
+            {
+                "id": 34753,
+                "name": "Clinton, William J., presidency of -- possibility of statement in a second term",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034753.html"
+            },
+            {
+                "id": 34754,
+                "name": "Clinton, William J., presidency of -- possible nature of a second term",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034754.html"
+            },
+            {
+                "id": 34755,
+                "name": "Clinton, William J., presidency of -- post cold-war period and",
+                "ocount": 3,
+                "path": "00/00/03/47/0000034755.html"
+            },
+            {
+                "id": 34756,
+                "name": "Clinton, William J., presidency of -- problem of focus",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034756.html"
+            },
+            {
+                "id": 34757,
+                "name": "Clinton, William J., presidency of -- public's hopes for",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034757.html"
+            },
+            {
+                "id": 34758,
+                "name": "Clinton, William J., presidency of -- resolving policy dilemmas",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034758.html"
+            },
+            {
+                "id": 34759,
+                "name": "Clinton, William J., presidency of -- role of political consultants",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034759.html"
+            },
+            {
+                "id": 34760,
+                "name": "Clinton, William J., presidency of -- selection of advisors on the basis of chemistry",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034760.html"
+            },
+            {
+                "id": 34761,
+                "name": "Clinton, William J., presidency of -- selling policies versus educating the public",
+                "ocount": 3,
+                "path": "00/00/03/47/0000034761.html"
+            },
+            {
+                "id": 34762,
+                "name": "Clinton, William J., presidency of -- shifting public response to",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034762.html"
+            },
+            {
+                "id": 34763,
+                "name": "Clinton, William J., presidency of -- skill in selling programs",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034763.html"
+            },
+            {
+                "id": 34764,
+                "name": "Clinton, William J., presidency of -- staff as serving not constraining",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034764.html"
+            },
+            {
+                "id": 34767,
+                "name": "Clinton, William J., presidency of -- use of questionable financial calculations for public policies",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034767.html"
+            },
+            {
+                "id": 34768,
+                "name": "Clinton, William J., presidency of -- Whitewater investigations and",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034768.html"
+            },
+            {
+                "id": 34596,
+                "name": "Clinton, William J., psychology of",
+                "ocount": 0,
+                "path": "00/00/03/45/0000034596.html"
+            },
+            {
+                "id": 34641,
+                "name": "Clinton, William J., psychology of -- \"Friends of Bill\" and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034641.html"
+            },
+            {
+                "id": 34664,
+                "name": "Clinton, William J., psychology of -- 1994 election as a repudiation of",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034664.html"
+            },
+            {
+                "id": 34597,
+                "name": "Clinton, William J., psychology of -- ability to do several things at once",
+                "ocount": 1,
+                "path": "00/00/03/45/0000034597.html"
+            },
+            {
+                "id": 34598,
+                "name": "Clinton, William J., psychology of -- ability to focus",
+                "ocount": 2,
+                "path": "00/00/03/45/0000034598.html"
+            },
+            {
+                "id": 34599,
+                "name": "Clinton, William J., psychology of -- ability to learn from mistakes",
+                "ocount": 4,
+                "path": "00/00/03/45/0000034599.html"
+            },
+            {
+                "id": 34600,
+                "name": "Clinton, William J., psychology of -- abusiveness with aides",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034600.html"
+            },
+            {
+                "id": 34601,
+                "name": "Clinton, William J., psychology of -- accomplishments as \"educational governor\" and",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034601.html"
+            },
+            {
+                "id": 34602,
+                "name": "Clinton, William J., psychology of -- achievement motivation",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034602.html"
+            },
+            {
+                "id": 34603,
+                "name": "Clinton, William J., psychology of -- activities at Georgetown and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034603.html"
+            },
+            {
+                "id": 34604,
+                "name": "Clinton, William J., psychology of -- activities in high school and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034604.html"
+            },
+            {
+                "id": 34605,
+                "name": "Clinton, William J., psychology of -- activity levels",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034605.html"
+            },
+            {
+                "id": 34606,
+                "name": "Clinton, William J., psychology of -- activity levels, psychological meaning of",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034606.html"
+            },
+            {
+                "id": 34607,
+                "name": "Clinton, William J., psychology of -- aides' views of core values",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034607.html"
+            },
+            {
+                "id": 34608,
+                "name": "Clinton, William J., psychology of -- ambition",
+                "ocount": 6,
+                "path": "00/00/03/46/0000034608.html"
+            },
+            {
+                "id": 34609,
+                "name": "Clinton, William J., psychology of -- anger",
+                "ocount": 5,
+                "path": "00/00/03/46/0000034609.html"
+            },
+            {
+                "id": 34610,
+                "name": "Clinton, William J., psychology of -- appointment of Henry Foster, Jr., and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034610.html"
+            },
+            {
+                "id": 34611,
+                "name": "Clinton, William J., psychology of -- appointment of Lani Guinier and",
+                "ocount": 5,
+                "path": "00/00/03/46/0000034611.html"
+            },
+            {
+                "id": 34625,
+                "name": "Clinton, William J., psychology of -- as \"comeback kid\"",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034625.html"
+            },
+            {
+                "id": 34654,
+                "name": "Clinton, William J., psychology of -- as kaleidoscope",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034654.html"
+            },
+            {
+                "id": 34655,
+                "name": "Clinton, William J., psychology of -- as masked active-negative type",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034655.html"
+            },
+            {
+                "id": 34669,
+                "name": "Clinton, William J., psychology of -- as pragmatic leader",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034669.html"
+            },
+            {
+                "id": 34683,
+                "name": "Clinton, William J., psychology of -- as robust and complex",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034683.html"
+            },
+            {
+                "id": 34685,
+                "name": "Clinton, William J., psychology of -- as Roosevelt",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034685.html"
+            },
+            {
+                "id": 34693,
+                "name": "Clinton, William J., psychology of -- as skilled political strategist",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034693.html"
+            },
+            {
+                "id": 34708,
+                "name": "Clinton, William J., psychology of -- as wishing to have it both ways",
+                "ocount": 5,
+                "path": "00/00/03/47/0000034708.html"
+            },
+            {
+                "id": 34612,
+                "name": "Clinton, William J., psychology of -- attention to details",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034612.html"
+            },
+            {
+                "id": 34613,
+                "name": "Clinton, William J., psychology of -- backtracking",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034613.html"
+            },
+            {
+                "id": 34614,
+                "name": "Clinton, William J., psychology of -- bargaining skills",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034614.html"
+            },
+            {
+                "id": 34615,
+                "name": "Clinton, William J., psychology of -- belief that he can convince others",
+                "ocount": 4,
+                "path": "00/00/03/46/0000034615.html"
+            },
+            {
+                "id": 34616,
+                "name": "Clinton, William J., psychology of -- belief that he knows what is best",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034616.html"
+            },
+            {
+                "id": 34618,
+                "name": "Clinton, William J., psychology of -- campaign promises and",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034618.html"
+            },
+            {
+                "id": 34617,
+                "name": "Clinton, William J., psychology of -- candor",
+                "ocount": 7,
+                "path": "00/00/03/46/0000034617.html"
+            },
+            {
+                "id": 34619,
+                "name": "Clinton, William J., psychology of -- capability of making basic errors",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034619.html"
+            },
+            {
+                "id": 34621,
+                "name": "Clinton, William J., psychology of -- capacity for introspection",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034621.html"
+            },
+            {
+                "id": 34620,
+                "name": "Clinton, William J., psychology of -- capacity to be alone",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034620.html"
+            },
+            {
+                "id": 34622,
+                "name": "Clinton, William J., psychology of -- character integrity",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034622.html"
+            },
+            {
+                "id": 34623,
+                "name": "Clinton, William J., psychology of -- charm",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034623.html"
+            },
+            {
+                "id": 34624,
+                "name": "Clinton, William J., psychology of -- chemistry, importance of",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034624.html"
+            },
+            {
+                "id": 34626,
+                "name": "Clinton, William J., psychology of -- commitment to change",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034626.html"
+            },
+            {
+                "id": 34627,
+                "name": "Clinton, William J., psychology of -- competitiveness",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034627.html"
+            },
+            {
+                "id": 34628,
+                "name": "Clinton, William J., psychology of -- controversial nature of his presidency",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034628.html"
+            },
+            {
+                "id": 34629,
+                "name": "Clinton, William J., psychology of -- decision to run against George Bush",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034629.html"
+            },
+            {
+                "id": 34630,
+                "name": "Clinton, William J., psychology of -- desire to be in charge",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034630.html"
+            },
+            {
+                "id": 34631,
+                "name": "Clinton, William J., psychology of -- difficulties in being prepared",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034631.html"
+            },
+            {
+                "id": 34632,
+                "name": "Clinton, William J., psychology of -- difficulties in maintaining boundaries and limits",
+                "ocount": 6,
+                "path": "00/00/03/46/0000034632.html"
+            },
+            {
+                "id": 34633,
+                "name": "Clinton, William J., psychology of -- early ambition",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034633.html"
+            },
+            {
+                "id": 34634,
+                "name": "Clinton, William J., psychology of -- empathy",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034634.html"
+            },
+            {
+                "id": 34635,
+                "name": "Clinton, William J., psychology of -- energy",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034635.html"
+            },
+            {
+                "id": 34636,
+                "name": "Clinton, William J., psychology of -- enormous appetites",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034636.html"
+            },
+            {
+                "id": 34637,
+                "name": "Clinton, William J., psychology of -- excitement of working for",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034637.html"
+            },
+            {
+                "id": 34638,
+                "name": "Clinton, William J., psychology of -- fidelity to ideals",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034638.html"
+            },
+            {
+                "id": 34639,
+                "name": "Clinton, William J., psychology of -- fidelity to others",
+                "ocount": 4,
+                "path": "00/00/03/46/0000034639.html"
+            },
+            {
+                "id": 34640,
+                "name": "Clinton, William J., psychology of -- foreign policy and",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034640.html"
+            },
+            {
+                "id": 34642,
+                "name": "Clinton, William J., psychology of -- funds to support Arkansas legislative program as governor and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034642.html"
+            },
+            {
+                "id": 34643,
+                "name": "Clinton, William J., psychology of -- grandiosity",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034643.html"
+            },
+            {
+                "id": 34644,
+                "name": "Clinton, William J., psychology of -- honesty",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034644.html"
+            },
+            {
+                "id": 34645,
+                "name": "Clinton, William J., psychology of -- identification with the public",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034645.html"
+            },
+            {
+                "id": 34646,
+                "name": "Clinton, William J., psychology of -- impatience",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034646.html"
+            },
+            {
+                "id": 34647,
+                "name": "Clinton, William J., psychology of -- impressive memory",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034647.html"
+            },
+            {
+                "id": 34648,
+                "name": "Clinton, William J., psychology of -- inconsistencies",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034648.html"
+            },
+            {
+                "id": 34649,
+                "name": "Clinton, William J., psychology of -- indecisiveness, and \"unveto\" story",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034649.html"
+            },
+            {
+                "id": 34650,
+                "name": "Clinton, William J., psychology of -- intelligence",
+                "ocount": 6,
+                "path": "00/00/03/46/0000034650.html"
+            },
+            {
+                "id": 34651,
+                "name": "Clinton, William J., psychology of -- intelligence, limits of",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034651.html"
+            },
+            {
+                "id": 34652,
+                "name": "Clinton, William J., psychology of -- intense but episodic interests",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034652.html"
+            },
+            {
+                "id": 34653,
+                "name": "Clinton, William J., psychology of -- investment in his activities",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034653.html"
+            },
+            {
+                "id": 34656,
+                "name": "Clinton, William J., psychology of -- meeting John F. Kennedy and",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034656.html"
+            },
+            {
+                "id": 34657,
+                "name": "Clinton, William J., psychology of -- mother as \"character\" and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034657.html"
+            },
+            {
+                "id": 34658,
+                "name": "Clinton, William J., psychology of -- movement toward others",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034658.html"
+            },
+            {
+                "id": 34659,
+                "name": "Clinton, William J., psychology of -- NAFTA and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034659.html"
+            },
+            {
+                "id": 34660,
+                "name": "Clinton, William J., psychology of -- need for approval",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034660.html"
+            },
+            {
+                "id": 34663,
+                "name": "Clinton, William J., psychology of -- need for validation",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034663.html"
+            },
+            {
+                "id": 34661,
+                "name": "Clinton, William J., psychology of -- need to be liked",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034661.html"
+            },
+            {
+                "id": 34662,
+                "name": "Clinton, William J., psychology of -- need to be liked, difficulties of theory and",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034662.html"
+            },
+            {
+                "id": 34665,
+                "name": "Clinton, William J., psychology of -- permanent campaign and",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034665.html"
+            },
+            {
+                "id": 34666,
+                "name": "Clinton, William J., psychology of -- persistence of",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034666.html"
+            },
+            {
+                "id": 34667,
+                "name": "Clinton, William J., psychology of -- political identity of",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034667.html"
+            },
+            {
+                "id": 34668,
+                "name": "Clinton, William J., psychology of -- popular vote of, in 1992",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034668.html"
+            },
+            {
+                "id": 34673,
+                "name": "Clinton, William J., psychology of -- promise of",
+                "ocount": 5,
+                "path": "00/00/03/46/0000034673.html"
+            },
+            {
+                "id": 34670,
+                "name": "Clinton, William J., psychology of -- public's distrust of",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034670.html"
+            },
+            {
+                "id": 34671,
+                "name": "Clinton, William J., psychology of -- public's hopes for",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034671.html"
+            },
+            {
+                "id": 34672,
+                "name": "Clinton, William J., psychology of -- public's strong ambivalent feelings toward",
+                "ocount": 6,
+                "path": "00/00/03/46/0000034672.html"
+            },
+            {
+                "id": 34674,
+                "name": "Clinton, William J., psychology of -- questions regarding core values",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034674.html"
+            },
+            {
+                "id": 34675,
+                "name": "Clinton, William J., psychology of -- reconciling Left-Right issues",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034675.html"
+            },
+            {
+                "id": 34676,
+                "name": "Clinton, William J., psychology of -- rectifying errors",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034676.html"
+            },
+            {
+                "id": 34677,
+                "name": "Clinton, William J., psychology of -- relationship with Hillary Clinton",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034677.html"
+            },
+            {
+                "id": 34678,
+                "name": "Clinton, William J., psychology of -- relationship with the media",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034678.html"
+            },
+            {
+                "id": 34679,
+                "name": "Clinton, William J., psychology of -- resemblance to Richard Nixon",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034679.html"
+            },
+            {
+                "id": 34680,
+                "name": "Clinton, William J., psychology of -- response to 1994 election and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034680.html"
+            },
+            {
+                "id": 34681,
+                "name": "Clinton, William J., psychology of -- response to others when they don't agree and",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034681.html"
+            },
+            {
+                "id": 34682,
+                "name": "Clinton, William J., psychology of -- risk taking",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034682.html"
+            },
+            {
+                "id": 34684,
+                "name": "Clinton, William J., psychology of -- Rolling Stone interview and",
+                "ocount": 5,
+                "path": "00/00/03/46/0000034684.html"
+            },
+            {
+                "id": 34686,
+                "name": "Clinton, William J., psychology of -- self-absorption",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034686.html"
+            },
+            {
+                "id": 34687,
+                "name": "Clinton, William J., psychology of -- self-confidence",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034687.html"
+            },
+            {
+                "id": 34688,
+                "name": "Clinton, William J., psychology of -- self-idealization",
+                "ocount": 4,
+                "path": "00/00/03/46/0000034688.html"
+            },
+            {
+                "id": 34689,
+                "name": "Clinton, William J., psychology of -- self-imposed deadlines and",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034689.html"
+            },
+            {
+                "id": 34690,
+                "name": "Clinton, William J., psychology of -- sense of being special",
+                "ocount": 2,
+                "path": "00/00/03/46/0000034690.html"
+            },
+            {
+                "id": 34691,
+                "name": "Clinton, William J., psychology of -- sense of own correctness",
+                "ocount": 3,
+                "path": "00/00/03/46/0000034691.html"
+            },
+            {
+                "id": 34692,
+                "name": "Clinton, William J., psychology of -- short-term flexibility of",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034692.html"
+            },
+            {
+                "id": 34694,
+                "name": "Clinton, William J., psychology of -- strategic empathy and",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034694.html"
+            },
+            {
+                "id": 34695,
+                "name": "Clinton, William J., psychology of -- substantial talents of",
+                "ocount": 5,
+                "path": "00/00/03/46/0000034695.html"
+            },
+            {
+                "id": 34697,
+                "name": "Clinton, William J., psychology of -- success of, academic",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034697.html"
+            },
+            {
+                "id": 34698,
+                "name": "Clinton, William J., psychology of -- success of, paradoxical consequences",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034698.html"
+            },
+            {
+                "id": 34699,
+                "name": "Clinton, William J., psychology of -- success of, political",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034699.html"
+            },
+            {
+                "id": 34696,
+                "name": "Clinton, William J., psychology of -- success, importance of, to",
+                "ocount": 1,
+                "path": "00/00/03/46/0000034696.html"
+            },
+            {
+                "id": 34700,
+                "name": "Clinton, William J., psychology of -- taking responsibility",
+                "ocount": 4,
+                "path": "00/00/03/47/0000034700.html"
+            },
+            {
+                "id": 34701,
+                "name": "Clinton, William J., psychology of -- trust in others",
+                "ocount": 3,
+                "path": "00/00/03/47/0000034701.html"
+            },
+            {
+                "id": 34702,
+                "name": "Clinton, William J., psychology of -- use of connections",
+                "ocount": 4,
+                "path": "00/00/03/47/0000034702.html"
+            },
+            {
+                "id": 34703,
+                "name": "Clinton, William J., psychology of -- use of loopholes",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034703.html"
+            },
+            {
+                "id": 34704,
+                "name": "Clinton, William J., psychology of -- verbal ability",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034704.html"
+            },
+            {
+                "id": 34705,
+                "name": "Clinton, William J., psychology of -- view of own ambitions",
+                "ocount": 4,
+                "path": "00/00/03/47/0000034705.html"
+            },
+            {
+                "id": 34706,
+                "name": "Clinton, William J., psychology of -- view of own character integrity",
+                "ocount": 1,
+                "path": "00/00/03/47/0000034706.html"
+            },
+            {
+                "id": 34707,
+                "name": "Clinton, William J., psychology of -- view of own values",
+                "ocount": 2,
+                "path": "00/00/03/47/0000034707.html"
+            },
+            {
+                "id": 12899,
+                "name": "Decisions/decision making -- William J. Clinton's",
+                "ocount": 2,
+                "path": "00/00/01/28/0000012899.html"
+            },
+            {
+                "id": 41501,
+                "name": "Dole-Lieberman bill -- Clinton veto of",
+                "ocount": 2,
+                "path": "00/00/04/15/0000041501.html"
+            },
+            {
+                "id": 12960,
+                "name": "Early political roles -- Jimmy Carter, William J. Clinton, and Ronald Reagan's governorships",
+                "ocount": 2,
+                "path": "00/00/01/29/0000012960.html"
+            },
+            {
+                "id": 13140,
+                "name": "Holmes, Colonel Eugene",
+                "ocount": 5,
+                "path": "00/00/01/31/0000013140.html"
+            },
+            {
+                "id": 46524,
+                "name": "Judgment -- William J. Clinton's",
+                "ocount": 1,
+                "path": "00/00/04/65/0000046524.html"
+            },
+            {
+                "id": 34856,
+                "name": "Kelley, Virginia -- importance in Bill Clinton's life of",
+                "ocount": 1,
+                "path": "00/00/03/48/0000034856.html"
+            },
+            {
+                "id": 13286,
+                "name": "Media -- William J. Clinton's candidacy and",
+                "ocount": 3,
+                "path": "00/00/01/32/0000013286.html"
+            },
+            {
+                "id": 13333,
+                "name": "Needs and motives -- William J. Clinton's",
+                "ocount": 1,
+                "path": "00/00/01/33/0000013333.html"
+            },
+            {
+                "id": 13444,
+                "name": "Policy -- positions of George Bush, William J. Clinton, and Ross Perot",
+                "ocount": 1,
+                "path": "00/00/01/34/0000013444.html"
+            },
+            {
+                "id": 13534,
+                "name": "President(ial)",
+                "ocount": 0,
+                "path": "00/00/01/35/0000013534.html"
+            },
+            {
+                "id": 13568,
+                "name": "Presidential candidates and candidacies -- Paul Tsongas",
+                "ocount": 1,
+                "path": "00/00/01/35/0000013568.html"
+            },
+            {
+                "id": 13864,
+                "name": "Stamina -- of William J. Clinton",
+                "ocount": 1,
+                "path": "00/00/01/38/0000013864.html"
+            },
+            {
+                "id": 13878,
+                "name": "Style -- William J. Clinton's",
+                "ocount": 2,
+                "path": "00/00/01/38/0000013878.html"
+            },
+            {
+                "id": 26141,
+                "name": "Clinton, William Jefferson",
+                "ocount": 61,
+                "path": "00/00/02/61/0000026141.html"
+            }
+        ],
+        "links": [
+            {
+                "source": 26141,
+                "target": 32619
+            },
+            {
+                "source": 26141,
+                "target": 34460
+            },
+            {
+                "source": 26141,
+                "target": 34462
+            },
+            {
+                "source": 26141,
+                "target": 34461
+            },
+            {
+                "source": 26141,
+                "target": 23860
+            },
+            {
+                "source": 26141,
+                "target": 12528
+            },
+            {
+                "source": 26141,
+                "target": 12527
+            },
+            {
+                "source": 26141,
+                "target": 30374
+            },
+            {
+                "source": 26141,
+                "target": 12655
+            },
+            {
+                "source": 26141,
+                "target": 12670
+            },
+            {
+                "source": 26141,
+                "target": 12740
+            },
+            {
+                "source": 26141,
+                "target": 12755
+            },
+            {
+                "source": 26141,
+                "target": 41452
+            },
+            {
+                "source": 26141,
+                "target": 30376
+            },
+            {
+                "source": 26141,
+                "target": 23883
+            },
+            {
+                "source": 26141,
+                "target": 32703
+            },
+            {
+                "source": 26141,
+                "target": 23882
+            },
+            {
+                "source": 26141,
+                "target": 20673
+            },
+            {
+                "source": 26141,
+                "target": 20674
+            },
+            {
+                "source": 26141,
+                "target": 30375
+            },
+            {
+                "source": 26141,
+                "target": 23884
+            },
+            {
+                "source": 26141,
+                "target": 32705
+            },
+            {
+                "source": 26141,
+                "target": 20675
+            },
+            {
+                "source": 26141,
+                "target": 1851
+            },
+            {
+                "source": 26141,
+                "target": 41453
+            },
+            {
+                "source": 26141,
+                "target": 34514
+            },
+            {
+                "source": 26141,
+                "target": 12825
+            },
+            {
+                "source": 26141,
+                "target": 12806
+            },
+            {
+                "source": 26141,
+                "target": 12573
+            },
+            {
+                "source": 26141,
+                "target": 46113
+            },
+            {
+                "source": 26141,
+                "target": 12807
+            },
+            {
+                "source": 26141,
+                "target": 12808
+            },
+            {
+                "source": 26141,
+                "target": 12809
+            },
+            {
+                "source": 26141,
+                "target": 12810
+            },
+            {
+                "source": 26141,
+                "target": 12811
+            },
+            {
+                "source": 26141,
+                "target": 12813
+            },
+            {
+                "source": 26141,
+                "target": 12812
+            },
+            {
+                "source": 26141,
+                "target": 12814
+            },
+            {
+                "source": 26141,
+                "target": 12815
+            },
+            {
+                "source": 26141,
+                "target": 12816
+            },
+            {
+                "source": 26141,
+                "target": 12817
+            },
+            {
+                "source": 26141,
+                "target": 12818
+            },
+            {
+                "source": 26141,
+                "target": 12820
+            },
+            {
+                "source": 26141,
+                "target": 12819
+            },
+            {
+                "source": 26141,
+                "target": 12821
+            },
+            {
+                "source": 26141,
+                "target": 12822
+            },
+            {
+                "source": 26141,
+                "target": 12823
+            },
+            {
+                "source": 26141,
+                "target": 12824
+            },
+            {
+                "source": 26141,
+                "target": 34567
+            },
+            {
+                "source": 26141,
+                "target": 34581
+            },
+            {
+                "source": 26141,
+                "target": 34570
+            },
+            {
+                "source": 26141,
+                "target": 34568
+            },
+            {
+                "source": 26141,
+                "target": 34569
+            },
+            {
+                "source": 26141,
+                "target": 34574
+            },
+            {
+                "source": 26141,
+                "target": 34586
+            },
+            {
+                "source": 26141,
+                "target": 34592
+            },
+            {
+                "source": 26141,
+                "target": 34571
+            },
+            {
+                "source": 26141,
+                "target": 34572
+            },
+            {
+                "source": 26141,
+                "target": 34573
+            },
+            {
+                "source": 26141,
+                "target": 34575
+            },
+            {
+                "source": 26141,
+                "target": 34576
+            },
+            {
+                "source": 26141,
+                "target": 34577
+            },
+            {
+                "source": 26141,
+                "target": 34578
+            },
+            {
+                "source": 26141,
+                "target": 34579
+            },
+            {
+                "source": 26141,
+                "target": 34580
+            },
+            {
+                "source": 26141,
+                "target": 34582
+            },
+            {
+                "source": 26141,
+                "target": 34583
+            },
+            {
+                "source": 26141,
+                "target": 34584
+            },
+            {
+                "source": 26141,
+                "target": 34585
+            },
+            {
+                "source": 26141,
+                "target": 34587
+            },
+            {
+                "source": 26141,
+                "target": 34588
+            },
+            {
+                "source": 26141,
+                "target": 34589
+            },
+            {
+                "source": 26141,
+                "target": 34590
+            },
+            {
+                "source": 26141,
+                "target": 34593
+            },
+            {
+                "source": 26141,
+                "target": 34594
+            },
+            {
+                "source": 26141,
+                "target": 34591
+            },
+            {
+                "source": 26141,
+                "target": 34595
+            },
+            {
+                "source": 26141,
+                "target": 34709
+            },
+            {
+                "source": 26141,
+                "target": 34765
+            },
+            {
+                "source": 26141,
+                "target": 34766
+            },
+            {
+                "source": 26141,
+                "target": 34710
+            },
+            {
+                "source": 26141,
+                "target": 34711
+            },
+            {
+                "source": 26141,
+                "target": 34712
+            },
+            {
+                "source": 26141,
+                "target": 34713
+            },
+            {
+                "source": 26141,
+                "target": 34714
+            },
+            {
+                "source": 26141,
+                "target": 34715
+            },
+            {
+                "source": 26141,
+                "target": 34716
+            },
+            {
+                "source": 26141,
+                "target": 34717
+            },
+            {
+                "source": 26141,
+                "target": 34748
+            },
+            {
+                "source": 26141,
+                "target": 34718
+            },
+            {
+                "source": 26141,
+                "target": 34719
+            },
+            {
+                "source": 26141,
+                "target": 34720
+            },
+            {
+                "source": 26141,
+                "target": 34721
+            },
+            {
+                "source": 26141,
+                "target": 34722
+            },
+            {
+                "source": 26141,
+                "target": 34723
+            },
+            {
+                "source": 26141,
+                "target": 34724
+            },
+            {
+                "source": 26141,
+                "target": 34725
+            },
+            {
+                "source": 26141,
+                "target": 34726
+            },
+            {
+                "source": 26141,
+                "target": 34727
+            },
+            {
+                "source": 26141,
+                "target": 34728
+            },
+            {
+                "source": 26141,
+                "target": 34729
+            },
+            {
+                "source": 26141,
+                "target": 34730
+            },
+            {
+                "source": 26141,
+                "target": 34731
+            },
+            {
+                "source": 26141,
+                "target": 34732
+            },
+            {
+                "source": 26141,
+                "target": 34733
+            },
+            {
+                "source": 26141,
+                "target": 34734
+            },
+            {
+                "source": 26141,
+                "target": 34735
+            },
+            {
+                "source": 26141,
+                "target": 34736
+            },
+            {
+                "source": 26141,
+                "target": 34737
+            },
+            {
+                "source": 26141,
+                "target": 34738
+            },
+            {
+                "source": 26141,
+                "target": 34739
+            },
+            {
+                "source": 26141,
+                "target": 34740
+            },
+            {
+                "source": 26141,
+                "target": 34741
+            },
+            {
+                "source": 26141,
+                "target": 34742
+            },
+            {
+                "source": 26141,
+                "target": 34743
+            },
+            {
+                "source": 26141,
+                "target": 34744
+            },
+            {
+                "source": 26141,
+                "target": 34745
+            },
+            {
+                "source": 26141,
+                "target": 34746
+            },
+            {
+                "source": 26141,
+                "target": 34747
+            },
+            {
+                "source": 26141,
+                "target": 34749
+            },
+            {
+                "source": 26141,
+                "target": 34750
+            },
+            {
+                "source": 26141,
+                "target": 34751
+            },
+            {
+                "source": 26141,
+                "target": 34752
+            },
+            {
+                "source": 26141,
+                "target": 34753
+            },
+            {
+                "source": 26141,
+                "target": 34754
+            },
+            {
+                "source": 26141,
+                "target": 34755
+            },
+            {
+                "source": 26141,
+                "target": 34756
+            },
+            {
+                "source": 26141,
+                "target": 34757
+            },
+            {
+                "source": 26141,
+                "target": 34758
+            },
+            {
+                "source": 26141,
+                "target": 34759
+            },
+            {
+                "source": 26141,
+                "target": 34760
+            },
+            {
+                "source": 26141,
+                "target": 34761
+            },
+            {
+                "source": 26141,
+                "target": 34762
+            },
+            {
+                "source": 26141,
+                "target": 34763
+            },
+            {
+                "source": 26141,
+                "target": 34764
+            },
+            {
+                "source": 26141,
+                "target": 34767
+            },
+            {
+                "source": 26141,
+                "target": 34768
+            },
+            {
+                "source": 26141,
+                "target": 34596
+            },
+            {
+                "source": 26141,
+                "target": 34641
+            },
+            {
+                "source": 26141,
+                "target": 34664
+            },
+            {
+                "source": 26141,
+                "target": 34597
+            },
+            {
+                "source": 26141,
+                "target": 34598
+            },
+            {
+                "source": 26141,
+                "target": 34599
+            },
+            {
+                "source": 26141,
+                "target": 34600
+            },
+            {
+                "source": 26141,
+                "target": 34601
+            },
+            {
+                "source": 26141,
+                "target": 34602
+            },
+            {
+                "source": 26141,
+                "target": 34603
+            },
+            {
+                "source": 26141,
+                "target": 34604
+            },
+            {
+                "source": 26141,
+                "target": 34605
+            },
+            {
+                "source": 26141,
+                "target": 34606
+            },
+            {
+                "source": 26141,
+                "target": 34607
+            },
+            {
+                "source": 26141,
+                "target": 34608
+            },
+            {
+                "source": 26141,
+                "target": 34609
+            },
+            {
+                "source": 26141,
+                "target": 34610
+            },
+            {
+                "source": 26141,
+                "target": 34611
+            },
+            {
+                "source": 26141,
+                "target": 34625
+            },
+            {
+                "source": 26141,
+                "target": 34654
+            },
+            {
+                "source": 26141,
+                "target": 34655
+            },
+            {
+                "source": 26141,
+                "target": 34669
+            },
+            {
+                "source": 26141,
+                "target": 34683
+            },
+            {
+                "source": 26141,
+                "target": 34685
+            },
+            {
+                "source": 26141,
+                "target": 34693
+            },
+            {
+                "source": 26141,
+                "target": 34708
+            },
+            {
+                "source": 26141,
+                "target": 34612
+            },
+            {
+                "source": 26141,
+                "target": 34613
+            },
+            {
+                "source": 26141,
+                "target": 34614
+            },
+            {
+                "source": 26141,
+                "target": 34615
+            },
+            {
+                "source": 26141,
+                "target": 34616
+            },
+            {
+                "source": 26141,
+                "target": 34618
+            },
+            {
+                "source": 26141,
+                "target": 34617
+            },
+            {
+                "source": 26141,
+                "target": 34619
+            },
+            {
+                "source": 26141,
+                "target": 34621
+            },
+            {
+                "source": 26141,
+                "target": 34620
+            },
+            {
+                "source": 26141,
+                "target": 34622
+            },
+            {
+                "source": 26141,
+                "target": 34623
+            },
+            {
+                "source": 26141,
+                "target": 34624
+            },
+            {
+                "source": 26141,
+                "target": 34626
+            },
+            {
+                "source": 26141,
+                "target": 34627
+            },
+            {
+                "source": 26141,
+                "target": 34628
+            },
+            {
+                "source": 26141,
+                "target": 34629
+            },
+            {
+                "source": 26141,
+                "target": 34630
+            },
+            {
+                "source": 26141,
+                "target": 34631
+            },
+            {
+                "source": 26141,
+                "target": 34632
+            },
+            {
+                "source": 26141,
+                "target": 34633
+            },
+            {
+                "source": 26141,
+                "target": 34634
+            },
+            {
+                "source": 26141,
+                "target": 34635
+            },
+            {
+                "source": 26141,
+                "target": 34636
+            },
+            {
+                "source": 26141,
+                "target": 34637
+            },
+            {
+                "source": 26141,
+                "target": 34638
+            },
+            {
+                "source": 26141,
+                "target": 34639
+            },
+            {
+                "source": 26141,
+                "target": 34640
+            },
+            {
+                "source": 26141,
+                "target": 34642
+            },
+            {
+                "source": 26141,
+                "target": 34643
+            },
+            {
+                "source": 26141,
+                "target": 34644
+            },
+            {
+                "source": 26141,
+                "target": 34645
+            },
+            {
+                "source": 26141,
+                "target": 34646
+            },
+            {
+                "source": 26141,
+                "target": 34647
+            },
+            {
+                "source": 26141,
+                "target": 34648
+            },
+            {
+                "source": 26141,
+                "target": 34649
+            },
+            {
+                "source": 26141,
+                "target": 34650
+            },
+            {
+                "source": 26141,
+                "target": 34651
+            },
+            {
+                "source": 26141,
+                "target": 34652
+            },
+            {
+                "source": 26141,
+                "target": 34653
+            },
+            {
+                "source": 26141,
+                "target": 34656
+            },
+            {
+                "source": 26141,
+                "target": 34657
+            },
+            {
+                "source": 26141,
+                "target": 34658
+            },
+            {
+                "source": 26141,
+                "target": 34659
+            },
+            {
+                "source": 26141,
+                "target": 34660
+            },
+            {
+                "source": 26141,
+                "target": 34663
+            },
+            {
+                "source": 26141,
+                "target": 34661
+            },
+            {
+                "source": 26141,
+                "target": 34662
+            },
+            {
+                "source": 26141,
+                "target": 34665
+            },
+            {
+                "source": 26141,
+                "target": 34666
+            },
+            {
+                "source": 26141,
+                "target": 34667
+            },
+            {
+                "source": 26141,
+                "target": 34668
+            },
+            {
+                "source": 26141,
+                "target": 34673
+            },
+            {
+                "source": 26141,
+                "target": 34670
+            },
+            {
+                "source": 26141,
+                "target": 34671
+            },
+            {
+                "source": 26141,
+                "target": 34672
+            },
+            {
+                "source": 26141,
+                "target": 34674
+            },
+            {
+                "source": 26141,
+                "target": 34675
+            },
+            {
+                "source": 26141,
+                "target": 34676
+            },
+            {
+                "source": 26141,
+                "target": 34677
+            },
+            {
+                "source": 26141,
+                "target": 34678
+            },
+            {
+                "source": 26141,
+                "target": 34679
+            },
+            {
+                "source": 26141,
+                "target": 34680
+            },
+            {
+                "source": 26141,
+                "target": 34681
+            },
+            {
+                "source": 26141,
+                "target": 34682
+            },
+            {
+                "source": 26141,
+                "target": 34684
+            },
+            {
+                "source": 26141,
+                "target": 34686
+            },
+            {
+                "source": 26141,
+                "target": 34687
+            },
+            {
+                "source": 26141,
+                "target": 34688
+            },
+            {
+                "source": 26141,
+                "target": 34689
+            },
+            {
+                "source": 26141,
+                "target": 34690
+            },
+            {
+                "source": 26141,
+                "target": 34691
+            },
+            {
+                "source": 26141,
+                "target": 34692
+            },
+            {
+                "source": 26141,
+                "target": 34694
+            },
+            {
+                "source": 26141,
+                "target": 34695
+            },
+            {
+                "source": 26141,
+                "target": 34697
+            },
+            {
+                "source": 26141,
+                "target": 34698
+            },
+            {
+                "source": 26141,
+                "target": 34699
+            },
+            {
+                "source": 26141,
+                "target": 34696
+            },
+            {
+                "source": 26141,
+                "target": 34700
+            },
+            {
+                "source": 26141,
+                "target": 34701
+            },
+            {
+                "source": 26141,
+                "target": 34702
+            },
+            {
+                "source": 26141,
+                "target": 34703
+            },
+            {
+                "source": 26141,
+                "target": 34704
+            },
+            {
+                "source": 26141,
+                "target": 34705
+            },
+            {
+                "source": 26141,
+                "target": 34706
+            },
+            {
+                "source": 26141,
+                "target": 34707
+            },
+            {
+                "source": 26141,
+                "target": 12899
+            },
+            {
+                "source": 26141,
+                "target": 41501
+            },
+            {
+                "source": 26141,
+                "target": 12960
+            },
+            {
+                "source": 26141,
+                "target": 13140
+            },
+            {
+                "source": 26141,
+                "target": 46524
+            },
+            {
+                "source": 26141,
+                "target": 34856
+            },
+            {
+                "source": 26141,
+                "target": 13286
+            },
+            {
+                "source": 26141,
+                "target": 13333
+            },
+            {
+                "source": 26141,
+                "target": 13444
+            },
+            {
+                "source": 26141,
+                "target": 13534
+            },
+            {
+                "source": 26141,
+                "target": 13568
+            },
+            {
+                "source": 26141,
+                "target": 13864
+            },
+            {
+                "source": 26141,
+                "target": 13878
+            }
+        ]
+    }
+}

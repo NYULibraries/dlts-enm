@@ -1,0 +1,538 @@
+{
+    "AlternateNames": [
+        "World War Two",
+        "WW II"
+    ],
+    "DisplayName": "World War II",
+    "EPUBMatches": [
+        {
+            "Title": "Postmodern Legal Movements",
+            "Authors": "Gary Minda",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814755112",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Compensatory Justice",
+            "Authors": "John W. Chapman",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814714539",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Can Unions Survive?",
+            "Authors": "charles b.craver",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814715123",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Please don’t Wish me a Merry Christmas",
+            "Authors": "Stephen M. Feldman.",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814726846",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Originality, Imitation, and Plagiarism",
+            "Authors": "Eisner, Caroline; Vicinus, Martha",
+            "Publisher": "University of Michigan Press and University of Michigan Library",
+            "ISBN": "9780472024445",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field",
+            "Authors": "Klein, Julie Thompson",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472120932",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Christianity and the Holocaust of Hungarian Jewry",
+            "Authors": "Moshe Y. Herczl",
+            "Publisher": "New York University Press New York and London",
+            "ISBN": "9780814735206",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "The Scar That Binds",
+            "Authors": "Keith Beattie",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814713266",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "Authors": "Turrow, Joseph; Tsui, Lokman",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472024537",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project",
+            "Authors": "Alexander, Buzz",
+            "Publisher": "The University of Michigan Press and The University of Michigan Library",
+            "ISBN": "9780472027446",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Freedom to Differ",
+            "Authors": "Diane Helene Miller",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814755969",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "The Prophetic Tradition and Radical Rhetoric in America",
+            "Authors": "James Darsey",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814718766",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "Title": "Out of Work",
+            "Authors": "Richard K. Vedder and Lowell E. Gallaway",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814787922",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "Title": "American Cool",
+            "Authors": "Peter N. Stearns",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814779965",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "Title": "This Time We Knew",
+            "Authors": "Thomas Cushman",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814715352",
+            "NumberOfOccurrences": 21
+        }
+    ],
+    "ExternalRelations": [],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [
+        {
+            "ID": 42464,
+            "Name": "African Americans -- poverty, post-WW II",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 25634,
+            "Name": "antisemitism -- after World War II",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 25714,
+            "Name": "Christianity -- after World War II",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 41475,
+            "Name": "Croatia -- fascist Ustasha regime in World War II",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 41557,
+            "Name": "Genocide -- European state policy in World War II",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 9695,
+            "Name": "Holocaust",
+            "NumberOfOccurrences": 37
+        },
+        {
+            "ID": 23517,
+            "Name": "Immigration -- post-World War II, to America",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 20886,
+            "Name": "Japanese-Americans -- World War II and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34132,
+            "Name": "Jewish identity -- post-World War II",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 41699,
+            "Name": "Nuremberg era: post-World War II trials",
+            "NumberOfOccurrences": 7
+        },
+        {
+            "ID": 39249,
+            "Name": "Post-World War II generation",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 43528,
+            "Name": "segregation -- and World War II",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 13935,
+            "Name": "war",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 13953,
+            "Name": "World",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 43806,
+            "Name": "World War II -- as \"good\" war",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 32194,
+            "Name": "World War II -- as \"historical trauma\"",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 31161,
+            "Name": "World War II -- as marker of postmodernism",
+            "NumberOfOccurrences": 9
+        },
+        {
+            "ID": 31160,
+            "Name": "World War II -- contrasted with World War I",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 43807,
+            "Name": "World War II -- housing starts during",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 41890,
+            "Name": "World War II -- lesson of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 41891,
+            "Name": "World War II -- post-World War II era",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 32193,
+            "Name": "World War II -- visual images",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 32192,
+            "Name": "World War II -- women on home front",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39346,
+            "Name": "World War II -- World War II generation",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39347,
+            "Name": "World War II -- World War II Wechslerians",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 6868,
+            "Name": "World War II, post–",
+            "NumberOfOccurrences": 10
+        },
+        {
+            "ID": 3130,
+            "Name": "World War One",
+            "NumberOfOccurrences": 25
+        }
+    ],
+    "TopicID": 3131,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 42464,
+                "name": "African Americans -- poverty, post-WW II",
+                "ocount": 1,
+                "path": "00/00/04/24/0000042464.html"
+            },
+            {
+                "id": 25634,
+                "name": "antisemitism -- after World War II",
+                "ocount": 3,
+                "path": "00/00/02/56/0000025634.html"
+            },
+            {
+                "id": 25714,
+                "name": "Christianity -- after World War II",
+                "ocount": 1,
+                "path": "00/00/02/57/0000025714.html"
+            },
+            {
+                "id": 41475,
+                "name": "Croatia -- fascist Ustasha regime in World War II",
+                "ocount": 1,
+                "path": "00/00/04/14/0000041475.html"
+            },
+            {
+                "id": 41557,
+                "name": "Genocide -- European state policy in World War II",
+                "ocount": 2,
+                "path": "00/00/04/15/0000041557.html"
+            },
+            {
+                "id": 9695,
+                "name": "Holocaust",
+                "ocount": 37,
+                "path": "00/00/00/96/0000009695.html"
+            },
+            {
+                "id": 23517,
+                "name": "Immigration -- post-World War II, to America",
+                "ocount": 1,
+                "path": "00/00/02/35/0000023517.html"
+            },
+            {
+                "id": 20886,
+                "name": "Japanese-Americans -- World War II and",
+                "ocount": 1,
+                "path": "00/00/02/08/0000020886.html"
+            },
+            {
+                "id": 34132,
+                "name": "Jewish identity -- post-World War II",
+                "ocount": 4,
+                "path": "00/00/03/41/0000034132.html"
+            },
+            {
+                "id": 41699,
+                "name": "Nuremberg era: post-World War II trials",
+                "ocount": 7,
+                "path": "00/00/04/16/0000041699.html"
+            },
+            {
+                "id": 39249,
+                "name": "Post-World War II generation",
+                "ocount": 1,
+                "path": "00/00/03/92/0000039249.html"
+            },
+            {
+                "id": 43528,
+                "name": "segregation -- and World War II",
+                "ocount": 1,
+                "path": "00/00/04/35/0000043528.html"
+            },
+            {
+                "id": 13935,
+                "name": "war",
+                "ocount": 5,
+                "path": "00/00/01/39/0000013935.html"
+            },
+            {
+                "id": 13953,
+                "name": "World",
+                "ocount": 0,
+                "path": "00/00/01/39/0000013953.html"
+            },
+            {
+                "id": 43806,
+                "name": "World War II -- as \"good\" war",
+                "ocount": 1,
+                "path": "00/00/04/38/0000043806.html"
+            },
+            {
+                "id": 32194,
+                "name": "World War II -- as \"historical trauma\"",
+                "ocount": 1,
+                "path": "00/00/03/21/0000032194.html"
+            },
+            {
+                "id": 31161,
+                "name": "World War II -- as marker of postmodernism",
+                "ocount": 9,
+                "path": "00/00/03/11/0000031161.html"
+            },
+            {
+                "id": 31160,
+                "name": "World War II -- contrasted with World War I",
+                "ocount": 1,
+                "path": "00/00/03/11/0000031160.html"
+            },
+            {
+                "id": 43807,
+                "name": "World War II -- housing starts during",
+                "ocount": 1,
+                "path": "00/00/04/38/0000043807.html"
+            },
+            {
+                "id": 41890,
+                "name": "World War II -- lesson of",
+                "ocount": 1,
+                "path": "00/00/04/18/0000041890.html"
+            },
+            {
+                "id": 41891,
+                "name": "World War II -- post-World War II era",
+                "ocount": 1,
+                "path": "00/00/04/18/0000041891.html"
+            },
+            {
+                "id": 32193,
+                "name": "World War II -- visual images",
+                "ocount": 1,
+                "path": "00/00/03/21/0000032193.html"
+            },
+            {
+                "id": 32192,
+                "name": "World War II -- women on home front",
+                "ocount": 1,
+                "path": "00/00/03/21/0000032192.html"
+            },
+            {
+                "id": 39346,
+                "name": "World War II -- World War II generation",
+                "ocount": 1,
+                "path": "00/00/03/93/0000039346.html"
+            },
+            {
+                "id": 39347,
+                "name": "World War II -- World War II Wechslerians",
+                "ocount": 1,
+                "path": "00/00/03/93/0000039347.html"
+            },
+            {
+                "id": 6868,
+                "name": "World War II, post–",
+                "ocount": 10,
+                "path": "00/00/00/68/0000006868.html"
+            },
+            {
+                "id": 3130,
+                "name": "World War One",
+                "ocount": 25,
+                "path": "00/00/00/31/0000003130.html"
+            },
+            {
+                "id": 3131,
+                "name": "World War II",
+                "ocount": 59,
+                "path": "00/00/00/31/0000003131.html"
+            }
+        ],
+        "links": [
+            {
+                "source": 3131,
+                "target": 42464
+            },
+            {
+                "source": 3131,
+                "target": 25634
+            },
+            {
+                "source": 3131,
+                "target": 25714
+            },
+            {
+                "source": 3131,
+                "target": 41475
+            },
+            {
+                "source": 3131,
+                "target": 41557
+            },
+            {
+                "source": 3131,
+                "target": 9695
+            },
+            {
+                "source": 3131,
+                "target": 23517
+            },
+            {
+                "source": 3131,
+                "target": 20886
+            },
+            {
+                "source": 3131,
+                "target": 34132
+            },
+            {
+                "source": 3131,
+                "target": 41699
+            },
+            {
+                "source": 3131,
+                "target": 39249
+            },
+            {
+                "source": 3131,
+                "target": 43528
+            },
+            {
+                "source": 3131,
+                "target": 13935
+            },
+            {
+                "source": 3131,
+                "target": 13953
+            },
+            {
+                "source": 3131,
+                "target": 43806
+            },
+            {
+                "source": 3131,
+                "target": 32194
+            },
+            {
+                "source": 3131,
+                "target": 31161
+            },
+            {
+                "source": 3131,
+                "target": 31160
+            },
+            {
+                "source": 3131,
+                "target": 43807
+            },
+            {
+                "source": 3131,
+                "target": 41890
+            },
+            {
+                "source": 3131,
+                "target": 41891
+            },
+            {
+                "source": 3131,
+                "target": 32193
+            },
+            {
+                "source": 3131,
+                "target": 32192
+            },
+            {
+                "source": 3131,
+                "target": 39346
+            },
+            {
+                "source": 3131,
+                "target": 39347
+            },
+            {
+                "source": 3131,
+                "target": 6868
+            },
+            {
+                "source": 3131,
+                "target": 3130
+            }
+        ]
+    }
+}

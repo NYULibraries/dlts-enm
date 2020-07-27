@@ -1,0 +1,738 @@
+{
+    "AlternateNames": [
+        "New York Times"
+    ],
+    "DisplayName": "The New York Times",
+    "EPUBMatches": [
+        {
+            "Title": "The Chrysanthemum and the Eagle",
+            "Authors": "Ryuzo Sato",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814780213",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project",
+            "Authors": "Alexander, Buzz",
+            "Publisher": "The University of Michigan Press and The University of Michigan Library",
+            "ISBN": "9780472027446",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "FILIPINOS REPRESENT",
+            "Authors": "Antonio T. Tiongson Jr.",
+            "Publisher": "University of Minnesota Press",
+            "ISBN": "9780816687848",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Civic Engagement in the Wake of Katrina",
+            "Authors": "Amy Koritz and George J. Sanchez",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472024483",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Poetry's Afterlife: Verse in the Digital Age",
+            "Authors": "Stein, Kevin",
+            "Publisher": "The University of Michigan Press",
+            "ISBN": "9780472026708",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+            "Authors": "Schur, Richard L.",
+            "Publisher": "The University of Michigan Press and The University of Michigan Library",
+            "ISBN": "9780472024490",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Integrity and Conscience",
+            "Authors": "Ian Shapiro",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814780978",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle",
+            "Authors": "Elizabeth Carolyn Miller",
+            "Publisher": "University of Michigan Press and University of Michigan Library",
+            "ISBN": "9780472024469",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Blacks in the Jewish Mind",
+            "Authors": "Seth Forman",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814726815",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "The Lavender Vote",
+            "Authors": "Mark Hertzog",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814735305",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Originality, Imitation, and Plagiarism",
+            "Authors": "Eisner, Caroline; Vicinus, Martha",
+            "Publisher": "University of Michigan Press and University of Michigan Library",
+            "ISBN": "9780472024445",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field",
+            "Authors": "Klein, Julie Thompson",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472120932",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Imagining the Global: Transnational Media and Popular Culture Beyond East and West",
+            "Authors": "Darling-Wolf, Fabienne",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472120796",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "Title": "Internationalizing “International Communication”",
+            "Authors": "Lee, Chin-Chuan",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472120789",
+            "NumberOfOccurrences": 7
+        },
+        {
+            "Title": "By Any Media Necessary",
+            "Authors": "Henry Jenkins et al",
+            "Publisher": "New York University Press",
+            "ISBN": "9781479899982",
+            "NumberOfOccurrences": 7
+        },
+        {
+            "Title": "Clarence Thomas and the Tough Love Crowd",
+            "Authors": "Ronald Suresh Roberts",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814774816",
+            "NumberOfOccurrences": 9
+        },
+        {
+            "Title": "This Time We Knew",
+            "Authors": "Thomas Cushman",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814715352",
+            "NumberOfOccurrences": 17
+        },
+        {
+            "Title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "Authors": "Turrow, Joseph; Tsui, Lokman",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472024537",
+            "NumberOfOccurrences": 22
+        }
+    ],
+    "ExternalRelations": [],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [
+        {
+            "ID": 8025,
+            "Name": "@nytimes",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 46069,
+            "Name": "@times",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 8088,
+            "Name": "Bits",
+            "NumberOfOccurrences": 8
+        },
+        {
+            "ID": 9790,
+            "Name": "New York",
+            "NumberOfOccurrences": 27
+        },
+        {
+            "ID": 23987,
+            "Name": "New York Times -- as factor in Glick's victory",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 23985,
+            "Name": "New York Times -- attitudes toward homosexuality",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 23986,
+            "Name": "New York Times -- endorsement of Deborah Glick",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 21018,
+            "Name": "New York Times -- on baby bonus plan",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 21019,
+            "Name": "New York Times -- on FSX",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 21020,
+            "Name": "New York Times -- on internationalization",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 21022,
+            "Name": "New York Times -- on Pickens",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 21021,
+            "Name": "New York Times -- on The Japan That Can Say \"No\"",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 4819,
+            "Name": "New York Times Book Review",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 8392,
+            "Name": "New York Times Company",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 8373,
+            "Name": "New York Times Electronic Media Company",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 2914,
+            "Name": "New York Times Magazine",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 35785,
+            "Name": "New York Times vs. Sullivan",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 16115,
+            "Name": "New York Times, story on disabilities",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 29968,
+            "Name": "New York Times, Terry Broome story",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 9792,
+            "Name": "News",
+            "NumberOfOccurrences": 41
+        },
+        {
+            "ID": 10608,
+            "Name": "Room for Debate (New York Times)",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 8376,
+            "Name": "The New York Times -- advantage",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 8377,
+            "Name": "The New York Times -- buyouts",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 8137,
+            "Name": "The New York Times -- circulation decline",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 8379,
+            "Name": "The New York Times -- digital subscriptions",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 8380,
+            "Name": "The New York Times -- established",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 8381,
+            "Name": "The New York Times -- future",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 8375,
+            "Name": "The New York Times -- in 2010",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 8382,
+            "Name": "The New York Times -- layoffs",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 8383,
+            "Name": "The New York Times -- newsstand price",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 8384,
+            "Name": "The New York Times -- ownership",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 8385,
+            "Name": "The New York Times -- print subscriptions",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 8386,
+            "Name": "The New York Times -- staff reductions",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 8387,
+            "Name": "The New York Times -- state of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 8388,
+            "Name": "The New York Times -- stock ownership",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 8389,
+            "Name": "The New York Times -- stocks",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 8390,
+            "Name": "The New York Times -- Web history",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 8391,
+            "Name": "The New York Times -- Web site",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 937,
+            "Name": "timing",
+            "NumberOfOccurrences": 7
+        }
+    ],
+    "TopicID": 826,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 8025,
+                "name": "@nytimes",
+                "ocount": 2,
+                "path": "00/00/00/80/0000008025.html"
+            },
+            {
+                "id": 46069,
+                "name": "@times",
+                "ocount": 1,
+                "path": "00/00/04/60/0000046069.html"
+            },
+            {
+                "id": 8088,
+                "name": "Bits",
+                "ocount": 8,
+                "path": "00/00/00/80/0000008088.html"
+            },
+            {
+                "id": 9790,
+                "name": "New York",
+                "ocount": 27,
+                "path": "00/00/00/97/0000009790.html"
+            },
+            {
+                "id": 23987,
+                "name": "New York Times -- as factor in Glick's victory",
+                "ocount": 4,
+                "path": "00/00/02/39/0000023987.html"
+            },
+            {
+                "id": 23985,
+                "name": "New York Times -- attitudes toward homosexuality",
+                "ocount": 1,
+                "path": "00/00/02/39/0000023985.html"
+            },
+            {
+                "id": 23986,
+                "name": "New York Times -- endorsement of Deborah Glick",
+                "ocount": 1,
+                "path": "00/00/02/39/0000023986.html"
+            },
+            {
+                "id": 21018,
+                "name": "New York Times -- on baby bonus plan",
+                "ocount": 1,
+                "path": "00/00/02/10/0000021018.html"
+            },
+            {
+                "id": 21019,
+                "name": "New York Times -- on FSX",
+                "ocount": 1,
+                "path": "00/00/02/10/0000021019.html"
+            },
+            {
+                "id": 21020,
+                "name": "New York Times -- on internationalization",
+                "ocount": 1,
+                "path": "00/00/02/10/0000021020.html"
+            },
+            {
+                "id": 21022,
+                "name": "New York Times -- on Pickens",
+                "ocount": 1,
+                "path": "00/00/02/10/0000021022.html"
+            },
+            {
+                "id": 21021,
+                "name": "New York Times -- on The Japan That Can Say \"No\"",
+                "ocount": 1,
+                "path": "00/00/02/10/0000021021.html"
+            },
+            {
+                "id": 4819,
+                "name": "New York Times Book Review",
+                "ocount": 3,
+                "path": "00/00/00/48/0000004819.html"
+            },
+            {
+                "id": 8392,
+                "name": "New York Times Company",
+                "ocount": 5,
+                "path": "00/00/00/83/0000008392.html"
+            },
+            {
+                "id": 8373,
+                "name": "New York Times Electronic Media Company",
+                "ocount": 2,
+                "path": "00/00/00/83/0000008373.html"
+            },
+            {
+                "id": 2914,
+                "name": "New York Times Magazine",
+                "ocount": 5,
+                "path": "00/00/00/29/0000002914.html"
+            },
+            {
+                "id": 35785,
+                "name": "New York Times vs. Sullivan",
+                "ocount": 1,
+                "path": "00/00/03/57/0000035785.html"
+            },
+            {
+                "id": 16115,
+                "name": "New York Times, story on disabilities",
+                "ocount": 1,
+                "path": "00/00/01/61/0000016115.html"
+            },
+            {
+                "id": 29968,
+                "name": "New York Times, Terry Broome story",
+                "ocount": 1,
+                "path": "00/00/02/99/0000029968.html"
+            },
+            {
+                "id": 9792,
+                "name": "News",
+                "ocount": 41,
+                "path": "00/00/00/97/0000009792.html"
+            },
+            {
+                "id": 10608,
+                "name": "Room for Debate (New York Times)",
+                "ocount": 1,
+                "path": "00/00/01/06/0000010608.html"
+            },
+            {
+                "id": 8376,
+                "name": "The New York Times -- advantage",
+                "ocount": 2,
+                "path": "00/00/00/83/0000008376.html"
+            },
+            {
+                "id": 8377,
+                "name": "The New York Times -- buyouts",
+                "ocount": 3,
+                "path": "00/00/00/83/0000008377.html"
+            },
+            {
+                "id": 8137,
+                "name": "The New York Times -- circulation decline",
+                "ocount": 4,
+                "path": "00/00/00/81/0000008137.html"
+            },
+            {
+                "id": 8379,
+                "name": "The New York Times -- digital subscriptions",
+                "ocount": 3,
+                "path": "00/00/00/83/0000008379.html"
+            },
+            {
+                "id": 8380,
+                "name": "The New York Times -- established",
+                "ocount": 3,
+                "path": "00/00/00/83/0000008380.html"
+            },
+            {
+                "id": 8381,
+                "name": "The New York Times -- future",
+                "ocount": 2,
+                "path": "00/00/00/83/0000008381.html"
+            },
+            {
+                "id": 8375,
+                "name": "The New York Times -- in 2010",
+                "ocount": 2,
+                "path": "00/00/00/83/0000008375.html"
+            },
+            {
+                "id": 8382,
+                "name": "The New York Times -- layoffs",
+                "ocount": 4,
+                "path": "00/00/00/83/0000008382.html"
+            },
+            {
+                "id": 8383,
+                "name": "The New York Times -- newsstand price",
+                "ocount": 1,
+                "path": "00/00/00/83/0000008383.html"
+            },
+            {
+                "id": 8384,
+                "name": "The New York Times -- ownership",
+                "ocount": 2,
+                "path": "00/00/00/83/0000008384.html"
+            },
+            {
+                "id": 8385,
+                "name": "The New York Times -- print subscriptions",
+                "ocount": 1,
+                "path": "00/00/00/83/0000008385.html"
+            },
+            {
+                "id": 8386,
+                "name": "The New York Times -- staff reductions",
+                "ocount": 1,
+                "path": "00/00/00/83/0000008386.html"
+            },
+            {
+                "id": 8387,
+                "name": "The New York Times -- state of",
+                "ocount": 2,
+                "path": "00/00/00/83/0000008387.html"
+            },
+            {
+                "id": 8388,
+                "name": "The New York Times -- stock ownership",
+                "ocount": 4,
+                "path": "00/00/00/83/0000008388.html"
+            },
+            {
+                "id": 8389,
+                "name": "The New York Times -- stocks",
+                "ocount": 1,
+                "path": "00/00/00/83/0000008389.html"
+            },
+            {
+                "id": 8390,
+                "name": "The New York Times -- Web history",
+                "ocount": 2,
+                "path": "00/00/00/83/0000008390.html"
+            },
+            {
+                "id": 8391,
+                "name": "The New York Times -- Web site",
+                "ocount": 1,
+                "path": "00/00/00/83/0000008391.html"
+            },
+            {
+                "id": 937,
+                "name": "timing",
+                "ocount": 7,
+                "path": "00/00/00/09/0000000937.html"
+            },
+            {
+                "id": 826,
+                "name": "The New York Times",
+                "ocount": 89,
+                "path": "00/00/00/08/0000000826.html"
+            }
+        ],
+        "links": [
+            {
+                "source": 826,
+                "target": 8025
+            },
+            {
+                "source": 826,
+                "target": 46069
+            },
+            {
+                "source": 826,
+                "target": 8088
+            },
+            {
+                "source": 826,
+                "target": 9790
+            },
+            {
+                "source": 826,
+                "target": 23987
+            },
+            {
+                "source": 826,
+                "target": 23985
+            },
+            {
+                "source": 826,
+                "target": 23986
+            },
+            {
+                "source": 826,
+                "target": 21018
+            },
+            {
+                "source": 826,
+                "target": 21019
+            },
+            {
+                "source": 826,
+                "target": 21020
+            },
+            {
+                "source": 826,
+                "target": 21022
+            },
+            {
+                "source": 826,
+                "target": 21021
+            },
+            {
+                "source": 826,
+                "target": 4819
+            },
+            {
+                "source": 826,
+                "target": 8392
+            },
+            {
+                "source": 826,
+                "target": 8373
+            },
+            {
+                "source": 826,
+                "target": 2914
+            },
+            {
+                "source": 826,
+                "target": 35785
+            },
+            {
+                "source": 826,
+                "target": 16115
+            },
+            {
+                "source": 826,
+                "target": 29968
+            },
+            {
+                "source": 826,
+                "target": 9792
+            },
+            {
+                "source": 826,
+                "target": 10608
+            },
+            {
+                "source": 826,
+                "target": 8376
+            },
+            {
+                "source": 826,
+                "target": 8377
+            },
+            {
+                "source": 826,
+                "target": 8137
+            },
+            {
+                "source": 826,
+                "target": 8379
+            },
+            {
+                "source": 826,
+                "target": 8380
+            },
+            {
+                "source": 826,
+                "target": 8381
+            },
+            {
+                "source": 826,
+                "target": 8375
+            },
+            {
+                "source": 826,
+                "target": 8382
+            },
+            {
+                "source": 826,
+                "target": 8383
+            },
+            {
+                "source": 826,
+                "target": 8384
+            },
+            {
+                "source": 826,
+                "target": 8385
+            },
+            {
+                "source": 826,
+                "target": 8386
+            },
+            {
+                "source": 826,
+                "target": 8387
+            },
+            {
+                "source": 826,
+                "target": 8388
+            },
+            {
+                "source": 826,
+                "target": 8389
+            },
+            {
+                "source": 826,
+                "target": 8390
+            },
+            {
+                "source": 826,
+                "target": 8391
+            },
+            {
+                "source": 826,
+                "target": 937
+            }
+        ]
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "AlternateNames": [
+        "Amazon"
+    ],
+    "DisplayName": "Amazon.com",
+    "EPUBMatches": [
+        {
+            "Title": "Originality, Imitation, and Plagiarism",
+            "Authors": "Eisner, Caroline; Vicinus, Martha",
+            "Publisher": "University of Michigan Press and University of Michigan Library",
+            "ISBN": "9780472024445",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "Authors": "Turrow, Joseph; Tsui, Lokman",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472024537",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Making News at The New York Times",
+            "Authors": "Usher, Nikki",
+            "Publisher": "The University of Michigan Press",
+            "ISBN": "9780472120499",
+            "NumberOfOccurrences": 3
+        }
+    ],
+    "ExternalRelations": [
+        {
+            "Relationship": "exactMatch",
+            "URL": "http://viaf.org/viaf/173278077",
+            "Vocabulary": "VIAF"
+        },
+        {
+            "Relationship": "exactMatch",
+            "URL": "https://www.wikidata.org/entity/Q3884",
+            "Vocabulary": "Wikidata"
+        }
+    ],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [
+        {
+            "ID": 8086,
+            "Name": "Bilton, Nick -- \"Three Reasons Why the iPad WON'T Kill Amazon's Kindle\"",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 8044,
+            "Name": "Kindle, digital book reader by Amazon",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 8503,
+            "Name": "Stone, Brad, \"Three Reasons Why the iPad WON'T Kill Amazon's Kindle\"",
+            "NumberOfOccurrences": 1
+        }
+    ],
+    "TopicID": 2458,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 8086,
+                "name": "Bilton, Nick -- \"Three Reasons Why the iPad WON'T Kill Amazon's Kindle\"",
+                "ocount": 2,
+                "path": "00/00/00/80/0000008086.html"
+            },
+            {
+                "id": 8044,
+                "name": "Kindle, digital book reader by Amazon",
+                "ocount": 5,
+                "path": "00/00/00/80/0000008044.html"
+            },
+            {
+                "id": 8503,
+                "name": "Stone, Brad, \"Three Reasons Why the iPad WON'T Kill Amazon's Kindle\"",
+                "ocount": 1,
+                "path": "00/00/00/85/0000008503.html"
+            },
+            {
+                "id": 2458,
+                "name": "Amazon.com",
+                "ocount": 7,
+                "path": "00/00/00/24/0000002458.html"
+            }
+        ],
+        "links": [
+            {
+                "source": 2458,
+                "target": 8086
+            },
+            {
+                "source": 2458,
+                "target": 8044
+            },
+            {
+                "source": 2458,
+                "target": 8503
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "AlternateNames": [],
+    "DisplayName": "Zinn, Howard",
+    "EPUBMatches": [
+        {
+            "Title": "Health Rights Are Civil Rights",
+            "Authors": "Jenna M. Loyd",
+            "Publisher": "University of Minnesota Press",
+            "ISBN": "9780816676507",
+            "NumberOfOccurrences": 2
+        }
+    ],
+    "ExternalRelations": [
+        {
+            "Relationship": "exactMatch",
+            "URL": "http://id.worldcat.org/fast/1734796",
+            "Vocabulary": "FAST"
+        },
+        {
+            "Relationship": "exactMatch",
+            "URL": "http://id.loc.gov/authorities/names/n79059761",
+            "Vocabulary": "Library of Congress"
+        },
+        {
+            "Relationship": "exactMatch",
+            "URL": "http://viaf.org/viaf/106986472",
+            "Vocabulary": "VIAF"
+        },
+        {
+            "Relationship": "exactMatch",
+            "URL": "https://www.wikidata.org/entity/Q119546",
+            "Vocabulary": "Wikidata"
+        }
+    ],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [],
+    "TopicID": 43816,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 43816,
+                "name": "Zinn, Howard",
+                "ocount": 2,
+                "path": "00/00/04/38/0000043816.html"
+            }
+        ],
+        "links": []
+    }
+}

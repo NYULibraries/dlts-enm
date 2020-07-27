@@ -48,6 +48,7 @@ vendor/
 
 sitegen/testdata/cache/*
 !sitegen/testdata/cache/sitegen-browsetopiclists/
+!sitegen/testdata/cache/sitegen-topicpages/
 
 sitegen/testdata/tmp/*
 !sitegen/testdata/tmp/.commit-empty-directory

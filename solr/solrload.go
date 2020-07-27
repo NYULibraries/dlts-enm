@@ -19,6 +19,8 @@ type SolrDoc map[string]interface{}
 
 var epubsNumberOfPages map[string]int
 
+var PageIDs []int
+
 func Load() error {
 	if Source == "database" {
 		return LoadFromDatabase()
@@ -88,7 +90,13 @@ func LoadFromDatabase() error {
 		epubsNumberOfPages[ epubNumberOfPages.Isbn ] = int(epubNumberOfPages.NumberOfPages)
 	}
 
-	pages := db.GetPagesAll()
+	var pages []*db.Page
+	if (len(PageIDs) > 0) {
+		pages = db.GetPagesByPageIDs(PageIDs)
+	} else {
+		pages = db.GetPagesAll()
+	}
+
 	for _, page := range pages {
 		err := AddPage(page)
 		if err != nil {

@@ -32,6 +32,10 @@ func Load() error {
 }
 
 func LoadFromCache() error {
+	// Make sure PageIDs is sorted because sort.SearchInts() is used to later.
+	if (len(PageIDs) > 0) {
+		sort.Ints(PageIDs)
+	}
 	err := filepath.Walk(cache.SolrLoadCache, func(path string, info os.FileInfo, err error) error {
 		if (err != nil) {
 			return err
@@ -50,6 +54,17 @@ func LoadFromCache() error {
 			}
 
 			addDoc := solrDocWithFloat64Values["add"].([]interface{})[0].(map[string]interface{})
+
+			if (len(PageIDs) > 0) {
+				pageIDToTest := int(addDoc["id"].(float64))
+				i := sort.SearchInts(PageIDs, pageIDToTest)
+				if i < len(PageIDs) && PageIDs[i] == pageIDToTest {
+					// Add this page
+				} else {
+					// Skip this page
+					return nil
+				}
+			}
 
 			solrDoc := SolrDoc{
 				"add": []interface{}{

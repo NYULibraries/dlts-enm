@@ -3,6 +3,7 @@ package solr
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/nyulibraries/dlts-enm/cache"
 	"io/ioutil"
 	"log"
 	"os"
@@ -16,6 +17,8 @@ import (
 
 	"github.com/nyulibraries/dlts-enm/util"
 )
+
+const testCache = "./testdata/cache"
 
 type solrStub struct {
 	URL     string
@@ -73,10 +76,14 @@ func getGoldenFileLocationIDs() {
 }
 
 func TestLoadFromCache(t *testing.T) {
+	cache.SetCacheLocation(testCache)
+
 	_Load(t, "cache")
 }
 
 func TestLoadFromDatabase(t *testing.T) {
+	cache.SetCacheLocation(cache.DefaultCache)
+
 	_Load(t, "database")
 }
 

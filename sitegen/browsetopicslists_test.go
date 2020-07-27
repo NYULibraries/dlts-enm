@@ -11,8 +11,6 @@ import (
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
-const testCache = "./testdata/cache"
-
 func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromCache(t *testing.T) {
 	GoogleAnalytics = false
 

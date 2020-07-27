@@ -99,6 +99,7 @@ func GetPagesAll() (pages []*Page) {
 }
 
 func GetPagesByPageIDs(pageIDs []int) (pagesByPageIDs []*Page) {
+	// Need to sort pageIDs for the sort.SearchInts() call later.
 	sort.Ints(pageIDs)
 
 	pagesByPageIDs = make([]*Page, 0)
@@ -163,6 +164,7 @@ func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*TopicAlternat
 }
 
 func GetTopicsWithAlternateNamesByTopicIDs(topicIDs []string) (topicsWithAlternateNamesByTopicIDs []*TopicAlternateName) {
+	// Need to sort topicIDs for the sort.SearchStrings() call later.
 	sort.Strings(topicIDs)
 
 	topicsWithAlternateNamesByTopicIDs = make([]*TopicAlternateName, 0)

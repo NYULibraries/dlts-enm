@@ -1,0 +1,24 @@
+{
+    "add": [
+        {
+            "authors": "John Marshall",
+            "epubNumberOfPages": 373,
+            "id": 13112,
+            "isbn": "9780814731437",
+            "pageLocalId": "page_268",
+            "pageNumberForDisplay": "268",
+            "pageSequenceNumber": 279,
+            "pageText": "The failure of the Senate to remove Chase is usually pointed to by historians as a victory for judicial independence, and as having established the precedent that a judge could not be removed merely for stating political views from the bench. More correctly, however, the proceeding ought to be seen as establishing the principle that it was dangerous for a judge, such as Chase, to articulate political philosophy, particularly one at odds with the prevailing democratic ethos of the Jeffersonians.\nThere were some apparent inconsistencies in Chase’s jurisprudence and politics, but they were more apparent than real. He opposed the federal Constitution before its ratification, but he became the staunchest of Federalist defenders of the Adams administration against its critics. He was the only Federalist justice to reject the federal common law of crimes, but, as indicated earlier, he believed that there were certain supraconstitutional principles that restrained any and all governments. On at least one occasion he expressed reservations about the power of the Supreme Court to reject legislative acts on the grounds that they conflicted with the federal Constitution, but on other occasions, most notably Callender’s trial before a hostile Virginia audience, he made clear that the Court was the only body that could declare that a law was unconstitutional. He had originally been a professed champion of the people, particularly against the aristocratic proprietary interest in Maryland, but he ended his career opposed to the party of Madison and Jefferson, and as a judge who carefully circumscribed the operation of the petit jury, arguably the most important popular institution in the legal system.\nMany of these inconsistencies evaporate when Chase’s actions are put in context. He appears to have believed that the moment for active popular sovereignty was the time of the American Revolution, but that once the American people had established a federal Constitution, their duties were to obey the rules of the government they had established, to refrain from resisting its laws, and to take directions from their constitutionally selected judges. Throughout his life Chase was a firm supporter of the notion that judges had limited discretion, circumscribed by the written word of statute or constitution. Nevertheless, he believed that there were certain things no government could do and still call itself “Republican.” For example, even if the Constitution was silent on the point, Chase indicated in Calder, no government could make an act criminal and then proceed to punish those ",
+            "publisher": "New York University Press",
+            "title": "Seriatim",
+            "topicNames": [
+                "Calder v. Bull (1798)"
+            ],
+            "topicNamesForDisplay": "[[\"Calder v. Bull (1798)\"]]",
+            "topicNames_facet": [
+                "Calder v. Bull (1798)"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "add": [
+        {
+            "authors": "Cummings, Robert E.; Barton, Matt",
+            "epubNumberOfPages": 276,
+            "id": 1380,
+            "isbn": "9780472024513",
+            "pageLocalId": "page_177",
+            "pageNumberForDisplay": "177",
+            "pageSequenceNumber": 197,
+            "pageText": "Is There a Wiki in This Class? Wikibooks and the Future of Higher Education\nMatt Barton\nFor teachers of writing, however, the most immediate need is for a pedagogy of collaboration, one that would view writing as always shared and social; writers as constantly building and negotiating meaning with and among others; and evaluation as based at least in part on a “range of selves” and on communal efforts.\n—ANDREA LUNSFORD AND LISA EDE\nIn one way, my intellectual life has become much easier. I can now tell my colleagues that “I study wikis” without sounding like I'm talking about a fuzzy creature from Star Trek or a Hawaiian mixed drink. As of 2006, the world knew about Wikipedia. After all, a Web site with 961,000 articles in English on every imaginable topic is as difficult to miss as the winter flu.\nThere is, however, also a downside to my colleagues' tacit knowledge about wikis: They tend to view them cynically, as though a Web site “that anyone could edit” is a Web site that only an idiot would trust. The very idea that a professor was referring students to Wikipedia or using it to teach her courses struck them as the height of absurdity. Wikis seem to represent an almost anti-academic perspective toward knowledge—the triumph of Vandals who have overrun the library. Some of us may agree with Wikipedia cofounder and expatriate Larry Sanger, who argues incessantly to anyone willing to listen that a little elitism is all Wikipedia really needs.1 The academy understands the need for this elitism better than most. As Bruce Thyer points out in his book on scholarly publishing, “Generally speaking, the higher the rejection rate of a given journal, the more prestigious it is seen to be.”2 In the academy, an individual's prestige may partially be determined by how well he is able to suppress other voices.\n",
+            "publisher": "University of Michigan Press and University of Michigan Library",
+            "title": "Wiki Writing: Collaborative Learning in the College Classroom",
+            "topicNames": [
+                "Ede, Lisa",
+                "Lunsford, Andrea",
+                "Thyer, Bruce",
+                "Wikipedia"
+            ],
+            "topicNamesForDisplay": "[[\"Ede, Lisa\"],[\"Lunsford, Andrea\"],[\"Thyer, Bruce\"],[\"Wikipedia\"]]",
+            "topicNames_facet": [
+                "Ede, Lisa",
+                "Lunsford, Andrea",
+                "Thyer, Bruce",
+                "Wikipedia"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

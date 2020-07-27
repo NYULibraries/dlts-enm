@@ -1,0 +1,31 @@
+{
+    "add": [
+        {
+            "authors": "Mark G. Winiarski",
+            "epubNumberOfPages": 392,
+            "id": 22491,
+            "isbn": "9780814793114",
+            "pageLocalId": "page_241",
+            "pageNumberForDisplay": "241",
+            "pageSequenceNumber": 275,
+            "pageText": "15 Case Management: Coordination of Service Delivery for HIV-Infected Individuals\nDavid D. Barney and Betty E. S. Duran\n\nMy name is Bobby, and I want to tell you about the Ahalaya Project in Oklahoma City. I was referred to Ahalaya after being diagnosed with HIV in 1992. The day my results came back, the HIV counselor with the health maintenance clinic of the Oklahoma City-County Health Department suggested I meet someone from an American Indian organization that provided HIV/AIDS case management. That same evening I was introduced to Gloria Bellymule, project manager for Ahalaya, and she invited me to visit their offices.\nGloria, my case manager, helped me get services that I needed and may not have received without her help. These included referrals to a homeless shelter when I left my partner, a food pantry for food when I ran out of food stamps, and to Salvation Army for clothing. She also helped me apply for jobs and housing. I needed help with making doctor appointments and getting my medications. Staff provided counseling and helped with other personal stuff like taxes.\nWhen I first learned I was HIV-positive, I felt afraid, alone, and angry, but after attending client support group, I realized I was not alone. I have been a participant in recording a prevention education video on HIV/AIDS and have volunteered as a PWA speaker at conferences and workshops in Oklahoma, New Mexico, and California. I have also been temporarily employed by the project to conduct surveys.\nI have participated in sweat lodge and other Indian ceremonies that have helped me in connecting with my American Indian heritage. I believe that all the services and healing ceremonies have helped me build self-esteem and obtain independence. Through ",
+            "publisher": "New York University Press",
+            "title": "HIV Mental Health for the 21st Century",
+            "topicNames": [
+                "American Indians -- case management",
+                "Case management -- coordination of services",
+                "Case management",
+                "Models of service delivery -- case management",
+                "Models of service delivery, case management"
+            ],
+            "topicNamesForDisplay": "[[\"American Indians -- case management\"],[\"Case management -- coordination of services\"],[\"Case management\"],[\"Models of service delivery -- case management\",\"Models of service delivery, case management\"]]",
+            "topicNames_facet": [
+                "American Indians -- case management",
+                "Case management -- coordination of services",
+                "Case management",
+                "Models of service delivery -- case management"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

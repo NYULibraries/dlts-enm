@@ -1,0 +1,26 @@
+{
+    "add": [
+        {
+            "authors": "Sonia Livingstone and Julian Sefton-Green",
+            "epubNumberOfPages": 367,
+            "id": 7730,
+            "isbn": "9781479824243",
+            "pageLocalId": "page_268",
+            "pageNumberForDisplay": "268",
+            "pageSequenceNumber": 277,
+            "pageText": "individuals and also classified as members of the class, the year group, the family, or someone else.\nEgo networks were hand drawn by each child. By contrast, to produce the whole-class network, JUNG (Java Universal Network Framework) API was used for data visualization, where each node represents an individual and each connection between the nodes is a link (or “edge”). For the overall whole-class network (based on questions 2–7 and 9), links were weighted with a value of 0.2, if a student answered yes for another student (for a single question); if a student answered yes five times, the score was aggregated to 1.0 and shown in the network as a thicker line. If nodes have higher connectivity, they cluster together in the network (although the space between nodes does not reflect actual distance). For example, Giselle and Sara have higher connectivity between them, and hence they are closer to each other. The same is the case with Max, Alice, and Jenna. The nodes for Fesse, Gideon, Nick, Jamie, and Sebastian are in the center because they have highest connectivity with each other. For ease of comparison, each whole-class network (based on the separate questions) uses the positioning of nodes established for the overall network.\n\n\n",
+            "publisher": "New York University Press",
+            "title": "The Class: Living and Learning in the Digital Age",
+            "topicNames": [
+                "ego network",
+                "fieldwork -- social network visualization"
+            ],
+            "topicNamesForDisplay": "[[\"ego network\"],[\"fieldwork -- social network visualization\"]]",
+            "topicNames_facet": [
+                "ego network",
+                "fieldwork -- social network visualization"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

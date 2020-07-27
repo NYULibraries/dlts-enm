@@ -1,0 +1,20 @@
+{
+    "add": [
+        {
+            "authors": "Cohen, Daniel J.; Scheinfeldt, Tom",
+            "epubNumberOfPages": 176,
+            "id": 4929,
+            "isbn": "9780472029471",
+            "pageLocalId": "page_8",
+            "pageNumberForDisplay": "8",
+            "pageSequenceNumber": 16,
+            "pageText": "\ninnovative; also, it is a product of your relationship to that systemic knowledge structure—to the computer languages, networking protocols, etc.\nThe culture of the first people to use the term “hack” produced a second-order meaning, as well. A hack is a practical joke, a playful subversion or gaming of a system. The online MIT Gallery of Hacks presents a fascinating history of such hacks on MIT's campus, from Caltech's cannon mysteriously disappearing and reappearing at MIT, to a campus police car appearing on the roof of the MIT dome.1 These “hacks” are not really so different, however, from the software hacks discussed earlier. There is a sense of play in coding, too—it is not apparent to everyone, but it is there. The fundamental action here is the same: it is the clever gaming of complex systems to produce an unprecedented result.\nThe Hacker Ethos\nLearning about and improving highly complex systems by playful innovation is at the core of what I call the “hacker ethos.” The fact that this is about a relationship to knowledge systems means that the term has, over the last thirty years or so, come to be applied to an ever-growing assortment of activities: life hacking, game modding, phone phreaking, iPhone jailbreaking, and IKEA hacking, among others.\nIn each of these activities, you can see the kernel of the same hacker ethos. Each of these activities is based on the use of playful creation to enrich knowledge of complex systems, whether you are making furniture from the complex system that is the IKEA catalog, or learning how to game Ma Bell for free calls to Bangalore.\nThis sort of playful creation should not be unfamiliar to academics. It is not dissimilar to the Situationist International's concept of detournement, or Dick Hebdidge's notion of subcultural style systems. It is Levi-Strauss's bricolage reimagined for a time when computers have replaced magic.2\nA different approach to this hacker ethos can be found in what Eric Steven Raymond has described as “The Hacker Attitude.” Raymond discusses five elements that he feels are central to this attitude, which is born of what I would describe as its general ethos:\n1. The world is full of fascinating problems waiting to be solved.\n2. No problem should ever have to be solved twice.\n3. Boredom and drudgery are evil.\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Hacking the Academy: New Approaches to Scholarship and Teaching from Digital Humanities",
+            "topicNames": null,
+            "topicNamesForDisplay": "[]",
+            "topicNames_facet": null,
+            "yearOfPublication": 0
+        }
+    ]
+}

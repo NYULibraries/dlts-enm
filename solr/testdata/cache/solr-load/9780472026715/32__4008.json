@@ -1,0 +1,31 @@
+{
+    "add": [
+        {
+            "authors": "Bonnie A. Nardi",
+            "epubNumberOfPages": 238,
+            "id": 4008,
+            "isbn": "9780472026715",
+            "pageLocalId": "page_32",
+            "pageNumberForDisplay": "32",
+            "pageSequenceNumber": 38,
+            "pageText": "\nThe Hoodoos Visit Zul’Farrak\nOne of the first things an ethnographic investigation requires is finding a way to enter a new culture. In WoW that meant finding a guild since my interest was in social life. Landing a spot in a good guild takes some time if a player is not playing with friends or family. As a low-level, unguilded player, it is common to receive invitations to join guilds as they seek new members. Guilds want to expand to replace players who have moved to other guilds or left the game or to balance teams. I accepted my first invitation at around level 20. I spent a few weeks in the guild but did not feel much of a connection to its members. When a personable young player with whom I had been chatting issued me a guild invitation, I left my guild and joined his. Loro headed a wonderful guild that had several female players, including a social worker, a journalist from the Philippines, and an elementary school teacher, as well as vibrant personalities of both genders. We had a huge amount of fun PvPing, throwing guild parties, and convening guild meetings in which players humorously subverted Loro’s efforts to conduct serious guild business.\n",
+            "publisher": "The University of Michigan Press",
+            "title": "My Life as a Night Elf Priest",
+            "topicNames": [
+                "ethnographic research -- invitations to guilds and",
+                "ethnographic research -- perturbance in",
+                "guilds -- Hoodoos",
+                "Hoodoos guild",
+                "guilds -- invitations to"
+            ],
+            "topicNamesForDisplay": "[[\"ethnographic research -- invitations to guilds and\"],[\"ethnographic research -- perturbance in\"],[\"guilds -- Hoodoos\",\"Hoodoos guild\"],[\"guilds -- invitations to\"]]",
+            "topicNames_facet": [
+                "ethnographic research -- invitations to guilds and",
+                "ethnographic research -- perturbance in",
+                "guilds -- Hoodoos",
+                "guilds -- invitations to"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

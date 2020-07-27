@@ -1,0 +1,26 @@
+{
+    "add": [
+        {
+            "authors": "Mark Hertzog",
+            "epubNumberOfPages": 288,
+            "id": 15983,
+            "isbn": "9780814735305",
+            "pageLocalId": "page_221",
+            "pageNumberForDisplay": "221",
+            "pageSequenceNumber": 231,
+            "pageText": "Additional Findings\nBeyond the specific hypotheses, three unexpected findings are of interest and should be pursued in greater depth by political science, sociology, and psychology.\nThe Role of Religion\nThe relative secularism of the LGB self-identifiers is apparent throughout, and given the negative attitude of the Western religions toward homosexuality, this is hardly surprising. What is notable, and cause for study, is that there was in 1990 a significantly lower rate of lesbian and gay self-identification among those raised in the predominant religious tradition in a particular community—Protestantism in California and Texas, Catholicism in Massachusetts.\nA similar finding with respect to Judaism in the Glick contest was ruled out, as lesbians, who tended to be long-term residents of the district, were just as Jewish as their nongay neighbors; it was gay male immigrants who were responsible for the disproportionately small Jewish share of the LGB sample. It is possible, therefore, that in the cases we have examined, especially those of California and Massachusetts, a considerable share of the religious disparity is attributable to interstate migration.\nHowever, this cannot explain the finding on the national level; there is certainly no evidence that LGBs raised in the Protestant faiths are emigrating from the United States, and no reason to believe that they refrain from voting more than do self-identifiers of other backgrounds. The reasons a significantly smaller share of Protestants self-identify as LGB are deserving, therefore, of greater study.\nCoalition Formation and Political Culture\nElazar’s theory (1965) of “political culture” differences among the states, as discussed in chapter 5, appeared to be validated with respect to gay and lesbian voting behavior in California and Massachusetts, but not in Texas. In California, with its structural factors and political mores that encourage statewide coalition politics, white and nonfeminist lesbians and gays voted very much like nongay blacks, Latinos, and feminists. In Massachusetts, however, with a relatively permeable political structure and mores supporting group competition, there was a significant split even between gay and nongay feminists in the governor’s race. (Only one gay respondent was not of European descent.) In Texas, however, where the political climate for coalition building and even internal cohesion among lesbians and gay men would seem to be the ",
+            "publisher": "New York University Press",
+            "title": "The Lavender Vote",
+            "topicNames": [
+                "Religion -- and LGB self-identification rates",
+                "Religion -- suppression of LGB self-identification based on denomination"
+            ],
+            "topicNamesForDisplay": "[[\"Religion -- and LGB self-identification rates\"],[\"Religion -- suppression of LGB self-identification based on denomination\"]]",
+            "topicNames_facet": [
+                "Religion -- and LGB self-identification rates",
+                "Religion -- suppression of LGB self-identification based on denomination"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

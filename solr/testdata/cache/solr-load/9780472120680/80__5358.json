@@ -1,0 +1,30 @@
+{
+    "add": [
+        {
+            "authors": "Shackelford, Laura",
+            "epubNumberOfPages": 273,
+            "id": 5358,
+            "isbn": "9780472120680",
+            "pageLocalId": "page_80",
+            "pageNumberForDisplay": "80",
+            "pageSequenceNumber": 88,
+            "pageText": " discourse or sequence of reading rather than generating completely new stories on each reading.73\nPatchwork Girl’s reciprocal relays between user and text, text and world, subject and technology, nonetheless, have a significant impact on relations between reader and text, reader and character, and our understanding and experience of this embodied reading process. Foregrounding and celebrating the monstrosity of material bodies and the technics through which we differentially realize, reassemble, and understand them, Patchwork Girl self-reflexively engages the medium of digital hypertext and the mechanics of the Storyspace program. It takes advantage of the program’s associative linking capabilities, which provide word- or image-based hyperlinks to move laterally from a series of lexia to others or back again, as well as using Storyspace’s map-views, which allow the reader to shift from reading one lexia or text box at a time to looking at a visual overview of the spatial arrangement of the boxes of text that are nested within each of the work’s five main sections and their subsections. It explicitly elaborates on the potential of this writing technology to reveal how these materially realized processes are integral to the meaning of a digital hypertext fiction. Its five sections, characterized above as distinct segments similar to chapters in a book, are linked by a complex structure that moves unexpectedly from within one section to another, following themes and figures that traverse and thereby subvert the apparent organization of the work by exploiting, to full effect, the multiple, transversal patterns of linking that digital hypertext makes possible. It is for this reason, perhaps, that Jackson claims hypertext’s “compositional principle is desire.”74 The meaning of each text box changes depending on the path of links one follows to and from or back to it, as a result of the different interrelations these movements reveal. This instability requires one to take the somewhat variable paths to and from each block of text into account and, although it doesn’t generate an infinitely variable textual labyrinth as some early hypertext theorists proclaimed, it does make each reading of the work a divergent act of rewarding and unsettling complicity.\nImportantly, while many early hypertext theorists understood these dynamic interrelations between the process of navigating a digital hypertext fiction and its textual product as inextricable, as an “emergent” dynamic in digital hypertext pioneer, Stephanie Strickland’s promising terms, in light of more recent generative, computation-based writing it is worth clarifying how Patchwork Girl does and does not enlist these dynamic, processual dimensions to digital writing into an ongoing production of emergent textual meaning. This also helps to clarify the work’s thinking about these interrelations",
+            "publisher": "University of Michigan Press",
+            "title": "Tactics of the Human: Experimental Technics in American Fiction",
+            "topicNames": [
+                "Ryan, Marie-Laure",
+                "Storyspace",
+                "Strickland, Stephanie",
+                "subjectivity -- transgender"
+            ],
+            "topicNamesForDisplay": "[[\"Ryan, Marie-Laure\"],[\"Storyspace\"],[\"Strickland, Stephanie\"],[\"subjectivity -- transgender\"]]",
+            "topicNames_facet": [
+                "Ryan, Marie-Laure",
+                "Storyspace",
+                "Strickland, Stephanie",
+                "subjectivity -- transgender"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

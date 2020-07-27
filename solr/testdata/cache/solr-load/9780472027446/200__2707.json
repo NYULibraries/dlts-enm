@@ -1,0 +1,30 @@
+{
+    "add": [
+        {
+            "authors": "Alexander, Buzz",
+            "epubNumberOfPages": 307,
+            "id": 2707,
+            "isbn": "9780472027446",
+            "pageLocalId": "page_200",
+            "pageNumberForDisplay": "200",
+            "pageSequenceNumber": 211,
+            "pageText": "\nof Snow White and the Seven Dwarves,\nDisney style, for the children who came\nby country road to Coldwater\nto play with temporary mothers.\nAnd today as I enter this prison to read this poem,\nI know that every eight seconds a child somewhere dies\nfrom drinking contaminated water.\nIn the muster room four of us began theater\nwith Mary and Joyce, we improvised and talked,\nwe felt our way together toward creation\nof the Sisters Within.\nI have entered prisons once a week\nfor thirteen years now,\n                                    and today\nas I enter this prison to read this poem\nI know that thirty-one countries\nand more than one billion people\ncompletely lack access to clean water.\nI know that the earth's fresh water is finite,\nless than half a percent of all the water in the world,\nI know that fresh water, common property\nof the peoples of the earth, is increasingly controlled by private firms,\nI know that when the people of Kwazulu-Natal\ncould not pay their bills\nthe company cut them off\nfrom sanitation and water\nand one hundred thousand\nsickened with cholera,\nI know that in South Africa women walk,\ncollectively, the equivalent of a road to the moon\nand back sixteen times a day to fetch water\nfor their families,\n                                    I know that\nCoca-Cola, Pepsi, Nestle, and others\n",
+            "publisher": "The University of Michigan Press and The University of Michigan Library",
+            "title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project",
+            "topicNames": [
+                "Coldwater, MI",
+                "Sisters Within Theater Troupe",
+                "Snow White and the Seven Dwarfs",
+                "South Africa"
+            ],
+            "topicNamesForDisplay": "[[\"Coldwater, MI\"],[\"Sisters Within Theater Troupe\"],[\"Snow White and the Seven Dwarfs\"],[\"South Africa\"]]",
+            "topicNames_facet": [
+                "Coldwater, MI",
+                "Sisters Within Theater Troupe",
+                "Snow White and the Seven Dwarfs",
+                "South Africa"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

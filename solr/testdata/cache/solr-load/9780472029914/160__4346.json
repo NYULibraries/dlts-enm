@@ -1,0 +1,20 @@
+{
+    "add": [
+        {
+            "authors": "Dougherty, Jack; Nawrotzki, Kristen",
+            "epubNumberOfPages": 297,
+            "id": 4346,
+            "isbn": "9780472029914",
+            "pageLocalId": "page_160",
+            "pageNumberForDisplay": "160",
+            "pageSequenceNumber": 138,
+            "pageText": "\nThis includes measurements of nearly every kind, such as census records, as well as all types of textual publications that have been rendered as plain text. We must also point out that while data certainly can be employed as evidence for a historical argument, data are not necessarily evidence in themselves. Nor do we consider data necessarily to be a direct representation of the historical record, as they are also produced by tools used to investigate or access large datasets. Given the myriad forms that data can take, making sense of data and using them as evidence has become a rather different skill for historians than it has been. For that reason, we argue that the creation of, interaction with, and interpretation of data must become more integral to historical writing.\nWe call on historians to publicly experiment with ways of presenting their methodologies, procedures, and experiences with historical data as they engage in a cyclical process of contextualization and interpretation. This essay hopes to encourage more dialog about why historical writing must foreground methodological transparency and free itself from the epistemological jitters that make many historians wary of moving away from close readings or embracing the notion of the historical record as data.\nData in History\nUse of data in the humanities has recently attracted considerable attention, no project more so than Culturomics, a quantitative study of culture using Google Books.2 Of course, the idea of using data for historical research is hardly new, whether in the context of quantitative history, early work from the Annales school, or work done under the rubric of humanities computing. Yet the nature of data and the way it has been used by historians in the past differs in several important respects from contemporary uses of data. This is especially true in terms of the sheer quantity of data now available that can be gathered in a short time and thus guide humanistic inquiry. The process of guiding should be a greater part of our historical writing.\nSome scholars who work within the domain of the digital humanities have begun to think and write more explicitly about data and its potential for new kinds of research. For example, some Shakespeare scholars have been using statistical procedures to identify language features that signal classification in dramatic works.3 The Stanford Literary Lab has been rethinking the nature of genre through semantic analysis. Yet most projects, including these, continue to be largely confirmatory, like reinforcing the periodization of Shakespeare's plays or confirming the codified\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Writing History in the Digital Age",
+            "topicNames": null,
+            "topicNamesForDisplay": "[]",
+            "topicNames_facet": null,
+            "yearOfPublication": 0
+        }
+    ]
+}

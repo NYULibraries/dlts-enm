@@ -1,0 +1,48 @@
+{
+    "add": [
+        {
+            "authors": "Klein, Julie Thompson",
+            "epubNumberOfPages": 218,
+            "id": 6605,
+            "isbn": "9780472120932",
+            "pageLocalId": "page_38",
+            "pageNumberForDisplay": "38",
+            "pageSequenceNumber": 54,
+            "pageText": "\nEngel found in doing keyword searching for this book, appear often in titles of publications, educational programs, calls for conference papers, and job descriptions. Yet, as they have gained popularity their usefulness has diluted (e-mail, July 13, 2010). Database sleuthing, then, is only a blunt instrument. A closer analysis of six major statements furnishes a more nuanced picture of how the field is defined. This chapter then situates definition in the context of three major disciplines where new technologies and media are changing the nature of practice—English, history, and archaeology. It closes with a reflection on three trendlines that have emerged in those disciplines and Digital Humanities writ large—visualization, spatialization, and a computational turn in the field.\nDeclaring\nStatement 1\n \nThis collection marks a turning point in the field of digital humanities: for the first time, a wide range of theorists and practitioners, those who have been active in the field for decades, and those recently involved, disciplinary experts, computer scientists, and library and information studies specialists, have been brought together to consider digital humanities as a discipline in its own right, as well as to reflect on how it relates to areas of traditional humanities scholarship.\n—Susan Schreibman, Ray Siemens, and John Unsworth, “The Digital Humanities and Humanities Computing: An Introduction,” in A Companion to Digital Humanities (Malden, MA; Oxford: Blackwell, 2004), xxiii\n \nPublication of a Blackwell anthology in 2004 suggested that Digital Humanities had come of age in a history that is traced conventionally to the search for machines capable of automating linguistic analysis of written texts. The year 1949 is enshrined in most origin stories, benchmarked by Father Robert Busa’s efforts to create an automated index verborum of all words in the works of Thomas Aquinas and related authors. In the opening chapter, Susan Hockey divides the history of the field into four stages: Beginnings (1949–early 1970s), Consolidation (1970s–mid-1980s), New Developments (mid-1980s–early 1990s), and the Era of the Internet (1990s forward). Hockey is mindful of the challenge of writing the history of an interdisciplinary area. Any attempt raises questions of scope, overlap,\n",
+            "publisher": "University of Michigan Press",
+            "title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field",
+            "topicNames": [
+                "Aquinas -- St. Thomas",
+                "Aquinas, Saint Thomas",
+                "Aquinas, St. Thomas",
+                "Aquinas, Thomas",
+                "Thomas Aquinas",
+                "Blackwell",
+                "Busa, Robert",
+                "defining -- declaring Statement 1",
+                "defining -- declaring",
+                "Digital Humanities -- Beginnings (1949–early 1970s)",
+                "Digital Humanities -- Consolidation (1970s–mid-1980s)",
+                "Digital Humanities -- Era of the Internet (1990s forward)",
+                "Digital Humanities -- New Developments (mid-1980s–early 1990s)",
+                "Engel, Andy",
+                "Hockey, Susan"
+            ],
+            "topicNamesForDisplay": "[[\"Aquinas, Saint Thomas\",\"Aquinas -- St. Thomas\",\"Aquinas, St. Thomas\",\"Aquinas, Thomas\",\"Thomas Aquinas\"],[\"Blackwell\"],[\"Busa, Robert\"],[\"defining -- declaring Statement 1\"],[\"defining -- declaring\"],[\"Digital Humanities -- Beginnings (1949–early 1970s)\"],[\"Digital Humanities -- Consolidation (1970s–mid-1980s)\"],[\"Digital Humanities -- Era of the Internet (1990s forward)\"],[\"Digital Humanities -- New Developments (mid-1980s–early 1990s)\"],[\"Engel, Andy\"],[\"Hockey, Susan\"]]",
+            "topicNames_facet": [
+                "Aquinas, Saint Thomas",
+                "Blackwell",
+                "Busa, Robert",
+                "defining -- declaring Statement 1",
+                "defining -- declaring",
+                "Digital Humanities -- Beginnings (1949–early 1970s)",
+                "Digital Humanities -- Consolidation (1970s–mid-1980s)",
+                "Digital Humanities -- Era of the Internet (1990s forward)",
+                "Digital Humanities -- New Developments (mid-1980s–early 1990s)",
+                "Engel, Andy",
+                "Hockey, Susan"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

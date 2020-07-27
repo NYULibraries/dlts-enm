@@ -1,0 +1,31 @@
+{
+    "add": [
+        {
+            "authors": "John W. Chapman",
+            "epubNumberOfPages": 348,
+            "id": 16737,
+            "isbn": "9780814714218",
+            "pageLocalId": "page_75",
+            "pageNumberForDisplay": "75",
+            "pageSequenceNumber": 87,
+            "pageText": "owned.8 Indicating the difficulties with particular forms of market socialism, then, should not be confused with providing a case in favor of full liberal ownership.\nII. EFFICIENCY AND MARKET SOCIALISM\nWith this background, I turn to Thesis I. I will begin by restating it in a way that locates more precisely the proposed challenge to Rawls’s view: Given a market socialist system, it is reasonable to expect that an alternative arrangement based on private property in the means of production would improve the well-being of the least well-off.9 Gray offers several considerations in support of this thesis, and here I will respond to two, a minor and a major consideration.\nThe minor argument is that worker-managed firms do not generate as much employment as capitalist firms do, because the former aim to maximize “profit” per worker while the latter aim to maximize aggregate profits.10 As a consequence, an economy composed of worker-run firms is likely to feature higher levels of unemployment than a system with private ownership, and thus work to the disadvantage of those who are less well-off. But even if we assume that Gray has the right view about worker-run firms, nothing follows about the level of employment in a market socialist economy. That level is a function of at least two factors—-the employment policies of firms and the number of firms. Employment for the less well-off could be expanded by easing the entry of new firms, for example by making finance available on favorable conditions.11\nGray’s major argument concerns the determination of interest rates in an economy with no capital market: I will refer to this as the “Vienna-Virginia argument.” According to the Vienna-Virginia argument: (VI) in the absence of a capital market in which shares in firms are traded and in which finance is raised from non-state lenders, the state bank will lack the information required for fixing the rate of interest in a way that promises an efficient allocation of investment; and (V2) even if the bureaucrat-bankers had the information, they could not be trusted to fix interest rates in an allocatively efficient way. Taking the two points together, (V3) we can expect greater “waste, ",
+            "publisher": "New York University Press",
+            "title": "Markets and Justice",
+            "topicNames": [
+                "Gray, John -- on market socialism",
+                "Interest rates",
+                "Efficiency, market socialism and",
+                "Market socialism -- efficiency and",
+                "Market socialism -- interest rates and"
+            ],
+            "topicNamesForDisplay": "[[\"Gray, John -- on market socialism\"],[\"Interest rates\"],[\"Market socialism -- efficiency and\",\"Efficiency, market socialism and\"],[\"Market socialism -- interest rates and\"]]",
+            "topicNames_facet": [
+                "Gray, John -- on market socialism",
+                "Interest rates",
+                "Market socialism -- efficiency and",
+                "Market socialism -- interest rates and"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

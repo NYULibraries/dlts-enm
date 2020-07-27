@@ -1,0 +1,37 @@
+{
+    "add": [
+        {
+            "authors": "Turrow, Joseph; Tsui, Lokman",
+            "epubNumberOfPages": 325,
+            "id": 6821,
+            "isbn": "9780472024537",
+            "pageLocalId": "page_46",
+            "pageNumberForDisplay": "46",
+            "pageSequenceNumber": 52,
+            "pageText": "\nrelationships from road maps, or Bush's “associative trails,” even when it may not be entirely clear why any individual has followed a given path.24 I drew on a history of the telephone by Casson, who suggests that “wherever there is interdependence, there is bound to be telephony.”25 Likewise, interdependence now breeds hyperlinking. The precise mechanism by which a particular path is cut, or a hyperlink formed, is not important. What is important is that some connection must have existed in order for that connection to be cemented hypertextually; hyperlinks are not random.\n\nThe Durkheimian tradition in sociology, like the cybernetic tradition, suggests not only that we can understand social behavior separately from the individual but that knowledge of individual motives is not required to understand “emergent properties” of society. Some have argued that despite the uncertainty surrounding individual citations, the observation of patterns at the network level can still provide valid and useful information.26 Naturally, the ultimate aim is to integrate the microlevel and\n",
+            "publisher": "University of Michigan Press",
+            "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "topicNames": [
+                "Bush, V.",
+                "Bush, Vannevar",
+                "Citation",
+                "Durkheimian tradition",
+                "map",
+                "maps",
+                "Maps",
+                "Telephone",
+                "Telephony"
+            ],
+            "topicNamesForDisplay": "[[\"Bush, Vannevar\",\"Bush, V.\"],[\"Citation\"],[\"Durkheimian tradition\"],[\"maps\",\"map\",\"Maps\"],[\"Telephone\"],[\"Telephony\"]]",
+            "topicNames_facet": [
+                "Bush, Vannevar",
+                "Citation",
+                "Durkheimian tradition",
+                "maps",
+                "Telephone",
+                "Telephony"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

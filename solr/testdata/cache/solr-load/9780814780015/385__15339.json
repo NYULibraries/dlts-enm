@@ -1,0 +1,35 @@
+{
+    "add": [
+        {
+            "authors": "Robert M. Seltzer",
+            "epubNumberOfPages": 492,
+            "id": 15339,
+            "isbn": "9780814780015",
+            "pageLocalId": "page_385",
+            "pageNumberForDisplay": "385",
+            "pageSequenceNumber": 405,
+            "pageText": "Small and scattered communities had their problems but were able to maintain basic Jewish institutional life: a school for children, a burial society, often a yeshiva. Despite the small numbers of local eligibles, intermarriage was not a problem because by definition and common consent, marriage with Christians was neither desired nor feasible in the vast majority of instances.\nThat small Jewish communities (small, that is, by the standards of the twentieth century) could survive and even flourish demo-graphically and culturally was a function of Jewry as an international theocracy, tightly regulated by the revealed law. The Jews constituted a recognized corporate, self-regulating body. Modernity shattered that idyll. At least in theory, Jews became individual citizens with free choice of domicile, association, and mate. Given the freedom offered by modern society, geography took on more significance. In the absence of communal cultural and psychological walls, sheer density became a crucial factor in group maintenance.\nJews poured into the major cities of Europe and later of America, forming a critical mass that permitted a semblance of Jewish life to continue, albeit on a weakened institutional basis. Concentration in major cities made it possible for Jews, even the unbelievers among them, to interact largely with other Jews and to choose their mates from among Jews, by the sheer force of numbers and propinquity. In the American case, German Jewish immigrants in the middle nineteenth century spread across America rather evenly. With the flood tide of East European migration, Jews became more concentrated in the cities of the Northeast, particularly New York. I estimate that in 1880, 28% of America’s Jews lived in New York City, a proportion that rose to 52% by 1910. From 1920, the New York fraction of American Jewry declined steadily so that by 1980, 19% of America’s Jews lived in New York City.\nAnother way of viewing the same phenomenon is to measure the scatter of Jews over the inhabited area of the United States. In 1880, the Jewish population of the United States was more scattered than was the American population in toto. By 1910, the American Jewish population reached the lowest point in its scatter over the one-hundred-year period being examined, while the American population continued to steadily increase its scatter. Beginning with ",
+            "publisher": "New York University Press",
+            "title": "The Americanization of the Jews",
+            "topicNames": [
+                "Eastern European Jews",
+                "German Jews",
+                "Modernity, Jews and",
+                "New York Jew",
+                "New York, Jews in",
+                "Urbanization, Jewish",
+                "Yeshivot, in America"
+            ],
+            "topicNamesForDisplay": "[[\"Eastern European Jews\"],[\"German Jews\"],[\"Modernity, Jews and\"],[\"New York, Jews in\",\"New York Jew\"],[\"Urbanization, Jewish\"],[\"Yeshivot, in America\"]]",
+            "topicNames_facet": [
+                "Eastern European Jews",
+                "German Jews",
+                "Modernity, Jews and",
+                "New York, Jews in",
+                "Urbanization, Jewish",
+                "Yeshivot, in America"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

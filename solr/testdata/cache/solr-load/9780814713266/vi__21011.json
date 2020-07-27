@@ -1,0 +1,20 @@
+{
+    "add": [
+        {
+            "authors": "Keith Beattie",
+            "epubNumberOfPages": 240,
+            "id": 21011,
+            "isbn": "9780814713266",
+            "pageLocalId": "page_vi",
+            "pageNumberForDisplay": "vi",
+            "pageSequenceNumber": 6,
+            "pageText": "\n\n",
+            "publisher": "New York University Press",
+            "title": "The Scar That Binds",
+            "topicNames": null,
+            "topicNamesForDisplay": "[]",
+            "topicNames_facet": null,
+            "yearOfPublication": 0
+        }
+    ]
+}

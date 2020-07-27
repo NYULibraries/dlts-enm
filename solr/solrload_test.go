@@ -118,6 +118,15 @@ func _Load(t *testing.T, source string) {
 
 	Source = source
 
+	// Load only pages for which there are golden files
+	pageIDsToTest := make([]int, len(goldenFileLocationIDs))
+	i := 0
+	for pageID := range goldenFileLocationIDs {
+		pageIDsToTest[i] = pageID
+		i++
+	}
+	PageIDs = pageIDsToTest
+
 	Load()
 
 	diffOutput, err := util.Diff(solrGoldenFilesDirectory, solrLoadTestTmpDirectory)

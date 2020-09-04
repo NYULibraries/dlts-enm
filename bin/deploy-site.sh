@@ -10,7 +10,7 @@ function usage() {
 
     cat <<EOF
 
-usage: ${script_name} [-g] [-h] [-u username] environment
+usage: ${script_name} [-g] [-h] -u username environment
     -g:          generate static site in dist/
     -h:          print this usage message
     -u username: username on bastion host and web server

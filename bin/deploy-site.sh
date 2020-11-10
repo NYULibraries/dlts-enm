@@ -10,7 +10,7 @@ function usage() {
 
     cat <<EOF
 
-usage: ${script_name} [-g] [-h] -u username environment
+usage: ${script_name} [-c] [-g] [-h] -u username environment
     -c:          generate static site from cache instead of database
     -g:          generate static site in dist/
     -h:          print this usage message

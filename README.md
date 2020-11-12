@@ -167,7 +167,7 @@ can be used as the data source for subsequent topic pages generation runs:
 
 #### Create topic pages for 2 topics only using Postgres database
 
-`./enm sitegen topicpages --source=cache --destination=[DESTINATION] [TOPIC ID 1] [TOPIC ID 2]`
+`./enm sitegen topicpages --source=database --destination=[DESTINATION] [TOPIC ID 1] [TOPIC ID 2]`
 
 #### Create topic pages for 2 topics only using cache files
 

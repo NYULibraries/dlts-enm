@@ -116,12 +116,11 @@ ssh -N -L 5432:devdb1:5432 bastion
 
 #### Deploy site
 
-There is a deploy script that can generate the full website and copy to dev, stage,
-or prod web servers.  The easiest way to use it is to run the wrapper script
-that prompts for whether the generate the full site and also prompts for the
-server username and password, then generates the site (if requested) and performs
-the many necessary `rsync` commands using [`expect`](https://core.tcl.tk/expect/index)
-to automatically the enter user credentials for the bastion and web server hosts.
+There is a deploy script that can generate the full website and copy it to the dev,
+stage, and prod web servers.  The easiest way to use it is to run the wrapper script
+that will prompt for information and then run the deploy script with the proper
+options and credentials.  The `rsync` commands are run using [`expect`](https://core.tcl.tk/expect/index)
+to automatically enter the user credentials for the bastion and web server hosts.
 
 * `bin/deploy-site_expect.sh dev`
 * `bin/deploy-site_expect.sh stage`
@@ -132,8 +131,8 @@ set to directories in `dist/`.
 
 See [examples](#examples) for a full demonstration of how to use this wrapper script.
 
-Note that the deploy scripts do not perform Solr indexing, only static page
-generation and copying to server.
+Note that the deploy script does static page generation and copying to server only,
+it does not perform Solr indexing. 
 
 #### Get general help
 
@@ -185,7 +184,7 @@ There is currently no caching of data for Solr index operations.
 
 #### Create the production website and deploy to the web server
 
-In the example below, it is assumed that the `dlts-enm` repo is located
+In the example below, the `dlts-enm` repo is assumed to be located at
 `$GOPATH/src/github.com/nyulibraries/dlts-enm/`
 
 ```shell
@@ -359,20 +358,17 @@ ENM site deployment completed.
 
 ## Running the tests
 
-Make sure access to the Postgres database has already been set up before running
-the tests.  See [Set environment variables](#set-environment-variables).
+Make sure to set up access to the Postgres database before running the tests.
+See [Set environment variables](#set-environment-variables).
 
 ```shell
 go test ./...
 ```
 
-Ideally for tests Postgres would be stubbed out with a fake.  This might be done
-as a future improvement. 
-
 ## Generation of code files in `db/postgres/models`
 
 The Go code in `db/postgres/models` was generated automatically by [xo](https://github.com/xo/xo)
-using custom `xo` templates.  If changes are made to the the Postgres database,
+using custom `xo` templates.  If changes are made to the Postgres database,
 the models can be updated by running `go generate` at the root of the project.
 
 ## Configuration
@@ -391,7 +387,7 @@ from the TCT Postgres database (and TCT in general)
 * (maybe) Embedding of `sitegen` templates into the `enm` binary using something like
 https://github.com/jteeuwen/go-bindata (for motivation see comment in
 `sitegen/sitegen.go`)
-* Write more tests, and stub out Postgres in tests in the `solr` and `sitegen` packages
+* Write more tests, and stub out Postgres in the tests in the `solr` and `sitegen` packages
 (and in all future tests).
 
 ## ENM project Github repos

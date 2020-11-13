@@ -3,23 +3,115 @@ package solr
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
+	"os"
+	"path/filepath"
 	"sort"
 	"strings"
 
+	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
+type SolrDoc map[string]interface{}
+
 var epubsNumberOfPages map[string]int
 
+var PageIDs []int
+
 func Load() error {
+	if Source == "database" {
+		return LoadFromDatabase()
+	} else if Source == "cache" {
+		return LoadFromCache()
+	} else {
+		panic(fmt.Sprintf("ERROR: \"%s\" is not a valid --source option.", Source))
+	}
+}
+
+func LoadFromCache() error {
+	// Make sure PageIDs is sorted because sort.SearchInts() is used to later.
+	if (len(PageIDs) > 0) {
+		sort.Ints(PageIDs)
+	}
+	err := filepath.Walk(cache.SolrLoadCache, func(path string, info os.FileInfo, err error) error {
+		if (err != nil) {
+			return err
+		}
+		if (! info.IsDir() && strings.HasSuffix(info.Name(), ".json")) {
+			var solrDocWithFloat64Values SolrDoc
+
+			jsonBytes, err := ioutil.ReadFile(path)
+			if err != nil {
+				panic(err)
+			}
+
+			err = json.Unmarshal(jsonBytes, &solrDocWithFloat64Values)
+			if err != nil {
+				panic(err)
+			}
+
+			addDoc := solrDocWithFloat64Values["add"].([]interface{})[0].(map[string]interface{})
+
+			if (len(PageIDs) > 0) {
+				pageIDToTest := int(addDoc["id"].(float64))
+				i := sort.SearchInts(PageIDs, pageIDToTest)
+				if i < len(PageIDs) && PageIDs[i] == pageIDToTest {
+					// Add this page
+				} else {
+					// Skip this page
+					return nil
+				}
+			}
+
+			solrDoc := SolrDoc{
+				"add": []interface{}{
+					map[string]interface{}{
+						"id": int(addDoc["id"].(float64)),
+						"isbn": addDoc["isbn"],
+						"authors": addDoc["authors"],
+						"epubNumberOfPages": addDoc["epubNumberOfPages"],
+						"publisher": addDoc["publisher"],
+						"title": addDoc["title"],
+						"yearOfPublication": 0,
+						"pageLocalId": addDoc["pageLocalId"],
+						"pageNumberForDisplay": pageNumberForDisplay(addDoc["pageLocalId"].(string)),
+						"pageSequenceNumber": addDoc["pageSequenceNumber"],
+						"pageText": addDoc["pageText"],
+						"topicNames": addDoc["topicNames"],
+						"topicNames_facet": addDoc["topicNames_facet"],
+						"topicNamesForDisplay": addDoc["topicNamesForDisplay"],
+					},
+				},
+			}
+
+			Update(solrDoc)
+		}
+
+		return nil
+	})
+	if (err != nil) {
+		return err
+	}
+
+	return nil
+}
+
+func LoadFromDatabase() error {
 	epubsNumberOfPages = make(map[string]int)
 	for _, epubNumberOfPages := range db.GetEpubsNumberOfPages() {
 		epubsNumberOfPages[ epubNumberOfPages.Isbn ] = int(epubNumberOfPages.NumberOfPages)
 	}
 
-	pages := db.GetPagesAll()
+	var pages []*db.Page
+	if (len(PageIDs) > 0) {
+		pages = db.GetPagesByPageIDs(PageIDs)
+	} else {
+		pages = db.GetPagesAll()
+	}
+
 	for _, page := range pages {
 		err := AddPage(page)
 		if err != nil {
@@ -87,7 +179,7 @@ func AddPage(page *db.Page) error {
 		panic(fmt.Sprintf("ERROR: couldn't marshal topicNamesForDisplay for %d", page.ID))
 	}
 
-	doc := map[string]interface{}{
+	doc := SolrDoc{
 		"add": []interface{}{
 			map[string]interface{}{
 				"id": page.ID,
@@ -108,7 +200,9 @@ func AddPage(page *db.Page) error {
 		},
 	}
 
-	_, err = conn.Update(doc, true)
+	WriteCacheFile(doc)
+
+	err = Update(doc)
 	if err != nil {
 		return err
 	}
@@ -129,6 +223,40 @@ func SortTopicNamesForPage(topicNamesForPage []*db.TopicNamesForPage) {
 
 		return util.CompareUsingEnglishCollation(a,b) == -1
 	} )
+}
+
+func Update(doc SolrDoc) error {
+	_, err := conn.Update(doc, true)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func WriteCacheFile(solrDoc SolrDoc) (err error){
+	solrDocJSON, err := json.MarshalIndent(solrDoc,"","    ")
+	if err != nil {
+		panic(err)
+	}
+
+	addDocArray := solrDoc["add"].([]interface{})
+	doc := addDocArray[0].(map[string]interface{})
+
+	cacheFile := cache.SolrLoadCacheFile(
+		doc["isbn"].(string), doc["pageNumberForDisplay"].(string), doc["id"].(int))
+	f, err := util.CreateFileWithAllParentDirectories(cacheFile)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+
+	_, err = f.Write(solrDocJSON)
+	if err != nil {
+		panic(err)
+	}
+
+	return nil
 }
 
 func pageNumberForDisplay(pageLocalId string) (pageNumber string) {

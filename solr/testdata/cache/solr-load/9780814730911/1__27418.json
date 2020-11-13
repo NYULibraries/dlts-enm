@@ -1,0 +1,24 @@
+{
+    "add": [
+        {
+            "authors": "Steven Goldberg",
+            "epubNumberOfPages": 269,
+            "id": 27418,
+            "isbn": "9780814730911",
+            "pageLocalId": "page_1",
+            "pageNumberForDisplay": "1",
+            "pageSequenceNumber": 15,
+            "pageText": "ONEIntroduction\nAmerica’s relationship with science is paradoxical. On the one hand, we proudly support basic research that yields stunning breakthroughs and Nobel Prizes. We then relish the ensuing debate about the implications of scientific advances. Will genetic engineering change our basic nature? Will artificial intelligence challenge our sense of human uniqueness? On the other hand, the actual implementation of new technology is often slow and sporadic. The technologies that were supposed to provide abundant energy, inexpensive medical care, and a new sense of humanity always seem a few years away. The result is grumbling about a wasteful and uncompetitive American economy.\nThe cause of this paradox is the subject of this book. The slippage between the promise of American science and the reality of commercial technology has triggered national debate. Some blame government regulation for the burdens on technology; others call for government support of new products in an effort to mimic Japan.\nBut the roots of the paradox lie deeper in the soil of American society. Government “regulation” and “support” do not appear by magic or disappear by fiat. Understanding our situation requires a detailed look at the intersection of two cultures—law and science—rarely considered in tandem. Their relationship encompasses far more than a court injunction against a power plant; it shapes the entire process from basic research to public debate about values to the implementation of new technology. Our analysis will show the fundamental strengths and weaknesses of our research-and-development system as well as explain what measures could alleviate the current gap between promise and performance in American science.\n",
+            "publisher": "New York University Press",
+            "title": "Culture Clash",
+            "topicNames": [
+                "Japan -- government support for technology"
+            ],
+            "topicNamesForDisplay": "[[\"Japan -- government support for technology\"]]",
+            "topicNames_facet": [
+                "Japan -- government support for technology"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

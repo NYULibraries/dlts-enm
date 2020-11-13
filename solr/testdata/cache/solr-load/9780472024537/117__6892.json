@@ -1,0 +1,38 @@
+{
+    "add": [
+        {
+            "authors": "Turrow, Joseph; Tsui, Lokman",
+            "epubNumberOfPages": 325,
+            "id": 6892,
+            "isbn": "9780472024537",
+            "pageLocalId": "page_117",
+            "pageNumberForDisplay": "117",
+            "pageSequenceNumber": 123,
+            "pageText": "\nwas posted; it's just a way to make sure that spammers get no benefit from abusing public areas like blog comments, trackbacks, and referrer lists.\nThe results of this attribute have been mixed. It certainly has prevented many blog owners who have open comment areas from inadvertently adding to spam pollution. But even if some link spammers have been discouraged, more than enough remain undeterred so that the problem of spammers is still overwhelming. While many blogs have automatically implemented the nofollow attribute on all links in their public areas, a large number of spammers will apparently spam anyway—finding it more efficient to be indiscriminate, perhaps, or in hopes of benefiting somehow in any case.\nBusinesses That Mine Data for Popularity: Not a Model for Civil Society\nFrom a political standpoint, one might hope that the use of the nofollow attribute regarding hate sites would lower their rankings as people who mention them unfavorably discourage linking. But the use of this attribute in linking requires both knowledge of its existence and some sophisticated knowledge of how to code a link (as opposed to using a simple interface). So while this way of separating meanings is helpful overall, it is complicated enough to carry out so that the problem is not substantially addressed in practice.\nMoving from the specifics of the nofollow attribute to the more general impact of links on people's consciousness, it should be clear by now that Google-like approaches to searching, which base rankings on the popularity of links, tend not to question the society's basic hierarchy. One initial simplistic way of thinking about link networks is to somehow lump all nodes together, as if there were no other structure for determining who received links. But since many links are made by people, all the prejudices and biases that affect who someone networks with personally or professionally can affect who they network with in terms of hypertext linkage. One writer described this (often gender-based) cliquishness in the following manner:\nPoint of fact, if you follow the thread of this discussion, you would see something like Dave linking to Cory who then links to Scoble who links to Dave who links to Tim who links to Steve who then links to Dave who links to Doc who follows through with a link to\n",
+            "publisher": "University of Michigan Press",
+            "title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "topicNames": [
+                "blog",
+                "blogs",
+                "Blogs",
+                "civil society",
+                "Civil society",
+                "Hypertext",
+                "Network",
+                "Networking",
+                "networks",
+                "Networks",
+                "Track backs"
+            ],
+            "topicNamesForDisplay": "[[\"blogs\",\"blog\",\"Blogs\"],[\"civil society\",\"Civil society\"],[\"Hypertext\"],[\"Networking\",\"Network\",\"networks\",\"Networks\"],[\"Track backs\"]]",
+            "topicNames_facet": [
+                "blogs",
+                "civil society",
+                "Hypertext",
+                "Networking",
+                "Track backs"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

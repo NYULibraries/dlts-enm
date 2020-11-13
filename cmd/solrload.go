@@ -2,9 +2,8 @@ package cmd
 
 import (
 	"fmt"
-
-	"github.com/spf13/cobra"
 	"github.com/nyulibraries/dlts-enm/solr"
+	"github.com/spf13/cobra"
 )
 
 // solrLoadCmd represents the add command
@@ -17,6 +16,8 @@ var solrLoadCmd = &cobra.Command{
 		if err != nil {
 			panic(fmt.Sprintf("ERROR: couldn't initialize solr: %s\n", err.Error()))
 		}
+
+		solr.Source = SolrSource
 
 		solr.Load()
 	},

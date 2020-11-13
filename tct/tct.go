@@ -46,7 +46,7 @@ func GetResponseBody(params ...string) (body []byte) {
 		id = params[1]
 	}
 
-	cacheFile := cache.CacheFile(request, id)
+	cacheFile := cache.TCTCacheFile(request, id)
 
 	if (Source == "cache") {
 		cachedData, err := ioutil.ReadFile(cacheFile)

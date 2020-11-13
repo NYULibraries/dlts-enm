@@ -1,0 +1,53 @@
+{
+    "add": [
+        {
+            "authors": "Usher, Nikki",
+            "epubNumberOfPages": 293,
+            "id": 6485,
+            "isbn": "9780472120499",
+            "pageLocalId": "page_217",
+            "pageNumberForDisplay": "217",
+            "pageSequenceNumber": 227,
+            "pageText": "\nI want to give a brief nod to some of the signs of change in the newsroom and Times-specific advantages when it comes to tackling the digital age. In this section, I bring together the larger conversation about the values of immediacy, interactivity, and participation to explain why it was so important to talk about them the way I have—as emergent and contested. After seeing these values at work, it becomes much easier to explain the underlying recursive patterns at work.\nWhile I have emphasized how new values are changing journalism, it is also important to pause for a moment and recall what remains the same: the constraints upon news that have shaped journalism production from the 1960s and beyond are still influencing newswork. Nonetheless, in the online journalism world of 2010, these core values were changing how journalists thought about their work and how news was produced—and were coming to the forefront of news creation in a way that was dictating the very fabric of journalism. Certainly The Times is an exceptional case, and it is worth noting the potential future of the integration of these values in the newsroom, but regardless of the special advantages of The Times, there are larger cultural, social, and technological patterns at work reshaping how journalists work, why they work, and what they do.\nParticipation on social media was perhaps the most obvious marker that something—organization-wide—was changing at The Times. The Times management eliminated Jennifer Preston's social media editor position. The headline announcing the job change in The New York Observer read, “New York Times Decides Tweeting Is Not a Job.”2 In the article, Preston declared that the era of social media evangelizing was officially over. And this seemed at least anecdotally true; some Twitter resistors who had previously claimed frustration with the service had joined it. Diana Henriques, an elder statesman of the business desk, had scorned social media when I was in the newsroom. Now, we were exchanging tweets—though part of her tweeting, I surmised, was to promote her book about Bernie Madoff, the financial Ponzi schemer. Another journalist, Tara Siegel Bernard, was pleased to tell me that, after her initial hesitations with Twitter, she was a full convert and had begun using it to help facilitate an online community through the Bucks personal finance blog. D.C. business reporter Ed Wyatt, who had\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Making News at The New York Times",
+            "topicNames": [
+                "Bernard, Tara Siegel",
+                "blog",
+                "blogs",
+                "Blogs",
+                "Bucks",
+                "business desk",
+                "headlines",
+                "Henriques, Diana B.",
+                "Madoff, Bernie",
+                "participation",
+                "Participation",
+                "Preston, Jennifer",
+                "The New York Observer",
+                "Twitter",
+                "values -- contested",
+                "values -- emergent",
+                "Wyatt, Ed"
+            ],
+            "topicNamesForDisplay": "[[\"Bernard, Tara Siegel\"],[\"blogs\",\"blog\",\"Blogs\"],[\"Bucks\"],[\"business desk\"],[\"headlines\"],[\"Henriques, Diana B.\"],[\"Madoff, Bernie\"],[\"participation\",\"Participation\"],[\"Preston, Jennifer\"],[\"The New York Observer\"],[\"Twitter\"],[\"values -- contested\"],[\"values -- emergent\"],[\"Wyatt, Ed\"]]",
+            "topicNames_facet": [
+                "Bernard, Tara Siegel",
+                "blogs",
+                "Bucks",
+                "business desk",
+                "headlines",
+                "Henriques, Diana B.",
+                "Madoff, Bernie",
+                "participation",
+                "Preston, Jennifer",
+                "The New York Observer",
+                "Twitter",
+                "values -- contested",
+                "values -- emergent",
+                "Wyatt, Ed"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

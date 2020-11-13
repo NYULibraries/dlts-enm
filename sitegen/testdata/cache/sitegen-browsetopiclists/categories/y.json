@@ -1,0 +1,1034 @@
+{
+    "ActiveNavbarTab": "Y",
+    "NavbarTabs": [
+        {
+            "Label": "A",
+            "FileBasename": "a",
+            "Regexp": "a"
+        },
+        {
+            "Label": "B",
+            "FileBasename": "b",
+            "Regexp": "b"
+        },
+        {
+            "Label": "C",
+            "FileBasename": "c",
+            "Regexp": "c"
+        },
+        {
+            "Label": "D",
+            "FileBasename": "d",
+            "Regexp": "d"
+        },
+        {
+            "Label": "E",
+            "FileBasename": "e",
+            "Regexp": "e"
+        },
+        {
+            "Label": "F",
+            "FileBasename": "f",
+            "Regexp": "f"
+        },
+        {
+            "Label": "G",
+            "FileBasename": "g",
+            "Regexp": "g"
+        },
+        {
+            "Label": "H",
+            "FileBasename": "h",
+            "Regexp": "h"
+        },
+        {
+            "Label": "I",
+            "FileBasename": "i",
+            "Regexp": "i"
+        },
+        {
+            "Label": "J",
+            "FileBasename": "j",
+            "Regexp": "j"
+        },
+        {
+            "Label": "K",
+            "FileBasename": "k",
+            "Regexp": "k"
+        },
+        {
+            "Label": "L",
+            "FileBasename": "l",
+            "Regexp": "l"
+        },
+        {
+            "Label": "M",
+            "FileBasename": "m",
+            "Regexp": "m"
+        },
+        {
+            "Label": "N",
+            "FileBasename": "n",
+            "Regexp": "n"
+        },
+        {
+            "Label": "O",
+            "FileBasename": "o",
+            "Regexp": "o"
+        },
+        {
+            "Label": "P",
+            "FileBasename": "p",
+            "Regexp": "p"
+        },
+        {
+            "Label": "Q",
+            "FileBasename": "q",
+            "Regexp": "q"
+        },
+        {
+            "Label": "R",
+            "FileBasename": "r",
+            "Regexp": "r"
+        },
+        {
+            "Label": "S",
+            "FileBasename": "s",
+            "Regexp": "s"
+        },
+        {
+            "Label": "T",
+            "FileBasename": "t",
+            "Regexp": "t"
+        },
+        {
+            "Label": "U",
+            "FileBasename": "u",
+            "Regexp": "u"
+        },
+        {
+            "Label": "V",
+            "FileBasename": "v",
+            "Regexp": "v"
+        },
+        {
+            "Label": "W",
+            "FileBasename": "w",
+            "Regexp": "w"
+        },
+        {
+            "Label": "X",
+            "FileBasename": "x",
+            "Regexp": "x"
+        },
+        {
+            "Label": "Y",
+            "FileBasename": "y",
+            "Regexp": "y"
+        },
+        {
+            "Label": "Z",
+            "FileBasename": "z",
+            "Regexp": "z"
+        },
+        {
+            "Label": "0-9",
+            "FileBasename": "0-9",
+            "Regexp": "[0-9]"
+        },
+        {
+            "Label": "?#@",
+            "FileBasename": "non-alphanumeric",
+            "Regexp": "[^a-z0-9]"
+        }
+    ],
+    "Paths": {
+        "WebRoot": ".."
+    },
+    "Topics": [
+        {
+            "Name": "Y2K and the Wicked Stepmother",
+            "URL": "../topic-pages/00/00/00/43/0000004366.html"
+        },
+        {
+            "Name": "Ya/Ya program",
+            "URL": "../topic-pages/00/00/00/74/0000007445.html"
+        },
+        {
+            "Name": "Yablon, Gilbert",
+            "URL": "../topic-pages/00/00/03/56/0000035618.html"
+        },
+        {
+            "Name": "Yaeger, Patsy",
+            "URL": "../topic-pages/00/00/00/43/0000004359.html"
+        },
+        {
+            "Name": "Yahoo!",
+            "URL": "../topic-pages/00/00/00/85/0000008575.html"
+        },
+        {
+            "Name": "Yakhnut, Ch. A.",
+            "URL": "../topic-pages/00/00/02/38/0000023829.html"
+        },
+        {
+            "Name": "Yakuza, organized crime in Japan",
+            "URL": "../topic-pages/00/00/02/89/0000028969.html"
+        },
+        {
+            "Name": "Yale Law School",
+            "URL": "../topic-pages/00/00/02/64/0000026458.html"
+        },
+        {
+            "Name": "Yale Law School Storrs Lectures",
+            "URL": "../topic-pages/00/00/03/11/0000031163.html"
+        },
+        {
+            "Name": "Yale Series of Younger Poets Award",
+            "URL": "../topic-pages/00/00/00/50/0000005090.html"
+        },
+        {
+            "Name": "Yale University",
+            "URL": "../topic-pages/00/00/00/10/0000001016.html"
+        },
+        {
+            "Name": "Yale University anti-union stance of",
+            "URL": "../topic-pages/00/00/01/53/0000015315.html"
+        },
+        {
+            "Name": "Yale University anti-union stance of -- and NLRB ruling on unionization",
+            "URL": "../topic-pages/00/00/01/53/0000015319.html"
+        },
+        {
+            "Name": "Yale University anti-union stance of -- faculty response to graduate student unionization at",
+            "URL": "../topic-pages/00/00/01/53/0000015316.html"
+        },
+        {
+            "Name": "Yale University anti-union stance of -- graduate student grade strike at",
+            "URL": "../topic-pages/00/00/01/53/0000015317.html"
+        },
+        {
+            "Name": "Yale University anti-union stance of -- MLA censure of",
+            "URL": "../topic-pages/00/00/01/53/0000015318.html"
+        },
+        {
+            "Name": "Yale University anti-union stance of -- placement record of",
+            "URL": "../topic-pages/00/00/01/53/0000015320.html"
+        },
+        {
+            "Name": "Yale University anti-union stance of -- prestige of",
+            "URL": "../topic-pages/00/00/01/53/0000015321.html"
+        },
+        {
+            "Name": "Yale University anti-union stance of -- violation of federal labor law by",
+            "URL": "../topic-pages/00/00/01/53/0000015322.html"
+        },
+        {
+            "Name": "Yalkut Reuveni",
+            "URL": "../topic-pages/00/00/02/85/0000028551.html"
+        },
+        {
+            "Name": "Yalta",
+            "URL": "../topic-pages/00/00/04/13/0000041347.html"
+        },
+        {
+            "Name": "Yamamoto, Dorothy",
+            "URL": "../topic-pages/00/00/04/60/0000046040.html"
+        },
+        {
+            "Name": "Yamamoto, Hisaye",
+            "URL": "../topic-pages/00/00/03/67/0000036788.html"
+        },
+        {
+            "Name": "Yamanaka, Hiroshi",
+            "URL": "../topic-pages/00/00/00/15/0000001578.html"
+        },
+        {
+            "Name": "Yamaoka, Akira",
+            "URL": "../topic-pages/00/00/00/65/0000006536.html"
+        },
+        {
+            "Name": "Yamazaki, Kunio",
+            "URL": "../topic-pages/00/00/02/77/0000027715.html"
+        },
+        {
+            "Name": "Yang Chu-nam, Sweet Dream",
+            "URL": "../topic-pages/00/00/04/53/0000045335.html"
+        },
+        {
+            "Name": "Yang, Chʿing-Kʿun",
+            "URL": "../topic-pages/00/00/02/77/0000027716.html"
+        },
+        {
+            "Name": "Yao Ming",
+            "URL": "../topic-pages/00/00/00/21/0000002106.html"
+        },
+        {
+            "Name": "Yaohan Supermarket (Fort Lee, N.J.)",
+            "URL": "../topic-pages/00/00/02/12/0000021261.html"
+        },
+        {
+            "Name": "Yarmolinksy, Adam",
+            "URL": "../topic-pages/00/00/04/38/0000043810.html"
+        },
+        {
+            "Name": "yarmulke (skullcap)",
+            "URL": "../topic-pages/00/00/02/58/0000025893.html"
+        },
+        {
+            "Name": "Yarnbombing",
+            "URL": "../topic-pages/00/00/01/07/0000010751.html"
+        },
+        {
+            "Name": "Yassine, Soha",
+            "URL": "../topic-pages/00/00/01/07/0000010752.html"
+        },
+        {
+            "Name": "Yates, Edmund",
+            "URL": "../topic-pages/00/00/02/22/0000022290.html"
+        },
+        {
+            "Name": "Yates, JoAnna",
+            "URL": "../topic-pages/00/00/01/07/0000010753.html"
+        },
+        {
+            "Name": "Yates, Julian",
+            "URL": "../topic-pages/00/00/04/60/0000046041.html"
+        },
+        {
+            "Name": "Yates, Richard",
+            "URL": "../topic-pages/00/00/03/71/0000037197.html"
+        },
+        {
+            "Name": "Yawar",
+            "URL": "../topic-pages/00/00/00/43/0000004360.html"
+        },
+        {
+            "Name": "Yazawa, Melvin",
+            "URL": "../topic-pages/00/00/02/29/0000022924.html"
+        },
+        {
+            "Name": "YaztheSpaz",
+            "URL": "../topic-pages/00/00/01/07/0000010754.html"
+        },
+        {
+            "Name": "Year in the Life, A",
+            "URL": "../topic-pages/00/00/03/58/0000035854.html"
+        },
+        {
+            "Name": "Year without End, A (Zandberg)",
+            "URL": "../topic-pages/00/00/01/89/0000018938.html"
+        },
+        {
+            "Name": "\"Years of consolidation\"",
+            "URL": "../topic-pages/00/00/01/89/0000018939.html"
+        },
+        {
+            "Name": "Yeats, W. B. -- \"Adam's Curse\"",
+            "URL": "../topic-pages/00/00/00/50/0000005092.html"
+        },
+        {
+            "Name": "Yeats, William Butler",
+            "URL": "../topic-pages/00/00/00/50/0000005091.html"
+        },
+        {
+            "Name": "Yeazell, Ruth Bernard",
+            "URL": "../topic-pages/00/00/01/48/0000014811.html"
+        },
+        {
+            "Name": "Yee, Albert H.",
+            "URL": "../topic-pages/00/00/03/71/0000037198.html"
+        },
+        {
+            "Name": "Yee, N.",
+            "URL": "../topic-pages/00/00/04/73/0000047328.html"
+        },
+        {
+            "Name": "Yee, N. -- citations",
+            "URL": "../topic-pages/00/00/04/73/0000047329.html"
+        },
+        {
+            "Name": "Yee, N. -- on demographic data on players",
+            "URL": "../topic-pages/00/00/04/73/0000047330.html"
+        },
+        {
+            "Name": "Yee, N. -- on farming",
+            "URL": "../topic-pages/00/00/04/73/0000047331.html"
+        },
+        {
+            "Name": "Yee, N. -- on game play",
+            "URL": "../topic-pages/00/00/04/73/0000047332.html"
+        },
+        {
+            "Name": "Yee, N. -- on gendered practice",
+            "URL": "../topic-pages/00/00/04/73/0000047333.html"
+        },
+        {
+            "Name": "Yeesha",
+            "URL": "../topic-pages/00/00/00/53/0000005311.html"
+        },
+        {
+            "Name": "Yellow Book",
+            "URL": "../topic-pages/00/00/00/80/0000008019.html"
+        },
+        {
+            "Name": "Yellow Brotherhood",
+            "URL": "../topic-pages/00/00/04/38/0000043811.html"
+        },
+        {
+            "Name": "Yellow dog contracts",
+            "URL": "../topic-pages/00/00/01/77/0000017730.html"
+        },
+        {
+            "Name": "Yellow Peril theory",
+            "URL": "../topic-pages/00/00/02/12/0000021262.html"
+        },
+        {
+            "Name": "Yellow-star decrees",
+            "URL": "../topic-pages/00/00/01/89/0000018940.html"
+        },
+        {
+            "Name": "Yellow-star decrees -- exemption of converts from",
+            "URL": "../topic-pages/00/00/01/89/0000018941.html"
+        },
+        {
+            "Name": "Yeltsin, Boris N.",
+            "URL": "../topic-pages/00/00/03/52/0000035228.html"
+        },
+        {
+            "Name": "Yen",
+            "URL": "../topic-pages/00/00/02/12/0000021263.html"
+        },
+        {
+            "Name": "Yen -- high",
+            "URL": "../topic-pages/00/00/02/08/0000020814.html"
+        },
+        {
+            "Name": "Yen -- rise of",
+            "URL": "../topic-pages/00/00/02/12/0000021264.html"
+        },
+        {
+            "Name": "Yerevan, Armenia",
+            "URL": "../topic-pages/00/00/01/07/0000010755.html"
+        },
+        {
+            "Name": "Yerkes, Robert Mearns",
+            "URL": "../topic-pages/00/00/03/71/0000037199.html"
+        },
+        {
+            "Name": "Yerushalmi, Yosef Hayyim",
+            "URL": "../topic-pages/00/00/01/81/0000018167.html"
+        },
+        {
+            "Name": "Yeshiva University",
+            "URL": "../topic-pages/00/00/01/48/0000014812.html"
+        },
+        {
+            "Name": "Yeshivah tradition of Lithuania",
+            "URL": "../topic-pages/00/00/02/38/0000023830.html"
+        },
+        {
+            "Name": "Yeshivot, in America",
+            "URL": "../topic-pages/00/00/02/38/0000023831.html"
+        },
+        {
+            "Name": "Yesod Mora (Rabbi Abraham ibn Ezra)",
+            "URL": "../topic-pages/00/00/04/60/0000046061.html"
+        },
+        {
+            "Name": "Yezierska, Anzia",
+            "URL": "../topic-pages/00/00/02/38/0000023832.html"
+        },
+        {
+            "Name": "Yezzi, David",
+            "URL": "../topic-pages/00/00/00/50/0000005093.html"
+        },
+        {
+            "Name": "Yi Ch'ang-ho, Home of the Stars",
+            "URL": "../topic-pages/00/00/04/53/0000045336.html"
+        },
+        {
+            "Name": "Yi Ch'ang-yong",
+            "URL": "../topic-pages/00/00/04/53/0000045337.html"
+        },
+        {
+            "Name": "Yi Dynasty Ghost Tale (film, Shin)",
+            "URL": "../topic-pages/00/00/04/53/0000045338.html"
+        },
+        {
+            "Name": "Yi Hyŏng-p'yo",
+            "URL": "../topic-pages/00/00/04/53/0000045339.html"
+        },
+        {
+            "Name": "Yi Kang-ch'ŏn, P'iagol",
+            "URL": "../topic-pages/00/00/04/53/0000045340.html"
+        },
+        {
+            "Name": "Yi Ki-yŏng",
+            "URL": "../topic-pages/00/00/04/53/0000045341.html"
+        },
+        {
+            "Name": "Yi Ki-yŏng -- Native Soil",
+            "URL": "../topic-pages/00/00/04/53/0000045342.html"
+        },
+        {
+            "Name": "Yi Kwang-su",
+            "URL": "../topic-pages/00/00/04/53/0000045343.html"
+        },
+        {
+            "Name": "Yi Kwang-su -- Heartlessness",
+            "URL": "../topic-pages/00/00/04/53/0000045344.html"
+        },
+        {
+            "Name": "Yi Kyu-hwan",
+            "URL": "../topic-pages/00/00/04/60/0000046062.html"
+        },
+        {
+            "Name": "Yi Kyu-hwan -- Rudderless Ferry",
+            "URL": "../topic-pages/00/00/04/53/0000045345.html"
+        },
+        {
+            "Name": "Yi Kyu-hwan -- The Wanderer",
+            "URL": "../topic-pages/00/00/04/53/0000045346.html"
+        },
+        {
+            "Name": "Yi Man-hŭi",
+            "URL": "../topic-pages/00/00/04/53/0000045347.html"
+        },
+        {
+            "Name": "Yi Man-hŭi -- Black Hair",
+            "URL": "../topic-pages/00/00/04/53/0000045348.html"
+        },
+        {
+            "Name": "Yi Man-hŭi -- Seven Prisoners",
+            "URL": "../topic-pages/00/00/04/53/0000045349.html"
+        },
+        {
+            "Name": "Yi Man-hŭi -- Seven Women POWs",
+            "URL": "../topic-pages/00/00/04/53/0000045350.html"
+        },
+        {
+            "Name": "Yi Sun-jin",
+            "URL": "../topic-pages/00/00/04/53/0000045352.html"
+        },
+        {
+            "Name": "Yi Un-gok",
+            "URL": "../topic-pages/00/00/04/53/0000045353.html"
+        },
+        {
+            "Name": "Yi Wŏl-hwa",
+            "URL": "../topic-pages/00/00/04/53/0000045354.html"
+        },
+        {
+            "Name": "Yi Yŏng-il",
+            "URL": "../topic-pages/00/00/04/53/0000045355.html"
+        },
+        {
+            "Name": "Yi Yong-min",
+            "URL": "../topic-pages/00/00/04/60/0000046063.html"
+        },
+        {
+            "Name": "Yi Yong-min -- People from the Grave",
+            "URL": "../topic-pages/00/00/04/53/0000045356.html"
+        },
+        {
+            "Name": "Yi Yong-min -- Seoul Holiday",
+            "URL": "../topic-pages/00/00/04/53/0000045357.html"
+        },
+        {
+            "Name": "Yiddish",
+            "URL": "../topic-pages/00/00/03/44/0000034447.html"
+        },
+        {
+            "Name": "Yiddish schools in America",
+            "URL": "../topic-pages/00/00/02/38/0000023834.html"
+        },
+        {
+            "Name": "Yiddishes Tageblatt",
+            "URL": "../topic-pages/00/00/02/38/0000023833.html"
+        },
+        {
+            "Name": "Yim Chi-Hyŏn",
+            "URL": "../topic-pages/00/00/04/53/0000045351.html"
+        },
+        {
+            "Name": "Yirmiya, Dov",
+            "URL": "../topic-pages/00/00/02/32/0000023272.html"
+        },
+        {
+            "Name": "Yirmiya, Dov -- My War Diary",
+            "URL": "../topic-pages/00/00/02/32/0000023273.html"
+        },
+        {
+            "Name": "Yishuv",
+            "URL": "../topic-pages/00/00/02/38/0000023835.html"
+        },
+        {
+            "Name": "Ylem: Gower's concept of",
+            "URL": "../topic-pages/00/00/04/60/0000046042.html"
+        },
+        {
+            "Name": "Yo MTV Raps!",
+            "URL": "../topic-pages/00/00/00/60/0000006060.html"
+        },
+        {
+            "Name": "Yobiko",
+            "URL": "../topic-pages/00/00/01/58/0000015883.html"
+        },
+        {
+            "Name": "Yohanan ben Zakkai, Rabbi",
+            "URL": "../topic-pages/00/00/02/85/0000028553.html"
+        },
+        {
+            "Name": "Yoko Tsuno",
+            "URL": "../topic-pages/00/00/00/15/0000001579.html"
+        },
+        {
+            "Name": "Yŏm Sang-sŏp, Three Generations",
+            "URL": "../topic-pages/00/00/04/53/0000045358.html"
+        },
+        {
+            "Name": "Yomiuri Shimbun",
+            "URL": "../topic-pages/00/00/00/15/0000001580.html"
+        },
+        {
+            "Name": "Yŏnghwa Segye (magazine)",
+            "URL": "../topic-pages/00/00/04/53/0000045359.html"
+        },
+        {
+            "Name": "Yŏnghwa Yŏn'gŭk (magazine)",
+            "URL": "../topic-pages/00/00/04/53/0000045360.html"
+        },
+        {
+            "Name": "Yŏnsan the Tyrant (film, Shin)",
+            "URL": "../topic-pages/00/00/04/53/0000045361.html"
+        },
+        {
+            "Name": "York (Pennsylvania) Daily Record",
+            "URL": "../topic-pages/00/00/00/50/0000005094.html"
+        },
+        {
+            "Name": "Yorty, Samuel",
+            "URL": "../topic-pages/00/00/04/38/0000043812.html"
+        },
+        {
+            "Name": "Yorty, Samuel -- law and order platform",
+            "URL": "../topic-pages/00/00/04/38/0000043813.html"
+        },
+        {
+            "Name": "Yoshimoto, Mitsuhiro",
+            "URL": "../topic-pages/00/00/04/53/0000045362.html"
+        },
+        {
+            "Name": "Yoshinori Sakai (atom boy)",
+            "URL": "../topic-pages/00/00/00/21/0000002107.html"
+        },
+        {
+            "Name": "Yosi",
+            "URL": "../topic-pages/00/00/01/81/0000018169.html"
+        },
+        {
+            "Name": "\"you had to be there,\" -- concept of",
+            "URL": "../topic-pages/00/00/03/22/0000032200.html"
+        },
+        {
+            "Name": "\"you had to be there\"",
+            "URL": "../topic-pages/00/00/03/21/0000032199.html"
+        },
+        {
+            "Name": "You-ism",
+            "URL": "../topic-pages/00/00/02/12/0000021265.html"
+        },
+        {
+            "Name": "Young adult (YA) fiction",
+            "URL": "../topic-pages/00/00/03/58/0000035855.html"
+        },
+        {
+            "Name": "Young adult (YA) fiction -- general description of",
+            "URL": "../topic-pages/00/00/03/58/0000035856.html"
+        },
+        {
+            "Name": "Young America's Foundation",
+            "URL": "../topic-pages/00/00/01/07/0000010756.html"
+        },
+        {
+            "Name": "Young Bear, Ray",
+            "URL": "../topic-pages/00/00/01/48/0000014813.html"
+        },
+        {
+            "Name": "Young Chicanos for Community Action",
+            "URL": "../topic-pages/00/00/04/38/0000043814.html"
+        },
+        {
+            "Name": "Young Leaders Summit",
+            "URL": "../topic-pages/00/00/01/07/0000010757.html"
+        },
+        {
+            "Name": "Young Lords Party (YLP)",
+            "URL": "../topic-pages/00/00/00/43/0000004363.html"
+        },
+        {
+            "Name": "Young Men's Christian Association",
+            "URL": "../topic-pages/00/00/02/29/0000022925.html"
+        },
+        {
+            "Name": "young people",
+            "URL": "../topic-pages/00/00/01/09/0000010905.html"
+        },
+        {
+            "Name": "young people -- adult claims about",
+            "URL": "../topic-pages/00/00/01/19/0000011980.html"
+        },
+        {
+            "Name": "young people -- adult-managed timetables and spaces",
+            "URL": "../topic-pages/00/00/01/19/0000011981.html"
+        },
+        {
+            "Name": "young people -- anxieties of",
+            "URL": "../topic-pages/00/00/01/19/0000011982.html"
+        },
+        {
+            "Name": "young people -- as learners",
+            "URL": "../topic-pages/00/00/01/19/0000011989.html"
+        },
+        {
+            "Name": "young people -- changes in interests",
+            "URL": "../topic-pages/00/00/01/19/0000011983.html"
+        },
+        {
+            "Name": "young people -- conservatism of",
+            "URL": "../topic-pages/00/00/01/19/0000011985.html"
+        },
+        {
+            "Name": "young people -- emerging adulthood life stage",
+            "URL": "../topic-pages/00/00/01/10/0000011097.html"
+        },
+        {
+            "Name": "young people -- growing insecurity among",
+            "URL": "../topic-pages/00/00/01/19/0000011987.html"
+        },
+        {
+            "Name": "young people -- initial interests change",
+            "URL": "../topic-pages/00/00/01/19/0000011988.html"
+        },
+        {
+            "Name": "young people -- on commendations or concerns",
+            "URL": "../topic-pages/00/00/01/19/0000011984.html"
+        },
+        {
+            "Name": "young people -- parents' quality time with",
+            "URL": "../topic-pages/00/00/01/19/0000011990.html"
+        },
+        {
+            "Name": "young people -- pathways self-awareness",
+            "URL": "../topic-pages/00/00/01/19/0000011991.html"
+        },
+        {
+            "Name": "young people -- positive connections of society and",
+            "URL": "../topic-pages/00/00/01/19/0000011992.html"
+        },
+        {
+            "Name": "young people -- tactics of",
+            "URL": "../topic-pages/00/00/01/18/0000011889.html"
+        },
+        {
+            "Name": "young people -- worries about future",
+            "URL": "../topic-pages/00/00/01/19/0000011993.html"
+        },
+        {
+            "Name": "young people -- worse life than parents, belief in having",
+            "URL": "../topic-pages/00/00/01/16/0000011657.html"
+        },
+        {
+            "Name": "Young People's Synagogue of the Lower East Side of New York",
+            "URL": "../topic-pages/00/00/02/38/0000023836.html"
+        },
+        {
+            "Name": "Young Turks",
+            "URL": "../topic-pages/00/00/02/32/0000023274.html"
+        },
+        {
+            "Name": "Young-Eisendrath, Polly",
+            "URL": "../topic-pages/00/00/03/82/0000038298.html"
+        },
+        {
+            "Name": "Young, Allen",
+            "URL": "../topic-pages/00/00/03/61/0000036170.html"
+        },
+        {
+            "Name": "Young, Art: Teaching Writing Across the Curriculum",
+            "URL": "../topic-pages/00/00/00/31/0000003141.html"
+        },
+        {
+            "Name": "Young, Buddy",
+            "URL": "../topic-pages/00/00/03/52/0000035229.html"
+        },
+        {
+            "Name": "Young, Charles",
+            "URL": "../topic-pages/00/00/02/64/0000026459.html"
+        },
+        {
+            "Name": "Young, Charles M.",
+            "URL": "../topic-pages/00/00/00/43/0000004361.html"
+        },
+        {
+            "Name": "Young, Cynthia",
+            "URL": "../topic-pages/00/00/01/48/0000014814.html"
+        },
+        {
+            "Name": "Young, Dean",
+            "URL": "../topic-pages/00/00/00/50/0000005095.html"
+        },
+        {
+            "Name": "Young, Evans",
+            "URL": "../topic-pages/00/00/00/43/0000004362.html"
+        },
+        {
+            "Name": "Young, Frank W.",
+            "URL": "../topic-pages/00/00/01/45/0000014580.html"
+        },
+        {
+            "Name": "Young, George",
+            "URL": "../topic-pages/00/00/01/97/0000019705.html"
+        },
+        {
+            "Name": "Young, Nicholas",
+            "URL": "../topic-pages/00/00/01/72/0000017222.html"
+        },
+        {
+            "Name": "Younker, Betty Ann",
+            "URL": "../topic-pages/00/00/00/43/0000004364.html"
+        },
+        {
+            "Name": "Yourcenar, Margaret",
+            "URL": "../topic-pages/00/00/02/82/0000028274.html"
+        },
+        {
+            "Name": "youth",
+            "URL": "../topic-pages/00/00/04/07/0000040727.html"
+        },
+        {
+            "Name": "Youth -- lesbian and gay",
+            "URL": "../topic-pages/00/00/03/29/0000032926.html"
+        },
+        {
+            "Name": "Youth and Participatory Politics Network",
+            "URL": "../topic-pages/00/00/01/07/0000010758.html"
+        },
+        {
+            "Name": "Youth and Participatory Politics Network -- Youth",
+            "URL": "../topic-pages/00/00/04/61/0000046116.html"
+        },
+        {
+            "Name": "Youth Bill of Rights conference",
+            "URL": "../topic-pages/00/00/00/74/0000007446.html"
+        },
+        {
+            "Name": "youth commentary projects",
+            "URL": "../topic-pages/00/00/00/74/0000007447.html"
+        },
+        {
+            "Name": "youth commentary projects -- Hip-Hop Journalism class and",
+            "URL": "../topic-pages/00/00/00/74/0000007448.html"
+        },
+        {
+            "Name": "youth commentary projects -- National Public Radio and",
+            "URL": "../topic-pages/00/00/00/74/0000007449.html"
+        },
+        {
+            "Name": "youth films",
+            "URL": "../topic-pages/00/00/04/53/0000045363.html"
+        },
+        {
+            "Name": "Youth for Unity and Voluntary Action (YUVA)",
+            "URL": "../topic-pages/00/00/04/47/0000044776.html"
+        },
+        {
+            "Name": "youth identity",
+            "URL": "../topic-pages/00/00/04/24/0000042418.html"
+        },
+        {
+            "Name": "Youth poetry",
+            "URL": "../topic-pages/00/00/00/50/0000005096.html"
+        },
+        {
+            "Name": "Youth Radio",
+            "URL": "../topic-pages/00/00/00/71/0000007199.html"
+        },
+        {
+            "Name": "Youth Radio -- and lesson plans",
+            "URL": "../topic-pages/00/00/00/74/0000007451.html"
+        },
+        {
+            "Name": "Youth Radio -- and pedagogy of collegiality",
+            "URL": "../topic-pages/00/00/00/74/0000007453.html"
+        },
+        {
+            "Name": "Youth Radio -- intern at",
+            "URL": "../topic-pages/00/00/00/74/0000007450.html"
+        },
+        {
+            "Name": "Youth Radio -- models from website of",
+            "URL": "../topic-pages/00/00/00/74/0000007452.html"
+        },
+        {
+            "Name": "\"youth-against-the-war\" film",
+            "URL": "../topic-pages/00/00/03/22/0000032201.html"
+        },
+        {
+            "Name": "YouTube.com",
+            "URL": "../topic-pages/00/00/00/94/0000009488.html"
+        },
+        {
+            "Name": "Yovel, Yirmiahu",
+            "URL": "../topic-pages/00/00/01/81/0000018170.html"
+        },
+        {
+            "Name": "Yŏwŏn (magazine)",
+            "URL": "../topic-pages/00/00/04/53/0000045364.html"
+        },
+        {
+            "Name": "Ypsilanti, MI",
+            "URL": "../topic-pages/00/00/00/37/0000003789.html"
+        },
+        {
+            "Name": "ytrams",
+            "URL": "../topic-pages/00/00/00/53/0000005312.html"
+        },
+        {
+            "Name": "Yu Chi-na",
+            "URL": "../topic-pages/00/00/04/53/0000045365.html"
+        },
+        {
+            "Name": "Yu Hyŏn-mok",
+            "URL": "../topic-pages/00/00/04/53/0000045366.html"
+        },
+        {
+            "Name": "Yu Hyŏn-mok -- Pharmacist Kim's Daughters",
+            "URL": "../topic-pages/00/00/04/53/0000045367.html"
+        },
+        {
+            "Name": "Yu Hyŏn-mok -- Stray Bullet",
+            "URL": "../topic-pages/00/00/04/53/0000045368.html"
+        },
+        {
+            "Name": "Yu Hyŏn-mok -- The Sun Rises Again",
+            "URL": "../topic-pages/00/00/04/53/0000045369.html"
+        },
+        {
+            "Name": "Yu Wŏnjun, Ch'unyayngjŏn",
+            "URL": "../topic-pages/00/00/04/53/0000045375.html"
+        },
+        {
+            "Name": "Yuan/currency appreciation",
+            "URL": "../topic-pages/00/00/00/21/0000002108.html"
+        },
+        {
+            "Name": "Yúdice, George",
+            "URL": "../topic-pages/00/00/00/10/0000001017.html"
+        },
+        {
+            "Name": "Yugi-oh",
+            "URL": "../topic-pages/00/00/00/15/0000001582.html"
+        },
+        {
+            "Name": "Yugo",
+            "URL": "../topic-pages/00/00/00/50/0000005097.html"
+        },
+        {
+            "Name": "Yugoslav Federation",
+            "URL": "../topic-pages/00/00/04/18/0000041893.html"
+        },
+        {
+            "Name": "Yugoslav Federation -- constitution of 1974 and violations of",
+            "URL": "../topic-pages/00/00/04/16/0000041683.html"
+        },
+        {
+            "Name": "Yugoslav Federation Army",
+            "URL": "../topic-pages/00/00/04/18/0000041896.html"
+        },
+        {
+            "Name": "Yugoslavhood",
+            "URL": "../topic-pages/00/00/04/18/0000041895.html"
+        },
+        {
+            "Name": "Yugoslavia",
+            "URL": "../topic-pages/00/00/04/65/0000046509.html"
+        },
+        {
+            "Name": "Yun Hae-dong",
+            "URL": "../topic-pages/00/00/04/53/0000045370.html"
+        },
+        {
+            "Name": "Yun Hyŏng-ju",
+            "URL": "../topic-pages/00/00/04/53/0000045371.html"
+        },
+        {
+            "Name": "Yun Paek-nam, Moonlight Vow",
+            "URL": "../topic-pages/00/00/04/53/0000045372.html"
+        },
+        {
+            "Name": "Yun Pong-ch'un",
+            "URL": "../topic-pages/00/00/04/53/0000045373.html"
+        },
+        {
+            "Name": "Yun Ryŏng-gyu, Ch'unyayngjŏn",
+            "URL": "../topic-pages/00/00/04/53/0000045374.html"
+        },
+        {
+            "Name": "Yuri, Shingo",
+            "URL": "../topic-pages/00/00/00/65/0000006537.html"
+        },
+        {
+            "Name": "Yusin constitution",
+            "URL": "../topic-pages/00/00/04/51/0000045172.html"
+        },
+        {
+            "Name": "Yusuf (class member)",
+            "URL": "../topic-pages/00/00/01/19/0000011994.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- class relationships",
+            "URL": "../topic-pages/00/00/01/19/0000011995.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- extracurricular levels",
+            "URL": "../topic-pages/00/00/01/19/0000011996.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- family's learning conception",
+            "URL": "../topic-pages/00/00/01/19/0000011997.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- father's digital technology restrictions",
+            "URL": "../topic-pages/00/00/01/19/0000011998.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- father's home as support of school",
+            "URL": "../topic-pages/00/00/01/19/0000011999.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- father's understanding of",
+            "URL": "../topic-pages/00/00/01/20/0000012000.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- learning space",
+            "URL": "../topic-pages/00/00/01/20/0000012001.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- parents' description",
+            "URL": "../topic-pages/00/00/01/20/0000012002.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- Quran school and educational technology investment",
+            "URL": "../topic-pages/00/00/01/20/0000012003.html"
+        },
+        {
+            "Name": "Yusuf (class member) -- top-down approach of teacher-managed student",
+            "URL": "../topic-pages/00/00/01/20/0000012004.html"
+        },
+        {
+            "Name": "Yuyachkani",
+            "URL": "../topic-pages/00/00/00/43/0000004367.html"
+        }
+    ]
+}

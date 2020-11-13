@@ -2,6 +2,7 @@ package sitegen
 
 import (
 	"errors"
+	"github.com/nyulibraries/dlts-enm/cache"
 	"os"
 	"path"
 	"path/filepath"
@@ -11,25 +12,51 @@ import (
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
-func TestGenerateTopicPagesNoGoogleAnalytics(t *testing.T) {
+func TestGenerateTopicPagesNoGoogleAnalyticsFromCache(t *testing.T) {
 	GoogleAnalytics = false
 
-	_, err := testGenerateTopicPages()
+	cache.SetCacheLocation(testCache)
+
+	_, err := testGenerateTopicPages("cache")
 	if (err != nil) {
 		t.Fatal(err.Error())
 	}
 }
 
-func TestGenerateTopicPagesWithGoogleAnalytics(t *testing.T) {
+func TestGenerateTopicPagesWithGoogleAnalyticsFromCache(t *testing.T) {
 	GoogleAnalytics = true
 
-	_, err := testGenerateTopicPages()
+	cache.SetCacheLocation(testCache)
+
+	_, err := testGenerateTopicPages("cache")
 	if (err != nil) {
 		t.Fatal(err.Error())
 	}
 }
 
-func testGenerateTopicPages() (bool, error) {
+func TestGenerateTopicPagesNoGoogleAnalyticsFromDatabase(t *testing.T) {
+	GoogleAnalytics = false
+
+	cache.SetCacheLocation(cache.DefaultCache)
+
+	_, err := testGenerateTopicPages("database")
+	if (err != nil) {
+		t.Fatal(err.Error())
+	}
+}
+
+func TestGenerateTopicPagesWithGoogleAnalyticsFromDatabase(t *testing.T) {
+	GoogleAnalytics = true
+
+	cache.SetCacheLocation(cache.DefaultCache)
+
+	_, err := testGenerateTopicPages("database")
+	if (err != nil) {
+		t.Fatal(err.Error())
+	}
+}
+
+func testGenerateTopicPages(source string) (bool, error) {
 	wd, err := os.Getwd()
 	if (err != nil) {
 		return false, errors.New("os.Getwd() failed: " + err.Error())
@@ -56,7 +83,7 @@ func testGenerateTopicPages() (bool, error) {
 		TopicPageTemplateDirectory = rootDirectory + "/" + TopicPageTemplateDirectory
 	}
 
-	Source = "database"
+	Source = source
 
 	goldenFiles := []string{}
 	err = filepath.Walk(TopicPagesGoldenFilesDirectory, func(path string, f os.FileInfo, err error) error {

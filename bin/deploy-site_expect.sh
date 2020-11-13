@@ -69,6 +69,18 @@ case "$generate_site" in
         ;;
 esac
 
+echo -n 'Use the cache for regenerating the site? [y/n] '
+read use_cache
+
+case "$use_cache" in
+    [yY][eE][sS]|[yY])
+        use_cache_flag=-c
+        ;;
+    *)
+        use_cache_flag=
+        ;;
+esac
+
 echo -n "Username for ${BASTION_HOST} and ${server}: "
 read username
 
@@ -84,7 +96,7 @@ echo
 expect -c "
 set timeout -1
 
-spawn ${DEPLOY_SCRIPT} ${generate_site_flag} -u ${username} ${deploy_to_environment}
+spawn ${DEPLOY_SCRIPT} ${use_cache_flag} ${generate_site_flag} -u ${username} ${deploy_to_environment}
 
 set num_rsyncs_to_perform \"5\"
 

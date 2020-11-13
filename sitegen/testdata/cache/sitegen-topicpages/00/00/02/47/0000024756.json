@@ -1,0 +1,189 @@
+{
+    "AlternateNames": [],
+    "DisplayName": "Dream interpretation",
+    "EPUBMatches": [],
+    "ExternalRelations": [],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [
+        {
+            "ID": 24748,
+            "Name": "Dora (Ida Bauer) case -- dream interpretation during",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 24757,
+            "Name": "Dream interpretation -- Freud's approach to",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 21488,
+            "Name": "Dreams",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 26587,
+            "Name": "Freud, Sigmund -- Interpretation of Dreams",
+            "NumberOfOccurrences": 10
+        },
+        {
+            "ID": 24874,
+            "Name": "\"Handling of Dream-Interpretation in Psycho-analysis, The\" (Freud)",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 24894,
+            "Name": "Hysterical neurosis -- dream interpretation for",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 33217,
+            "Name": "Interpretation",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 24984,
+            "Name": "Neurosis -- dream interpretation during treatment of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 25028,
+            "Name": "Patients -- dream interpretation as beneficial to",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 25070,
+            "Name": "Psychoanalysis -- dream interpretation during",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 25274,
+            "Name": "Unconscious -- unfulfilled longings withdrawn into",
+            "NumberOfOccurrences": 1
+        }
+    ],
+    "TopicID": 24756,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 24748,
+                "name": "Dora (Ida Bauer) case -- dream interpretation during",
+                "ocount": 2,
+                "path": "00/00/02/47/0000024748.html"
+            },
+            {
+                "id": 24757,
+                "name": "Dream interpretation -- Freud's approach to",
+                "ocount": 2,
+                "path": "00/00/02/47/0000024757.html"
+            },
+            {
+                "id": 21488,
+                "name": "Dreams",
+                "ocount": 5,
+                "path": "00/00/02/14/0000021488.html"
+            },
+            {
+                "id": 26587,
+                "name": "Freud, Sigmund -- Interpretation of Dreams",
+                "ocount": 10,
+                "path": "00/00/02/65/0000026587.html"
+            },
+            {
+                "id": 24874,
+                "name": "\"Handling of Dream-Interpretation in Psycho-analysis, The\" (Freud)",
+                "ocount": 2,
+                "path": "00/00/02/48/0000024874.html"
+            },
+            {
+                "id": 24894,
+                "name": "Hysterical neurosis -- dream interpretation for",
+                "ocount": 1,
+                "path": "00/00/02/48/0000024894.html"
+            },
+            {
+                "id": 33217,
+                "name": "Interpretation",
+                "ocount": 3,
+                "path": "00/00/03/32/0000033217.html"
+            },
+            {
+                "id": 24984,
+                "name": "Neurosis -- dream interpretation during treatment of",
+                "ocount": 1,
+                "path": "00/00/02/49/0000024984.html"
+            },
+            {
+                "id": 25028,
+                "name": "Patients -- dream interpretation as beneficial to",
+                "ocount": 1,
+                "path": "00/00/02/50/0000025028.html"
+            },
+            {
+                "id": 25070,
+                "name": "Psychoanalysis -- dream interpretation during",
+                "ocount": 1,
+                "path": "00/00/02/50/0000025070.html"
+            },
+            {
+                "id": 25274,
+                "name": "Unconscious -- unfulfilled longings withdrawn into",
+                "ocount": 1,
+                "path": "00/00/02/52/0000025274.html"
+            },
+            {
+                "id": 24756,
+                "name": "Dream interpretation",
+                "ocount": 0,
+                "path": "00/00/02/47/0000024756.html"
+            }
+        ],
+        "links": [
+            {
+                "source": 24756,
+                "target": 24748
+            },
+            {
+                "source": 24756,
+                "target": 24757
+            },
+            {
+                "source": 24756,
+                "target": 21488
+            },
+            {
+                "source": 24756,
+                "target": 26587
+            },
+            {
+                "source": 24756,
+                "target": 24874
+            },
+            {
+                "source": 24756,
+                "target": 24894
+            },
+            {
+                "source": 24756,
+                "target": 33217
+            },
+            {
+                "source": 24756,
+                "target": 24984
+            },
+            {
+                "source": 24756,
+                "target": 25028
+            },
+            {
+                "source": 24756,
+                "target": 25070
+            },
+            {
+                "source": 24756,
+                "target": 25274
+            }
+        ]
+    }
+}

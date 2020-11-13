@@ -1,0 +1,35 @@
+{
+    "add": [
+        {
+            "authors": "Richard K. Vedder and Lowell E. Gallaway",
+            "epubNumberOfPages": 408,
+            "id": 21520,
+            "isbn": "9780814787922",
+            "pageLocalId": "page_257",
+            "pageNumberForDisplay": "257",
+            "pageSequenceNumber": 275,
+            "pageText": "for the period 1970–81. Ignoring the direction of movement, we calculated the mean change in the percent of the labor force in the various categories. There was virtually no difference: interoccupational migration was about the same in the 1970s as in the 1950s. While a definitive evaluation of this issue would require analysis at a more detailed level of occupational groupings, we see no evidence that the pace of occupational change quickened significantly during the era of significant increases in the natural rate of unemployment.\nGovernmental Policies and Structural Unemployment\nIn several preceding chapters, we have suggested that various governmental policies have tended to increase unemployment. Considering that demographic and occupational compositional changes played a limited role, can the rise in the natural rate after the 1960s be attributed in part to governmental policies? We believe the answer to that question is “yes.”\nFIVE WAGE-ENHANCING POLICIES OF GOVERNMENT\nOver the past six decades, the federal government has passed myriad forms of legislation that directly or indirectly had, and still have, the effect of increasing wages for some workers, contributing to a rise in the adjusted real wage, and leading to a higher measured unemployment equilibrium than would otherwise be the case. Let us cite five examples: the Davis-Bacon Act, the Fair Labor Standards Act, the National Labor Relations Act, the various civil rights acts, and the legislative enactments that have increased federal employment.\nPassed in 1931, the Davis-Bacon Act provided for “prevailing wages” to be paid on federally funded construction projects. Prevailing wages were interpreted to be the union-scale wages existing in a locality. Over time, the impact of Davis-Bacon has expanded as federal funding for non-federally owned capital projects has grown, and as state governments have passed “little Davis-Bacon laws” to supplement federal legislation. This legislation originally had racial overtones and may have served to increase minority unemployment in the construction industry.\nThe Fair Labor Standards Act of 1938 established a federal minimum-wage law. Since then, the impact of the legislation has grown substantially as the result of coverage being expanded to include previously excluded groups as well as by increases in the minimum. There is a massive literature that suggests that the federal minimum-wage law adds to unemployment, particularly for teenagers and minorities.13\n",
+            "publisher": "New York University Press",
+            "title": "Out of Work",
+            "topicNames": [
+                "Davis-Bacon Act",
+                "Fair Labor Standards Act",
+                "Fair Labor Standards Act (FLSA)",
+                "Unemployment -- minimum wage and",
+                "Unemployment -- structural",
+                "Unemployment -- teenage",
+                "Wages -- prevailing"
+            ],
+            "topicNamesForDisplay": "[[\"Davis-Bacon Act\"],[\"Fair Labor Standards Act (FLSA)\",\"Fair Labor Standards Act\"],[\"Unemployment -- minimum wage and\"],[\"Unemployment -- structural\"],[\"Unemployment -- teenage\"],[\"Wages -- prevailing\"]]",
+            "topicNames_facet": [
+                "Davis-Bacon Act",
+                "Fair Labor Standards Act (FLSA)",
+                "Unemployment -- minimum wage and",
+                "Unemployment -- structural",
+                "Unemployment -- teenage",
+                "Wages -- prevailing"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

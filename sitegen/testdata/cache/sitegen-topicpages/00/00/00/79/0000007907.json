@@ -1,0 +1,2589 @@
+{
+    "AlternateNames": [
+        "race",
+        "Race"
+    ],
+    "DisplayName": "races",
+    "EPUBMatches": [
+        {
+            "Title": "TO BE AN AMERICAN",
+            "Authors": "Bill Ong Hing",
+            "Publisher": "NEW YORK UNIVERSITY PRESS",
+            "ISBN": "9780814735237",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "My Life as a Night Elf Priest",
+            "Authors": "Bonnie A. Nardi",
+            "Publisher": "The University of Michigan Press",
+            "ISBN": "9780472026715",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Christianity and the Holocaust of Hungarian Jewry",
+            "Authors": "Moshe Y. Herczl",
+            "Publisher": "New York University Press New York and London",
+            "ISBN": "9780814735206",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "The Gender Line",
+            "Authors": "Nancy Levit",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814751213",
+            "NumberOfOccurrences": 9
+        },
+        {
+            "Title": "Freedom to Differ",
+            "Authors": "Diane Helene Miller",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814755969",
+            "NumberOfOccurrences": 9
+        },
+        {
+            "Title": "Negrophobia and Reasonable Racism",
+            "Authors": "Jody David Armour",
+            "Publisher": "New york University Press",
+            "ISBN": "9780814706404",
+            "NumberOfOccurrences": 19
+        },
+        {
+            "Title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle",
+            "Authors": "Elizabeth Carolyn Miller",
+            "Publisher": "University of Michigan Press and University of Michigan Library",
+            "ISBN": "9780472024469",
+            "NumberOfOccurrences": 20
+        },
+        {
+            "Title": "Educated in Whiteness",
+            "Authors": "Angelina E. Castagno",
+            "Publisher": "University of Minnesota Press",
+            "ISBN": "9780816681655",
+            "NumberOfOccurrences": 37
+        }
+    ],
+    "ExternalRelations": [],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [
+        {
+            "ID": 14584,
+            "Name": "affirmative action",
+            "NumberOfOccurrences": 38
+        },
+        {
+            "ID": 40182,
+            "Name": "Albert (case study) -- on effect of interviewer's sex and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38766,
+            "Name": "Alchemy of Race and Rights, The (Williams)",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39370,
+            "Name": "Bell, Derrick -- and critical race theory",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 15945,
+            "Name": "Bi Perspective -- differing implications for sexual orientation, race, gender, and disability",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 43885,
+            "Name": "biogenic theory of race development",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39840,
+            "Name": "Black rage defense -- attempt to bring races together",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 39845,
+            "Name": "Black rage defense -- expansion to other races",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 39849,
+            "Name": "Black rage defense -- mischaracterization as race-hatred defense",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 41930,
+            "Name": "coded (for race)",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 5622,
+            "Name": "Copyright law. -- Assumption of race neutrality",
+            "NumberOfOccurrences": 16
+        },
+        {
+            "ID": 39885,
+            "Name": "Crime -- sentencing disparity between races",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38849,
+            "Name": "Critical legal studies -- critical race theory",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38864,
+            "Name": "Critical race theory -- civil rights scholarship",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38865,
+            "Name": "Critical race theory -- CLS",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38866,
+            "Name": "Critical race theory -- exclusion thesis",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38867,
+            "Name": "Critical race theory -- feminist theory",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38868,
+            "Name": "Critical race theory -- identity politics",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38869,
+            "Name": "Critical race theory -- legal rights",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38870,
+            "Name": "Critical race theory -- liberal",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38871,
+            "Name": "Critical race theory -- political conservative",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38872,
+            "Name": "Critical race theory -- political left",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38873,
+            "Name": "Critical race theory -- postmodern",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 38874,
+            "Name": "Critical race theory -- postmodern nationalism",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38875,
+            "Name": "Critical race theory -- racial distinctiveness theses",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38876,
+            "Name": "Critical race theory -- theoretical agenda",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38877,
+            "Name": "Critical race theory -- theoretical criticism",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 5648,
+            "Name": "critical race theory (CRT)",
+            "NumberOfOccurrences": 29
+        },
+        {
+            "ID": 42760,
+            "Name": "Democratic Party -- and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 26867,
+            "Name": "Ethnicity, as basis for white separatist sentiment (as opposed to race)",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40313,
+            "Name": "Eva (case study) -- on effect of interviewer's sex and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 31271,
+            "Name": "Feminist theory -- critical race feminism",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 18450,
+            "Name": "\"Foreign race\"",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38956,
+            "Name": "Foundationalism -- race theory",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40372,
+            "Name": "Friendship(s) -- racial differences in intimacy of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40385,
+            "Name": "Gayle (case study) -- on effect of interviewer's sex and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 16039,
+            "Name": "Genealogy, and race",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 3574,
+            "Name": "Hastings Race and Poverty Law Journal",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 42989,
+            "Name": "hospitals -- closure and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 18513,
+            "Name": "Hungarian race",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 18514,
+            "Name": "Hungarian race -- defense of",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 18515,
+            "Name": "Hungarian race -- supremacy of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 26927,
+            "Name": "Immigrants -- and race-based objections",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 43007,
+            "Name": "infant mortality -- and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 36977,
+            "Name": "intelligence, group differences in measured -- race",
+            "NumberOfOccurrences": 7
+        },
+        {
+            "ID": 40432,
+            "Name": "Interviews -- effect of interviewer race and gender on",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 5769,
+            "Name": "Irony -- Critical race theory",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 5776,
+            "Name": "Irony -- Race",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 40440,
+            "Name": "Jamal (case study) -- on effect of interviewer's sex and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 1276,
+            "Name": "Japan -- race issues",
+            "NumberOfOccurrences": 8
+        },
+        {
+            "ID": 18590,
+            "Name": "Judaism -- as race/as religion",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39530,
+            "Name": "Kennedy, Randall -- critical race theory",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 17983,
+            "Name": "Lessing, Gotthold Ephraim -- \"The Education of the Human Race\"",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40488,
+            "Name": "Marie (case study) -- on effect of interviewer's sex and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 32954,
+            "Name": "Military ban -- influence of race and gender on",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 16100,
+            "Name": "Mixed-race children, definition",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 5850,
+            "Name": "Morrison, Toni -- Race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 34246,
+            "Name": "National Conference on Religion and Race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 36812,
+            "Name": "on meaning of intelligence -- on race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 3894,
+            "Name": "Owens, Curtis -- Marked: Race, Crime, and Finding Work in an Era of Mass Incarceration",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 36615,
+            "Name": "Pedagogy -- performance of race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 5913,
+            "Name": "Post–Civil Rights era -- (meaning of) Race",
+            "NumberOfOccurrences": 9
+        },
+        {
+            "ID": 39245,
+            "Name": "Postmodern race theory",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 43430,
+            "Name": "property relations -- and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 5928,
+            "Name": "Property rights -- (in) Raced images",
+            "NumberOfOccurrences": 13
+        },
+        {
+            "ID": 43440,
+            "Name": "Proposition 13 (CA) -- vote by race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 43444,
+            "Name": "Proposition 14 (CA) -- vote by race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 32999,
+            "Name": "Queer theory -- race in",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 37087,
+            "Name": "race -- \"science\" of",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 44355,
+            "Name": "race -- African Americans conflated with nature",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 33000,
+            "Name": "Race -- analogy with sexual orientation",
+            "NumberOfOccurrences": 11
+        },
+        {
+            "ID": 27079,
+            "Name": "Race -- and anti-Chinese crusade",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 27080,
+            "Name": "Race -- and assimilation of Native Americans",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 26812,
+            "Name": "Race -- and class",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 27082,
+            "Name": "Race -- and cultural assimilationist viewpoint",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 27083,
+            "Name": "Race -- and culture-based arguments against immigration",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40561,
+            "Name": "Race -- and differing desires for independence",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40562,
+            "Name": "Race -- and focus of this study",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 44356,
+            "Name": "race -- and market forces (Hurston)",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 33005,
+            "Name": "Race -- and political representation",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 27084,
+            "Name": "Race -- and poverty",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 7273,
+            "Name": "Race -- and racism",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39650,
+            "Name": "Race -- and scholarship",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 27085,
+            "Name": "Race -- and separatism",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 27081,
+            "Name": "Race -- as basis for objections to immigration",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 18755,
+            "Name": "Race -- as basis of Jewishness",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 33001,
+            "Name": "Race -- as biological",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 37081,
+            "Name": "race -- as biological concept",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40565,
+            "Name": "Race -- as point of conflict",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 37082,
+            "Name": "race -- as political construct",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 33007,
+            "Name": "Race -- as suspect class",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 26412,
+            "Name": "race -- caste system",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 20490,
+            "Name": "race -- consciousness",
+            "NumberOfOccurrences": 12
+        },
+        {
+            "ID": 37083,
+            "Name": "race -- contemporary disparities",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 33002,
+            "Name": "Race -- contrasted with sexual orientation",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 26413,
+            "Name": "race -- favoritism",
+            "NumberOfOccurrences": 9
+        },
+        {
+            "ID": 33003,
+            "Name": "Race -- hiddenness of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 37937,
+            "Name": "Race -- hierarchy and",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 37084,
+            "Name": "race -- history of concept",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 37085,
+            "Name": "race -- in Reconstruction debates",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 33004,
+            "Name": "Race -- influence on military ban",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 1432,
+            "Name": "Race -- issues",
+            "NumberOfOccurrences": 21
+        },
+        {
+            "ID": 18756,
+            "Name": "Race -- Jews defined as",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 18757,
+            "Name": "Race -- Judaism as",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40563,
+            "Name": "Race -- of interviewer, effect on interview responses",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 37938,
+            "Name": "Race -- of respondents",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 40564,
+            "Name": "Race -- opinions on impact of",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 39649,
+            "Name": "Race -- quotas",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 37086,
+            "Name": "race -- religious attitudes toward",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 37088,
+            "Name": "race -- scientific rejection of",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 44357,
+            "Name": "race -- slave relation of servantship and mastery",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39651,
+            "Name": "Race -- solidarity",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40566,
+            "Name": "Race -- studying those of differing",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 44358,
+            "Name": "race -- white–nonwhite binary",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 15218,
+            "Name": "Race and Culture: A World View (Sowell)",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 38397,
+            "Name": "Race and ethnicity",
+            "NumberOfOccurrences": 7
+        },
+        {
+            "ID": 7274,
+            "Name": "race and racism -- schooling practices and",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 7275,
+            "Name": "race and racism -- youth commentaries on",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 18758,
+            "Name": "Race doctrine",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39268,
+            "Name": "Race narratives",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 18759,
+            "Name": "Race protection",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 18760,
+            "Name": "Race Protection Law",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 23689,
+            "Name": "Race relations",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 40055,
+            "Name": "Race riots",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 40056,
+            "Name": "Race riots -- Detroit",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40057,
+            "Name": "Race riots -- history of, in America",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40058,
+            "Name": "Race riots -- San Francisco",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 42034,
+            "Name": "race talk",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 22785,
+            "Name": "Race war",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39267,
+            "Name": "Race-based standing",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39269,
+            "Name": "Race, Reform and Retrenchment: Transformation and Legitimation in Antidiscrimination Law, (Crenshaw)",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 36652,
+            "Name": "Race: concept of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38548,
+            "Name": "Race/ethnicity -- Arab-American",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38545,
+            "Name": "Race/ethnicity -- Asian-American",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38540,
+            "Name": "Race/ethnicity -- attitudes of bisexuals of varying",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38539,
+            "Name": "Race/ethnicity -- attitudes of lesbians of varying",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 38542,
+            "Name": "Race/ethnicity -- biracialism",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38543,
+            "Name": "Race/ethnicity -- Black or African-American",
+            "NumberOfOccurrences": 14
+        },
+        {
+            "ID": 38537,
+            "Name": "Race/ethnicity -- diversity of in lesbian communities",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38547,
+            "Name": "Race/ethnicity -- Indian or Indian-American",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 38546,
+            "Name": "Race/ethnicity -- Latina",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 38550,
+            "Name": "Race/ethnicity -- Lesbians of Color",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 38538,
+            "Name": "Race/ethnicity -- multiculturalism in bisexual communities",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 38536,
+            "Name": "Race/ethnicity -- of sample",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 38551,
+            "Name": "Race/ethnicity -- People of Color",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 38541,
+            "Name": "Race/ethnicity -- racial/ethnic political movements",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 38544,
+            "Name": "Race/ethnicity -- White or European-American",
+            "NumberOfOccurrences": 11
+        },
+        {
+            "ID": 38549,
+            "Name": "Race/ethnicity -- Women of Color",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "ID": 26415,
+            "Name": "racial bias -- race, favoritism",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 42346,
+            "Name": "racial formations -- negotiating questions of race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 871,
+            "Name": "racism",
+            "NumberOfOccurrences": 62
+        },
+        {
+            "ID": 40594,
+            "Name": "Researcher(s) -- effect of subjects' race and sex on",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40612,
+            "Name": "Samuel (case study) -- on effect of interviewer's sex and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 27114,
+            "Name": "segregation",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 40636,
+            "Name": "Shakira (case study) -- on effect of interviewer's sex and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 18820,
+            "Name": "Shaming the race (fajgyalazas)",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 42046,
+            "Name": "silence(ing) -- and race",
+            "NumberOfOccurrences": 11
+        },
+        {
+            "ID": 33006,
+            "Name": "Social construction -- and race",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "ID": 46571,
+            "Name": "specific races",
+            "NumberOfOccurrences": 0
+        },
+        {
+            "ID": 39318,
+            "Name": "Storytelling -- critical race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 40703,
+            "Name": "Tyrone (case study) -- on effect of interviewer's sex and race",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 11924,
+            "Name": "United Kingdom (UK) -- race and ethnicity in",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "ID": 11933,
+            "Name": "United States (US) -- race and ethnicity in",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 36764,
+            "Name": "West, Cornel -- Race Matters",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 37183,
+            "Name": "\"white race\"",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 37184,
+            "Name": "\"white race\" -- American history of",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 32943,
+            "Name": "Women of color -- in the military",
+            "NumberOfOccurrences": 2
+        }
+    ],
+    "TopicID": 7907,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 14584,
+                "name": "affirmative action",
+                "ocount": 38,
+                "path": "00/00/01/45/0000014584.html"
+            },
+            {
+                "id": 40182,
+                "name": "Albert (case study) -- on effect of interviewer's sex and race",
+                "ocount": 1,
+                "path": "00/00/04/01/0000040182.html"
+            },
+            {
+                "id": 38766,
+                "name": "Alchemy of Race and Rights, The (Williams)",
+                "ocount": 1,
+                "path": "00/00/03/87/0000038766.html"
+            },
+            {
+                "id": 39370,
+                "name": "Bell, Derrick -- and critical race theory",
+                "ocount": 1,
+                "path": "00/00/03/93/0000039370.html"
+            },
+            {
+                "id": 15945,
+                "name": "Bi Perspective -- differing implications for sexual orientation, race, gender, and disability",
+                "ocount": 1,
+                "path": "00/00/01/59/0000015945.html"
+            },
+            {
+                "id": 43885,
+                "name": "biogenic theory of race development",
+                "ocount": 1,
+                "path": "00/00/04/38/0000043885.html"
+            },
+            {
+                "id": 39840,
+                "name": "Black rage defense -- attempt to bring races together",
+                "ocount": 2,
+                "path": "00/00/03/98/0000039840.html"
+            },
+            {
+                "id": 39845,
+                "name": "Black rage defense -- expansion to other races",
+                "ocount": 3,
+                "path": "00/00/03/98/0000039845.html"
+            },
+            {
+                "id": 39849,
+                "name": "Black rage defense -- mischaracterization as race-hatred defense",
+                "ocount": 3,
+                "path": "00/00/03/98/0000039849.html"
+            },
+            {
+                "id": 41930,
+                "name": "coded (for race)",
+                "ocount": 3,
+                "path": "00/00/04/19/0000041930.html"
+            },
+            {
+                "id": 5622,
+                "name": "Copyright law. -- Assumption of race neutrality",
+                "ocount": 16,
+                "path": "00/00/00/56/0000005622.html"
+            },
+            {
+                "id": 39885,
+                "name": "Crime -- sentencing disparity between races",
+                "ocount": 1,
+                "path": "00/00/03/98/0000039885.html"
+            },
+            {
+                "id": 38849,
+                "name": "Critical legal studies -- critical race theory",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038849.html"
+            },
+            {
+                "id": 38864,
+                "name": "Critical race theory -- civil rights scholarship",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038864.html"
+            },
+            {
+                "id": 38865,
+                "name": "Critical race theory -- CLS",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038865.html"
+            },
+            {
+                "id": 38866,
+                "name": "Critical race theory -- exclusion thesis",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038866.html"
+            },
+            {
+                "id": 38867,
+                "name": "Critical race theory -- feminist theory",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038867.html"
+            },
+            {
+                "id": 38868,
+                "name": "Critical race theory -- identity politics",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038868.html"
+            },
+            {
+                "id": 38869,
+                "name": "Critical race theory -- legal rights",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038869.html"
+            },
+            {
+                "id": 38870,
+                "name": "Critical race theory -- liberal",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038870.html"
+            },
+            {
+                "id": 38871,
+                "name": "Critical race theory -- political conservative",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038871.html"
+            },
+            {
+                "id": 38872,
+                "name": "Critical race theory -- political left",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038872.html"
+            },
+            {
+                "id": 38873,
+                "name": "Critical race theory -- postmodern",
+                "ocount": 2,
+                "path": "00/00/03/88/0000038873.html"
+            },
+            {
+                "id": 38874,
+                "name": "Critical race theory -- postmodern nationalism",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038874.html"
+            },
+            {
+                "id": 38875,
+                "name": "Critical race theory -- racial distinctiveness theses",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038875.html"
+            },
+            {
+                "id": 38876,
+                "name": "Critical race theory -- theoretical agenda",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038876.html"
+            },
+            {
+                "id": 38877,
+                "name": "Critical race theory -- theoretical criticism",
+                "ocount": 1,
+                "path": "00/00/03/88/0000038877.html"
+            },
+            {
+                "id": 5648,
+                "name": "critical race theory (CRT)",
+                "ocount": 29,
+                "path": "00/00/00/56/0000005648.html"
+            },
+            {
+                "id": 42760,
+                "name": "Democratic Party -- and race",
+                "ocount": 1,
+                "path": "00/00/04/27/0000042760.html"
+            },
+            {
+                "id": 26867,
+                "name": "Ethnicity, as basis for white separatist sentiment (as opposed to race)",
+                "ocount": 1,
+                "path": "00/00/02/68/0000026867.html"
+            },
+            {
+                "id": 40313,
+                "name": "Eva (case study) -- on effect of interviewer's sex and race",
+                "ocount": 1,
+                "path": "00/00/04/03/0000040313.html"
+            },
+            {
+                "id": 31271,
+                "name": "Feminist theory -- critical race feminism",
+                "ocount": 3,
+                "path": "00/00/03/12/0000031271.html"
+            },
+            {
+                "id": 18450,
+                "name": "\"Foreign race\"",
+                "ocount": 1,
+                "path": "00/00/01/84/0000018450.html"
+            },
+            {
+                "id": 38956,
+                "name": "Foundationalism -- race theory",
+                "ocount": 1,
+                "path": "00/00/03/89/0000038956.html"
+            },
+            {
+                "id": 40372,
+                "name": "Friendship(s) -- racial differences in intimacy of",
+                "ocount": 1,
+                "path": "00/00/04/03/0000040372.html"
+            },
+            {
+                "id": 40385,
+                "name": "Gayle (case study) -- on effect of interviewer's sex and race",
+                "ocount": 1,
+                "path": "00/00/04/03/0000040385.html"
+            },
+            {
+                "id": 16039,
+                "name": "Genealogy, and race",
+                "ocount": 2,
+                "path": "00/00/01/60/0000016039.html"
+            },
+            {
+                "id": 3574,
+                "name": "Hastings Race and Poverty Law Journal",
+                "ocount": 1,
+                "path": "00/00/00/35/0000003574.html"
+            },
+            {
+                "id": 42989,
+                "name": "hospitals -- closure and race",
+                "ocount": 1,
+                "path": "00/00/04/29/0000042989.html"
+            },
+            {
+                "id": 18513,
+                "name": "Hungarian race",
+                "ocount": 2,
+                "path": "00/00/01/85/0000018513.html"
+            },
+            {
+                "id": 18514,
+                "name": "Hungarian race -- defense of",
+                "ocount": 3,
+                "path": "00/00/01/85/0000018514.html"
+            },
+            {
+                "id": 18515,
+                "name": "Hungarian race -- supremacy of",
+                "ocount": 1,
+                "path": "00/00/01/85/0000018515.html"
+            },
+            {
+                "id": 26927,
+                "name": "Immigrants -- and race-based objections",
+                "ocount": 1,
+                "path": "00/00/02/69/0000026927.html"
+            },
+            {
+                "id": 43007,
+                "name": "infant mortality -- and race",
+                "ocount": 1,
+                "path": "00/00/04/30/0000043007.html"
+            },
+            {
+                "id": 36977,
+                "name": "intelligence, group differences in measured -- race",
+                "ocount": 7,
+                "path": "00/00/03/69/0000036977.html"
+            },
+            {
+                "id": 40432,
+                "name": "Interviews -- effect of interviewer race and gender on",
+                "ocount": 2,
+                "path": "00/00/04/04/0000040432.html"
+            },
+            {
+                "id": 5769,
+                "name": "Irony -- Critical race theory",
+                "ocount": 4,
+                "path": "00/00/00/57/0000005769.html"
+            },
+            {
+                "id": 5776,
+                "name": "Irony -- Race",
+                "ocount": 2,
+                "path": "00/00/00/57/0000005776.html"
+            },
+            {
+                "id": 40440,
+                "name": "Jamal (case study) -- on effect of interviewer's sex and race",
+                "ocount": 1,
+                "path": "00/00/04/04/0000040440.html"
+            },
+            {
+                "id": 1276,
+                "name": "Japan -- race issues",
+                "ocount": 8,
+                "path": "00/00/00/12/0000001276.html"
+            },
+            {
+                "id": 18590,
+                "name": "Judaism -- as race/as religion",
+                "ocount": 1,
+                "path": "00/00/01/85/0000018590.html"
+            },
+            {
+                "id": 39530,
+                "name": "Kennedy, Randall -- critical race theory",
+                "ocount": 1,
+                "path": "00/00/03/95/0000039530.html"
+            },
+            {
+                "id": 17983,
+                "name": "Lessing, Gotthold Ephraim -- \"The Education of the Human Race\"",
+                "ocount": 1,
+                "path": "00/00/01/79/0000017983.html"
+            },
+            {
+                "id": 40488,
+                "name": "Marie (case study) -- on effect of interviewer's sex and race",
+                "ocount": 1,
+                "path": "00/00/04/04/0000040488.html"
+            },
+            {
+                "id": 32954,
+                "name": "Military ban -- influence of race and gender on",
+                "ocount": 1,
+                "path": "00/00/03/29/0000032954.html"
+            },
+            {
+                "id": 16100,
+                "name": "Mixed-race children, definition",
+                "ocount": 4,
+                "path": "00/00/01/61/0000016100.html"
+            },
+            {
+                "id": 5850,
+                "name": "Morrison, Toni -- Race",
+                "ocount": 1,
+                "path": "00/00/00/58/0000005850.html"
+            },
+            {
+                "id": 34246,
+                "name": "National Conference on Religion and Race",
+                "ocount": 1,
+                "path": "00/00/03/42/0000034246.html"
+            },
+            {
+                "id": 36812,
+                "name": "on meaning of intelligence -- on race",
+                "ocount": 1,
+                "path": "00/00/03/68/0000036812.html"
+            },
+            {
+                "id": 3894,
+                "name": "Owens, Curtis -- Marked: Race, Crime, and Finding Work in an Era of Mass Incarceration",
+                "ocount": 1,
+                "path": "00/00/00/38/0000003894.html"
+            },
+            {
+                "id": 36615,
+                "name": "Pedagogy -- performance of race",
+                "ocount": 1,
+                "path": "00/00/03/66/0000036615.html"
+            },
+            {
+                "id": 5913,
+                "name": "Post–Civil Rights era -- (meaning of) Race",
+                "ocount": 9,
+                "path": "00/00/00/59/0000005913.html"
+            },
+            {
+                "id": 39245,
+                "name": "Postmodern race theory",
+                "ocount": 1,
+                "path": "00/00/03/92/0000039245.html"
+            },
+            {
+                "id": 43430,
+                "name": "property relations -- and race",
+                "ocount": 1,
+                "path": "00/00/04/34/0000043430.html"
+            },
+            {
+                "id": 5928,
+                "name": "Property rights -- (in) Raced images",
+                "ocount": 13,
+                "path": "00/00/00/59/0000005928.html"
+            },
+            {
+                "id": 43440,
+                "name": "Proposition 13 (CA) -- vote by race",
+                "ocount": 1,
+                "path": "00/00/04/34/0000043440.html"
+            },
+            {
+                "id": 43444,
+                "name": "Proposition 14 (CA) -- vote by race",
+                "ocount": 1,
+                "path": "00/00/04/34/0000043444.html"
+            },
+            {
+                "id": 32999,
+                "name": "Queer theory -- race in",
+                "ocount": 1,
+                "path": "00/00/03/29/0000032999.html"
+            },
+            {
+                "id": 37087,
+                "name": "race -- \"science\" of",
+                "ocount": 6,
+                "path": "00/00/03/70/0000037087.html"
+            },
+            {
+                "id": 44355,
+                "name": "race -- African Americans conflated with nature",
+                "ocount": 1,
+                "path": "00/00/04/43/0000044355.html"
+            },
+            {
+                "id": 33000,
+                "name": "Race -- analogy with sexual orientation",
+                "ocount": 11,
+                "path": "00/00/03/30/0000033000.html"
+            },
+            {
+                "id": 27079,
+                "name": "Race -- and anti-Chinese crusade",
+                "ocount": 1,
+                "path": "00/00/02/70/0000027079.html"
+            },
+            {
+                "id": 27080,
+                "name": "Race -- and assimilation of Native Americans",
+                "ocount": 1,
+                "path": "00/00/02/70/0000027080.html"
+            },
+            {
+                "id": 26812,
+                "name": "Race -- and class",
+                "ocount": 1,
+                "path": "00/00/02/68/0000026812.html"
+            },
+            {
+                "id": 27082,
+                "name": "Race -- and cultural assimilationist viewpoint",
+                "ocount": 1,
+                "path": "00/00/02/70/0000027082.html"
+            },
+            {
+                "id": 27083,
+                "name": "Race -- and culture-based arguments against immigration",
+                "ocount": 1,
+                "path": "00/00/02/70/0000027083.html"
+            },
+            {
+                "id": 40561,
+                "name": "Race -- and differing desires for independence",
+                "ocount": 1,
+                "path": "00/00/04/05/0000040561.html"
+            },
+            {
+                "id": 40562,
+                "name": "Race -- and focus of this study",
+                "ocount": 1,
+                "path": "00/00/04/05/0000040562.html"
+            },
+            {
+                "id": 44356,
+                "name": "race -- and market forces (Hurston)",
+                "ocount": 1,
+                "path": "00/00/04/43/0000044356.html"
+            },
+            {
+                "id": 33005,
+                "name": "Race -- and political representation",
+                "ocount": 1,
+                "path": "00/00/03/30/0000033005.html"
+            },
+            {
+                "id": 27084,
+                "name": "Race -- and poverty",
+                "ocount": 1,
+                "path": "00/00/02/70/0000027084.html"
+            },
+            {
+                "id": 7273,
+                "name": "Race -- and racism",
+                "ocount": 1,
+                "path": "00/00/00/72/0000007273.html"
+            },
+            {
+                "id": 39650,
+                "name": "Race -- and scholarship",
+                "ocount": 1,
+                "path": "00/00/03/96/0000039650.html"
+            },
+            {
+                "id": 27085,
+                "name": "Race -- and separatism",
+                "ocount": 3,
+                "path": "00/00/02/70/0000027085.html"
+            },
+            {
+                "id": 27081,
+                "name": "Race -- as basis for objections to immigration",
+                "ocount": 1,
+                "path": "00/00/02/70/0000027081.html"
+            },
+            {
+                "id": 18755,
+                "name": "Race -- as basis of Jewishness",
+                "ocount": 1,
+                "path": "00/00/01/87/0000018755.html"
+            },
+            {
+                "id": 33001,
+                "name": "Race -- as biological",
+                "ocount": 1,
+                "path": "00/00/03/30/0000033001.html"
+            },
+            {
+                "id": 37081,
+                "name": "race -- as biological concept",
+                "ocount": 1,
+                "path": "00/00/03/70/0000037081.html"
+            },
+            {
+                "id": 40565,
+                "name": "Race -- as point of conflict",
+                "ocount": 1,
+                "path": "00/00/04/05/0000040565.html"
+            },
+            {
+                "id": 37082,
+                "name": "race -- as political construct",
+                "ocount": 1,
+                "path": "00/00/03/70/0000037082.html"
+            },
+            {
+                "id": 33007,
+                "name": "Race -- as suspect class",
+                "ocount": 2,
+                "path": "00/00/03/30/0000033007.html"
+            },
+            {
+                "id": 26412,
+                "name": "race -- caste system",
+                "ocount": 1,
+                "path": "00/00/02/64/0000026412.html"
+            },
+            {
+                "id": 20490,
+                "name": "race -- consciousness",
+                "ocount": 12,
+                "path": "00/00/02/04/0000020490.html"
+            },
+            {
+                "id": 37083,
+                "name": "race -- contemporary disparities",
+                "ocount": 1,
+                "path": "00/00/03/70/0000037083.html"
+            },
+            {
+                "id": 33002,
+                "name": "Race -- contrasted with sexual orientation",
+                "ocount": 5,
+                "path": "00/00/03/30/0000033002.html"
+            },
+            {
+                "id": 26413,
+                "name": "race -- favoritism",
+                "ocount": 9,
+                "path": "00/00/02/64/0000026413.html"
+            },
+            {
+                "id": 33003,
+                "name": "Race -- hiddenness of",
+                "ocount": 1,
+                "path": "00/00/03/30/0000033003.html"
+            },
+            {
+                "id": 37937,
+                "name": "Race -- hierarchy and",
+                "ocount": 2,
+                "path": "00/00/03/79/0000037937.html"
+            },
+            {
+                "id": 37084,
+                "name": "race -- history of concept",
+                "ocount": 2,
+                "path": "00/00/03/70/0000037084.html"
+            },
+            {
+                "id": 37085,
+                "name": "race -- in Reconstruction debates",
+                "ocount": 1,
+                "path": "00/00/03/70/0000037085.html"
+            },
+            {
+                "id": 33004,
+                "name": "Race -- influence on military ban",
+                "ocount": 1,
+                "path": "00/00/03/30/0000033004.html"
+            },
+            {
+                "id": 1432,
+                "name": "Race -- issues",
+                "ocount": 21,
+                "path": "00/00/00/14/0000001432.html"
+            },
+            {
+                "id": 18756,
+                "name": "Race -- Jews defined as",
+                "ocount": 3,
+                "path": "00/00/01/87/0000018756.html"
+            },
+            {
+                "id": 18757,
+                "name": "Race -- Judaism as",
+                "ocount": 1,
+                "path": "00/00/01/87/0000018757.html"
+            },
+            {
+                "id": 40563,
+                "name": "Race -- of interviewer, effect on interview responses",
+                "ocount": 2,
+                "path": "00/00/04/05/0000040563.html"
+            },
+            {
+                "id": 37938,
+                "name": "Race -- of respondents",
+                "ocount": 3,
+                "path": "00/00/03/79/0000037938.html"
+            },
+            {
+                "id": 40564,
+                "name": "Race -- opinions on impact of",
+                "ocount": 3,
+                "path": "00/00/04/05/0000040564.html"
+            },
+            {
+                "id": 39649,
+                "name": "Race -- quotas",
+                "ocount": 0,
+                "path": "00/00/03/96/0000039649.html"
+            },
+            {
+                "id": 37086,
+                "name": "race -- religious attitudes toward",
+                "ocount": 4,
+                "path": "00/00/03/70/0000037086.html"
+            },
+            {
+                "id": 37088,
+                "name": "race -- scientific rejection of",
+                "ocount": 3,
+                "path": "00/00/03/70/0000037088.html"
+            },
+            {
+                "id": 44357,
+                "name": "race -- slave relation of servantship and mastery",
+                "ocount": 1,
+                "path": "00/00/04/43/0000044357.html"
+            },
+            {
+                "id": 39651,
+                "name": "Race -- solidarity",
+                "ocount": 1,
+                "path": "00/00/03/96/0000039651.html"
+            },
+            {
+                "id": 40566,
+                "name": "Race -- studying those of differing",
+                "ocount": 2,
+                "path": "00/00/04/05/0000040566.html"
+            },
+            {
+                "id": 44358,
+                "name": "race -- white–nonwhite binary",
+                "ocount": 1,
+                "path": "00/00/04/43/0000044358.html"
+            },
+            {
+                "id": 15218,
+                "name": "Race and Culture: A World View (Sowell)",
+                "ocount": 2,
+                "path": "00/00/01/52/0000015218.html"
+            },
+            {
+                "id": 38397,
+                "name": "Race and ethnicity",
+                "ocount": 7,
+                "path": "00/00/03/83/0000038397.html"
+            },
+            {
+                "id": 7274,
+                "name": "race and racism -- schooling practices and",
+                "ocount": 1,
+                "path": "00/00/00/72/0000007274.html"
+            },
+            {
+                "id": 7275,
+                "name": "race and racism -- youth commentaries on",
+                "ocount": 4,
+                "path": "00/00/00/72/0000007275.html"
+            },
+            {
+                "id": 18758,
+                "name": "Race doctrine",
+                "ocount": 1,
+                "path": "00/00/01/87/0000018758.html"
+            },
+            {
+                "id": 39268,
+                "name": "Race narratives",
+                "ocount": 3,
+                "path": "00/00/03/92/0000039268.html"
+            },
+            {
+                "id": 18759,
+                "name": "Race protection",
+                "ocount": 1,
+                "path": "00/00/01/87/0000018759.html"
+            },
+            {
+                "id": 18760,
+                "name": "Race Protection Law",
+                "ocount": 1,
+                "path": "00/00/01/87/0000018760.html"
+            },
+            {
+                "id": 23689,
+                "name": "Race relations",
+                "ocount": 2,
+                "path": "00/00/02/36/0000023689.html"
+            },
+            {
+                "id": 40055,
+                "name": "Race riots",
+                "ocount": 0,
+                "path": "00/00/04/00/0000040055.html"
+            },
+            {
+                "id": 40056,
+                "name": "Race riots -- Detroit",
+                "ocount": 1,
+                "path": "00/00/04/00/0000040056.html"
+            },
+            {
+                "id": 40057,
+                "name": "Race riots -- history of, in America",
+                "ocount": 1,
+                "path": "00/00/04/00/0000040057.html"
+            },
+            {
+                "id": 40058,
+                "name": "Race riots -- San Francisco",
+                "ocount": 1,
+                "path": "00/00/04/00/0000040058.html"
+            },
+            {
+                "id": 42034,
+                "name": "race talk",
+                "ocount": 6,
+                "path": "00/00/04/20/0000042034.html"
+            },
+            {
+                "id": 22785,
+                "name": "Race war",
+                "ocount": 1,
+                "path": "00/00/02/27/0000022785.html"
+            },
+            {
+                "id": 39267,
+                "name": "Race-based standing",
+                "ocount": 1,
+                "path": "00/00/03/92/0000039267.html"
+            },
+            {
+                "id": 39269,
+                "name": "Race, Reform and Retrenchment: Transformation and Legitimation in Antidiscrimination Law, (Crenshaw)",
+                "ocount": 1,
+                "path": "00/00/03/92/0000039269.html"
+            },
+            {
+                "id": 36652,
+                "name": "Race: concept of",
+                "ocount": 1,
+                "path": "00/00/03/66/0000036652.html"
+            },
+            {
+                "id": 38548,
+                "name": "Race/ethnicity -- Arab-American",
+                "ocount": 1,
+                "path": "00/00/03/85/0000038548.html"
+            },
+            {
+                "id": 38545,
+                "name": "Race/ethnicity -- Asian-American",
+                "ocount": 1,
+                "path": "00/00/03/85/0000038545.html"
+            },
+            {
+                "id": 38540,
+                "name": "Race/ethnicity -- attitudes of bisexuals of varying",
+                "ocount": 1,
+                "path": "00/00/03/85/0000038540.html"
+            },
+            {
+                "id": 38539,
+                "name": "Race/ethnicity -- attitudes of lesbians of varying",
+                "ocount": 4,
+                "path": "00/00/03/85/0000038539.html"
+            },
+            {
+                "id": 38542,
+                "name": "Race/ethnicity -- biracialism",
+                "ocount": 1,
+                "path": "00/00/03/85/0000038542.html"
+            },
+            {
+                "id": 38543,
+                "name": "Race/ethnicity -- Black or African-American",
+                "ocount": 14,
+                "path": "00/00/03/85/0000038543.html"
+            },
+            {
+                "id": 38537,
+                "name": "Race/ethnicity -- diversity of in lesbian communities",
+                "ocount": 1,
+                "path": "00/00/03/85/0000038537.html"
+            },
+            {
+                "id": 38547,
+                "name": "Race/ethnicity -- Indian or Indian-American",
+                "ocount": 2,
+                "path": "00/00/03/85/0000038547.html"
+            },
+            {
+                "id": 38546,
+                "name": "Race/ethnicity -- Latina",
+                "ocount": 1,
+                "path": "00/00/03/85/0000038546.html"
+            },
+            {
+                "id": 38550,
+                "name": "Race/ethnicity -- Lesbians of Color",
+                "ocount": 2,
+                "path": "00/00/03/85/0000038550.html"
+            },
+            {
+                "id": 38538,
+                "name": "Race/ethnicity -- multiculturalism in bisexual communities",
+                "ocount": 4,
+                "path": "00/00/03/85/0000038538.html"
+            },
+            {
+                "id": 38536,
+                "name": "Race/ethnicity -- of sample",
+                "ocount": 2,
+                "path": "00/00/03/85/0000038536.html"
+            },
+            {
+                "id": 38551,
+                "name": "Race/ethnicity -- People of Color",
+                "ocount": 2,
+                "path": "00/00/03/85/0000038551.html"
+            },
+            {
+                "id": 38541,
+                "name": "Race/ethnicity -- racial/ethnic political movements",
+                "ocount": 4,
+                "path": "00/00/03/85/0000038541.html"
+            },
+            {
+                "id": 38544,
+                "name": "Race/ethnicity -- White or European-American",
+                "ocount": 11,
+                "path": "00/00/03/85/0000038544.html"
+            },
+            {
+                "id": 38549,
+                "name": "Race/ethnicity -- Women of Color",
+                "ocount": 6,
+                "path": "00/00/03/85/0000038549.html"
+            },
+            {
+                "id": 26415,
+                "name": "racial bias -- race, favoritism",
+                "ocount": 0,
+                "path": "00/00/02/64/0000026415.html"
+            },
+            {
+                "id": 42346,
+                "name": "racial formations -- negotiating questions of race",
+                "ocount": 1,
+                "path": "00/00/04/23/0000042346.html"
+            },
+            {
+                "id": 871,
+                "name": "racism",
+                "ocount": 62,
+                "path": "00/00/00/08/0000000871.html"
+            },
+            {
+                "id": 40594,
+                "name": "Researcher(s) -- effect of subjects' race and sex on",
+                "ocount": 1,
+                "path": "00/00/04/05/0000040594.html"
+            },
+            {
+                "id": 40612,
+                "name": "Samuel (case study) -- on effect of interviewer's sex and race",
+                "ocount": 1,
+                "path": "00/00/04/06/0000040612.html"
+            },
+            {
+                "id": 27114,
+                "name": "segregation",
+                "ocount": 5,
+                "path": "00/00/02/71/0000027114.html"
+            },
+            {
+                "id": 40636,
+                "name": "Shakira (case study) -- on effect of interviewer's sex and race",
+                "ocount": 1,
+                "path": "00/00/04/06/0000040636.html"
+            },
+            {
+                "id": 18820,
+                "name": "Shaming the race (fajgyalazas)",
+                "ocount": 1,
+                "path": "00/00/01/88/0000018820.html"
+            },
+            {
+                "id": 42046,
+                "name": "silence(ing) -- and race",
+                "ocount": 11,
+                "path": "00/00/04/20/0000042046.html"
+            },
+            {
+                "id": 33006,
+                "name": "Social construction -- and race",
+                "ocount": 4,
+                "path": "00/00/03/30/0000033006.html"
+            },
+            {
+                "id": 46571,
+                "name": "specific races",
+                "ocount": 0,
+                "path": "00/00/04/65/0000046571.html"
+            },
+            {
+                "id": 39318,
+                "name": "Storytelling -- critical race",
+                "ocount": 1,
+                "path": "00/00/03/93/0000039318.html"
+            },
+            {
+                "id": 40703,
+                "name": "Tyrone (case study) -- on effect of interviewer's sex and race",
+                "ocount": 1,
+                "path": "00/00/04/07/0000040703.html"
+            },
+            {
+                "id": 11924,
+                "name": "United Kingdom (UK) -- race and ethnicity in",
+                "ocount": 3,
+                "path": "00/00/01/19/0000011924.html"
+            },
+            {
+                "id": 11933,
+                "name": "United States (US) -- race and ethnicity in",
+                "ocount": 1,
+                "path": "00/00/01/19/0000011933.html"
+            },
+            {
+                "id": 36764,
+                "name": "West, Cornel -- Race Matters",
+                "ocount": 2,
+                "path": "00/00/03/67/0000036764.html"
+            },
+            {
+                "id": 37183,
+                "name": "\"white race\"",
+                "ocount": 1,
+                "path": "00/00/03/71/0000037183.html"
+            },
+            {
+                "id": 37184,
+                "name": "\"white race\" -- American history of",
+                "ocount": 1,
+                "path": "00/00/03/71/0000037184.html"
+            },
+            {
+                "id": 32943,
+                "name": "Women of color -- in the military",
+                "ocount": 2,
+                "path": "00/00/03/29/0000032943.html"
+            },
+            {
+                "id": 7907,
+                "name": "races",
+                "ocount": 100,
+                "path": "00/00/00/79/0000007907.html"
+            }
+        ],
+        "links": [
+            {
+                "source": 7907,
+                "target": 14584
+            },
+            {
+                "source": 7907,
+                "target": 40182
+            },
+            {
+                "source": 7907,
+                "target": 38766
+            },
+            {
+                "source": 7907,
+                "target": 39370
+            },
+            {
+                "source": 7907,
+                "target": 15945
+            },
+            {
+                "source": 7907,
+                "target": 43885
+            },
+            {
+                "source": 7907,
+                "target": 39840
+            },
+            {
+                "source": 7907,
+                "target": 39845
+            },
+            {
+                "source": 7907,
+                "target": 39849
+            },
+            {
+                "source": 7907,
+                "target": 41930
+            },
+            {
+                "source": 7907,
+                "target": 5622
+            },
+            {
+                "source": 7907,
+                "target": 39885
+            },
+            {
+                "source": 7907,
+                "target": 38849
+            },
+            {
+                "source": 7907,
+                "target": 38864
+            },
+            {
+                "source": 7907,
+                "target": 38865
+            },
+            {
+                "source": 7907,
+                "target": 38866
+            },
+            {
+                "source": 7907,
+                "target": 38867
+            },
+            {
+                "source": 7907,
+                "target": 38868
+            },
+            {
+                "source": 7907,
+                "target": 38869
+            },
+            {
+                "source": 7907,
+                "target": 38870
+            },
+            {
+                "source": 7907,
+                "target": 38871
+            },
+            {
+                "source": 7907,
+                "target": 38872
+            },
+            {
+                "source": 7907,
+                "target": 38873
+            },
+            {
+                "source": 7907,
+                "target": 38874
+            },
+            {
+                "source": 7907,
+                "target": 38875
+            },
+            {
+                "source": 7907,
+                "target": 38876
+            },
+            {
+                "source": 7907,
+                "target": 38877
+            },
+            {
+                "source": 7907,
+                "target": 5648
+            },
+            {
+                "source": 7907,
+                "target": 42760
+            },
+            {
+                "source": 7907,
+                "target": 26867
+            },
+            {
+                "source": 7907,
+                "target": 40313
+            },
+            {
+                "source": 7907,
+                "target": 31271
+            },
+            {
+                "source": 7907,
+                "target": 18450
+            },
+            {
+                "source": 7907,
+                "target": 38956
+            },
+            {
+                "source": 7907,
+                "target": 40372
+            },
+            {
+                "source": 7907,
+                "target": 40385
+            },
+            {
+                "source": 7907,
+                "target": 16039
+            },
+            {
+                "source": 7907,
+                "target": 3574
+            },
+            {
+                "source": 7907,
+                "target": 42989
+            },
+            {
+                "source": 7907,
+                "target": 18513
+            },
+            {
+                "source": 7907,
+                "target": 18514
+            },
+            {
+                "source": 7907,
+                "target": 18515
+            },
+            {
+                "source": 7907,
+                "target": 26927
+            },
+            {
+                "source": 7907,
+                "target": 43007
+            },
+            {
+                "source": 7907,
+                "target": 36977
+            },
+            {
+                "source": 7907,
+                "target": 40432
+            },
+            {
+                "source": 7907,
+                "target": 5769
+            },
+            {
+                "source": 7907,
+                "target": 5776
+            },
+            {
+                "source": 7907,
+                "target": 40440
+            },
+            {
+                "source": 7907,
+                "target": 1276
+            },
+            {
+                "source": 7907,
+                "target": 18590
+            },
+            {
+                "source": 7907,
+                "target": 39530
+            },
+            {
+                "source": 7907,
+                "target": 17983
+            },
+            {
+                "source": 7907,
+                "target": 40488
+            },
+            {
+                "source": 7907,
+                "target": 32954
+            },
+            {
+                "source": 7907,
+                "target": 16100
+            },
+            {
+                "source": 7907,
+                "target": 5850
+            },
+            {
+                "source": 7907,
+                "target": 34246
+            },
+            {
+                "source": 7907,
+                "target": 36812
+            },
+            {
+                "source": 7907,
+                "target": 3894
+            },
+            {
+                "source": 7907,
+                "target": 36615
+            },
+            {
+                "source": 7907,
+                "target": 5913
+            },
+            {
+                "source": 7907,
+                "target": 39245
+            },
+            {
+                "source": 7907,
+                "target": 43430
+            },
+            {
+                "source": 7907,
+                "target": 5928
+            },
+            {
+                "source": 7907,
+                "target": 43440
+            },
+            {
+                "source": 7907,
+                "target": 43444
+            },
+            {
+                "source": 7907,
+                "target": 32999
+            },
+            {
+                "source": 7907,
+                "target": 37087
+            },
+            {
+                "source": 7907,
+                "target": 44355
+            },
+            {
+                "source": 7907,
+                "target": 33000
+            },
+            {
+                "source": 7907,
+                "target": 27079
+            },
+            {
+                "source": 7907,
+                "target": 27080
+            },
+            {
+                "source": 7907,
+                "target": 26812
+            },
+            {
+                "source": 7907,
+                "target": 27082
+            },
+            {
+                "source": 7907,
+                "target": 27083
+            },
+            {
+                "source": 7907,
+                "target": 40561
+            },
+            {
+                "source": 7907,
+                "target": 40562
+            },
+            {
+                "source": 7907,
+                "target": 44356
+            },
+            {
+                "source": 7907,
+                "target": 33005
+            },
+            {
+                "source": 7907,
+                "target": 27084
+            },
+            {
+                "source": 7907,
+                "target": 7273
+            },
+            {
+                "source": 7907,
+                "target": 39650
+            },
+            {
+                "source": 7907,
+                "target": 27085
+            },
+            {
+                "source": 7907,
+                "target": 27081
+            },
+            {
+                "source": 7907,
+                "target": 18755
+            },
+            {
+                "source": 7907,
+                "target": 33001
+            },
+            {
+                "source": 7907,
+                "target": 37081
+            },
+            {
+                "source": 7907,
+                "target": 40565
+            },
+            {
+                "source": 7907,
+                "target": 37082
+            },
+            {
+                "source": 7907,
+                "target": 33007
+            },
+            {
+                "source": 7907,
+                "target": 26412
+            },
+            {
+                "source": 7907,
+                "target": 20490
+            },
+            {
+                "source": 7907,
+                "target": 37083
+            },
+            {
+                "source": 7907,
+                "target": 33002
+            },
+            {
+                "source": 7907,
+                "target": 26413
+            },
+            {
+                "source": 7907,
+                "target": 33003
+            },
+            {
+                "source": 7907,
+                "target": 37937
+            },
+            {
+                "source": 7907,
+                "target": 37084
+            },
+            {
+                "source": 7907,
+                "target": 37085
+            },
+            {
+                "source": 7907,
+                "target": 33004
+            },
+            {
+                "source": 7907,
+                "target": 1432
+            },
+            {
+                "source": 7907,
+                "target": 18756
+            },
+            {
+                "source": 7907,
+                "target": 18757
+            },
+            {
+                "source": 7907,
+                "target": 40563
+            },
+            {
+                "source": 7907,
+                "target": 37938
+            },
+            {
+                "source": 7907,
+                "target": 40564
+            },
+            {
+                "source": 7907,
+                "target": 39649
+            },
+            {
+                "source": 7907,
+                "target": 37086
+            },
+            {
+                "source": 7907,
+                "target": 37088
+            },
+            {
+                "source": 7907,
+                "target": 44357
+            },
+            {
+                "source": 7907,
+                "target": 39651
+            },
+            {
+                "source": 7907,
+                "target": 40566
+            },
+            {
+                "source": 7907,
+                "target": 44358
+            },
+            {
+                "source": 7907,
+                "target": 15218
+            },
+            {
+                "source": 7907,
+                "target": 38397
+            },
+            {
+                "source": 7907,
+                "target": 7274
+            },
+            {
+                "source": 7907,
+                "target": 7275
+            },
+            {
+                "source": 7907,
+                "target": 18758
+            },
+            {
+                "source": 7907,
+                "target": 39268
+            },
+            {
+                "source": 7907,
+                "target": 18759
+            },
+            {
+                "source": 7907,
+                "target": 18760
+            },
+            {
+                "source": 7907,
+                "target": 23689
+            },
+            {
+                "source": 7907,
+                "target": 40055
+            },
+            {
+                "source": 7907,
+                "target": 40056
+            },
+            {
+                "source": 7907,
+                "target": 40057
+            },
+            {
+                "source": 7907,
+                "target": 40058
+            },
+            {
+                "source": 7907,
+                "target": 42034
+            },
+            {
+                "source": 7907,
+                "target": 22785
+            },
+            {
+                "source": 7907,
+                "target": 39267
+            },
+            {
+                "source": 7907,
+                "target": 39269
+            },
+            {
+                "source": 7907,
+                "target": 36652
+            },
+            {
+                "source": 7907,
+                "target": 38548
+            },
+            {
+                "source": 7907,
+                "target": 38545
+            },
+            {
+                "source": 7907,
+                "target": 38540
+            },
+            {
+                "source": 7907,
+                "target": 38539
+            },
+            {
+                "source": 7907,
+                "target": 38542
+            },
+            {
+                "source": 7907,
+                "target": 38543
+            },
+            {
+                "source": 7907,
+                "target": 38537
+            },
+            {
+                "source": 7907,
+                "target": 38547
+            },
+            {
+                "source": 7907,
+                "target": 38546
+            },
+            {
+                "source": 7907,
+                "target": 38550
+            },
+            {
+                "source": 7907,
+                "target": 38538
+            },
+            {
+                "source": 7907,
+                "target": 38536
+            },
+            {
+                "source": 7907,
+                "target": 38551
+            },
+            {
+                "source": 7907,
+                "target": 38541
+            },
+            {
+                "source": 7907,
+                "target": 38544
+            },
+            {
+                "source": 7907,
+                "target": 38549
+            },
+            {
+                "source": 7907,
+                "target": 26415
+            },
+            {
+                "source": 7907,
+                "target": 42346
+            },
+            {
+                "source": 7907,
+                "target": 871
+            },
+            {
+                "source": 7907,
+                "target": 40594
+            },
+            {
+                "source": 7907,
+                "target": 40612
+            },
+            {
+                "source": 7907,
+                "target": 27114
+            },
+            {
+                "source": 7907,
+                "target": 40636
+            },
+            {
+                "source": 7907,
+                "target": 18820
+            },
+            {
+                "source": 7907,
+                "target": 42046
+            },
+            {
+                "source": 7907,
+                "target": 33006
+            },
+            {
+                "source": 7907,
+                "target": 46571
+            },
+            {
+                "source": 7907,
+                "target": 39318
+            },
+            {
+                "source": 7907,
+                "target": 40703
+            },
+            {
+                "source": 7907,
+                "target": 11924
+            },
+            {
+                "source": 7907,
+                "target": 11933
+            },
+            {
+                "source": 7907,
+                "target": 36764
+            },
+            {
+                "source": 7907,
+                "target": 37183
+            },
+            {
+                "source": 7907,
+                "target": 37184
+            },
+            {
+                "source": 7907,
+                "target": 32943
+            }
+        ]
+    }
+}

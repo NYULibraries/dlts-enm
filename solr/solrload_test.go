@@ -3,6 +3,7 @@ package solr
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/nyulibraries/dlts-enm/cache"
 	"io/ioutil"
 	"log"
 	"os"
@@ -16,6 +17,8 @@ import (
 
 	"github.com/nyulibraries/dlts-enm/util"
 )
+
+const testCache = "./testdata/cache"
 
 type solrStub struct {
 	URL     string
@@ -72,7 +75,19 @@ func getGoldenFileLocationIDs() {
 	}
 }
 
-func TestLoad(t *testing.T) {
+func TestLoadFromCache(t *testing.T) {
+	cache.SetCacheLocation(testCache)
+
+	_Load(t, "cache")
+}
+
+func TestLoadFromDatabase(t *testing.T) {
+	cache.SetCacheLocation(cache.DefaultCache)
+
+	_Load(t, "database")
+}
+
+func _Load(t *testing.T, source string) {
 	solrStub, err := newSolrStub("fakesolr.dlib.nyu.edu", 8983, "enm-pages")
 	if err != nil {
 		t.Fatal(err)
@@ -90,7 +105,7 @@ func TestLoad(t *testing.T) {
 	solrGoldenFilesDirectory = rootDirectory + "/solr/testdata/golden"
 	getGoldenFileLocationIDs()
 
-	solrLoadTestTmpDirectory = rootDirectory + "/solr/testdata/tmp/load"
+	solrLoadTestTmpDirectory = rootDirectory + "/solr/testdata/tmp/load/" + source
 	err = os.RemoveAll(solrLoadTestTmpDirectory)
 	if (err != nil) {
 		t.Fatal( "os.RemoveAll(" + solrLoadTestTmpDirectory + ") failed: " + err.Error())
@@ -100,6 +115,17 @@ func TestLoad(t *testing.T) {
 	if mkdirErr != nil {
 		t.Fatal(mkdirErr)
 	}
+
+	Source = source
+
+	// Load only pages for which there are golden files
+	pageIDsToTest := make([]int, len(goldenFileLocationIDs))
+	i := 0
+	for pageID := range goldenFileLocationIDs {
+		pageIDsToTest[i] = pageID
+		i++
+	}
+	PageIDs = pageIDsToTest
 
 	Load()
 

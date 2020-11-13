@@ -1,0 +1,29 @@
+{
+    "add": [
+        {
+            "authors": "Steven Goldberg",
+            "epubNumberOfPages": 269,
+            "id": 27598,
+            "isbn": "9780814730911",
+            "pageLocalId": "page_181",
+            "pageNumberForDisplay": "181",
+            "pageSequenceNumber": 195,
+            "pageText": "This is why the science counselors are so important. Because they are part of the research establishment, they might plausibly have an actual impact on scientific work. So we must look more closely at the impact they could have and whether that impact is desirable.\nThe first question is whether science counselors, with their interest in social considerations, could really change the nature of the scientific endeavor. In other words, can social considerations actually affect the ethos of science, or will they never be anything more than a set of outside constraints imposed on scientists and resisted accordingly?\nTraditional scientists may well doubt that social issues can ever deflect serious scientists from the joy of their work. It is true that scientists have always grumbled about bureaucratic paper shuffling, administrative responsibilities, and budget meetings keeping them from the lab. But an increasing concern with broader social issues may be different. Not only is it important to the progress of science, it is an attractive activity. The challenge of balancing research progress with a heavier-than-usual dose of social implications can be seductive. Lawyers know their work in shaping social decisions is often fascinating. Science counselors discover the same thing.\nIt is hard to predict the impact of growing social consciousness on the doing of science. This is in part because we are not talking about an all-or-nothing situation. There has always been a continuum on which researchers have varied in the extent that their work reflects a concern for the outside world. But whereas the path from pure scientist to science counselor has been gradual, a great distance has been traversed. Vannevar Bush’s classic 1945 report, Science, The Endless Frontier, which helped shape the modern research establishment, said the government should fund “the free play of free intellects, working on subjects of their own choice, in the manner dictated by their curiosity for exploration of the unknown.”1 That approach would now appear foolhardy to many researchers.\nLet us highlight the potential impact of current trends by speculating about a future research environment utterly dominated by thoroughgoing science counselors. In such a world, the ethic of socially acceptable progress would permeate all research. In other words, basic research would no longer represent one of two cultures—law and science—vying for dominance in our society. No longer would science embody a belief in the progressive growth of knowledge that stands in sharp contrast ",
+            "publisher": "New York University Press",
+            "title": "Culture Clash",
+            "topicNames": [
+                "Bush, V.",
+                "Bush, Vannevar",
+                "Science counselor",
+                "\"Two Cultures\""
+            ],
+            "topicNamesForDisplay": "[[\"Bush, Vannevar\",\"Bush, V.\"],[\"Science counselor\"],[\"\\\"Two Cultures\\\"\"]]",
+            "topicNames_facet": [
+                "Bush, Vannevar",
+                "Science counselor",
+                "\"Two Cultures\""
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

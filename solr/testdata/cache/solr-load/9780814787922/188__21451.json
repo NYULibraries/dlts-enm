@@ -1,0 +1,36 @@
+{
+    "add": [
+        {
+            "authors": "Richard K. Vedder and Lowell E. Gallaway",
+            "epubNumberOfPages": 408,
+            "id": 21451,
+            "isbn": "9780814787922",
+            "pageLocalId": "page_188",
+            "pageNumberForDisplay": "188",
+            "pageSequenceNumber": 206,
+            "pageText": "Nevertheless, his key advisers, especially George Humphrey, secretary of the treasury, sounded much like John Snyder. According to Robert Donovan, Humphrey felt that “a few adjustments were not to be feared. Employment could decline for six or seven months without becoming critical.”23 To be sure, within the administration there was discussion of public-works projects and from outside there were cries that disaster was upon us.24 Still, no concerted set of corrective policy actions emerged, and as already noted, the recovery came.\nIn his Brookings study, Lewis summarized this episode as follows: “Discretionary counterrecession expenditure actions were slow to be initiated, were not all announced to the public, and were modest in scope.”25 Even “modest in scope” is perhaps something of an exaggeration. Lewis’s own calculations revealed that the sum total of “discretionary” fiscal expenditures through the third quarter of 1954 was $300 million, less than one-tenth of one percent of GNP for that year.26 It is extremely difficult to argue that the economic recovery that began in 1954 represented a triumph of Keynesian demand management through the application of discretionary fiscal policy. This business cycle, like its immediate predecessor, appeared to fit the description “mild and self-correcting.” Far from being a vindication of the Keynesian model, it is better interpreted as being supportive of the wages hypothesis that we have advanced.\nThe 1958 Recession\nThe third business downturn of the decade was the 1958 rise in unemployment. In this case, the scenario was only slightly different. First, there was a steady escalation in the rate of price inflation after 1954. The implicit price deflator rose by 1.6 percent in 1955; by 3.3 percent in 1956; and by 3.5 percent in 1957, followed by a slowing to a 1.3 percent increase in 1958. As this happened, the rate of increase in money wage rates surged to 6.4 percent a year in both 1956 and 1957. By itself, this might not have created any problems. However, 1956 and 1957 were years of relatively low productivity gains. Beginning with 1949 and moving through 1955, the annual average increase in the productivity of labor was 4.0 percent. In 1956 it was 1.4 percent and in 1957 2.7 percent. This combination of wage, price, and productivity increases led to an upward movement in the adjusted real wage rate, increasing it by 3.9 percent over its 1955 level and triggering the 1958 recession.\nTurning to the specifics of this cycle, unemployment began to edge up in late 1957, rising from 4.2 to 4.9 percent between the third and fourth quarters. Even sharper increases followed. In the first quarter of 1958, another 1.4 percentage points were added to the unemployment rate, taking it to 6.3 percent, and in the second quarter it rose to 7.4 percent. This was the peak. The third quarter was marked by a fall to 7.3 percent and by the second quarter of 1959 the unemployment rate stood at 5.1 percent. The quarterly version of our wages model tracks this cycle quite well, as is shown in figure 9.3.\n",
+            "publisher": "New York University Press",
+            "title": "Out of Work",
+            "topicNames": [
+                "Fiscal policy",
+                "Humphrey, George",
+                "Lewis, Wilfred",
+                "Recession -- of 1953–54",
+                "Recession -- of 1958",
+                "Snyder, John W",
+                "Unemployment -- productivity and"
+            ],
+            "topicNamesForDisplay": "[[\"Fiscal policy\"],[\"Humphrey, George\"],[\"Lewis, Wilfred\"],[\"Recession -- of 1953–54\"],[\"Recession -- of 1958\"],[\"Snyder, John W\"],[\"Unemployment -- productivity and\"]]",
+            "topicNames_facet": [
+                "Fiscal policy",
+                "Humphrey, George",
+                "Lewis, Wilfred",
+                "Recession -- of 1953–54",
+                "Recession -- of 1958",
+                "Snyder, John W",
+                "Unemployment -- productivity and"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

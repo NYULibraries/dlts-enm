@@ -7,28 +7,55 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/util"
 )
 
-func TestGenerateBrowseTopicsListsNoGoogleAnalytics(t *testing.T) {
+func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromCache(t *testing.T) {
 	GoogleAnalytics = false
 
-	_, err := testGenerateBrowseTopicsLists()
+	cache.SetCacheLocation(testCache)
+
+	_, err := testGenerateBrowseTopicsLists("cache")
 	if (err != nil) {
 		t.Fatal(err.Error())
 	}
 }
 
-func TestGenerateBrowseTopicsListsWithGoogleAnalytics(t *testing.T) {
+func TestGenerateBrowseTopicsListsWithGoogleAnalyticsFromCache(t *testing.T) {
 	GoogleAnalytics = true
 
-	_, err := testGenerateBrowseTopicsLists()
+	cache.SetCacheLocation(testCache)
+
+	_, err := testGenerateBrowseTopicsLists("cache")
 	if (err != nil) {
 		t.Fatal(err.Error())
 	}
 }
 
-func testGenerateBrowseTopicsLists() (bool, error) {
+func TestGenerateBrowseTopicsListsNoGoogleAnalyticsFromDatabase(t *testing.T) {
+	GoogleAnalytics = false
+
+	cache.SetCacheLocation(cache.DefaultCache)
+
+	_, err := testGenerateBrowseTopicsLists("database")
+	if (err != nil) {
+		t.Fatal(err.Error())
+	}
+}
+
+func TestGenerateBrowseTopicsListsWithGoogleAnalyticsFromDatabase(t *testing.T) {
+	GoogleAnalytics = true
+
+	cache.SetCacheLocation(cache.DefaultCache)
+
+	_, err := testGenerateBrowseTopicsLists("database")
+	if (err != nil) {
+		t.Fatal(err.Error())
+	}
+}
+
+func testGenerateBrowseTopicsLists(source string) (bool, error) {
 	wd, err := os.Getwd()
 	if (err != nil) {
 		return false, errors.New("os.Getwd() failed: " + err.Error())
@@ -40,7 +67,7 @@ func testGenerateBrowseTopicsLists() (bool, error) {
 		"/" + getGoldenFileSubdirectory()
 
 	destination := rootDirectory + "/sitegen/testdata/tmp/browse-topics-lists/" +
-		getGoldenFileSubdirectory()
+		source + "/" + getGoldenFileSubdirectory()
 	outputDir := destination + "/browse-topics-lists"
 	err = os.RemoveAll(outputDir)
 	if (err != nil) {
@@ -55,7 +82,7 @@ func testGenerateBrowseTopicsLists() (bool, error) {
 		TopicPageTemplateDirectory = rootDirectory + "/" + TopicPageTemplateDirectory
 	}
 
-	Source = "database"
+	Source = source
 
 	GenerateBrowseTopicsLists(destination)
 

@@ -80,6 +80,17 @@ These environment variables must be set before running any `enm` command, even
 the ones that do not technically need database access.  Failure to do so will
 cause a `panic`.
 
+Set location of the cache using ENM_CACHE:
+
+```shell script
+export ENM_CACHE=$HOME/enm-cache/
+```
+
+This environment variable is optional.  If it is set and the path that is pointed
+to does not already exist, `enm` will create it, along with any needed intermediate
+directories.
+If `ENM_CACHE` is not set, the location of the cache defaults to `/tmp/enm-cache/`.
+
 #### Set up SSH tunnel to devdb1
 
 Set up SSH tunneling to port 5432 on Postgres host devdb1.dlib.nyu.edu through
@@ -116,12 +127,11 @@ ssh -N -L 5432:devdb1:5432 bastion
 
 #### Deploy site
 
-There is a deploy script that can generate the full website and copy to dev, stage,
-or prod web servers.  The easiest way to use it is to run the wrapper script
-that prompts for whether the generate the full site and also prompts for the
-server username and password, then generates the site (if requested) and performs
-the many necessary `rsync` commands using [`expect`](https://core.tcl.tk/expect/index)
-to automatically the enter user credentials for the bastion and web server hosts.
+There is a deploy script that can generate the full website and copy it to the dev,
+stage, and prod web servers.  The easiest way to use it is to run the wrapper script
+that will prompt for information and then run the deploy script with the proper
+options and credentials.  The `rsync` commands are run using [`expect`](https://core.tcl.tk/expect/index)
+to automatically enter the user credentials for the bastion and web server hosts.
 
 * `bin/deploy-site_expect.sh dev`
 * `bin/deploy-site_expect.sh stage`
@@ -132,8 +142,8 @@ set to directories in `dist/`.
 
 See [examples](#examples) for a full demonstration of how to use this wrapper script.
 
-Note that the deploy scripts do not perform Solr indexing, only static page
-generation and copying to server.
+Note that the deploy script does static page generation and copying to server only,
+it does not perform Solr indexing. 
 
 #### Get general help
 
@@ -147,9 +157,13 @@ generation and copying to server.
 
 `./enm help sitegen browsetopicslists`
 
-#### Create browse topics lists
+#### Create browse topics lists using Postgres database
 
 `./enm sitegen browsetopicslists --destination=[DESTINATION]`
+
+#### Create browse topics lists using cache files
+
+`./enm sitegen browsetopicslists --destination=[DESTINATION] --source=cache`
 
 #### Create page About, Home, etc.
 
@@ -168,32 +182,36 @@ can be used as the data source for subsequent topic pages generation runs:
 
 #### Create topic pages for 2 topics only using Postgres database
 
-`./enm sitegen topicpages --source=cache --destination=[DESTINATION] [TOPIC ID 1] [TOPIC ID 2]`
+`./enm sitegen topicpages --source=database --destination=[DESTINATION] [TOPIC ID 1] [TOPIC ID 2]`
 
 #### Create topic pages for 2 topics only using cache files
 
 `./enm sitegen topicpages --source=cache --destination=[DESTINATION] [TOPIC ID 1] [TOPIC ID 2]`
 
-#### Load enm-pages Solr index
-
-Data source is always the Postgres database.
-There is currently no caching of data for Solr index operations.
+#### Load enm-pages Solr index using Postgres database
 
 `./enm solr load --server=[SOLR SERVER] --port 8983`
 
+#### Load enm-pages Solr index using cache files
+
+`./enm solr load --server=[SOLR SERVER] --source=cache --port 8983`
+
 ### Examples
 
-#### Create the production website and deploy to the web server
+#### Create the production website from latest cache files cloned to $HOME/enm-cache/ and deploy to the dev web server
 
-In the example below, it is assumed that the `dlts-enm` repo is located
-`$GOPATH/src/github.com/nyulibraries/dlts-enm/`
+In the example below, it is assumed that the `dlts-enm` repo is located at
+`$GOPATH/src/github.com/nyulibraries/dlts-enm/`, and the `https://github.com/nyudlts/enm-cache`
+repo has already been cloned to $HOME.
 
 ```shell
+$ export ENM_CACHE=$HOME/enm-cache/
 $ bin/deploy-site_expect.sh dev
 Do complete regeneration of the site before copying to server? [y/n] y
-Username for b.dlib.nyu.edu and devweb1.dlib.nyu.edu: SOMEUSER
-Password for b.dlib.nyu.edu and devweb1.dlib.nyu.edu:
-spawn /Users/someuser/go/src/github.com/nyulibraries/dlts-enm/bin/deploy-site.sh -g -u SOMEUSER dev
+Use the cache for regenerating the site? [y/n] y
+Username for b.dlib.nyu.edu and devweb1.dlib.nyu.edu: someuser
+Password for b.dlib.nyu.edu and devweb1.dlib.nyu.edu: 
+spawn /Users/someuser/Documents/programming/go/gopath/src/github.com/nyulibraries/dlts-enm/bin/deploy-site.sh -c -g -u arjanik dev
 Generating site pages...
 Generating browse topics lists...
 Generating topic pages...
@@ -204,7 +222,7 @@ Generating topic pages...
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@b.dlib.nyu.edu's password:
+someuser@b.dlib.nyu.edu's password:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
            WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
            ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
@@ -212,7 +230,7 @@ SOMEUSER@b.dlib.nyu.edu's password:
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@devweb1.dlib.nyu.edu's password:
+someuser@devweb1.dlib.nyu.edu's password:
 building file list ... done
 about.html
 
@@ -227,7 +245,7 @@ rsync #1 completed successfully.
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@b.dlib.nyu.edu's password:
+someuser@b.dlib.nyu.edu's password:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
            WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
            ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
@@ -235,7 +253,7 @@ SOMEUSER@b.dlib.nyu.edu's password:
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@devweb1.dlib.nyu.edu's password:
+someuser@devweb1.dlib.nyu.edu's password:
 building file list ... done
 index.html
 
@@ -250,7 +268,7 @@ rsync #2 completed successfully.
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@b.dlib.nyu.edu's password:
+someuser@b.dlib.nyu.edu's password:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
            WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
            ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
@@ -258,7 +276,7 @@ SOMEUSER@b.dlib.nyu.edu's password:
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@devweb1.dlib.nyu.edu's password:
+someuser@devweb1.dlib.nyu.edu's password:
 building file list ... done
 ./
 0-9.html
@@ -302,7 +320,7 @@ rsync #3 completed successfully.
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@b.dlib.nyu.edu's password:
+someuser@b.dlib.nyu.edu's password:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
            WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
            ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
@@ -310,7 +328,7 @@ SOMEUSER@b.dlib.nyu.edu's password:
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@devweb1.dlib.nyu.edu's password:
+someuser@devweb1.dlib.nyu.edu's password:
 building file list ... done
 
 sent 2.50K bytes  received 20 bytes  1.68K bytes/sec
@@ -324,7 +342,7 @@ rsync #4 completed successfully.
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@b.dlib.nyu.edu's password:
+someuser@b.dlib.nyu.edu's password:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
            WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
            ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
@@ -332,7 +350,7 @@ SOMEUSER@b.dlib.nyu.edu's password:
 [...SNIPPED...]
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SOMEUSER@devweb1.dlib.nyu.edu's password:
+someuser@devweb1.dlib.nyu.edu's password:
 building file list ... done
 ./
 00/
@@ -353,26 +371,27 @@ rsync #5 completed successfully.
 ENM site deployment completed.
 ```
 
-#### Load prod Solr index
+#### Load prod Solr index from Postgres database
 
 `./enm solr load --server=discovery1.dlib.nyu.edu --port 8983`
 
+#### Load prod Solr index from cache files at $ENM_CACHE if set, or default cache location `/tmp/enm-cache/` 
+
+`./enm solr load --server=discovery1.dlib.nyu.edu --source=cache --port 8983`
+
 ## Running the tests
 
-Make sure access to the Postgres database has already been set up before running
-the tests.  See [Set environment variables](#set-environment-variables).
+Make sure to set up access to the Postgres database before running the tests.
+See [Set environment variables](#set-environment-variables).
 
 ```shell
 go test ./...
 ```
 
-Ideally for tests Postgres would be stubbed out with a fake.  This might be done
-as a future improvement. 
-
 ## Generation of code files in `db/postgres/models`
 
 The Go code in `db/postgres/models` was generated automatically by [xo](https://github.com/xo/xo)
-using custom `xo` templates.  If changes are made to the the Postgres database,
+using custom `xo` templates.  If changes are made to the Postgres database,
 the models can be updated by running `go generate` at the root of the project.
 
 ## Configuration
@@ -386,12 +405,10 @@ database access.
 
 * Real error handling/recovery/messaging/logging instead of the liberal use of
 `panic` calls
-* `solr load` caching of Postgres data, for improved performance and for decoupling
-from the TCT Postgres database (and TCT in general)
 * (maybe) Embedding of `sitegen` templates into the `enm` binary using something like
 https://github.com/jteeuwen/go-bindata (for motivation see comment in
 `sitegen/sitegen.go`)
-* Write more tests, and stub out Postgres in tests in the `solr` and `sitegen` packages
+* Write more tests, and stub out Postgres in the tests in the `solr` and `sitegen` packages
 (and in all future tests).
 
 ## ENM project Github repos

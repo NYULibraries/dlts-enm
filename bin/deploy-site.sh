@@ -10,8 +10,9 @@ function usage() {
 
     cat <<EOF
 
-usage: ${script_name} [-g] [-h] [-u username] environment
-    -g:          generate static in dist/
+usage: ${script_name} [-c] [-g] [-h] -u username environment
+    -c:          generate static site from cache instead of database
+    -g:          generate static site in dist/
     -h:          print this usage message
     -u username: username on bastion host and web server
     environment: "dev", "stage", or "prod"
@@ -49,21 +50,21 @@ function generate_site() {
     local google_analytics_flag=$2
 
     echo 'Generating site pages...'
-    go run main.go sitegen sitepages --destination=$dist $google_analytics_flag
+    go run main.go sitegen sitepages --source=$source --destination=$dist $google_analytics_flag
     if [ $? -ne 0 ]
     then
         exit 1
     fi
 
     echo 'Generating browse topics lists...'
-    go run main.go sitegen browsetopicslists --destination=$dist $google_analytics_flag
+    go run main.go sitegen browsetopicslists --source=$source --destination=$dist $google_analytics_flag
     if [ $? -ne 0 ]
     then
         exit 1
     fi
 
     echo 'Generating topic pages...'
-    go run main.go sitegen topicpages --destination=$dist $google_analytics_flag
+    go run main.go sitegen topicpages --source=$source --destination=$dist $google_analytics_flag
     if [ $? -ne 0 ]
     then
         exit 1
@@ -89,11 +90,13 @@ check_prerequisites
 
 STATIC_SITE_PATH=/www/sites/enm
 
+source='database'
 generate_site=false
 
-while getopts ghu: opt
+while getopts cghu: opt
 do
     case $opt in
+        c) source='cache' ;;
         g) generate_site=true ;;
         h) usage; exit 0 ;;
         u) username=$OPTARG ;;

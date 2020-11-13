@@ -6,6 +6,7 @@ import (
 
 var Port int
 var Server string
+var SolrSource string
 
 // solrCmd represents the solr command
 var solrCmd = &cobra.Command{
@@ -22,9 +23,17 @@ func init() {
 	solrCmd.PersistentFlags().StringVarP(
 		&Server,
 		"server",
-		"s",
+		"",
 		"localhost",
 		"Solr server",
+	)
+
+	solrCmd.PersistentFlags().StringVarP(
+		&SolrSource,
+		"source",
+		"s",
+		"database",
+		"Specify data source: database, cache",
 	)
 
 	solrCmd.PersistentFlags().IntVarP(

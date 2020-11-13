@@ -1,0 +1,32 @@
+{
+    "add": [
+        {
+            "authors": "Daniel Rancour-Laferriere",
+            "epubNumberOfPages": 344,
+            "id": 12295,
+            "isbn": "9780814774823",
+            "pageLocalId": "page_66",
+            "pageNumberForDisplay": "66",
+            "pageSequenceNumber": 80,
+            "pageText": "THREETwo Key Words in the Vocabulary of Russian Masochism\nIt would be difficult to move any further in this psychoanalytic treatise without an explication of two items which are very difficult to translate into English. Indeed, I will not translate them, but will refer to them in transliterated form for the duration.\nSmirenie\nThe ethical notion of smirenie falls into the same semantic ballpark occupied by such English terms as “humility,” “meekness,” and “submission,” but the Russian term is more affectively loaded for Russians than the English terms are for most English speakers. Smirenie is primarily a religious (specifically, Russian Orthodox) feeling. Typically one submits oneself to a high dominance male called “God” (“Bog”), but other powerful figures, such as the peasant commune (“mir”), may also elicit this emotion.\nSmirenie (together with etymologically related items) is generally evaluated in a positive way by traditional Russians. For example, most of the proverbs gathered on this topic by Dahl express approval:\nSmirenie is pleasing to God, is enlightening to the mind, is salvation for the soul, is a blessing to the home, and is a comfort to people (Smiren’e—Bogu ugozhden’e, umu prosveshchen’e, dushe spasen’e, domu blagosloven’e i liudiam uteshen’e).\nSmirenie is a girl’s necklace to a young man [is becoming to her] (Smiren’e devich’e [molodtsu] ozherel’e).\n",
+            "publisher": "New York University Press",
+            "title": "The Slave Soul of Russia",
+            "topicNames": [
+                "Dahl, Vladimir",
+                "\"mir\"",
+                "Russian Orthodoxy",
+                "smirenie",
+                "submissiveness"
+            ],
+            "topicNamesForDisplay": "[[\"Dahl, Vladimir\"],[\"\\\"mir\\\"\"],[\"Russian Orthodoxy\"],[\"smirenie\"],[\"submissiveness\"]]",
+            "topicNames_facet": [
+                "Dahl, Vladimir",
+                "\"mir\"",
+                "Russian Orthodoxy",
+                "smirenie",
+                "submissiveness"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

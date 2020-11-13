@@ -1,0 +1,389 @@
+{
+    "AlternateNames": [
+        "Foucault",
+        "Foucault, M."
+    ],
+    "DisplayName": "Foucault, Michel",
+    "EPUBMatches": [
+        {
+            "Title": "Wiki Writing: Collaborative Learning in the College Classroom",
+            "Authors": "Cummings, Robert E.; Barton, Matt",
+            "Publisher": "University of Michigan Press and University of Michigan Library",
+            "ISBN": "9780472024513",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "The Employment of English",
+            "Authors": "Michael Bérubé",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814713013",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "The Class: Living and Learning in the Digital Age",
+            "Authors": "Sonia Livingstone and Julian Sefton-Green",
+            "Publisher": "New York University Press",
+            "ISBN": "9781479824243",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Tactics of the Human: Experimental Technics in American Fiction",
+            "Authors": "Shackelford, Laura",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472120680",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Romantic Outlaws, Beloved Prisons",
+            "Authors": "Martha Grace Duncan",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814718803",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Poetry's Afterlife: Verse in the Digital Age",
+            "Authors": "Stein, Kevin",
+            "Publisher": "The University of Michigan Press",
+            "ISBN": "9780472026708",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Please don’t Wish me a Merry Christmas",
+            "Authors": "Stephen M. Feldman.",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814726846",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Manifesto of a Tenured Radical",
+            "Authors": "Cary Nelson",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814757970",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field",
+            "Authors": "Klein, Julie Thompson",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472120932",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Freedom to Differ",
+            "Authors": "Diane Helene Miller",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814755969",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Faith Born of Seduction",
+            "Authors": "Jennifer L. Manlowe",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814755297",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "Title": "Universes without Us",
+            "Authors": "Matthew A. Taylor",
+            "Publisher": "University of Minnesota Press",
+            "ISBN": "9780816680610",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "The Prostitution of Sexuality",
+            "Authors": "Kathleen Barry",
+            "Publisher": "New york University Press",
+            "ISBN": "9780814712771",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Split Screen Korea",
+            "Authors": "Steven Chung",
+            "Publisher": "University of Minnesota Press",
+            "ISBN": "9781452941516",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Narcissism and the Literary Libido",
+            "Authors": "Marshall W. Alcorn, Jr.",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814706657",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Digital Rubbish: A Natural History of Electronics",
+            "Authors": "Gabrys, Jennifer",
+            "Publisher": "The University of Michigan Press",
+            "ISBN": "9780472029402",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "Bisexuality and the Challenge to Lesbian Politics",
+            "Authors": "Paula C. Rust",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814774458",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "Title": "The Hyperlinked Society: Questioning Connections in the Digital Age",
+            "Authors": "Turrow, Joseph; Tsui, Lokman",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472024537",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+            "Authors": "Schur, Richard L.",
+            "Publisher": "The University of Michigan Press and The University of Michigan Library",
+            "ISBN": "9780472024490",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Becoming Human",
+            "Authors": "David Mitchell",
+            "Publisher": "University of Minnesota Press",
+            "ISBN": "9780816689972",
+            "NumberOfOccurrences": 3
+        },
+        {
+            "Title": "Teaching What You’re Not",
+            "Authors": "Katherine J. Mayberry",
+            "Publisher": "York University Press",
+            "ISBN": "9780814755471",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "Title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality",
+            "Authors": "R. Jeffrey Ringer",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814774410",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "Title": "Postmodern Legal Movements",
+            "Authors": "Gary Minda",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814755112",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "Title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle",
+            "Authors": "Elizabeth Carolyn Miller",
+            "Publisher": "University of Michigan Press and University of Michigan Library",
+            "ISBN": "9780472024469",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "Title": "Clarence Thomas and the Tough Love Crowd",
+            "Authors": "Ronald Suresh Roberts",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814774816",
+            "NumberOfOccurrences": 4
+        },
+        {
+            "Title": "Originality, Imitation, and Plagiarism",
+            "Authors": "Eisner, Caroline; Vicinus, Martha",
+            "Publisher": "University of Michigan Press and University of Michigan Library",
+            "ISBN": "9780472024445",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "Title": "The Scar That Binds",
+            "Authors": "Keith Beattie",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814713266",
+            "NumberOfOccurrences": 6
+        },
+        {
+            "Title": "Bodies in Protest",
+            "Authors": "Steve Kroll-Smith",
+            "Publisher": "New York University Press",
+            "ISBN": "9780814746622",
+            "NumberOfOccurrences": 10
+        }
+    ],
+    "ExternalRelations": [],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [
+        {
+            "ID": 42844,
+            "Name": "Birth of the Clinic, The (Foucault)",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 2701,
+            "Name": "Foucault, Michel -- \"What Is an Author?\"",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 39484,
+            "Name": "Foucault, Michel -- and phenomenology",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 36378,
+            "Name": "Foucault, Michel -- criticism of",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 6638,
+            "Name": "Foucault, Michel -- Herculine Barbin",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 44084,
+            "Name": "Foucault, Michel -- preface to Anti-Oedipus",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 6637,
+            "Name": "Foucault, Michel: on biopower",
+            "NumberOfOccurrences": 5
+        },
+        {
+            "ID": 28889,
+            "Name": "History of Sexuality, The (Foucault)",
+            "NumberOfOccurrences": 2
+        },
+        {
+            "ID": 43481,
+            "Name": "repression -- Foucault on",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 33056,
+            "Name": "Sodomy -- Foucault on",
+            "NumberOfOccurrences": 1
+        },
+        {
+            "ID": 45957,
+            "Name": "table -- Foucault's operating table",
+            "NumberOfOccurrences": 1
+        }
+    ],
+    "TopicID": 9640,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 42844,
+                "name": "Birth of the Clinic, The (Foucault)",
+                "ocount": 2,
+                "path": "00/00/04/28/0000042844.html"
+            },
+            {
+                "id": 2701,
+                "name": "Foucault, Michel -- \"What Is an Author?\"",
+                "ocount": 1,
+                "path": "00/00/00/27/0000002701.html"
+            },
+            {
+                "id": 39484,
+                "name": "Foucault, Michel -- and phenomenology",
+                "ocount": 1,
+                "path": "00/00/03/94/0000039484.html"
+            },
+            {
+                "id": 36378,
+                "name": "Foucault, Michel -- criticism of",
+                "ocount": 2,
+                "path": "00/00/03/63/0000036378.html"
+            },
+            {
+                "id": 6638,
+                "name": "Foucault, Michel -- Herculine Barbin",
+                "ocount": 1,
+                "path": "00/00/00/66/0000006638.html"
+            },
+            {
+                "id": 44084,
+                "name": "Foucault, Michel -- preface to Anti-Oedipus",
+                "ocount": 1,
+                "path": "00/00/04/40/0000044084.html"
+            },
+            {
+                "id": 6637,
+                "name": "Foucault, Michel: on biopower",
+                "ocount": 5,
+                "path": "00/00/00/66/0000006637.html"
+            },
+            {
+                "id": 28889,
+                "name": "History of Sexuality, The (Foucault)",
+                "ocount": 2,
+                "path": "00/00/02/88/0000028889.html"
+            },
+            {
+                "id": 43481,
+                "name": "repression -- Foucault on",
+                "ocount": 1,
+                "path": "00/00/04/34/0000043481.html"
+            },
+            {
+                "id": 33056,
+                "name": "Sodomy -- Foucault on",
+                "ocount": 1,
+                "path": "00/00/03/30/0000033056.html"
+            },
+            {
+                "id": 45957,
+                "name": "table -- Foucault's operating table",
+                "ocount": 1,
+                "path": "00/00/04/59/0000045957.html"
+            },
+            {
+                "id": 9640,
+                "name": "Foucault, Michel",
+                "ocount": 73,
+                "path": "00/00/00/96/0000009640.html"
+            }
+        ],
+        "links": [
+            {
+                "source": 9640,
+                "target": 42844
+            },
+            {
+                "source": 9640,
+                "target": 2701
+            },
+            {
+                "source": 9640,
+                "target": 39484
+            },
+            {
+                "source": 9640,
+                "target": 36378
+            },
+            {
+                "source": 9640,
+                "target": 6638
+            },
+            {
+                "source": 9640,
+                "target": 44084
+            },
+            {
+                "source": 9640,
+                "target": 6637
+            },
+            {
+                "source": 9640,
+                "target": 28889
+            },
+            {
+                "source": 9640,
+                "target": 43481
+            },
+            {
+                "source": 9640,
+                "target": 33056
+            },
+            {
+                "source": 9640,
+                "target": 45957
+            }
+        ]
+    }
+}

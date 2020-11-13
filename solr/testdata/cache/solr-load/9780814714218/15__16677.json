@@ -1,0 +1,32 @@
+{
+    "add": [
+        {
+            "authors": "John W. Chapman",
+            "epubNumberOfPages": 348,
+            "id": 16677,
+            "isbn": "9780814714218",
+            "pageLocalId": "page_15",
+            "pageNumberForDisplay": "15",
+            "pageSequenceNumber": 27,
+            "pageText": "socialist institutions have an inherent propensity to mutate into market capitalism or else to degenerate into a socialist command economy. It is, for this reason, an illusion to conceive of market socialism as a viable tertium quid between capitalism and socialism.\nMy second argument against Rawls is more fundamental. I shall argue that justice cannot be silent or neutral as to the choice of economic system. For us, the contractarian method yields a definite result, namely that justice enjoins an economic system encompassing both private property and market freedoms. I argue this, despite the fact that contractarian method cannot in general yield results with the sort of determinacy that Rawls expects.\nBeside defending these substantive claims, I hope to advance understanding of the scope and limits of the contractarian method itself. As we know, Rawls’s own conception of that appears to have shifted in his recent work. I will try to specify which of the conceptions of contractarian method adumbrated in his writings is most consistent with the spirit of his latest work. Further, I will compare and contrast the various conceptions of the contract method to be found in Rawls’s work with others, such as those of David Gauthier and James Buchanan. Most radically, however, my larger goal in the sections of the chapter concerned with the methodological content of the various contractarian approaches is to say something about the scope and limits of political philosophy itself. Here I will aim to counterpoint Rawls’s view, in which political philosophy may have a constructive role while yet distancing itself from fundamental questions, with two other views—the view, found in Wittgenstein, Oakesh-ott and Rorty, that philosophy may illuminate but cannot otherwise change practice, and the view, which I hold myself, that philosophy may be subversive of practice without thereby founding one set of practices or grounding any single form of life. Though I cannot here give anything like a satisfactory defence of this last position in philosophical method, a number of arguments in its support are suggested by the immanent criticism I shall develop of the later work of Rawls. My argument has, on the whole, the form of an immanent criticism of Rawls’s later work. At the same time, I shall suggest that results closely converging with those issuing from an immanent criticism of the later Rawls may be derived from an external perspective on ",
+            "publisher": "New York University Press",
+            "title": "Markets and Justice",
+            "topicNames": [
+                "Buchanan, James",
+                "Gauthier, David",
+                "Oakeshott, Michael",
+                "Rorty, Richard",
+                "Wittgenstein, Ludwig"
+            ],
+            "topicNamesForDisplay": "[[\"Buchanan, James\"],[\"Gauthier, David\"],[\"Oakeshott, Michael\"],[\"Rorty, Richard\"],[\"Wittgenstein, Ludwig\"]]",
+            "topicNames_facet": [
+                "Buchanan, James",
+                "Gauthier, David",
+                "Oakeshott, Michael",
+                "Rorty, Richard",
+                "Wittgenstein, Ludwig"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

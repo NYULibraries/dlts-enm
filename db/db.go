@@ -98,6 +98,28 @@ func GetPagesAll() (pages []*Page) {
 	return pages
 }
 
+func GetPagesByPageIDs(pageIDs []int) (pagesByPageIDs []*Page) {
+	// Need to sort pageIDs for the sort.SearchInts() call later.
+	sort.Ints(pageIDs)
+
+	pagesByPageIDs = make([]*Page, 0)
+
+	pages, err := models.GetPages(DB)
+	if err != nil {
+		panic("db.GetPagesByPageIDs: " + err.Error())
+	}
+
+	for _, page := range pages {
+		pageIDToTest := page.ID
+		i := sort.SearchInts(pageIDs, pageIDToTest)
+		if i < len(pageIDs) && pageIDs[i] == pageIDToTest {
+			pagesByPageIDs = append(pagesByPageIDs, page)
+		}
+	}
+
+	return
+}
+
 func GetPageTopicNamesByPageId(pageId int) (topicNamesForPage []*TopicNamesForPage) {
 	topicNamesForPage, err := models.TopicNamesForPagesByPage_id(DB, pageId)
 	if err != nil {
@@ -142,6 +164,7 @@ func GetTopicsWithAlternateNamesAll() (topicsWithAlternateNames []*TopicAlternat
 }
 
 func GetTopicsWithAlternateNamesByTopicIDs(topicIDs []string) (topicsWithAlternateNamesByTopicIDs []*TopicAlternateName) {
+	// Need to sort topicIDs for the sort.SearchStrings() call later.
 	sort.Strings(topicIDs)
 
 	topicsWithAlternateNamesByTopicIDs = make([]*TopicAlternateName, 0)

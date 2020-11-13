@@ -1,0 +1,37 @@
+{
+    "add": [
+        {
+            "authors": "Kathleen Barry",
+            "epubNumberOfPages": 388,
+            "id": 19732,
+            "isbn": "9780814712771",
+            "pageLocalId": "page_291",
+            "pageNumberForDisplay": "291",
+            "pageSequenceNumber": 298,
+            "pageText": "men gain, individually and collectively, from the sexual exploitation of women.\nTherapy: The Individual Approach\nFeminism is a persistent movement of women toward liberation that insists on alternatives, ways out, escapes for women from violence and abuse, from exploitation and oppression. For 25 years feminism has pioneered two interdependent projects—projects in the sense that they are personal/political engagements in social action oriented toward change: consciousness raising and safe space. Consciousness raising brings the personal out of its individual isolation and into political awareness and analysis of oppression. Safe space takes the forms of crisis programs, shelters, and group projects where women can escape from abuse or even just find the context in which they can be themselves, explore who they are and what they want, engage in consciousness raising while the pain that patriarchal domination invokes in women’s lives is kept off limits. Furthermore, consciousness raising and safe space build alternatives for women that allow women to stand outside of the most direct experience of oppression and consider personally and collectively other possibilities—for their own lives, for women as a class.\nFeminist-movement projects of consciousness raising and of safe space have been individualized into psychological therapies developed specifically to confront the harms to women from sexual exploitation. Feminist research, therapy, and social action with incest victims is a more formalized, clinical, and individualized approach to what consciousness raising and counseling provide for women leaving prostitution. The caveat for women in Western societies, particularly in the United States with its intense emphasis on individualism, is that this dual feminist project can easily be reduced from consciousness raising to individual therapy and social services dissociated from the condition of oppression.\n",
+            "publisher": "New york University Press",
+            "title": "The Prostitution of Sexuality",
+            "topicNames": [
+                "Consciousness raising",
+                "Healing -- therapy",
+                "Personal healing",
+                "Personal change, and political action",
+                "Political action -- and personal change",
+                "Political consciousness -- consciousness raising",
+                "Safe space",
+                "Therapy, psychological"
+            ],
+            "topicNamesForDisplay": "[[\"Consciousness raising\"],[\"Healing -- therapy\"],[\"Personal healing\"],[\"Political action -- and personal change\",\"Personal change, and political action\"],[\"Political consciousness -- consciousness raising\"],[\"Safe space\"],[\"Therapy, psychological\"]]",
+            "topicNames_facet": [
+                "Consciousness raising",
+                "Healing -- therapy",
+                "Personal healing",
+                "Political action -- and personal change",
+                "Political consciousness -- consciousness raising",
+                "Safe space",
+                "Therapy, psychological"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

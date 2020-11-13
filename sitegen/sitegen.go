@@ -4,6 +4,8 @@ type Paths struct{
 	WebRoot string
 }
 
+const testCache = "./testdata/cache"
+
 var GoogleAnalytics bool
 var Source string
 

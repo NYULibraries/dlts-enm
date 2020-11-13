@@ -1,0 +1,214 @@
+{
+    "ActiveNavbarTab": "X",
+    "NavbarTabs": [
+        {
+            "Label": "A",
+            "FileBasename": "a",
+            "Regexp": "a"
+        },
+        {
+            "Label": "B",
+            "FileBasename": "b",
+            "Regexp": "b"
+        },
+        {
+            "Label": "C",
+            "FileBasename": "c",
+            "Regexp": "c"
+        },
+        {
+            "Label": "D",
+            "FileBasename": "d",
+            "Regexp": "d"
+        },
+        {
+            "Label": "E",
+            "FileBasename": "e",
+            "Regexp": "e"
+        },
+        {
+            "Label": "F",
+            "FileBasename": "f",
+            "Regexp": "f"
+        },
+        {
+            "Label": "G",
+            "FileBasename": "g",
+            "Regexp": "g"
+        },
+        {
+            "Label": "H",
+            "FileBasename": "h",
+            "Regexp": "h"
+        },
+        {
+            "Label": "I",
+            "FileBasename": "i",
+            "Regexp": "i"
+        },
+        {
+            "Label": "J",
+            "FileBasename": "j",
+            "Regexp": "j"
+        },
+        {
+            "Label": "K",
+            "FileBasename": "k",
+            "Regexp": "k"
+        },
+        {
+            "Label": "L",
+            "FileBasename": "l",
+            "Regexp": "l"
+        },
+        {
+            "Label": "M",
+            "FileBasename": "m",
+            "Regexp": "m"
+        },
+        {
+            "Label": "N",
+            "FileBasename": "n",
+            "Regexp": "n"
+        },
+        {
+            "Label": "O",
+            "FileBasename": "o",
+            "Regexp": "o"
+        },
+        {
+            "Label": "P",
+            "FileBasename": "p",
+            "Regexp": "p"
+        },
+        {
+            "Label": "Q",
+            "FileBasename": "q",
+            "Regexp": "q"
+        },
+        {
+            "Label": "R",
+            "FileBasename": "r",
+            "Regexp": "r"
+        },
+        {
+            "Label": "S",
+            "FileBasename": "s",
+            "Regexp": "s"
+        },
+        {
+            "Label": "T",
+            "FileBasename": "t",
+            "Regexp": "t"
+        },
+        {
+            "Label": "U",
+            "FileBasename": "u",
+            "Regexp": "u"
+        },
+        {
+            "Label": "V",
+            "FileBasename": "v",
+            "Regexp": "v"
+        },
+        {
+            "Label": "W",
+            "FileBasename": "w",
+            "Regexp": "w"
+        },
+        {
+            "Label": "X",
+            "FileBasename": "x",
+            "Regexp": "x"
+        },
+        {
+            "Label": "Y",
+            "FileBasename": "y",
+            "Regexp": "y"
+        },
+        {
+            "Label": "Z",
+            "FileBasename": "z",
+            "Regexp": "z"
+        },
+        {
+            "Label": "0-9",
+            "FileBasename": "0-9",
+            "Regexp": "[0-9]"
+        },
+        {
+            "Label": "?#@",
+            "FileBasename": "non-alphanumeric",
+            "Regexp": "[^a-z0-9]"
+        }
+    ],
+    "Paths": {
+        "WebRoot": ".."
+    },
+    "Topics": [
+        {
+            "Name": "X-Men",
+            "URL": "../topic-pages/00/00/00/15/0000001576.html"
+        },
+        {
+            "Name": "X-Or",
+            "URL": "../topic-pages/00/00/00/15/0000001577.html"
+        },
+        {
+            "Name": "X, Jeremiah",
+            "URL": "../topic-pages/00/00/03/44/0000034446.html"
+        },
+        {
+            "Name": "X, Malcolm",
+            "URL": "../topic-pages/00/00/00/37/0000003739.html"
+        },
+        {
+            "Name": "Xanadu",
+            "URL": "../topic-pages/00/00/00/99/0000009979.html"
+        },
+        {
+            "Name": "Xavier University of Louisiana",
+            "URL": "../topic-pages/00/00/00/10/0000001011.html"
+        },
+        {
+            "Name": "Xavier University of New Orleans",
+            "URL": "../topic-pages/00/00/00/10/0000001012.html"
+        },
+        {
+            "Name": "Xavier University of New Orleans -- Art Department",
+            "URL": "../topic-pages/00/00/00/10/0000001013.html"
+        },
+        {
+            "Name": "Xavier University of New Orleans -- Center for Bioenvironmental Research",
+            "URL": "../topic-pages/00/00/00/10/0000001014.html"
+        },
+        {
+            "Name": "Xavier University of New Orleans -- Community Arts Program",
+            "URL": "../topic-pages/00/00/00/10/0000001015.html"
+        },
+        {
+            "Name": "Xenophon",
+            "URL": "../topic-pages/00/00/03/33/0000033364.html"
+        },
+        {
+            "Name": "Xerox PARC",
+            "URL": "../topic-pages/00/00/00/99/0000009980.html"
+        },
+        {
+            "Name": "Xinhua News Agency",
+            "URL": "../topic-pages/00/00/00/24/0000002447.html"
+        },
+        {
+            "Name": "Xinjiang Autonomous Region",
+            "URL": "../topic-pages/00/00/00/21/0000002105.html"
+        },
+        {
+            "Name": "Xiong, Lei",
+            "URL": "../topic-pages/00/00/00/31/0000003138.html"
+        },
+        {
+            "Name": "XYZ Affair",
+            "URL": "../topic-pages/00/00/02/02/0000020210.html"
+        }
+    ]
+}

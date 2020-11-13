@@ -1,0 +1,30 @@
+{
+    "AlternateNames": [],
+    "DisplayName": "Rosenbeck, Matthew",
+    "EPUBMatches": [
+        {
+            "Title": "Civic Engagement in the Wake of Katrina",
+            "Authors": "Amy Koritz and George J. Sanchez",
+            "Publisher": "University of Michigan Press",
+            "ISBN": "9780472024483",
+            "NumberOfOccurrences": 1
+        }
+    ],
+    "ExternalRelations": [],
+    "Paths": {
+        "WebRoot": "../../../../.."
+    },
+    "RelatedTopics": [],
+    "TopicID": 885,
+    "VisualizationData": {
+        "nodes": [
+            {
+                "id": 885,
+                "name": "Rosenbeck, Matthew",
+                "ocount": 1,
+                "path": "00/00/00/08/0000000885.html"
+            }
+        ],
+        "links": []
+    }
+}

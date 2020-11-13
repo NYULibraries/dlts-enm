@@ -1,0 +1,31 @@
+{
+    "add": [
+        {
+            "authors": "David Kleinbard",
+            "epubNumberOfPages": 300,
+            "id": 10743,
+            "isbn": "9780814746677",
+            "pageLocalId": "page_1",
+            "pageNumberForDisplay": "1",
+            "pageSequenceNumber": 25,
+            "pageText": "CHAPTER 1Introduction\nI\nThis is a psychological study of Rainer Maria Rilke’s life and writings. Beginning with his novel, The Notebooks of Malte Laurids Brigge, published in 1910, I explore the relationship between illness and genius in the poet and his work, a subject to which he returned time and again. His letters describing his experiences when he first came to Paris in 1902 reveal that the anxieties which bring Malte, the main character of the novel, close to psychosis, plagued Rilke himself. The letters and The Notebooks show that Rilke felt that he was losing his sanity. In the summer of 1903 he wrote to Lou Andreas-Salomé, his old friend, lover, and acknowledged surrogate mother, imploring her to help him, declaring that she alone knew who he was and could tell him what he need and need not fear. Salomé had cut off all communication when he decided to marry in February 1901, but she had also promised that she would help him if he should be in dire need at some time in the future. Answering his appeal, she expressed surprise at the maturity of the gifts and skills revealed by his descriptions of his frightening experiences in Paris. She assured him he was mistaken in believing that he would be destroyed by mental illness. The mastery, artistic cunning, and understanding which his letters disclosed clearly distinguished him from the helpless victims of illness with whom he was identifying himself. In the first few months of the following year, encouraged by her praise, Rilke began The Notebooks, drawing upon the experiences he had described in his letters to ",
+            "publisher": "New York University Press",
+            "title": "The Beginning of Terror",
+            "topicNames": [
+                "Andreas-Salomé, Lou",
+                "Andreas-Salomé, Lou (Luise)",
+                "Introjection -- in Sonnet",
+                "Notebooks of Malte Laurids Brigge, The (Rilke)",
+                "Rilke, Rainer Maria -- Notebooks of Malte Laurids Brigge, The",
+                "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)"
+            ],
+            "topicNamesForDisplay": "[[\"Andreas-Salomé, Lou (Luise)\",\"Andreas-Salomé, Lou\"],[\"Introjection -- in Sonnet\"],[\"Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)\",\"Notebooks of Malte Laurids Brigge, The (Rilke)\",\"Rilke, Rainer Maria -- Notebooks of Malte Laurids Brigge, The\"]]",
+            "topicNames_facet": [
+                "Andreas-Salomé, Lou (Luise)",
+                "Introjection -- in Sonnet",
+                "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

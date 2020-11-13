@@ -1,0 +1,28 @@
+{
+    "add": [
+        {
+            "authors": "Kee, Kevin",
+            "epubNumberOfPages": 346,
+            "id": 65,
+            "isbn": "9780472120482",
+            "pageLocalId": "page_57",
+            "pageNumberForDisplay": "57",
+            "pageSequenceNumber": 65,
+            "pageText": "visuals is shifted from the photographer to the questions and inferences that interpreters formulate about them.\n\n\nSurprisingly, today’s textbooks are filled with authentic photographs and colorful graphics that have replaced the seemingly dense, unintelligible content of earlier versions. Still, students are not educated in a classroom environment that encourages them to become historical interpreters of visual texts and animated objects. For Hofer and Swan, “Just as the reader must consider context, point of view, audience, and other keys to understanding textual historical documents, one must view images in much the same way. . . . Like analyzing textual documents, the strategies for reading historical and contemporary images do not necessarily develop naturally and must be explicitly taught.”36\nWith the arrival of high-speed Internet and augmented reality technology, users now have instant access to visual information about the real world that becomes interactive and digitally usable. In history, such developments have led to the design of simulations and augmented reality games (ARGs) such as Reliving the Revolution. These “serious games” engage learners in historical challenges and encounters with authentic visuals and animated objects about the past. Findings from this study suggest that despite a high penetration of such technology in young people’s lives, many students continue to employ a video game approach to visual sources in the history classroom. Instead of reading them as evidence, they view them as “cool” illustrations that enhance the reality of past times.\n",
+            "publisher": "The University of Michigan Press",
+            "title": "Pastplay: Teaching and Learning History with Technology",
+            "topicNames": [
+                "augmented reality",
+                "interactive",
+                "visuals, in history education"
+            ],
+            "topicNamesForDisplay": "[[\"augmented reality\"],[\"interactive\"],[\"visuals, in history education\"]]",
+            "topicNames_facet": [
+                "augmented reality",
+                "interactive",
+                "visuals, in history education"
+            ],
+            "yearOfPublication": 0
+        }
+    ]
+}

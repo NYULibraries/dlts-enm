@@ -1,20 +1,37 @@
 #!/usr/bin/env bash
 
-ROOT=$(cd "$(dirname "$0")" ; cd ..; pwd -P )
+ROOT=$( cd "$(dirname "$0")" ; cd ..; pwd -P )
 DIST=$ROOT/dist
 
-source $ROOT/bin/$(basename $0 .sh)_common.sh
+MINIMUM_BASH_VERSION=4
+
+declare -A ENVIRONMENT
+
+CLOUDFRONT_DISTRIBUTION_ID_KEY_SUFFIX='-cloudfront-distribution-id'
+GA_KEY_SUFFIX='-google-analytics'
+S3_BUCKET_KEY_SUFFIX='-s3-bucket'
+
+ENVIRONMENT[dev${GA_KEY_SUFFIX}]=
+ENVIRONMENT[dev${CLOUDFRONT_DISTRIBUTION_ID_KEY_SUFFIX}]=E2DL5S1BQ4HW26
+ENVIRONMENT[dev${S3_BUCKET_KEY_SUFFIX}]=dlts-enm-dev
+
+ENVIRONMENT[stage${GA_KEY_SUFFIX}]=
+ENVIRONMENT[stage${CLOUDFRONT_DISTRIBUTION_ID_KEY_SUFFIX}]=E1D91RKPQMQWM8
+ENVIRONMENT[stage${S3_BUCKET_KEY_SUFFIX}]=dlts-enm-stage
+
+ENVIRONMENT[prod${GA_KEY_SUFFIX}]='--google-analytics'
+ENVIRONMENT[prod${CLOUDFRONT_DISTRIBUTION_ID_KEY_SUFFIX}]=E1TWMHHWMKVLXN
+ENVIRONMENT[prod${S3_BUCKET_KEY_SUFFIX}]=dlts-enm
 
 function usage() {
     script_name=$(basename $0)
 
     cat <<EOF
 
-usage: ${script_name} [-c] [-g] [-h] -u username environment
+usage: ${script_name} [-c] [-g] [-h] environment
     -c:          generate static site from cache instead of database
     -g:          generate static site in dist/
     -h:          print this usage message
-    -u username: username on bastion host and web server
     environment: "dev", "stage", or "prod"
 
 EOF
@@ -33,9 +50,9 @@ function check_prerequisites() {
         exit 1
     fi
 
-    if [ ! -x "$(command -v rsync)" ]
+    if [ ! -x "$(command -v aws)" ]
     then
-        echo >&2 '`rsync` must be available in $PATH in order to run this script.'
+        echo >&2 '`aws` must be available in $PATH in order to run this script.'
         exit 1
     fi
 }
@@ -71,44 +88,70 @@ function generate_site() {
     fi
 }
 
-function copy_files() {
-    local username=$1
-    local bastion_host=$2
-    local server=$3
-    local static_site_path=$4
+function get_cloudfront_distribution_id() {
+    local deploy_to_environment=$1
 
-    for f in about.html index.html browse-topics-lists/ shared/ topic-pages/
-    do
-        rsync --archive --compress --delete --human-readable --verbose \
-                -e "ssh -o ProxyCommand='ssh -W %h:%p ${username}@${bastion_host}'" \
-                $ROOT/dist/$f \
-                ${username}@${server}:${static_site_path}/$f
-    done
+    echo ${ENVIRONMENT[${deploy_to_environment}${CLOUDFRONT_DISTRIBUTION_ID_KEY_SUFFIX}]}
+}
+
+function get_google_analytics_flag() {
+    local deploy_to_environment=$1
+
+    echo ${ENVIRONMENT[${deploy_to_environment}${GA_KEY_SUFFIX}]}
+}
+
+function get_s3_bucket() {
+    local deploy_to_environment=$1
+
+    echo ${ENVIRONMENT[${deploy_to_environment}${S3_BUCKET_KEY_SUFFIX}]}
+}
+
+function invalidate_cloudfront_paths() {
+    local cloudfront_distribution_id=$1
+
+    # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#invalidation-specifying-objects
+    aws cloudfront create-invalidation \
+        --distribution-id ${cloudfront_distribution_id} \
+        --paths '/about.html' '/browse-topics-lists*' '/index.html' '/shared*' '/topic-pages*'
+}
+
+function sync_s3_bucket() {
+    local s3_bucket=$1
+
+    aws s3 sync $DIST s3://${s3_bucket} \
+        --delete \
+        --exact-timestamps \
+        --exclude '.commit-empty-directory' \
+        --exclude 'search/*'
+}
+
+function validate_environment_arg() {
+    local deploy_to_environment=$1
+
+    if ! [ ${ENVIRONMENT[${deploy_to_environment}${S3_BUCKET_KEY_SUFFIX}]} ]
+    then
+        echo >&2 "\"${deploy_to_environment}\" is not a recognized deployment environment."
+
+        usage
+
+        exit 1
+    fi
 }
 
 check_prerequisites
 
-STATIC_SITE_PATH=/www/sites/enm
-
 source='database'
 generate_site=false
 
-while getopts cghu: opt
+while getopts cgh: opt
 do
     case $opt in
         c) source='cache' ;;
         g) generate_site=true ;;
         h) usage; exit 0 ;;
-        u) username=$OPTARG ;;
         *) echo >&2 "Options not set correctly."; usage; exit 1 ;;
     esac
 done
-
-if [ -z $username ]; then
-    echo >&2 'You must provide a username.'
-    usage
-    exit 1
-fi
 
 shift $((OPTIND-1))
 
@@ -117,8 +160,6 @@ deploy_to_environment=$1
 validate_environment_arg $deploy_to_environment
 
 google_analytics_flag=$( get_google_analytics_flag $deploy_to_environment )
-
-server=$( get_server $deploy_to_environment )
 
 if $generate_site
 then
@@ -129,7 +170,8 @@ then
     generate_site $DIST $google_analytics_flag
 fi
 
-copy_files $username $BASTION_HOST $server $STATIC_SITE_PATH
+s3_bucket=$( get_s3_bucket $deploy_to_environment )
+sync_s3_bucket $s3_bucket
 
-# This string tells the expect script wrapper that refresh run has completed.
-echo $SCRIPT_RUN_COMPLETE
+cloudfront_distribution_id=$( get_cloudfront_distribution_id $deploy_to_environment )
+invalidate_cloudfront_paths $cloudfront_distribution_id

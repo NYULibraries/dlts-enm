@@ -24,9 +24,8 @@ there are no active plans to add or change data at this time.
 
 ### Prerequisities
 
-* [Go](https://golang.org/) (at least 1.10 recommended)
-* [dep](https://golang.github.io/dep/)
-* [Expect](https://core.tcl.tk/expect/index) (if using the deploy shell scripts)
+* [AWS CLI v2](https://aws.amazon.com/cli/) - for deployment scripts.
+* [Go](https://golang.org/) - version 1.16 or higher
 
 #### Database
 
@@ -36,27 +35,9 @@ See https://jira.nyu.edu/jira/browse/NYUP-437 for details.
 
 ### Installation and setup
 
-Installation using `go get`:
-
 ```shell
-go get github.com/nyulibraries/dlts-enm
-cd dlts-enm/
-git remote rm origin
-git remote add origin git@github.com:NYULibraries/dlts-enm.git
-git fetch --all
-dep ensure
-go build
-mv dlts-enm enm
-```
-
-Installation using `git clone`:
-
-```shell
-mkdir -p $GOPATH/src/github.com/NYULibraries/
-cd $GOPATH/src/github.com/NYULibraries/
 git clone git@github.com:NYULibraries/dlts-enm.git
 cd dlts-enm/
-dep ensure
 go build
 mv dlts-enm enm
 ```
@@ -127,23 +108,26 @@ ssh -N -L 5432:devdb1:5432 bastion
 
 #### Deploy site
 
-There is a deploy script that can generate the full website and copy it to the dev,
-stage, and prod web servers.  The easiest way to use it is to run the wrapper script
-that will prompt for information and then run the deploy script with the proper
-options and credentials.  The `rsync` commands are run using [`expect`](https://core.tcl.tk/expect/index)
-to automatically enter the user credentials for the bastion and web server hosts.
+There is a deploy script `bin/deploy-site.sh` that generates the full website,
+syncs it with the S3 bucket (without touching the /search/ path that contains
+the search application built by [dlts\-enm\-search\-application](https://github.com/NYULibraries/dlts-enm-search-application)),
+and invalidates the website paths in CloudFront so that the latest files are fetched
+from S3.
 
-* `bin/deploy-site_expect.sh dev`
-* `bin/deploy-site_expect.sh stage`
-* `bin/deploy-site_expect.sh prod`
+There is also a convenience wrapper script `bin/deploy-site_interactive.sh` which
+will call `bin/deploy-site.sh` with options set according to the user's responses to
+interactive prompts:
 
-The deploy script runs all the `sitegen` commands detailed below with destination
+* `bin/deploy-site_interactive.sh dev`
+* `bin/deploy-site_interactive.sh stage`
+* `bin/deploy-site_interactive.sh prod`
+
+See [examples](#examples) for demonstrations of deployment for other use cases.
+
+The deploy script runs all the `sitegen` commands (detailed below) with destination
 set to directories in `dist/`.
 
-See [examples](#examples) for a full demonstration of how to use this wrapper script.
-
-Note that the deploy script does static page generation and copying to server only,
-it does not perform Solr indexing. 
+Note that the deploy script does not perform Solr indexing. 
 
 #### Get general help
 
@@ -198,7 +182,7 @@ can be used as the data source for subsequent topic pages generation runs:
 
 ### Examples
 
-#### Create the production website from latest cache files cloned to $HOME/enm-cache/ and deploy to the dev web server
+#### Create the dev website from latest cache files cloned to $HOME/enm-cache/ and deploy 
 
 In the example below, it is assumed that the `dlts-enm` repo is located at
 `$GOPATH/src/github.com/nyulibraries/dlts-enm/`, and the `https://github.com/nyudlts/enm-cache`
@@ -206,169 +190,52 @@ repo has already been cloned to $HOME.
 
 ```shell
 $ export ENM_CACHE=$HOME/enm-cache/
-$ bin/deploy-site_expect.sh dev
+$ bin/deploy-site_interactive.sh dev
 Do complete regeneration of the site before copying to server? [y/n] y
 Use the cache for regenerating the site? [y/n] y
-Username for b.dlib.nyu.edu and devweb1.dlib.nyu.edu: someuser
-Password for b.dlib.nyu.edu and devweb1.dlib.nyu.edu: 
-spawn /Users/someuser/Documents/programming/go/gopath/src/github.com/nyulibraries/dlts-enm/bin/deploy-site.sh -c -g -u arjanik dev
 Generating site pages...
 Generating browse topics lists...
 Generating topic pages...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
+upload: dist/about.html to s3://dlts-enm-dev/about.html                            
+upload: dist/browse-topics-lists/0-9.html to s3://dlts-enm-dev/browse-topics-lists/0-9.html
+upload: dist/browse-topics-lists/enm-picks.html to s3://dlts-enm-dev/browse-topics-lists/enm-picks.html
+upload: dist/browse-topics-lists/g.html to s3://dlts-enm-dev/browse-topics-lists/g.html 
+upload: dist/browse-topics-lists/d.html to s3://dlts-enm-dev/browse-topics-lists/d.html
+upload: dist/browse-topics-lists/f.html to s3://dlts-enm-dev/browse-topics-lists/f.html
+upload: dist/browse-topics-lists/c.html to s3://dlts-enm-dev/browse-topics-lists/c.html
+upload: dist/browse-topics-lists/j.html to s3://dlts-enm-dev/browse-topics-lists/j.html
+upload: dist/browse-topics-lists/i.html to s3://dlts-enm-dev/browse-topics-lists/i.html
 
 [...SNIPPED...]
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@b.dlib.nyu.edu's password:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@devweb1.dlib.nyu.edu's password:
-building file list ... done
-about.html
-
-sent 127 bytes  received 66 bytes  77.20 bytes/sec
-total size is 2.46K  speedup is 12.76
-
-rsync #1 completed successfully.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@b.dlib.nyu.edu's password:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@devweb1.dlib.nyu.edu's password:
-building file list ... done
-index.html
-
-sent 127 bytes  received 66 bytes  128.67 bytes/sec
-total size is 2.45K  speedup is 12.69
-
-rsync #2 completed successfully.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@b.dlib.nyu.edu's password:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@devweb1.dlib.nyu.edu's password:
-building file list ... done
-./
-0-9.html
-a.html
-b.html
-c.html
-d.html
-e.html
-enm-picks.html
-f.html
-g.html
-h.html
-i.html
-j.html
-k.html
-l.html
-m.html
-n.html
-non-alphanumeric.html
-o.html
-p.html
-q.html
-r.html
-s.html
-t.html
-u.html
-v.html
-w.html
-x.html
-y.html
-z.html
-
-sent 1.76K bytes  received 69.40K bytes  28.46K bytes/sec
-total size is 8.47M  speedup is 119.01
-
-rsync #3 completed successfully.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@b.dlib.nyu.edu's password:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@devweb1.dlib.nyu.edu's password:
-building file list ... done
-
-sent 2.50K bytes  received 20 bytes  1.68K bytes/sec
-total size is 27.13M  speedup is 10761.88
-
-rsync #4 completed successfully.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@b.dlib.nyu.edu's password:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-           WARNING:  UNAUTHORIZED PERSONS ........ DO NOT PROCEED
-           ~~~~~~~   ~~~~~~~~~~~~~~~~~~~~          ~~~~~~~~~~~~~~
-
-[...SNIPPED...]
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-someuser@devweb1.dlib.nyu.edu's password:
-building file list ... done
-./
-00/
-00/00/
-00/00/00/
-00/00/00/00/
-00/00/00/00/0000000002.html
-00/00/00/00/0000000003.html
-00/00/00/00/0000000004.html
-00/00/00/00/0000000005.html
-
-[...SNIPPED...]
-
-sent 2.74M bytes  received 3.08M bytes  125.19K bytes/sec
-total size is 222.68M  speedup is 38.25
-
-rsync #5 completed successfully.
-ENM site deployment completed.
+upload: dist/topic-pages/00/00/04/74/0000047490.html to s3://dlts-enm-dev/topic-pages/00/00/04/74/0000047490.html
+upload: dist/topic-pages/00/00/04/74/0000047476.html to s3://dlts-enm-dev/topic-pages/00/00/04/74/0000047476.html
+upload: dist/topic-pages/00/00/04/74/0000047485.html to s3://dlts-enm-dev/topic-pages/00/00/04/74/0000047485.html
+upload: dist/topic-pages/00/00/04/74/0000047491.html to s3://dlts-enm-dev/topic-pages/00/00/04/74/0000047491.html
+upload: dist/topic-pages/00/00/04/74/0000047492.html to s3://dlts-enm-dev/topic-pages/00/00/04/74/0000047492.html
+{
+    "Location": "https://cloudfront.amazonaws.com/2020-05-31/distribution/E2DL5S1BQ4HW26/invalidation/I3IVXF6N96CJXR",
+    "Invalidation": {
+        "Id": "I3IVXF6N96CJXR",
+        "Status": "InProgress",
+        "CreateTime": "2021-07-27T22:57:49.269000+00:00",
+        "InvalidationBatch": {
+            "Paths": {
+                "Quantity": 5,
+                "Items": [
+                    "/about.html",
+                    "/index.html",
+                    "/browse-topics-lists*",
+                    "/shared*",
+                    "/topic-pages*"
+                ]
+            },
+            "CallerReference": "cli-1627426668-935235"
+        }
+    }
+}
+You have new mail in /var/mail/david
+$ 
 ```
 
 #### Load prod Solr index from Postgres database

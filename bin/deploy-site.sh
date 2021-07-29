@@ -112,7 +112,7 @@ function invalidate_cloudfront_paths() {
     # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#invalidation-specifying-objects
     aws cloudfront create-invalidation \
         --distribution-id ${cloudfront_distribution_id} \
-        --paths '/about.html' '/browse-topics-lists*' '/index.html' '/shared*' '/topic-pages*'
+        --paths '/' '/about.html' '/browse-topics-lists*' '/index.html' '/shared*' '/topic-pages*'
 }
 
 function sync_s3_bucket() {

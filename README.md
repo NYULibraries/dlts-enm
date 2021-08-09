@@ -57,9 +57,8 @@ Note that we use 127.0.0.1 even though the database is remote because we'll need
 to access the remote Postgres server through an SSH tunnel through the bastion
 host.
 
-These environment variables must be set before running any `enm` command, even
-the ones that do not technically need database access.  Failure to do so will
-cause a `panic`.
+These environment variables must be set before running any `enm` command that
+requires database access.  Failure to do so will cause a `panic`.
 
 Set location of the cache using ENM_CACHE:
 
@@ -264,9 +263,10 @@ the models can be updated by running `go generate` at the root of the project.
 ## Configuration
 
 Configuration is done through command/subcommand options and
-[environment variables](https://github.com/NYULibraries/dlts-enm/tree/nyup-536_write-readme-documentation-for-dlts-enm-and-dlts-enm-search-application#set-environment-variables),
-which must be set before running any commands, including those that do not require
-database access.
+[environment variables](https://github.com/NYULibraries/dlts-enm/tree/nyup-536_write-readme-documentation-for-dlts-enm-and-dlts-enm-search-application#set-environment-variables).
+Environment variables starting with ENM_POSTGRES_DATABASE must be set before running any `enm` command that
+requires database access.  Failure to do so will cause a `panic`.
+See [Set environment variables](#set-environment-variables).
 
 ## Future improvements
 

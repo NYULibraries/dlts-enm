@@ -96,7 +96,7 @@ func LoadFromCache() error {
 		return nil
 	})
 	if (err != nil) {
-		return err
+		panic(err)
 	}
 
 	return nil

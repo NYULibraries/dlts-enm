@@ -27,8 +27,13 @@ type TopicNamesForPage = models.TopicNamesForPage
 type TopicNumberOfOccurrences = models.TopicNumberOfOccurrences
 
 var DB *sql.DB
+var initialized bool
 
-func init() {
+func InitDB() {
+	if initialized {
+		return
+	}
+
 	database := os.Getenv("ENM_POSTGRES_DATABASE")
 	hostname := os.Getenv("ENM_POSTGRES_DATABASE_HOSTNAME")
 	username := os.Getenv("ENM_POSTGRES_DATABASE_USERNAME")
@@ -60,6 +65,8 @@ func init() {
 	if err = DB.Ping(); err != nil {
 		panic(err.Error())
 	}
+
+	initialized = true
 }
 
 func GetEpubsForTopicWithNumberOfMatchedPages(topicID int) []*EpubsForTopicWithNumberOfMatchedPages{

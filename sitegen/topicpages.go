@@ -83,6 +83,7 @@ func GenerateTopicPages(destination string) {
 	tpl = NewTemplate()
 
 	if Source == "database" {
+		db.InitDB()
 		GenerateTopicPagesFromDatabase()
 	} else if Source == "cache" {
 		GenerateTopicPagesFromCache()

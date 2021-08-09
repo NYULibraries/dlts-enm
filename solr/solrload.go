@@ -23,6 +23,7 @@ var PageIDs []int
 
 func Load() error {
 	if Source == "database" {
+		db.InitDB()
 		return LoadFromDatabase()
 	} else if Source == "cache" {
 		return LoadFromCache()

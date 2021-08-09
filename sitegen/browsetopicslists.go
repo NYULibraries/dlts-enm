@@ -46,6 +46,7 @@ func GenerateBrowseTopicsLists(destination string) {
 	}
 
 	if Source == "database" {
+		db.InitDB()
 		GenerateDynamicBrowseTopicsListsFromDatabase()
 	} else if Source == "cache" {
 		GenerateDynamicBrowseTopicsListsFromCache()

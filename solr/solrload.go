@@ -87,7 +87,10 @@ func LoadFromCache() error {
 				},
 			}
 
-			Update(solrDoc)
+			err = Update(solrDoc)
+			if (err != nil) {
+				return err
+			}
 		}
 
 		return nil

@@ -118,9 +118,10 @@ function invalidate_cloudfront_paths() {
 function sync_s3_bucket() {
     local s3_bucket=$1
 
+    # Need to do a full rm followed by a sync from scratch because `aws s3 sync ... --exact-timestamps`
+    # only works for downloads from S3, not uploads: https://github.com/aws/aws-cli/issues/4460
+    aws s3 rm s3://${s3_bucket} --exclude 'search/*' --recursive
     aws s3 sync $DIST s3://${s3_bucket} \
-        --delete \
-        --exact-timestamps \
         --exclude '.commit-empty-directory' \
         --exclude 'search/*'
 }
@@ -160,6 +161,26 @@ deploy_to_environment=$1
 validate_environment_arg $deploy_to_environment
 
 google_analytics_flag=$( get_google_analytics_flag $deploy_to_environment )
+
+# Give the user a chance to abort if they don't know that there will be relatively
+# long outage window for topic pages
+echo
+echo 'WARNING!'
+echo
+echo 'Please read this Jira comment before proceeding with this deployment: '
+echo 'https://jira.nyu.edu/browse/NYUP-813?focusedCommentId=1553232&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-1553232'
+echo
+read \
+  -p "Continue(y/n)? " \
+  -n 1 \
+  -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
+fi
+
+echo
 
 if $generate_site
 then

@@ -1,24 +1,27 @@
 # enm - DLTS Enhanced Network Monographs
 
-CLI application for generating the Enhanced Networked Monographs (ENM) static website
-and Solr index.
+CLI application for generating the [Enhanced Networked Monographs (ENM) website](https://enm.dlib.nyu.edu/)
+ and the Solr index which powers the [search application](https://enm.dlib.nyu.edu/search/).
+
+Information about the ENM project can be found on the [project website](https://wp.nyu.edu/enmproject/).
 
 ## Overview
 
 `enm` is a CLI application for performing various backend ENM functions:
 
 * Create static pages
-  * About
-  * Home
+  * [About](https://enm.dlib.nyu.edu/about.html)
+  * [Home]((https://enm.dlib.nyu.edu/))
   * Create browse topics lists: e.g. [featured topics](http://enm.dlib.nyu.edu/browse-topics-lists/enm-picks.html)
   * Create topic pages: e.g. [culture -- popular](http://enm.dlib.nyu.edu/topic-pages/00/00/00/78/0000007805.html)
 * Load `enm-pages` Solr index
 * Automatically create cached data files which can be used in place of the Postgres database in
 subsequent jobs: [nyudlts/enm\-cache](https://github.com/nyudlts/enm-cache)
 
-The `enm` program has not been productionized.  Enough development was done to
-create an initial stable and correct demo site.  ENM data is currently frozen and
-there are no active plans to add or change data at this time.
+The `enm` program is feature complete with good test coverage, but it has not been
+fully productionized yet: see [Future Improvements](#future-improvements).
+Enough development was done to create an initial stable and correct demo site.
+ENM data is currently frozen and there are no active plans to add or change data at this time.
 
 ## Getting Started
 
@@ -270,13 +273,12 @@ See [Set environment variables](#set-environment-variables).
 
 ## Future improvements
 
-* Real error handling/recovery/messaging/logging instead of the liberal use of
-`panic` calls
-* (maybe) Embedding of `sitegen` templates into the `enm` binary using something like
-https://github.com/jteeuwen/go-bindata (for motivation see comment in
-`sitegen/sitegen.go`)
-* Write more tests, and stub out Postgres in the tests in the `solr` and `sitegen` packages
-(and in all future tests).
+* Real error handling/recovery/messaging/logging instead of liberal use of `panic` calls
+* Embed `sitegen` templates into the `enm` binary using go [embed](https://pkg.go.dev/embed).
+See comment in [sitegen/sitegen\.go](https://github.com/NYULibraries/dlts-enm/blob/develop/sitegen/sitegen.go)
+for the motivation for doing this. 
+* Write more tests, and stub out Postgres in the `solr` and `sitegen` package test
+suites (and in all future tests).
 
 ## ENM project Github repos
 

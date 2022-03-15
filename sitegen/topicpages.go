@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"strings"
 	"strconv"
+	"strings"
 
 	"github.com/nyulibraries/dlts-enm/cache"
 	"github.com/nyulibraries/dlts-enm/db"
@@ -99,6 +99,31 @@ func NewTemplate() (tpl *template.Template){
 		},
 		"lastIndex": func (s []ExternalRelation) int {
 			return len(s) - 1;
+		},
+		"hrefForReaderButton": func (publisher string, isbn string) string {
+			var hrefForReaderButton string
+
+			if (util.IsNYUPress(publisher)) {
+				standardIdentifier := util.GetOpenSquareStandardIdentifierForISBN(isbn)
+				if (standardIdentifier != "") {
+					hrefForReaderButton = fmt.Sprintf(
+						"https://opensquare.nyupress.org/books/%s/read/",
+						standardIdentifier,
+					)
+				} else {
+					// The ISBN for this EPUB was not changed by https://jira.nyu.edu/browse/NYUP-753,
+					// so we can use it for the reader link.
+					hrefForReaderButton = fmt.Sprintf(
+						"https://opensquare.nyupress.org/books/%s/read/",
+						isbn,
+					)
+				}
+			} else {
+				// No reader link, because we can't guarantee the stability of reader
+				// URLs for the other university presses.
+			}
+
+			return hrefForReaderButton
 		},
 	}
 	tpl = template.New("index.html").Funcs(funcs)

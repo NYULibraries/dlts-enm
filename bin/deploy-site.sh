@@ -120,7 +120,16 @@ function sync_s3_bucket() {
 
     # Note that `aws s3 sync ... --exact-timestamps` only works for downloads from S3,
     # not uploads: https://github.com/aws/aws-cli/issues/4460.  The only safe way
-    # to deploy is to upload absolutely everything.
+    # to update is to upload absolutely everything using `cp` and then deleting
+    # removed files using `sync --delete`.
+    # There is anecdotal evidence of this issue having been fixed or partially fixed,
+    # with `sync` now uploading files even if the size hasn't changed, but
+    # https://github.com/aws/aws-cli/issues/4460 is still open, so for safety we
+    # continue to use this workaround.
+    aws s3 cp $DIST s3://${s3_bucket} \
+        --exclude '.commit-empty-directory' \
+        --exclude 'search/*' \
+        --recursive
     aws s3 sync $DIST s3://${s3_bucket} \
         --exclude '.commit-empty-directory' \
         --exclude 'search/*' \
